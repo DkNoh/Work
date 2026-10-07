@@ -1,0 +1,10 @@
+{
+  "stage": "011",
+  "passed": true,
+  "markdownFiles": 40,
+  "localLinks": 1370,
+  "linkedJsonChecks": 445,
+  "tables": 185,
+  "errors": [],
+  "scope": "all ScFramework developer markdown except archived evidence, plus authorized original docs pointer"
+}

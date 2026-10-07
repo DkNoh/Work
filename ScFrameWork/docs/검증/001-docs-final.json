@@ -1,0 +1,13 @@
+{
+  "phase": "001 기본 생성·로컬 검증 완료",
+  "reference_source_files": 149,
+  "reference_changed_files": [],
+  "markdown_files": 32,
+  "relative_file_links": 317,
+  "json_examples": 6,
+  "vue_sfc_files": 11,
+  "sfc_template_before_script_setup": true,
+  "jsx_tsx_files": 0,
+  "errors": [],
+  "remote_ci_docker_executed": false
+}

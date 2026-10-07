@@ -1,0 +1,17 @@
+{
+  "stage": "011",
+  "changed": [
+    {
+      "source": "frontend/src/features/patterns/ExtensionPatterns.vue",
+      "previousSha256": "6163fa7683cf76c2484047245040a399b65875f96abda7b4721408905c47886c",
+      "sha256": "72b3fb416a540c407f6bac8a5e8b99ae009af4cecfe7bc5b6e1db0b4d9ce528c"
+    }
+  ],
+  "templateFiles": 61,
+  "compatibleFrameworkVersions": [
+    "0.1.0",
+    "0.2.0"
+  ],
+  "modeChanges": 0,
+  "historicalCandidatesChanged": false
+}

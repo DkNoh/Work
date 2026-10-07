@@ -1,0 +1,3 @@
+frontend/apps/reference-app/src/features/patterns/ExtensionPatterns.vue 79ms
+frontend/apps/starter-app/src/features/patterns/ExtensionPatterns.vue 29ms
+templates/starter-v1/frontend/src/features/patterns/ExtensionPatterns.vue 23ms

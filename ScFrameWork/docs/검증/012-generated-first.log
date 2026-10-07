@@ -1,0 +1,8 @@
+PASS packed login, native form and CSS tokens
+PASS typed Notes API, Zod, Query invalidation and 409 draft preservation
+PASS packed shared form, locale preservation and dialog focus
+PASS packed table, 10000-row virtual view and keyboard focus
+PASS packed SVG chart, rich text and XLSX download/import
+PASS packed board movement, normalized image box and zoom
+PASS logout clears the shared session
+PASS standalone JAR, real H2 restart, security/API and installed-library browser

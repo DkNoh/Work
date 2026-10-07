@@ -1,0 +1,27 @@
+{
+  "stage": "012",
+  "passed": false,
+  "groups": 0,
+  "checks": [
+    {
+      "name": "private task project configuration",
+      "passed": false,
+      "code": "SC_DOCKER_CLI",
+      "exceptionType": "GateFailure"
+    }
+  ],
+  "elapsedSeconds": 0.0,
+  "project": "scframework-012-20261007",
+  "applicationService": "reference-app",
+  "originalRuntimeUsed": false,
+  "syntheticFixturesOnly": true,
+  "mutatedServices": [
+    "reference-app"
+  ],
+  "applicationKeptRunning": false,
+  "taskVolumeKeptForParent": true,
+  "secretValuesPrinted": false,
+  "rawDockerConfigOrLogsSaved": false,
+  "remoteExecution": false,
+  "scope": "local Docker image/production operations/private runtime/clean restart; no power-loss guarantee"
+}

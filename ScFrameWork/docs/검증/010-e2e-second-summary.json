@@ -1,0 +1,16 @@
+{
+  "stage": "010",
+  "run": "second",
+  "passed": 58,
+  "failed": 9,
+  "skipped": 4,
+  "reportSuiteExecuted": false,
+  "productionFixesVerified": [
+    "board card rendering",
+    "notice/document messages, all 5 tests passed"
+  ],
+  "remainingHarnessFailures": [
+    "unsupported Korean key in helper",
+    "sortable active and inert placeholder both matched"
+  ]
+}

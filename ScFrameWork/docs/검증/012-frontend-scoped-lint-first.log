@@ -1,0 +1,7 @@
+
+/Users/dk/Work/ScFramework/frontend/packages/runtime/src/browserErrors.spec.ts
+   12:25  warning  There is more than one component in this file  vue/one-component-per-file
+  132:27  warning  There is more than one component in this file  vue/one-component-per-file
+
+✖ 2 problems (0 errors, 2 warnings)
+

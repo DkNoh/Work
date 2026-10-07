@@ -1,0 +1,21 @@
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated lodash.isequal@4.5.0: This package is deprecated. Use require('node:util').isDeepStrictEqual instead.
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated fstream@1.0.12: This package is no longer supported.
+
+added 703 packages in 5s
+
+> sc-framework@0.1.0 verify
+> npm run format:check && npm run lint && npm run api:check && npm run ui:contracts:check && npm run ui:boundaries:check && npm run visual:manifest:check && npm run typecheck && npm run test:unit && npm run build
+
+
+> sc-framework@0.1.0 format:check
+> prettier --check .
+
+Checking formatting...
+[warn] docs/openapi.json
+[warn] docs/질의/README.md
+[warn] Code style issues found in 2 files. Run Prettier with --write to fix.

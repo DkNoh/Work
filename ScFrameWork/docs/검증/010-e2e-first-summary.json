@@ -1,0 +1,17 @@
+{
+  "stage": "010",
+  "run": "first",
+  "passed": 54,
+  "failed": 13,
+  "skipped": 4,
+  "reportSuiteExecuted": false,
+  "resultsArchived": "docs/\uac80\uc99d/010-e2e-first-results",
+  "productionFailures": [
+    "sortable callback eagerly evaluated",
+    "notice/document messages not registered"
+  ],
+  "testHarnessFailures": [
+    "virtual select scroll target replaced",
+    "implicit output status ambiguity"
+  ]
+}

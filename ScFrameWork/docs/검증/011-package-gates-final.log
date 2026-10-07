@@ -1,0 +1,26 @@
+PASS export target missing: SC_PACKAGE_EXPORT_MISSING
+PASS static relative import missing: SC_JS_RELATIVE_MISSING
+PASS relative export missing: SC_JS_RELATIVE_MISSING
+PASS dynamic relative import missing: SC_JS_RELATIVE_MISSING
+PASS undeclared bare dependency: SC_JS_UNDECLARED_BARE
+PASS workspace source alias: SC_JS_ABSOLUTE_ALIAS
+PASS forbidden raw source file: SC_PACKAGE_FORBIDDEN_FILE
+PASS forbidden runtime database file: SC_PACKAGE_FORBIDDEN_FILE
+PASS forbidden source map: SC_PACKAGE_FORBIDDEN_FILE
+PASS private export: SC_PACKAGE_PRIVATE_EXPORT
+PASS type-only component named re-export: SC_UI_COMPONENT_EXPORT
+PASS type-only component star re-export: SC_UI_COMPONENT_EXPORT
+PASS missing public CSS: SC_UI_CSS_MISSING
+PASS absolute declaration import path: SC_DECL_ABSOLUTE_ALIAS
+PASS dangling declaration relative type: SC_DECL_RELATIVE_MISSING
+PASS empty compiled root exports: SC_PACKAGE_EMPTY_MODULE
+PASS missing internal rights file: SC_PACKAGE_NOTICE
+PASS non-exact direct vendor: SC_VENDOR_EXACT_VERSION
+PASS invalid producer stamp digest: SC_PACKAGE_BUILD_STAMP
+PASS archive traversal: SC_TAR_PATH
+PASS archive absolute path: SC_TAR_PATH
+PASS archive symlink: SC_TAR_LINK
+PASS archive hardlink: SC_TAR_LINK
+PASS archive duplicate paths: SC_TAR_DUPLICATE
+PASS zero frontend artifacts: SC_ARTIFACT_FRONTEND_COUNT
+PASS package gates: 25 actual rejecting CLI cases, 128 immutable inputs, temporary fixtures removed

@@ -1,0 +1,120 @@
+
+> sc-framework@0.1.0 build-storybook
+> npm run build-storybook --workspace @sc/catalog
+
+
+> @sc/catalog@0.1.0 build-storybook
+> storybook build
+
+
+┌  Building storybook v10.4.1
+│
+◇  Cleaning outputDir: storybook-static
+│
+◇  Loading presets
+│
+◇  Building manager..
+│
+●  Building preview..
+│  Vite vite v8.3.1 building client environment for production...
+transforming...
+Neither './layout.vue' nor './layout.js(x)' or './layout/index.js(x)' or './layout/index.ts(x)' could be found in '/Users/dk/Work/ScFramework/frontend/packages/ui/src'
+│
+●  Copying static files: public at storybook-static
+✓ 1230 modules transformed.
+rendering chunks...
+computing gzip size...
+│  Vite storybook-static/iframe.html
+│  19.24 kB │ gzip:   5.46 kB
+│  storybook-static/assets/DesignTokens-p0y8acgu.css                 3.00
+│  kB │ gzip:   0.66 kB
+│  storybook-static/assets/contracts-DELeKEPe.css                    9.22
+│  kB │ gzip:   1.58 kB
+│  storybook-static/assets/ScActionButton-B4pHkgiy.css              17.92
+│  kB │ gzip:   3.19 kB
+│  storybook-static/assets/ScAppShell-B4LLBLfG.css                  18.69
+│  kB │ gzip:   3.71 kB
+│  storybook-static/assets/ScTextField-ByC7s0zt.css                 24.81
+│  kB │ gzip:   3.94 kB
+│  storybook-static/assets/iframe-BSubpKU9.css                     194.51
+│  kB │ gzip:  29.19 kB
+│  storybook-static/assets/iframe-bJ9IZ21R.js                        0.04
+│  kB │ gzip:   0.06 kB
+│  storybook-static/assets/react-Bf3ivLjR.js                         0.09
+│  kB │ gzip:   0.10 kB
+│  storybook-static/assets/components-BYoED9mF.js                    0.17
+│  kB │ gzip:   0.16 kB
+│  storybook-static/assets/formatter-EIJCOSYU-C--nqeUc.js            0.30
+│  kB │ gzip:   0.23 kB
+│  storybook-static/assets/chunk-SL3VIQZ3-Do8l1DMl.js                0.72
+│  kB │ gzip:   0.44 kB
+│  storybook-static/assets/chunk-A242L54C-DSi_sWaf.js                0.94
+│  kB │ gzip:   0.55 kB
+│  storybook-static/assets/rolldown-runtime-DkW27tQK.js              1.19
+│  kB │ gzip:   0.67 kB
+│  storybook-static/assets/preload-helper-VEOc_cSF.js                1.33
+│  kB │ gzip:   0.75 kB
+│  storybook-static/assets/chunk-YK43Z22A-DP1w2rSz.js                3.06
+│  kB │ gzip:   1.28 kB
+│  storybook-static/assets/chunk-3LY4VQVK-fGEbfoaX.js                4.08
+│  kB │ gzip:   1.72 kB
+│  storybook-static/assets/chunk-242VQQM5-DHIfGiiL.js                4.09
+│  kB │ gzip:   1.52 kB
+│  storybook-static/assets/react-Q1GcV6wX.js                         7.87
+│  kB │ gzip:   3.01 kB
+│  storybook-static/assets/DesignTokens.stories-BYVcVJbB.js         11.67
+│  kB │ gzip:   4.39 kB
+│  storybook-static/assets/contracts-BmS4K7yB.js                    13.21
+│  kB │ gzip:   5.07 kB
+│  storybook-static/assets/ScTextField.stories-DJRfeRlk.js          14.09
+│  kB │ gzip:   3.13 kB
+│  storybook-static/assets/ScActionButton.stories-CqXI9jr5.js       17.48
+│  kB │ gzip:   3.47 kB
+│  storybook-static/assets/ScActionButton-m1EFvykH.js               26.37
+│  kB │ gzip:   9.29 kB
+│  storybook-static/vite-inject-mocker-entry.js                     27.84
+│  kB │ gzip:   9.66 kB
+│  storybook-static/assets/matchers-5TDFFDYO-C789_MAK.js            28.79
+│  kB │ gzip:   9.68 kB
+│  storybook-static/assets/Color-23OOGO2C-yCf_K8nq.js               30.33
+│  kB │ gzip:  11.46 kB
+│  storybook-static/assets/WithTooltip-65CFNBJE-CkHvPn71.js         32.68
+│  kB │ gzip:  11.45 kB
+│  storybook-static/assets/ScTextField-p2ysL32N.js                  37.87
+│  kB │ gzip:  11.28 kB
+│  storybook-static/assets/ScAppShell.stories-Vp25-27O.js           43.77
+│  kB │ gzip:  12.17 kB
+│  storybook-static/assets/chunk-SI6AKD4S-BkEbxtIo.js               53.93
+│  kB │ gzip:  15.19 kB
+│  storybook-static/assets/theming-BhG_hM63.js                      55.09
+│  kB │ gzip:  21.23 kB
+│  storybook-static/assets/syntaxhighlighter-W7WJGI2T-U82_Zg_f.js   76.52
+│  kB │ gzip:  27.55 kB
+│  storybook-static/assets/ConnectedExamples.stories-BZhShIom.js   140.26
+│  kB │ gzip:  49.75 kB
+│  storybook-static/assets/_plugin-vue_export-helper-CL__GrPJ.js   209.00
+│  kB │ gzip:  78.09 kB
+│  storybook-static/assets/HttpResponse-BtanIdpZ.js                318.48
+│  kB │ gzip: 130.81 kB
+│  storybook-static/assets/axe-CV28SPUJ.js                         659.55
+│  kB │ gzip: 187.91 kB
+│  storybook-static/assets/iframe-DduJpWLU.js                      894.53
+│  kB │ gzip: 255.69 kB
+│  storybook-static/assets/DocsRenderer-LL677BLK-CDKreCqU.js       964.74
+│  kB │ gzip: 305.23 kB
+
+│
+▲  Vite [plugin builtin:vite-reporter]
+│  (!) Some chunks are larger than 500 kB after minification. Consider:
+│  - Using dynamic import() to code-split the application
+│  - Use build.rolldownOptions.output.codeSplitting to improve chunking:
+│  ]8;;https://rolldown.rs/reference/OutputOptions.codeSplittinghttps://rolldown.rs/reference/OutputOptions.codeSplitting]8;;
+│  - Adjust chunk size limit for this warning via
+│  build.chunkSizeWarningLimit.
+│  Vite ✓ built in 2.44s
+│
+◇  Output directory:
+│  /Users/dk/Work/ScFramework/frontend/apps/catalog/storybook-static
+│
+└  Storybook build completed successfully
+

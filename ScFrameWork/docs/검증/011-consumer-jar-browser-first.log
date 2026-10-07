@@ -1,0 +1,384 @@
+PASS packed login, native form and CSS tokens
+PASS typed Notes API, Zod, Query invalidation and 409 draft preservation
+PASS packed shared form, locale preservation and dialog focus
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+ExpectError: expect(locator).toBeFocused() failed
+
+Locator: locator('.sc-virtual-table').getByRole('checkbox', { name: '예제 10000 선택', exact: true })
+Expected: focused
+Timeout: 5000ms
+Error: element(s) not found
+
+Call log:
+  - Expect "toBeFocused" locator('.sc-virtual-table').getByRole('checkbox', { name: '예제 10000 선택', exact: true }) with timeout 5000ms
+  - waiting for locator('.sc-virtual-table').getByRole('checkbox', { name: '예제 10000 선택', exact: true })
+    3 × locator resolved to <input type="checkbox" data-v-fe77188b="" data-sc-focus="select" aria-label="예제 10000 선택" name="sc-virtual-select-sc-1-29"/>
+      - unexpected value "inactive"
+
+    at captureRawStack (/Users/dk/Work/ScFramework/node_modules/playwright-core/lib/coreBundle.js:8588:17)
+    at callMatcherAsStep (/Users/dk/Work/ScFramework/node_modules/playwright/lib/matchers/expect.js:13310:57)
+    at Object.toBeFocused (/Users/dk/Work/ScFramework/node_modules/playwright/lib/matchers/expect.js:13302:23)
+    at /Users/dk/Work/ScFramework/scripts/verify-package-browser.mjs:207:9
+    at async group (/Users/dk/Work/ScFramework/scripts/verify-package-browser.mjs:53:3)
+    at async file:///Users/dk/Work/ScFramework/scripts/verify-package-browser.mjs:190:5 {
+  matcherResult: {
+    message: 'expect(locator).toBeFocused() failed\n' +
+      '\n' +
+      "Locator: locator('.sc-virtual-table').getByRole('checkbox', { name: '예제 10000 선택', exact: true })\n" +
+      'Expected: focused\n' +
+      'Timeout: 5000ms\n' +
+      'Error: element(s) not found\n' +
+      '\n' +
+      'Call log:\n' +
+      `  - Expect "toBeFocused" locator('.sc-virtual-table').getByRole('checkbox', { name: '예제 10000 선택', exact: true }) with timeout 5000ms\n` +
+      "  - waiting for locator('.sc-virtual-table').getByRole('checkbox', { name: '예제 10000 선택', exact: true })\n" +
+      '    3 × locator resolved to <input type="checkbox" data-v-fe77188b="" data-sc-focus="select" aria-label="예제 10000 선택" name="sc-virtual-select-sc-1-29"/>\n' +
+      '      - unexpected value "inactive"\n',
+    pass: false,
+    actual: undefined,
+    name: 'toBeFocused',
+    expected: 'focused',
+    log: [
+      `  - Expect "toBeFocused" locator('.sc-virtual-table').getByRole('checkbox', { name: '예제 10000 선택', exact: true }) with timeout 5000ms`,
+      "  - waiting for locator('.sc-virtual-table').getByRole('checkbox', { name: '예제 10000 선택', exact: true })",
+      '    3 × locator resolved to <input type="checkbox" data-v-fe77188b="" data-sc-focus="select" aria-label="예제 10000 선택" name="sc-virtual-select-sc-1-29"/>',
+      '      - unexpected value "inactive"'
+    ],
+    timeout: 5000,
+    ariaSnapshot: '- link "본문으로 이동":\n' +
+      '  - /url: "#sc-content-sc-1-0"\n' +
+      '- banner:\n' +
+      '  - paragraph: sc-notes\n' +
+      '  - paragraph: Starter\n' +
+      '  - text: 언어 / Language\n' +
+      '  - combobox "언어 / Language":\n' +
+      '    - option "한국어" [selected]\n' +
+      '    - option "English"\n' +
+      '  - button "로그아웃"\n' +
+      '- complementary:\n' +
+      '  - navigation "화면 탐색":\n' +
+      '    - paragraph: 화면 탐색\n' +
+      '    - list:\n' +
+      '      - listitem:\n' +
+      '        - link "저장 예제":\n' +
+      '          - /url: /notes\n' +
+      '      - listitem:\n' +
+      '        - link "공통 기능 예제":\n' +
+      '          - /url: /patterns\n' +
+      '  - paragraph: 공통 모듈을 사용해 화면을 조립합니다.\n' +
+      '- main:\n' +
+      '  - heading "공통 기능 예제" [level=1]\n' +
+      '  - region "공통 입력 폼":\n' +
+      '    - heading "공통 입력 폼" [level=2]\n' +
+      '    - paragraph: 폼 상태와 Zod 검증은 이 화면이 소유합니다.\n' +
+      '    - form "공통 입력 폼":\n' +
+      '      - text: 제목\n' +
+      '      - textbox "제목"\n' +
+      '      - combobox:\n' +
+      '        - text: 유형\n' +
+      '        - combobox "유형"\n' +
+      '      - alert\n' +
+      '      - text: 설명\n' +
+      '      - textbox "설명"\n' +
+      '      - alert\n' +
+      '      - checkbox "검토 내용 확인"\n' +
+      '      - text: 검토 내용 확인\n' +
+      '      - alert\n' +
+      '      - paragraph: 이 예제는 로컬 검증이며 API 저장은 저장 예제 화면에서 확인합니다.\n' +
+      '      - button "초기화"\n' +
+      '      - button "저장"\n' +
+      '  - region "정렬·페이지·선택 예제":\n' +
+      '    - heading "정렬·페이지·선택 예제" [level=2]\n' +
+      '    - status: 1개 선택\n' +
+      '    - region "정렬·페이지·선택 예제 표 영역":\n' +
+      '      - table "정렬·페이지·선택 예제":\n' +
+      '        - caption: 정렬·페이지·선택 예제\n' +
+      '        - rowgroup:\n' +
+      `          - 'row "현재 조회된 선택 가능한 행 모두 선택 이름: 오름차순 정렬 수량: 정렬 해제"':\n` +
+      '            - columnheader "현재 조회된 선택 가능한 행 모두 선택":\n' +
+      '              - checkbox "현재 조회된 선택 가능한 행 모두 선택"\n' +
+      `            - 'columnheader "이름: 오름차순 정렬"':\n` +
+      `              - 'button "이름: 오름차순 정렬"': 이름\n` +
+      `            - 'columnheader "수량: 정렬 해제"':\n` +
+      `              - 'button "수량: 정렬 해제"': 수량\n` +
+      '        - rowgroup:\n' +
+      '          - row "예제 00030 선택 예제 00030 30":\n' +
+      '            - cell "예제 00030 선택":\n' +
+      '              - checkbox "예제 00030 선택"\n' +
+      '            - cell "예제 00030"\n' +
+      '            - cell "30"\n' +
+      '          - row "예제 00029 선택 예제 00029 29":\n' +
+      '            - cell "예제 00029 선택":\n' +
+      '              - checkbox "예제 00029 선택"\n' +
+      '            - cell "예제 00029"\n' +
+      '            - cell "29"\n' +
+      '          - row "예제 00028 선택 예제 00028 28":\n' +
+      '            - cell "예제 00028 선택":\n' +
+      '              - checkbox "예제 00028 선택"\n' +
+      '            - cell "예제 00028"\n' +
+      '            - cell "28"\n' +
+      '          - row "예제 00027 선택 예제 00027 27":\n' +
+      '            - cell "예제 00027 선택":\n' +
+      '              - checkbox "예제 00027 선택"\n' +
+      '            - cell "예제 00027"\n' +
+      '            - cell "27"\n' +
+      '          - row "예제 00026 선택 예제 00026 26":\n' +
+      '            - cell "예제 00026 선택":\n' +
+      '              - checkbox "예제 00026 선택"\n' +
+      '            - cell "예제 00026"\n' +
+      '            - cell "26"\n' +
+      '          - row "예제 00025 선택 예제 00025 25":\n' +
+      '            - cell "예제 00025 선택":\n' +
+      '              - checkbox "예제 00025 선택"\n' +
+      '            - cell "예제 00025"\n' +
+      '            - cell "25"\n' +
+      '          - row "예제 00024 선택 예제 00024 24":\n' +
+      '            - cell "예제 00024 선택":\n' +
+      '              - checkbox "예제 00024 선택"\n' +
+      '            - cell "예제 00024"\n' +
+      '            - cell "24"\n' +
+      '          - row "예제 00023 선택 예제 00023 23":\n' +
+      '            - cell "예제 00023 선택":\n' +
+      '              - checkbox "예제 00023 선택"\n' +
+      '            - cell "예제 00023"\n' +
+      '            - cell "23"\n' +
+      '          - row "예제 00022 선택 예제 00022 22":\n' +
+      '            - cell "예제 00022 선택":\n' +
+      '              - checkbox "예제 00022 선택"\n' +
+      '            - cell "예제 00022"\n' +
+      '            - cell "22"\n' +
+      '          - row "예제 00021 선택 예제 00021 21":\n' +
+      '            - cell "예제 00021 선택":\n' +
+      '              - checkbox "예제 00021 선택"\n' +
+      '            - cell "예제 00021"\n' +
+      '            - cell "21"\n' +
+      '    - navigation "정렬·페이지·선택 예제 일반 페이지 표 보기":\n' +
+      '      - button "이전 페이지" [disabled]\n' +
+      '      - text: 1 / 3 페이지 · 30건\n' +
+      '      - button "다음 페이지"\n' +
+      '  - region "가상 표 10,000행":\n' +
+      '    - heading "가상 표 10,000행" [level=2]\n' +
+      '    - button "일반 페이지 표 보기"\n' +
+      '    - paragraph: 일부 행만 화면에 표시됩니다. 전체 행 탐색은 일반 페이지 표 보기를 이용하세요.\n' +
+      '    - status: 1개 선택\n' +
+      '    - group "가상 표 10,000행":\n' +
+      '      - button "첫 행으로 이동"\n' +
+      '      - button "이전 행으로 이동"\n' +
+      '      - status: 10000 / 10000행\n' +
+      '      - button "다음 행으로 이동"\n' +
+      '      - button "마지막 행으로 이동"\n' +
+      '    - region "가상 표 10,000행 표 영역":\n' +
+      '      - table "가상 표 10,000행":\n' +
+      '        - caption: 가상 표 10,000행\n' +
+      '        - rowgroup:\n' +
+      `          - 'row "현재 조회된 선택 가능한 행 모두 선택 이름: 오름차순 정렬 수량: 정렬 해제"':\n` +
+      '            - columnheader "현재 조회된 선택 가능한 행 모두 선택":\n' +
+      '              - checkbox "현재 조회된 선택 가능한 행 모두 선택" [checked=mixed]\n' +
+      `            - 'columnheader "이름: 오름차순 정렬"':\n` +
+      `              - 'button "이름: 오름차순 정렬"': 이름\n` +
+      `            - 'columnheader "수량: 정렬 해제"':\n` +
+      `              - 'button "수량: 정렬 해제"': 수량\n` +
+      '        - rowgroup:\n' +
+      '          - row "예제 00017 선택 예제 00017 17":\n' +
+      '            - cell "예제 00017 선택":\n' +
+      '              - checkbox "예제 00017 선택"\n' +
+      '            - cell "예제 00017"\n' +
+      '            - cell "17"\n' +
+      '          - row "예제 00016 선택 예제 00016 16":\n' +
+      '            - cell "예제 00016 선택":\n' +
+      '              - checkbox "예제 00016 선택"\n' +
+      '            - cell "예제 00016"\n' +
+      '            - cell "16"\n' +
+      '          - row "예제 00015 선택 예제 00015 15":\n' +
+      '            - cell "예제 00015 선택":\n' +
+      '              - checkbox "예제 00015 선택"\n' +
+      '            - cell "예제 00015"\n' +
+      '            - cell "15"\n' +
+      '          - row "예제 00014 선택 예제 00014 14":\n' +
+      '            - cell "예제 00014 선택":\n' +
+      '              - checkbox "예제 00014 선택"\n' +
+      '            - cell "예제 00014"\n' +
+      '            - cell "14"\n' +
+      '          - row "예제 00013 선택 예제 00013 13":\n' +
+      '            - cell "예제 00013 선택":\n' +
+      '              - checkbox "예제 00013 선택"\n' +
+      '            - cell "예제 00013"\n' +
+      '            - cell "13"\n' +
+      '          - row "예제 00012 선택 예제 00012 12":\n' +
+      '            - cell "예제 00012 선택":\n' +
+      '              - checkbox "예제 00012 선택"\n' +
+      '            - cell "예제 00012"\n' +
+      '            - cell "12"\n' +
+      '          - row "예제 00011 선택 예제 00011 11":\n' +
+      '            - cell "예제 00011 선택":\n' +
+      '              - checkbox "예제 00011 선택"\n' +
+      '            - cell "예제 00011"\n' +
+      '            - cell "11"\n' +
+      '          - row "예제 00010 선택 예제 00010 10":\n' +
+      '            - cell "예제 00010 선택":\n' +
+      '              - checkbox "예제 00010 선택"\n' +
+      '            - cell "예제 00010"\n' +
+      '            - cell "10"\n' +
+      '          - row "예제 00009 선택 예제 00009 9":\n' +
+      '            - cell "예제 00009 선택":\n' +
+      '              - checkbox "예제 00009 선택"\n' +
+      '            - cell "예제 00009"\n' +
+      '            - cell "9"\n' +
+      '          - row "예제 00008 선택 예제 00008 8":\n' +
+      '            - cell "예제 00008 선택":\n' +
+      '              - checkbox "예제 00008 선택"\n' +
+      '            - cell "예제 00008"\n' +
+      '            - cell "8"\n' +
+      '          - row "예제 00007 선택 예제 00007 7":\n' +
+      '            - cell "예제 00007 선택":\n' +
+      '              - checkbox "예제 00007 선택"\n' +
+      '            - cell "예제 00007"\n' +
+      '            - cell "7"\n' +
+      '          - row "예제 00006 선택 예제 00006 6":\n' +
+      '            - cell "예제 00006 선택":\n' +
+      '              - checkbox "예제 00006 선택"\n' +
+      '            - cell "예제 00006"\n' +
+      '            - cell "6"\n' +
+      '          - row "예제 00005 선택 예제 00005 5":\n' +
+      '            - cell "예제 00005 선택":\n' +
+      '              - checkbox "예제 00005 선택"\n' +
+      '            - cell "예제 00005"\n' +
+      '            - cell "5"\n' +
+      '          - row "예제 00004 선택 예제 00004 4":\n' +
+      '            - cell "예제 00004 선택":\n' +
+      '              - checkbox "예제 00004 선택"\n' +
+      '            - cell "예제 00004"\n' +
+      '            - cell "4"\n' +
+      '          - row "예제 00003 선택 예제 00003 3":\n' +
+      '            - cell "예제 00003 선택":\n' +
+      '              - checkbox "예제 00003 선택"\n' +
+      '            - cell "예제 00003"\n' +
+      '            - cell "3"\n' +
+      '          - row "예제 00002 선택 예제 00002 2":\n' +
+      '            - cell "예제 00002 선택":\n' +
+      '              - checkbox "예제 00002 선택"\n' +
+      '            - cell "예제 00002"\n' +
+      '            - cell "2"\n' +
+      '          - row "예제 00001 선택 예제 00001 1":\n' +
+      '            - cell "예제 00001 선택":\n' +
+      '              - checkbox "예제 00001 선택" [checked]\n' +
+      '            - cell "예제 00001"\n' +
+      '            - cell "1"\n' +
+      '  - region "가상 목록 10,000행":\n' +
+      '    - heading "가상 목록 10,000행" [level=2]\n' +
+      '    - group "가상 목록 10,000행":\n' +
+      '      - button "첫 행으로 이동"\n' +
+      '      - button "이전 행으로 이동"\n' +
+      '      - status: 1 / 10000행\n' +
+      '      - button "다음 행으로 이동"\n' +
+      '      - button "마지막 행으로 이동"\n' +
+      '    - region "가상 목록 10,000행 스크롤 영역":\n' +
+      '      - list "가상 목록 10,000행":\n' +
+      '        - listitem:\n' +
+      '          - button "예제 00001"\n' +
+      '          - text: 예제 00001 · 1\n' +
+      '        - listitem:\n' +
+      '          - button "예제 00002"\n' +
+      '          - text: 예제 00002 · 2\n' +
+      '        - listitem:\n' +
+      '          - button "예제 00003"\n' +
+      '          - text: 예제 00003 · 3\n' +
+      '        - listitem:\n' +
+      '          - button "예제 00004"\n' +
+      '          - text: 예제 00004 · 4\n' +
+      '        - listitem:\n' +
+      '          - button "예제 00005"\n' +
+      '          - text: 예제 00005 · 5\n' +
+      '        - listitem:\n' +
+      '          - button "예제 00006"\n' +
+      '          - text: 예제 00006 · 6\n' +
+      '        - listitem:\n' +
+      '          - button "예제 00007"\n' +
+      '          - text: 예제 00007 · 7\n' +
+      '        - listitem:\n' +
+      '          - button "예제 00008"\n' +
+      '          - text: 예제 00008 · 8\n' +
+      '        - listitem:\n' +
+      '          - button "예제 00009"\n' +
+      '          - text: 예제 00009 · 9\n' +
+      '        - listitem:\n' +
+      '          - button "예제 00010"\n' +
+      '          - text: 예제 00010 · 10\n' +
+      '        - listitem:\n' +
+      '          - button "예제 00011"\n' +
+      '          - text: 예제 00011 · 11\n' +
+      '        - listitem:\n' +
+      '          - button "예제 00012"\n' +
+      '          - text: 예제 00012 · 12\n' +
+      '  - region "중립 차트":\n' +
+      '    - heading "중립 차트" [level=2]\n' +
+      '    - button "자료 변경"\n' +
+      '    - button "선 그래프로"\n' +
+      '    - figure "중립 차트":\n' +
+      '      - text: 중립 차트\n' +
+      '      - paragraph: 합성 자료 3개의 값을 표로도 확인할 수 있습니다.\n' +
+      '      - group: 차트 데이터\n' +
+      '  - region "서식 입력":\n' +
+      '    - heading "서식 입력" [level=2]\n' +
+      '    - text: 서식 입력\n' +
+      '    - group "서식 입력":\n' +
+      '      - button "굵게"\n' +
+      '      - button "기울임"\n' +
+      '      - button "글머리 기호"\n' +
+      '      - button "실행 취소" [disabled]\n' +
+      '      - button "다시 실행" [disabled]\n' +
+      '    - textbox "서식 입력":\n' +
+      '      - paragraph: 서식 입력 예제\n' +
+      '    - group: JSON\n' +
+      '  - region "엑셀 가져오기·내보내기":\n' +
+      '    - heading "엑셀 가져오기·내보내기" [level=2]\n' +
+      '    - paragraph: 화면의 예제 자료만 내보냅니다. 서버에 저장하지 않습니다.\n' +
+      '    - button "Excel 내보내기 (3)"\n' +
+      '    - text: XLSX 파일\n' +
+      '    - button "XLSX 파일"\n' +
+      '    - table "엑셀 가져오기·내보내기 (3)":\n' +
+      '      - caption: 엑셀 가져오기·내보내기 (3)\n' +
+      '      - rowgroup:\n' +
+      '        - row "이름 수량 UTC 설명":\n' +
+      '          - columnheader "이름"\n' +
+      '          - columnheader "수량"\n' +
+      '          - columnheader "UTC"\n' +
+      '          - columnheader "설명"\n' +
+      '      - rowgroup:\n' +
+      '        - row "한글 예제 3 2026-01-01T00:00:00.000Z":\n' +
+      '          - cell "한글 예제"\n' +
+      '          - cell "3"\n' +
+      '          - cell "2026-01-01T00:00:00.000Z"\n' +
+      '          - cell\n' +
+      '        - row "수식 모양 문자열 2 =SUM(1,2)":\n' +
+      '          - cell "수식 모양 문자열"\n' +
+      '          - cell "2"\n' +
+      '          - cell\n' +
+      '          - cell "=SUM(1,2)"\n' +
+      '        - row "세 번째 1 실제 문자열":\n' +
+      '          - cell "세 번째"\n' +
+      '          - cell "1"\n' +
+      '          - cell\n' +
+      '          - cell "실제 문자열"\n' +
+      '  - region "날짜 표시 예제":\n' +
+      '    - heading "날짜 표시 예제" [level=2]\n' +
+      '    - paragraph: 달력 날짜와 서버 UTC 시각의 의미를 구분합니다.\n' +
+      '    - textbox "달력 날짜": 2026-10-06\n' +
+      '    - text: 달력 날짜\n' +
+      '    - textbox "UTC 시각 원문": 2026-10-06T00:00:00.123456789Z\n' +
+      '    - text: UTC 시각 원문\n' +
+      '    - combobox:\n' +
+      '      - text: Asia/Seoul\n' +
+      '      - combob'... 2424 more characters
+  }
+}
+
+Node.js v24.16.0
+Traceback (most recent call last):
+  File "/Users/dk/Work/ScFramework/scripts/verify-generated-app.py", line 64, in <module>
+    assert browser.returncode == 0, "External generated-app browser checks failed"
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: External generated-app browser checks failed

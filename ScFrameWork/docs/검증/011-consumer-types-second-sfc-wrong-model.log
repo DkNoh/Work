@@ -1,0 +1,4 @@
+.sc-type-probe-N5MUMS/sfc-wrong-model/Probe.vue(2,14): error TS2322: Type 'number' is not assignable to type 'string'.
+.sc-type-probe-N5MUMS/sfc-wrong-model/Probe.vue(2,45): error TS2322: Type '(value: number) => void' is not assignable to type '(value: string) => any'.
+  Types of parameters 'value' and 'value' are incompatible.
+    Type 'string' is not assignable to type 'number'.

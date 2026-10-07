@@ -1,0 +1,149 @@
+
+Running 6 tests using 1 worker
+
+(node:5084) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 frontend/e2e/010-media.spec.ts:122:3 › image UI upload, trusted pointer, body preservation, PDF privacy and real box conflict at 390 (6.4s)
+(node:5097) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 frontend/e2e/010-media.spec.ts:260:3 › English image workspace has native coordinates and no overflow at 390 (1.9s)
+  ✘  3 frontend/e2e/010-media.spec.ts:122:3 › image UI upload, trusted pointer, body preservation, PDF privacy and real box conflict at 1366 (5.9s)
+(node:5132) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  4 frontend/e2e/010-media.spec.ts:260:3 › English image workspace has native coordinates and no overflow at 1366 (1.6s)
+  ✓  5 frontend/e2e/010-media.spec.ts:280:1 › JPEG EXIF 6 uses browser-oriented original dimensions and preserves uploaded bytes (1.8s)
+  ✓  6 frontend/e2e/010-media.spec.ts:314:1 › agreed author links ADO through the UI and exports stored plain text without an external call (2.0s)
+
+
+  1) frontend/e2e/010-media.spec.ts:122:3 › image UI upload, trusted pointer, body preservation, PDF privacy and real box conflict at 390 
+
+    Error: image-detail-390-ko: document 전체 접근성
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  -  1
+    + Received  + 16
+
+      Object {
+        "duplicateIds": Array [],
+    -   "violations": Array [],
+    +   "violations": Array [
+    +     Object {
+    +       "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+    +       "id": "landmark-unique",
+    +       "impact": "moderate",
+    +       "nodes": Array [
+    +         Object {
+    +           "failureSummary": "Fix any of the following:
+    +   The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable",
+    +           "target": Array [
+    +             "section[aria-labelledby=\"sc-section-sc-1-93\"]",
+    +           ],
+    +         },
+    +       ],
+    +     },
+    +   ],
+      }
+
+       at support/accessibility.ts:95
+
+      93 |     },
+      94 |     `${state}: document 전체 접근성`,
+    > 95 |   ).toEqual({ violations: [], duplicateIds: [] });
+         |     ^
+      96 | }
+      97 |
+        at assertAccessible (/Users/dk/Work/ScFramework/frontend/e2e/support/accessibility.ts:95:5)
+        at capture (/Users/dk/Work/ScFramework/frontend/e2e/010-media.spec.ts:110:3)
+        at /Users/dk/Work/ScFramework/frontend/e2e/010-media.spec.ts:207:5
+
+    attachment #1: image-workspace-390-ko-axe.json (application/json) ──────────────────────────────
+    docs/검증/010-media-focused-third-results/010-media-image-UI-upload--c1a75-nd-real-box-conflict-at-390/attachments/image-workspace-390-ko-axe-json-f1788a76b14244bc963435f753780b33fa779fbd.json
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: image-workspace-390-ko-image (image/png) ────────────────────────────────────────
+    docs/검증/010-media-focused-third-results/010-media-image-UI-upload--c1a75-nd-real-box-conflict-at-390/attachments/image-workspace-390-ko-image-9e0210d13ec053732e70c17192ef8847a745f469.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: image-workspace-390-ko-top (image/png) ──────────────────────────────────────────
+    docs/검증/010-media-focused-third-results/010-media-image-UI-upload--c1a75-nd-real-box-conflict-at-390/attachments/image-workspace-390-ko-top-18623969f0728ea560b5bc9c6f5451ac8b4c444f.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #4: image-detail-390-ko-axe.json (application/json) ─────────────────────────────────
+    docs/검증/010-media-focused-third-results/010-media-image-UI-upload--c1a75-nd-real-box-conflict-at-390/attachments/image-detail-390-ko-axe-json-daed385b36e0faefb6333c31e300518d495bdf4f.json
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #5: screenshot (image/png) ──────────────────────────────────────────────────────────
+    docs/검증/010-media-focused-third-results/010-media-image-UI-upload--c1a75-nd-real-box-conflict-at-390/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: docs/검증/010-media-focused-third-results/010-media-image-UI-upload--c1a75-nd-real-box-conflict-at-390/error-context.md
+
+  2) frontend/e2e/010-media.spec.ts:122:3 › image UI upload, trusted pointer, body preservation, PDF privacy and real box conflict at 1366 
+
+    Error: image-detail-1366-ko: document 전체 접근성
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  -  1
+    + Received  + 16
+
+      Object {
+        "duplicateIds": Array [],
+    -   "violations": Array [],
+    +   "violations": Array [
+    +     Object {
+    +       "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+    +       "id": "landmark-unique",
+    +       "impact": "moderate",
+    +       "nodes": Array [
+    +         Object {
+    +           "failureSummary": "Fix any of the following:
+    +   The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable",
+    +           "target": Array [
+    +             "section[aria-labelledby=\"sc-section-sc-1-93\"]",
+    +           ],
+    +         },
+    +       ],
+    +     },
+    +   ],
+      }
+
+       at support/accessibility.ts:95
+
+      93 |     },
+      94 |     `${state}: document 전체 접근성`,
+    > 95 |   ).toEqual({ violations: [], duplicateIds: [] });
+         |     ^
+      96 | }
+      97 |
+        at assertAccessible (/Users/dk/Work/ScFramework/frontend/e2e/support/accessibility.ts:95:5)
+        at capture (/Users/dk/Work/ScFramework/frontend/e2e/010-media.spec.ts:110:3)
+        at /Users/dk/Work/ScFramework/frontend/e2e/010-media.spec.ts:207:5
+
+    attachment #1: image-workspace-1366-ko-axe.json (application/json) ─────────────────────────────
+    docs/검증/010-media-focused-third-results/010-media-image-UI-upload--d381d-d-real-box-conflict-at-1366/attachments/image-workspace-1366-ko-axe-json-9b4ebca6e8505099b6b0c0b56ffe1525bd0eae6d.json
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: image-workspace-1366-ko-image (image/png) ───────────────────────────────────────
+    docs/검증/010-media-focused-third-results/010-media-image-UI-upload--d381d-d-real-box-conflict-at-1366/attachments/image-workspace-1366-ko-image-7a8e48c0ff2680bd39bb9866de96b83df560dc18.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: image-workspace-1366-ko-top (image/png) ─────────────────────────────────────────
+    docs/검증/010-media-focused-third-results/010-media-image-UI-upload--d381d-d-real-box-conflict-at-1366/attachments/image-workspace-1366-ko-top-fcd7d866772811ef685057c5eb9bc3b57858bd93.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #4: image-detail-1366-ko-axe.json (application/json) ────────────────────────────────
+    docs/검증/010-media-focused-third-results/010-media-image-UI-upload--d381d-d-real-box-conflict-at-1366/attachments/image-detail-1366-ko-axe-json-393d423341b1ba163a3c1cdd11704ae9a4ca5122.json
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #5: screenshot (image/png) ──────────────────────────────────────────────────────────
+    docs/검증/010-media-focused-third-results/010-media-image-UI-upload--d381d-d-real-box-conflict-at-1366/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: docs/검증/010-media-focused-third-results/010-media-image-UI-upload--d381d-d-real-box-conflict-at-1366/error-context.md
+
+  2 failed
+    frontend/e2e/010-media.spec.ts:122:3 › image UI upload, trusted pointer, body preservation, PDF privacy and real box conflict at 390 
+    frontend/e2e/010-media.spec.ts:122:3 › image UI upload, trusted pointer, body preservation, PDF privacy and real box conflict at 1366 
+  4 passed (27.3s)

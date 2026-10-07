@@ -1,0 +1,8 @@
+file:///Users/dk/Work/ScFramework/scripts/package-framework.mjs:59
+    throw new Error(`${manifest.name}: 현재 버전으로 다시 검증·빌드해야 합니다.`);
+          ^
+
+Error: @sc/date: 현재 버전으로 다시 검증·빌드해야 합니다.
+    at file:///Users/dk/Work/ScFramework/scripts/package-framework.mjs:59:11
+
+Node.js v24.16.0

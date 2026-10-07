@@ -1,0 +1,40 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------< dev.scframework.consumer012:sc-consumer-012 >-------------
+[INFO] Building sc-consumer-012 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ sc-consumer-012 ---
+[INFO] Deleting /private/tmp/sc-framework-consumer-012-20261007/backend/target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ sc-consumer-012 ---
+[INFO] Copying 10 resources from src/main/resources to target/classes
+[INFO] Copying 10 resources from ../frontend/dist to target/classes/static
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ sc-consumer-012 ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 20 source files with javac [debug parameters release 21] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ sc-consumer-012 ---
+[INFO] skip non existing resourceDirectory /private/tmp/sc-framework-consumer-012-20261007/backend/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ sc-consumer-012 ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 2 source files with javac [debug parameters release 21] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ sc-consumer-012 ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ sc-consumer-012 ---
+[INFO] Building jar: /private/tmp/sc-framework-consumer-012-20261007/backend/target/sc-consumer-012.jar
+[INFO] 
+[INFO] --- spring-boot:3.5.16:repackage (repackage) @ sc-consumer-012 ---
+[INFO] Replacing main artifact /private/tmp/sc-framework-consumer-012-20261007/backend/target/sc-consumer-012.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /private/tmp/sc-framework-consumer-012-20261007/backend/target/sc-consumer-012.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.440 s
+[INFO] Finished at: 2026-10-07T07:48:43+09:00
+[INFO] ------------------------------------------------------------------------

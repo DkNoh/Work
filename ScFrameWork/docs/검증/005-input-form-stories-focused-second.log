@@ -1,0 +1,69 @@
+
+> @sc/catalog@0.1.0 test:stories
+> vitest run --config vitest.config.ts src/ScSelect.stories.ts src/ScCheckbox.stories.ts src/ScTextArea.stories.ts src/ScFormActions.stories.ts src/ScConfirmDialog.stories.ts
+
+
+ RUN  v4.1.11 /Users/dk/Work/ScFramework/frontend/apps/catalog
+
+9:20:15 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:20:15 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:20:15 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:20:15 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:20:15 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:20:15 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:20:15 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:20:15 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:20:15 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:20:15 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:20:16 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+stderr | src/ScSelect.stories.ts > Keyboard Selection
+[@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+stderr | src/ScSelect.stories.ts > Keyboard Selection
+[@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+ ❯ |storybook (chromium)| src/ScSelect.stories.ts (5 tests | 1 failed) 1001ms
+   × Keyboard Selection 364ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |storybook (chromium)| src/ScSelect.stories.ts > Keyboard Selection
+Error: 
+[34mClick to debug the error directly in Storybook: http://localhost:6006/?path=/story/공통-ui-scselect--keyboard-selection&addonPanel=storybook/interactions/panel[39m
+
+expect(element).toHaveAttribute("aria-disabled", "true") // element.getAttribute("aria-disabled") === "true"
+
+Expected the element to have attribute:
+  aria-disabled="true"
+Received:
+  null
+ ❯ Proxy.expectWrapper ../../../node_modules/storybook/dist/test/index.js:15100:16
+ ❯ Proxy.<anonymous> ../../../node_modules/storybook/dist/test/index.js:14620:17
+ ❯ Proxy.methodWrapper ../../../node_modules/storybook/dist/test/index.js:9105:24
+ ❯ Instrumenter.invoke ../../../node_modules/storybook/dist/instrumenter/index.js:322:22
+ ❯ Instrumenter.intercept ../../../node_modules/storybook/dist/instrumenter/index.js:243:139
+ ❯ Instrumenter.track ../../../node_modules/storybook/dist/instrumenter/index.js:238:378
+ ❯ Proxy.toHaveAttribute ../../../node_modules/storybook/dist/instrumenter/index.js:224:263
+ ❯ toHaveAttribute src/ScSelect.stories.ts:50:68
+     48|     const page = within(canvasElement.ownerDocument.body);
+     49|     await waitFor(() => expect(page.getByRole("listbox")).toBeVisible(…
+     50|     await expect(page.getByRole("option", { name: "사용할 수 없는 업무" })).to…
+       |                                                                    ^
+     51|       "aria-disabled",
+     52|       "true",
+ ❯ runStory ../../../node_modules/storybook/dist/_browser-chunks/chunk-SZQXB3JV.js:1325:6
+ ❯ ../../../node_modules/@storybook/addon-vitest/dist/vitest-plugin/test-utils.js:108:184
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 4 passed (5)
+      Tests  1 failed | 20 passed (21)
+   Start at  21:20:13
+   Duration  3.04s (transform 0ms, setup 6.48s, import 215ms, tests 3.14s, environment 0ms)
+
+npm error Lifecycle script `test:stories` failed with error:
+npm error code 1
+npm error path /Users/dk/Work/ScFramework/frontend/apps/catalog
+npm error workspace @sc/catalog@0.1.0
+npm error location /Users/dk/Work/ScFramework/frontend/apps/catalog
+npm error command failed
+npm error command sh -c vitest run --config vitest.config.ts src/ScSelect.stories.ts src/ScCheckbox.stories.ts src/ScTextArea.stories.ts src/ScFormActions.stories.ts src/ScConfirmDialog.stories.ts

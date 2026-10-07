@@ -1,0 +1,10 @@
+frontend/apps/reference-app/src/features/examples/ExamplesPage.vue 80ms
+frontend/apps/reference-app/src/features/patterns/PatternForm.vue 16ms
+frontend/apps/starter-app/src/features/patterns/ExtensionPatterns.vue 26ms
+frontend/apps/reference-app/src/features/patterns/ExtensionPatterns.vue 20ms
+frontend/apps/catalog/src/fixtures/ScListDetailStory.vue 3ms
+frontend/packages/ui/src/contracts.ts 5ms
+frontend/packages/ui/src/charts/chart-model.ts 2ms (unchanged)
+frontend/apps/catalog/.storybook/main.ts 2ms (unchanged)
+frontend/apps/catalog/src/ScListDetailLayout.stories.ts 2ms (unchanged)
+frontend/packages/ui/src/patterns/ScListDetailLayout.vue 6ms (unchanged)

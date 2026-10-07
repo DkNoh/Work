@@ -1,0 +1,20 @@
+{
+  "patternsEnabled": false,
+  "isolatedBuild": true,
+  "defaultBuildUnchanged": true,
+  "assets": [
+    "PatternsPage-BP4GamWx.js",
+    "PatternsPage-Bh8mj2o_.css",
+    "index-Bv8SeL7s.css",
+    "index-DdiNpk9a.js",
+    "rolldown-runtime-Dd_uD5pT.js"
+  ],
+  "optionalChunkRequests": [],
+  "optionalChunksEmitted": [
+    "PatternsPage-BP4GamWx.js",
+    "PatternsPage-Bh8mj2o_.css"
+  ],
+  "unknownRouteRedirect": "/",
+  "browserErrors": [],
+  "apiRequests": []
+}

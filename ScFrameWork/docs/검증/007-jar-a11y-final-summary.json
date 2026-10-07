@@ -1,0 +1,375 @@
+{
+  "stage": "007",
+  "scans": 52,
+  "violations": 0,
+  "duplicateIds": 0,
+  "reports": [
+    {
+      "report": "007-e2e-final-results/requirements-실제-작성자·담당자-세션에서-등록→지정→제출→검토→합의·댓글·이력을-저장한다/requirement-agreed-history-axe.json",
+      "state": "requirement-agreed-history",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 2
+    },
+    {
+      "report": "007-e2e-final-results/requirements-실제-작성자·담당자-세션에서-등록→지정→제출→검토→합의·댓글·이력을-저장한다/requirement-reviewer-axe.json",
+      "state": "requirement-reviewer",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 2
+    },
+    {
+      "report": "007-e2e-final-results/accessibility-starter-실제-J-424a3-390px-한국어·영어·오류·dirty·열린-모달/patterns-ko-select-menu-open-axe.json",
+      "state": "patterns-ko-select-menu-open",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 3
+    },
+    {
+      "report": "007-e2e-final-results/accessibility-starter-실제-J-424a3-390px-한국어·영어·오류·dirty·열린-모달/patterns-en-dirty-errors-axe.json",
+      "state": "patterns-en-dirty-errors",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 2
+    },
+    {
+      "report": "007-e2e-final-results/accessibility-starter-실제-J-424a3-390px-한국어·영어·오류·dirty·열린-모달/patterns-ko-default-axe.json",
+      "state": "patterns-ko-default",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 2
+    },
+    {
+      "report": "007-e2e-final-results/accessibility-starter-실제-J-424a3-390px-한국어·영어·오류·dirty·열린-모달/patterns-en-mobile-navigation-closed-axe.json",
+      "state": "patterns-en-mobile-navigation-closed",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 2
+    },
+    {
+      "report": "007-e2e-final-results/accessibility-starter-실제-J-424a3-390px-한국어·영어·오류·dirty·열린-모달/patterns-ko-dirty-errors-editor-table-axe.json",
+      "state": "patterns-ko-dirty-errors-editor-table",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 2
+    },
+    {
+      "report": "007-e2e-final-results/accessibility-starter-실제-J-424a3-390px-한국어·영어·오류·dirty·열린-모달/patterns-en-confirm-closed-axe.json",
+      "state": "patterns-en-confirm-closed",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 2
+    },
+    {
+      "report": "007-e2e-final-results/accessibility-starter-실제-J-424a3-390px-한국어·영어·오류·dirty·열린-모달/patterns-en-confirm-open-axe.json",
+      "state": "patterns-en-confirm-open",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 1
+    },
+    {
+      "report": "007-e2e-final-results/accessibility-starter-실제-J-424a3-390px-한국어·영어·오류·dirty·열린-모달/patterns-en-mobile-navigation-open-axe.json",
+      "state": "patterns-en-mobile-navigation-open",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 3
+    },
+    {
+      "report": "007-e2e-final-results/accessibility-접근성-로그인-1366px-닫힌-셸과-실제-로그인-필드/login-ko-axe.json",
+      "state": "login-ko",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 1
+    },
+    {
+      "report": "007-e2e-final-results/accessibility-reference-실제-d8fb3-390px-한국어·영어·오류·dirty·열린-모달/patterns-ko-select-menu-open-axe.json",
+      "state": "patterns-ko-select-menu-open",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 3
+    },
+    {
+      "report": "007-e2e-final-results/accessibility-reference-실제-d8fb3-390px-한국어·영어·오류·dirty·열린-모달/patterns-en-dirty-errors-axe.json",
+      "state": "patterns-en-dirty-errors",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 2
+    },
+    {
+      "report": "007-e2e-final-results/accessibility-reference-실제-d8fb3-390px-한국어·영어·오류·dirty·열린-모달/patterns-ko-default-axe.json",
+      "state": "patterns-ko-default",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 2
+    },
+    {
+      "report": "007-e2e-final-results/accessibility-reference-실제-d8fb3-390px-한국어·영어·오류·dirty·열린-모달/patterns-en-mobile-navigation-closed-axe.json",
+      "state": "patterns-en-mobile-navigation-closed",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 2
+    },
+    {
+      "report": "007-e2e-final-results/accessibility-reference-실제-d8fb3-390px-한국어·영어·오류·dirty·열린-모달/patterns-ko-dirty-errors-editor-table-axe.json",
+      "state": "patterns-ko-dirty-errors-editor-table",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 2
+    },
+    {
+      "report": "007-e2e-final-results/accessibility-reference-실제-d8fb3-390px-한국어·영어·오류·dirty·열린-모달/patterns-en-confirm-closed-axe.json",
+      "state": "patterns-en-confirm-closed",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 2
+    },
+    {
+      "report": "007-e2e-final-results/accessibility-reference-실제-d8fb3-390px-한국어·영어·오류·dirty·열린-모달/patterns-en-confirm-open-axe.json",
+      "state": "patterns-en-confirm-open",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 1
+    },
+    {
+      "report": "007-e2e-final-results/accessibility-reference-실제-d8fb3-390px-한국어·영어·오류·dirty·열린-모달/patterns-en-mobile-navigation-open-axe.json",
+      "state": "patterns-en-mobile-navigation-open",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 3
+    },
+    {
+      "report": "007-e2e-final-results/accessibility-접근성-Referenc-4ae3c-6px-기본·400-필드·409·native-확인/examples-field-error-400-axe.json",
+      "state": "examples-field-error-400",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 1
+    },
+    {
+      "report": "007-e2e-final-results/accessibility-접근성-Referenc-4ae3c-6px-기본·400-필드·409·native-확인/examples-confirm-closed-axe.json",
+      "state": "examples-confirm-closed",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 1
+    },
+    {
+      "report": "007-e2e-final-results/accessibility-접근성-Referenc-4ae3c-6px-기본·400-필드·409·native-확인/examples-default-axe.json",
+      "state": "examples-default",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 1
+    },
+    {
+      "report": "007-e2e-final-results/accessibility-접근성-Referenc-4ae3c-6px-기본·400-필드·409·native-확인/examples-conflict-409-axe.json",
+      "state": "examples-conflict-409",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 1
+    },
+    {
+      "report": "007-e2e-final-results/accessibility-접근성-Referenc-4ae3c-6px-기본·400-필드·409·native-확인/examples-confirm-open-axe.json",
+      "state": "examples-confirm-open",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 1
+    },
+    {
+      "report": "007-e2e-final-results/date-Starter-날짜-1366px-calendar·UTC-정밀도·DST·언어를-독립적으로-처리한다/starter-date-dst-1366-axe.json",
+      "state": "starter-date-dst-1366",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 2
+    },
+    {
+      "report": "007-e2e-final-results/date-Starter-날짜-1366px-calendar·UTC-정밀도·DST·언어를-독립적으로-처리한다/starter-date-en-1366-axe.json",
+      "state": "starter-date-en-1366",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 2
+    },
+    {
+      "report": "007-e2e-final-results/requirements-요구사항-390px-목록·본문·필드-오류·댓글·이력은-전체-DOM-접근성을-검사한다/requirements-list-390-axe.json",
+      "state": "requirements-list-390",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 2
+    },
+    {
+      "report": "007-e2e-final-results/requirements-요구사항-390px-목록·본문·필드-오류·댓글·이력은-전체-DOM-접근성을-검사한다/requirement-invalid-390-axe.json",
+      "state": "requirement-invalid-390",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 2
+    },
+    {
+      "report": "007-e2e-final-results/requirements-요구사항-390px-목록·본문·필드-오류·댓글·이력은-전체-DOM-접근성을-검사한다/requirement-detail-390-axe.json",
+      "state": "requirement-detail-390",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 2
+    },
+    {
+      "report": "007-e2e-final-results/accessibility-starter-실제-J-61ee3-366px-한국어·영어·오류·dirty·열린-모달/patterns-ko-select-menu-open-axe.json",
+      "state": "patterns-ko-select-menu-open",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 3
+    },
+    {
+      "report": "007-e2e-final-results/accessibility-starter-실제-J-61ee3-366px-한국어·영어·오류·dirty·열린-모달/patterns-en-dirty-errors-axe.json",
+      "state": "patterns-en-dirty-errors",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 2
+    },
+    {
+      "report": "007-e2e-final-results/accessibility-starter-실제-J-61ee3-366px-한국어·영어·오류·dirty·열린-모달/patterns-ko-default-axe.json",
+      "state": "patterns-ko-default",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 2
+    },
+    {
+      "report": "007-e2e-final-results/accessibility-starter-실제-J-61ee3-366px-한국어·영어·오류·dirty·열린-모달/patterns-ko-dirty-errors-editor-table-axe.json",
+      "state": "patterns-ko-dirty-errors-editor-table",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 2
+    },
+    {
+      "report": "007-e2e-final-results/accessibility-starter-실제-J-61ee3-366px-한국어·영어·오류·dirty·열린-모달/patterns-en-confirm-closed-axe.json",
+      "state": "patterns-en-confirm-closed",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 2
+    },
+    {
+      "report": "007-e2e-final-results/accessibility-starter-실제-J-61ee3-366px-한국어·영어·오류·dirty·열린-모달/patterns-en-confirm-open-axe.json",
+      "state": "patterns-en-confirm-open",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 1
+    },
+    {
+      "report": "007-e2e-final-results/accessibility-reference-실제-91be3-366px-한국어·영어·오류·dirty·열린-모달/patterns-ko-select-menu-open-axe.json",
+      "state": "patterns-ko-select-menu-open",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 3
+    },
+    {
+      "report": "007-e2e-final-results/accessibility-reference-실제-91be3-366px-한국어·영어·오류·dirty·열린-모달/patterns-en-dirty-errors-axe.json",
+      "state": "patterns-en-dirty-errors",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 2
+    },
+    {
+      "report": "007-e2e-final-results/accessibility-reference-실제-91be3-366px-한국어·영어·오류·dirty·열린-모달/patterns-ko-default-axe.json",
+      "state": "patterns-ko-default",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 2
+    },
+    {
+      "report": "007-e2e-final-results/accessibility-reference-실제-91be3-366px-한국어·영어·오류·dirty·열린-모달/patterns-ko-dirty-errors-editor-table-axe.json",
+      "state": "patterns-ko-dirty-errors-editor-table",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 2
+    },
+    {
+      "report": "007-e2e-final-results/accessibility-reference-실제-91be3-366px-한국어·영어·오류·dirty·열린-모달/patterns-en-confirm-closed-axe.json",
+      "state": "patterns-en-confirm-closed",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 2
+    },
+    {
+      "report": "007-e2e-final-results/accessibility-reference-실제-91be3-366px-한국어·영어·오류·dirty·열린-모달/patterns-en-confirm-open-axe.json",
+      "state": "patterns-en-confirm-open",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 1
+    },
+    {
+      "report": "007-e2e-final-results/accessibility-접근성-Reference-예제-390px-기본·400-필드·409·native-확인/examples-field-error-400-axe.json",
+      "state": "examples-field-error-400",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 2
+    },
+    {
+      "report": "007-e2e-final-results/accessibility-접근성-Reference-예제-390px-기본·400-필드·409·native-확인/examples-confirm-closed-axe.json",
+      "state": "examples-confirm-closed",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 2
+    },
+    {
+      "report": "007-e2e-final-results/accessibility-접근성-Reference-예제-390px-기본·400-필드·409·native-확인/examples-default-axe.json",
+      "state": "examples-default",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 2
+    },
+    {
+      "report": "007-e2e-final-results/accessibility-접근성-Reference-예제-390px-기본·400-필드·409·native-확인/examples-conflict-409-axe.json",
+      "state": "examples-conflict-409",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 2
+    },
+    {
+      "report": "007-e2e-final-results/accessibility-접근성-Reference-예제-390px-기본·400-필드·409·native-확인/examples-confirm-open-axe.json",
+      "state": "examples-confirm-open",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 1
+    },
+    {
+      "report": "007-e2e-final-results/requirements-요구사항-1366px-목록·본문·필드-오류·댓글·이력은-전체-DOM-접근성을-검사한다/requirement-invalid-1366-axe.json",
+      "state": "requirement-invalid-1366",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 2
+    },
+    {
+      "report": "007-e2e-final-results/requirements-요구사항-1366px-목록·본문·필드-오류·댓글·이력은-전체-DOM-접근성을-검사한다/requirement-detail-1366-axe.json",
+      "state": "requirement-detail-1366",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 2
+    },
+    {
+      "report": "007-e2e-final-results/requirements-요구사항-1366px-목록·본문·필드-오류·댓글·이력은-전체-DOM-접근성을-검사한다/requirements-list-1366-axe.json",
+      "state": "requirements-list-1366",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 2
+    },
+    {
+      "report": "007-e2e-final-results/date-Starter-날짜-390px-calendar·UTC-정밀도·DST·언어를-독립적으로-처리한다/starter-date-en-390-axe.json",
+      "state": "starter-date-en-390",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 2
+    },
+    {
+      "report": "007-e2e-final-results/date-Starter-날짜-390px-calendar·UTC-정밀도·DST·언어를-독립적으로-처리한다/starter-date-dst-390-axe.json",
+      "state": "starter-date-dst-390",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 2
+    },
+    {
+      "report": "007-e2e-final-results/accessibility-접근성-로그인-390px-닫힌-셸과-실제-로그인-필드/login-ko-axe.json",
+      "state": "login-ko",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 2
+    }
+  ],
+  "limits": [
+    "실제 VoiceOver 낭독과 모든 WCAG 수동 기준을 자동 통과로 주장하지 않는다. incomplete는 수동 검수 후보로 보존한다."
+  ]
+}

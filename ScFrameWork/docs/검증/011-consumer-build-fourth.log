@@ -1,0 +1,202 @@
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated lodash.isequal@4.5.0: This package is deprecated. Use require('node:util').isDeepStrictEqual instead.
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated fstream@1.0.12: This package is no longer supported.
+npm warn deprecated vue-i18n@11.1.12: This version is NOT deprecated. Previous deprecation was a mistake.
+
+added 456 packages, and audited 457 packages in 3s
+
+129 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< dev.scconsumer.notesapp:sc-notes >------------------
+[INFO] Building sc-notes 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ sc-notes ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ sc-notes ---
+[INFO] Copying 7 resources from src/main/resources to target/classes
+[INFO] skip non existing resourceDirectory /private/tmp/sc-framework-consumer-011-20261007/sc-notes-candidate4/backend/../frontend/dist
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ sc-notes ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 13 source files with javac [debug parameters release 21] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ sc-notes ---
+[INFO] Not copying test resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ sc-notes ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ sc-notes ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ sc-notes ---
+[INFO] Building jar: /private/tmp/sc-framework-consumer-011-20261007/sc-notes-candidate4/backend/target/sc-notes.jar
+[INFO] 
+[INFO] --- spring-boot:3.5.16:repackage (repackage) @ sc-notes ---
+[INFO] Replacing main artifact /private/tmp/sc-framework-consumer-011-20261007/sc-notes-candidate4/backend/target/sc-notes.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /private/tmp/sc-framework-consumer-011-20261007/sc-notes-candidate4/backend/target/sc-notes.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.979 s
+[INFO] Finished at: 2026-10-07T05:57:15+09:00
+[INFO] ------------------------------------------------------------------------
+Application API types generated from the actual schema.
+
+> sc-notes@1.0.0 verify
+> npm run format:check && npm run lint && npm run api:check && npm run build
+
+
+> sc-notes@1.0.0 format:check
+> prettier --check .
+
+Checking formatting...
+All matched files use Prettier code style!
+
+> sc-notes@1.0.0 lint
+> eslint frontend scripts --max-warnings 0
+
+
+> sc-notes@1.0.0 api:check
+> node scripts/openapi-types.mjs --check
+
+OpenAPI and generated application types match.
+
+> sc-notes@1.0.0 build
+> npm run typecheck && vite build --config frontend/vite.config.ts
+
+
+> sc-notes@1.0.0 typecheck
+> vue-tsc --noEmit -p frontend/tsconfig.json
+
+vite v8.3.1 building client environment for production...
+transforming...
+✓ 1784 modules transformed.
+rendering chunks...
+computing gzip size...
+frontend/dist/index.html                            0.39 kB │ gzip:   0.26 kB
+frontend/dist/assets/PatternsPage-DxdglvMl.css      0.92 kB │ gzip:   0.40 kB
+frontend/dist/assets/index-DAXlcMnv.css           314.78 kB │ gzip:  45.29 kB
+frontend/dist/assets/index-YnxIcvWt.js            706.02 kB │ gzip: 238.37 kB
+frontend/dist/assets/PatternsPage-CASX6hhw.js   2,318.22 kB │ gzip: 708.30 kB
+
+✓ built in 922ms
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< dev.scconsumer.notesapp:sc-notes >------------------
+[INFO] Building sc-notes 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ sc-notes ---
+[INFO] Deleting /private/tmp/sc-framework-consumer-011-20261007/sc-notes-candidate4/backend/target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ sc-notes ---
+[INFO] Copying 7 resources from src/main/resources to target/classes
+[INFO] Copying 5 resources from ../frontend/dist to target/classes/static
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ sc-notes ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 13 source files with javac [debug parameters release 21] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ sc-notes ---
+[INFO] skip non existing resourceDirectory /private/tmp/sc-framework-consumer-011-20261007/sc-notes-candidate4/backend/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ sc-notes ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 21] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ sc-notes ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running dev.scconsumer.notesapp.GeneratedAppIntegrationTest
+05:57:37.237 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [dev.scconsumer.notesapp.GeneratedAppIntegrationTest]: GeneratedAppIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+05:57:37.279 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration dev.scconsumer.notesapp.GeneratedApplication for test class dev.scconsumer.notesapp.GeneratedAppIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.16)
+
+2026-10-07T05:57:37.517+09:00  INFO [requestId:] 35241 --- [sc-notes] [           main] d.s.n.GeneratedAppIntegrationTest        : Starting GeneratedAppIntegrationTest using Java 21.0.11 with PID 35241 (started by dk in /private/tmp/sc-framework-consumer-011-20261007/sc-notes-candidate4/backend)
+2026-10-07T05:57:37.518+09:00  INFO [requestId:] 35241 --- [sc-notes] [           main] d.s.n.GeneratedAppIntegrationTest        : The following 1 profile is active: "dev"
+2026-10-07T05:57:37.904+09:00  INFO [requestId:] 35241 --- [sc-notes] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-07T05:57:37.947+09:00  INFO [requestId:] 35241 --- [sc-notes] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 1 JPA repository interface.
+2026-10-07T05:57:38.000+09:00  INFO [requestId:] 35241 --- [sc-notes] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d3820e19-547b-3b2d-98be-2740909c5936
+2026-10-07T05:57:38.143+09:00  INFO [requestId:] 35241 --- [sc-notes] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-07T05:57:38.201+09:00  INFO [requestId:] 35241 --- [sc-notes] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:generated-sc-notes user=SA
+2026-10-07T05:57:38.201+09:00  INFO [requestId:] 35241 --- [sc-notes] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-07T05:57:38.221+09:00  INFO [requestId:] 35241 --- [sc-notes] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:generated-sc-notes (H2 2.3)
+2026-10-07T05:57:38.230+09:00  INFO [requestId:] 35241 --- [sc-notes] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2026-10-07T05:57:38.231+09:00  INFO [requestId:] 35241 --- [sc-notes] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.004s)
+2026-10-07T05:57:38.233+09:00  INFO [requestId:] 35241 --- [sc-notes] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-10-07T05:57:38.246+09:00  INFO [requestId:] 35241 --- [sc-notes] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2026-10-07T05:57:38.251+09:00  INFO [requestId:] 35241 --- [sc-notes] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - starter notes"
+2026-10-07T05:57:38.259+09:00  INFO [requestId:] 35241 --- [sc-notes] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "PUBLIC", now at version v1 (execution time 00:00.003s)
+2026-10-07T05:57:38.294+09:00  INFO [requestId:] 35241 --- [sc-notes] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-10-07T05:57:38.310+09:00  INFO [requestId:] 35241 --- [sc-notes] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.53.Final
+2026-10-07T05:57:38.320+09:00  INFO [requestId:] 35241 --- [sc-notes] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-10-07T05:57:38.402+09:00  INFO [requestId:] 35241 --- [sc-notes] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-07T05:57:38.423+09:00  INFO [requestId:] 35241 --- [sc-notes] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-07T05:57:38.664+09:00  INFO [requestId:] 35241 --- [sc-notes] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-07T05:57:38.670+09:00  INFO [requestId:] 35241 --- [sc-notes] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-07T05:57:39.012+09:00  INFO [requestId:] 35241 --- [sc-notes] [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-10-07T05:57:39.178+09:00  INFO [requestId:] 35241 --- [sc-notes] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name users
+2026-10-07T05:57:39.236+09:00  INFO [requestId:] 35241 --- [sc-notes] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-07T05:57:39.331+09:00  INFO [requestId:] 35241 --- [sc-notes] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-07T05:57:39.332+09:00  INFO [requestId:] 35241 --- [sc-notes] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-07T05:57:39.332+09:00  INFO [requestId:] 35241 --- [sc-notes] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-10-07T05:57:39.370+09:00  INFO [requestId:] 35241 --- [sc-notes] [           main] d.s.n.GeneratedAppIntegrationTest        : Started GeneratedAppIntegrationTest in 1.989 seconds (process running for 2.368)
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+WARNING: A Java agent has been loaded dynamically (/private/tmp/sc-framework-consumer-011-20261007/sc-notes-candidate3/.runtime/maven-repository/net/bytebuddy/byte-buddy-agent/1.17.8/byte-buddy-agent-1.17.8.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.986 s -- in dev.scconsumer.notesapp.GeneratedAppIntegrationTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ sc-notes ---
+[INFO] Building jar: /private/tmp/sc-framework-consumer-011-20261007/sc-notes-candidate4/backend/target/sc-notes.jar
+[INFO] 
+[INFO] --- spring-boot:3.5.16:repackage (repackage) @ sc-notes ---
+[INFO] Replacing main artifact /private/tmp/sc-framework-consumer-011-20261007/sc-notes-candidate4/backend/target/sc-notes.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /private/tmp/sc-framework-consumer-011-20261007/sc-notes-candidate4/backend/target/sc-notes.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.277 s
+[INFO] Finished at: 2026-10-07T05:57:40+09:00
+[INFO] ------------------------------------------------------------------------
+프런트와 실제 테스트를 포함한 신규 앱 JAR 빌드 완료

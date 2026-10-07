@@ -1,0 +1,180 @@
+{
+  "format": 1,
+  "stage": "013",
+  "status": "local implementation and verification complete",
+  "userAccepted": false,
+  "implementation": {
+    "publicUIComponents": 25,
+    "commonButtonSizes": [
+      32,
+      38,
+      44
+    ],
+    "buttonIntentAndIcon": true,
+    "inputDensity": true,
+    "selectToolbarAndField": true,
+    "cardDensityAndSurface": true,
+    "kpiDensity": true,
+    "statusBadge": true,
+    "tableDensityCaptionAndWidth": true,
+    "dashboardLocalNativeControlsReplaced": true,
+    "dashboardInternalStyleOverridesRemoved": true,
+    "referenceAndStarterAndTemplateV2ConsumeSameAPI": true,
+    "legacyTemplateV1Preserved": true,
+    "newDependencies": 0
+  },
+  "verification": {
+    "unit": {
+      "passed": true,
+      "tests": 167,
+      "files": 40,
+      "log": ".runtime/common-ui/all-unit-first.log"
+    },
+    "lint": {
+      "passed": true,
+      "log": ".runtime/common-ui/lint-first.log"
+    },
+    "allTypechecks": {
+      "passed": true,
+      "log": ".runtime/common-ui/types-first.log"
+    },
+    "contractsAndBoundaries": {
+      "passed": true,
+      "components": 25
+    },
+    "frontendBuilds": {
+      "passed": true,
+      "applications": [
+        "reference",
+        "starter"
+      ]
+    },
+    "storybook": {
+      "passed": true,
+      "stories": 119,
+      "files": 32,
+      "publicDocs": 25,
+      "controls": 10,
+      "staticBuild": true,
+      "browserErrors": 0,
+      "evidence": "docs/\uac80\uc99d/013-common-ui-storybook-browser.json"
+    },
+    "jarE2E": {
+      "passed": true,
+      "existingRelevantCases": 30,
+      "newSharedDesignCases": 4,
+      "uniqueCases": 34,
+      "originalBackendClassesAndDependenciesUnchanged": true,
+      "originalTargetJarsOverwritten": false,
+      "backendSourceRecompiled": false,
+      "axe": [
+        {
+          "group": "e2e-first-results",
+          "wholeDOMScans": 48,
+          "violations": 0,
+          "duplicateIds": 0,
+          "incompleteRuleInstances": 105,
+          "incompleteNodes": 1337
+        },
+        {
+          "group": "e2e-design-results",
+          "wholeDOMScans": 8,
+          "violations": 0,
+          "duplicateIds": 0,
+          "incompleteRuleInstances": 20,
+          "incompleteNodes": 294
+        }
+      ],
+      "wholeDOMAxeScans": 56
+    },
+    "visual": {
+      "passed": true,
+      "baselineImages": 16,
+      "explicitUpdateCases": 4,
+      "normalComparisonCases": 4,
+      "previousFilesPreserved": 17,
+      "updateRunId": "common-ui-20261007",
+      "manualImageReview": [
+        "013-common-ui-dashboard.png",
+        "013-common-ui-patterns-1440.png",
+        "013-common-ui-patterns-390.png",
+        "reference-1366-shell-inputs-darwin.png",
+        "starter-390-shell-inputs-darwin.png",
+        "013-common-ui-consumer/patterns-1440.png",
+        "013-common-ui-consumer/patterns-390.png"
+      ]
+    },
+    "remote": {
+      "passed": true,
+      "views": 3,
+      "wholeDOMAxeScans": 3,
+      "violations": 0,
+      "pageErrors": 0,
+      "businessWrites": 0,
+      "evidence": "docs/\uac80\uc99d/013-common-ui-remote.json"
+    },
+    "remoteStorybook": {
+      "passed": true,
+      "storiesAvailable": 119,
+      "secureContext": true,
+      "activeMSWWorker": true,
+      "managerDocsAndCanvasChecked": true,
+      "browserErrors": 0,
+      "failedApiResponses": 0,
+      "evidence": "docs/\uac80\uc99d/013-common-ui-storybook-remote.json"
+    }
+  },
+  "liveServer": {
+    "preserved": true,
+    "samePID": "76378",
+    "health": "UP",
+    "originalJarSHA256": "08a1ae9aa3d208a4faadff914e0e62df26094c96c13d02c1718132e2ab6b8490",
+    "existingTailscaleMappingsUnchanged": true,
+    "oldAddress": "http://100.120.61.117:18082/dashboard",
+    "newFrontendAddress": "http://100.120.61.117:18083/dashboard",
+    "commonDesignAddress": "http://100.120.61.117:18083/patterns",
+    "storybookAddress": "https://macstudio.tailf9bcc5.ts.net:6007",
+    "frontendSession": 84375,
+    "storybookSession": 65630,
+    "sameExistingBackendAccountAndSession": true
+  },
+  "packages": {
+    "candidate": ".runtime/releases/common-ui/v0.3.0-candidate1",
+    "published": false,
+    "verification": "docs/\uac80\uc99d/013-common-ui-artifacts.json",
+    "templateVerification": "docs/\uac80\uc99d/013-common-ui-template.json",
+    "legacyArchivesOverwritten": false,
+    "independentConsumer": {
+      "passed": true,
+      "evidence": "docs/\uac80\uc99d/013-common-ui-consumer.json",
+      "checks": 32,
+      "wholeDOMAxeScans": 4,
+      "violations": 0,
+      "sourceAliases": 0,
+      "temporaryServerStopped": true,
+      "temporaryRuntimeRemoved": true,
+      "backendTests": 10,
+      "fullFrontendVerify": true,
+      "incompleteManualReview": false
+    }
+  },
+  "initialFailuresPreserved": [
+    ".runtime/common-ui/contracts-generate-first.log",
+    ".runtime/ui-common-design/storybook-scoped-first.log",
+    "docs/\uac80\uc99d/013-common-ui-consumer-first.json",
+    "docs/\uac80\uc99d/013-common-ui-consumer-second.json"
+  ],
+  "limits": [
+    "User aesthetic acceptance is unconfirmed.",
+    "VoiceOver actual speech and axe incomplete manual review are unconfirmed.",
+    "No remote CI, registry publish or production deployment.",
+    "Full backend196 and operations stack not rerun for this frontend-only change."
+  ],
+  "allCurrentFinalChecksComplete": true,
+  "initialFailuresExplained": {
+    "contracts-generate-first": "Public Sc density aliases were rejected by the former vendor-prop guard; the guard now validates the exact compact/comfortable enum schema.",
+    "storybook-scoped-first": "Late MDI dependency optimization restarted browser frames; @mdi/js is now explicitly preoptimized.",
+    "consumer-first": "Pointer click targeted the Vuetify inner combobox rather than its actual hitbox; real Tab/keyboard selection then passed.",
+    "consumer-second": "Axe scanned a finite floating-label transition; the final run waits for actual finite animations and two animation frames, with no rule exclusions or product changes."
+  }
+}

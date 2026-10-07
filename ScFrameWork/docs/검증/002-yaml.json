@@ -1,0 +1,8 @@
+{
+  "workflowParsed": true,
+  "composeParsed": true,
+  "twoAppE2EGate": true,
+  "captureArtifactsIncluded": true,
+  "remoteCIExecuted": false,
+  "dockerExecuted": false
+}

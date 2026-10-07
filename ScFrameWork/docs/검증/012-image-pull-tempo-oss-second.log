@@ -1,0 +1,55 @@
+docker.io/grafana/tempo@sha256:3076b8dcdfb32fd6bc5ccef85e7b7313e6199b9cb84366257fc17ecb696db5fd: Pulling from grafana/tempo
+ae73eaa998c6: Pulling fs layer
+d557676654e5: Pulling fs layer
+0783a66ae749: Pulling fs layer
+3bac23fd90a7: Pulling fs layer
+2e4cf50eeb92: Pulling fs layer
+c36c4b61cfba: Pulling fs layer
+e1089d61b200: Pulling fs layer
+0f8b424aa0b9: Pulling fs layer
+6b72b81ed966: Pulling fs layer
+d82bc7a76a83: Pulling fs layer
+68e4cd60e60f: Pulling fs layer
+efae86a3fb38: Pulling fs layer
+d5d7b0870bea: Pulling fs layer
+6cdd517ba905: Pulling fs layer
+2323028c65dd: Pulling fs layer
+355affe58031: Pulling fs layer
+df9be698e01b: Pulling fs layer
+3bac23fd90a7: Download complete
+3bac23fd90a7: Pull complete
+ae73eaa998c6: Download complete
+d557676654e5: Download complete
+e1089d61b200: Download complete
+2e4cf50eeb92: Download complete
+d82bc7a76a83: Download complete
+efae86a3fb38: Download complete
+0783a66ae749: Download complete
+c36c4b61cfba: Download complete
+6b72b81ed966: Download complete
+d5d7b0870bea: Download complete
+355affe58031: Download complete
+0f8b424aa0b9: Download complete
+68e4cd60e60f: Download complete
+df9be698e01b: Download complete
+6cdd517ba905: Download complete
+d557676654e5: Pull complete
+e1089d61b200: Pull complete
+2e4cf50eeb92: Pull complete
+d82bc7a76a83: Pull complete
+c36c4b61cfba: Pull complete
+0f8b424aa0b9: Pull complete
+68e4cd60e60f: Pull complete
+efae86a3fb38: Pull complete
+0783a66ae749: Pull complete
+6b72b81ed966: Pull complete
+6cdd517ba905: Pull complete
+2323028c65dd: Download complete
+ae73eaa998c6: Pull complete
+d5d7b0870bea: Pull complete
+355affe58031: Pull complete
+df9be698e01b: Pull complete
+2323028c65dd: Pull complete
+Digest: sha256:3076b8dcdfb32fd6bc5ccef85e7b7313e6199b9cb84366257fc17ecb696db5fd
+Status: Downloaded newer image for grafana/tempo@sha256:3076b8dcdfb32fd6bc5ccef85e7b7313e6199b9cb84366257fc17ecb696db5fd
+docker.io/grafana/tempo:3.1.0@sha256:3076b8dcdfb32fd6bc5ccef85e7b7313e6199b9cb84366257fc17ecb696db5fd

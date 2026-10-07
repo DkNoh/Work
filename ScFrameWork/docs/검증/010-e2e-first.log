@@ -1,0 +1,493 @@
+
+> sc-framework@0.1.0 test:e2e
+> playwright test --config frontend/playwright.config.ts && npm run test:reports
+
+
+Running 71 tests using 1 worker
+
+(node:1379) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 frontend/e2e/010-admin-account.spec.ts:46:3 › ADMIN creates users and edits menus; audit and DB permissions at 390 (8.4s)
+  ✓   2 frontend/e2e/010-admin-account.spec.ts:178:3 › synthetic account password changes end the session and require replacement credentials at 390 (2.6s)
+  ✓   3 frontend/e2e/010-admin-account.spec.ts:226:3 › report chart uses the API's six full-result status counts rather than the loaded page at 390 (1.8s)
+  ✓   4 frontend/e2e/010-admin-account.spec.ts:46:3 › ADMIN creates users and edits menus; audit and DB permissions at 1366 (7.2s)
+  ✓   5 frontend/e2e/010-admin-account.spec.ts:178:3 › synthetic account password changes end the session and require replacement credentials at 1366 (2.8s)
+  ✓   6 frontend/e2e/010-admin-account.spec.ts:226:3 › report chart uses the API's six full-result status counts rather than the loaded page at 1366 (1.6s)
+  ✓   7 frontend/e2e/010-kanban.spec.ts:73:1 › 칸반 실제 작성·수정은 줄바꿈·단일 쉼표 태그·0000과0099 달력 날짜를 보존한다 (1.9s)
+  ✘   8 frontend/e2e/010-kanban.spec.ts:112:1 › 칸반 멤버 접근과 타인 작업 변경 거절은 ADMIN·담당자에도 서버에서 적용한다 (10.7s)
+(node:1467) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   9 frontend/e2e/010-kanban.spec.ts:145:1 › 실제 보드 포인터·키보드 센서와 대체 이동은 저장한 작업만 이동하고 필터 정렬에서는 차단한다 (10.5s)
+(node:1490) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  10 frontend/e2e/010-kanban.spec.ts:195:1 › 작업409 뒤 최신GET500도 편집 입력과 이전revision을 보존하고 명시적재조회로만 교체한다 (1.8s)
+  ✓  11 frontend/e2e/010-kanban.spec.ts:235:1 › XLSX 미리보기는 원본행을 보여주고 승인 전 저장하지 않으며 잘못된 담당자의 원자실패와 날짜 왕복을 검사한다 (2.3s)
+  ✓  12 frontend/e2e/010-kanban.spec.ts:318:5 › 칸반 390px ko은 전체DOM 접근성과 보드가로스크롤을 검사한다 (1.5s)
+  ✓  13 frontend/e2e/010-kanban.spec.ts:318:5 › 칸반 390px en은 전체DOM 접근성과 보드가로스크롤을 검사한다 (1.6s)
+  ✓  14 frontend/e2e/010-kanban.spec.ts:318:5 › 칸반 1366px ko은 전체DOM 접근성과 보드가로스크롤을 검사한다 (1.4s)
+  ✓  15 frontend/e2e/010-kanban.spec.ts:318:5 › 칸반 1366px en은 전체DOM 접근성과 보드가로스크롤을 검사한다 (1.4s)
+  ✘  16 frontend/e2e/010-media.spec.ts:121:3 › image UI upload, trusted pointer, body preservation, PDF privacy and real box conflict at 390 (15.4s)
+(node:1687) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  17 frontend/e2e/010-media.spec.ts:259:3 › English image workspace has native coordinates and no overflow at 390 (1.1s)
+(node:1692) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  18 frontend/e2e/010-media.spec.ts:121:3 › image UI upload, trusted pointer, body preservation, PDF privacy and real box conflict at 1366 (15.4s)
+(node:1781) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  19 frontend/e2e/010-media.spec.ts:259:3 › English image workspace has native coordinates and no overflow at 1366 (925ms)
+(node:1810) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  20 frontend/e2e/010-media.spec.ts:279:1 › JPEG EXIF 6 uses browser-oriented original dimensions and preserves uploaded bytes (1.0s)
+(node:1815) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  21 frontend/e2e/010-media.spec.ts:313:1 › agreed author links ADO through the UI and exports stored plain text without an external call (2.1s)
+  ✘  22 frontend/e2e/010-notices-documents.spec.ts:36:3 › notice plain text persistence, real 409, draft/locale and explicit delete at 390 (15.4s)
+(node:1993) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  23 frontend/e2e/010-notices-documents.spec.ts:100:3 › document real JSON storage, rich draft/409, locale and privacy at 390 (15.5s)
+(node:2049) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  24 frontend/e2e/010-notices-documents.spec.ts:36:3 › notice plain text persistence, real 409, draft/locale and explicit delete at 1366 (15.4s)
+(node:2083) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  25 frontend/e2e/010-notices-documents.spec.ts:100:3 › document real JSON storage, rich draft/409, locale and privacy at 1366 (15.5s)
+(node:2145) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  26 frontend/e2e/010-notices-documents.spec.ts:174:1 › notice is readable but author-only; documents remain private even to ADMIN (10.5s)
+(node:2189) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  27 frontend/e2e/accessibility.spec.ts:34:3 › 접근성 로그인 390px: 닫힌 셸과 실제 로그인 필드 (386ms)
+  ✓  28 frontend/e2e/accessibility.spec.ts:49:3 › 접근성 Reference 예제 390px: 기본·400 필드·409·native 확인 (3.3s)
+  ✓  29 frontend/e2e/accessibility.spec.ts:34:3 › 접근성 로그인 1366px: 닫힌 셸과 실제 로그인 필드 (309ms)
+  ✓  30 frontend/e2e/accessibility.spec.ts:49:3 › 접근성 Reference 예제 1366px: 기본·400 필드·409·native 확인 (3.2s)
+  ✓  31 frontend/e2e/accessibility.spec.ts:130:7 › reference 실제 JAR 공통 예제 접근성 › 접근성 patterns 390px: 한국어·영어·오류·dirty·열린 모달 (5.9s)
+  ✓  32 frontend/e2e/accessibility.spec.ts:130:7 › reference 실제 JAR 공통 예제 접근성 › 접근성 patterns 1366px: 한국어·영어·오류·dirty·열린 모달 (4.6s)
+  ✓  33 frontend/e2e/accessibility.spec.ts:130:7 › starter 실제 JAR 공통 예제 접근성 › 접근성 patterns 390px: 한국어·영어·오류·dirty·열린 모달 (7.0s)
+  ✓  34 frontend/e2e/accessibility.spec.ts:130:7 › starter 실제 JAR 공통 예제 접근성 › 접근성 patterns 1366px: 한국어·영어·오류·dirty·열린 모달 (5.1s)
+  ✓  35 frontend/e2e/date.spec.ts:8:3 › Starter 날짜 390px: calendar·UTC 정밀도·DST·언어를 독립적으로 처리한다 (3.0s)
+  ✓  36 frontend/e2e/date.spec.ts:8:3 › Starter 날짜 1366px: calendar·UTC 정밀도·DST·언어를 독립적으로 처리한다 (2.7s)
+  ✓  37 frontend/e2e/framework.spec.ts:49:1 › 공통 UI로 등록·수정하고 409에서도 작성 중인 입력을 보존한다 (2.3s)
+  ✓  38 frontend/e2e/framework.spec.ts:109:1 › 서버 400 필드 오류에도 등록 입력과 필드 연결을 보존한다 (540ms)
+  ✓  39 frontend/e2e/framework.spec.ts:138:1 › 409 후 최신 조회가 500으로 실패하면 입력과 revision을 보존하고 다시 조회할 수 있다 (1.4s)
+  ✓  40 frontend/e2e/framework.spec.ts:181:3 › 저장 중 선택 변경: 이전 항목의 success 응답이 새 폼을 바꾸지 않는다 (964ms)
+  ✓  41 frontend/e2e/framework.spec.ts:181:3 › 저장 중 선택 변경: 이전 항목의 conflict 응답이 새 폼을 바꾸지 않는다 (843ms)
+  ✓  42 frontend/e2e/layout.spec.ts:94:3 › 레퍼런스 390px: 한국어·본문·현재 메뉴·모바일 키보드 탐색 (1.6s)
+  ✓  43 frontend/e2e/layout.spec.ts:94:3 › 레퍼런스 1366px: 한국어·본문·현재 메뉴·모바일 키보드 탐색 (903ms)
+  ✓  44 frontend/e2e/layout.spec.ts:94:3 › 레퍼런스 1920px: 한국어·본문·현재 메뉴·모바일 키보드 탐색 (990ms)
+  ✓  45 frontend/e2e/layout.spec.ts:159:5 › 최소 Starter의 독립적인 공통 셸 소비 › Starter 390px: 동일 UI·Router·본문 탐색 (1.7s)
+  ✓  46 frontend/e2e/layout.spec.ts:159:5 › 최소 Starter의 독립적인 공통 셸 소비 › Starter 1366px: 동일 UI·Router·본문 탐색 (1.0s)
+  ✓  47 frontend/e2e/layout.spec.ts:159:5 › 최소 Starter의 독립적인 공통 셸 소비 › Starter 1920px: 동일 UI·Router·본문 탐색 (835ms)
+  ✓  48 frontend/e2e/patterns.spec.ts:338:5 › reference 실제 JAR 공통 기능 소비 › 한영 입력 보존·Zod 검증·초기화·dirty 이동 확인 (2.5s)
+  ✓  49 frontend/e2e/patterns.spec.ts:344:5 › reference 실제 JAR 공통 기능 소비 › 정렬·페이지·선택과 10,000행 실제 스크롤·focus·일반 보기 (2.3s)
+  ✓  50 frontend/e2e/patterns.spec.ts:350:5 › reference 실제 JAR 공통 기능 소비 › SVG 차트·키보드 선택·JSON 서식과 XLSX 다운로드·검토·반영 (1.9s)
+  ✓  51 frontend/e2e/patterns.spec.ts:338:5 › starter 실제 JAR 공통 기능 소비 › 한영 입력 보존·Zod 검증·초기화·dirty 이동 확인 (2.6s)
+  ✓  52 frontend/e2e/patterns.spec.ts:344:5 › starter 실제 JAR 공통 기능 소비 › 정렬·페이지·선택과 10,000행 실제 스크롤·focus·일반 보기 (2.5s)
+  ✓  53 frontend/e2e/patterns.spec.ts:350:5 › starter 실제 JAR 공통 기능 소비 › SVG 차트·키보드 선택·JSON 서식과 XLSX 다운로드·검토·반영 (1.8s)
+  ✓  54 frontend/e2e/patterns.spec.ts:359:1 › Reference dirty 폼에서 로그아웃하면 확인 Promise에 갇히지 않고 로그인 화면에 도착한다 (735ms)
+  ✓  55 frontend/e2e/requirements-review.spec.ts:82:1 › 담당자 검토의 실제 409·최신 GET 500·취소는 검토 초안과 revision을 보존하며 성공한 명시 조회만 교체한다 (3.9s)
+  ✓  56 frontend/e2e/requirements-review.spec.ts:168:1 › 댓글 성공의 최신 상세 응답은 작성자의 작성 중인 본문과 입력 기준 revision을 덮지 않는다 (862ms)
+  ✓  57 frontend/e2e/requirements-review.spec.ts:207:1 › 댓글 성공의 최신 검토 응답은 담당자의 검토 초안·추가정보 선택과 입력 기준 revision을 덮지 않는다 (3.2s)
+  ✘  58 frontend/e2e/requirements.spec.ts:25:1 › 실제 작성자·담당자 세션에서 등록→지정→제출→검토→합의·댓글·이력을 저장한다 (15.6s)
+(node:2520) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  59 frontend/e2e/requirements.spec.ts:103:1 › 초안은 다른 사용자 목록/count에서 제외하며 ADMIN도 타인의 본문을 변경할 수 없다 (719ms)
+  ✓  60 frontend/e2e/requirements.spec.ts:133:3 › 요구사항 400 저장 오류는 입력과 기준 revision을 보존한다 (818ms)
+  ✓  61 frontend/e2e/requirements.spec.ts:133:3 › 요구사항 403 저장 오류는 입력과 기준 revision을 보존한다 (1.0s)
+  ✓  62 frontend/e2e/requirements.spec.ts:164:1 › 실제 409 이후 최신 GET의 500 실패·취소·성공에서도 초안과 revision을 명시적으로 교체한다 (1.6s)
+  ✓  63 frontend/e2e/requirements.spec.ts:221:3 › 요구사항 A의 지연 success 저장 응답은 새 선택 B의 폼을 덮지 않는다 (1.5s)
+  ✓  64 frontend/e2e/requirements.spec.ts:221:3 › 요구사항 A의 지연 conflict 저장 응답은 새 선택 B의 폼을 덮지 않는다 (1.5s)
+  ✓  65 frontend/e2e/requirements.spec.ts:281:1 › 검색·페이지 URL은 새로고침과 상세 복귀에서 유지되고 언어 전환은 작성 입력을 유지한다 (1.6s)
+  ✓  66 frontend/e2e/requirements.spec.ts:316:3 › 요구사항 390px 목록·본문·필드 오류·댓글·이력은 전체 DOM 접근성을 검사한다 (2.8s)
+  ✓  67 frontend/e2e/requirements.spec.ts:316:3 › 요구사항 1366px 목록·본문·필드 오류·댓글·이력은 전체 DOM 접근성을 검사한다 (2.4s)
+  -  68 frontend/e2e/visual.spec.ts:201:7 › reference 1366px 시각 기준 › 셸·입력·표·차트·서식의 승인 이미지와 비교
+  -  69 frontend/e2e/visual.spec.ts:201:7 › reference 390px 시각 기준 › 셸·입력·표·차트·서식의 승인 이미지와 비교
+  -  70 frontend/e2e/visual.spec.ts:201:7 › starter 1366px 시각 기준 › 셸·입력·표·차트·서식의 승인 이미지와 비교
+  -  71 frontend/e2e/visual.spec.ts:201:7 › starter 390px 시각 기준 › 셸·입력·표·차트·서식의 승인 이미지와 비교
+
+
+  1) frontend/e2e/010-kanban.spec.ts:112:1 › 칸반 멤버 접근과 타인 작업 변경 거절은 ADMIN·담당자에도 서버에서 적용한다 ──────────
+
+    Error: expect(locator).toBeDisabled() failed
+
+    Locator: getByRole('button', { name: '이동: 작성자 권한 작업', exact: true })
+    Expected: disabled
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeDisabled" getByRole('button', { name: '이동: 작성자 권한 작업', exact: true }) with timeout 10000ms
+      - waiting for getByRole('button', { name: '이동: 작성자 권한 작업', exact: true })
+
+
+      128 |     await expect(
+      129 |       page.getByRole("button", { name: "이동: 작성자 권한 작업", exact: true }),
+    > 130 |     ).toBeDisabled();
+          |       ^
+      131 |     const token = await csrf(page);
+      132 |     const response = await page.request.post(`/api/kanban/tasks/${item.id}/move`, {
+      133 |       data: { status: "DONE", beforeId: null, revision: item.revision },
+        at /Users/dk/Work/ScFramework/frontend/e2e/010-kanban.spec.ts:130:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results/010-kanban-칸반-멤버-접근과-타인-작업-변경-거절은-ADMIN·담당자에도-서버에서-적용한다/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results/010-kanban-칸반-멤버-접근과-타인-작업-변경-거절은-ADMIN·담당자에도-서버에서-적용한다/error-context.md
+
+  2) frontend/e2e/010-kanban.spec.ts:145:1 › 실제 보드 포인터·키보드 센서와 대체 이동은 저장한 작업만 이동하고 필터 정렬에서는 차단한다 ───
+
+    Error: expect(locator).toBeEnabled() failed
+
+    Locator: getByRole('button', { name: '이동: 포인터 Alpha', exact: true })
+    Expected: enabled
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeEnabled" getByRole('button', { name: '이동: 포인터 Alpha', exact: true }) with timeout 10000ms
+      - waiting for getByRole('button', { name: '이동: 포인터 Alpha', exact: true })
+
+
+      151 |   await page.goto(`/kanban?boardId=${fixture.board.id}`);
+      152 |   const handle = page.getByRole("button", { name: "이동: 포인터 Alpha", exact: true });
+    > 153 |   await expect(handle).toBeEnabled();
+          |                        ^
+      154 |   const destination = page.getByRole("region", { name: "진행 중 (0)", exact: true });
+      155 |   await destination.scrollIntoViewIfNeeded();
+      156 |   const start = await handle.boundingBox();
+        at /Users/dk/Work/ScFramework/frontend/e2e/010-kanban.spec.ts:153:24
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results/010-kanban-실제-보드-포인터·키보드-센-870ac--저장한-작업만-이동하고-필터-정렬에서는-차단한다/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results/010-kanban-실제-보드-포인터·키보드-센-870ac--저장한-작업만-이동하고-필터-정렬에서는-차단한다/error-context.md
+
+  3) frontend/e2e/010-media.spec.ts:121:3 › image UI upload, trusted pointer, body preservation, PDF privacy and real box conflict at 390 
+
+    TimeoutError: locator.click: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for getByRole('listbox').getByRole('option', { name: '업무 메뉴 067b3929', exact: true })
+        - locator resolved to <div tabindex="-2" role="option" aria-setsize="16" aria-posinset="16" aria-selected="false" class="v-list-item v-list-item--link v-theme--sc v-list-item--density-default v-list-item--one-line rounded-0 v-list-item--variant-text">…</div>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is not stable
+        - retrying click action
+        - waiting 20ms
+        - waiting for element to be visible, enabled and stable
+      - element was detached from the DOM, retrying
+
+
+       at support/requirements.ts:111
+
+      109 |   await target.focus();
+      110 |   await target.press("Enter");
+    > 111 |   await page.getByRole("listbox").getByRole("option", { name: option, exact: true }).click();
+          |                                                                                      ^
+      112 | }
+      113 |
+      114 | export async function confirmDiscard(page: Page) {
+        at choose (/Users/dk/Work/ScFramework/frontend/e2e/support/requirements.ts:111:86)
+        at createScreenInUi (/Users/dk/Work/ScFramework/frontend/e2e/010-media.spec.ts:49:3)
+        at /Users/dk/Work/ScFramework/frontend/e2e/010-media.spec.ts:128:20
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results/010-media-image-UI-upload--c1a75-nd-real-box-conflict-at-390/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results/010-media-image-UI-upload--c1a75-nd-real-box-conflict-at-390/error-context.md
+
+  4) frontend/e2e/010-media.spec.ts:259:3 › English image workspace has native coordinates and no overflow at 390 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('.sc-image-annotator').getByRole('status')
+    Expected substring: "Box changed"
+    Error: strict mode violation: locator('.sc-image-annotator').getByRole('status') resolved to 2 elements:
+        1) <output data-v-b98c64e7="" for="sc-image-sc-1-36-zoom">1×</output> aka getByText('1×')
+        2) <p role="status" data-v-b98c64e7="" aria-live="polite">Box changed</p> aka getByText('Box changed')
+
+    Call log:
+      - Expect "toContainText" locator('.sc-image-annotator').getByRole('status') with timeout 10000ms
+      - waiting for locator('.sc-image-annotator').getByRole('status')
+
+
+      103 |     .getByRole("button", { name: english ? "Apply coordinates" : "좌표 적용", exact: true })
+      104 |     .click();
+    > 105 |   await expect(figure.getByRole("status")).toContainText(english ? "Box changed" : "박스 변경");
+          |                                            ^
+      106 | }
+      107 |
+      108 | async function capture(page: Page, info: TestInfo, name: string) {
+        at applyCoordinates (/Users/dk/Work/ScFramework/frontend/e2e/010-media.spec.ts:105:44)
+        at /Users/dk/Work/ScFramework/frontend/e2e/010-media.spec.ts:273:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results/010-media-English-image-wo-64c48-ates-and-no-overflow-at-390/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results/010-media-English-image-wo-64c48-ates-and-no-overflow-at-390/error-context.md
+
+  5) frontend/e2e/010-media.spec.ts:121:3 › image UI upload, trusted pointer, body preservation, PDF privacy and real box conflict at 1366 
+
+    TimeoutError: locator.click: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for getByRole('listbox').getByRole('option', { name: '업무 메뉴 c534d880', exact: true })
+        - locator resolved to <div tabindex="-2" role="option" aria-setsize="18" aria-posinset="18" aria-selected="false" class="v-list-item v-list-item--link v-theme--sc v-list-item--density-default v-list-item--one-line rounded-0 v-list-item--variant-text">…</div>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is not stable
+        - retrying click action
+        - waiting 20ms
+        - waiting for element to be visible, enabled and stable
+      - element was detached from the DOM, retrying
+
+
+       at support/requirements.ts:111
+
+      109 |   await target.focus();
+      110 |   await target.press("Enter");
+    > 111 |   await page.getByRole("listbox").getByRole("option", { name: option, exact: true }).click();
+          |                                                                                      ^
+      112 | }
+      113 |
+      114 | export async function confirmDiscard(page: Page) {
+        at choose (/Users/dk/Work/ScFramework/frontend/e2e/support/requirements.ts:111:86)
+        at createScreenInUi (/Users/dk/Work/ScFramework/frontend/e2e/010-media.spec.ts:49:3)
+        at /Users/dk/Work/ScFramework/frontend/e2e/010-media.spec.ts:128:20
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results/010-media-image-UI-upload--d381d-d-real-box-conflict-at-1366/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results/010-media-image-UI-upload--d381d-d-real-box-conflict-at-1366/error-context.md
+
+  6) frontend/e2e/010-media.spec.ts:259:3 › English image workspace has native coordinates and no overflow at 1366 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('.sc-image-annotator').getByRole('status')
+    Expected substring: "Box changed"
+    Error: strict mode violation: locator('.sc-image-annotator').getByRole('status') resolved to 2 elements:
+        1) <output data-v-b98c64e7="" for="sc-image-sc-1-36-zoom">1×</output> aka getByText('1×')
+        2) <p role="status" data-v-b98c64e7="" aria-live="polite">Box changed</p> aka getByText('Box changed')
+
+    Call log:
+      - Expect "toContainText" locator('.sc-image-annotator').getByRole('status') with timeout 10000ms
+      - waiting for locator('.sc-image-annotator').getByRole('status')
+
+
+      103 |     .getByRole("button", { name: english ? "Apply coordinates" : "좌표 적용", exact: true })
+      104 |     .click();
+    > 105 |   await expect(figure.getByRole("status")).toContainText(english ? "Box changed" : "박스 변경");
+          |                                            ^
+      106 | }
+      107 |
+      108 | async function capture(page: Page, info: TestInfo, name: string) {
+        at applyCoordinates (/Users/dk/Work/ScFramework/frontend/e2e/010-media.spec.ts:105:44)
+        at /Users/dk/Work/ScFramework/frontend/e2e/010-media.spec.ts:273:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results/010-media-English-image-wo-62961-tes-and-no-overflow-at-1366/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results/010-media-English-image-wo-62961-tes-and-no-overflow-at-1366/error-context.md
+
+  7) frontend/e2e/010-media.spec.ts:279:1 › JPEG EXIF 6 uses browser-oriented original dimensions and preserves uploaded bytes 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('.sc-image-annotator').getByRole('status')
+    Expected substring: "박스 변경"
+    Error: strict mode violation: locator('.sc-image-annotator').getByRole('status') resolved to 2 elements:
+        1) <output data-v-b98c64e7="" for="sc-image-sc-1-36-zoom">1×</output> aka getByText('1×')
+        2) <p role="status" data-v-b98c64e7="" aria-live="polite">박스 변경</p> aka getByText('박스 변경')
+
+    Call log:
+      - Expect "toContainText" locator('.sc-image-annotator').getByRole('status') with timeout 10000ms
+      - waiting for locator('.sc-image-annotator').getByRole('status')
+
+
+      103 |     .getByRole("button", { name: english ? "Apply coordinates" : "좌표 적용", exact: true })
+      104 |     .click();
+    > 105 |   await expect(figure.getByRole("status")).toContainText(english ? "Box changed" : "박스 변경");
+          |                                            ^
+      106 | }
+      107 |
+      108 | async function capture(page: Page, info: TestInfo, name: string) {
+        at applyCoordinates (/Users/dk/Work/ScFramework/frontend/e2e/010-media.spec.ts:105:44)
+        at /Users/dk/Work/ScFramework/frontend/e2e/010-media.spec.ts:308:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results/010-media-JPEG-EXIF-6-uses-a103f-nd-preserves-uploaded-bytes/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results/010-media-JPEG-EXIF-6-uses-a103f-nd-preserves-uploaded-bytes/error-context.md
+
+  8) frontend/e2e/010-notices-documents.spec.ts:36:3 › notice plain text persistence, real 409, draft/locale and explicit delete at 390 
+
+    TimeoutError: locator.click: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for getByRole('form', { name: '공지 작성', exact: true }).getByRole('button', { name: '저장', exact: true })
+
+
+      46 |     const title = form.getByRole("textbox", { name: "제목", exact: true });
+      47 |     const content = form.getByRole("textbox", { name: "공지 본문", exact: true });
+    > 48 |     await form.getByRole("button", { name: "저장", exact: true }).click();
+         |                                                                 ^
+      49 |     await expect(content).toHaveAccessibleDescription("입력해 주세요.");
+      50 |     await title.fill("  실제 공지  ");
+      51 |     const plain = "  평문 첫 줄\n<p>HTML이 아닌 문자열</p>\n ";
+        at /Users/dk/Work/ScFramework/frontend/e2e/010-notices-documents.spec.ts:48:65
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results/010-notices-documents-noti-c86e4--and-explicit-delete-at-390/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results/010-notices-documents-noti-c86e4--and-explicit-delete-at-390/error-context.md
+
+  9) frontend/e2e/010-notices-documents.spec.ts:100:3 › document real JSON storage, rich draft/409, locale and privacy at 390 
+
+    TimeoutError: locator.fill: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for getByRole('form', { name: '문서 작성', exact: true }).getByRole('textbox', { name: '제목', exact: true })
+
+
+      109 |     const title = form.getByRole("textbox", { name: "제목", exact: true });
+      110 |     const editor = form.getByRole("textbox", { name: "문서 내용", exact: true });
+    > 111 |     await title.fill("서식 문서");
+          |                 ^
+      112 |     await editor.fill("서식 앞부분 ");
+      113 |     await editor.press("End");
+      114 |     await form.getByRole("button", { name: "굵게", exact: true }).click();
+        at /Users/dk/Work/ScFramework/frontend/e2e/010-notices-documents.spec.ts:111:17
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results/010-notices-documents-docu-36a0e-9-locale-and-privacy-at-390/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results/010-notices-documents-docu-36a0e-9-locale-and-privacy-at-390/error-context.md
+
+  10) frontend/e2e/010-notices-documents.spec.ts:36:3 › notice plain text persistence, real 409, draft/locale and explicit delete at 1366 
+
+    TimeoutError: locator.click: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for getByRole('form', { name: '공지 작성', exact: true }).getByRole('button', { name: '저장', exact: true })
+
+
+      46 |     const title = form.getByRole("textbox", { name: "제목", exact: true });
+      47 |     const content = form.getByRole("textbox", { name: "공지 본문", exact: true });
+    > 48 |     await form.getByRole("button", { name: "저장", exact: true }).click();
+         |                                                                 ^
+      49 |     await expect(content).toHaveAccessibleDescription("입력해 주세요.");
+      50 |     await title.fill("  실제 공지  ");
+      51 |     const plain = "  평문 첫 줄\n<p>HTML이 아닌 문자열</p>\n ";
+        at /Users/dk/Work/ScFramework/frontend/e2e/010-notices-documents.spec.ts:48:65
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results/010-notices-documents-noti-d64be-and-explicit-delete-at-1366/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results/010-notices-documents-noti-d64be-and-explicit-delete-at-1366/error-context.md
+
+  11) frontend/e2e/010-notices-documents.spec.ts:100:3 › document real JSON storage, rich draft/409, locale and privacy at 1366 
+
+    TimeoutError: locator.fill: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for getByRole('form', { name: '문서 작성', exact: true }).getByRole('textbox', { name: '제목', exact: true })
+
+
+      109 |     const title = form.getByRole("textbox", { name: "제목", exact: true });
+      110 |     const editor = form.getByRole("textbox", { name: "문서 내용", exact: true });
+    > 111 |     await title.fill("서식 문서");
+          |                 ^
+      112 |     await editor.fill("서식 앞부분 ");
+      113 |     await editor.press("End");
+      114 |     await form.getByRole("button", { name: "굵게", exact: true }).click();
+        at /Users/dk/Work/ScFramework/frontend/e2e/010-notices-documents.spec.ts:111:17
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results/010-notices-documents-docu-41510--locale-and-privacy-at-1366/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results/010-notices-documents-docu-41510--locale-and-privacy-at-1366/error-context.md
+
+  12) frontend/e2e/010-notices-documents.spec.ts:174:1 › notice is readable but author-only; documents remain private even to ADMIN 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator: getByRole('form', { name: '공지 작성', exact: true }).getByRole('textbox', { name: '공지 본문', exact: true })
+    Expected: ""
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveAttribute" getByRole('form', { name: '공지 작성', exact: true }).getByRole('textbox', { name: '공지 본문', exact: true }) with timeout 10000ms
+      - waiting for getByRole('form', { name: '공지 작성', exact: true }).getByRole('textbox', { name: '공지 본문', exact: true })
+
+
+      191 |   await page.goto(`/notices/${notice.id}`);
+      192 |   const form = page.getByRole("form", { name: "공지 작성", exact: true });
+    > 193 |   await expect(form.getByRole("textbox", { name: "공지 본문", exact: true })).toHaveAttribute(
+          |                                                                           ^
+      194 |     "readonly",
+      195 |     "",
+      196 |   );
+        at /Users/dk/Work/ScFramework/frontend/e2e/010-notices-documents.spec.ts:193:75
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results/010-notices-documents-noti-323e9-emain-private-even-to-ADMIN/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results/010-notices-documents-noti-323e9-emain-private-even-to-ADMIN/error-context.md
+
+  13) frontend/e2e/requirements.spec.ts:25:1 › 실제 작성자·담당자 세션에서 등록→지정→제출→검토→합의·댓글·이력을 저장한다 ──────────
+
+    TimeoutError: locator.click: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for getByRole('listbox').getByRole('option', { name: '업무 메뉴 ad5ff149', exact: true })
+        - locator resolved to <div tabindex="-2" role="option" aria-setsize="32" aria-posinset="32" aria-selected="false" class="v-list-item v-list-item--link v-theme--sc v-list-item--density-default v-list-item--one-line rounded-0 v-list-item--variant-text">…</div>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is not stable
+        - retrying click action
+        - waiting 20ms
+        - waiting for element to be visible, enabled and stable
+      - element was detached from the DOM, retrying
+
+
+       at support/requirements.ts:111
+
+      109 |   await target.focus();
+      110 |   await target.press("Enter");
+    > 111 |   await page.getByRole("listbox").getByRole("option", { name: option, exact: true }).click();
+          |                                                                                      ^
+      112 | }
+      113 |
+      114 | export async function confirmDiscard(page: Page) {
+        at choose (/Users/dk/Work/ScFramework/frontend/e2e/support/requirements.ts:111:86)
+        at /Users/dk/Work/ScFramework/frontend/e2e/requirements.spec.ts:38:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results/requirements-실제-작성자·담당자-세션에서-등록→지정→제출→검토→합의·댓글·이력을-저장한다/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results/requirements-실제-작성자·담당자-세션에서-등록→지정→제출→검토→합의·댓글·이력을-저장한다/error-context.md
+
+  13 failed
+    frontend/e2e/010-kanban.spec.ts:112:1 › 칸반 멤버 접근과 타인 작업 변경 거절은 ADMIN·담당자에도 서버에서 적용한다 ───────────
+    frontend/e2e/010-kanban.spec.ts:145:1 › 실제 보드 포인터·키보드 센서와 대체 이동은 저장한 작업만 이동하고 필터 정렬에서는 차단한다 ────
+    frontend/e2e/010-media.spec.ts:121:3 › image UI upload, trusted pointer, body preservation, PDF privacy and real box conflict at 390 
+    frontend/e2e/010-media.spec.ts:259:3 › English image workspace has native coordinates and no overflow at 390 
+    frontend/e2e/010-media.spec.ts:121:3 › image UI upload, trusted pointer, body preservation, PDF privacy and real box conflict at 1366 
+    frontend/e2e/010-media.spec.ts:259:3 › English image workspace has native coordinates and no overflow at 1366 
+    frontend/e2e/010-media.spec.ts:279:1 › JPEG EXIF 6 uses browser-oriented original dimensions and preserves uploaded bytes 
+    frontend/e2e/010-notices-documents.spec.ts:36:3 › notice plain text persistence, real 409, draft/locale and explicit delete at 390 
+    frontend/e2e/010-notices-documents.spec.ts:100:3 › document real JSON storage, rich draft/409, locale and privacy at 390 
+    frontend/e2e/010-notices-documents.spec.ts:36:3 › notice plain text persistence, real 409, draft/locale and explicit delete at 1366 
+    frontend/e2e/010-notices-documents.spec.ts:100:3 › document real JSON storage, rich draft/409, locale and privacy at 1366 
+    frontend/e2e/010-notices-documents.spec.ts:174:1 › notice is readable but author-only; documents remain private even to ADMIN 
+    frontend/e2e/requirements.spec.ts:25:1 › 실제 작성자·담당자 세션에서 등록→지정→제출→검토→합의·댓글·이력을 저장한다 ────────────
+  4 skipped
+  54 passed (4.6m)

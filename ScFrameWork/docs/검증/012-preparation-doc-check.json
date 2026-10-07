@@ -1,0 +1,134 @@
+{
+  "format": 1,
+  "checkedAt": "2026-10-06T21:13:40.305756+00:00",
+  "status": "passed",
+  "documents": [
+    "docs/질의/012-운영계약.md",
+    "docs/검증/012-image-candidates.json",
+    "docs/검증/012-preparation-ci-check.json"
+  ],
+  "localLinks": 6,
+  "linkChecks": [
+    {
+      "target": "012-운영모듈-준비검토.md",
+      "exists": true
+    },
+    {
+      "target": "../검증/011-docker-daemon-preflight.json",
+      "exists": true
+    },
+    {
+      "target": "../검증/012-image-candidates.json",
+      "exists": true
+    },
+    {
+      "target": "../검증/012-image-candidates.json",
+      "exists": true
+    },
+    {
+      "target": "010-파일저장계약.md",
+      "exists": true
+    },
+    {
+      "target": "../검증/012-preparation-ci-check.json",
+      "exists": true
+    }
+  ],
+  "tables": 12,
+  "tableChecks": [
+    {
+      "rows": 9,
+      "columns": 3,
+      "consistent": true
+    },
+    {
+      "rows": 8,
+      "columns": 2,
+      "consistent": true
+    },
+    {
+      "rows": 17,
+      "columns": 3,
+      "consistent": true
+    },
+    {
+      "rows": 12,
+      "columns": 2,
+      "consistent": true
+    },
+    {
+      "rows": 6,
+      "columns": 2,
+      "consistent": true
+    },
+    {
+      "rows": 8,
+      "columns": 2,
+      "consistent": true
+    },
+    {
+      "rows": 7,
+      "columns": 3,
+      "consistent": true
+    },
+    {
+      "rows": 5,
+      "columns": 2,
+      "consistent": true
+    },
+    {
+      "rows": 7,
+      "columns": 2,
+      "consistent": true
+    },
+    {
+      "rows": 8,
+      "columns": 2,
+      "consistent": true
+    },
+    {
+      "rows": 9,
+      "columns": 2,
+      "consistent": true
+    },
+    {
+      "rows": 8,
+      "columns": 4,
+      "consistent": true
+    }
+  ],
+  "fencesBalanced": true,
+  "implementationUnchecked": 16,
+  "jsonParsed": 2,
+  "candidateCount": 6,
+  "licenseSourcesRead": 6,
+  "prettierScopedCheckExitCode": 0,
+  "initialFailureHistory": [
+    {
+      "type": "process-create",
+      "reason": "OS EMFILE (24) before scoped Prettier started",
+      "commandExecuted": false,
+      "retryExitCode": 0
+    },
+    {
+      "type": "license-title-assertion",
+      "initialExitCode": 1,
+      "reason": "RabbitMQ LICENSE is an index; followed LICENSE-MPL-RabbitMQ",
+      "finalVerifiedSources": 6
+    },
+    {
+      "type": "inline-doc-check-parser",
+      "initialExitCode": 1,
+      "reason": "Python stdin source reported a non-UTF-8 byte; final checker uses ASCII-only program text while reading UTF-8 documents."
+    }
+  ],
+  "sourceModifiedByThisPreparation": false,
+  "backendExecuted": false,
+  "remoteExecution": false,
+  "errors": [],
+  "sha256": {
+    "docs/질의/012-운영계약.md": "71722c9df8a9209c49f90bb71315f1a2029aded9b74d75d3eff2915030d63458",
+    "docs/검증/012-image-candidates.json": "77e92b644023b32d9a1717ce219ab547481f24d7519e86a42f3fb9ad62ea232b",
+    "docs/검증/012-preparation-ci-check.json": "751e8669af1f90a508b80c10c4fed569ae0f43ae2f6a723976a4ac0f4009c89e"
+  }
+}

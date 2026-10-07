@@ -1,0 +1,39 @@
+{
+  "name": "@sc/runtime",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "typecheck": "vue-tsc --noEmit -p tsconfig.json",
+    "build": "node ../../../scripts/build-library.mjs ."
+  },
+  "dependencies": {
+    "axios": "1.20.0"
+  },
+  "peerDependencies": {
+    "vue": "3.5.43",
+    "vue-router": "5.3.1",
+    "pinia": "4.0.3",
+    "@tanstack/vue-query": "5.104.1"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "vue-tsc": "3.3.12"
+  },
+  "license": "UNLICENSED",
+  "files": [
+    "dist",
+    "README.md",
+    "UNLICENSED",
+    "THIRD_PARTY_NOTICES"
+  ],
+  "types": "./dist/types/index.d.ts",
+  "sideEffects": false
+}

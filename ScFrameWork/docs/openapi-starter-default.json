@@ -1,0 +1,313 @@
+{
+  "components": {
+    "schemas": {
+      "ApiError": {
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "errors": {
+            "items": {
+              "$ref": "#/components/schemas/FieldViolation"
+            },
+            "type": "array"
+          },
+          "message": {
+            "type": "string"
+          }
+        },
+        "required": ["code", "errors", "message"]
+      },
+      "CsrfResponse": {
+        "properties": {
+          "headerName": {
+            "type": "string"
+          },
+          "token": {
+            "type": "string"
+          }
+        },
+        "required": ["headerName", "token"],
+        "type": "object"
+      },
+      "FieldViolation": {
+        "properties": {
+          "field": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          }
+        },
+        "required": ["field", "message"]
+      },
+      "FrameworkCapabilities": {
+        "description": "현재 서버에서 활성화한 선택 기능",
+        "properties": {
+          "browserErrors": {
+            "type": "boolean"
+          },
+          "messaging": {
+            "type": "boolean"
+          },
+          "observability": {
+            "type": "boolean"
+          },
+          "scheduler": {
+            "type": "boolean"
+          }
+        },
+        "required": ["browserErrors", "messaging", "observability", "scheduler"],
+        "type": "object"
+      },
+      "HealthResponse": {
+        "properties": {
+          "application": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "required": ["application", "status"],
+        "type": "object"
+      },
+      "SessionResponse": {
+        "properties": {
+          "roles": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "username": {
+            "type": "string"
+          }
+        },
+        "required": ["roles", "username"],
+        "type": "object"
+      }
+    },
+    "securitySchemes": {
+      "session": {
+        "description": "같은 브라우저의 로그인 세션. HttpOnly 쿠키를 Authorize 입력으로 설정하지 않는다.",
+        "in": "cookie",
+        "name": "JSESSIONID",
+        "type": "apiKey"
+      }
+    }
+  },
+  "info": {
+    "title": "sc-starter-app",
+    "version": "0.1.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/api/auth/csrf": {
+      "get": {
+        "operationId": "csrf",
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/CsrfResponse"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "security": [],
+        "summary": "현재 세션의 CSRF 토큰 발급",
+        "tags": ["common-endpoints"]
+      }
+    },
+    "/api/auth/login": {
+      "post": {
+        "parameters": [
+          {
+            "description": "GET /api/auth/csrf가 발급한 token. Swagger interceptor가 갱신한다.",
+            "in": "header",
+            "name": "X-CSRF-TOKEN",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "properties": {
+                  "password": {
+                    "format": "password",
+                    "type": "string"
+                  },
+                  "username": {
+                    "type": "string"
+                  }
+                },
+                "required": ["password", "username"]
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "204": {
+            "description": "성공, 본문 없음"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "인증 실패"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "CSRF 거부"
+          }
+        },
+        "security": [],
+        "summary": "폼 로그인",
+        "tags": ["session"]
+      }
+    },
+    "/api/auth/logout": {
+      "post": {
+        "parameters": [
+          {
+            "description": "GET /api/auth/csrf가 발급한 token. Swagger interceptor가 갱신한다.",
+            "in": "header",
+            "name": "X-CSRF-TOKEN",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "성공, 본문 없음"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "인증 실패"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "CSRF 거부"
+          }
+        },
+        "security": [
+          {
+            "session": []
+          }
+        ],
+        "summary": "세션 로그아웃",
+        "tags": ["session"]
+      }
+    },
+    "/api/auth/me": {
+      "get": {
+        "operationId": "me",
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/SessionResponse"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "현재 로그인 사용자",
+        "tags": ["default-session-endpoints"]
+      }
+    },
+    "/api/framework/capabilities": {
+      "get": {
+        "operationId": "capabilities",
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/FrameworkCapabilities"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "활성 선택 기능 조회",
+        "tags": ["framework-capability-endpoints"]
+      }
+    },
+    "/api/health": {
+      "get": {
+        "operationId": "health",
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResponse"
+                }
+              }
+            },
+            "description": "초기 준비 완료"
+          },
+          "503": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResponse"
+                }
+              }
+            },
+            "description": "초기 준비 중"
+          }
+        },
+        "security": [],
+        "summary": "애플리케이션 기본 상태",
+        "tags": ["common-endpoints"]
+      }
+    }
+  },
+  "security": [
+    {
+      "session": []
+    }
+  ],
+  "servers": [
+    {
+      "description": "같은 출처의 실행 서버",
+      "url": "/"
+    }
+  ]
+}

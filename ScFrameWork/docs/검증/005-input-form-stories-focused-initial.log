@@ -1,0 +1,1216 @@
+
+> @sc/catalog@0.1.0 test:stories
+> vitest run --config vitest.config.ts src/ScSelect.stories.ts src/ScCheckbox.stories.ts src/ScTextArea.stories.ts src/ScFormActions.stories.ts src/ScConfirmDialog.stories.ts
+
+
+ RUN  v4.1.11 /Users/dk/Work/ScFramework/frontend/apps/catalog
+
+9:18:41 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:18:41 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:18:41 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:18:41 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:18:41 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:18:41 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:18:41 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:18:41 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:18:41 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:18:41 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+stderr | src/ScSelect.stories.ts > Keyboard Selection
+[@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+stderr | src/ScSelect.stories.ts > Keyboard Selection
+[@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+stderr | src/ScFormActions.stories.ts > Native Form
+[@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+stderr | src/ScFormActions.stories.ts > Native Form
+[@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+ ❯ |storybook (chromium)| src/ScSelect.stories.ts (5 tests | 2 failed) 449ms
+   × Keyboard Selection 70ms
+   × Empty 51ms
+ ❯ |storybook (chromium)| src/ScFormActions.stories.ts (3 tests | 3 failed) 457ms
+   × Native Form 301ms
+   × Disabled Form Data 89ms
+   × Busy 65ms
+9:18:42 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 5 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |storybook (chromium)| src/ScFormActions.stories.ts > Native Form
+TestingLibraryElementError: 
+[34mClick to debug the error directly in Storybook: http://localhost:6006/?path=/story/공통-ui-scformactions--native-form&addonPanel=storybook/interactions/panel[39m
+
+Unable to find an accessible element with the role "button" and name "편집 취소"
+
+Here are the accessible roles:
+
+  main:
+
+  Name "":
+  <main
+    class="v-main"
+    data-v-000bc527=""
+    style="--v-layout-left: 0px; --v-layout-right: 0px; --v-layout-top: 0px; --v-layout-bottom: 0px;"
+  />
+
+  --------------------------------------------------
+  region:
+
+  Name "공통 입력 폼 예제":
+  <section
+    aria-label="공통 입력 폼 예제"
+    class="sc-stack"
+  />
+
+  --------------------------------------------------
+  combobox:
+
+  Name "":
+  <div
+    aria-controls="menu-sc-1-2"
+    aria-expanded="false"
+    aria-haspopup="listbox"
+    aria-owns="menu-sc-1-2"
+    class="v-field v-field--active v-field--appended v-field--center-affix v-field--dirty v-field--variant-outlined v-theme--sc v-locale--is-ltr"
+    role="combobox"
+  />
+
+  Name "제출 구분":
+  <input
+    aria-controls="menu-sc-1-2"
+    aria-describedby="sc-select-sc-1-1-messages"
+    aria-expanded="false"
+    aria-labelledby="sc-select-sc-1-1-label"
+    id="sc-select-sc-1-1"
+    inputmode="none"
+    role="combobox"
+    size="1"
+    type="text"
+    value="일반 제출"
+  />
+
+  --------------------------------------------------
+  alert:
+
+  Name "":
+  <div
+    aria-live="polite"
+    class="v-input__details"
+    id="sc-select-sc-1-1-messages"
+    role="alert"
+  />
+
+  Name "":
+  <div
+    aria-live="polite"
+    class="v-input__details"
+    id="sc-checkbox-sc-1-7-messages"
+    role="alert"
+  />
+
+  Name "":
+  <div
+    aria-live="polite"
+    class="v-input__details"
+    id="sc-text-area-sc-1-11-messages"
+    role="alert"
+  />
+
+  --------------------------------------------------
+  checkbox:
+
+  Name "제출 동의":
+  <input
+    aria-describedby="sc-checkbox-sc-1-7-messages"
+    aria-label="제출 동의"
+    checked=""
+    id="sc-checkbox-sc-1-7"
+    name="accepted"
+    type="checkbox"
+    value="true"
+  />
+
+  --------------------------------------------------
+  textbox:
+
+  Name "제출 설명":
+  <textarea
+    aria-describedby="sc-text-area-sc-1-11-messages"
+    aria-labelledby="sc-text-area-sc-1-11-label"
+    class="v-field__input"
+    id="sc-text-area-sc-1-11"
+    name="description"
+    rows="4"
+    value="긴 한국어 설명
+  두 번째 줄"
+  />
+
+  --------------------------------------------------
+  button:
+
+  Name "폼 저장":
+  <button
+    aria-busy="false"
+    class="v-btn v-theme--sc bg-primary v-btn--density-default elevation-0 v-btn--size-default v-btn--variant-flat sc-action-button"
+    data-v-31a28ffe=""
+    data-v-cb4820b6=""
+    form="sc-actions-story-sc-1-0"
+    type="submit"
+  />
+
+  Name "폼 값 확인":
+  <button
+    aria-busy="false"
+    class="v-btn v-theme--sc text-primary v-btn--density-default elevation-0 v-btn--size-default v-btn--variant-text sc-action-button"
+    data-v-cb4820b6=""
+    type="button"
+  />
+
+  --------------------------------------------------
+  status:
+
+  Name "공통 폼 행동 결과":
+  <p
+    aria-label="공통 폼 행동 결과"
+    role="status"
+  />
+
+  Name "공통 폼 제출 값":
+  <p
+    aria-label="공통 폼 제출 값"
+    role="status"
+  />
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+<div
+  data-v-app=""
+>
+  <div
+    class="v-application v-theme--sc v-layout v-layout--full-height v-locale--is-ltr sc-app sc-story-frame"
+    data-v-000bc527=""
+  >
+    <div
+      class="v-application__wrap"
+    >
+      
+      <main
+        class="v-main"
+        data-v-000bc527=""
+        style="--v-layout-left: 0px; --v-layout-right: 0px; --v-layout-top: 0px; --v-layout-bottom: 0px;"
+      >
+        
+        <div
+          class="sc-content sc-story-frame__content"
+          data-v-000bc527=""
+        >
+          
+          <section
+            aria-label="공통 입력 폼 예제"
+            class="sc-stack"
+          >
+            <form
+              class="sc-stack"
+              id="sc-actions-story-sc-1-0"
+            >
+              <div
+                class="v-input v-input--horizontal v-input--center-affix v-input--indent-details v-input--density-comfortable v-theme--sc v-locale--is-ltr v-input--dirty v-text-field v-select v-select--single v-select--selected sc-select"
+                data-v-2ce8ae9d=""
+              >
+                <div
+                  class="v-input__control"
+                >
+                  
+                  <div
+                    aria-controls="menu-sc-1-2"
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    aria-owns="menu-sc-1-2"
+                    class="v-field v-field--active v-field--appended v-field--center-affix v-field--dirty v-field--variant-outlined v-theme--sc v-locale--is-ltr"
+                    role="combobox"
+                  >
+                    <div
+                      class="v-field__overlay"
+                    />
+                    <div
+                      class="v-field__loader"
+                    >
+                      <div
+                        aria-hidden="true"
+                        aria-valuemax="100"
+                        aria-valuemin="0"
+                        class="v-progress-linear v-theme--sc v-locale--is-ltr"
+                        role="progressbar"
+                        style="top: 0px; height: 0px; --v-progress-linear-height: 2px; --v-progress-reveal-duration: 900ms; --v-progress-chunk-gap: 4px;"
+                      >
+                        <div
+                          class="v-progress-linear__background bg-primary"
+                        />
+                        <div
+                          class="v-progress-linear__buffer bg-primary"
+                          style="width: 0%;"
+                        />
+                        <div
+                          class="v-progress-linear__indeterminate"
+                        >
+                          
+                          <div
+                            class="v-progress-linear__indeterminate long bg-primary"
+                          />
+                          <div
+                            class="v-progress-linear__indeterminate short bg-primary"
+                          />
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="v-field__field"
+                      data-no-activator=""
+                    >
+                      <label
+                        aria-hidden="true"
+                        class="v-label v-field-label"
+                        id="sc-select-sc-1-1-label"
+                      >
+                        
+                        제출 구분
+                        
+                      </label>
+                      
+                      
+                      <div
+                        class="v-field__input"
+                        data-no-activator=""
+                      >
+                        
+                        
+                        
+                        <input
+                          name="category"
+                          type="hidden"
+                          value="general"
+                        />
+                        
+                        
+                        
+                        
+                        <div
+                          class="v-select__selection"
+                        >
+                          <span
+                            class="v-select__selection-text"
+                          >
+                            일반 제출
+                          </span>
+                        </div>
+                        
+                        
+                        
+                        <input
+                          aria-controls="menu-sc-1-2"
+                          aria-describedby="sc-select-sc-1-1-messages"
+                          aria-expanded="false"
+                          aria-labelledby="sc-select-sc-1-1-label"
+                          id="sc-select-sc-1-1"
+                          inputmode="none"
+                          role="combobox"
+                          size="1"
+                          type="text"
+                          value="일반 제출"
+                        />
+                      </div>
+                      
+                      
+                    </div>
+                    <div
+                      class="v-field__append-inner"
+                    >
+                      
+                      
+                      <i
+                        aria-hidden="true"
+                        class="v-icon notranslate v-theme--sc v-icon--size-default v-select__menu-icon"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="v-icon__svg"
+                          role="img"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M7,10L12,15L17,10H7Z"
+                          />
+                        </svg>
+                      </i>
+                      
+                      
+                    </div>
+                    <div
+                      class="v-field__outline"
+                    >
+                      
+                      <div
+                        class="v-field__outline__start"
+                      />
+                      <div
+                        class="v-field__outline__notch"
+                      >
+                        <label
+                          aria-hidden="false"
+                          class="v-label v-field-label v-field-label--floating"
+                          for="sc-select-sc-1-1"
+                        >
+                          
+                          제출 구분
+                          
+                        </label>
+                      </div>
+                      <div
+                        class="v-field__outline__end"
+                      />
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div
+                  aria-live="polite"
+                  class="v-input_...
+ ❯ Object.getElementError ../../../node_modules/storybook/dist/test/index.js:16195:54
+ ❯ ../../../node_modules/storybook/dist/test/index.js:16731:24
+ ❯ ../../../node_modules/storybook/dist/test/index.js:16706:14
+ ❯ ../../../node_modules/storybook/dist/test/index.js:16744:16
+ ❯ Instrumenter.invoke ../../../node_modules/storybook/dist/instrumenter/index.js:322:22
+ ❯ Instrumenter.track ../../../node_modules/storybook/dist/instrumenter/index.js:238:378
+ ❯ Object.getByRole ../../../node_modules/storybook/dist/instrumenter/index.js:224:263
+ ❯ getByRole src/ScFormActions.stories.ts:52:33
+     50|       '"description":"긴 한국어 설명\\n두 번째 줄"',
+     51|     );
+     52|     await userEvent.click(canvas.getByRole("button", { name: "편집 취소" }…
+       |                                 ^
+     53|     await expect(canvas.getByRole("status", { name: "공통 폼 행동 결과" })).t…
+     54|       "제출 1회 · 취소 1회",
+ ❯ runStory ../../../node_modules/storybook/dist/_browser-chunks/chunk-SZQXB3JV.js:1325:6
+ ❯ ../../../node_modules/@storybook/addon-vitest/dist/vitest-plugin/test-utils.js:108:184
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/5]⎯
+
+ FAIL  |storybook (chromium)| src/ScFormActions.stories.ts > Disabled Form Data
+TestingLibraryElementError: 
+[34mClick to debug the error directly in Storybook: http://localhost:6006/?path=/story/공통-ui-scformactions--disabled-form-data&addonPanel=storybook/interactions/panel[39m
+
+Unable to find an accessible element with the role "button" and name "편집 취소"
+
+Here are the accessible roles:
+
+  main:
+
+  Name "":
+  <main
+    class="v-main"
+    data-v-000bc527=""
+    style="--v-layout-left: 0px; --v-layout-right: 0px; --v-layout-top: 0px; --v-layout-bottom: 0px; transition: none !important;"
+  />
+
+  --------------------------------------------------
+  region:
+
+  Name "공통 입력 폼 예제":
+  <section
+    aria-label="공통 입력 폼 예제"
+    class="sc-stack"
+  />
+
+  --------------------------------------------------
+  combobox:
+
+  Name "":
+  <div
+    aria-controls="menu-sc-2-2"
+    aria-expanded="false"
+    aria-haspopup="listbox"
+    aria-owns="menu-sc-2-2"
+    class="v-field v-field--active v-field--appended v-field--center-affix v-field--disabled v-field--dirty v-field--variant-outlined v-theme--sc v-locale--is-ltr"
+    role="combobox"
+  />
+
+  Name "제출 구분":
+  <input
+    aria-controls="menu-sc-2-2"
+    aria-describedby="sc-select-sc-2-1-messages"
+    aria-disabled="true"
+    aria-expanded="false"
+    aria-labelledby="sc-select-sc-2-1-label"
+    disabled=""
+    id="sc-select-sc-2-1"
+    inputmode="none"
+    role="combobox"
+    size="1"
+    type="text"
+    value="일반 제출"
+  />
+
+  --------------------------------------------------
+  alert:
+
+  Name "":
+  <div
+    aria-live="polite"
+    class="v-input__details"
+    id="sc-select-sc-2-1-messages"
+    role="alert"
+  />
+
+  Name "":
+  <div
+    aria-live="polite"
+    class="v-input__details"
+    id="sc-checkbox-sc-2-7-messages"
+    role="alert"
+  />
+
+  Name "":
+  <div
+    aria-live="polite"
+    class="v-input__details"
+    id="sc-text-area-sc-2-11-messages"
+    role="alert"
+  />
+
+  --------------------------------------------------
+  checkbox:
+
+  Name "제출 동의":
+  <input
+    aria-describedby="sc-checkbox-sc-2-7-messages"
+    aria-disabled="true"
+    aria-label="제출 동의"
+    checked=""
+    disabled=""
+    id="sc-checkbox-sc-2-7"
+    name="accepted"
+    type="checkbox"
+    value="true"
+  />
+
+  --------------------------------------------------
+  textbox:
+
+  Name "제출 설명":
+  <textarea
+    aria-describedby="sc-text-area-sc-2-11-messages"
+    aria-disabled="true"
+    aria-labelledby="sc-text-area-sc-2-11-label"
+    class="v-field__input"
+    disabled=""
+    id="sc-text-area-sc-2-11"
+    name="description"
+    rows="4"
+    value="처음 설명"
+  />
+
+  --------------------------------------------------
+  button:
+
+  Name "폼 저장":
+  <button
+    aria-busy="false"
+    class="v-btn v-btn--disabled v-theme--sc bg-primary v-btn--density-default elevation-0 v-btn--size-default v-btn--variant-flat sc-action-button"
+    data-v-31a28ffe=""
+    data-v-cb4820b6=""
+    disabled=""
+    form="sc-actions-story-sc-2-0"
+    type="submit"
+  />
+
+  Name "폼 값 확인":
+  <button
+    aria-busy="false"
+    class="v-btn v-theme--sc text-primary v-btn--density-default elevation-0 v-btn--size-default v-btn--variant-text sc-action-button"
+    data-v-cb4820b6=""
+    type="button"
+  />
+
+  --------------------------------------------------
+  status:
+
+  Name "공통 폼 행동 결과":
+  <p
+    aria-label="공통 폼 행동 결과"
+    role="status"
+  />
+
+  Name "공통 폼 제출 값":
+  <p
+    aria-label="공통 폼 제출 값"
+    role="status"
+  />
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+<div
+  data-v-app=""
+>
+  <div
+    class="v-application v-theme--sc v-layout v-layout--full-height v-locale--is-ltr sc-app sc-story-frame"
+    data-v-000bc527=""
+  >
+    <div
+      class="v-application__wrap"
+    >
+      
+      <main
+        class="v-main"
+        data-v-000bc527=""
+        style="--v-layout-left: 0px; --v-layout-right: 0px; --v-layout-top: 0px; --v-layout-bottom: 0px; transition: none !important;"
+      >
+        
+        <div
+          class="sc-content sc-story-frame__content"
+          data-v-000bc527=""
+        >
+          
+          <section
+            aria-label="공통 입력 폼 예제"
+            class="sc-stack"
+          >
+            <form
+              class="sc-stack"
+              id="sc-actions-story-sc-2-0"
+            >
+              <div
+                class="v-input v-input--horizontal v-input--center-affix v-input--indent-details v-input--density-comfortable v-theme--sc v-locale--is-ltr v-input--dirty v-input--disabled v-text-field v-select v-select--single v-select--selected sc-select"
+                data-v-2ce8ae9d=""
+              >
+                <div
+                  class="v-input__control"
+                >
+                  
+                  <div
+                    aria-controls="menu-sc-2-2"
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    aria-owns="menu-sc-2-2"
+                    class="v-field v-field--active v-field--appended v-field--center-affix v-field--disabled v-field--dirty v-field--variant-outlined v-theme--sc v-locale--is-ltr"
+                    role="combobox"
+                  >
+                    <div
+                      class="v-field__overlay"
+                    />
+                    <div
+                      class="v-field__loader"
+                    >
+                      <div
+                        aria-hidden="true"
+                        aria-valuemax="100"
+                        aria-valuemin="0"
+                        class="v-progress-linear v-theme--sc v-locale--is-ltr"
+                        role="progressbar"
+                        style="top: 0px; height: 0px; --v-progress-linear-height: 2px; --v-progress-reveal-duration: 900ms; --v-progress-chunk-gap: 4px;"
+                      >
+                        <div
+                          class="v-progress-linear__background bg-primary"
+                        />
+                        <div
+                          class="v-progress-linear__buffer bg-primary"
+                          style="width: 0%;"
+                        />
+                        <div
+                          class="v-progress-linear__indeterminate"
+                        >
+                          
+                          <div
+                            class="v-progress-linear__indeterminate long bg-primary"
+                          />
+                          <div
+                            class="v-progress-linear__indeterminate short bg-primary"
+                          />
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="v-field__field"
+                      data-no-activator=""
+                    >
+                      <label
+                        aria-hidden="true"
+                        class="v-label v-field-label"
+                        id="sc-select-sc-2-1-label"
+                      >
+                        
+                        제출 구분
+                        
+                      </label>
+                      
+                      
+                      <div
+                        class="v-field__input"
+                        data-no-activator=""
+                      >
+                        
+                        
+                        
+                        <input
+                          type="hidden"
+                          value="general"
+                        />
+                        
+                        
+                        
+                        
+                        <div
+                          class="v-select__selection"
+                        >
+                          <span
+                            class="v-select__selection-text"
+                          >
+                            일반 제출
+                          </span>
+                        </div>
+                        
+                        
+                        
+                        <input
+                          aria-controls="menu-sc-2-2"
+                          aria-describedby="sc-select-sc-2-1-messages"
+                          aria-disabled="true"
+                          aria-expanded="false"
+                          aria-labelledby="sc-select-sc-2-1-label"
+                          disabled=""
+                          id="sc-select-sc-2-1"
+                          inputmode="none"
+                          role="combobox"
+                          size="1"
+                          type="text"
+                          value="일반 제출"
+                        />
+                      </div>
+                      
+                      
+                    </div>
+                    <div
+                      class="v-field__append-inner"
+                    >
+                      
+                      
+                      <i
+                        aria-hidden="true"
+                        class="v-icon notranslate v-theme--sc v-icon--size-default v-select__menu-icon"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="v-icon__svg"
+                          role="img"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M7,10L12,15L17,10H7Z"
+                          />
+                        </svg>
+                      </i>
+                      
+                      
+                    </div>
+                    <div
+                      class="v-field__outline"
+                    >
+                      
+                      <div
+                        class="v-field__outline__start"
+                      />
+                      <div
+                        class="v-field__outline__notch"
+                      >
+                        <label
+                          aria-hidden="false"
+                          class="v-label v-field-label v-field-label--floating"
+                          for="sc-select-sc-2-1"
+                        >
+                          
+                          제출 구분
+                          
+                        </label>
+                      </div>
+                      <div
+                        class="v-field__outline__end"
+                      />
+                      
+                    </div>
+                  </div>
+                  
+      ...
+ ❯ Object.getElementError ../../../node_modules/storybook/dist/test/index.js:16195:54
+ ❯ ../../../node_modules/storybook/dist/test/index.js:16731:24
+ ❯ ../../../node_modules/storybook/dist/test/index.js:16706:14
+ ❯ ../../../node_modules/storybook/dist/test/index.js:16744:16
+ ❯ Instrumenter.invoke ../../../node_modules/storybook/dist/instrumenter/index.js:322:22
+ ❯ Instrumenter.track ../../../node_modules/storybook/dist/instrumenter/index.js:238:378
+ ❯ Object.getByRole ../../../node_modules/storybook/dist/instrumenter/index.js:224:263
+ ❯ getByRole src/ScFormActions.stories.ts:70:24
+     68|     const canvas = within(canvasElement);
+     69|     await expect(canvas.getByRole("button", { name: "폼 저장" })).toBeDis…
+     70|     await expect(canvas.getByRole("button", { name: "편집 취소" })).toBeDi…
+       |                        ^
+     71|     await userEvent.click(canvas.getByRole("button", { name: "폼 값 확인" …
+     72|     await expect(canvas.getByRole("status", { name: "공통 폼 제출 값" })).to…
+ ❯ runStory ../../../node_modules/storybook/dist/_browser-chunks/chunk-SZQXB3JV.js:1325:6
+ ❯ ../../../node_modules/@storybook/addon-vitest/dist/vitest-plugin/test-utils.js:108:184
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/5]⎯
+
+ FAIL  |storybook (chromium)| src/ScFormActions.stories.ts > Busy
+TestingLibraryElementError: 
+[34mClick to debug the error directly in Storybook: http://localhost:6006/?path=/story/공통-ui-scformactions--busy&addonPanel=storybook/interactions/panel[39m
+
+Unable to find an accessible element with the role "button" and name "편집 취소"
+
+Here are the accessible roles:
+
+  main:
+
+  Name "":
+  <main
+    class="v-main"
+    data-v-000bc527=""
+    style="--v-layout-left: 0px; --v-layout-right: 0px; --v-layout-top: 0px; --v-layout-bottom: 0px; transition: none !important;"
+  />
+
+  --------------------------------------------------
+  region:
+
+  Name "공통 입력 폼 예제":
+  <section
+    aria-label="공통 입력 폼 예제"
+    class="sc-stack"
+  />
+
+  --------------------------------------------------
+  combobox:
+
+  Name "":
+  <div
+    aria-controls="menu-sc-3-2"
+    aria-expanded="false"
+    aria-haspopup="listbox"
+    aria-owns="menu-sc-3-2"
+    class="v-field v-field--active v-field--appended v-field--center-affix v-field--disabled v-field--dirty v-field--variant-outlined v-theme--sc v-locale--is-ltr"
+    role="combobox"
+  />
+
+  Name "제출 구분":
+  <input
+    aria-controls="menu-sc-3-2"
+    aria-describedby="sc-select-sc-3-1-messages"
+    aria-disabled="true"
+    aria-expanded="false"
+    aria-labelledby="sc-select-sc-3-1-label"
+    disabled=""
+    id="sc-select-sc-3-1"
+    inputmode="none"
+    role="combobox"
+    size="1"
+    type="text"
+    value="일반 제출"
+  />
+
+  --------------------------------------------------
+  alert:
+
+  Name "":
+  <div
+    aria-live="polite"
+    class="v-input__details"
+    id="sc-select-sc-3-1-messages"
+    role="alert"
+  />
+
+  Name "":
+  <div
+    aria-live="polite"
+    class="v-input__details"
+    id="sc-checkbox-sc-3-7-messages"
+    role="alert"
+  />
+
+  Name "":
+  <div
+    aria-live="polite"
+    class="v-input__details"
+    id="sc-text-area-sc-3-11-messages"
+    role="alert"
+  />
+
+  --------------------------------------------------
+  checkbox:
+
+  Name "제출 동의":
+  <input
+    aria-describedby="sc-checkbox-sc-3-7-messages"
+    aria-disabled="true"
+    aria-label="제출 동의"
+    checked=""
+    disabled=""
+    id="sc-checkbox-sc-3-7"
+    name="accepted"
+    type="checkbox"
+    value="true"
+  />
+
+  --------------------------------------------------
+  textbox:
+
+  Name "제출 설명":
+  <textarea
+    aria-describedby="sc-text-area-sc-3-11-messages"
+    aria-disabled="true"
+    aria-labelledby="sc-text-area-sc-3-11-label"
+    class="v-field__input"
+    disabled=""
+    id="sc-text-area-sc-3-11"
+    name="description"
+    rows="4"
+    value="처음 설명"
+  />
+
+  --------------------------------------------------
+  button:
+
+  Name "폼 저장 중…":
+  <button
+    aria-busy="true"
+    class="v-btn v-btn--disabled v-btn--loading v-theme--sc bg-primary v-btn--density-default elevation-0 v-btn--loading v-btn--size-default v-btn--variant-flat sc-action-button"
+    data-v-31a28ffe=""
+    data-v-cb4820b6=""
+    disabled=""
+    form="sc-actions-story-sc-3-0"
+    tabindex="-1"
+    type="submit"
+  />
+
+  Name "폼 값 확인":
+  <button
+    aria-busy="false"
+    class="v-btn v-theme--sc text-primary v-btn--density-default elevation-0 v-btn--size-default v-btn--variant-text sc-action-button"
+    data-v-cb4820b6=""
+    type="button"
+  />
+
+  --------------------------------------------------
+  progressbar:
+
+  Name "폼 저장 중…":
+  <div
+    aria-label="폼 저장 중…"
+    aria-valuemax="100"
+    aria-valuemin="0"
+    class="v-progress-circular v-progress-circular--indeterminate v-theme--sc v-progress-circular--size-default"
+    data-v-cb4820b6=""
+    role="progressbar"
+    style="--v-progress-reveal-duration: 900ms;"
+  />
+
+  --------------------------------------------------
+  status:
+
+  Name "공통 폼 행동 결과":
+  <p
+    aria-label="공통 폼 행동 결과"
+    role="status"
+  />
+
+  Name "공통 폼 제출 값":
+  <p
+    aria-label="공통 폼 제출 값"
+    role="status"
+  />
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+<div
+  data-v-app=""
+>
+  <div
+    class="v-application v-theme--sc v-layout v-layout--full-height v-locale--is-ltr sc-app sc-story-frame"
+    data-v-000bc527=""
+  >
+    <div
+      class="v-application__wrap"
+    >
+      
+      <main
+        class="v-main"
+        data-v-000bc527=""
+        style="--v-layout-left: 0px; --v-layout-right: 0px; --v-layout-top: 0px; --v-layout-bottom: 0px; transition: none !important;"
+      >
+        
+        <div
+          class="sc-content sc-story-frame__content"
+          data-v-000bc527=""
+        >
+          
+          <section
+            aria-label="공통 입력 폼 예제"
+            class="sc-stack"
+          >
+            <form
+              class="sc-stack"
+              id="sc-actions-story-sc-3-0"
+            >
+              <div
+                class="v-input v-input--horizontal v-input--center-affix v-input--indent-details v-input--density-comfortable v-theme--sc v-locale--is-ltr v-input--dirty v-input--disabled v-text-field v-select v-select--single v-select--selected sc-select"
+                data-v-2ce8ae9d=""
+              >
+                <div
+                  class="v-input__control"
+                >
+                  
+                  <div
+                    aria-controls="menu-sc-3-2"
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    aria-owns="menu-sc-3-2"
+                    class="v-field v-field--active v-field--appended v-field--center-affix v-field--disabled v-field--dirty v-field--variant-outlined v-theme--sc v-locale--is-ltr"
+                    role="combobox"
+                  >
+                    <div
+                      class="v-field__overlay"
+                    />
+                    <div
+                      class="v-field__loader"
+                    >
+                      <div
+                        aria-hidden="true"
+                        aria-valuemax="100"
+                        aria-valuemin="0"
+                        class="v-progress-linear v-theme--sc v-locale--is-ltr"
+                        role="progressbar"
+                        style="top: 0px; height: 0px; --v-progress-linear-height: 2px; --v-progress-reveal-duration: 900ms; --v-progress-chunk-gap: 4px;"
+                      >
+                        <div
+                          class="v-progress-linear__background bg-primary"
+                        />
+                        <div
+                          class="v-progress-linear__buffer bg-primary"
+                          style="width: 0%;"
+                        />
+                        <div
+                          class="v-progress-linear__indeterminate"
+                        >
+                          
+                          <div
+                            class="v-progress-linear__indeterminate long bg-primary"
+                          />
+                          <div
+                            class="v-progress-linear__indeterminate short bg-primary"
+                          />
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="v-field__field"
+                      data-no-activator=""
+                    >
+                      <label
+                        aria-hidden="true"
+                        class="v-label v-field-label"
+                        id="sc-select-sc-3-1-label"
+                      >
+                        
+                        제출 구분
+                        
+                      </label>
+                      
+                      
+                      <div
+                        class="v-field__input"
+                        data-no-activator=""
+                      >
+                        
+                        
+                        
+                        <input
+                          type="hidden"
+                          value="general"
+                        />
+                        
+                        
+                        
+                        
+                        <div
+                          class="v-select__selection"
+                        >
+                          <span
+                            class="v-select__selection-text"
+                          >
+                            일반 제출
+                          </span>
+                        </div>
+                        
+                        
+                        
+                        <input
+                          aria-controls="menu-sc-3-2"
+                          aria-describedby="sc-select-sc-3-1-messages"
+                          aria-disabled="true"
+                          aria-expanded="false"
+                          aria-labelledby="sc-select-sc-3-1-label"
+                          disabled=""
+                          id="sc-select-sc-3-1"
+                          inputmode="none"
+                          role="combobox"
+                          size="1"
+                          type="text"
+                          value="일반 제출"
+                        />
+                      </div>
+                      
+                      
+                    </div>
+                    <div
+                      class="v-field__append-inner"
+                    >
+                      
+                      
+                      <i
+                        aria-hidden="true"
+                        class="v-icon notranslate v-theme--sc v-icon--size-default v-select__menu-icon"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="v-icon__svg"
+                          role="img"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M7,10L12,15L17,10H7Z"
+                          />
+                        </svg>
+                      </i>
+                      
+                      
+                    </div>
+                    <div
+                      class="v-field__outline"
+                    >
+                      
+                      <div
+                        class="v-field__outline__start"
+                      />
+                      <div
+                        class="v-field__outline__notch"
+                      >
+                        <label
+                          aria-hidden="false"
+                          class="v-label v-field-label v-field-label--floating"
+                          for="sc-select-sc-3-1"
+                        >
+                          
+                          제출 구분
+                          
+                        </label>
+                      </div>
+                      <div
+                        class="v-field__outline__end"
+                      />
+                      
+                    </div>
+                  </div>
+                  
+      ...
+ ❯ Object.getElementError ../../../node_modules/storybook/dist/test/index.js:16195:54
+ ❯ ../../../node_modules/storybook/dist/test/index.js:16731:24
+ ❯ ../../../node_modules/storybook/dist/test/index.js:16706:14
+ ❯ ../../../node_modules/storybook/dist/test/index.js:16744:16
+ ❯ Instrumenter.invoke ../../../node_modules/storybook/dist/instrumenter/index.js:322:22
+ ❯ Instrumenter.track ../../../node_modules/storybook/dist/instrumenter/index.js:238:378
+ ❯ Object.getByRole ../../../node_modules/storybook/dist/instrumenter/index.js:224:263
+ ❯ getByRole src/ScFormActions.stories.ts:80:24
+     78|     const canvas = within(canvasElement);
+     79|     await expect(canvas.getByRole("button", { name: "폼 저장 중…" })).toBe…
+     80|     await expect(canvas.getByRole("button", { name: "편집 취소" })).toBeDi…
+       |                        ^
+     81|     await expect(canvas.getByRole("status", { name: "공통 폼 행동 결과" })).t…
+     82|       "제출 0회 · 취소 0회",
+ ❯ runStory ../../../node_modules/storybook/dist/_browser-chunks/chunk-SZQXB3JV.js:1325:6
+ ❯ ../../../node_modules/@storybook/addon-vitest/dist/vitest-plugin/test-utils.js:108:184
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/5]⎯
+
+ FAIL  |storybook (chromium)| src/ScSelect.stories.ts > Keyboard Selection
+Error: 
+[34mClick to debug the error directly in Storybook: http://localhost:6006/?path=/story/공통-ui-scselect--keyboard-selection&addonPanel=storybook/interactions/panel[39m
+
+expect(element).toBeVisible()
+
+Received element is not visible:
+  <div
+  aria-labelledby="sc-select-sc-1-0-label"
+  aria-live="polite"
+  aria-multiselectable="false"
+  class="v-list v-theme--sc v-list--density-default v-list--one-line v-list--navigable"
+  role="listbox"
+  tabindex="-1"
+/>
+ ❯ Proxy.expectWrapper ../../../node_modules/storybook/dist/test/index.js:15100:16
+ ❯ Proxy.<anonymous> ../../../node_modules/storybook/dist/test/index.js:14620:17
+ ❯ Proxy.methodWrapper ../../../node_modules/storybook/dist/test/index.js:9105:24
+ ❯ Instrumenter.invoke ../../../node_modules/storybook/dist/instrumenter/index.js:322:22
+ ❯ Instrumenter.intercept ../../../node_modules/storybook/dist/instrumenter/index.js:243:139
+ ❯ Instrumenter.track ../../../node_modules/storybook/dist/instrumenter/index.js:238:378
+ ❯ Proxy.toBeVisible ../../../node_modules/storybook/dist/instrumenter/index.js:224:263
+ ❯ toBeVisible src/ScSelect.stories.ts:49:51
+     47|     await userEvent.keyboard("{Enter}");
+     48|     const page = within(canvasElement.ownerDocument.body);
+     49|     await expect(await page.findByRole("listbox")).toBeVisible();
+       |                                                   ^
+     50|     await expect(page.getByRole("option", { name: "사용할 수 없는 업무" })).to…
+     51|       "aria-disabled",
+ ❯ runStory ../../../node_modules/storybook/dist/_browser-chunks/chunk-SZQXB3JV.js:1325:6
+ ❯ ../../../node_modules/@storybook/addon-vitest/dist/vitest-plugin/test-utils.js:108:184
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/5]⎯
+
+ FAIL  |storybook (chromium)| src/ScSelect.stories.ts > Empty
+Error: 
+[34mClick to debug the error directly in Storybook: http://localhost:6006/?path=/story/공통-ui-scselect--empty&addonPanel=storybook/interactions/panel[39m
+
+Unable to perform pointer interaction as the element has `pointer-events: none`:
+
+INPUT#sc-select-sc-5-0(label=업무 구분)
+ ❯ assertPointerEvents ../../../node_modules/storybook/dist/test/index.js:20459:10
+ ❯ Object.enter ../../../node_modules/storybook/dist/test/index.js:20533:8
+ ❯ PointerHost.move ../../../node_modules/storybook/dist/test/index.js:20595:59
+ ❯ pointerAction ../../../node_modules/storybook/dist/test/index.js:20958:550
+ ❯ Object.pointer ../../../node_modules/storybook/dist/test/index.js:20943:35
+ ❯ play src/ScSelect.stories.ts:96:10
+     94|   args: { options: [] },
+     95|   play: async ({ canvasElement }) => {
+     96|     await userEvent.click(within(canvasElement).getByRole("combobox", …
+       |          ^
+     97|     await expect(
+     98|       await within(canvasElement.ownerDocument.body).findByText("선택할 항…
+ ❯ runStory ../../../node_modules/storybook/dist/_browser-chunks/chunk-SZQXB3JV.js:1325:6
+ ❯ ../../../node_modules/@storybook/addon-vitest/dist/vitest-plugin/test-utils.js:108:184
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/5]⎯
+
+
+ Test Files  2 failed | 3 passed (5)
+      Tests  5 failed | 16 passed (21)
+   Start at  21:18:39
+   Duration  2.76s (transform 0ms, setup 6.15s, import 221ms, tests 2.75s, environment 0ms)
+
+npm error Lifecycle script `test:stories` failed with error:
+npm error code 1
+npm error path /Users/dk/Work/ScFramework/frontend/apps/catalog
+npm error workspace @sc/catalog@0.1.0
+npm error location /Users/dk/Work/ScFramework/frontend/apps/catalog
+npm error command failed
+npm error command sh -c vitest run --config vitest.config.ts src/ScSelect.stories.ts src/ScCheckbox.stories.ts src/ScTextArea.stories.ts src/ScFormActions.stories.ts src/ScConfirmDialog.stories.ts

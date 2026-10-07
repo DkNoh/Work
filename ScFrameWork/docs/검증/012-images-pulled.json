@@ -1,0 +1,11 @@
+{
+  "stage": "012",
+  "startedAt": "2026-10-06T21:36:27.588900+00:00",
+  "images": [
+    {
+      "image": "rabbitmq:4.3.6-management@sha256:8dd6e3570ddaa2ef82a6c3a8950e79c1f73893adfbdddbc374fc1f1ac8a0f5dd",
+      "exitCode": 1
+    }
+  ],
+  "passed": false
+}

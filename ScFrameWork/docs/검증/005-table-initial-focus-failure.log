@@ -1,0 +1,705 @@
+
+> @sc/catalog@0.1.0 test:stories
+> vitest run --config vitest.config.ts src/ScVirtualList.stories.ts
+
+
+ RUN  v4.1.11 /Users/dk/Work/ScFramework/frontend/apps/catalog
+
+9:16:30 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:16:30 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+stderr | src/ScVirtualList.stories.ts > Ten Thousand Keyboard And Cleanup
+[@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+stderr | src/ScVirtualList.stories.ts > Ten Thousand Keyboard And Cleanup
+[@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+stdout | src/ScVirtualList.stories.ts > Ten Thousand Keyboard And Cleanup
+SCFOCUS start row-00001 row-00000 row-00000
+stdout | src/ScVirtualList.stories.ts > Ten Thousand Keyboard And Cleanup
+SCFOCUS out row-00000 row-00001 row BUTTON
+stdout | src/ScVirtualList.stories.ts > Ten Thousand Keyboard And Cleanup
+SCFOCUS after row-00001 true true true [
+  "row-00000",
+  "row-00001",
+  "row-00002",
+]
+stdout | src/ScVirtualList.stories.ts > Ten Thousand Keyboard And Cleanup
+SCFOCUS start row-09999 row-00001 row-00001
+stdout | src/ScVirtualList.stories.ts > Ten Thousand Keyboard And Cleanup
+SCFOCUS after row-09999 false undefined false [
+  "row-00000",
+  "row-00001",
+  "row-00002",
+]
+stdout | src/ScVirtualList.stories.ts > Ten Thousand Keyboard And Cleanup
+SCFOCUS out row-00001 null undefined undefined
+stdout | src/ScVirtualList.stories.ts > Ten Thousand Keyboard And Cleanup
+SCFOCUS frame row-00001 null false false BODY
+stdout | src/ScVirtualList.stories.ts > Ten Thousand Keyboard And Cleanup
+SCFOCUS frame row-09999 null undefined false BODY
+ ❯ |storybook (chromium)| src/ScVirtualList.stories.ts (1 test | 1 failed) 1119ms
+   × Ten Thousand Keyboard And Cleanup 1118ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |storybook (chromium)| src/ScVirtualList.stories.ts > Ten Thousand Keyboard And Cleanup
+Error: 
+[34mClick to debug the error directly in Storybook: http://localhost:6006/?path=/story/공통-ui-scvirtuallist--ten-thousand-keyboard-and-cleanup&addonPanel=storybook/interactions/panel[39m
+
+expect(element).toHaveFocus()
+
+Expected element with focus:
+  <button
+  class="sc-table-button"
+  data-sc-focus="row"
+  data-v-b4c4bdc5=""
+  type="button"
+>
+  자료 9999
+</button>
+Received element with focus:
+  <body>
+  <div
+    class="sb-preparing-story sb-wrapper"
+  >········
+    <div
+      class="sb-loader"
+    />······
+  </div>·····
+  <div
+    class="sb-preparing-docs sb-wrapper"
+  >········
+    <div
+      class="sb-previewBlock"
+    >············
+      <div
+        class="sb-previewBlock_header"
+      >················
+        <div
+          class="sb-previewBlock_icon"
+        />················
+        <div
+          class="sb-previewBlock_icon"
+        />················
+        <div
+          class="sb-previewBlock_icon"
+        />················
+        <div
+          class="sb-previewBlock_icon"
+        />··············
+      </div>············
+      <div
+        class="sb-previewBlock_body"
+      >················
+        <div
+          class="sb-loader"
+        />··············
+      </div>··········
+    </div>········
+    <table
+      aria-hidden="true"
+      class="sb-argstableBlock"
+    >············
+      <thead
+        class="sb-argstableBlock-head"
+      >················
+        <tr>····················
+          <th … />····················
+          <th … />····················
+          <th … />····················
+          <th … />··················
+        </tr>··············
+      </thead>············
+      <tbody
+        class="sb-argstableBlock-body"
+      >················
+        <tr>····················
+          <td … />····················
+          <td … />····················
+          <td … />····················
+          <td … />··················
+        </tr>················
+        <tr>····················
+          <td … />····················
+          <td … />····················
+          <td … />····················
+          <td … />··················
+        </tr>················
+        <tr>····················
+          <td … />····················
+          <td … />····················
+          <td … />····················
+          <td … />··················
+        </tr>··············
+      </tbody>··········
+    </table>······
+  </div>·····
+  <div
+    class="sb-nopreview sb-wrapper"
+  >········
+    <div
+      class="sb-nopreview_main"
+    >············
+      <h1
+        class="sb-nopreview_heading sb-heading"
+      >
+        No Preview
+      </h1>············
+      <p>
+        Sorry, but you either have no stories or none are selected somehow.
+      </p>············
+      <ul>················
+        <li>
+          Please check the Storybook config.
+        </li>················
+        <li>
+          Try reloading the page.
+        </li>··············
+      </ul>············
+      <p>·········
+      If the problem persists, check the browser console, or the terminal you've run Storybook from.·····
+      </p>··········
+    </div>······
+  </div>·····
+  <div
+    class="sb-errordisplay sb-wrapper"
+  >········
+    <div
+      class="sb-errordisplay_main"
+    >············
+      <h1
+        id="error-message"
+      />············
+      <p>·········
+      The component failed to render properly, likely due to a configuration issue in Storybook.
+      Here are some common causes and how you can address them:·····
+      </p>············
+      <ol>················
+        <li>····················
+          <strong … />
+          : You can use decorators to supply specific
+        contexts or providers, which are sometimes necessary for components to render correctly. For
+        detailed instructions on using decorators, please visit the·········
+          <a … />
+          .·······
+        </li>················
+        <li>····················
+          <strong … />
+          : Verify that Storybook picks up all necessary
+        settings for loaders, plugins, and other relevant parameters. You can find step-by-step
+        guides for configuring·········
+          <a … />
+           or·········
+          <a … />···········
+        with Storybook.·······
+        </li>················
+        <li>····················
+          <strong … />
+          : Your Storybook may require specific
+        environment variables to function as intended. You can set up custom environment variables
+        as outlined in the·········
+          <a … />
+          .·······
+        </li>··············
+      </ol>············
+      <pre
+        class="sb-errordisplay_code"
+      >
+        <code
+          id="error-stack"
+        />
+      </pre>··········
+    </div>······
+  </div>·········
+  <div
+    data-v-app=""
+  >
+    <div
+      class="v-application v-theme--sc v-layout v-layout--full-height v-locale--is-ltr sc-app sc-story-frame"
+      data-v-000bc527=""
+    >
+      <div
+        class="v-application__wrap"
+      >·········
+        <main
+          class="v-main"
+          data-v-000bc527=""
+          style="--v-layout-left: 0px; --v-layout-right: 0px; --v-layout-top: 0px; --v-layout-bottom: 0px;"
+        >···········
+          <div … />···········
+        </main>·········
+      </div>
+    </div>
+  </div>
+</body>
+
+Ignored nodes: comments, script, style
+<html
+  lang="en"
+>
+  <head>
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+    <meta
+      charset="UTF-8"
+    />
+    
+    
+    <link
+      href="/__vitest__/favicon.svg"
+      rel="icon"
+      type="image/svg+xml"
+    />
+    
+    
+    <meta
+      content="width=device-width, initial-scale=1.0"
+      name="viewport"
+    />
+    
+    
+    <title>
+      Vitest Browser Tester
+    </title>
+    
+    
+    
+    
+    <link
+      crossorigin=""
+      href="/__vitest_browser__/utils-BsFW67Gk.js"
+      rel="modulepreload"
+    />
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    <base
+      target="_parent"
+    />
+    
+
+
+    
+
+
+    
+
+  </head>
+  
+  
+  <body>
+    <div
+      class="sb-preparing-story sb-wrapper"
+    >
+      
+  
+      <div
+        class="sb-loader"
+      />
+      
+
+    </div>
+    
+
+
+    <div
+      class="sb-preparing-docs sb-wrapper"
+    >
+      
+  
+      <div
+        class="sb-previewBlock"
+      >
+        
+    
+        <div
+          class="sb-previewBlock_header"
+        >
+          
+      
+          <div
+            class="sb-previewBlock_icon"
+          />
+          
+      
+          <div
+            class="sb-previewBlock_icon"
+          />
+          
+      
+          <div
+            class="sb-previewBlock_icon"
+          />
+          
+      
+          <div
+            class="sb-previewBlock_icon"
+          />
+          
+    
+        </div>
+        
+    
+        <div
+          class="sb-previewBlock_body"
+        >
+          
+      
+          <div
+            class="sb-loader"
+          />
+          
+    
+        </div>
+        
+  
+      </div>
+      
+  
+      <table
+        aria-hidden="true"
+        class="sb-argstableBlock"
+      >
+        
+    
+        <thead
+          class="sb-argstableBlock-head"
+        >
+          
+      
+          <tr>
+            
+        
+            <th>
+              <span>
+                Name
+              </span>
+            </th>
+            
+        
+            <th>
+              <span>
+                Description
+              </span>
+            </th>
+            
+        
+            <th>
+              <span>
+                Default
+              </span>
+            </th>
+            
+        
+            <th>
+              <span>
+                Control 
+              </span>
+            </th>
+            
+      
+          </tr>
+          
+    
+        </thead>
+        
+    
+        <tbody
+          class="sb-argstableBlock-body"
+        >
+          
+      
+          <tr>
+            
+        
+            <td>
+              <span>
+                propertyName
+              </span>
+              <span
+                title="Required"
+              >
+                *
+              </span>
+            </td>
+            
+        
+            <td>
+              
+          
+              <div>
+                <span>
+                  This is a short description
+                </span>
+              </div>
+              
+          
+              <div
+                class="sb-argstableBlock-summary"
+              >
+                
+            
+                <div>
+                  <span
+                    class="sb-argstableBlock-code"
+                  >
+                    summary
+                  </span>
+                </div>
+                
+          
+              </div>
+              
+        
+            </td>
+            
+        
+            <td>
+              
+          
+              <div>
+                <span
+                  class="sb-argstableBlock-code"
+                >
+                  defaultValue
+                </span>
+              </div>
+              
+        
+            </td>
+            
+        
+            <td>
+              <button>
+                Set string
+              </button>
+            </td>
+            
+      
+          </tr>
+          
+      
+          <tr>
+            
+        
+            <td>
+              <span>
+                propertyName
+              </span>
+              <span>
+                *
+              </span>
+            </td>
+            
+        
+            <td>
+              
+          
+              <div>
+                <span>
+                  This is a short description
+                </span>
+              </div>
+              
+          
+              <div
+                class="sb-argstableBlock-summary"
+              >
+                
+            
+                <div>
+                  <span
+                    class="sb-argstableBlock-code"
+                  >
+                    summary
+                  </span>
+                </div>
+                
+          
+              </div>
+              
+        
+            </td>
+            
+        
+            <td>
+              
+          
+              <div>
+                <span
+                  class="sb-argstableBlock-code"
+                >
+                  defaultValue
+                </span>
+              </div>
+              
+        
+            </td>
+            
+        
+            <td>
+              <button>
+                Set string
+              </button>
+            </td>
+            
+      
+          </tr>
+          
+      
+          <tr>
+            
+        
+            <td>
+              <span>
+                propertyName
+              </span>
+              <span>
+                *
+              </span>
+            </td>
+            
+        
+            <td>
+              
+          
+              <div>
+                <span>
+                  This is a short description
+                </span>
+              </div>
+              
+          
+              <div
+                class="sb-argstableBlock-summary"
+              >
+                
+            
+                <div>
+                  <span
+                    class="sb-argstableBlock-code"
+                  >
+                    summary
+                  </span>
+                </div>
+                
+          
+              </div>
+              
+        
+            </td>
+            
+        
+            <td>
+              
+          
+              <div>
+                <span
+                  class="sb-argstableBlock-code"
+                >
+                  defaultValue
+                </span>
+              </div>
+              
+        
+            </td>
+            
+        
+            <td>
+              <button>
+                Set string
+              </button>
+            </td>
+            
+      
+          </tr>
+          
+    
+        </tbody>
+        
+  
+      </table>
+      
+
+    </div>
+    
+
+
+    <div
+      class="sb-nopreview sb-wrapper"
+    >
+      
+  
+      <div
+        class="sb-nopreview_main"
+      >
+        
+    
+        <h1
+          class="sb-nopreview_heading sb-heading"
+        >
+          No Preview
+        </h1>
+        
+    
+        <p>
+          Sorry, but you either have no stories or none are selected somehow.
+        </p>
+        
+    
+        <ul>
+          
+      
+          <li>
+            Please check the Storybook config.
+          </li>
+          
+      
+          <li>
+ ...
+ ❯ Proxy.expectWrapper ../../../node_modules/storybook/dist/test/index.js:15100:16
+ ❯ Proxy.<anonymous> ../../../node_modules/storybook/dist/test/index.js:14620:17
+ ❯ Proxy.methodWrapper ../../../node_modules/storybook/dist/test/index.js:9105:24
+ ❯ Instrumenter.invoke ../../../node_modules/storybook/dist/instrumenter/index.js:322:22
+ ❯ Instrumenter.intercept ../../../node_modules/storybook/dist/instrumenter/index.js:243:139
+ ❯ Instrumenter.track ../../../node_modules/storybook/dist/instrumenter/index.js:238:378
+ ❯ Proxy.toHaveFocus ../../../node_modules/storybook/dist/instrumenter/index.js:224:263
+ ❯ toHaveFocus src/ScVirtualList.stories.ts:41:62
+     39|     await userEvent.keyboard("{End}");
+     40|     await waitFor(() =>
+     41|       expect(canvas.getByRole("button", { name: "자료 9999" })).toHaveFo…
+       |                                                              ^
+     42|     );
+     43|     await expect(viewport.querySelector('[data-row-key="row-09999"]'))…
+ ❯ ../../../node_modules/storybook/dist/instrumenter/index.js:317:20
+ ❯ runWithExpensiveErrorDiagnosticsDisabled ../../../node_modules/storybook/dist/test/index.js:16206:59
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed (1)
+   Start at  21:16:29
+   Duration  2.68s (transform 0ms, setup 856ms, import 60ms, tests 1.12s, environment 0ms)
+
+npm error Lifecycle script `test:stories` failed with error:
+npm error code 1
+npm error path /Users/dk/Work/ScFramework/frontend/apps/catalog
+npm error workspace @sc/catalog@0.1.0
+npm error location /Users/dk/Work/ScFramework/frontend/apps/catalog
+npm error command failed
+npm error command sh -c vitest run --config vitest.config.ts src/ScVirtualList.stories.ts

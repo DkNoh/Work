@@ -1,0 +1,9 @@
+apiVersion: 1
+providers:
+  - name: ScFramework
+    folder: ScFramework
+    type: file
+    disableDeletion: true
+    editable: false
+    options:
+      path: /etc/grafana/dashboards

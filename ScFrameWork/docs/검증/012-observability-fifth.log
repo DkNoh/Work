@@ -1,0 +1,8 @@
+PASS separate-observer-authentication-and-business-csrf
+PASS actual-feign-success-failure-timeout-and-trace-propagation
+PASS collector-tempo-actual-server-client-trace
+PASS collector-loki-actual-safe-log-trace-correlation
+PASS prometheus-live-scrape-jvm-hikari-http-histogram-and-bounded-events
+PASS grafana-provisioned-dashboard-and-three-real-datasource-queries
+PASS actual-grafana-browser-five-populated-metric-panels-and-safe-logs
+PASS actual-metrics-traces-logs-and-process-log-secret-canary-scan

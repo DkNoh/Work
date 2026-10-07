@@ -1,0 +1,90 @@
+
+> sc-framework@0.1.0 test:e2e
+> playwright test --config frontend/playwright.config.ts
+
+
+Running 7 tests using 1 worker
+
+(node:12900) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 frontend/e2e/framework.spec.ts:39:1 › 공통 UI로 등록·수정하고 409에서도 작성 중인 입력을 보존한다 (1.7s)
+  ✘  2 frontend/e2e/layout.spec.ts:72:3 › 레퍼런스 390px: 한국어·본문·현재 메뉴·모바일 키보드 탐색 (10.3s)
+(node:12971) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  3 frontend/e2e/layout.spec.ts:72:3 › 레퍼런스 1366px: 한국어·본문·현재 메뉴·모바일 키보드 탐색 (237ms)
+  ✓  4 frontend/e2e/layout.spec.ts:72:3 › 레퍼런스 1920px: 한국어·본문·현재 메뉴·모바일 키보드 탐색 (328ms)
+  ✘  5 frontend/e2e/layout.spec.ts:130:5 › 최소 Starter의 독립적인 공통 셸 소비 › Starter 390px: 동일 UI·Router·본문 탐색 (10.2s)
+(node:13014) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  6 frontend/e2e/layout.spec.ts:130:5 › 최소 Starter의 독립적인 공통 셸 소비 › Starter 1366px: 동일 UI·Router·본문 탐색 (567ms)
+  ✓  7 frontend/e2e/layout.spec.ts:130:5 › 최소 Starter의 독립적인 공통 셸 소비 › Starter 1920px: 동일 UI·Router·본문 탐색 (556ms)
+
+
+  1) frontend/e2e/layout.spec.ts:72:3 › 레퍼런스 390px: 한국어·본문·현재 메뉴·모바일 키보드 탐색 ────────────────────────
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  getByRole('dialog', { name: '레퍼런스 화면', exact: true }).getByRole('button', { name: '탐색 메뉴 닫기', exact: true })
+    Expected: focused
+    Received: inactive
+    Timeout:  10000ms
+
+    Call log:
+      - Expect "toBeFocused" getByRole('dialog', { name: '레퍼런스 화면', exact: true }).getByRole('button', { name: '탐색 메뉴 닫기', exact: true }) with timeout 10000ms
+      - waiting for getByRole('dialog', { name: '레퍼런스 화면', exact: true }).getByRole('button', { name: '탐색 메뉴 닫기', exact: true })
+        24 × locator resolved to <button type="button" data-v-2e82bcdd="" aria-label="탐색 메뉴 닫기" class="sc-app-shell__dialog-close">…</button>
+           - unexpected value "inactive"
+
+
+      32 |     await expect(current).toBeFocused();
+      33 |     await page.keyboard.press("Tab");
+    > 34 |     await expect(closer).toBeFocused();
+         |                          ^
+      35 |     await page.keyboard.press("Shift+Tab");
+      36 |     await expect(current).toBeFocused();
+      37 |     await page.keyboard.press("Escape");
+        at assertShell (/Users/dk/Work/ScFramework/frontend/e2e/layout.spec.ts:34:26)
+        at /Users/dk/Work/ScFramework/frontend/e2e/layout.spec.ts:107:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results/layout-레퍼런스-390px-한국어·본문·현재-메뉴·모바일-키보드-탐색/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results/layout-레퍼런스-390px-한국어·본문·현재-메뉴·모바일-키보드-탐색/error-context.md
+
+  2) frontend/e2e/layout.spec.ts:130:5 › 최소 Starter의 독립적인 공통 셸 소비 › Starter 390px: 동일 UI·Router·본문 탐색 
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  getByRole('dialog', { name: '시작 화면', exact: true }).getByRole('button', { name: '탐색 메뉴 닫기', exact: true })
+    Expected: focused
+    Received: inactive
+    Timeout:  10000ms
+
+    Call log:
+      - Expect "toBeFocused" getByRole('dialog', { name: '시작 화면', exact: true }).getByRole('button', { name: '탐색 메뉴 닫기', exact: true }) with timeout 10000ms
+      - waiting for getByRole('dialog', { name: '시작 화면', exact: true }).getByRole('button', { name: '탐색 메뉴 닫기', exact: true })
+        24 × locator resolved to <button type="button" data-v-2e82bcdd="" aria-label="탐색 메뉴 닫기" class="sc-app-shell__dialog-close">…</button>
+           - unexpected value "inactive"
+
+
+      32 |     await expect(current).toBeFocused();
+      33 |     await page.keyboard.press("Tab");
+    > 34 |     await expect(closer).toBeFocused();
+         |                          ^
+      35 |     await page.keyboard.press("Shift+Tab");
+      36 |     await expect(current).toBeFocused();
+      37 |     await page.keyboard.press("Escape");
+        at assertShell (/Users/dk/Work/ScFramework/frontend/e2e/layout.spec.ts:34:26)
+        at /Users/dk/Work/ScFramework/frontend/e2e/layout.spec.ts:141:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results/layout-최소-Starter의-독립적인-공통-09158-er-390px-동일-UI·Router·본문-탐색/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results/layout-최소-Starter의-독립적인-공통-09158-er-390px-동일-UI·Router·본문-탐색/error-context.md
+
+  2 failed
+    frontend/e2e/layout.spec.ts:72:3 › 레퍼런스 390px: 한국어·본문·현재 메뉴·모바일 키보드 탐색 ─────────────────────────
+    frontend/e2e/layout.spec.ts:130:5 › 최소 Starter의 독립적인 공통 셸 소비 › Starter 390px: 동일 UI·Router·본문 탐색 
+  5 passed (30.8s)

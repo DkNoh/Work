@@ -1,0 +1,2909 @@
+{
+  "format": 1,
+  "stage": "design-correction",
+  "execution": "fourth",
+  "command": "SC_DESIGN_QA_RUN=fourth node .runtime/design-correction/verify-dashboard.mjs",
+  "exitCode": 0,
+  "passed": true,
+  "scope": "Live Vite frontend at127.0.0.1:5176 plus current authenticated local API; not fresh JAR integration, published package or pixel baseline approval.",
+  "counts": {
+    "checks": 40,
+    "wholeDocumentAxeScans": 14,
+    "violations": 0,
+    "duplicateIds": 0,
+    "incompleteRuleInstances": 30,
+    "incompleteNodeInstances": 391,
+    "captures": 12,
+    "publicSourceComponents": 24,
+    "immutable012ArchivePublicComponents": 22
+  },
+  "userAccepted": false,
+  "manualVoiceOverExecuted": false,
+  "manualIncompleteReviewComplete": false,
+  "newJarIntegrationVerified": false,
+  "newPixelBaselinesApproved": false,
+  "sampleSalesMetricsAreSynthetic": true,
+  "actualRequirementReportTotal": 0,
+  "sampleCSVRows": 4,
+  "liveCSVRows": 0,
+  "screenshotsCopied": [
+    {
+      "source": ".runtime/design-correction/qa-fourth/desktop-dashboard-ko-month.png",
+      "file": "docs/검증/design-correction-desktop.png",
+      "sha256": "eaecf0ffb89ce71d8469e77fe51bff08bee0ca60f259cd532f63f260156fff7c",
+      "bytes": 282876,
+      "width": 1440,
+      "height": 1649
+    },
+    {
+      "source": ".runtime/design-correction/qa-fourth/mobile-dashboard-ko-month.png",
+      "file": "docs/검증/design-correction-mobile.png",
+      "sha256": "e06254d9a28804367b120275568322e715f7984608b641220b7fa905afd591cb",
+      "bytes": 251911,
+      "width": 390,
+      "height": 4445
+    },
+    {
+      "source": ".runtime/design-correction/qa-fourth/desktop-login-empty.png",
+      "file": "docs/검증/design-correction-login.png",
+      "sha256": "600c8c31bfb1ce6775ca4a4375ca44df49fff2c5404b98fad5ffe641a28ab882",
+      "bytes": 248245,
+      "width": 1440,
+      "height": 1000
+    }
+  ],
+  "browserResult": {
+    "format": 1,
+    "checkedAt": "2026-10-06T23:53:39.520Z",
+    "base": "http://127.0.0.1:5176",
+    "userAccepted": false,
+    "sourceEdited": false,
+    "businessDataWritten": false,
+    "metrics": {
+      "sample": "Explicit synthetic sales example",
+      "live": "Authenticated requirements report API"
+    },
+    "limitations": [
+      "VoiceOver narration and user acceptance are not performed by this script.",
+      "axe incomplete results remain manual review candidates.",
+      "Screenshots are captured for later visual inspection, not automatically accepted as a matching design."
+    ],
+    "viewports": [
+      {
+        "name": "desktop",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "checks": [
+          {
+            "name": "whole-DOM-axe:login-empty",
+            "passed": true,
+            "evidence": {
+              "violations": 0,
+              "duplicateIds": 0,
+              "overflow": false
+            }
+          },
+          {
+            "name": "login-empty-page-accessibility",
+            "passed": true,
+            "evidence": {
+              "axePassed": true,
+              "violations": 0,
+              "incompleteRules": 1,
+              "incompleteNodes": 9,
+              "duplicateIds": 0,
+              "layout": {
+                "viewport": 1440,
+                "documentWidth": 1440,
+                "overflow": false,
+                "sidebar": null,
+                "header": null,
+                "main": null,
+                "widgets": null,
+                "kpis": []
+              }
+            }
+          },
+          {
+            "name": "authenticated-admin-login",
+            "passed": true,
+            "evidence": {
+              "authenticated": true,
+              "secretRecorded": false
+            }
+          },
+          {
+            "name": "whole-DOM-axe:sample-month",
+            "passed": true,
+            "evidence": {
+              "violations": 0,
+              "duplicateIds": 0,
+              "overflow": false
+            }
+          },
+          {
+            "name": "sample-month-page-accessibility",
+            "passed": true,
+            "evidence": {
+              "axePassed": true,
+              "violations": 0,
+              "incompleteRules": 2,
+              "incompleteNodes": 45,
+              "duplicateIds": 0,
+              "layout": {
+                "viewport": 1440,
+                "documentWidth": 1440,
+                "overflow": false,
+                "sidebar": {
+                  "x": 0,
+                  "y": 68,
+                  "width": 240,
+                  "height": 932
+                },
+                "header": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 1440,
+                  "height": 68
+                },
+                "main": {
+                  "x": 264,
+                  "y": 181.390625,
+                  "width": 846,
+                  "height": 1402.765625
+                },
+                "widgets": {
+                  "x": 1134,
+                  "y": 181.390625,
+                  "width": 282,
+                  "height": 1402.765625
+                },
+                "kpis": [
+                  {
+                    "x": 264,
+                    "y": 181.390625,
+                    "width": 196.5,
+                    "height": 128
+                  },
+                  {
+                    "x": 480.5,
+                    "y": 181.390625,
+                    "width": 196.5,
+                    "height": 128
+                  },
+                  {
+                    "x": 697,
+                    "y": 181.390625,
+                    "width": 196.5,
+                    "height": 128
+                  },
+                  {
+                    "x": 913.5,
+                    "y": 181.390625,
+                    "width": 196.5,
+                    "height": 128
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "name": "shell-and-dashboard-geometry",
+            "passed": true,
+            "evidence": {
+              "viewport": 1440,
+              "documentWidth": 1440,
+              "overflow": false,
+              "sidebar": {
+                "x": 0,
+                "y": 68,
+                "width": 240,
+                "height": 932
+              },
+              "header": {
+                "x": 0,
+                "y": 0,
+                "width": 1440,
+                "height": 68
+              },
+              "main": {
+                "x": 264,
+                "y": 181.390625,
+                "width": 846,
+                "height": 1402.765625
+              },
+              "widgets": {
+                "x": 1134,
+                "y": 181.390625,
+                "width": 282,
+                "height": 1402.765625
+              },
+              "kpis": [
+                {
+                  "x": 264,
+                  "y": 181.390625,
+                  "width": 196.5,
+                  "height": 128
+                },
+                {
+                  "x": 480.5,
+                  "y": 181.390625,
+                  "width": 196.5,
+                  "height": 128
+                },
+                {
+                  "x": 697,
+                  "y": 181.390625,
+                  "width": 196.5,
+                  "height": 128
+                },
+                {
+                  "x": 913.5,
+                  "y": 181.390625,
+                  "width": 196.5,
+                  "height": 128
+                }
+              ]
+            }
+          },
+          {
+            "name": "whole-DOM-axe:collapsed-navigation",
+            "passed": true,
+            "evidence": {
+              "violations": 0,
+              "duplicateIds": 0,
+              "overflow": false
+            }
+          },
+          {
+            "name": "desktop-collapse-expand",
+            "passed": true,
+            "evidence": {
+              "collapsedWidth": 80,
+              "expandedWidth": 240
+            }
+          },
+          {
+            "name": "whole-DOM-axe:chart-data-keyboard-expanded",
+            "passed": true,
+            "evidence": {
+              "violations": 0,
+              "duplicateIds": 0,
+              "overflow": false
+            }
+          },
+          {
+            "name": "chart-native-Enter-data-table-toggle",
+            "passed": true,
+            "evidence": {
+              "nativeEnterOpened": true,
+              "dataRows": 30,
+              "nativeEnterClosed": true
+            }
+          },
+          {
+            "name": "sample-period-quarter-URL-and-KPI-change",
+            "passed": true,
+            "evidence": {
+              "source": "explicit-sample",
+              "before": ["12,480", "₩31.4M", "₩84.3M", "3,528"],
+              "after": ["37,440", "₩94.3M", "₩252.8M", "10,584"],
+              "period": "quarter",
+              "routerURLUpdated": true
+            }
+          },
+          {
+            "name": "sample-CSV-download",
+            "passed": true,
+            "evidence": {
+              "mode": "explicit-sample",
+              "actualSource": "sample",
+              "rowCount": 4,
+              "columns": 5,
+              "utf8Bom": true,
+              "contentMatchedVisibleTable": true,
+              "sha256": "3fd49853e20c81793475a52884af550cf5f2b74bd9bedc58a1bfbcd97c0674a7",
+              "rawContentStored": false
+            }
+          },
+          {
+            "name": "whole-DOM-axe:sample-quarter-en",
+            "passed": true,
+            "evidence": {
+              "violations": 0,
+              "duplicateIds": 0,
+              "overflow": false
+            }
+          },
+          {
+            "name": "locale-English-and-Korean",
+            "passed": true,
+            "evidence": {
+              "English": true,
+              "Korean": true,
+              "documentLanguageUpdated": true
+            }
+          },
+          {
+            "name": "whole-DOM-axe:live-workspace-ko",
+            "passed": true,
+            "evidence": {
+              "violations": 0,
+              "duplicateIds": 0,
+              "overflow": false
+            }
+          },
+          {
+            "name": "live-report-query-and-sample-widget-removal",
+            "passed": true,
+            "evidence": {
+              "httpStatus": 200,
+              "responseTotal": 0,
+              "pageItems": 0,
+              "KPIValuesMatchedServer": true,
+              "sampleBrowserAndSalesWidgetsAbsent": true,
+              "rawBusinessDataRecorded": false
+            }
+          },
+          {
+            "name": "live-CSV-download",
+            "passed": true,
+            "evidence": {
+              "mode": "authenticated-live-report",
+              "actualSource": "live",
+              "rowCount": 0,
+              "columns": 5,
+              "utf8Bom": true,
+              "contentMatchedVisibleTable": true,
+              "sha256": "d3692705e1104f15add975240a755535cfea6de48479f16a645fd38fa9ce5afc",
+              "rawContentStored": false
+            }
+          },
+          {
+            "name": "whole-DOM-axe:readonly-requirements",
+            "passed": true,
+            "evidence": {
+              "violations": 0,
+              "duplicateIds": 0,
+              "overflow": false
+            }
+          },
+          {
+            "name": "menu-search-filter-and-readonly-business-navigation",
+            "passed": true,
+            "evidence": {
+              "noResultsFilter": true,
+              "matchingResult": true,
+              "keyboardSearchNavigation": true,
+              "businessReadHTTP": 200,
+              "sidebarNavigationBack": true,
+              "businessWrites": 0
+            }
+          },
+          {
+            "name": "browser-console-errors-and-readonly-boundary",
+            "passed": true,
+            "evidence": {
+              "pageErrors": 0,
+              "consoleErrors": 0,
+              "consoleWarnings": 0,
+              "unexpectedBusinessWrites": 0
+            }
+          }
+        ],
+        "axe": [
+          {
+            "label": "login-empty",
+            "axeVersion": "4.14.0",
+            "violations": [],
+            "incomplete": [
+              {
+                "id": "color-contrast",
+                "impact": "serious",
+                "help": "Elements must meet minimum color contrast ratio thresholds",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+                "nodes": [
+                  {
+                    "target": [".login-welcome__brand"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+                  },
+                  {
+                    "target": [".login-welcome__brand > span"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+                  },
+                  {
+                    "target": [".login-eyebrow"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+                  },
+                  {
+                    "target": ["h2"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+                  },
+                  {
+                    "target": [".login-welcome__description"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+                  },
+                  {
+                    "target": [".login-welcome__footer"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+                  },
+                  {
+                    "target": ["#sc-field-sc-1-4"],
+                    "failureSummary": "Fix any of the following:\n  Element has no value; test color contrast with a value entered"
+                  },
+                  {
+                    "target": ["#sc-field-sc-1-8"],
+                    "failureSummary": "Fix any of the following:\n  Element has no value; test color contrast with a value entered"
+                  },
+                  {
+                    "target": [".v-btn__content"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  }
+                ]
+              }
+            ],
+            "passes": 30,
+            "duplicateIds": []
+          },
+          {
+            "label": "sample-month",
+            "axeVersion": "4.14.0",
+            "violations": [],
+            "incomplete": [
+              {
+                "id": "aria-valid-attr-value",
+                "impact": "critical",
+                "help": "ARIA attributes must conform to valid values",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-valid-attr-value?application=axeAPI",
+                "nodes": [
+                  {
+                    "target": [".app-user-trigger"],
+                    "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"app-user-menu-sc-1-1\""
+                  }
+                ]
+              },
+              {
+                "id": "color-contrast",
+                "impact": "serious",
+                "help": "Elements must meet minimum color contrast ratio thresholds",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+                "nodes": [
+                  {
+                    "target": [
+                      ".app-user-trigger > .app-user-avatar[data-v-7a7a37b1=\"\"][aria-hidden=\"true\"]"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [
+                      "section[data-tone=\"green\"] > .sc-kpi-card__content[data-v-9231219d=\"\"] > .sc-kpi-card__context[data-v-9231219d=\"\"] > .sc-kpi-card__note[data-v-9231219d=\"\"]"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": [
+                      "section[data-tone=\"violet\"] > .sc-kpi-card__content[data-v-9231219d=\"\"] > .sc-kpi-card__context[data-v-9231219d=\"\"] > .sc-kpi-card__note[data-v-9231219d=\"\"]"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": [
+                      "section[data-tone=\"pink\"] > .sc-kpi-card__content[data-v-9231219d=\"\"] > .sc-kpi-card__context[data-v-9231219d=\"\"] > .sc-kpi-card__note[data-v-9231219d=\"\"]"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": [
+                      "section[data-tone=\"amber\"] > .sc-kpi-card__content[data-v-9231219d=\"\"] > .sc-kpi-card__context[data-v-9231219d=\"\"] > .sc-kpi-card__note[data-v-9231219d=\"\"]"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(26 308)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(26 266.3333)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(26 224.6667)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(26 183)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(26 141.3333)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(26 99.6667)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(26 58)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(34 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(66.5517 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(99.1034 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(131.6552 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(164.2069 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(196.7586 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(229.3103 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(261.8621 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(294.4138 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(326.9655 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(359.5172 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(392.069 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(424.6207 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(457.1724 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(489.7241 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[text-anchor=\"start\"][x=\"13\"][y=\"4\"]:nth-child(36)"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": ["text[text-anchor=\"start\"][x=\"13\"][y=\"4\"]:nth-child(39)"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": [".dashboard-gauge-label"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": [".dashboard-gauge-value"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": [".dashboard-channel:nth-child(3) > .dashboard-channel-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-channel:nth-child(4) > .dashboard-channel-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-channel:nth-child(5) > .dashboard-channel-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-channel:nth-child(6) > .dashboard-channel-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-promotion > div > h2"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+                  },
+                  {
+                    "target": [".dashboard-promotion > div > p"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+                  },
+                  {
+                    "target": [".dashboard-promotion > div > a[href$=\"patterns\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+                  },
+                  {
+                    "target": [".dashboard-browser:nth-child(3) > .dashboard-browser-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-browser:nth-child(4) > .dashboard-browser-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-browser:nth-child(5) > .dashboard-browser-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-quick-links > a[href$=\"patterns\"] > span"],
+                    "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+                  },
+                  {
+                    "target": [".dashboard-quick-links > a[href$=\"requirements\"] > span"],
+                    "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+                  },
+                  {
+                    "target": [".dashboard-quick-links > a[href$=\"requests\"] > span"],
+                    "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+                  }
+                ]
+              }
+            ],
+            "passes": 52,
+            "duplicateIds": []
+          },
+          {
+            "label": "collapsed-navigation",
+            "axeVersion": "4.14.0",
+            "violations": [],
+            "incomplete": [
+              {
+                "id": "aria-valid-attr-value",
+                "impact": "critical",
+                "help": "ARIA attributes must conform to valid values",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-valid-attr-value?application=axeAPI",
+                "nodes": [
+                  {
+                    "target": [".app-user-trigger"],
+                    "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"app-user-menu-sc-1-1\""
+                  }
+                ]
+              },
+              {
+                "id": "color-contrast",
+                "impact": "serious",
+                "help": "Elements must meet minimum color contrast ratio thresholds",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+                "nodes": [
+                  {
+                    "target": [
+                      ".app-user-trigger > .app-user-avatar[data-v-7a7a37b1=\"\"][aria-hidden=\"true\"]"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(26 308)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(26 266.3333)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(26 224.6667)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(26 183)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(26 141.3333)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(26 99.6667)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(26 58)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(34 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(53.0345 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(72.069 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(91.1034 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(110.1379 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(129.1724 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(148.2069 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(167.2414 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(186.2759 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(205.3103 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(224.3448 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(243.3793 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(262.4138 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(281.4483 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(300.4828 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(319.5172 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(338.5517 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(357.5862 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(376.6207 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(395.6552 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(414.6897 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(433.7241 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(452.7586 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(471.7931 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(490.8276 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(509.8621 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(528.8966 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(547.931 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(566.9655 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(586 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[text-anchor=\"start\"][x=\"13\"][y=\"4\"]:nth-child(51)"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": ["text[text-anchor=\"start\"][x=\"13\"][y=\"4\"]:nth-child(54)"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": [".dashboard-gauge-label"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": [".dashboard-gauge-value"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": [".dashboard-channel:nth-child(3) > .dashboard-channel-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-channel:nth-child(4) > .dashboard-channel-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-channel:nth-child(5) > .dashboard-channel-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-channel:nth-child(6) > .dashboard-channel-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-promotion > div > h2"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+                  },
+                  {
+                    "target": [".dashboard-promotion > div > p"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+                  },
+                  {
+                    "target": [".dashboard-promotion > div > a[href$=\"patterns\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+                  },
+                  {
+                    "target": [".dashboard-browser:nth-child(3) > .dashboard-browser-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-browser:nth-child(4) > .dashboard-browser-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-browser:nth-child(5) > .dashboard-browser-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-quick-links > a[href$=\"patterns\"] > span"],
+                    "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+                  },
+                  {
+                    "target": [".dashboard-quick-links > a[href$=\"requirements\"] > span"],
+                    "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+                  },
+                  {
+                    "target": [".dashboard-quick-links > a[href$=\"requests\"] > span"],
+                    "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+                  }
+                ]
+              }
+            ],
+            "passes": 52,
+            "duplicateIds": []
+          },
+          {
+            "label": "chart-data-keyboard-expanded",
+            "axeVersion": "4.14.0",
+            "violations": [],
+            "incomplete": [
+              {
+                "id": "aria-valid-attr-value",
+                "impact": "critical",
+                "help": "ARIA attributes must conform to valid values",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-valid-attr-value?application=axeAPI",
+                "nodes": [
+                  {
+                    "target": [".app-user-trigger"],
+                    "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"app-user-menu-sc-1-1\""
+                  }
+                ]
+              },
+              {
+                "id": "color-contrast",
+                "impact": "serious",
+                "help": "Elements must meet minimum color contrast ratio thresholds",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+                "nodes": [
+                  {
+                    "target": [
+                      ".app-user-trigger > .app-user-avatar[data-v-7a7a37b1=\"\"][aria-hidden=\"true\"]"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [
+                      "section[data-tone=\"green\"] > .sc-kpi-card__content[data-v-9231219d=\"\"] > .sc-kpi-card__context[data-v-9231219d=\"\"] > .sc-kpi-card__note[data-v-9231219d=\"\"]"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": [
+                      "section[data-tone=\"violet\"] > .sc-kpi-card__content[data-v-9231219d=\"\"] > .sc-kpi-card__context[data-v-9231219d=\"\"] > .sc-kpi-card__note[data-v-9231219d=\"\"]"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": [
+                      "section[data-tone=\"pink\"] > .sc-kpi-card__content[data-v-9231219d=\"\"] > .sc-kpi-card__context[data-v-9231219d=\"\"] > .sc-kpi-card__note[data-v-9231219d=\"\"]"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": [
+                      "section[data-tone=\"amber\"] > .sc-kpi-card__content[data-v-9231219d=\"\"] > .sc-kpi-card__context[data-v-9231219d=\"\"] > .sc-kpi-card__note[data-v-9231219d=\"\"]"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(26 308)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(26 266.3333)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(26 224.6667)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(26 183)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(26 141.3333)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(26 99.6667)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(26 58)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(34 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(66.5517 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(99.1034 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(131.6552 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(164.2069 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(196.7586 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(229.3103 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(261.8621 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(294.4138 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(326.9655 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(359.5172 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(392.069 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(424.6207 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(457.1724 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(489.7241 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[text-anchor=\"start\"][x=\"13\"][y=\"4\"]:nth-child(36)"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": ["text[text-anchor=\"start\"][x=\"13\"][y=\"4\"]:nth-child(39)"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": [".dashboard-gauge-label"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": [".dashboard-gauge-value"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": [".dashboard-channel:nth-child(3) > .dashboard-channel-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-channel:nth-child(4) > .dashboard-channel-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-channel:nth-child(5) > .dashboard-channel-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-channel:nth-child(6) > .dashboard-channel-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-promotion > div > h2"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+                  },
+                  {
+                    "target": [".dashboard-promotion > div > p"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+                  },
+                  {
+                    "target": [".dashboard-promotion > div > a[href$=\"patterns\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+                  },
+                  {
+                    "target": [".dashboard-browser:nth-child(3) > .dashboard-browser-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-browser:nth-child(4) > .dashboard-browser-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-browser:nth-child(5) > .dashboard-browser-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-quick-links > a[href$=\"patterns\"] > span"],
+                    "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+                  },
+                  {
+                    "target": [".dashboard-quick-links > a[href$=\"requirements\"] > span"],
+                    "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+                  },
+                  {
+                    "target": [".dashboard-quick-links > a[href$=\"requests\"] > span"],
+                    "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+                  }
+                ]
+              }
+            ],
+            "passes": 52,
+            "duplicateIds": []
+          },
+          {
+            "label": "sample-quarter-en",
+            "axeVersion": "4.14.0",
+            "violations": [],
+            "incomplete": [
+              {
+                "id": "aria-valid-attr-value",
+                "impact": "critical",
+                "help": "ARIA attributes must conform to valid values",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-valid-attr-value?application=axeAPI",
+                "nodes": [
+                  {
+                    "target": [".app-user-trigger"],
+                    "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"app-user-menu-sc-1-1\""
+                  }
+                ]
+              },
+              {
+                "id": "color-contrast",
+                "impact": "serious",
+                "help": "Elements must meet minimum color contrast ratio thresholds",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+                "nodes": [
+                  {
+                    "target": [
+                      ".app-user-trigger > .app-user-avatar[data-v-7a7a37b1=\"\"][aria-hidden=\"true\"]"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(32.052 308)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(32.052 272.2857)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(32.052 236.5714)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(32.052 200.8571)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(32.052 165.1429)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(32.052 129.4286)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(32.052 93.7143)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(32.052 58)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(40.052 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(61.2314 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(82.4109 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(103.5903 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(124.7698 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(145.9493 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(167.1287 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(188.3082 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(209.4876 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(230.6671 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(251.8465 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(273.026 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(294.2054 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(315.3849 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(336.5644 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(357.7438 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(378.9233 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(400.1027 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(421.2822 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(442.4616 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(463.6411 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(484.8205 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(506 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[text-anchor=\"start\"][x=\"13\"][y=\"4\"]:nth-child(46)"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": ["text[text-anchor=\"start\"][x=\"13\"][y=\"4\"]:nth-child(49)"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": [".dashboard-gauge-label"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": [".dashboard-gauge-value"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": [".dashboard-channel:nth-child(3) > .dashboard-channel-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-channel:nth-child(4) > .dashboard-channel-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-channel:nth-child(5) > .dashboard-channel-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-channel:nth-child(6) > .dashboard-channel-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-promotion > div > h2"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+                  },
+                  {
+                    "target": [".dashboard-promotion > div > p"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+                  },
+                  {
+                    "target": [".dashboard-promotion > div > a[href$=\"patterns\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+                  },
+                  {
+                    "target": [".dashboard-browser:nth-child(3) > .dashboard-browser-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-browser:nth-child(4) > .dashboard-browser-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-browser:nth-child(5) > .dashboard-browser-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-quick-links > a[href$=\"patterns\"] > span"],
+                    "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+                  },
+                  {
+                    "target": [".dashboard-quick-links > a[href$=\"requirements\"] > span"],
+                    "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+                  },
+                  {
+                    "target": [".dashboard-quick-links > a[href$=\"requests\"] > span"],
+                    "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+                  }
+                ]
+              }
+            ],
+            "passes": 52,
+            "duplicateIds": []
+          },
+          {
+            "label": "live-workspace-ko",
+            "axeVersion": "4.14.0",
+            "violations": [],
+            "incomplete": [
+              {
+                "id": "aria-valid-attr-value",
+                "impact": "critical",
+                "help": "ARIA attributes must conform to valid values",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-valid-attr-value?application=axeAPI",
+                "nodes": [
+                  {
+                    "target": [".app-user-trigger"],
+                    "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"app-user-menu-sc-1-1\""
+                  }
+                ]
+              },
+              {
+                "id": "color-contrast",
+                "impact": "serious",
+                "help": "Elements must meet minimum color contrast ratio thresholds",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+                "nodes": [
+                  {
+                    "target": [
+                      ".app-user-trigger > .app-user-avatar[data-v-7a7a37b1=\"\"][aria-hidden=\"true\"]"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-gauge-label"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": [".dashboard-gauge-value"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-promotion > div > h2"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+                  },
+                  {
+                    "target": [".dashboard-promotion > div > p"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+                  },
+                  {
+                    "target": [".dashboard-promotion > div > a[href$=\"patterns\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+                  },
+                  {
+                    "target": [".dashboard-quick-links > a[href$=\"patterns\"] > span"],
+                    "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+                  },
+                  {
+                    "target": [".dashboard-quick-links > a[href$=\"requirements\"] > span"],
+                    "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+                  },
+                  {
+                    "target": [".dashboard-quick-links > a[href$=\"requests\"] > span"],
+                    "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+                  }
+                ]
+              },
+              {
+                "id": "th-has-data-cells",
+                "impact": "serious",
+                "help": "Table headers in a data table must refer to data cells",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/th-has-data-cells?application=axeAPI",
+                "nodes": [
+                  {
+                    "target": ["table"],
+                    "failureSummary": "Fix all of the following:\n  Table data cells are missing or empty"
+                  }
+                ]
+              }
+            ],
+            "passes": 50,
+            "duplicateIds": []
+          },
+          {
+            "label": "readonly-requirements",
+            "axeVersion": "4.14.0",
+            "violations": [],
+            "incomplete": [
+              {
+                "id": "aria-valid-attr-value",
+                "impact": "critical",
+                "help": "ARIA attributes must conform to valid values",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-valid-attr-value?application=axeAPI",
+                "nodes": [
+                  {
+                    "target": [".app-user-trigger"],
+                    "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"app-user-menu-sc-1-1\""
+                  },
+                  {
+                    "target": ["div[aria-owns=\"menu-sc-1-50\"]"],
+                    "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"menu-sc-1-50\""
+                  },
+                  {
+                    "target": ["div[aria-owns=\"menu-sc-1-56\"]"],
+                    "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"menu-sc-1-56\""
+                  },
+                  {
+                    "target": ["div[aria-owns=\"menu-sc-1-62\"]"],
+                    "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"menu-sc-1-62\""
+                  },
+                  {
+                    "target": ["div[aria-owns=\"menu-sc-1-68\"]"],
+                    "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"menu-sc-1-68\""
+                  }
+                ]
+              },
+              {
+                "id": "color-contrast",
+                "impact": "serious",
+                "help": "Elements must meet minimum color contrast ratio thresholds",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+                "nodes": [
+                  {
+                    "target": [".app-user-trigger > .app-user-avatar[data-v-7a7a37b1=\"\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [
+                      ".sc-actions > .v-btn--variant-flat.v-btn.v-btn--density-default > .v-btn__content[data-no-activator=\"\"]"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": ["#sc-field-sc-1-45"],
+                    "failureSummary": "Fix any of the following:\n  Element has no value; test color contrast with a value entered"
+                  },
+                  {
+                    "target": [
+                      "div[aria-owns=\"menu-sc-1-50\"] > .v-field__field[data-no-activator=\"\"] > .v-field__input[data-no-activator=\"\"] > .v-select__selection > .v-select__selection-text"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": [
+                      "div[aria-owns=\"menu-sc-1-56\"] > .v-field__field[data-no-activator=\"\"] > .v-field__input[data-no-activator=\"\"] > .v-select__selection > .v-select__selection-text"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": [
+                      "div[aria-owns=\"menu-sc-1-62\"] > .v-field__field[data-no-activator=\"\"] > .v-field__input[data-no-activator=\"\"] > .v-select__selection > .v-select__selection-text"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": [
+                      "div[aria-owns=\"menu-sc-1-68\"] > .v-field__field[data-no-activator=\"\"] > .v-field__input[data-no-activator=\"\"] > .v-select__selection > .v-select__selection-text"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": ["button[type=\"submit\"] > .v-btn__content[data-no-activator=\"\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  }
+                ]
+              },
+              {
+                "id": "th-has-data-cells",
+                "impact": "serious",
+                "help": "Table headers in a data table must refer to data cells",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/th-has-data-cells?application=axeAPI",
+                "nodes": [
+                  {
+                    "target": ["table"],
+                    "failureSummary": "Fix all of the following:\n  Table data cells are missing or empty"
+                  }
+                ]
+              }
+            ],
+            "passes": 47,
+            "duplicateIds": []
+          }
+        ],
+        "screenshots": [
+          {
+            "file": "desktop-login-empty.png",
+            "sha256": "600c8c31bfb1ce6775ca4a4375ca44df49fff2c5404b98fad5ffe641a28ab882",
+            "bytes": 248245
+          },
+          {
+            "file": "desktop-dashboard-ko-month.png",
+            "sha256": "eaecf0ffb89ce71d8469e77fe51bff08bee0ca60f259cd532f63f260156fff7c",
+            "bytes": 282876
+          },
+          {
+            "file": "desktop-collapsed-navigation.png",
+            "sha256": "cb74d0c88740b25f79bd80bff5cc01a8c4ff99873c7a328103ce3577bd482755",
+            "bytes": 273954
+          },
+          {
+            "file": "desktop-dashboard-en-quarter.png",
+            "sha256": "fff7fb653c5c95353ff4a278f53f794baf7704a4198723640009ad6e1af44c7c",
+            "bytes": 304771
+          },
+          {
+            "file": "desktop-dashboard-live-ko.png",
+            "sha256": "9cfcfa3395ee838d23d228708ae915919815a66f4b04bee86abcb8f4ff3f2c05",
+            "bytes": 163713
+          },
+          {
+            "file": "desktop-readonly-requirements.png",
+            "sha256": "937b1858453a2f7194eb5cb5d0d044fd707b6930f65a9c104758f965d73ca35f",
+            "bytes": 71389
+          }
+        ],
+        "console": {
+          "errors": 0,
+          "warnings": 0
+        },
+        "pageErrors": [],
+        "api": [
+          {
+            "path": "/api/auth/login",
+            "method": "POST",
+            "status": 204
+          },
+          {
+            "path": "/api/reports/requirements",
+            "method": "GET",
+            "status": 200
+          },
+          {
+            "path": "/api/requirements",
+            "method": "GET",
+            "status": 200
+          }
+        ],
+        "unexpectedWrites": [],
+        "passed": true
+      },
+      {
+        "name": "mobile",
+        "viewport": {
+          "width": 390,
+          "height": 1000
+        },
+        "checks": [
+          {
+            "name": "whole-DOM-axe:login-empty",
+            "passed": true,
+            "evidence": {
+              "violations": 0,
+              "duplicateIds": 0,
+              "overflow": false
+            }
+          },
+          {
+            "name": "login-empty-page-accessibility",
+            "passed": true,
+            "evidence": {
+              "axePassed": true,
+              "violations": 0,
+              "incompleteRules": 1,
+              "incompleteNodes": 3,
+              "duplicateIds": 0,
+              "layout": {
+                "viewport": 390,
+                "documentWidth": 390,
+                "overflow": false,
+                "sidebar": null,
+                "header": null,
+                "main": null,
+                "widgets": null,
+                "kpis": []
+              }
+            }
+          },
+          {
+            "name": "authenticated-admin-login",
+            "passed": true,
+            "evidence": {
+              "authenticated": true,
+              "secretRecorded": false
+            }
+          },
+          {
+            "name": "whole-DOM-axe:sample-month",
+            "passed": true,
+            "evidence": {
+              "violations": 0,
+              "duplicateIds": 0,
+              "overflow": false
+            }
+          },
+          {
+            "name": "sample-month-page-accessibility",
+            "passed": true,
+            "evidence": {
+              "axePassed": true,
+              "violations": 0,
+              "incompleteRules": 2,
+              "incompleteNodes": 42,
+              "duplicateIds": 0,
+              "layout": {
+                "viewport": 390,
+                "documentWidth": 390,
+                "overflow": false,
+                "sidebar": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 0,
+                  "height": 0
+                },
+                "header": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 390,
+                  "height": 68
+                },
+                "main": {
+                  "x": 12,
+                  "y": 229.484375,
+                  "width": 366,
+                  "height": 2994.28125
+                },
+                "widgets": {
+                  "x": 12,
+                  "y": 3243.765625,
+                  "width": 366,
+                  "height": 1113.0625
+                },
+                "kpis": [
+                  {
+                    "x": 12,
+                    "y": 229.484375,
+                    "width": 366,
+                    "height": 128
+                  },
+                  {
+                    "x": 12,
+                    "y": 373.484375,
+                    "width": 366,
+                    "height": 128
+                  },
+                  {
+                    "x": 12,
+                    "y": 517.484375,
+                    "width": 366,
+                    "height": 128
+                  },
+                  {
+                    "x": 12,
+                    "y": 661.484375,
+                    "width": 366,
+                    "height": 128
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "name": "shell-and-dashboard-geometry",
+            "passed": true,
+            "evidence": {
+              "viewport": 390,
+              "documentWidth": 390,
+              "overflow": false,
+              "sidebar": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "header": {
+                "x": 0,
+                "y": 0,
+                "width": 390,
+                "height": 68
+              },
+              "main": {
+                "x": 12,
+                "y": 229.484375,
+                "width": 366,
+                "height": 2994.28125
+              },
+              "widgets": {
+                "x": 12,
+                "y": 3243.765625,
+                "width": 366,
+                "height": 1113.0625
+              },
+              "kpis": [
+                {
+                  "x": 12,
+                  "y": 229.484375,
+                  "width": 366,
+                  "height": 128
+                },
+                {
+                  "x": 12,
+                  "y": 373.484375,
+                  "width": 366,
+                  "height": 128
+                },
+                {
+                  "x": 12,
+                  "y": 517.484375,
+                  "width": 366,
+                  "height": 128
+                },
+                {
+                  "x": 12,
+                  "y": 661.484375,
+                  "width": 366,
+                  "height": 128
+                }
+              ]
+            }
+          },
+          {
+            "name": "whole-DOM-axe:mobile-menu",
+            "passed": true,
+            "evidence": {
+              "violations": 0,
+              "duplicateIds": 0,
+              "overflow": false
+            }
+          },
+          {
+            "name": "mobile-dialog-keyboard-and-focus",
+            "passed": true,
+            "evidence": {
+              "modalVisible": true,
+              "firstLastTabLoop": true,
+              "fiveTabsContained": true,
+              "escapeClosed": true,
+              "focusReturned": true,
+              "backgroundInertAndHiddenOnlyDuringModal": true,
+              "resizeClosedModalAndFocusedCurrentDesktopLink": true,
+              "returnToMobileFocusedTrigger": true
+            }
+          },
+          {
+            "name": "whole-DOM-axe:chart-data-keyboard-expanded",
+            "passed": true,
+            "evidence": {
+              "violations": 0,
+              "duplicateIds": 0,
+              "overflow": false
+            }
+          },
+          {
+            "name": "chart-native-Enter-data-table-toggle",
+            "passed": true,
+            "evidence": {
+              "nativeEnterOpened": true,
+              "dataRows": 30,
+              "nativeEnterClosed": true
+            }
+          },
+          {
+            "name": "sample-period-quarter-URL-and-KPI-change",
+            "passed": true,
+            "evidence": {
+              "source": "explicit-sample",
+              "before": ["12,480", "₩31.4M", "₩84.3M", "3,528"],
+              "after": ["37,440", "₩94.3M", "₩252.8M", "10,584"],
+              "period": "quarter",
+              "routerURLUpdated": true
+            }
+          },
+          {
+            "name": "sample-CSV-download",
+            "passed": true,
+            "evidence": {
+              "mode": "explicit-sample",
+              "actualSource": "sample",
+              "rowCount": 4,
+              "columns": 5,
+              "utf8Bom": true,
+              "contentMatchedVisibleTable": true,
+              "sha256": "3fd49853e20c81793475a52884af550cf5f2b74bd9bedc58a1bfbcd97c0674a7",
+              "rawContentStored": false
+            }
+          },
+          {
+            "name": "whole-DOM-axe:sample-quarter-en",
+            "passed": true,
+            "evidence": {
+              "violations": 0,
+              "duplicateIds": 0,
+              "overflow": false
+            }
+          },
+          {
+            "name": "locale-English-and-Korean",
+            "passed": true,
+            "evidence": {
+              "English": true,
+              "Korean": true,
+              "documentLanguageUpdated": true
+            }
+          },
+          {
+            "name": "whole-DOM-axe:live-workspace-ko",
+            "passed": true,
+            "evidence": {
+              "violations": 0,
+              "duplicateIds": 0,
+              "overflow": false
+            }
+          },
+          {
+            "name": "live-report-query-and-sample-widget-removal",
+            "passed": true,
+            "evidence": {
+              "httpStatus": 200,
+              "responseTotal": 0,
+              "pageItems": 0,
+              "KPIValuesMatchedServer": true,
+              "sampleBrowserAndSalesWidgetsAbsent": true,
+              "rawBusinessDataRecorded": false
+            }
+          },
+          {
+            "name": "live-CSV-download",
+            "passed": true,
+            "evidence": {
+              "mode": "authenticated-live-report",
+              "actualSource": "live",
+              "rowCount": 0,
+              "columns": 5,
+              "utf8Bom": true,
+              "contentMatchedVisibleTable": true,
+              "sha256": "d3692705e1104f15add975240a755535cfea6de48479f16a645fd38fa9ce5afc",
+              "rawContentStored": false
+            }
+          },
+          {
+            "name": "whole-DOM-axe:readonly-requirements",
+            "passed": true,
+            "evidence": {
+              "violations": 0,
+              "duplicateIds": 0,
+              "overflow": false
+            }
+          },
+          {
+            "name": "menu-search-filter-and-readonly-business-navigation",
+            "passed": true,
+            "evidence": {
+              "noResultsFilter": true,
+              "matchingResult": true,
+              "keyboardSearchNavigation": true,
+              "businessReadHTTP": 200,
+              "sidebarNavigationBack": true,
+              "businessWrites": 0
+            }
+          },
+          {
+            "name": "browser-console-errors-and-readonly-boundary",
+            "passed": true,
+            "evidence": {
+              "pageErrors": 0,
+              "consoleErrors": 0,
+              "consoleWarnings": 1,
+              "unexpectedBusinessWrites": 0
+            }
+          }
+        ],
+        "axe": [
+          {
+            "label": "login-empty",
+            "axeVersion": "4.14.0",
+            "violations": [],
+            "incomplete": [
+              {
+                "id": "color-contrast",
+                "impact": "serious",
+                "help": "Elements must meet minimum color contrast ratio thresholds",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+                "nodes": [
+                  {
+                    "target": ["#sc-field-sc-1-4"],
+                    "failureSummary": "Fix any of the following:\n  Element has no value; test color contrast with a value entered"
+                  },
+                  {
+                    "target": ["#sc-field-sc-1-8"],
+                    "failureSummary": "Fix any of the following:\n  Element has no value; test color contrast with a value entered"
+                  },
+                  {
+                    "target": [".v-btn__content"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  }
+                ]
+              }
+            ],
+            "passes": 30,
+            "duplicateIds": []
+          },
+          {
+            "label": "sample-month",
+            "axeVersion": "4.14.0",
+            "violations": [],
+            "incomplete": [
+              {
+                "id": "aria-valid-attr-value",
+                "impact": "critical",
+                "help": "ARIA attributes must conform to valid values",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-valid-attr-value?application=axeAPI",
+                "nodes": [
+                  {
+                    "target": [".sc-app-shell__menu-toggle"],
+                    "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sc-navigation-sc-1-13\""
+                  },
+                  {
+                    "target": [".app-user-trigger"],
+                    "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"app-user-menu-sc-1-1\""
+                  }
+                ]
+              },
+              {
+                "id": "color-contrast",
+                "impact": "serious",
+                "help": "Elements must meet minimum color contrast ratio thresholds",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+                "nodes": [
+                  {
+                    "target": [
+                      ".app-user-trigger > .app-user-avatar[data-v-7a7a37b1=\"\"][aria-hidden=\"true\"]"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(26 308)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(26 266.3333)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(26 224.6667)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(26 183)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(26 141.3333)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(26 99.6667)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(26 58)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(34 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(54.8276 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(75.6552 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(96.4828 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(117.3103 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(138.1379 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(158.9655 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(179.7931 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(200.6207 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(221.4483 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(242.2759 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(263.1034 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(283.931 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(304.7586 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(325.5862 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[text-anchor=\"start\"][x=\"13\"][y=\"4\"]:nth-child(36)"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": ["text[text-anchor=\"start\"][x=\"13\"][y=\"4\"]:nth-child(39)"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": [".dashboard-gauge-label"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": [".dashboard-gauge-value"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": [".dashboard-channel:nth-child(3) > .dashboard-channel-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-channel:nth-child(4) > .dashboard-channel-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-channel:nth-child(5) > .dashboard-channel-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-channel:nth-child(6) > .dashboard-channel-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-promotion > div > h2"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+                  },
+                  {
+                    "target": [".dashboard-promotion > div > p"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+                  },
+                  {
+                    "target": [".dashboard-promotion > div > a[href$=\"patterns\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+                  },
+                  {
+                    "target": [".dashboard-browser:nth-child(3) > .dashboard-browser-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-browser:nth-child(4) > .dashboard-browser-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-browser:nth-child(5) > .dashboard-browser-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-quick-links > a[href$=\"patterns\"] > span"],
+                    "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+                  },
+                  {
+                    "target": [".dashboard-quick-links > a[href$=\"requirements\"] > span"],
+                    "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+                  },
+                  {
+                    "target": [".dashboard-quick-links > a[href$=\"requests\"] > span"],
+                    "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+                  }
+                ]
+              }
+            ],
+            "passes": 52,
+            "duplicateIds": []
+          },
+          {
+            "label": "mobile-menu",
+            "axeVersion": "4.14.0",
+            "violations": [],
+            "incomplete": [
+              {
+                "id": "color-contrast",
+                "impact": "serious",
+                "help": "Elements must meet minimum color contrast ratio thresholds",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+                "nodes": [
+                  {
+                    "target": [
+                      "#sc-navigation-sc-1-13 > nav > .sc-shell-navigation__group:nth-child(2) > .sc-shell-navigation__list > li:nth-child(2) > .sc-shell-navigation__link[href$=\"requirements\"] > .sc-shell-navigation__text"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": [
+                      "#sc-navigation-sc-1-13 > nav > .sc-shell-navigation__group:nth-child(2) > .sc-shell-navigation__list > li:nth-child(3) > .sc-shell-navigation__link[href$=\"workspace\"] > .sc-shell-navigation__text"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": [
+                      "#sc-navigation-sc-1-13 > nav > .sc-shell-navigation__group:nth-child(3) > .sc-shell-navigation__list > li:nth-child(1) > .sc-shell-navigation__link[href$=\"examples\"] > .sc-shell-navigation__text"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  }
+                ]
+              },
+              {
+                "id": "label-content-name-mismatch",
+                "impact": "serious",
+                "help": "Elements must have their visible text as part of their accessible name",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch?application=axeAPI",
+                "nodes": [
+                  {
+                    "target": [".sc-app-shell__dialog-close"],
+                    "failureSummary": "Fix any of the following:\n  Unable to determine if the visible text is part of the accessible name"
+                  }
+                ]
+              }
+            ],
+            "passes": 28,
+            "duplicateIds": []
+          },
+          {
+            "label": "chart-data-keyboard-expanded",
+            "axeVersion": "4.14.0",
+            "violations": [],
+            "incomplete": [
+              {
+                "id": "aria-valid-attr-value",
+                "impact": "critical",
+                "help": "ARIA attributes must conform to valid values",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-valid-attr-value?application=axeAPI",
+                "nodes": [
+                  {
+                    "target": [".sc-app-shell__menu-toggle"],
+                    "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sc-navigation-sc-1-13\""
+                  },
+                  {
+                    "target": [".app-user-trigger"],
+                    "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"app-user-menu-sc-1-1\""
+                  }
+                ]
+              },
+              {
+                "id": "color-contrast",
+                "impact": "serious",
+                "help": "Elements must meet minimum color contrast ratio thresholds",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+                "nodes": [
+                  {
+                    "target": [
+                      ".app-user-trigger > .app-user-avatar[data-v-7a7a37b1=\"\"][aria-hidden=\"true\"]"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(26 308)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(26 266.3333)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(26 224.6667)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(26 183)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(26 141.3333)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(26 99.6667)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(26 58)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(34 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(54.8276 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(75.6552 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(96.4828 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(117.3103 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(138.1379 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(158.9655 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(179.7931 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(200.6207 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(221.4483 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(242.2759 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(263.1034 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(283.931 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(304.7586 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(325.5862 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[text-anchor=\"start\"][x=\"13\"][y=\"4\"]:nth-child(36)"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": ["text[text-anchor=\"start\"][x=\"13\"][y=\"4\"]:nth-child(39)"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": [".dashboard-gauge-label"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": [".dashboard-gauge-value"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": [".dashboard-channel:nth-child(3) > .dashboard-channel-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-channel:nth-child(4) > .dashboard-channel-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-channel:nth-child(5) > .dashboard-channel-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-channel:nth-child(6) > .dashboard-channel-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-promotion > div > h2"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+                  },
+                  {
+                    "target": [".dashboard-promotion > div > p"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+                  },
+                  {
+                    "target": [".dashboard-promotion > div > a[href$=\"patterns\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+                  },
+                  {
+                    "target": [".dashboard-browser:nth-child(3) > .dashboard-browser-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-browser:nth-child(4) > .dashboard-browser-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-browser:nth-child(5) > .dashboard-browser-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-quick-links > a[href$=\"patterns\"] > span"],
+                    "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+                  },
+                  {
+                    "target": [".dashboard-quick-links > a[href$=\"requirements\"] > span"],
+                    "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+                  },
+                  {
+                    "target": [".dashboard-quick-links > a[href$=\"requests\"] > span"],
+                    "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+                  }
+                ]
+              }
+            ],
+            "passes": 52,
+            "duplicateIds": []
+          },
+          {
+            "label": "sample-quarter-en",
+            "axeVersion": "4.14.0",
+            "violations": [],
+            "incomplete": [
+              {
+                "id": "aria-valid-attr-value",
+                "impact": "critical",
+                "help": "ARIA attributes must conform to valid values",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-valid-attr-value?application=axeAPI",
+                "nodes": [
+                  {
+                    "target": [".sc-app-shell__menu-toggle"],
+                    "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sc-navigation-sc-1-13\""
+                  },
+                  {
+                    "target": [".app-user-trigger"],
+                    "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"app-user-menu-sc-1-1\""
+                  }
+                ]
+              },
+              {
+                "id": "color-contrast",
+                "impact": "serious",
+                "help": "Elements must meet minimum color contrast ratio thresholds",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+                "nodes": [
+                  {
+                    "target": [
+                      ".app-user-trigger > .app-user-avatar[data-v-7a7a37b1=\"\"][aria-hidden=\"true\"]"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(32.052 308)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(32.052 272.2857)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(32.052 236.5714)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(32.052 200.8571)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(32.052 165.1429)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(32.052 129.4286)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(32.052 93.7143)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(32.052 58)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(40.052 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(60.2302 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(80.4085 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(100.5868 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(120.7651 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(140.9433 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(161.1216 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(181.2999 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(201.4782 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(221.6564 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(241.8347 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(262.013 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(282.1913 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(302.3695 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[transform=\"translate(322.5478 322)\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+                  },
+                  {
+                    "target": ["text[text-anchor=\"start\"][x=\"13\"][y=\"4\"]:nth-child(38)"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": ["text[text-anchor=\"start\"][x=\"13\"][y=\"4\"]:nth-child(41)"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": [".dashboard-gauge-label"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": [".dashboard-gauge-value"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": [".dashboard-channel:nth-child(3) > .dashboard-channel-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-channel:nth-child(4) > .dashboard-channel-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-channel:nth-child(5) > .dashboard-channel-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-channel:nth-child(6) > .dashboard-channel-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-promotion > div > h2"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+                  },
+                  {
+                    "target": [".dashboard-promotion > div > p"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+                  },
+                  {
+                    "target": [".dashboard-promotion > div > a[href$=\"patterns\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+                  },
+                  {
+                    "target": [".dashboard-browser:nth-child(3) > .dashboard-browser-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-browser:nth-child(4) > .dashboard-browser-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-browser:nth-child(5) > .dashboard-browser-icon"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-quick-links > a[href$=\"patterns\"] > span"],
+                    "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+                  },
+                  {
+                    "target": [".dashboard-quick-links > a[href$=\"requirements\"] > span"],
+                    "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+                  },
+                  {
+                    "target": [".dashboard-quick-links > a[href$=\"requests\"] > span"],
+                    "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+                  }
+                ]
+              }
+            ],
+            "passes": 52,
+            "duplicateIds": []
+          },
+          {
+            "label": "live-workspace-ko",
+            "axeVersion": "4.14.0",
+            "violations": [],
+            "incomplete": [
+              {
+                "id": "aria-valid-attr-value",
+                "impact": "critical",
+                "help": "ARIA attributes must conform to valid values",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-valid-attr-value?application=axeAPI",
+                "nodes": [
+                  {
+                    "target": [".sc-app-shell__menu-toggle"],
+                    "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sc-navigation-sc-1-13\""
+                  },
+                  {
+                    "target": [".app-user-trigger"],
+                    "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"app-user-menu-sc-1-1\""
+                  }
+                ]
+              },
+              {
+                "id": "color-contrast",
+                "impact": "serious",
+                "help": "Elements must meet minimum color contrast ratio thresholds",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+                "nodes": [
+                  {
+                    "target": [
+                      ".app-user-trigger > .app-user-avatar[data-v-7a7a37b1=\"\"][aria-hidden=\"true\"]"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-gauge-label"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": [".dashboard-gauge-value"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [".dashboard-promotion > div > h2"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+                  },
+                  {
+                    "target": [".dashboard-promotion > div > p"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+                  },
+                  {
+                    "target": [".dashboard-promotion > div > a[href$=\"patterns\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+                  },
+                  {
+                    "target": [".dashboard-quick-links > a[href$=\"patterns\"] > span"],
+                    "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+                  },
+                  {
+                    "target": [".dashboard-quick-links > a[href$=\"requirements\"] > span"],
+                    "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+                  },
+                  {
+                    "target": [".dashboard-quick-links > a[href$=\"requests\"] > span"],
+                    "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+                  }
+                ]
+              },
+              {
+                "id": "th-has-data-cells",
+                "impact": "serious",
+                "help": "Table headers in a data table must refer to data cells",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/th-has-data-cells?application=axeAPI",
+                "nodes": [
+                  {
+                    "target": ["table"],
+                    "failureSummary": "Fix all of the following:\n  Table data cells are missing or empty"
+                  }
+                ]
+              }
+            ],
+            "passes": 50,
+            "duplicateIds": []
+          },
+          {
+            "label": "readonly-requirements",
+            "axeVersion": "4.14.0",
+            "violations": [],
+            "incomplete": [
+              {
+                "id": "aria-valid-attr-value",
+                "impact": "critical",
+                "help": "ARIA attributes must conform to valid values",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-valid-attr-value?application=axeAPI",
+                "nodes": [
+                  {
+                    "target": [".sc-app-shell__menu-toggle"],
+                    "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"sc-navigation-sc-1-13\""
+                  },
+                  {
+                    "target": [".app-user-trigger"],
+                    "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"app-user-menu-sc-1-1\""
+                  },
+                  {
+                    "target": ["div[aria-owns=\"menu-sc-1-50\"]"],
+                    "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"menu-sc-1-50\""
+                  },
+                  {
+                    "target": ["div[aria-owns=\"menu-sc-1-56\"]"],
+                    "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"menu-sc-1-56\""
+                  },
+                  {
+                    "target": ["div[aria-owns=\"menu-sc-1-62\"]"],
+                    "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"menu-sc-1-62\""
+                  },
+                  {
+                    "target": ["div[aria-owns=\"menu-sc-1-68\"]"],
+                    "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"menu-sc-1-68\""
+                  }
+                ]
+              },
+              {
+                "id": "color-contrast",
+                "impact": "serious",
+                "help": "Elements must meet minimum color contrast ratio thresholds",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+                "nodes": [
+                  {
+                    "target": [".app-user-trigger > .app-user-avatar[data-v-7a7a37b1=\"\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+                  },
+                  {
+                    "target": [
+                      ".sc-actions > .v-btn--variant-flat.v-btn.v-btn--density-default > .v-btn__content[data-no-activator=\"\"]"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": ["#sc-field-sc-1-45"],
+                    "failureSummary": "Fix any of the following:\n  Element has no value; test color contrast with a value entered"
+                  },
+                  {
+                    "target": [
+                      "div[aria-owns=\"menu-sc-1-50\"] > .v-field__field[data-no-activator=\"\"] > .v-field__input[data-no-activator=\"\"] > .v-select__selection > .v-select__selection-text"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": [
+                      "div[aria-owns=\"menu-sc-1-56\"] > .v-field__field[data-no-activator=\"\"] > .v-field__input[data-no-activator=\"\"] > .v-select__selection > .v-select__selection-text"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": [
+                      "div[aria-owns=\"menu-sc-1-62\"] > .v-field__field[data-no-activator=\"\"] > .v-field__input[data-no-activator=\"\"] > .v-select__selection > .v-select__selection-text"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": [
+                      "div[aria-owns=\"menu-sc-1-68\"] > .v-field__field[data-no-activator=\"\"] > .v-field__input[data-no-activator=\"\"] > .v-select__selection > .v-select__selection-text"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  },
+                  {
+                    "target": ["button[type=\"submit\"] > .v-btn__content[data-no-activator=\"\"]"],
+                    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+                  }
+                ]
+              },
+              {
+                "id": "th-has-data-cells",
+                "impact": "serious",
+                "help": "Table headers in a data table must refer to data cells",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/th-has-data-cells?application=axeAPI",
+                "nodes": [
+                  {
+                    "target": ["table"],
+                    "failureSummary": "Fix all of the following:\n  Table data cells are missing or empty"
+                  }
+                ]
+              }
+            ],
+            "passes": 46,
+            "duplicateIds": []
+          }
+        ],
+        "screenshots": [
+          {
+            "file": "mobile-login-empty.png",
+            "sha256": "64730cffc5dba925fb605cfbef14bd08336279a36151b0b2b7db6d4194458889",
+            "bytes": 16321
+          },
+          {
+            "file": "mobile-dashboard-ko-month.png",
+            "sha256": "e06254d9a28804367b120275568322e715f7984608b641220b7fa905afd591cb",
+            "bytes": 251911
+          },
+          {
+            "file": "mobile-mobile-menu.png",
+            "sha256": "41d5f859a7e05dd8a70a78dfe7540a16012e4b5f993252fc4f3547f15560c22b",
+            "bytes": 226702
+          },
+          {
+            "file": "mobile-dashboard-en-quarter.png",
+            "sha256": "facd22930d533672743a0e8401549b931543f6f3eb281bc9c976f950c7f0da09",
+            "bytes": 268802
+          },
+          {
+            "file": "mobile-dashboard-live-ko.png",
+            "sha256": "851c8f8f8aa69a2b1105777e43500035a7369e25b8309e1eeb893dee4395e8e9",
+            "bytes": 146110
+          },
+          {
+            "file": "mobile-readonly-requirements.png",
+            "sha256": "4704e51158d9b9ce7276484cbf5e98fa541c4e8775dbd713c0cb0e591821bd4c",
+            "bytes": 40064
+          }
+        ],
+        "console": {
+          "errors": 0,
+          "warnings": 1
+        },
+        "pageErrors": [],
+        "api": [
+          {
+            "path": "/api/auth/login",
+            "method": "POST",
+            "status": 204
+          },
+          {
+            "path": "/api/reports/requirements",
+            "method": "GET",
+            "status": 200
+          },
+          {
+            "path": "/api/requirements",
+            "method": "GET",
+            "status": 200
+          }
+        ],
+        "unexpectedWrites": [],
+        "passed": true
+      }
+    ],
+    "passed": true
+  },
+  "executionReview": {
+    "format": 1,
+    "executionExitCode": 0,
+    "passed": true,
+    "wholeDOMScans": 14,
+    "violations": 0,
+    "duplicateIds": 0,
+    "incompleteRuleInstances": 30,
+    "incompleteNodeInstances": 391,
+    "manualNarrationPerformed": false,
+    "userAccepted": false,
+    "actualLiveDatabaseTotal": 0,
+    "sampleCSVRows": 4,
+    "liveCSVRows": 0,
+    "sameDataSourceClaimed": false,
+    "businessWriteRequests": 0,
+    "actualImageInspection": [
+      {
+        "file": ".runtime/design-correction/qa-third/desktop-dashboard-ko-month.png",
+        "inspection": "Desktop240sidebar68header4KPI/rightwidgets visually inspected; earlier run, not fourth evidence."
+      },
+      {
+        "file": ".runtime/design-correction/qa-third/mobile-dashboard-ko-month.png",
+        "inspection": "390mobile1column sample layout visually inspected; earlier run."
+      },
+      {
+        "file": ".runtime/design-correction/qa-third/mobile-mobile-menu.png",
+        "inspection": "Native dialog covers background KPI; axe third failure preserved, product modal semantics then corrected."
+      },
+      {
+        "file": ".runtime/design-correction/qa-fourth/mobile-dashboard-live-ko.png",
+        "inspection": "Real empty API dataset clearly displayed0; no sample browser/sales widgets; current image viewed."
+      }
+    ],
+    "sourcesEditedByQa": false,
+    "screenshotsCapturedButNotAllVisuallyInspected": true
+  },
+  "priorEvidence": {
+    "first": ".runtime/design-correction/qa-first/initial-execution.json",
+    "second": ".runtime/design-correction/qa-second/summary.json",
+    "secondErrata": ".runtime/design-correction/qa-second/execution-errata.json",
+    "third": ".runtime/design-correction/qa-third/summary.json"
+  },
+  "documentationImageReview": {
+    "performed": true,
+    "files": [
+      "docs/검증/design-correction-desktop.png",
+      "docs/검증/design-correction-mobile.png",
+      "docs/검증/design-correction-login.png"
+    ],
+    "all12CapturesManuallyInspected": false,
+    "userAccepted": false
+  },
+  "sourceIntegration": {
+    "passed": true,
+    "evidence": ".runtime/design-correction/integrated-build.log",
+    "unitTests": 155,
+    "unitFiles": 38,
+    "selectedServerTests": 10,
+    "selectedServerClass": "ReferenceIntegrationTest",
+    "newJarsBuilt": true,
+    "freshJarUiVerificationPending": true,
+    "newPixelBaselinePending": true,
+    "newStoriesPassed": 10,
+    "newStoryFiles": 2,
+    "newStoriesEvidence": ".runtime/design-correction/new-stories-second.log",
+    "staticDocs": 24,
+    "staticControls": 10,
+    "staticEvidence": "docs/검증/013-storybook-browser.json",
+    "candidateArtifactsEvidence": "docs/검증/design-correction-artifacts.json",
+    "independentConsumerVerified": false
+  }
+}

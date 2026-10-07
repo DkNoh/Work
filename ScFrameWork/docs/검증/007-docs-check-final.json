@@ -1,0 +1,47 @@
+{
+  "stage": "007",
+  "state": "local-implementation-integration-complete",
+  "documents": 15,
+  "localLinks": 360,
+  "codeBlocks": 11,
+  "evidenceJsonParsed": 8,
+  "assertions": [
+    {
+      "name": "007 local-complete header",
+      "passed": true
+    },
+    {
+      "name": "008 waiting",
+      "passed": true
+    },
+    {
+      "name": "main latest fresh evidence",
+      "passed": true
+    },
+    {
+      "name": "historical failure preserved",
+      "passed": true
+    },
+    {
+      "name": "latest axe52/no violations/no exclusions/incomplete99 preserved",
+      "passed": true
+    },
+    {
+      "name": "actual business QA6/fixed verified",
+      "passed": true
+    },
+    {
+      "name": "007 detailed CLI24 protected200 unchanged",
+      "passed": true
+    },
+    {
+      "name": "006 original detail unavailable truth",
+      "passed": true
+    },
+    {
+      "name": "manifest dedicated verification documented",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

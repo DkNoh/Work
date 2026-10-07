@@ -1,0 +1,194 @@
+
+> sc-framework@0.2.0 build-storybook
+> npm run build-storybook --workspace @sc/catalog
+
+
+> @sc/catalog@0.1.0 build-storybook
+> storybook build
+
+
+┌  Building storybook v10.4.1
+│
+◇  Cleaning outputDir: storybook-static
+│
+◇  Loading presets
+│
+◇  Building manager..
+│
+●  Building preview..
+│  Vite vite v8.3.1 building client environment for production...
+transforming...
+│
+●  Copying static files: public at storybook-static
+✓ 2226 modules transformed.
+rendering chunks...
+computing gzip size...
+│  Vite storybook-static/iframe.html
+│  19.50 kB │ gzip:   5.52 kB
+│  storybook-static/assets/ScRichTextEditor-d7Fv5_yu.css
+│  0.08 kB │ gzip:   0.09 kB
+│  storybook-static/assets/ScTextArea-CFCrf3Q8.css
+│  0.09 kB │ gzip:   0.10 kB
+│  storybook-static/assets/ScVirtualList-B0jz9J9S.css
+│  0.23 kB │ gzip:   0.17 kB
+│  storybook-static/assets/ScDataTable-BAanE5bg.css
+│  0.34 kB │ gzip:   0.20 kB
+│  storybook-static/assets/ScVirtualTable-DFC4L-QC.css
+│  0.46 kB │ gzip:   0.24 kB
+│  storybook-static/assets/DesignTokens-p0y8acgu.css
+│  3.00 kB │ gzip:   0.66 kB
+│  storybook-static/assets/ScAppShell-CiNLS-Eg.css
+│  7.55 kB │ gzip:   1.78 kB
+│  storybook-static/assets/ScActionButton-DKPA-6Pm-C7QyM5sC.css
+│  26.75 kB │ gzip:   4.23 kB
+│  storybook-static/assets/dist-BMFqXxCB.css
+│  68.48 kB │ gzip:   9.83 kB
+│  storybook-static/assets/iframe-kQu934sW.css
+│  220.09 kB │ gzip:  32.69 kB
+│  storybook-static/assets/iframe-8RJ0Ui2e.js
+│  0.04 kB │ gzip:   0.06 kB
+│  storybook-static/assets/chunk-S2IHWCOG-AXoI72Gt.js
+│  0.26 kB │ gzip:   0.18 kB
+│  storybook-static/assets/formatter-EIJCOSYU-C--nqeUc.js
+│  0.30 kB │ gzip:   0.23 kB
+│  storybook-static/assets/react-BXJ34t_g.js
+│  0.58 kB │ gzip:   0.34 kB
+│  storybook-static/assets/chunk-A242L54C-DSi_sWaf.js
+│  0.94 kB │ gzip:   0.55 kB
+│  storybook-static/assets/ScLoadingState.stories-a-WHANCw.js
+│  0.97 kB │ gzip:   0.64 kB
+│  storybook-static/assets/ScEmptyState.stories-C8HMt6mu.js
+│  1.19 kB │ gzip:   0.77 kB
+│  storybook-static/assets/rolldown-runtime-DkW27tQK.js
+│  1.19 kB │ gzip:   0.67 kB
+│  storybook-static/assets/ScErrorPanel.stories-CUvDTWY2.js
+│  1.26 kB │ gzip:   0.78 kB
+│  storybook-static/assets/tokens-Gi1pjZK9-Bd0iCqeD.js
+│  1.27 kB │ gzip:   0.76 kB
+│  storybook-static/assets/ScPageHeader.stories-DMRtFqfC.js
+│  1.31 kB │ gzip:   0.84 kB
+│  storybook-static/assets/ScSectionCard.stories-Ct3CakzU.js
+│  1.33 kB │ gzip:   0.83 kB
+│  storybook-static/assets/preload-helper-VEOc_cSF.js
+│  1.33 kB │ gzip:   0.75 kB
+│  storybook-static/assets/chunk-YK43Z22A-DP1w2rSz.js
+│  3.06 kB │ gzip:   1.28 kB
+│  storybook-static/assets/chunk-3LY4VQVK-fGEbfoaX.js
+│  4.08 kB │ gzip:   1.72 kB
+│  storybook-static/assets/chunk-242VQQM5-DHIfGiiL.js
+│  4.09 kB │ gzip:   1.52 kB
+│  storybook-static/assets/I18n.stories-eadXhFRD.js
+│  4.78 kB │ gzip:   1.89 kB
+│  storybook-static/assets/ScSearchPanel.stories-CNUIZcae.js
+│  5.75 kB │ gzip:   1.79 kB
+│  storybook-static/assets/ScListDetailLayout.stories-Bxh4bO_1.js
+│  6.29 kB │ gzip:   2.00 kB
+│  storybook-static/assets/ScVirtualList.stories-BYbVyjjv.js
+│  7.27 kB │ gzip:   2.44 kB
+│  storybook-static/assets/react-Q1GcV6wX.js
+│  7.87 kB │ gzip:   3.01 kB
+│  storybook-static/assets/ScCheckbox.stories-dhGhKQjx.js
+│  10.40 kB │ gzip:   2.48 kB
+│  storybook-static/assets/ScFormActions.stories-ONKBsoes.js
+│  11.65 kB │ gzip:   2.96 kB
+│  storybook-static/assets/DesignTokens.stories-fNeX_vG_.js
+│  11.68 kB │ gzip:   4.42 kB
+│  storybook-static/assets/ConnectedExamples.stories-Br8W1mdY.js
+│  12.75 kB │ gzip:   4.99 kB
+│  storybook-static/assets/ScTextArea.stories-D3YbcRDY.js
+│  13.72 kB │ gzip:   2.99 kB
+│  storybook-static/assets/ScSelect.stories-BXsuG8cd.js
+│  13.97 kB │ gzip:   3.02 kB
+│  storybook-static/assets/ScDataTable.stories-TtAvPqwH.js
+│  14.13 kB │ gzip:   3.81 kB
+│  storybook-static/assets/ScTextField.stories-hUg51004.js
+│  14.36 kB │ gzip:   3.20 kB
+│  storybook-static/assets/ScConfirmDialog.stories-BLD0P-Dd.js
+│  14.83 kB │ gzip:   3.50 kB
+│  storybook-static/assets/ScVirtualTable.stories-CyFqwDzr.js
+│  15.58 kB │ gzip:   4.17 kB
+│  storybook-static/assets/ScActionButton.stories-CSE1gFCp.js
+│  17.47 kB │ gzip:   3.49 kB
+│  storybook-static/assets/chunk-LITCR56V-DN2uX3Id.js
+│  22.42 kB │ gzip:   7.51 kB
+│  storybook-static/assets/ScAppShell.stories-RZRXmsFZ.js
+│  22.69 kB │ gzip:   6.82 kB
+│  storybook-static/assets/DateFormat.stories-2a_XW_jz.js
+│  23.08 kB │ gzip:   8.14 kB
+│  storybook-static/vite-inject-mocker-entry.js
+│  27.84 kB │ gzip:   9.66 kB
+│  storybook-static/assets/matchers-5TDFFDYO-C789_MAK.js
+│  28.79 kB │ gzip:   9.68 kB
+│  storybook-static/assets/Color-23OOGO2C-D8YEX7uK.js
+│  30.35 kB │ gzip:  11.46 kB
+│  storybook-static/assets/WithTooltip-65CFNBJE-CkHvPn71.js
+│  32.68 kB │ gzip:  11.45 kB
+│  storybook-static/assets/chunk-SI6AKD4S-BkEbxtIo.js
+│  53.93 kB │ gzip:  15.19 kB
+│  storybook-static/assets/theming-BhG_hM63.js
+│  55.09 kB │ gzip:  21.23 kB
+│  storybook-static/assets/ScActionButton-DKPA-6Pm-OY8U186q.js
+│  73.57 kB │ gzip:  26.93 kB
+│  storybook-static/assets/syntaxhighlighter-W7WJGI2T-CHRubpmH.js
+│  76.50 kB │ gzip:  27.54 kB
+│  storybook-static/assets/ScTableData-BrrJlr-A.js
+│  91.28 kB │ gzip:  26.45 kB
+│  storybook-static/assets/dist-C2vjLGQP.js
+│  116.98 kB │ gzip:  41.43 kB
+│  storybook-static/assets/ValidatedForm.stories-BPqSQUQX.js
+│  126.25 kB │ gzip:  38.34 kB
+│  storybook-static/assets/ScSortableBoard.stories-BhfkUhW5.js
+│  136.97 kB │ gzip:  42.66 kB
+│  storybook-static/assets/_plugin-vue_export-helper-Pzq_nHDg-DG8p-Fgp.js
+│  180.61 kB │ gzip:  67.04 kB
+│  storybook-static/assets/ScImageAnnotator.stories-R3O_I7JA.js
+│  227.57 kB │ gzip:  68.05 kB
+│  storybook-static/assets/dist-BiK5TZjC.js
+│  234.55 kB │ gzip:  77.71 kB
+│  storybook-static/assets/DocsRenderer-LL677BLK-BtQL59P2.js
+│  392.69 kB │ gzip: 123.45 kB
+│  storybook-static/assets/ScRichTextEditor.stories-m2bfFfBX.js
+│  405.47 kB │ gzip: 127.50 kB
+│  storybook-static/assets/components-MF__x2JG.js
+│  549.49 kB │ gzip: 174.73 kB
+│  storybook-static/assets/ScChart.stories-DEXctRdE.js
+│  600.18 kB │ gzip: 201.34 kB
+│  storybook-static/assets/axe-CV28SPUJ.js
+│  659.55 kB │ gzip: 187.91 kB
+│  storybook-static/assets/Excel.stories-BHHyVn1g.js
+│  938.31 kB │ gzip: 260.10 kB
+│  storybook-static/assets/iframe-CeouCYbc.js
+│  1,318.42 kB │ gzip: 404.60 kB
+
+│
+▲  Vite [plugin builtin:vite-reporter]
+│  (!) Some chunks are larger than 500 kB after minification. Consider:
+│  - Using dynamic import() to code-split the application
+│  - Use build.rolldownOptions.output.codeSplitting to improve chunking:
+│  ]8;;https://rolldown.rs/reference/OutputOptions.codeSplittinghttps://rolldown.rs/reference/OutputOptions.codeSplitting]8;;
+│  - Adjust chunk size limit for this warning via
+│  build.chunkSizeWarningLimit.
+│  Vite ✓ built in 3.09s
+│
+▲  Vite [33m[PLUGIN_TIMINGS] [0mJavaScript callbacks ran for 2.8s of this 3.1s
+│  build (91%).
+│  The slowest callbacks, timed inside each callback (the wait before a
+│  callback starts is excluded, the time it awaits is included):
+│  - plugin vite:build-html transform (66%, 2.0s, 1 call)
+│  Additional callback time came from the callbacks below and from
+│  callbacks under 1s.
+│  3 callbacks are listed without a time. Their calls overlapped, so the
+│  time inside one call includes work from other calls. To find their
+│  cost, profile the build with `node --cpu-prof`:
+│  - plugin vite:css transform (126 calls)
+│  - plugin plugin-csf transform (2226 calls)
+│  - plugin storybook:vue-component-meta-plugin transform (1802 calls)
+│  See ]8;;https://rolldown.rs/reference/InputOptions.checks#bundlertimingshttps://rolldown.rs/reference/InputOptions.checks#bundlertimings]8;;
+│  for more details.
+
+│
+◇  Output directory:
+│  /Users/dk/Work/ScFramework/frontend/apps/catalog/storybook-static
+│
+└  Storybook build completed successfully
+

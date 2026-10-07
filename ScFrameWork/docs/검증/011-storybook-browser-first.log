@@ -1,0 +1,197 @@
+
+> sc-framework@0.2.0 storybook:verify
+> node scripts/verify-storybook.mjs
+
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+ExpectError: expect(locator).toBeVisible() failed
+
+Locator: locator('table.docblock-argstable').first().getByText('color', { exact: true }).first()
+Expected: visible
+Timeout: 5000ms
+Error: element(s) not found
+
+Call log:
+  - Expect "toBeVisible" locator('table.docblock-argstable').first().getByText('color', { exact: true }).first() with timeout 5000ms
+  - waiting for locator('table.docblock-argstable').first().getByText('color', { exact: true }).first()
+
+    at captureRawStack (/Users/dk/Work/ScFramework/node_modules/playwright-core/lib/coreBundle.js:8588:17)
+    at callMatcherAsStep (/Users/dk/Work/ScFramework/node_modules/playwright/lib/matchers/expect.js:13310:57)
+    at Object.toBeVisible (/Users/dk/Work/ScFramework/node_modules/playwright/lib/matchers/expect.js:13302:23)
+    at /Users/dk/Work/ScFramework/scripts/verify-storybook.mjs:159:68 {
+  matcherResult: {
+    message: 'expect(locator).toBeVisible() failed\n' +
+      '\n' +
+      "Locator: locator('table.docblock-argstable').first().getByText('color', { exact: true }).first()\n" +
+      'Expected: visible\n' +
+      'Timeout: 5000ms\n' +
+      'Error: element(s) not found\n' +
+      '\n' +
+      'Call log:\n' +
+      `  - Expect "toBeVisible" locator('table.docblock-argstable').first().getByText('color', { exact: true }).first() with timeout 5000ms\n` +
+      "  - waiting for locator('table.docblock-argstable').first().getByText('color', { exact: true }).first()\n",
+    pass: false,
+    actual: undefined,
+    name: 'toBeVisible',
+    expected: 'visible',
+    log: [
+      `  - Expect "toBeVisible" locator('table.docblock-argstable').first().getByText('color', { exact: true }).first() with timeout 5000ms`,
+      "  - waiting for locator('table.docblock-argstable').first().getByText('color', { exact: true }).first()"
+    ],
+    timeout: 5000,
+    ariaSnapshot: '- heading "ScActionButton" [level=1]\n' +
+      '- paragraph: 처리 중에는 disabled/loading/aria-busy를 함께 제공한다. 업무 저장과 오류 처리는 소비 폼의 책임이다. 기본 type은 button이며 폼은 submit을 명시한다.\n' +
+      '- toolbar:\n' +
+      '  - button "Reload story":\n' +
+      '    - img\n' +
+      '  - button "Zoom in":\n' +
+      '    - img\n' +
+      '  - button "Zoom out":\n' +
+      '    - img\n' +
+      '  - button "Reset zoom":\n' +
+      '    - img\n' +
+      '  - link "Open canvas in new tab":\n' +
+      '    - /url: iframe.html?id=%EA%B3%B5%ED%86%B5-ui-scactionbutton--default\n' +
+      '    - img\n' +
+      '- main:\n' +
+      '  - region "동작 버튼 예제":\n' +
+      '    - button "저장"\n' +
+      '    - status "버튼 실행 횟수": 실행 0회\n' +
+      '- switch "Show code":\n' +
+      '  - img\n' +
+      '  - text: Show code\n' +
+      '- button "Copy code":\n' +
+      '  - img\n' +
+      '  - text: Copy code\n' +
+      '- button "Reset controls":\n' +
+      '  - img\n' +
+      '- table:\n' +
+      '  - rowgroup:\n' +
+      '    - row "Name Description Default Control":\n' +
+      '      - columnheader "Name"\n' +
+      '      - columnheader "Description"\n' +
+      '      - columnheader "Default"\n' +
+      '      - columnheader "Control"\n' +
+      '  - rowgroup:\n' +
+      '    - row "busy boolean - busy":\n' +
+      '      - cell "busy"\n' +
+      '      - cell "boolean"\n' +
+      '      - cell "-"\n' +
+      '      - cell "busy":\n' +
+      '        - switch "busy"\n' +
+      '    - row "disabled boolean - disabled":\n' +
+      '      - cell "disabled"\n' +
+      '      - cell "boolean"\n' +
+      '      - cell "-"\n' +
+      '      - cell "disabled":\n' +
+      '        - switch "disabled"\n' +
+      '    - row "busyLabel string - 저장 중…":\n' +
+      '      - cell "busyLabel"\n' +
+      '      - cell "string"\n' +
+      '      - cell "-"\n' +
+      '      - cell "저장 중…":\n' +
+      '        - textbox:\n' +
+      '          - /placeholder: Edit string...\n' +
+      '          - text: 저장 중…\n' +
+      '    - row "type string - button":\n' +
+      '      - cell "type"\n' +
+      '      - cell "string"\n' +
+      '      - cell "-"\n' +
+      '      - cell "button":\n' +
+      '        - textbox:\n' +
+      '          - /placeholder: Edit string...\n' +
+      '          - text: button\n' +
+      '- heading "Stories" [level=2]\n' +
+      '- heading "Default" [level=3]\n' +
+      '- main:\n' +
+      '  - region "동작 버튼 예제":\n' +
+      '    - button "저장"\n' +
+      '    - status "버튼 실행 횟수": 실행 0회\n' +
+      '- switch "Show code":\n' +
+      '  - img\n' +
+      '  - text: Show code\n' +
+      '- button "Copy code":\n' +
+      '  - img\n' +
+      '  - text: Copy code\n' +
+      '- heading "Disabled" [level=3]\n' +
+      '- main:\n' +
+      '  - region "동작 버튼 예제":\n' +
+      '    - button "저장" [disabled]\n' +
+      '    - status "버튼 실행 횟수": 실행 0회\n' +
+      '- switch "Show code":\n' +
+      '  - img\n' +
+      '  - text: Show code\n' +
+      '- button "Copy code":\n' +
+      '  - img\n' +
+      '  - text: Copy code\n' +
+      '- heading "Busy" [level=3]\n' +
+      '- main:\n' +
+      '  - region "동작 버튼 예제":\n' +
+      '    - button "저장 중…" [disabled]:\n' +
+      '      - text: 저장 중…\n' +
+      '      - progressbar "저장 중…":\n' +
+      '        - img\n' +
+      '    - status "버튼 실행 횟수": 실행 0회\n' +
+      '- switch "Show code":\n' +
+      '  - img\n' +
+      '  - text: Show code\n' +
+      '- button "Copy code":\n' +
+      '  - img\n' +
+      '  - text: Copy code\n' +
+      '- heading "폼·키보드·한 번의 이벤트" [level=3]\n' +
+      '- main:\n' +
+      '  - form "공통 버튼 폼 계약":\n' +
+      '    - textbox "폼 제목": 처음 제목\n' +
+      '    - text: 폼 제목\n' +
+      '    - button "동작 실행"\n' +
+      '    - button "폼 제출"\n' +
+      '    - button "폼 초기화"\n' +
+      '    - status "폼 동작 결과": 동작 0회 · 제출 0회 · 초기화 0회\n' +
+      '    - status "제출한 제목": 제출 없음\n' +
+      '- switch "Show code":\n' +
+      '  - img\n' +
+      '  - text: Show code\n' +
+      '- button "Copy code":\n' +
+      '  - img\n' +
+      '  - text: Copy code\n' +
+      '- heading "submit 지정" [level=3]\n' +
+      '- main:\n' +
+      '  - form "공통 버튼 폼 계약":\n' +
+      '    - textbox "폼 제목": 처음 제목\n' +
+      '    - text: 폼 제목\n' +
+      '    - button "동작 실행"\n' +
+      '    - button "폼 제출"\n' +
+      '    - button "폼 초기화"\n' +
+      '    - status "폼 동작 결과": 동작 0회 · 제출 0회 · 초기화 0회\n' +
+      '    - status "제출한 제목": 제출 없음\n' +
+      '- switch "Show code":\n' +
+      '  - img\n' +
+      '  - text: Show code\n' +
+      '- button "Copy code":\n' +
+      '  - img\n' +
+      '  - text: Copy code\n' +
+      '- heading "처리 중 버튼 동작 차단" [level=3]\n' +
+      '- main:\n' +
+      '  - form "공통 버튼 폼 계약":\n' +
+      '    - textbox "폼 제목": 처음 제목\n' +
+      '    - text: 폼 제목\n' +
+      '    - button "저장 중…" [disabled]:\n' +
+      '      - text: 저장 중…\n' +
+      '      - progressbar "저장 중…":\n' +
+      '        - img\n' +
+      '    - button "폼 제출"\n' +
+      '    - button "폼 초기화"\n' +
+      '    - status "폼 동작 결과": 동작 0회 · 제출 0회 · 초기화 0회\n' +
+      '    - status "제출한 제목": 제출 없음\n' +
+      '- switch "Show code":\n' +
+      '  - img\n' +
+      '  - text: Show code\n' +
+      '- button "Copy code":\n' +
+      '  - img\n' +
+      '  - text: Copy code'
+  }
+}
+
+Node.js v24.16.0

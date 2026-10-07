@@ -1,0 +1,1 @@
+frontend/e2e/010-kanban.spec.ts(281,3): error TS2322: Type 'null' is not assignable to type 'string | number'.

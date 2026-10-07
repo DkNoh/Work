@@ -1,0 +1,22 @@
+
+> sc-framework@0.1.0 test:stories
+> npm run test:stories --workspace @sc/catalog
+
+
+> @sc/catalog@0.1.0 test:stories
+> vitest run --config vitest.config.ts
+
+
+ RUN  v4.1.2 /Users/dk/Work/ScFramework/frontend/apps/catalog
+
+6:39:26 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+6:39:26 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+6:39:26 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+6:39:26 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+6:39:26 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+
+ Test Files  3 passed (3)
+      Tests  8 passed (8)
+   Start at  18:39:24
+   Duration  1.89s (transform 0ms, setup 2.55s, import 301ms, tests 827ms, environment 0ms)
+

@@ -1,0 +1,7 @@
+{
+  "stage": "012",
+  "kind": "metadata-only server startup",
+  "passed": false,
+  "frontendNotRebuilt": true,
+  "errorType": "RuntimeError"
+}

@@ -1,0 +1,8 @@
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+    with-credentials: true
+    disable-swagger-default-url: true
+# JSON CSRF interceptor는 공통 JsonCsrfSwaggerTransformer가 initializer에 직접 연결한다.

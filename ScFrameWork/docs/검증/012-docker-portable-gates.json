@@ -1,0 +1,37 @@
+{
+  "stage": "012",
+  "passed": true,
+  "negativeCases": [
+    {
+      "name": "foreign-project",
+      "expectedCode": "SC_DOCKER_PROJECT_ALLOWLIST",
+      "exitCode": 1,
+      "passed": true
+    },
+    {
+      "name": "oversized-project",
+      "expectedCode": "SC_DOCKER_PROJECT_ALLOWLIST",
+      "exitCode": 1,
+      "passed": true
+    },
+    {
+      "name": "symlink-home",
+      "expectedCode": "SC_DOCKER_HOME_LINK",
+      "exitCode": 1,
+      "passed": true
+    },
+    {
+      "name": "public-home",
+      "expectedCode": "SC_DOCKER_HOME_PRIVATE",
+      "exitCode": 1,
+      "passed": true
+    }
+  ],
+  "positiveReport": "012-docker-operations-fourth.json",
+  "protectedFiles": 4,
+  "protectedHashesUnchanged": true,
+  "taskContainerIdsUnchanged": true,
+  "temporaryFixturesRemoved": true,
+  "secretValuesPrinted": false,
+  "remoteExecution": false
+}

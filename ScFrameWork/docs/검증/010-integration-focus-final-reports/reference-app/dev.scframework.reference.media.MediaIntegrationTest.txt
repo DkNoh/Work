@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: dev.scframework.reference.media.MediaIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.811 s -- in dev.scframework.reference.media.MediaIntegrationTest

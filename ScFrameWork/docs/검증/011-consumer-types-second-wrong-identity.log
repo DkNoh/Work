@@ -1,0 +1,1 @@
+.sc-type-probe-N5MUMS/wrong-identity/probe.ts(19,30): error TS2322: Type 'number' is not assignable to type 'string'.

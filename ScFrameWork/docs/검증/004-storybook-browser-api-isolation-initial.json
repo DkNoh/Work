@@ -1,0 +1,52 @@
+{
+  "stage": "004",
+  "staticBuild": true,
+  "docs": [
+    {
+      "component": "ScActionButton",
+      "props": 6,
+      "events": 1,
+      "slots": 1,
+      "duplicateIds": []
+    },
+    {
+      "component": "ScTextField",
+      "props": 18,
+      "events": 7,
+      "slots": 0,
+      "duplicateIds": []
+    },
+    {
+      "component": "ScAppShell",
+      "props": 5,
+      "events": 1,
+      "slots": 4,
+      "duplicateIds": []
+    }
+  ],
+  "controls": [
+    {
+      "component": "ScTextField",
+      "controlsToCanvas": true,
+      "canvasToArgs": true,
+      "labelReactive": true
+    },
+    {
+      "component": "ScAppShell",
+      "controlsToCanvas": true,
+      "navigateToArgs": true
+    }
+  ],
+  "browserErrors": [],
+  "leakedApiRequests": [
+    "/api/storybook-unhandled-probe"
+  ],
+  "captures": [
+    "004-ScActionButton-docs.png",
+    "004-ScTextField-docs.png",
+    "004-ScAppShell-docs.png",
+    "004-ScTextField-controls.png"
+  ],
+  "passed": false,
+  "failure": "AssertionError [ERR_ASSERTION]: MSW의 미정의 API 차단 정책이 동작하지 않습니다.\n\nfalse !== true\n"
+}

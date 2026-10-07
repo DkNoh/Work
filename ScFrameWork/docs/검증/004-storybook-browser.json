@@ -1,0 +1,80 @@
+{
+  "stage": "004",
+  "staticBuild": true,
+  "docs": [
+    {
+      "component": "ScActionButton",
+      "props": 6,
+      "events": 1,
+      "slots": 1,
+      "duplicateIds": []
+    },
+    {
+      "component": "ScTextField",
+      "props": 18,
+      "events": 7,
+      "slots": 0,
+      "duplicateIds": []
+    },
+    {
+      "component": "ScAppShell",
+      "props": 5,
+      "events": 1,
+      "slots": 4,
+      "duplicateIds": []
+    }
+  ],
+  "controls": [
+    {
+      "component": "ScTextField",
+      "controlsToCanvas": true,
+      "canvasToArgs": true,
+      "labelReactive": true,
+      "reset": true
+    },
+    {
+      "component": "ScAppShell",
+      "controlsToCanvas": true,
+      "navigateToArgs": true
+    }
+  ],
+  "browserErrors": [],
+  "leakedApiRequests": [],
+  "captures": [
+    "004-ScActionButton-docs.png",
+    "004-ScActionButton-contracts.png",
+    "004-ScTextField-docs.png",
+    "004-ScTextField-contracts.png",
+    "004-ScAppShell-docs.png",
+    "004-ScAppShell-contracts.png",
+    "004-ScTextField-controls.png"
+  ],
+  "isolationProbes": [
+    {
+      "path": "/api",
+      "blocked": true,
+      "error": "TypeError: Failed to fetch",
+      "controller": "http://127.0.0.1:52739/mockServiceWorker.js"
+    },
+    {
+      "path": "/api/sc-unhandled-probe",
+      "blocked": true,
+      "error": "TypeError: Failed to fetch",
+      "controller": "http://127.0.0.1:52739/mockServiceWorker.js"
+    },
+    {
+      "path": "/api/node_modules/sc-contract.js",
+      "blocked": true,
+      "error": "TypeError: Failed to fetch",
+      "controller": "http://127.0.0.1:52739/mockServiceWorker.js"
+    }
+  ],
+  "unhandledApiBlocked": true,
+  "mockStories": [
+    "Loaded",
+    "RequestError"
+  ],
+  "storyCount": 22,
+  "docsCount": 5,
+  "passed": true
+}

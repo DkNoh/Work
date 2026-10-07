@@ -1,0 +1,288 @@
+
+Running 13 tests using 1 worker
+
+(node:63363) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   1 frontend/e2e/requirements-review.spec.ts:82:1 › 담당자 검토의 실제 409·최신 GET 500·취소는 검토 초안과 revision을 보존하며 성공한 명시 조회만 교체한다 (16.0s)
+(node:63407) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   2 frontend/e2e/requirements-review.spec.ts:168:1 › 댓글 성공의 최신 상세 응답은 작성자의 작성 중인 본문과 입력 기준 revision을 덮지 않는다 (739ms)
+  ✘   3 frontend/e2e/requirements-review.spec.ts:207:1 › 댓글 성공의 최신 검토 응답은 담당자의 검토 초안·추가정보 선택과 입력 기준 revision을 덮지 않는다 (15.6s)
+(node:63432) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   4 frontend/e2e/requirements.spec.ts:18:1 › 실제 작성자·담당자 세션에서 등록→지정→제출→검토→합의·댓글·이력을 저장한다 (15.6s)
+Testing stopped early after 3 maximum allowed failures.
+
+
+  1) frontend/e2e/requirements-review.spec.ts:82:1 › 담당자 검토의 실제 409·최신 GET 500·취소는 검토 초안과 revision을 보존하며 성공한 명시 조회만 교체한다 
+
+    TimeoutError: locator.click: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for getByRole('form', { name: '담당자 검토', exact: true }).locator('input[role=\'combobox\']').visible().and(getByRole('form', { name: '담당자 검토', exact: true }).getByLabel('검토 결과', { exact: true }))
+        - locator resolved to <input size="1" type="text" required="" value="미검토" role="combobox" inputmode="none" aria-required="true" aria-expanded="false" id="sc-select-sc-1-40" aria-controls="menu-sc-1-41" aria-labelledby="sc-select-sc-1-40-label" aria-describedby="sc-select-sc-1-40-messages"/>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <div data-no-activator="" class="v-field__input">…</div> intercepts pointer events
+        - retrying click action
+        - waiting 20ms
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - <div data-no-activator="" class="v-field__input">…</div> intercepts pointer events
+      2 × retrying click action
+          - waiting 100ms
+          - waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <header data-v-da1b4360="" class="sc-app-shell__header">…</header> intercepts pointer events
+      4 × retrying click action
+          - waiting 500ms
+          - waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <div data-no-activator="" class="v-field__input">…</div> intercepts pointer events
+        - retrying click action
+          - waiting 500ms
+          - waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <div data-no-activator="" class="v-field__input">…</div> intercepts pointer events
+        - retrying click action
+          - waiting 500ms
+          - waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <header data-v-da1b4360="" class="sc-app-shell__header">…</header> intercepts pointer events
+        - retrying click action
+          - waiting 500ms
+          - waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <header data-v-da1b4360="" class="sc-app-shell__header">…</header> intercepts pointer events
+      2 × retrying click action
+          - waiting 500ms
+          - waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <div data-no-activator="" class="v-field__input">…</div> intercepts pointer events
+      - retrying click action
+        - waiting 500ms
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - <header data-v-da1b4360="" class="sc-app-shell__header">…</header> intercepts pointer events
+      - retrying click action
+        - waiting 500ms
+
+
+       at support/requirements.ts:108
+
+      106 |   const target = control.and(form.getByLabel(label, { exact: true }));
+      107 |   await expect(target).toHaveAccessibleName(label);
+    > 108 |   await target.click();
+          |                ^
+      109 |   await page.getByRole("listbox").getByRole("option", { name: option, exact: true }).click();
+      110 | }
+      111 |
+        at choose (/Users/dk/Work/ScFramework/frontend/e2e/support/requirements.ts:108:16)
+        at fillReviewDraft (/Users/dk/Work/ScFramework/frontend/e2e/requirements-review.spec.ts:53:3)
+        at /Users/dk/Work/ScFramework/frontend/e2e/requirements-review.spec.ts:87:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    docs/검증/007-requirements-initial-results/requirements-review-담당자-검토-cb1e4-ision을-보존하며-성공한-명시-조회만-교체한다/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: docs/검증/007-requirements-initial-results/requirements-review-담당자-검토-cb1e4-ision을-보존하며-성공한-명시-조회만-교체한다/error-context.md
+
+  2) frontend/e2e/requirements-review.spec.ts:207:1 › 댓글 성공의 최신 검토 응답은 담당자의 검토 초안·추가정보 선택과 입력 기준 revision을 덮지 않는다 
+
+    TimeoutError: locator.click: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for getByRole('form', { name: '담당자 검토', exact: true }).locator('input[role=\'combobox\']').visible().and(getByRole('form', { name: '담당자 검토', exact: true }).getByLabel('검토 결과', { exact: true }))
+        - locator resolved to <input size="1" type="text" required="" value="미검토" role="combobox" inputmode="none" aria-required="true" aria-expanded="false" id="sc-select-sc-1-40" aria-controls="menu-sc-1-41" aria-labelledby="sc-select-sc-1-40-label" aria-describedby="sc-select-sc-1-40-messages"/>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <div data-no-activator="" class="v-field__input">…</div> intercepts pointer events
+        - retrying click action
+        - waiting 20ms
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - <div data-no-activator="" class="v-field__input">…</div> intercepts pointer events
+      2 × retrying click action
+          - waiting 100ms
+          - waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <header data-v-da1b4360="" class="sc-app-shell__header">…</header> intercepts pointer events
+      4 × retrying click action
+          - waiting 500ms
+          - waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <div data-no-activator="" class="v-field__input">…</div> intercepts pointer events
+        - retrying click action
+          - waiting 500ms
+          - waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <div data-no-activator="" class="v-field__input">…</div> intercepts pointer events
+        - retrying click action
+          - waiting 500ms
+          - waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <header data-v-da1b4360="" class="sc-app-shell__header">…</header> intercepts pointer events
+        - retrying click action
+          - waiting 500ms
+          - waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <header data-v-da1b4360="" class="sc-app-shell__header">…</header> intercepts pointer events
+      2 × retrying click action
+          - waiting 500ms
+          - waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <div data-no-activator="" class="v-field__input">…</div> intercepts pointer events
+      - retrying click action
+        - waiting 500ms
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - <header data-v-da1b4360="" class="sc-app-shell__header">…</header> intercepts pointer events
+      - retrying click action
+        - waiting 500ms
+
+
+       at support/requirements.ts:108
+
+      106 |   const target = control.and(form.getByLabel(label, { exact: true }));
+      107 |   await expect(target).toHaveAccessibleName(label);
+    > 108 |   await target.click();
+          |                ^
+      109 |   await page.getByRole("listbox").getByRole("option", { name: option, exact: true }).click();
+      110 | }
+      111 |
+        at choose (/Users/dk/Work/ScFramework/frontend/e2e/support/requirements.ts:108:16)
+        at fillReviewDraft (/Users/dk/Work/ScFramework/frontend/e2e/requirements-review.spec.ts:53:3)
+        at /Users/dk/Work/ScFramework/frontend/e2e/requirements-review.spec.ts:212:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    docs/검증/007-requirements-initial-results/requirements-review-댓글-성공의-0b319--선택과-입력-기준-revision을-덮지-않는다/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: docs/검증/007-requirements-initial-results/requirements-review-댓글-성공의-0b319--선택과-입력-기준-revision을-덮지-않는다/error-context.md
+
+  3) frontend/e2e/requirements.spec.ts:18:1 › 실제 작성자·담당자 세션에서 등록→지정→제출→검토→합의·댓글·이력을 저장한다 ───────────
+
+    TimeoutError: locator.click: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for getByRole('form', { name: '요구사항 본문', exact: true }).locator('input[role=\'combobox\']').visible().and(getByRole('form', { name: '요구사항 본문', exact: true }).getByLabel('메뉴', { exact: true }))
+        - locator resolved to <input size="1" value="" type="text" required="" role="combobox" inputmode="none" aria-invalid="true" aria-required="true" id="sc-select-sc-1-4" aria-expanded="false" aria-controls="menu-sc-1-5" aria-labelledby="sc-select-sc-1-4-label" aria-describedby="sc-select-sc-1-4-messages"/>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <div data-no-activator="" class="v-field__input">…</div> intercepts pointer events
+        - retrying click action
+        - waiting 20ms
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - <div data-no-activator="" class="v-field__input">…</div> intercepts pointer events
+      2 × retrying click action
+          - waiting 100ms
+          - waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <header data-v-da1b4360="" class="sc-app-shell__header">…</header> intercepts pointer events
+      5 × retrying click action
+          - waiting 500ms
+          - waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <div data-no-activator="" class="v-field__input">…</div> intercepts pointer events
+        - retrying click action
+          - waiting 500ms
+          - waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <div data-no-activator="" class="v-field__input">…</div> intercepts pointer events
+        - retrying click action
+          - waiting 500ms
+          - waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <header data-v-da1b4360="" class="sc-app-shell__header">…</header> intercepts pointer events
+        - retrying click action
+          - waiting 500ms
+          - waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <header data-v-da1b4360="" class="sc-app-shell__header">…</header> intercepts pointer events
+      - retrying click action
+        - waiting 500ms
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - <div data-no-activator="" class="v-field__input">…</div> intercepts pointer events
+      - retrying click action
+        - waiting 500ms
+
+
+       at support/requirements.ts:108
+
+      106 |   const target = control.and(form.getByLabel(label, { exact: true }));
+      107 |   await expect(target).toHaveAccessibleName(label);
+    > 108 |   await target.click();
+          |                ^
+      109 |   await page.getByRole("listbox").getByRole("option", { name: option, exact: true }).click();
+      110 | }
+      111 |
+        at choose (/Users/dk/Work/ScFramework/frontend/e2e/support/requirements.ts:108:16)
+        at /Users/dk/Work/ScFramework/frontend/e2e/requirements.spec.ts:31:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    docs/검증/007-requirements-initial-results/requirements-실제-작성자·담당자-세션에서-등록→지정→제출→검토→합의·댓글·이력을-저장한다/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: docs/검증/007-requirements-initial-results/requirements-실제-작성자·담당자-세션에서-등록→지정→제출→검토→합의·댓글·이력을-저장한다/error-context.md
+
+  3 failed
+    frontend/e2e/requirements-review.spec.ts:82:1 › 담당자 검토의 실제 409·최신 GET 500·취소는 검토 초안과 revision을 보존하며 성공한 명시 조회만 교체한다 
+    frontend/e2e/requirements-review.spec.ts:207:1 › 댓글 성공의 최신 검토 응답은 담당자의 검토 초안·추가정보 선택과 입력 기준 revision을 덮지 않는다 
+    frontend/e2e/requirements.spec.ts:18:1 › 실제 작성자·담당자 세션에서 등록→지정→제출→검토→합의·댓글·이력을 저장한다 ────────────
+  9 did not run
+  1 passed (55.8s)
+  1 error was not a part of any test, see above for details

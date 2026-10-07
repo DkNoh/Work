@@ -1,0 +1,10 @@
+
+Running 3 tests using 1 worker
+
+(node:65861) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 frontend/e2e/requirements.spec.ts:25:1 › 실제 작성자·담당자 세션에서 등록→지정→제출→검토→합의·댓글·이력을 저장한다 (6.4s)
+  ✓  2 frontend/e2e/requirements.spec.ts:316:3 › 요구사항 390px 목록·본문·필드 오류·댓글·이력은 전체 DOM 접근성을 검사한다 (2.7s)
+  ✓  3 frontend/e2e/requirements.spec.ts:316:3 › 요구사항 1366px 목록·본문·필드 오류·댓글·이력은 전체 DOM 접근성을 검사한다 (2.4s)
+
+  3 passed (18.9s)

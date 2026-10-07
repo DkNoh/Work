@@ -1,0 +1,24 @@
+
+> sc-framework@0.1.0 storybook:verify
+> node scripts/verify-storybook.mjs
+
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: MSW의 미정의 API 차단 정책이 동작하지 않습니다.
+
+false !== true
+
+    at file:///Users/dk/Work/ScFramework/scripts/verify-storybook.mjs:188:10
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at process.processImmediate (node:internal/timers:472:9) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.16.0

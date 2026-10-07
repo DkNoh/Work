@@ -1,0 +1,1734 @@
+{
+  "format": 1,
+  "stage": "011",
+  "preservedPreviousEvidence": "011-library-build-results.json",
+  "packages": [
+    {
+      "name": "@sc/ui",
+      "version": "0.1.0",
+      "buildExitCode": 0,
+      "buildLog": "011-library-ui-type-dependencies.log",
+      "strict": true,
+      "skipLibCheck": true,
+      "files": [
+        "dist/CONTRACTS.json",
+        "dist/board.js",
+        "dist/build-manifest.json",
+        "dist/charts.js",
+        "dist/chunks/ScActionButton-DKPA-6Pm.js",
+        "dist/chunks/_plugin-vue_export-helper-Pzq_nHDg.js",
+        "dist/chunks/tokens-Gi1pjZK9.js",
+        "dist/editor.js",
+        "dist/image.js",
+        "dist/index.js",
+        "dist/sc-ui.css",
+        "dist/table.js",
+        "dist/tokens.scss",
+        "dist/types/ScActionButton.vue.d.ts",
+        "dist/types/ScTextField.vue.d.ts",
+        "dist/types/board/ScBoardColumn.vue.d.ts",
+        "dist/types/board/ScBoardItem.vue.d.ts",
+        "dist/types/board/ScSortableBoard.vue.d.ts",
+        "dist/types/board/contracts.d.ts",
+        "dist/types/board/helpers.d.ts",
+        "dist/types/board/index.d.ts",
+        "dist/types/charts/ScChart.vue.d.ts",
+        "dist/types/charts/chart-model.d.ts",
+        "dist/types/charts/contracts.d.ts",
+        "dist/types/charts/index.d.ts",
+        "dist/types/contracts.d.ts",
+        "dist/types/editor/ScRichTextEditor.vue.d.ts",
+        "dist/types/editor/contracts.d.ts",
+        "dist/types/editor/document.d.ts",
+        "dist/types/editor/index.d.ts",
+        "dist/types/forms/ScConfirmDialog.vue.d.ts",
+        "dist/types/forms/ScFormActions.vue.d.ts",
+        "dist/types/forms/form-contracts.d.ts",
+        "dist/types/forms/index.d.ts",
+        "dist/types/image/ScImageAnnotator.vue.d.ts",
+        "dist/types/image/contracts.d.ts",
+        "dist/types/image/coordinates.d.ts",
+        "dist/types/image/index.d.ts",
+        "dist/types/index.d.ts",
+        "dist/types/inputs/ScCheckbox.vue.d.ts",
+        "dist/types/inputs/ScSelect.vue.d.ts",
+        "dist/types/inputs/ScTextArea.vue.d.ts",
+        "dist/types/inputs/index.d.ts",
+        "dist/types/inputs/input-accessibility.d.ts",
+        "dist/types/inputs/input-contracts.d.ts",
+        "dist/types/layout/ScAppShell.vue.d.ts",
+        "dist/types/layout/ScShellNavigation.vue.d.ts",
+        "dist/types/layout/index.d.ts",
+        "dist/types/layout/types.d.ts",
+        "dist/types/patterns/ScEmptyState.vue.d.ts",
+        "dist/types/patterns/ScErrorPanel.vue.d.ts",
+        "dist/types/patterns/ScListDetailLayout.vue.d.ts",
+        "dist/types/patterns/ScLoadingState.vue.d.ts",
+        "dist/types/patterns/ScPageHeader.vue.d.ts",
+        "dist/types/patterns/ScSearchPanel.vue.d.ts",
+        "dist/types/patterns/ScSectionCard.vue.d.ts",
+        "dist/types/patterns/contracts.d.ts",
+        "dist/types/patterns/index.d.ts",
+        "dist/types/styles.d.ts",
+        "dist/types/table/ScDataTable.vue.d.ts",
+        "dist/types/table/ScVirtualList.vue.d.ts",
+        "dist/types/table/ScVirtualTable.vue.d.ts",
+        "dist/types/table/contracts.d.ts",
+        "dist/types/table/index.d.ts",
+        "dist/types/table/labels.d.ts",
+        "dist/types/table/model.d.ts",
+        "dist/types/table/useVirtualRows.d.ts",
+        "dist/types/theme.d.ts",
+        "dist/types/tokens.d.ts"
+      ],
+      "stamp": {
+        "format": 1,
+        "name": "@sc/ui",
+        "version": "0.1.0",
+        "inputsDigest": "93e37d610494ca0c94c5613ec1b2da7c7d643d03222203182df84cee58a4c38a"
+      },
+      "digestMatches": true,
+      "exportTargetsExist": true,
+      "noticeBytes": 30837,
+      "directDependencies": [
+        {
+          "dependency": "@dnd-kit/dom",
+          "version": "0.5.0",
+          "installedVersion": "0.5.0",
+          "license": "MIT",
+          "noticeHeadingIncluded": true
+        },
+        {
+          "dependency": "@dnd-kit/vue",
+          "version": "0.5.0",
+          "installedVersion": "0.5.0",
+          "license": "MIT",
+          "noticeHeadingIncluded": true
+        },
+        {
+          "dependency": "@floating-ui/dom",
+          "version": "1.7.6",
+          "installedVersion": "1.7.6",
+          "license": "MIT",
+          "noticeHeadingIncluded": true
+        },
+        {
+          "dependency": "@tanstack/table-core",
+          "version": "9.2.6",
+          "installedVersion": "9.2.6",
+          "license": "MIT",
+          "noticeHeadingIncluded": true
+        },
+        {
+          "dependency": "@tanstack/virtual-core",
+          "version": "3.17.11",
+          "installedVersion": "3.17.11",
+          "license": "MIT",
+          "noticeHeadingIncluded": true
+        },
+        {
+          "dependency": "@tanstack/vue-table",
+          "version": "9.2.6",
+          "installedVersion": "9.2.6",
+          "license": "MIT",
+          "noticeHeadingIncluded": true
+        },
+        {
+          "dependency": "@tanstack/vue-virtual",
+          "version": "3.13.39",
+          "installedVersion": "3.13.39",
+          "license": "MIT",
+          "noticeHeadingIncluded": true
+        },
+        {
+          "dependency": "@tiptap/core",
+          "version": "3.31.4",
+          "installedVersion": "3.31.4",
+          "license": "MIT",
+          "noticeHeadingIncluded": true
+        },
+        {
+          "dependency": "@tiptap/pm",
+          "version": "3.31.4",
+          "installedVersion": "3.31.4",
+          "license": "MIT",
+          "noticeHeadingIncluded": true
+        },
+        {
+          "dependency": "@tiptap/starter-kit",
+          "version": "3.31.4",
+          "installedVersion": "3.31.4",
+          "license": "MIT",
+          "noticeHeadingIncluded": true
+        },
+        {
+          "dependency": "@tiptap/vue-3",
+          "version": "3.31.4",
+          "installedVersion": "3.31.4",
+          "license": "MIT",
+          "noticeHeadingIncluded": true
+        },
+        {
+          "dependency": "echarts",
+          "version": "6.1.0",
+          "installedVersion": "6.1.0",
+          "license": "Apache-2.0",
+          "noticeHeadingIncluded": true
+        },
+        {
+          "dependency": "konva",
+          "version": "10.7.1",
+          "installedVersion": "10.7.1",
+          "license": "MIT",
+          "noticeHeadingIncluded": true
+        },
+        {
+          "dependency": "vue",
+          "version": "3.5.43",
+          "installedVersion": "3.5.43",
+          "license": "MIT",
+          "noticeHeadingIncluded": true
+        },
+        {
+          "dependency": "vue-echarts",
+          "version": "8.3.1",
+          "installedVersion": "8.3.1",
+          "license": "MIT",
+          "noticeHeadingIncluded": true
+        },
+        {
+          "dependency": "vue-konva",
+          "version": "4.0.1",
+          "installedVersion": "4.0.1",
+          "license": "MIT",
+          "noticeHeadingIncluded": true
+        },
+        {
+          "dependency": "vuetify",
+          "version": "4.2.4",
+          "installedVersion": "4.2.4",
+          "license": "MIT",
+          "noticeHeadingIncluded": true
+        }
+      ],
+      "bareImports": [
+        {
+          "dependency": "@dnd-kit/dom",
+          "specifiers": [
+            "@dnd-kit/dom",
+            "@dnd-kit/dom/sortable"
+          ],
+          "references": [
+            {
+              "file": "dist/board.js",
+              "line": 4,
+              "kind": "import"
+            },
+            {
+              "file": "dist/board.js",
+              "line": 6,
+              "kind": "import"
+            }
+          ],
+          "declaredVersion": "0.5.0",
+          "native": false
+        },
+        {
+          "dependency": "@dnd-kit/vue",
+          "specifiers": [
+            "@dnd-kit/vue",
+            "@dnd-kit/vue/sortable"
+          ],
+          "references": [
+            {
+              "file": "dist/board.js",
+              "line": 3,
+              "kind": "import"
+            },
+            {
+              "file": "dist/board.js",
+              "line": 5,
+              "kind": "import"
+            }
+          ],
+          "declaredVersion": "0.5.0",
+          "native": false
+        },
+        {
+          "dependency": "@tanstack/table-core",
+          "specifiers": [
+            "@tanstack/table-core"
+          ],
+          "references": [
+            {
+              "file": "dist/types/table/model.d.ts",
+              "line": 13,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/table/model.d.ts",
+              "line": 14,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/table/model.d.ts",
+              "line": 14,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/table/model.d.ts",
+              "line": 16,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/table/model.d.ts",
+              "line": 17,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/table/model.d.ts",
+              "line": 18,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/table/model.d.ts",
+              "line": 19,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/table/model.d.ts",
+              "line": 20,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/table/model.d.ts",
+              "line": 21,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/table/model.d.ts",
+              "line": 23,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/table/model.d.ts",
+              "line": 24,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/table/model.d.ts",
+              "line": 24,
+              "kind": "import-type"
+            }
+          ],
+          "declaredVersion": "9.2.6",
+          "native": false
+        },
+        {
+          "dependency": "@tanstack/virtual-core",
+          "specifiers": [
+            "@tanstack/virtual-core"
+          ],
+          "references": [
+            {
+              "file": "dist/types/table/useVirtualRows.d.ts",
+              "line": 18,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/table/useVirtualRows.d.ts",
+              "line": 18,
+              "kind": "import-type"
+            }
+          ],
+          "declaredVersion": "3.17.11",
+          "native": false
+        },
+        {
+          "dependency": "@tanstack/vue-table",
+          "specifiers": [
+            "@tanstack/vue-table"
+          ],
+          "references": [
+            {
+              "file": "dist/table.js",
+              "line": 3,
+              "kind": "import"
+            },
+            {
+              "file": "dist/types/table/model.d.ts",
+              "line": 12,
+              "kind": "import-type"
+            }
+          ],
+          "declaredVersion": "9.2.6",
+          "native": false
+        },
+        {
+          "dependency": "@tanstack/vue-virtual",
+          "specifiers": [
+            "@tanstack/vue-virtual"
+          ],
+          "references": [
+            {
+              "file": "dist/table.js",
+              "line": 4,
+              "kind": "import"
+            },
+            {
+              "file": "dist/types/table/useVirtualRows.d.ts",
+              "line": 2,
+              "kind": "import"
+            }
+          ],
+          "declaredVersion": "3.13.39",
+          "native": false
+        },
+        {
+          "dependency": "@tiptap/core",
+          "specifiers": [
+            "@tiptap/core"
+          ],
+          "references": [
+            {
+              "file": "dist/types/editor/document.d.ts",
+              "line": 1,
+              "kind": "import"
+            }
+          ],
+          "declaredVersion": "3.31.4",
+          "native": false
+        },
+        {
+          "dependency": "@tiptap/starter-kit",
+          "specifiers": [
+            "@tiptap/starter-kit"
+          ],
+          "references": [
+            {
+              "file": "dist/editor.js",
+              "line": 5,
+              "kind": "import"
+            }
+          ],
+          "declaredVersion": "3.31.4",
+          "native": false
+        },
+        {
+          "dependency": "@tiptap/vue-3",
+          "specifiers": [
+            "@tiptap/vue-3"
+          ],
+          "references": [
+            {
+              "file": "dist/editor.js",
+              "line": 4,
+              "kind": "import"
+            }
+          ],
+          "declaredVersion": "3.31.4",
+          "native": false
+        },
+        {
+          "dependency": "echarts",
+          "specifiers": [
+            "echarts/charts",
+            "echarts/components",
+            "echarts/core",
+            "echarts/renderers"
+          ],
+          "references": [
+            {
+              "file": "dist/charts.js",
+              "line": 5,
+              "kind": "import"
+            },
+            {
+              "file": "dist/charts.js",
+              "line": 6,
+              "kind": "import"
+            },
+            {
+              "file": "dist/charts.js",
+              "line": 7,
+              "kind": "import"
+            },
+            {
+              "file": "dist/charts.js",
+              "line": 8,
+              "kind": "import"
+            },
+            {
+              "file": "dist/types/charts/chart-model.d.ts",
+              "line": 1,
+              "kind": "import"
+            }
+          ],
+          "declaredVersion": "6.1.0",
+          "native": false
+        },
+        {
+          "dependency": "vue",
+          "specifiers": [
+            "vue"
+          ],
+          "references": [
+            {
+              "file": "dist/board.js",
+              "line": 2,
+              "kind": "import"
+            },
+            {
+              "file": "dist/charts.js",
+              "line": 4,
+              "kind": "import"
+            },
+            {
+              "file": "dist/chunks/ScActionButton-DKPA-6Pm.js",
+              "line": 2,
+              "kind": "import"
+            },
+            {
+              "file": "dist/editor.js",
+              "line": 3,
+              "kind": "import"
+            },
+            {
+              "file": "dist/image.js",
+              "line": 3,
+              "kind": "import"
+            },
+            {
+              "file": "dist/index.js",
+              "line": 4,
+              "kind": "import"
+            },
+            {
+              "file": "dist/table.js",
+              "line": 2,
+              "kind": "import"
+            },
+            {
+              "file": "dist/types/ScActionButton.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/ScActionButton.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/ScActionButton.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/ScActionButton.vue.d.ts",
+              "line": 5,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/ScActionButton.vue.d.ts",
+              "line": 14,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/ScTextField.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/ScTextField.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/ScTextField.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/ScTextField.vue.d.ts",
+              "line": 11,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/ScTextField.vue.d.ts",
+              "line": 36,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/board/ScBoardColumn.vue.d.ts",
+              "line": 13,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/board/ScBoardColumn.vue.d.ts",
+              "line": 13,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/board/ScBoardColumn.vue.d.ts",
+              "line": 13,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/board/ScBoardColumn.vue.d.ts",
+              "line": 13,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/board/ScBoardColumn.vue.d.ts",
+              "line": 13,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/board/ScBoardItem.vue.d.ts",
+              "line": 20,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/board/ScBoardItem.vue.d.ts",
+              "line": 20,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/board/ScBoardItem.vue.d.ts",
+              "line": 20,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/board/ScBoardItem.vue.d.ts",
+              "line": 23,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/board/ScBoardItem.vue.d.ts",
+              "line": 26,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/board/ScSortableBoard.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/board/ScSortableBoard.vue.d.ts",
+              "line": 13,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/board/contracts.d.ts",
+              "line": 1,
+              "kind": "import"
+            },
+            {
+              "file": "dist/types/charts/ScChart.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/charts/ScChart.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/charts/ScChart.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/charts/ScChart.vue.d.ts",
+              "line": 6,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/charts/ScChart.vue.d.ts",
+              "line": 24,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/contracts.d.ts",
+              "line": 1,
+              "kind": "import"
+            },
+            {
+              "file": "dist/types/editor/ScRichTextEditor.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/editor/ScRichTextEditor.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/editor/ScRichTextEditor.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/editor/ScRichTextEditor.vue.d.ts",
+              "line": 10,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/editor/ScRichTextEditor.vue.d.ts",
+              "line": 26,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/forms/ScConfirmDialog.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/forms/ScConfirmDialog.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/forms/ScConfirmDialog.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/forms/ScConfirmDialog.vue.d.ts",
+              "line": 7,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/forms/ScConfirmDialog.vue.d.ts",
+              "line": 18,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/forms/ScFormActions.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/forms/ScFormActions.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/forms/ScFormActions.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/forms/ScFormActions.vue.d.ts",
+              "line": 5,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/forms/ScFormActions.vue.d.ts",
+              "line": 14,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/forms/form-contracts.d.ts",
+              "line": 1,
+              "kind": "import"
+            },
+            {
+              "file": "dist/types/image/ScImageAnnotator.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/image/ScImageAnnotator.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/image/ScImageAnnotator.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/image/ScImageAnnotator.vue.d.ts",
+              "line": 7,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/image/ScImageAnnotator.vue.d.ts",
+              "line": 11,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/inputs/ScCheckbox.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/inputs/ScCheckbox.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/inputs/ScCheckbox.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/inputs/ScCheckbox.vue.d.ts",
+              "line": 11,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/inputs/ScCheckbox.vue.d.ts",
+              "line": 26,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/inputs/ScSelect.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/inputs/ScSelect.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/inputs/ScSelect.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/inputs/ScSelect.vue.d.ts",
+              "line": 10,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/inputs/ScSelect.vue.d.ts",
+              "line": 27,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/inputs/ScTextArea.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/inputs/ScTextArea.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/inputs/ScTextArea.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/inputs/ScTextArea.vue.d.ts",
+              "line": 11,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/inputs/ScTextArea.vue.d.ts",
+              "line": 28,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/layout/ScAppShell.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/layout/ScAppShell.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/layout/ScAppShell.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/layout/ScAppShell.vue.d.ts",
+              "line": 5,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/layout/ScAppShell.vue.d.ts",
+              "line": 11,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/layout/ScShellNavigation.vue.d.ts",
+              "line": 7,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/layout/ScShellNavigation.vue.d.ts",
+              "line": 7,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/layout/ScShellNavigation.vue.d.ts",
+              "line": 7,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/layout/ScShellNavigation.vue.d.ts",
+              "line": 9,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/layout/ScShellNavigation.vue.d.ts",
+              "line": 11,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/layout/types.d.ts",
+              "line": 1,
+              "kind": "import"
+            },
+            {
+              "file": "dist/types/patterns/ScEmptyState.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/patterns/ScEmptyState.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/patterns/ScEmptyState.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/patterns/ScEmptyState.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/patterns/ScEmptyState.vue.d.ts",
+              "line": 6,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/patterns/ScErrorPanel.vue.d.ts",
+              "line": 2,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/patterns/ScErrorPanel.vue.d.ts",
+              "line": 2,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/patterns/ScErrorPanel.vue.d.ts",
+              "line": 2,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/patterns/ScErrorPanel.vue.d.ts",
+              "line": 4,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/patterns/ScErrorPanel.vue.d.ts",
+              "line": 10,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/patterns/ScListDetailLayout.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/patterns/ScListDetailLayout.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/patterns/ScListDetailLayout.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/patterns/ScListDetailLayout.vue.d.ts",
+              "line": 5,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/patterns/ScListDetailLayout.vue.d.ts",
+              "line": 12,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/patterns/ScLoadingState.vue.d.ts",
+              "line": 2,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/patterns/ScLoadingState.vue.d.ts",
+              "line": 2,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/patterns/ScLoadingState.vue.d.ts",
+              "line": 2,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/patterns/ScLoadingState.vue.d.ts",
+              "line": 2,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/patterns/ScLoadingState.vue.d.ts",
+              "line": 4,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/patterns/ScPageHeader.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/patterns/ScPageHeader.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/patterns/ScPageHeader.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/patterns/ScPageHeader.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/patterns/ScPageHeader.vue.d.ts",
+              "line": 6,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/patterns/ScSearchPanel.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/patterns/ScSearchPanel.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/patterns/ScSearchPanel.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/patterns/ScSearchPanel.vue.d.ts",
+              "line": 6,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/patterns/ScSearchPanel.vue.d.ts",
+              "line": 14,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/patterns/ScSectionCard.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/patterns/ScSectionCard.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/patterns/ScSectionCard.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/patterns/ScSectionCard.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/patterns/ScSectionCard.vue.d.ts",
+              "line": 5,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/patterns/contracts.d.ts",
+              "line": 1,
+              "kind": "import"
+            },
+            {
+              "file": "dist/types/table/ScDataTable.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/table/ScDataTable.vue.d.ts",
+              "line": 15,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/table/ScVirtualList.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/table/ScVirtualList.vue.d.ts",
+              "line": 8,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/table/ScVirtualList.vue.d.ts",
+              "line": 12,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/table/ScVirtualTable.vue.d.ts",
+              "line": 3,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/table/ScVirtualTable.vue.d.ts",
+              "line": 11,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/table/ScVirtualTable.vue.d.ts",
+              "line": 15,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/table/contracts.d.ts",
+              "line": 1,
+              "kind": "import"
+            },
+            {
+              "file": "dist/types/table/model.d.ts",
+              "line": 7,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/table/useVirtualRows.d.ts",
+              "line": 1,
+              "kind": "import"
+            },
+            {
+              "file": "dist/types/table/useVirtualRows.d.ts",
+              "line": 19,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/table/useVirtualRows.d.ts",
+              "line": 20,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/table/useVirtualRows.d.ts",
+              "line": 21,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/table/useVirtualRows.d.ts",
+              "line": 22,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/theme.d.ts",
+              "line": 6,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/theme.d.ts",
+              "line": 8,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/theme.d.ts",
+              "line": 11,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/theme.d.ts",
+              "line": 20,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/theme.d.ts",
+              "line": 21,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/theme.d.ts",
+              "line": 22,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/theme.d.ts",
+              "line": 23,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/theme.d.ts",
+              "line": 24,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/theme.d.ts",
+              "line": 28,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/theme.d.ts",
+              "line": 29,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/theme.d.ts",
+              "line": 30,
+              "kind": "import-type"
+            }
+          ],
+          "declaredVersion": "3.5.43",
+          "native": false
+        },
+        {
+          "dependency": "vue-echarts",
+          "specifiers": [
+            "vue-echarts"
+          ],
+          "references": [
+            {
+              "file": "dist/charts.js",
+              "line": 9,
+              "kind": "import"
+            }
+          ],
+          "declaredVersion": "8.3.1",
+          "native": false
+        },
+        {
+          "dependency": "vue-konva",
+          "specifiers": [
+            "vue-konva"
+          ],
+          "references": [
+            {
+              "file": "dist/image.js",
+              "line": 4,
+              "kind": "import"
+            }
+          ],
+          "declaredVersion": "4.0.1",
+          "native": false
+        },
+        {
+          "dependency": "vuetify",
+          "specifiers": [
+            "vuetify",
+            "vuetify/components",
+            "vuetify/iconsets/mdi-svg",
+            "vuetify/locale"
+          ],
+          "references": [
+            {
+              "file": "dist/chunks/ScActionButton-DKPA-6Pm.js",
+              "line": 3,
+              "kind": "import"
+            },
+            {
+              "file": "dist/index.js",
+              "line": 5,
+              "kind": "import"
+            },
+            {
+              "file": "dist/index.js",
+              "line": 6,
+              "kind": "import"
+            },
+            {
+              "file": "dist/index.js",
+              "line": 7,
+              "kind": "import"
+            },
+            {
+              "file": "dist/index.js",
+              "line": 8,
+              "kind": "import"
+            },
+            {
+              "file": "dist/types/theme.d.ts",
+              "line": 8,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/theme.d.ts",
+              "line": 8,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/theme.d.ts",
+              "line": 9,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/theme.d.ts",
+              "line": 10,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/theme.d.ts",
+              "line": 15,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/theme.d.ts",
+              "line": 16,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/theme.d.ts",
+              "line": 22,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/theme.d.ts",
+              "line": 22,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/theme.d.ts",
+              "line": 27,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/theme.d.ts",
+              "line": 27,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/theme.d.ts",
+              "line": 37,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/theme.d.ts",
+              "line": 37,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/theme.d.ts",
+              "line": 91,
+              "kind": "import-type"
+            }
+          ],
+          "declaredVersion": "4.2.4",
+          "native": false
+        }
+      ],
+      "undeclaredBareImportCount": 0,
+      "nativeImportCount": 0
+    },
+    {
+      "name": "@sc/runtime",
+      "version": "0.1.0",
+      "buildExitCode": 0,
+      "buildLog": "011-library-runtime-final.log",
+      "strict": true,
+      "skipLibCheck": false,
+      "files": [
+        "dist/build-manifest.json",
+        "dist/index.js",
+        "dist/types/generated/api.d.ts",
+        "dist/types/http.d.ts",
+        "dist/types/index.d.ts",
+        "dist/types/runtime.d.ts"
+      ],
+      "stamp": {
+        "format": 1,
+        "name": "@sc/runtime",
+        "version": "0.1.0",
+        "inputsDigest": "14068eb26faedf2266739834a6bdacd28e8208d94c822a4c230f1f62217778b4"
+      },
+      "digestMatches": true,
+      "exportTargetsExist": true,
+      "noticeBytes": 6071,
+      "directDependencies": [
+        {
+          "dependency": "@tanstack/vue-query",
+          "version": "5.104.1",
+          "installedVersion": "5.104.1",
+          "license": "MIT",
+          "noticeHeadingIncluded": true
+        },
+        {
+          "dependency": "axios",
+          "version": "1.20.0",
+          "installedVersion": "1.20.0",
+          "license": "MIT",
+          "noticeHeadingIncluded": true
+        },
+        {
+          "dependency": "pinia",
+          "version": "4.0.3",
+          "installedVersion": "4.0.3",
+          "license": "MIT",
+          "noticeHeadingIncluded": true
+        },
+        {
+          "dependency": "vue",
+          "version": "3.5.43",
+          "installedVersion": "3.5.43",
+          "license": "MIT",
+          "noticeHeadingIncluded": true
+        },
+        {
+          "dependency": "vue-router",
+          "version": "5.3.1",
+          "installedVersion": "5.3.1",
+          "license": "MIT",
+          "noticeHeadingIncluded": true
+        }
+      ],
+      "bareImports": [
+        {
+          "dependency": "@tanstack/vue-query",
+          "specifiers": [
+            "@tanstack/vue-query"
+          ],
+          "references": [
+            {
+              "file": "dist/index.js",
+              "line": 3,
+              "kind": "import"
+            },
+            {
+              "file": "dist/types/runtime.d.ts",
+              "line": 1,
+              "kind": "import"
+            }
+          ],
+          "declaredVersion": "5.104.1",
+          "native": false
+        },
+        {
+          "dependency": "axios",
+          "specifiers": [
+            "axios"
+          ],
+          "references": [
+            {
+              "file": "dist/index.js",
+              "line": 1,
+              "kind": "import"
+            },
+            {
+              "file": "dist/types/http.d.ts",
+              "line": 1,
+              "kind": "import"
+            }
+          ],
+          "declaredVersion": "1.20.0",
+          "native": false
+        },
+        {
+          "dependency": "pinia",
+          "specifiers": [
+            "pinia"
+          ],
+          "references": [
+            {
+              "file": "dist/index.js",
+              "line": 2,
+              "kind": "import"
+            },
+            {
+              "file": "dist/types/runtime.d.ts",
+              "line": 20,
+              "kind": "import-type"
+            },
+            {
+              "file": "dist/types/runtime.d.ts",
+              "line": 21,
+              "kind": "import-type"
+            }
+          ],
+          "declaredVersion": "4.0.3",
+          "native": false
+        },
+        {
+          "dependency": "vue",
+          "specifiers": [
+            "vue"
+          ],
+          "references": [
+            {
+              "file": "dist/index.js",
+              "line": 5,
+              "kind": "import"
+            },
+            {
+              "file": "dist/types/runtime.d.ts",
+              "line": 3,
+              "kind": "import"
+            }
+          ],
+          "declaredVersion": "3.5.43",
+          "native": false
+        },
+        {
+          "dependency": "vue-router",
+          "specifiers": [
+            "vue-router"
+          ],
+          "references": [
+            {
+              "file": "dist/index.js",
+              "line": 4,
+              "kind": "import"
+            },
+            {
+              "file": "dist/types/runtime.d.ts",
+              "line": 2,
+              "kind": "import"
+            },
+            {
+              "file": "dist/types/runtime.d.ts",
+              "line": 28,
+              "kind": "import-type"
+            }
+          ],
+          "declaredVersion": "5.3.1",
+          "native": false
+        }
+      ],
+      "undeclaredBareImportCount": 0,
+      "nativeImportCount": 0
+    },
+    {
+      "name": "@sc/date",
+      "version": "0.1.0",
+      "buildExitCode": 0,
+      "buildLog": "011-library-date-final.log",
+      "strict": true,
+      "skipLibCheck": false,
+      "files": [
+        "dist/build-manifest.json",
+        "dist/index.js",
+        "dist/types/index.d.ts"
+      ],
+      "stamp": {
+        "format": 1,
+        "name": "@sc/date",
+        "version": "0.1.0",
+        "inputsDigest": "83b458624db77b28cb6427b6c1ab62c977a96ff8913721c6ff0dfa02cda51925"
+      },
+      "digestMatches": true,
+      "exportTargetsExist": true,
+      "noticeBytes": 1475,
+      "directDependencies": [
+        {
+          "dependency": "dayjs",
+          "version": "1.11.23",
+          "installedVersion": "1.11.23",
+          "license": "MIT",
+          "noticeHeadingIncluded": true
+        }
+      ],
+      "bareImports": [
+        {
+          "dependency": "dayjs",
+          "specifiers": [
+            "dayjs",
+            "dayjs/locale/en.js",
+            "dayjs/locale/ko.js",
+            "dayjs/plugin/timezone.js",
+            "dayjs/plugin/utc.js"
+          ],
+          "references": [
+            {
+              "file": "dist/index.js",
+              "line": 1,
+              "kind": "import"
+            },
+            {
+              "file": "dist/index.js",
+              "line": 2,
+              "kind": "import"
+            },
+            {
+              "file": "dist/index.js",
+              "line": 3,
+              "kind": "import"
+            },
+            {
+              "file": "dist/index.js",
+              "line": 4,
+              "kind": "import"
+            },
+            {
+              "file": "dist/index.js",
+              "line": 5,
+              "kind": "import"
+            },
+            {
+              "file": "dist/types/index.d.ts",
+              "line": 1,
+              "kind": "import"
+            },
+            {
+              "file": "dist/types/index.d.ts",
+              "line": 2,
+              "kind": "import"
+            }
+          ],
+          "declaredVersion": "1.11.23",
+          "native": false
+        }
+      ],
+      "undeclaredBareImportCount": 0,
+      "nativeImportCount": 0
+    },
+    {
+      "name": "@sc/excel",
+      "version": "0.1.0",
+      "buildExitCode": 0,
+      "buildLog": "011-library-excel-final.log",
+      "strict": true,
+      "skipLibCheck": false,
+      "files": [
+        "dist/build-manifest.json",
+        "dist/index.js",
+        "dist/types/index.d.ts"
+      ],
+      "stamp": {
+        "format": 1,
+        "name": "@sc/excel",
+        "version": "0.1.0",
+        "inputsDigest": "dee606006f23dd8e6a95c23e48badf5bbd8a879708a573007048344b464e34ff"
+      },
+      "digestMatches": true,
+      "exportTargetsExist": true,
+      "noticeBytes": 1488,
+      "directDependencies": [
+        {
+          "dependency": "exceljs",
+          "version": "4.4.0",
+          "installedVersion": "4.4.0",
+          "license": "MIT",
+          "noticeHeadingIncluded": true
+        }
+      ],
+      "bareImports": [
+        {
+          "dependency": "exceljs",
+          "specifiers": [
+            "exceljs"
+          ],
+          "references": [
+            {
+              "file": "dist/index.js",
+              "line": 1,
+              "kind": "import"
+            }
+          ],
+          "declaredVersion": "4.4.0",
+          "native": false
+        }
+      ],
+      "undeclaredBareImportCount": 0,
+      "nativeImportCount": 0
+    },
+    {
+      "name": "@sc/i18n",
+      "version": "0.1.0",
+      "buildExitCode": 0,
+      "buildLog": "011-library-i18n-final.log",
+      "strict": true,
+      "skipLibCheck": false,
+      "files": [
+        "dist/build-manifest.json",
+        "dist/index.js",
+        "dist/types/index.d.ts",
+        "dist/types/messages.d.ts"
+      ],
+      "stamp": {
+        "format": 1,
+        "name": "@sc/i18n",
+        "version": "0.1.0",
+        "inputsDigest": "3dc55440b7f7cccba2f3b6377fc10f58106ae0b946173a0164c3876367196291"
+      },
+      "digestMatches": true,
+      "exportTargetsExist": true,
+      "noticeBytes": 3778,
+      "directDependencies": [
+        {
+          "dependency": "@intlify/devtools-types",
+          "version": "11.1.12",
+          "installedVersion": "11.1.12",
+          "license": "MIT",
+          "noticeHeadingIncluded": true
+        },
+        {
+          "dependency": "vue",
+          "version": "3.5.43",
+          "installedVersion": "3.5.43",
+          "license": "MIT",
+          "noticeHeadingIncluded": true
+        },
+        {
+          "dependency": "vue-i18n",
+          "version": "11.1.12",
+          "installedVersion": "11.1.12",
+          "license": "MIT",
+          "noticeHeadingIncluded": true
+        }
+      ],
+      "bareImports": [
+        {
+          "dependency": "vue-i18n",
+          "specifiers": [
+            "vue-i18n"
+          ],
+          "references": [
+            {
+              "file": "dist/index.js",
+              "line": 1,
+              "kind": "import"
+            },
+            {
+              "file": "dist/types/index.d.ts",
+              "line": 13,
+              "kind": "import-type"
+            }
+          ],
+          "declaredVersion": "11.1.12",
+          "native": false
+        }
+      ],
+      "undeclaredBareImportCount": 0,
+      "nativeImportCount": 0
+    }
+  ],
+  "uiContractFormat": 2,
+  "uiContractComponents": 22,
+  "changes": [
+    "UI direct @tanstack/table-core 9.2.6 MIT and @tanstack/virtual-core 3.17.11 MIT cover inferred internal helper declaration references.",
+    "UI rebuilt and direct vendor license texts regenerated."
+  ],
+  "limitations": [
+    "UI producer skips upstream declaration-file checks while keeping strict own-source checks.",
+    "Actual packed artifact validation and clean external consumer/type/production browser probes are separate root checks.",
+    "Direct vendor license texts are copied; this is not a complete transitive npm license inventory."
+  ]
+}

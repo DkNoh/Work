@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "freshConsumer": "/private/tmp/sc-framework-consumer-012-layout-final-20261007",
+  "generation": "012-consumer-create-layout-final.log",
+  "checks": [
+    {
+      "file": "frontend/src/features/operations/BrowserPanel.vue",
+      "freshSha256": "26b0175ff496c29acdd6b357babcc9fba069e3a4a562124c13a63fd75a5347b9",
+      "executedSha256": "26b0175ff496c29acdd6b357babcc9fba069e3a4a562124c13a63fd75a5347b9",
+      "identicalBytes": true,
+      "equivalentSource": true,
+      "difference": null
+    },
+    {
+      "file": "frontend/src/features/operations/OperationsTable.vue",
+      "freshSha256": "60f258b4b98aa792d0ed2254652ecfc7ed9912f7d32b6a327833023b8b3adb2b",
+      "executedSha256": "6ce868af98082ec8c6dfcc7f31e3b9f3aafd1b2151d1780114e63a904fc41988",
+      "identicalBytes": false,
+      "equivalentSource": true,
+      "difference": "Only independent CSS property order: min-width and table-layout"
+    }
+  ],
+  "consumerOwnBuildRepeated": false,
+  "executedConsumer": "/private/tmp/sc-framework-consumer-012-20261007",
+  "scope": "fresh generator/provenance; repaired UI executed separately, CSS order difference explicitly recorded",
+  "initialExactComparison": "OperationsTable byte comparison differed only in CSS declaration order; verified complete source differs only by the two independent declarations"
+}

@@ -1,0 +1,15 @@
+[INFO] Scanning for projects...
+[ERROR] [ERROR] Some problems were encountered while processing the POMs:
+[ERROR] Non-resolvable import POM: The following artifacts could not be resolved: com.querydsl:querydsl-bom:pom:6.12 (absent): Could not find artifact com.querydsl:querydsl-bom:pom:6.12 in central (https://repo.maven.apache.org/maven2) @ org.springframework.boot:spring-boot-dependencies:3.5.16, /Users/dk/.m2/repository/org/springframework/boot/spring-boot-dependencies/3.5.16/spring-boot-dependencies-3.5.16.pom, line 2313, column 19
+ @ 
+[ERROR] The build could not read 1 project -> [Help 1]
+[ERROR]   
+[ERROR]   The project dev.scframework:sc-framework-parent:0.1.0-SNAPSHOT (/Users/dk/Work/ScFramework/backend/pom.xml) has 1 error
+[ERROR]     Non-resolvable import POM: The following artifacts could not be resolved: com.querydsl:querydsl-bom:pom:6.12 (absent): Could not find artifact com.querydsl:querydsl-bom:pom:6.12 in central (https://repo.maven.apache.org/maven2) @ org.springframework.boot:spring-boot-dependencies:3.5.16, /Users/dk/.m2/repository/org/springframework/boot/spring-boot-dependencies/3.5.16/spring-boot-dependencies-3.5.16.pom, line 2313, column 19 -> [Help 2]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/ProjectBuildingException
+[ERROR] [Help 2] http://cwiki.apache.org/confluence/display/MAVEN/UnresolvableModelException

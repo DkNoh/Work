@@ -1,0 +1,114 @@
+
+> sc-framework@0.1.0 test:stories
+> npm run test:stories --workspace @sc/catalog
+
+
+> @sc/catalog@0.1.0 test:stories
+> vitest run --config vitest.config.ts
+
+
+ RUN  v4.1.2 /Users/dk/Work/ScFramework/frontend/apps/catalog
+
+6:20:14 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+6:20:14 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+6:20:14 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+6:20:14 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+6:20:14 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+ ❯ |storybook (chromium)| src/ScActionButton.stories.ts (3 tests | 1 failed) 464ms
+   × Busy 137ms
+ ❯ |storybook (chromium)| src/ScTextField.stories.ts (3 tests | 1 failed) 456ms
+   × Readonly 122ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |storybook (chromium)| src/ScActionButton.stories.ts > Busy
+Error: 
+[34mClick to debug the error directly in Storybook: http://localhost:6006/?path=/story/공통-ui-scactionbutton--busy&addonPanel=storybook/interactions/panel[39m
+
+[2mexpect([22m[31mreceived[39m[2m).toHaveNoViolations([22m[32mexpected[39m[2m)[22m
+
+Expected the HTML found at $('.v-progress-circular') to have no violations:
+
+[90m<div class="v-progress-circular v-progress-circular--indeterminate v-theme--sc v-progress-circular--size-default" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="--v-progress-reveal-duration: 900ms;">[39m
+
+Received:
+
+[31m"ARIA progressbar nodes must have an accessible name (aria-progressbar-name)"[39m
+
+[33mFix any of the following:[39m
+[33m  aria-label attribute does not exist or is empty[39m
+[33m  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty[39m
+[33m  Element has no title attribute[39m
+
+You can find more information on this issue here: 
+[34mhttps://dequeuniversity.com/rules/axe/4.14/aria-progressbar-name?application=axeAPI[39m
+ ❯ Proxy.expectWrapper ../../../node_modules/storybook/dist/test/index.js:15100:16
+ ❯ Proxy.<anonymous> ../../../node_modules/storybook/dist/test/index.js:14620:17
+ ❯ Proxy.methodWrapper ../../../node_modules/storybook/dist/test/index.js:9105:24
+ ❯ Instrumenter.invoke ../../../node_modules/storybook/dist/instrumenter/index.js:322:22
+ ❯ Instrumenter.intercept ../../../node_modules/storybook/dist/instrumenter/index.js:243:139
+ ❯ Instrumenter.track ../../../node_modules/storybook/dist/instrumenter/index.js:238:378
+ ❯ Proxy.toHaveNoViolations ../../../node_modules/storybook/dist/instrumenter/index.js:224:263
+ ❯ afterEach ../../../node_modules/@storybook/addon-a11y/dist/_browser-chunks/chunk-2FVV6YOY.js:155:25
+    153|             expect.extend({ toHaveNoViolations }), vitestMatchersExten…
+    154|           }
+    155|           expect(result).toHaveNoViolations();
+       |                         ^
+    156|         }
+    157|       }
+ ❯ Object.applyAfterEach ../../../node_modules/storybook/dist/_browser-chunks/chunk-SZQXB3JV.js:780:6
+ ❯ runStory ../../../node_modules/storybook/dist/_browser-chunks/chunk-SZQXB3JV.js:1327:100
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  |storybook (chromium)| src/ScTextField.stories.ts > Readonly
+Error: 
+[34mClick to debug the error directly in Storybook: http://localhost:6006/?path=/story/공통-ui-sctextfield--readonly&addonPanel=storybook/interactions/panel[39m
+
+[2mexpect([22m[31mreceived[39m[2m).toHaveNoViolations([22m[32mexpected[39m[2m)[22m
+
+Expected the HTML found at $('.v-field-label--floating') to have no violations:
+
+[90m<label class="v-label v-field-label v-field-label--floating" aria-hidden="false" for="sc-field-v-0"><!---->제목</label>[39m
+
+Received:
+
+[31m"Elements must meet minimum color contrast ratio thresholds (color-contrast)"[39m
+
+[33mFix any of the following:[39m
+[33m  Element has insufficient color contrast of 4.23 (foreground color: #757677, background color: #f5f7f8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1[39m
+
+You can find more information on this issue here: 
+[34mhttps://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI[39m
+ ❯ Proxy.expectWrapper ../../../node_modules/storybook/dist/test/index.js:15100:16
+ ❯ Proxy.<anonymous> ../../../node_modules/storybook/dist/test/index.js:14620:17
+ ❯ Proxy.methodWrapper ../../../node_modules/storybook/dist/test/index.js:9105:24
+ ❯ Instrumenter.invoke ../../../node_modules/storybook/dist/instrumenter/index.js:322:22
+ ❯ Instrumenter.intercept ../../../node_modules/storybook/dist/instrumenter/index.js:243:139
+ ❯ Instrumenter.track ../../../node_modules/storybook/dist/instrumenter/index.js:238:378
+ ❯ Proxy.toHaveNoViolations ../../../node_modules/storybook/dist/instrumenter/index.js:224:263
+ ❯ afterEach ../../../node_modules/@storybook/addon-a11y/dist/_browser-chunks/chunk-2FVV6YOY.js:155:25
+    153|             expect.extend({ toHaveNoViolations }), vitestMatchersExten…
+    154|           }
+    155|           expect(result).toHaveNoViolations();
+       |                         ^
+    156|         }
+    157|       }
+ ❯ Object.applyAfterEach ../../../node_modules/storybook/dist/_browser-chunks/chunk-SZQXB3JV.js:780:6
+ ❯ runStory ../../../node_modules/storybook/dist/_browser-chunks/chunk-SZQXB3JV.js:1327:100
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  2 failed | 1 passed (3)
+      Tests  2 failed | 6 passed (8)
+   Start at  18:20:12
+   Duration  2.30s (transform 0ms, setup 3.02s, import 314ms, tests 1.20s, environment 0ms)
+
+npm error Lifecycle script `test:stories` failed with error:
+npm error code 1
+npm error path /Users/dk/Work/ScFramework/frontend/apps/catalog
+npm error workspace @sc/catalog@0.1.0
+npm error location /Users/dk/Work/ScFramework/frontend/apps/catalog
+npm error command failed
+npm error command sh -c vitest run --config vitest.config.ts

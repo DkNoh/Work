@@ -1,0 +1,4 @@
+templates/starter-v2/template.json 17ms
+frontend/apps/reference-app/src/features/operations/OperationsTable.vue 45ms (unchanged)
+frontend/apps/starter-app/src/features/operations/OperationsTable.vue 10ms (unchanged)
+templates/starter-v2/frontend/src/features/operations/OperationsTable.vue 8ms (unchanged)

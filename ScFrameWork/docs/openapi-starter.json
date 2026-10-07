@@ -1,0 +1,1489 @@
+{
+  "components": {
+    "schemas": {
+      "ApiError": {
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "errors": {
+            "items": {
+              "$ref": "#/components/schemas/FieldViolation"
+            },
+            "type": "array"
+          },
+          "message": {
+            "type": "string"
+          }
+        },
+        "required": ["code", "errors", "message"]
+      },
+      "BrowserErrorAccepted": {
+        "properties": {
+          "accepted": {
+            "type": "boolean"
+          }
+        },
+        "required": ["accepted"],
+        "type": "object"
+      },
+      "BrowserErrorGroupPage": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/BrowserErrorGroupResponse"
+            },
+            "type": "array"
+          },
+          "page": {
+            "format": "int32",
+            "maximum": 1000000,
+            "minimum": 0,
+            "type": "integer"
+          },
+          "size": {
+            "format": "int32",
+            "maximum": 100,
+            "minimum": 1,
+            "type": "integer"
+          },
+          "total": {
+            "format": "int64",
+            "type": "integer"
+          }
+        },
+        "required": ["items", "page", "size", "total"],
+        "type": "object"
+      },
+      "BrowserErrorGroupResponse": {
+        "properties": {
+          "appVersion": {
+            "type": "string"
+          },
+          "componentCode": {
+            "enum": ["ROOT"],
+            "type": "string"
+          },
+          "eventCode": {
+            "enum": ["VUE_ERROR", "WINDOW_ERROR", "UNHANDLED_REJECTION", "UNKNOWN_RUNTIME"],
+            "type": "string"
+          },
+          "fingerprint": {
+            "maxLength": 64,
+            "minLength": 64,
+            "type": "string"
+          },
+          "firstSeenAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "id": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "lastSeenAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "occurrenceCount": {
+            "format": "int64",
+            "minimum": 1,
+            "type": "integer"
+          },
+          "routeCode": {
+            "type": "string"
+          },
+          "source": {
+            "enum": ["VUE", "WINDOW", "REJECTION"],
+            "type": "string"
+          }
+        },
+        "required": [
+          "appVersion",
+          "componentCode",
+          "eventCode",
+          "fingerprint",
+          "firstSeenAt",
+          "id",
+          "lastSeenAt",
+          "occurrenceCount",
+          "routeCode",
+          "source"
+        ],
+        "type": "object"
+      },
+      "BrowserErrorInput": {
+        "properties": {
+          "appVersion": {
+            "description": "소비 앱에 설정한 현재 release version과 정확히 일치해야 합니다.",
+            "maxLength": 64,
+            "type": "string"
+          },
+          "clientEventId": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "componentCode": {
+            "enum": ["ROOT"],
+            "type": "string"
+          },
+          "eventCode": {
+            "enum": ["VUE_ERROR", "WINDOW_ERROR", "UNHANDLED_REJECTION", "UNKNOWN_RUNTIME"],
+            "type": "string"
+          },
+          "routeCode": {
+            "maxLength": 64,
+            "type": "string"
+          },
+          "schemaVersion": {
+            "enum": [1],
+            "format": "int32",
+            "maximum": 1,
+            "minimum": 1,
+            "type": "integer"
+          },
+          "source": {
+            "enum": ["VUE", "WINDOW", "REJECTION"],
+            "type": "string"
+          }
+        },
+        "required": [
+          "appVersion",
+          "clientEventId",
+          "componentCode",
+          "eventCode",
+          "routeCode",
+          "schemaVersion",
+          "source"
+        ],
+        "type": "object"
+      },
+      "BrowserErrorOccurrencePage": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/BrowserErrorOccurrenceResponse"
+            },
+            "type": "array"
+          },
+          "page": {
+            "format": "int32",
+            "maximum": 1000000,
+            "minimum": 0,
+            "type": "integer"
+          },
+          "size": {
+            "format": "int32",
+            "maximum": 100,
+            "minimum": 1,
+            "type": "integer"
+          },
+          "total": {
+            "format": "int64",
+            "type": "integer"
+          }
+        },
+        "required": ["items", "page", "size", "total"],
+        "type": "object"
+      },
+      "BrowserErrorOccurrenceResponse": {
+        "properties": {
+          "actorId": {
+            "format": "int64",
+            "type": ["integer", "null"]
+          },
+          "actorSubject": {
+            "type": "string"
+          },
+          "groupId": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "id": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "occurredAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "requestId": {
+            "type": ["string", "null"]
+          }
+        },
+        "required": ["actorId", "actorSubject", "groupId", "id", "occurredAt", "requestId"],
+        "type": "object"
+      },
+      "CsrfResponse": {
+        "properties": {
+          "headerName": {
+            "type": "string"
+          },
+          "token": {
+            "type": "string"
+          }
+        },
+        "required": ["headerName", "token"],
+        "type": "object"
+      },
+      "EmptyCommand": {},
+      "FieldViolation": {
+        "properties": {
+          "field": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          }
+        },
+        "required": ["field", "message"]
+      },
+      "FrameworkCapabilities": {
+        "description": "현재 서버에서 활성화한 선택 기능",
+        "properties": {
+          "browserErrors": {
+            "type": "boolean"
+          },
+          "messaging": {
+            "type": "boolean"
+          },
+          "observability": {
+            "type": "boolean"
+          },
+          "scheduler": {
+            "type": "boolean"
+          }
+        },
+        "required": ["browserErrors", "messaging", "observability", "scheduler"],
+        "type": "object"
+      },
+      "HealthResponse": {
+        "properties": {
+          "application": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "required": ["application", "status"],
+        "type": "object"
+      },
+      "OperationMessageItem": {
+        "properties": {
+          "completedAt": {
+            "format": "date-time",
+            "type": ["string", "null"]
+          },
+          "createdAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "dispatchAttempts": {
+            "format": "int32",
+            "maximum": 5,
+            "minimum": 0,
+            "type": "integer"
+          },
+          "eventId": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "lastFailureCode": {
+            "maxLength": 32,
+            "type": ["string", "null"]
+          },
+          "nextAttemptAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "publishedAt": {
+            "format": "date-time",
+            "type": ["string", "null"]
+          },
+          "state": {
+            "enum": ["PENDING", "CLAIMED", "PUBLISHED", "COMPLETED", "DEAD"],
+            "type": "string"
+          },
+          "type": {
+            "enum": ["SECURITY_AUDIT", "FILE_DELETE", "MESSAGE_DEMO"],
+            "type": "string"
+          }
+        },
+        "required": [
+          "completedAt",
+          "createdAt",
+          "dispatchAttempts",
+          "eventId",
+          "lastFailureCode",
+          "nextAttemptAt",
+          "publishedAt",
+          "state",
+          "type"
+        ],
+        "type": "object"
+      },
+      "OperationMessagePage": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/OperationMessageItem"
+            },
+            "type": "array"
+          },
+          "page": {
+            "format": "int32",
+            "maximum": 1000000,
+            "minimum": 0,
+            "type": "integer"
+          },
+          "size": {
+            "format": "int32",
+            "maximum": 100,
+            "minimum": 1,
+            "type": "integer"
+          },
+          "total": {
+            "format": "int64",
+            "minimum": 0,
+            "type": "integer"
+          }
+        },
+        "required": ["items", "page", "size", "total"],
+        "type": "object"
+      },
+      "OperationalRegisteredJobResponse": {
+        "properties": {
+          "executionMode": {
+            "enum": ["TRANSACTIONAL", "NON_TRANSACTIONAL"],
+            "type": "string"
+          },
+          "jobCode": {
+            "type": "string"
+          }
+        },
+        "required": ["executionMode", "jobCode"],
+        "type": "object"
+      },
+      "OperationalRegisteredJobsResponse": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/OperationalRegisteredJobResponse"
+            },
+            "type": "array"
+          }
+        },
+        "required": ["items"],
+        "type": "object"
+      },
+      "OperationalRunPage": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/OperationalRunResponse"
+            },
+            "type": "array"
+          },
+          "page": {
+            "format": "int32",
+            "maximum": 1000000,
+            "minimum": 0,
+            "type": "integer"
+          },
+          "size": {
+            "format": "int32",
+            "maximum": 100,
+            "minimum": 1,
+            "type": "integer"
+          },
+          "total": {
+            "format": "int64",
+            "type": "integer"
+          }
+        },
+        "required": ["items", "page", "size", "total"],
+        "type": "object"
+      },
+      "OperationalRunResponse": {
+        "properties": {
+          "attempt": {
+            "format": "int32",
+            "minimum": 1,
+            "type": "integer"
+          },
+          "completedAt": {
+            "format": "date-time",
+            "type": ["string", "null"]
+          },
+          "id": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "jobCode": {
+            "type": "string"
+          },
+          "reasonCode": {
+            "type": ["string", "null"]
+          },
+          "runKey": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "scheduleId": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "scheduledAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "startedAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "state": {
+            "enum": ["RUNNING", "SUCCESS", "FAILED"],
+            "type": "string"
+          }
+        },
+        "required": [
+          "attempt",
+          "completedAt",
+          "id",
+          "jobCode",
+          "reasonCode",
+          "runKey",
+          "scheduleId",
+          "scheduledAt",
+          "startedAt",
+          "state"
+        ],
+        "type": "object"
+      },
+      "OperationalScheduleInput": {
+        "properties": {
+          "cron": {
+            "description": "Quartz cron. seconds 필드는 0만 허용합니다.",
+            "maxLength": 120,
+            "type": "string"
+          },
+          "enabled": {
+            "type": "boolean"
+          },
+          "jobCode": {
+            "maxLength": 64,
+            "type": "string"
+          },
+          "misfirePolicy": {
+            "enum": ["SKIP", "FIRE_ONCE"],
+            "type": "string"
+          },
+          "timeZone": {
+            "maxLength": 64,
+            "type": "string"
+          }
+        },
+        "required": ["cron", "enabled", "jobCode", "misfirePolicy", "timeZone"],
+        "type": "object"
+      },
+      "OperationalSchedulePage": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/OperationalScheduleResponse"
+            },
+            "type": "array"
+          },
+          "page": {
+            "format": "int32",
+            "maximum": 1000000,
+            "minimum": 0,
+            "type": "integer"
+          },
+          "size": {
+            "format": "int32",
+            "maximum": 100,
+            "minimum": 1,
+            "type": "integer"
+          },
+          "total": {
+            "format": "int64",
+            "type": "integer"
+          }
+        },
+        "required": ["items", "page", "size", "total"],
+        "type": "object"
+      },
+      "OperationalScheduleResponse": {
+        "properties": {
+          "createdAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "cron": {
+            "type": "string"
+          },
+          "enabled": {
+            "type": "boolean"
+          },
+          "id": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "jobCode": {
+            "type": "string"
+          },
+          "misfirePolicy": {
+            "enum": ["SKIP", "FIRE_ONCE"],
+            "type": "string"
+          },
+          "nextFireAt": {
+            "format": "date-time",
+            "type": ["string", "null"]
+          },
+          "revision": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "timeZone": {
+            "type": "string"
+          },
+          "updatedAt": {
+            "format": "date-time",
+            "type": "string"
+          }
+        },
+        "required": [
+          "createdAt",
+          "cron",
+          "enabled",
+          "id",
+          "jobCode",
+          "misfirePolicy",
+          "nextFireAt",
+          "revision",
+          "timeZone",
+          "updatedAt"
+        ],
+        "type": "object"
+      },
+      "OperationalScheduleRevisionInput": {
+        "properties": {
+          "revision": {
+            "format": "int32",
+            "minimum": 1,
+            "type": "integer"
+          }
+        },
+        "required": ["revision"],
+        "type": "object"
+      },
+      "OperationalScheduleUpdateInput": {
+        "properties": {
+          "cron": {
+            "maxLength": 120,
+            "type": "string"
+          },
+          "enabled": {
+            "type": "boolean"
+          },
+          "jobCode": {
+            "maxLength": 64,
+            "type": "string"
+          },
+          "misfirePolicy": {
+            "enum": ["SKIP", "FIRE_ONCE"],
+            "type": "string"
+          },
+          "revision": {
+            "format": "int32",
+            "minimum": 1,
+            "type": "integer"
+          },
+          "timeZone": {
+            "maxLength": 64,
+            "type": "string"
+          }
+        },
+        "required": ["cron", "enabled", "jobCode", "misfirePolicy", "revision", "timeZone"],
+        "type": "object"
+      },
+      "SessionResponse": {
+        "properties": {
+          "roles": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "username": {
+            "type": "string"
+          }
+        },
+        "required": ["roles", "username"],
+        "type": "object"
+      },
+      "StoredBlob": {
+        "properties": {
+          "key": {
+            "type": "string"
+          },
+          "size": {
+            "format": "int64",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "securitySchemes": {
+      "session": {
+        "description": "같은 브라우저의 로그인 세션. HttpOnly 쿠키를 Authorize 입력으로 설정하지 않는다.",
+        "in": "cookie",
+        "name": "JSESSIONID",
+        "type": "apiKey"
+      }
+    }
+  },
+  "info": {
+    "title": "sc-starter-app",
+    "version": "0.1.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/api/auth/csrf": {
+      "get": {
+        "operationId": "csrf",
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/CsrfResponse"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "security": [],
+        "summary": "현재 세션의 CSRF 토큰 발급",
+        "tags": ["common-endpoints"]
+      }
+    },
+    "/api/auth/login": {
+      "post": {
+        "parameters": [
+          {
+            "description": "GET /api/auth/csrf가 발급한 token. Swagger interceptor가 갱신한다.",
+            "in": "header",
+            "name": "X-CSRF-TOKEN",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "properties": {
+                  "password": {
+                    "format": "password",
+                    "type": "string"
+                  },
+                  "username": {
+                    "type": "string"
+                  }
+                },
+                "required": ["password", "username"]
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "204": {
+            "description": "성공, 본문 없음"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "인증 실패"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "CSRF 거부"
+          }
+        },
+        "security": [],
+        "summary": "폼 로그인",
+        "tags": ["session"]
+      }
+    },
+    "/api/auth/logout": {
+      "post": {
+        "parameters": [
+          {
+            "description": "GET /api/auth/csrf가 발급한 token. Swagger interceptor가 갱신한다.",
+            "in": "header",
+            "name": "X-CSRF-TOKEN",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "성공, 본문 없음"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "인증 실패"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "CSRF 거부"
+          }
+        },
+        "security": [
+          {
+            "session": []
+          }
+        ],
+        "summary": "세션 로그아웃",
+        "tags": ["session"]
+      }
+    },
+    "/api/auth/me": {
+      "get": {
+        "operationId": "me",
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/SessionResponse"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "현재 로그인 사용자",
+        "tags": ["default-session-endpoints"]
+      }
+    },
+    "/api/framework/capabilities": {
+      "get": {
+        "operationId": "capabilities",
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/FrameworkCapabilities"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "활성 선택 기능 조회",
+        "tags": ["framework-capability-endpoints"]
+      }
+    },
+    "/api/health": {
+      "get": {
+        "operationId": "health",
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResponse"
+                }
+              }
+            },
+            "description": "초기 준비 완료"
+          },
+          "503": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResponse"
+                }
+              }
+            },
+            "description": "초기 준비 중"
+          }
+        },
+        "security": [],
+        "summary": "애플리케이션 기본 상태",
+        "tags": ["common-endpoints"]
+      }
+    },
+    "/api/operations/browser-errors": {
+      "post": {
+        "operationId": "scOperations_post_browser_errors",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BrowserErrorInput"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "202": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BrowserErrorAccepted"
+                }
+              }
+            },
+            "description": "Accepted"
+          }
+        },
+        "summary": "등록 코드의 브라우저 오류 보고",
+        "tags": ["browser-errors-controller"]
+      }
+    },
+    "/api/operations/browser-errors/groups": {
+      "get": {
+        "operationId": "scOperations_get_browser_errors_groups",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "default": 0,
+              "format": "int32",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "query",
+            "name": "size",
+            "required": false,
+            "schema": {
+              "default": 20,
+              "format": "int32",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "query",
+            "name": "source",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "eventCode",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BrowserErrorGroupPage"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "브라우저 오류 집계 조회",
+        "tags": ["browser-errors-controller"]
+      }
+    },
+    "/api/operations/browser-errors/groups/{id}/occurrences": {
+      "get": {
+        "operationId": "scOperations_get_browser_errors_groups_id_occurrences",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "default": 0,
+              "format": "int32",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "query",
+            "name": "size",
+            "required": false,
+            "schema": {
+              "default": 20,
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BrowserErrorOccurrencePage"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "브라우저 오류 발생 이력 조회",
+        "tags": ["browser-errors-controller"]
+      }
+    },
+    "/api/operations/jobs/registered": {
+      "get": {
+        "operationId": "scOperations_get_jobs_registered",
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationalRegisteredJobsResponse"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "등록 운영 작업 조회",
+        "tags": ["operational-schedule-controller"]
+      }
+    },
+    "/api/operations/jobs/runs": {
+      "get": {
+        "operationId": "scOperations_get_jobs_runs",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "default": 0,
+              "format": "int32",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "query",
+            "name": "size",
+            "required": false,
+            "schema": {
+              "default": 20,
+              "format": "int32",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "query",
+            "name": "scheduleId",
+            "required": false,
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationalRunPage"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "운영 실행 이력 조회",
+        "tags": ["operational-schedule-controller"]
+      }
+    },
+    "/api/operations/jobs/schedules": {
+      "get": {
+        "operationId": "scOperations_get_jobs_schedules",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "default": 0,
+              "format": "int32",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "query",
+            "name": "size",
+            "required": false,
+            "schema": {
+              "default": 20,
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationalSchedulePage"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "운영 예약 조회",
+        "tags": ["operational-schedule-controller"]
+      },
+      "post": {
+        "operationId": "scOperations_post_jobs_schedules",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationalScheduleInput"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationalScheduleResponse"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "등록 작업 예약",
+        "tags": ["operational-schedule-controller"]
+      }
+    },
+    "/api/operations/jobs/schedules/{id}": {
+      "get": {
+        "operationId": "scOperations_get_jobs_schedules_id_",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationalScheduleResponse"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "운영 예약 단건 조회",
+        "tags": ["operational-schedule-controller"]
+      },
+      "put": {
+        "operationId": "scOperations_put_jobs_schedules_id_",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationalScheduleUpdateInput"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationalScheduleResponse"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "운영 예약 변경",
+        "tags": ["operational-schedule-controller"]
+      }
+    },
+    "/api/operations/jobs/schedules/{id}/pause": {
+      "post": {
+        "operationId": "scOperations_post_jobs_schedules_id_pause",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationalScheduleRevisionInput"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationalScheduleResponse"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "운영 예약 일시정지",
+        "tags": ["operational-schedule-controller"]
+      }
+    },
+    "/api/operations/jobs/schedules/{id}/resume": {
+      "post": {
+        "operationId": "scOperations_post_jobs_schedules_id_resume",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationalScheduleRevisionInput"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationalScheduleResponse"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "운영 예약 재개",
+        "tags": ["operational-schedule-controller"]
+      }
+    },
+    "/api/operations/messages": {
+      "get": {
+        "operationId": "scOperations_get_messages",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "format": "int32",
+              "maximum": 1000000,
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          {
+            "in": "query",
+            "name": "size",
+            "required": false,
+            "schema": {
+              "format": "int32",
+              "maximum": 100,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          {
+            "in": "query",
+            "name": "type",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "state",
+            "required": false,
+            "schema": {
+              "enum": ["PENDING", "CLAIMED", "PUBLISHED", "COMPLETED", "DEAD"],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationMessagePage"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "tags": ["starter-message-controller"]
+      }
+    },
+    "/api/operations/messages/demo": {
+      "post": {
+        "operationId": "scOperations_post_messages_demo",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmptyCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationMessageItem"
+                }
+              }
+            },
+            "description": "Accepted"
+          }
+        },
+        "tags": ["starter-message-controller"]
+      }
+    },
+    "/api/operations/messages/{eventId}/retry": {
+      "post": {
+        "operationId": "scOperations_post_messages_eventId_retry",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "eventId",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmptyCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationMessageItem"
+                }
+              }
+            },
+            "description": "Accepted"
+          }
+        },
+        "tags": ["starter-message-controller"]
+      }
+    },
+    "/api/storage-demo": {
+      "post": {
+        "operationId": "upload",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "properties": {
+                  "file": {
+                    "format": "binary",
+                    "type": "string"
+                  }
+                },
+                "required": ["file"],
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/StoredBlob"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "tags": ["storage-demo-controller"]
+      }
+    },
+    "/api/storage-demo/{key}": {
+      "delete": {
+        "operationId": "delete",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "key",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "tags": ["storage-demo-controller"]
+      },
+      "get": {
+        "operationId": "download",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "key",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "format": "binary",
+                  "type": "string"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "tags": ["storage-demo-controller"]
+      }
+    }
+  },
+  "security": [
+    {
+      "session": []
+    }
+  ],
+  "servers": [
+    {
+      "description": "같은 출처의 실행 서버",
+      "url": "/"
+    }
+  ]
+}

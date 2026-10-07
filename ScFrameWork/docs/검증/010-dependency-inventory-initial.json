@@ -1,0 +1,5649 @@
+{
+  "stage": "010",
+  "scope": "read-only actual manifest/root lock/installed package-local metadata inventory; no install or package execution",
+  "timestamp": "2026-10-06T19:24:12.787Z",
+  "node": "v24.16.0",
+  "platform": "darwin",
+  "arch": "arm64",
+  "packageManagerDeclared": "npm@11.13.0",
+  "rootLockVersion": 3,
+  "rootLockSha256": "6ba346d2fd4de67431e262c3824b0a80edcc880460b175fce82abce43d25986a",
+  "manifestCount": 9,
+  "workspaceCount": 8,
+  "directDeclarationCount": 130,
+  "uniqueExternalDirectPackages": 58,
+  "missingDirect": 0,
+  "directExactOrLockMismatchCount": 0,
+  "manifestLockDeclarationMismatchCount": 5,
+  "externalMissingLicenseCount": 0,
+  "optionalPackageCount": 135,
+  "expectedDifferentPlatformOptionalMissingCount": 114,
+  "platformApplicableOptionalMissing": [
+    {
+      "lockPackageKey": "node_modules/@emnapi/core",
+      "version": "1.9.2",
+      "os": null,
+      "cpu": null,
+      "platformApplicable": true,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "optional dependency absent on this platform: inspect consumer necessity; not automatically a required direct dependency failure"
+    },
+    {
+      "lockPackageKey": "node_modules/@emnapi/runtime",
+      "version": "1.9.2",
+      "os": null,
+      "cpu": null,
+      "platformApplicable": true,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "optional dependency absent on this platform: inspect consumer necessity; not automatically a required direct dependency failure"
+    },
+    {
+      "lockPackageKey": "node_modules/@emnapi/wasi-threads",
+      "version": "1.2.1",
+      "os": null,
+      "cpu": null,
+      "platformApplicable": true,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "optional dependency absent on this platform: inspect consumer necessity; not automatically a required direct dependency failure"
+    },
+    {
+      "lockPackageKey": "node_modules/@napi-rs/wasm-runtime",
+      "version": "1.2.5",
+      "os": null,
+      "cpu": null,
+      "platformApplicable": true,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "optional dependency absent on this platform: inspect consumer necessity; not automatically a required direct dependency failure"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-resolver/binding-wasm32-wasi/node_modules/@emnapi/core",
+      "version": "1.11.2",
+      "os": null,
+      "cpu": null,
+      "platformApplicable": true,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "optional dependency absent on this platform: inspect consumer necessity; not automatically a required direct dependency failure"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-resolver/binding-wasm32-wasi/node_modules/@emnapi/runtime",
+      "version": "1.11.2",
+      "os": null,
+      "cpu": null,
+      "platformApplicable": true,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "optional dependency absent on this platform: inspect consumer necessity; not automatically a required direct dependency failure"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-resolver/binding-wasm32-wasi/node_modules/@emnapi/wasi-threads",
+      "version": "1.2.2",
+      "os": null,
+      "cpu": null,
+      "platformApplicable": true,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "optional dependency absent on this platform: inspect consumer necessity; not automatically a required direct dependency failure"
+    },
+    {
+      "lockPackageKey": "node_modules/@tybys/wasm-util",
+      "version": "0.10.4",
+      "os": null,
+      "cpu": null,
+      "platformApplicable": true,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "optional dependency absent on this platform: inspect consumer necessity; not automatically a required direct dependency failure"
+    }
+  ],
+  "nativeOptionalOnThisPlatform": [
+    {
+      "lockPackageKey": "node_modules/@esbuild/darwin-arm64",
+      "version": "0.28.1",
+      "os": [
+        "darwin"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": true,
+      "installed": true,
+      "installedVersion": "0.28.1",
+      "versionMatched": true,
+      "license": "MIT",
+      "absenceClassification": null
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-parser/binding-darwin-arm64",
+      "version": "0.127.0",
+      "os": [
+        "darwin"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": true,
+      "installed": true,
+      "installedVersion": "0.127.0",
+      "versionMatched": true,
+      "license": "MIT",
+      "absenceClassification": null
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-resolver/binding-darwin-arm64",
+      "version": "11.24.2",
+      "os": [
+        "darwin"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": true,
+      "installed": true,
+      "installedVersion": "11.24.2",
+      "versionMatched": true,
+      "license": "MIT",
+      "absenceClassification": null
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-resolver/binding-wasm32-wasi/node_modules/@emnapi/core",
+      "version": "1.11.2",
+      "os": null,
+      "cpu": null,
+      "platformApplicable": true,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "optional dependency absent on this platform: inspect consumer necessity; not automatically a required direct dependency failure"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-resolver/binding-wasm32-wasi/node_modules/@emnapi/runtime",
+      "version": "1.11.2",
+      "os": null,
+      "cpu": null,
+      "platformApplicable": true,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "optional dependency absent on this platform: inspect consumer necessity; not automatically a required direct dependency failure"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-resolver/binding-wasm32-wasi/node_modules/@emnapi/wasi-threads",
+      "version": "1.2.2",
+      "os": null,
+      "cpu": null,
+      "platformApplicable": true,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "optional dependency absent on this platform: inspect consumer necessity; not automatically a required direct dependency failure"
+    },
+    {
+      "lockPackageKey": "node_modules/@rolldown/binding-darwin-arm64",
+      "version": "1.2.12",
+      "os": [
+        "darwin"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": true,
+      "installed": true,
+      "installedVersion": "1.2.12",
+      "versionMatched": true,
+      "license": "MIT",
+      "absenceClassification": null
+    },
+    {
+      "lockPackageKey": "node_modules/lightningcss-darwin-arm64",
+      "version": "1.33.0",
+      "os": [
+        "darwin"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": true,
+      "installed": true,
+      "installedVersion": "1.33.0",
+      "versionMatched": true,
+      "license": "MPL-2.0",
+      "absenceClassification": null
+    },
+    {
+      "lockPackageKey": "node_modules/sass-embedded-darwin-arm64",
+      "version": "1.105.1",
+      "os": [
+        "darwin"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": true,
+      "installed": true,
+      "installedVersion": "1.105.1",
+      "versionMatched": true,
+      "license": "MIT",
+      "absenceClassification": null
+    }
+  ],
+  "manifests": [
+    {
+      "path": "package.json",
+      "name": "sc-framework",
+      "version": "0.1.0",
+      "private": true,
+      "license": null,
+      "sha256": "22f7ef8ee43e67c83bf51e469e1559da8933344d94a8d1ce9aa0b0d0a8ba4ece",
+      "lockDeclarationMatched": false
+    },
+    {
+      "path": "frontend/packages/date/package.json",
+      "name": "@sc/date",
+      "version": "0.1.0",
+      "private": true,
+      "license": null,
+      "sha256": "1b20535f021ca07b9bf7b18f8e705cc157d9f49967fe98d6234122fbef7f8911",
+      "lockDeclarationMatched": true
+    },
+    {
+      "path": "frontend/packages/excel/package.json",
+      "name": "@sc/excel",
+      "version": "0.1.0",
+      "private": true,
+      "license": null,
+      "sha256": "e767b882d38c1af6d2097a0ba0b41555eeca4ca6195cba959b2e13b572279baa",
+      "lockDeclarationMatched": true
+    },
+    {
+      "path": "frontend/packages/i18n/package.json",
+      "name": "@sc/i18n",
+      "version": "0.1.0",
+      "private": true,
+      "license": null,
+      "sha256": "aa555777ccab048988508b28ec4796664d8fea94c7e6dae85cdd4f99607e3a36",
+      "lockDeclarationMatched": true
+    },
+    {
+      "path": "frontend/packages/runtime/package.json",
+      "name": "@sc/runtime",
+      "version": "0.1.0",
+      "private": true,
+      "license": null,
+      "sha256": "a6751bfc29bdbaada024b0a27cb4a96a8d33ad7b168d9476e9d13e0376513f53",
+      "lockDeclarationMatched": false
+    },
+    {
+      "path": "frontend/packages/ui/package.json",
+      "name": "@sc/ui",
+      "version": "0.1.0",
+      "private": true,
+      "license": null,
+      "sha256": "c9f82798fe3bf00da2cf4b3e11d5102f0cbf3f6fc057fba6964adb225e4b0f4e",
+      "lockDeclarationMatched": true
+    },
+    {
+      "path": "frontend/apps/catalog/package.json",
+      "name": "@sc/catalog",
+      "version": "0.1.0",
+      "private": true,
+      "license": null,
+      "sha256": "3895ff9f92e07b472b7e29ea276b5475e4a02a1edce44a566d82feb47dd305fc",
+      "lockDeclarationMatched": false
+    },
+    {
+      "path": "frontend/apps/reference-app/package.json",
+      "name": "@sc/reference-app",
+      "version": "0.1.0",
+      "private": true,
+      "license": null,
+      "sha256": "a71eec8e33eb8baa4c5a271c57856837199b810b66259f027447ed0e42585def",
+      "lockDeclarationMatched": false
+    },
+    {
+      "path": "frontend/apps/starter-app/package.json",
+      "name": "@sc/starter-app",
+      "version": "0.1.0",
+      "private": true,
+      "license": null,
+      "sha256": "3b103ba953b2560cc2a7a3c274693c44c1510db72611058549894e19b6676d2c",
+      "lockDeclarationMatched": false
+    }
+  ],
+  "directDependencies": [
+    {
+      "importer": "package.json",
+      "section": "devDependencies",
+      "name": "@eslint/js",
+      "specified": "10.0.1",
+      "installed": true,
+      "installedVersion": "10.0.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/@eslint/js/package.json",
+      "entryResolution": "node_modules/@eslint/js/src/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@eslint/js",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "package.json",
+      "section": "devDependencies",
+      "name": "@playwright/test",
+      "specified": "1.63.0",
+      "installed": true,
+      "installedVersion": "1.63.0",
+      "license": "Apache-2.0",
+      "metadataPath": "node_modules/@playwright/test/package.json",
+      "entryResolution": "node_modules/@playwright/test/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@playwright/test",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "Apache-2.0"
+    },
+    {
+      "importer": "package.json",
+      "section": "devDependencies",
+      "name": "@types/node",
+      "specified": "24.19.1",
+      "installed": true,
+      "installedVersion": "24.19.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/@types/node/package.json",
+      "entryResolution": null,
+      "resolutionMethod": "createRequire.resolve.paths package-local metadata (entry exports may restrict require)",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@types/node",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "package.json",
+      "section": "devDependencies",
+      "name": "@vitejs/plugin-vue",
+      "specified": "6.0.9",
+      "installed": true,
+      "installedVersion": "6.0.9",
+      "license": "MIT",
+      "metadataPath": "node_modules/@vitejs/plugin-vue/package.json",
+      "entryResolution": "node_modules/@vitejs/plugin-vue/dist/index.mjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@vitejs/plugin-vue",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "package.json",
+      "section": "devDependencies",
+      "name": "@vitest/browser-playwright",
+      "specified": "4.1.11",
+      "installed": true,
+      "installedVersion": "4.1.11",
+      "license": "MIT",
+      "metadataPath": "node_modules/@vitest/browser-playwright/package.json",
+      "entryResolution": "node_modules/@vitest/browser-playwright/dist/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@vitest/browser-playwright",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "package.json",
+      "section": "devDependencies",
+      "name": "@vue/test-utils",
+      "specified": "2.5.1",
+      "installed": true,
+      "installedVersion": "2.5.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/@vue/test-utils/package.json",
+      "entryResolution": "node_modules/@vue/test-utils/dist/vue-test-utils.cjs.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@vue/test-utils",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "package.json",
+      "section": "devDependencies",
+      "name": "@vue/compiler-dom",
+      "specified": "3.5.43",
+      "installed": true,
+      "installedVersion": "3.5.43",
+      "license": "MIT",
+      "metadataPath": "node_modules/@vue/compiler-dom/package.json",
+      "entryResolution": "node_modules/@vue/compiler-dom/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@vue/compiler-dom",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "package.json",
+      "section": "devDependencies",
+      "name": "eslint",
+      "specified": "10.12.0",
+      "installed": true,
+      "installedVersion": "10.12.0",
+      "license": "MIT",
+      "metadataPath": "node_modules/eslint/package.json",
+      "entryResolution": "node_modules/eslint/lib/api.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/eslint",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "package.json",
+      "section": "devDependencies",
+      "name": "eslint-config-prettier",
+      "specified": "10.1.8",
+      "installed": true,
+      "installedVersion": "10.1.8",
+      "license": "MIT",
+      "metadataPath": "node_modules/eslint-config-prettier/package.json",
+      "entryResolution": "node_modules/eslint-config-prettier/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/eslint-config-prettier",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "package.json",
+      "section": "devDependencies",
+      "name": "eslint-plugin-vue",
+      "specified": "10.11.1",
+      "installed": true,
+      "installedVersion": "10.11.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/eslint-plugin-vue/package.json",
+      "entryResolution": "node_modules/eslint-plugin-vue/dist/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/eslint-plugin-vue",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "package.json",
+      "section": "devDependencies",
+      "name": "globals",
+      "specified": "17.13.0",
+      "installed": true,
+      "installedVersion": "17.13.0",
+      "license": "MIT",
+      "metadataPath": "node_modules/globals/package.json",
+      "entryResolution": "node_modules/globals/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/globals",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "package.json",
+      "section": "devDependencies",
+      "name": "happy-dom",
+      "specified": "20.14.5",
+      "installed": true,
+      "installedVersion": "20.14.5",
+      "license": "MIT",
+      "metadataPath": "node_modules/happy-dom/package.json",
+      "entryResolution": "node_modules/happy-dom/lib/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/happy-dom",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "package.json",
+      "section": "devDependencies",
+      "name": "openapi-typescript",
+      "specified": "7.13.0",
+      "installed": true,
+      "installedVersion": "7.13.0",
+      "license": "MIT",
+      "metadataPath": "node_modules/openapi-typescript/package.json",
+      "entryResolution": "node_modules/openapi-typescript/dist/index.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/openapi-typescript",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "package.json",
+      "section": "devDependencies",
+      "name": "prettier",
+      "specified": "3.9.9",
+      "installed": true,
+      "installedVersion": "3.9.9",
+      "license": "MIT",
+      "metadataPath": "node_modules/prettier/package.json",
+      "entryResolution": "node_modules/prettier/index.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/prettier",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "package.json",
+      "section": "devDependencies",
+      "name": "sass-embedded",
+      "specified": "1.105.1",
+      "installed": true,
+      "installedVersion": "1.105.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/sass-embedded/package.json",
+      "entryResolution": "node_modules/sass-embedded/dist/lib/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/sass-embedded",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "package.json",
+      "section": "devDependencies",
+      "name": "typescript",
+      "specified": "5.9.3",
+      "installed": true,
+      "installedVersion": "5.9.3",
+      "license": "Apache-2.0",
+      "metadataPath": "node_modules/typescript/package.json",
+      "entryResolution": "node_modules/typescript/lib/typescript.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/typescript",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "Apache-2.0"
+    },
+    {
+      "importer": "package.json",
+      "section": "devDependencies",
+      "name": "typescript-eslint",
+      "specified": "8.71.1",
+      "installed": true,
+      "installedVersion": "8.71.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/typescript-eslint/package.json",
+      "entryResolution": "node_modules/typescript-eslint/dist/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/typescript-eslint",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "package.json",
+      "section": "devDependencies",
+      "name": "vite",
+      "specified": "8.3.1",
+      "installed": true,
+      "installedVersion": "8.3.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/vite/package.json",
+      "entryResolution": "node_modules/vite/dist/node/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vite",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "package.json",
+      "section": "devDependencies",
+      "name": "vite-plugin-vuetify",
+      "specified": "2.1.3",
+      "installed": true,
+      "installedVersion": "2.1.3",
+      "license": "MIT",
+      "metadataPath": "node_modules/vite-plugin-vuetify/package.json",
+      "entryResolution": "node_modules/vite-plugin-vuetify/dist/index.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vite-plugin-vuetify",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "package.json",
+      "section": "devDependencies",
+      "name": "vitest",
+      "specified": "4.1.11",
+      "installed": true,
+      "installedVersion": "4.1.11",
+      "license": "MIT",
+      "metadataPath": "node_modules/vitest/package.json",
+      "entryResolution": "node_modules/vitest/index.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vitest",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "package.json",
+      "section": "devDependencies",
+      "name": "vue-eslint-parser",
+      "specified": "10.4.1",
+      "installed": true,
+      "installedVersion": "10.4.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/vue-eslint-parser/package.json",
+      "entryResolution": "node_modules/vue-eslint-parser/dist/index.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vue-eslint-parser",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "package.json",
+      "section": "devDependencies",
+      "name": "vue-tsc",
+      "specified": "3.3.12",
+      "installed": true,
+      "installedVersion": "3.3.12",
+      "license": "MIT",
+      "metadataPath": "node_modules/vue-tsc/package.json",
+      "entryResolution": "node_modules/vue-tsc/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vue-tsc",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "package.json",
+      "section": "devDependencies",
+      "name": "axe-core",
+      "specified": "4.14.0",
+      "installed": true,
+      "installedVersion": "4.14.0",
+      "license": "MPL-2.0",
+      "metadataPath": "node_modules/axe-core/package.json",
+      "entryResolution": "node_modules/axe-core/axe.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/axe-core",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MPL-2.0"
+    },
+    {
+      "importer": "frontend/packages/date/package.json",
+      "section": "dependencies",
+      "name": "dayjs",
+      "specified": "1.11.23",
+      "installed": true,
+      "installedVersion": "1.11.23",
+      "license": "MIT",
+      "metadataPath": "node_modules/dayjs/package.json",
+      "entryResolution": "node_modules/dayjs/dayjs.min.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/dayjs",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/packages/date/package.json",
+      "section": "devDependencies",
+      "name": "typescript",
+      "specified": "5.9.3",
+      "installed": true,
+      "installedVersion": "5.9.3",
+      "license": "Apache-2.0",
+      "metadataPath": "node_modules/typescript/package.json",
+      "entryResolution": "node_modules/typescript/lib/typescript.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/typescript",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "Apache-2.0"
+    },
+    {
+      "importer": "frontend/packages/excel/package.json",
+      "section": "dependencies",
+      "name": "exceljs",
+      "specified": "4.4.0",
+      "installed": true,
+      "installedVersion": "4.4.0",
+      "license": "MIT",
+      "metadataPath": "node_modules/exceljs/package.json",
+      "entryResolution": "node_modules/exceljs/excel.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/exceljs",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/packages/excel/package.json",
+      "section": "devDependencies",
+      "name": "typescript",
+      "specified": "5.9.3",
+      "installed": true,
+      "installedVersion": "5.9.3",
+      "license": "Apache-2.0",
+      "metadataPath": "node_modules/typescript/package.json",
+      "entryResolution": "node_modules/typescript/lib/typescript.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/typescript",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "Apache-2.0"
+    },
+    {
+      "importer": "frontend/packages/excel/package.json",
+      "section": "devDependencies",
+      "name": "vue-tsc",
+      "specified": "3.3.12",
+      "installed": true,
+      "installedVersion": "3.3.12",
+      "license": "MIT",
+      "metadataPath": "node_modules/vue-tsc/package.json",
+      "entryResolution": "node_modules/vue-tsc/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vue-tsc",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/packages/i18n/package.json",
+      "section": "dependencies",
+      "name": "vue-i18n",
+      "specified": "11.4.13",
+      "installed": true,
+      "installedVersion": "11.4.13",
+      "license": "MIT",
+      "metadataPath": "node_modules/vue-i18n/package.json",
+      "entryResolution": "node_modules/vue-i18n/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vue-i18n",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/packages/i18n/package.json",
+      "section": "devDependencies",
+      "name": "typescript",
+      "specified": "5.9.3",
+      "installed": true,
+      "installedVersion": "5.9.3",
+      "license": "Apache-2.0",
+      "metadataPath": "node_modules/typescript/package.json",
+      "entryResolution": "node_modules/typescript/lib/typescript.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/typescript",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "Apache-2.0"
+    },
+    {
+      "importer": "frontend/packages/i18n/package.json",
+      "section": "devDependencies",
+      "name": "vue-tsc",
+      "specified": "3.3.12",
+      "installed": true,
+      "installedVersion": "3.3.12",
+      "license": "MIT",
+      "metadataPath": "node_modules/vue-tsc/package.json",
+      "entryResolution": "node_modules/vue-tsc/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vue-tsc",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/packages/i18n/package.json",
+      "section": "peerDependencies",
+      "name": "vue",
+      "specified": "3.5.43",
+      "installed": true,
+      "installedVersion": "3.5.43",
+      "license": "MIT",
+      "metadataPath": "node_modules/vue/package.json",
+      "entryResolution": "node_modules/vue/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vue",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/packages/runtime/package.json",
+      "section": "dependencies",
+      "name": "axios",
+      "specified": "1.20.0",
+      "installed": true,
+      "installedVersion": "1.20.0",
+      "license": "MIT",
+      "metadataPath": "node_modules/axios/package.json",
+      "entryResolution": "node_modules/axios/dist/node/axios.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/axios",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/packages/runtime/package.json",
+      "section": "devDependencies",
+      "name": "typescript",
+      "specified": "5.9.3",
+      "installed": true,
+      "installedVersion": "5.9.3",
+      "license": "Apache-2.0",
+      "metadataPath": "node_modules/typescript/package.json",
+      "entryResolution": "node_modules/typescript/lib/typescript.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/typescript",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "Apache-2.0"
+    },
+    {
+      "importer": "frontend/packages/runtime/package.json",
+      "section": "devDependencies",
+      "name": "vue-tsc",
+      "specified": "3.3.12",
+      "installed": true,
+      "installedVersion": "3.3.12",
+      "license": "MIT",
+      "metadataPath": "node_modules/vue-tsc/package.json",
+      "entryResolution": "node_modules/vue-tsc/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vue-tsc",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/packages/runtime/package.json",
+      "section": "peerDependencies",
+      "name": "vue",
+      "specified": "3.5.43",
+      "installed": true,
+      "installedVersion": "3.5.43",
+      "license": "MIT",
+      "metadataPath": "node_modules/vue/package.json",
+      "entryResolution": "node_modules/vue/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vue",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/packages/runtime/package.json",
+      "section": "peerDependencies",
+      "name": "vue-router",
+      "specified": "5.3.1",
+      "installed": true,
+      "installedVersion": "5.3.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/vue-router/package.json",
+      "entryResolution": "node_modules/vue-router/index.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vue-router",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/packages/runtime/package.json",
+      "section": "peerDependencies",
+      "name": "pinia",
+      "specified": "4.0.3",
+      "installed": true,
+      "installedVersion": "4.0.3",
+      "license": "MIT",
+      "metadataPath": "node_modules/pinia/package.json",
+      "entryResolution": "node_modules/pinia/dist/pinia.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/pinia",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/packages/runtime/package.json",
+      "section": "peerDependencies",
+      "name": "@tanstack/vue-query",
+      "specified": "5.104.1",
+      "installed": true,
+      "installedVersion": "5.104.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/@tanstack/vue-query/package.json",
+      "entryResolution": "node_modules/@tanstack/vue-query/build/modern/index.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@tanstack/vue-query",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/packages/ui/package.json",
+      "section": "dependencies",
+      "name": "@dnd-kit/dom",
+      "specified": "0.5.0",
+      "installed": true,
+      "installedVersion": "0.5.0",
+      "license": "MIT",
+      "metadataPath": "node_modules/@dnd-kit/dom/package.json",
+      "entryResolution": "node_modules/@dnd-kit/dom/index.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@dnd-kit/dom",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/packages/ui/package.json",
+      "section": "dependencies",
+      "name": "@dnd-kit/vue",
+      "specified": "0.5.0",
+      "installed": true,
+      "installedVersion": "0.5.0",
+      "license": "MIT",
+      "metadataPath": "node_modules/@dnd-kit/vue/package.json",
+      "entryResolution": "node_modules/@dnd-kit/vue/index.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@dnd-kit/vue",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/packages/ui/package.json",
+      "section": "dependencies",
+      "name": "@floating-ui/dom",
+      "specified": "1.7.6",
+      "installed": true,
+      "installedVersion": "1.7.6",
+      "license": "MIT",
+      "metadataPath": "frontend/packages/ui/node_modules/@floating-ui/dom/package.json",
+      "entryResolution": "frontend/packages/ui/node_modules/@floating-ui/dom/dist/floating-ui.dom.umd.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": true,
+      "exactVersionMatched": true,
+      "lockPackageKey": "frontend/packages/ui/node_modules/@floating-ui/dom",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/packages/ui/package.json",
+      "section": "dependencies",
+      "name": "@tanstack/vue-table",
+      "specified": "9.2.6",
+      "installed": true,
+      "installedVersion": "9.2.6",
+      "license": "MIT",
+      "metadataPath": "node_modules/@tanstack/vue-table/package.json",
+      "entryResolution": "node_modules/@tanstack/vue-table/dist/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@tanstack/vue-table",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/packages/ui/package.json",
+      "section": "dependencies",
+      "name": "@tanstack/vue-virtual",
+      "specified": "3.13.39",
+      "installed": true,
+      "installedVersion": "3.13.39",
+      "license": "MIT",
+      "metadataPath": "node_modules/@tanstack/vue-virtual/package.json",
+      "entryResolution": "node_modules/@tanstack/vue-virtual/dist/cjs/index.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@tanstack/vue-virtual",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/packages/ui/package.json",
+      "section": "dependencies",
+      "name": "@tiptap/core",
+      "specified": "3.31.4",
+      "installed": true,
+      "installedVersion": "3.31.4",
+      "license": "MIT",
+      "metadataPath": "node_modules/@tiptap/core/package.json",
+      "entryResolution": "node_modules/@tiptap/core/dist/index.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@tiptap/core",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/packages/ui/package.json",
+      "section": "dependencies",
+      "name": "@tiptap/pm",
+      "specified": "3.31.4",
+      "installed": true,
+      "installedVersion": "3.31.4",
+      "license": "MIT",
+      "metadataPath": "node_modules/@tiptap/pm/package.json",
+      "entryResolution": null,
+      "resolutionMethod": "createRequire.resolve.paths package-local metadata (entry exports may restrict require)",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@tiptap/pm",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/packages/ui/package.json",
+      "section": "dependencies",
+      "name": "@tiptap/starter-kit",
+      "specified": "3.31.4",
+      "installed": true,
+      "installedVersion": "3.31.4",
+      "license": "MIT",
+      "metadataPath": "node_modules/@tiptap/starter-kit/package.json",
+      "entryResolution": "node_modules/@tiptap/starter-kit/dist/index.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@tiptap/starter-kit",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/packages/ui/package.json",
+      "section": "dependencies",
+      "name": "@tiptap/vue-3",
+      "specified": "3.31.4",
+      "installed": true,
+      "installedVersion": "3.31.4",
+      "license": "MIT",
+      "metadataPath": "node_modules/@tiptap/vue-3/package.json",
+      "entryResolution": "node_modules/@tiptap/vue-3/dist/index.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@tiptap/vue-3",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/packages/ui/package.json",
+      "section": "dependencies",
+      "name": "echarts",
+      "specified": "6.1.0",
+      "installed": true,
+      "installedVersion": "6.1.0",
+      "license": "Apache-2.0",
+      "metadataPath": "node_modules/echarts/package.json",
+      "entryResolution": "node_modules/echarts/dist/echarts.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/echarts",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "Apache-2.0"
+    },
+    {
+      "importer": "frontend/packages/ui/package.json",
+      "section": "dependencies",
+      "name": "konva",
+      "specified": "10.7.1",
+      "installed": true,
+      "installedVersion": "10.7.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/konva/package.json",
+      "entryResolution": "node_modules/konva/lib/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/konva",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/packages/ui/package.json",
+      "section": "dependencies",
+      "name": "vue-echarts",
+      "specified": "8.3.1",
+      "installed": true,
+      "installedVersion": "8.3.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/vue-echarts/package.json",
+      "entryResolution": "node_modules/vue-echarts/dist/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vue-echarts",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/packages/ui/package.json",
+      "section": "dependencies",
+      "name": "vue-konva",
+      "specified": "4.0.1",
+      "installed": true,
+      "installedVersion": "4.0.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/vue-konva/package.json",
+      "entryResolution": "node_modules/vue-konva/dist/vue-konva.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vue-konva",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/packages/ui/package.json",
+      "section": "devDependencies",
+      "name": "typescript",
+      "specified": "5.9.3",
+      "installed": true,
+      "installedVersion": "5.9.3",
+      "license": "Apache-2.0",
+      "metadataPath": "node_modules/typescript/package.json",
+      "entryResolution": "node_modules/typescript/lib/typescript.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/typescript",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "Apache-2.0"
+    },
+    {
+      "importer": "frontend/packages/ui/package.json",
+      "section": "devDependencies",
+      "name": "vue-tsc",
+      "specified": "3.3.12",
+      "installed": true,
+      "installedVersion": "3.3.12",
+      "license": "MIT",
+      "metadataPath": "node_modules/vue-tsc/package.json",
+      "entryResolution": "node_modules/vue-tsc/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vue-tsc",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/packages/ui/package.json",
+      "section": "peerDependencies",
+      "name": "vue",
+      "specified": "3.5.43",
+      "installed": true,
+      "installedVersion": "3.5.43",
+      "license": "MIT",
+      "metadataPath": "node_modules/vue/package.json",
+      "entryResolution": "node_modules/vue/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vue",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/packages/ui/package.json",
+      "section": "peerDependencies",
+      "name": "vuetify",
+      "specified": "4.2.4",
+      "installed": true,
+      "installedVersion": "4.2.4",
+      "license": "MIT",
+      "metadataPath": "node_modules/vuetify/package.json",
+      "entryResolution": "node_modules/vuetify/lib/framework.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vuetify",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "dependencies",
+      "name": "@sc/date",
+      "specified": "0.1.0",
+      "installed": true,
+      "installedVersion": "0.1.0",
+      "license": null,
+      "metadataPath": "frontend/packages/date/package.json",
+      "entryResolution": "frontend/packages/date/src/index.ts",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": true,
+      "exactVersionMatched": true,
+      "lockPackageKey": "frontend/packages/date",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": null
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "dependencies",
+      "name": "@mdi/js",
+      "specified": "7.4.47",
+      "installed": true,
+      "installedVersion": "7.4.47",
+      "license": "Apache-2.0",
+      "metadataPath": "node_modules/@mdi/js/package.json",
+      "entryResolution": "node_modules/@mdi/js/commonjs/mdi.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@mdi/js",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "Apache-2.0"
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "dependencies",
+      "name": "@sc/runtime",
+      "specified": "0.1.0",
+      "installed": true,
+      "installedVersion": "0.1.0",
+      "license": null,
+      "metadataPath": "frontend/packages/runtime/package.json",
+      "entryResolution": "frontend/packages/runtime/src/index.ts",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": true,
+      "exactVersionMatched": true,
+      "lockPackageKey": "frontend/packages/runtime",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": null
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "dependencies",
+      "name": "@sc/ui",
+      "specified": "0.1.0",
+      "installed": true,
+      "installedVersion": "0.1.0",
+      "license": null,
+      "metadataPath": "frontend/packages/ui/package.json",
+      "entryResolution": "frontend/packages/ui/src/index.ts",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": true,
+      "exactVersionMatched": true,
+      "lockPackageKey": "frontend/packages/ui",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": null
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "dependencies",
+      "name": "@tanstack/vue-query",
+      "specified": "5.104.1",
+      "installed": true,
+      "installedVersion": "5.104.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/@tanstack/vue-query/package.json",
+      "entryResolution": "node_modules/@tanstack/vue-query/build/modern/index.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@tanstack/vue-query",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "dependencies",
+      "name": "pinia",
+      "specified": "4.0.3",
+      "installed": true,
+      "installedVersion": "4.0.3",
+      "license": "MIT",
+      "metadataPath": "node_modules/pinia/package.json",
+      "entryResolution": "node_modules/pinia/dist/pinia.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/pinia",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "dependencies",
+      "name": "vue",
+      "specified": "3.5.43",
+      "installed": true,
+      "installedVersion": "3.5.43",
+      "license": "MIT",
+      "metadataPath": "node_modules/vue/package.json",
+      "entryResolution": "node_modules/vue/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vue",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "dependencies",
+      "name": "vue-router",
+      "specified": "5.3.1",
+      "installed": true,
+      "installedVersion": "5.3.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/vue-router/package.json",
+      "entryResolution": "node_modules/vue-router/index.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vue-router",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "dependencies",
+      "name": "vuetify",
+      "specified": "4.2.4",
+      "installed": true,
+      "installedVersion": "4.2.4",
+      "license": "MIT",
+      "metadataPath": "node_modules/vuetify/package.json",
+      "entryResolution": "node_modules/vuetify/lib/framework.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vuetify",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "dependencies",
+      "name": "@sc/i18n",
+      "specified": "0.1.0",
+      "installed": true,
+      "installedVersion": "0.1.0",
+      "license": null,
+      "metadataPath": "frontend/packages/i18n/package.json",
+      "entryResolution": "frontend/packages/i18n/src/index.ts",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": true,
+      "exactVersionMatched": true,
+      "lockPackageKey": "frontend/packages/i18n",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": null
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "dependencies",
+      "name": "@sc/excel",
+      "specified": "0.1.0",
+      "installed": true,
+      "installedVersion": "0.1.0",
+      "license": null,
+      "metadataPath": "frontend/packages/excel/package.json",
+      "entryResolution": "frontend/packages/excel/src/index.ts",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": true,
+      "exactVersionMatched": true,
+      "lockPackageKey": "frontend/packages/excel",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": null
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "dependencies",
+      "name": "vue-i18n",
+      "specified": "11.4.13",
+      "installed": true,
+      "installedVersion": "11.4.13",
+      "license": "MIT",
+      "metadataPath": "node_modules/vue-i18n/package.json",
+      "entryResolution": "node_modules/vue-i18n/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vue-i18n",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "dependencies",
+      "name": "vee-validate",
+      "specified": "4.15.1",
+      "installed": true,
+      "installedVersion": "4.15.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/vee-validate/package.json",
+      "entryResolution": "node_modules/vee-validate/dist/vee-validate.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vee-validate",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "dependencies",
+      "name": "zod",
+      "specified": "4.6.5",
+      "installed": true,
+      "installedVersion": "4.6.5",
+      "license": "MIT",
+      "metadataPath": "node_modules/zod/package.json",
+      "entryResolution": "node_modules/zod/index.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/zod",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "devDependencies",
+      "name": "@storybook/addon-a11y",
+      "specified": "10.4.1",
+      "installed": true,
+      "installedVersion": "10.4.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/@storybook/addon-a11y/package.json",
+      "entryResolution": "node_modules/@storybook/addon-a11y/dist/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@storybook/addon-a11y",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "devDependencies",
+      "name": "@storybook/addon-docs",
+      "specified": "10.4.1",
+      "installed": true,
+      "installedVersion": "10.4.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/@storybook/addon-docs/package.json",
+      "entryResolution": "node_modules/@storybook/addon-docs/dist/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@storybook/addon-docs",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "devDependencies",
+      "name": "@storybook/addon-vitest",
+      "specified": "10.4.1",
+      "installed": true,
+      "installedVersion": "10.4.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/@storybook/addon-vitest/package.json",
+      "entryResolution": "node_modules/@storybook/addon-vitest/dist/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@storybook/addon-vitest",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "devDependencies",
+      "name": "@storybook/vue3-vite",
+      "specified": "10.4.1",
+      "installed": true,
+      "installedVersion": "10.4.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/@storybook/vue3-vite/package.json",
+      "entryResolution": "node_modules/@storybook/vue3-vite/dist/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@storybook/vue3-vite",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "devDependencies",
+      "name": "@vitejs/plugin-vue",
+      "specified": "6.0.9",
+      "installed": true,
+      "installedVersion": "6.0.9",
+      "license": "MIT",
+      "metadataPath": "node_modules/@vitejs/plugin-vue/package.json",
+      "entryResolution": "node_modules/@vitejs/plugin-vue/dist/index.mjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@vitejs/plugin-vue",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "devDependencies",
+      "name": "@vitest/browser-playwright",
+      "specified": "4.1.11",
+      "installed": true,
+      "installedVersion": "4.1.11",
+      "license": "MIT",
+      "metadataPath": "node_modules/@vitest/browser-playwright/package.json",
+      "entryResolution": "node_modules/@vitest/browser-playwright/dist/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@vitest/browser-playwright",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "devDependencies",
+      "name": "msw",
+      "specified": "2.13.0",
+      "installed": true,
+      "installedVersion": "2.13.0",
+      "license": "MIT",
+      "metadataPath": "node_modules/msw/package.json",
+      "entryResolution": "node_modules/msw/lib/core/index.mjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/msw",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "devDependencies",
+      "name": "msw-storybook-addon",
+      "specified": "2.0.7",
+      "installed": true,
+      "installedVersion": "2.0.7",
+      "license": "MIT",
+      "metadataPath": "node_modules/msw-storybook-addon/package.json",
+      "entryResolution": "node_modules/msw-storybook-addon/dist/index.node.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/msw-storybook-addon",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "devDependencies",
+      "name": "playwright",
+      "specified": "1.63.0",
+      "installed": true,
+      "installedVersion": "1.63.0",
+      "license": "Apache-2.0",
+      "metadataPath": "node_modules/playwright/package.json",
+      "entryResolution": "node_modules/playwright/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/playwright",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "Apache-2.0"
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "devDependencies",
+      "name": "sass-embedded",
+      "specified": "1.105.1",
+      "installed": true,
+      "installedVersion": "1.105.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/sass-embedded/package.json",
+      "entryResolution": "node_modules/sass-embedded/dist/lib/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/sass-embedded",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "devDependencies",
+      "name": "storybook",
+      "specified": "10.4.1",
+      "installed": true,
+      "installedVersion": "10.4.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/storybook/package.json",
+      "entryResolution": null,
+      "resolutionMethod": "createRequire.resolve.paths package-local metadata (entry exports may restrict require)",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/storybook",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "devDependencies",
+      "name": "typescript",
+      "specified": "5.9.3",
+      "installed": true,
+      "installedVersion": "5.9.3",
+      "license": "Apache-2.0",
+      "metadataPath": "node_modules/typescript/package.json",
+      "entryResolution": "node_modules/typescript/lib/typescript.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/typescript",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "Apache-2.0"
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "devDependencies",
+      "name": "vite",
+      "specified": "8.3.1",
+      "installed": true,
+      "installedVersion": "8.3.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/vite/package.json",
+      "entryResolution": "node_modules/vite/dist/node/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vite",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "devDependencies",
+      "name": "vite-plugin-vuetify",
+      "specified": "2.1.3",
+      "installed": true,
+      "installedVersion": "2.1.3",
+      "license": "MIT",
+      "metadataPath": "node_modules/vite-plugin-vuetify/package.json",
+      "entryResolution": "node_modules/vite-plugin-vuetify/dist/index.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vite-plugin-vuetify",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "devDependencies",
+      "name": "vitest",
+      "specified": "4.1.11",
+      "installed": true,
+      "installedVersion": "4.1.11",
+      "license": "MIT",
+      "metadataPath": "node_modules/vitest/package.json",
+      "entryResolution": "node_modules/vitest/index.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vitest",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "devDependencies",
+      "name": "vue-component-meta",
+      "specified": "2.2.12",
+      "installed": true,
+      "installedVersion": "2.2.12",
+      "license": "MIT",
+      "metadataPath": "node_modules/vue-component-meta/package.json",
+      "entryResolution": "node_modules/vue-component-meta/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vue-component-meta",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "devDependencies",
+      "name": "vue-tsc",
+      "specified": "3.3.12",
+      "installed": true,
+      "installedVersion": "3.3.12",
+      "license": "MIT",
+      "metadataPath": "node_modules/vue-tsc/package.json",
+      "entryResolution": "node_modules/vue-tsc/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vue-tsc",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "devDependencies",
+      "name": "esbuild",
+      "specified": "0.28.1",
+      "installed": true,
+      "installedVersion": "0.28.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/esbuild/package.json",
+      "entryResolution": "node_modules/esbuild/lib/main.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/esbuild",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/reference-app/package.json",
+      "section": "dependencies",
+      "name": "@sc/date",
+      "specified": "0.1.0",
+      "installed": true,
+      "installedVersion": "0.1.0",
+      "license": null,
+      "metadataPath": "frontend/packages/date/package.json",
+      "entryResolution": "frontend/packages/date/src/index.ts",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": true,
+      "exactVersionMatched": true,
+      "lockPackageKey": "frontend/packages/date",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": null
+    },
+    {
+      "importer": "frontend/apps/reference-app/package.json",
+      "section": "dependencies",
+      "name": "@sc/ui",
+      "specified": "0.1.0",
+      "installed": true,
+      "installedVersion": "0.1.0",
+      "license": null,
+      "metadataPath": "frontend/packages/ui/package.json",
+      "entryResolution": "frontend/packages/ui/src/index.ts",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": true,
+      "exactVersionMatched": true,
+      "lockPackageKey": "frontend/packages/ui",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": null
+    },
+    {
+      "importer": "frontend/apps/reference-app/package.json",
+      "section": "dependencies",
+      "name": "@sc/runtime",
+      "specified": "0.1.0",
+      "installed": true,
+      "installedVersion": "0.1.0",
+      "license": null,
+      "metadataPath": "frontend/packages/runtime/package.json",
+      "entryResolution": "frontend/packages/runtime/src/index.ts",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": true,
+      "exactVersionMatched": true,
+      "lockPackageKey": "frontend/packages/runtime",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": null
+    },
+    {
+      "importer": "frontend/apps/reference-app/package.json",
+      "section": "dependencies",
+      "name": "vue",
+      "specified": "3.5.43",
+      "installed": true,
+      "installedVersion": "3.5.43",
+      "license": "MIT",
+      "metadataPath": "node_modules/vue/package.json",
+      "entryResolution": "node_modules/vue/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vue",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/reference-app/package.json",
+      "section": "dependencies",
+      "name": "vuetify",
+      "specified": "4.2.4",
+      "installed": true,
+      "installedVersion": "4.2.4",
+      "license": "MIT",
+      "metadataPath": "node_modules/vuetify/package.json",
+      "entryResolution": "node_modules/vuetify/lib/framework.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vuetify",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/reference-app/package.json",
+      "section": "dependencies",
+      "name": "vue-router",
+      "specified": "5.3.1",
+      "installed": true,
+      "installedVersion": "5.3.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/vue-router/package.json",
+      "entryResolution": "node_modules/vue-router/index.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vue-router",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/reference-app/package.json",
+      "section": "dependencies",
+      "name": "pinia",
+      "specified": "4.0.3",
+      "installed": true,
+      "installedVersion": "4.0.3",
+      "license": "MIT",
+      "metadataPath": "node_modules/pinia/package.json",
+      "entryResolution": "node_modules/pinia/dist/pinia.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/pinia",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/reference-app/package.json",
+      "section": "dependencies",
+      "name": "@tanstack/vue-query",
+      "specified": "5.104.1",
+      "installed": true,
+      "installedVersion": "5.104.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/@tanstack/vue-query/package.json",
+      "entryResolution": "node_modules/@tanstack/vue-query/build/modern/index.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@tanstack/vue-query",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/reference-app/package.json",
+      "section": "dependencies",
+      "name": "@mdi/js",
+      "specified": "7.4.47",
+      "installed": true,
+      "installedVersion": "7.4.47",
+      "license": "Apache-2.0",
+      "metadataPath": "node_modules/@mdi/js/package.json",
+      "entryResolution": "node_modules/@mdi/js/commonjs/mdi.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@mdi/js",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "Apache-2.0"
+    },
+    {
+      "importer": "frontend/apps/reference-app/package.json",
+      "section": "dependencies",
+      "name": "@vueuse/core",
+      "specified": "15.0.0",
+      "installed": true,
+      "installedVersion": "15.0.0",
+      "license": "MIT",
+      "metadataPath": "node_modules/@vueuse/core/package.json",
+      "entryResolution": "node_modules/@vueuse/core/dist/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@vueuse/core",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/reference-app/package.json",
+      "section": "dependencies",
+      "name": "vee-validate",
+      "specified": "4.15.1",
+      "installed": true,
+      "installedVersion": "4.15.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/vee-validate/package.json",
+      "entryResolution": "node_modules/vee-validate/dist/vee-validate.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vee-validate",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/reference-app/package.json",
+      "section": "dependencies",
+      "name": "zod",
+      "specified": "4.6.5",
+      "installed": true,
+      "installedVersion": "4.6.5",
+      "license": "MIT",
+      "metadataPath": "node_modules/zod/package.json",
+      "entryResolution": "node_modules/zod/index.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/zod",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/reference-app/package.json",
+      "section": "dependencies",
+      "name": "@sc/i18n",
+      "specified": "0.1.0",
+      "installed": true,
+      "installedVersion": "0.1.0",
+      "license": null,
+      "metadataPath": "frontend/packages/i18n/package.json",
+      "entryResolution": "frontend/packages/i18n/src/index.ts",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": true,
+      "exactVersionMatched": true,
+      "lockPackageKey": "frontend/packages/i18n",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": null
+    },
+    {
+      "importer": "frontend/apps/reference-app/package.json",
+      "section": "dependencies",
+      "name": "@sc/excel",
+      "specified": "0.1.0",
+      "installed": true,
+      "installedVersion": "0.1.0",
+      "license": null,
+      "metadataPath": "frontend/packages/excel/package.json",
+      "entryResolution": "frontend/packages/excel/src/index.ts",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": true,
+      "exactVersionMatched": true,
+      "lockPackageKey": "frontend/packages/excel",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": null
+    },
+    {
+      "importer": "frontend/apps/reference-app/package.json",
+      "section": "dependencies",
+      "name": "vue-i18n",
+      "specified": "11.4.13",
+      "installed": true,
+      "installedVersion": "11.4.13",
+      "license": "MIT",
+      "metadataPath": "node_modules/vue-i18n/package.json",
+      "entryResolution": "node_modules/vue-i18n/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vue-i18n",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/reference-app/package.json",
+      "section": "devDependencies",
+      "name": "vite",
+      "specified": "8.3.1",
+      "installed": true,
+      "installedVersion": "8.3.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/vite/package.json",
+      "entryResolution": "node_modules/vite/dist/node/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vite",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/reference-app/package.json",
+      "section": "devDependencies",
+      "name": "@vitejs/plugin-vue",
+      "specified": "6.0.9",
+      "installed": true,
+      "installedVersion": "6.0.9",
+      "license": "MIT",
+      "metadataPath": "node_modules/@vitejs/plugin-vue/package.json",
+      "entryResolution": "node_modules/@vitejs/plugin-vue/dist/index.mjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@vitejs/plugin-vue",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/reference-app/package.json",
+      "section": "devDependencies",
+      "name": "vite-plugin-vuetify",
+      "specified": "2.1.3",
+      "installed": true,
+      "installedVersion": "2.1.3",
+      "license": "MIT",
+      "metadataPath": "node_modules/vite-plugin-vuetify/package.json",
+      "entryResolution": "node_modules/vite-plugin-vuetify/dist/index.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vite-plugin-vuetify",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/reference-app/package.json",
+      "section": "devDependencies",
+      "name": "typescript",
+      "specified": "5.9.3",
+      "installed": true,
+      "installedVersion": "5.9.3",
+      "license": "Apache-2.0",
+      "metadataPath": "node_modules/typescript/package.json",
+      "entryResolution": "node_modules/typescript/lib/typescript.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/typescript",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "Apache-2.0"
+    },
+    {
+      "importer": "frontend/apps/reference-app/package.json",
+      "section": "devDependencies",
+      "name": "vue-tsc",
+      "specified": "3.3.12",
+      "installed": true,
+      "installedVersion": "3.3.12",
+      "license": "MIT",
+      "metadataPath": "node_modules/vue-tsc/package.json",
+      "entryResolution": "node_modules/vue-tsc/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vue-tsc",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/reference-app/package.json",
+      "section": "devDependencies",
+      "name": "sass-embedded",
+      "specified": "1.105.1",
+      "installed": true,
+      "installedVersion": "1.105.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/sass-embedded/package.json",
+      "entryResolution": "node_modules/sass-embedded/dist/lib/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/sass-embedded",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/starter-app/package.json",
+      "section": "dependencies",
+      "name": "@sc/date",
+      "specified": "0.1.0",
+      "installed": true,
+      "installedVersion": "0.1.0",
+      "license": null,
+      "metadataPath": "frontend/packages/date/package.json",
+      "entryResolution": "frontend/packages/date/src/index.ts",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": true,
+      "exactVersionMatched": true,
+      "lockPackageKey": "frontend/packages/date",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": null
+    },
+    {
+      "importer": "frontend/apps/starter-app/package.json",
+      "section": "dependencies",
+      "name": "@sc/ui",
+      "specified": "0.1.0",
+      "installed": true,
+      "installedVersion": "0.1.0",
+      "license": null,
+      "metadataPath": "frontend/packages/ui/package.json",
+      "entryResolution": "frontend/packages/ui/src/index.ts",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": true,
+      "exactVersionMatched": true,
+      "lockPackageKey": "frontend/packages/ui",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": null
+    },
+    {
+      "importer": "frontend/apps/starter-app/package.json",
+      "section": "dependencies",
+      "name": "@sc/runtime",
+      "specified": "0.1.0",
+      "installed": true,
+      "installedVersion": "0.1.0",
+      "license": null,
+      "metadataPath": "frontend/packages/runtime/package.json",
+      "entryResolution": "frontend/packages/runtime/src/index.ts",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": true,
+      "exactVersionMatched": true,
+      "lockPackageKey": "frontend/packages/runtime",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": null
+    },
+    {
+      "importer": "frontend/apps/starter-app/package.json",
+      "section": "dependencies",
+      "name": "vue",
+      "specified": "3.5.43",
+      "installed": true,
+      "installedVersion": "3.5.43",
+      "license": "MIT",
+      "metadataPath": "node_modules/vue/package.json",
+      "entryResolution": "node_modules/vue/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vue",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/starter-app/package.json",
+      "section": "dependencies",
+      "name": "vuetify",
+      "specified": "4.2.4",
+      "installed": true,
+      "installedVersion": "4.2.4",
+      "license": "MIT",
+      "metadataPath": "node_modules/vuetify/package.json",
+      "entryResolution": "node_modules/vuetify/lib/framework.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vuetify",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/starter-app/package.json",
+      "section": "dependencies",
+      "name": "vue-router",
+      "specified": "5.3.1",
+      "installed": true,
+      "installedVersion": "5.3.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/vue-router/package.json",
+      "entryResolution": "node_modules/vue-router/index.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vue-router",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/starter-app/package.json",
+      "section": "dependencies",
+      "name": "pinia",
+      "specified": "4.0.3",
+      "installed": true,
+      "installedVersion": "4.0.3",
+      "license": "MIT",
+      "metadataPath": "node_modules/pinia/package.json",
+      "entryResolution": "node_modules/pinia/dist/pinia.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/pinia",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/starter-app/package.json",
+      "section": "dependencies",
+      "name": "@tanstack/vue-query",
+      "specified": "5.104.1",
+      "installed": true,
+      "installedVersion": "5.104.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/@tanstack/vue-query/package.json",
+      "entryResolution": "node_modules/@tanstack/vue-query/build/modern/index.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@tanstack/vue-query",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/starter-app/package.json",
+      "section": "dependencies",
+      "name": "@mdi/js",
+      "specified": "7.4.47",
+      "installed": true,
+      "installedVersion": "7.4.47",
+      "license": "Apache-2.0",
+      "metadataPath": "node_modules/@mdi/js/package.json",
+      "entryResolution": "node_modules/@mdi/js/commonjs/mdi.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@mdi/js",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "Apache-2.0"
+    },
+    {
+      "importer": "frontend/apps/starter-app/package.json",
+      "section": "dependencies",
+      "name": "@sc/i18n",
+      "specified": "0.1.0",
+      "installed": true,
+      "installedVersion": "0.1.0",
+      "license": null,
+      "metadataPath": "frontend/packages/i18n/package.json",
+      "entryResolution": "frontend/packages/i18n/src/index.ts",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": true,
+      "exactVersionMatched": true,
+      "lockPackageKey": "frontend/packages/i18n",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": null
+    },
+    {
+      "importer": "frontend/apps/starter-app/package.json",
+      "section": "dependencies",
+      "name": "@sc/excel",
+      "specified": "0.1.0",
+      "installed": true,
+      "installedVersion": "0.1.0",
+      "license": null,
+      "metadataPath": "frontend/packages/excel/package.json",
+      "entryResolution": "frontend/packages/excel/src/index.ts",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": true,
+      "exactVersionMatched": true,
+      "lockPackageKey": "frontend/packages/excel",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": null
+    },
+    {
+      "importer": "frontend/apps/starter-app/package.json",
+      "section": "dependencies",
+      "name": "vee-validate",
+      "specified": "4.15.1",
+      "installed": true,
+      "installedVersion": "4.15.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/vee-validate/package.json",
+      "entryResolution": "node_modules/vee-validate/dist/vee-validate.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vee-validate",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/starter-app/package.json",
+      "section": "dependencies",
+      "name": "zod",
+      "specified": "4.6.5",
+      "installed": true,
+      "installedVersion": "4.6.5",
+      "license": "MIT",
+      "metadataPath": "node_modules/zod/package.json",
+      "entryResolution": "node_modules/zod/index.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/zod",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/starter-app/package.json",
+      "section": "dependencies",
+      "name": "vue-i18n",
+      "specified": "11.4.13",
+      "installed": true,
+      "installedVersion": "11.4.13",
+      "license": "MIT",
+      "metadataPath": "node_modules/vue-i18n/package.json",
+      "entryResolution": "node_modules/vue-i18n/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vue-i18n",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/starter-app/package.json",
+      "section": "dependencies",
+      "name": "@vueuse/core",
+      "specified": "15.0.0",
+      "installed": true,
+      "installedVersion": "15.0.0",
+      "license": "MIT",
+      "metadataPath": "node_modules/@vueuse/core/package.json",
+      "entryResolution": "node_modules/@vueuse/core/dist/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@vueuse/core",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/starter-app/package.json",
+      "section": "devDependencies",
+      "name": "vite",
+      "specified": "8.3.1",
+      "installed": true,
+      "installedVersion": "8.3.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/vite/package.json",
+      "entryResolution": "node_modules/vite/dist/node/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vite",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/starter-app/package.json",
+      "section": "devDependencies",
+      "name": "@vitejs/plugin-vue",
+      "specified": "6.0.9",
+      "installed": true,
+      "installedVersion": "6.0.9",
+      "license": "MIT",
+      "metadataPath": "node_modules/@vitejs/plugin-vue/package.json",
+      "entryResolution": "node_modules/@vitejs/plugin-vue/dist/index.mjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@vitejs/plugin-vue",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/starter-app/package.json",
+      "section": "devDependencies",
+      "name": "vite-plugin-vuetify",
+      "specified": "2.1.3",
+      "installed": true,
+      "installedVersion": "2.1.3",
+      "license": "MIT",
+      "metadataPath": "node_modules/vite-plugin-vuetify/package.json",
+      "entryResolution": "node_modules/vite-plugin-vuetify/dist/index.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vite-plugin-vuetify",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/starter-app/package.json",
+      "section": "devDependencies",
+      "name": "typescript",
+      "specified": "5.9.3",
+      "installed": true,
+      "installedVersion": "5.9.3",
+      "license": "Apache-2.0",
+      "metadataPath": "node_modules/typescript/package.json",
+      "entryResolution": "node_modules/typescript/lib/typescript.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/typescript",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "Apache-2.0"
+    },
+    {
+      "importer": "frontend/apps/starter-app/package.json",
+      "section": "devDependencies",
+      "name": "vue-tsc",
+      "specified": "3.3.12",
+      "installed": true,
+      "installedVersion": "3.3.12",
+      "license": "MIT",
+      "metadataPath": "node_modules/vue-tsc/package.json",
+      "entryResolution": "node_modules/vue-tsc/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vue-tsc",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/starter-app/package.json",
+      "section": "devDependencies",
+      "name": "sass-embedded",
+      "specified": "1.105.1",
+      "installed": true,
+      "installedVersion": "1.105.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/sass-embedded/package.json",
+      "entryResolution": "node_modules/sass-embedded/dist/lib/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/sass-embedded",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    }
+  ],
+  "uniqueExternalDirectInventory": [
+    {
+      "importer": "frontend/packages/ui/package.json",
+      "section": "dependencies",
+      "name": "@dnd-kit/dom",
+      "specified": "0.5.0",
+      "installed": true,
+      "installedVersion": "0.5.0",
+      "license": "MIT",
+      "metadataPath": "node_modules/@dnd-kit/dom/package.json",
+      "entryResolution": "node_modules/@dnd-kit/dom/index.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@dnd-kit/dom",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/packages/ui/package.json",
+      "section": "dependencies",
+      "name": "@dnd-kit/vue",
+      "specified": "0.5.0",
+      "installed": true,
+      "installedVersion": "0.5.0",
+      "license": "MIT",
+      "metadataPath": "node_modules/@dnd-kit/vue/package.json",
+      "entryResolution": "node_modules/@dnd-kit/vue/index.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@dnd-kit/vue",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "package.json",
+      "section": "devDependencies",
+      "name": "@eslint/js",
+      "specified": "10.0.1",
+      "installed": true,
+      "installedVersion": "10.0.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/@eslint/js/package.json",
+      "entryResolution": "node_modules/@eslint/js/src/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@eslint/js",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/starter-app/package.json",
+      "section": "dependencies",
+      "name": "@mdi/js",
+      "specified": "7.4.47",
+      "installed": true,
+      "installedVersion": "7.4.47",
+      "license": "Apache-2.0",
+      "metadataPath": "node_modules/@mdi/js/package.json",
+      "entryResolution": "node_modules/@mdi/js/commonjs/mdi.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@mdi/js",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "Apache-2.0"
+    },
+    {
+      "importer": "package.json",
+      "section": "devDependencies",
+      "name": "@playwright/test",
+      "specified": "1.63.0",
+      "installed": true,
+      "installedVersion": "1.63.0",
+      "license": "Apache-2.0",
+      "metadataPath": "node_modules/@playwright/test/package.json",
+      "entryResolution": "node_modules/@playwright/test/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@playwright/test",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "Apache-2.0"
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "devDependencies",
+      "name": "@storybook/addon-a11y",
+      "specified": "10.4.1",
+      "installed": true,
+      "installedVersion": "10.4.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/@storybook/addon-a11y/package.json",
+      "entryResolution": "node_modules/@storybook/addon-a11y/dist/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@storybook/addon-a11y",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "devDependencies",
+      "name": "@storybook/addon-docs",
+      "specified": "10.4.1",
+      "installed": true,
+      "installedVersion": "10.4.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/@storybook/addon-docs/package.json",
+      "entryResolution": "node_modules/@storybook/addon-docs/dist/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@storybook/addon-docs",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "devDependencies",
+      "name": "@storybook/addon-vitest",
+      "specified": "10.4.1",
+      "installed": true,
+      "installedVersion": "10.4.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/@storybook/addon-vitest/package.json",
+      "entryResolution": "node_modules/@storybook/addon-vitest/dist/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@storybook/addon-vitest",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "devDependencies",
+      "name": "@storybook/vue3-vite",
+      "specified": "10.4.1",
+      "installed": true,
+      "installedVersion": "10.4.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/@storybook/vue3-vite/package.json",
+      "entryResolution": "node_modules/@storybook/vue3-vite/dist/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@storybook/vue3-vite",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/starter-app/package.json",
+      "section": "dependencies",
+      "name": "@tanstack/vue-query",
+      "specified": "5.104.1",
+      "installed": true,
+      "installedVersion": "5.104.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/@tanstack/vue-query/package.json",
+      "entryResolution": "node_modules/@tanstack/vue-query/build/modern/index.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@tanstack/vue-query",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/packages/ui/package.json",
+      "section": "dependencies",
+      "name": "@tanstack/vue-table",
+      "specified": "9.2.6",
+      "installed": true,
+      "installedVersion": "9.2.6",
+      "license": "MIT",
+      "metadataPath": "node_modules/@tanstack/vue-table/package.json",
+      "entryResolution": "node_modules/@tanstack/vue-table/dist/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@tanstack/vue-table",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/packages/ui/package.json",
+      "section": "dependencies",
+      "name": "@tanstack/vue-virtual",
+      "specified": "3.13.39",
+      "installed": true,
+      "installedVersion": "3.13.39",
+      "license": "MIT",
+      "metadataPath": "node_modules/@tanstack/vue-virtual/package.json",
+      "entryResolution": "node_modules/@tanstack/vue-virtual/dist/cjs/index.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@tanstack/vue-virtual",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/packages/ui/package.json",
+      "section": "dependencies",
+      "name": "@tiptap/core",
+      "specified": "3.31.4",
+      "installed": true,
+      "installedVersion": "3.31.4",
+      "license": "MIT",
+      "metadataPath": "node_modules/@tiptap/core/package.json",
+      "entryResolution": "node_modules/@tiptap/core/dist/index.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@tiptap/core",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/packages/ui/package.json",
+      "section": "dependencies",
+      "name": "@tiptap/pm",
+      "specified": "3.31.4",
+      "installed": true,
+      "installedVersion": "3.31.4",
+      "license": "MIT",
+      "metadataPath": "node_modules/@tiptap/pm/package.json",
+      "entryResolution": null,
+      "resolutionMethod": "createRequire.resolve.paths package-local metadata (entry exports may restrict require)",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@tiptap/pm",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/packages/ui/package.json",
+      "section": "dependencies",
+      "name": "@tiptap/starter-kit",
+      "specified": "3.31.4",
+      "installed": true,
+      "installedVersion": "3.31.4",
+      "license": "MIT",
+      "metadataPath": "node_modules/@tiptap/starter-kit/package.json",
+      "entryResolution": "node_modules/@tiptap/starter-kit/dist/index.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@tiptap/starter-kit",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/packages/ui/package.json",
+      "section": "dependencies",
+      "name": "@tiptap/vue-3",
+      "specified": "3.31.4",
+      "installed": true,
+      "installedVersion": "3.31.4",
+      "license": "MIT",
+      "metadataPath": "node_modules/@tiptap/vue-3/package.json",
+      "entryResolution": "node_modules/@tiptap/vue-3/dist/index.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@tiptap/vue-3",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "package.json",
+      "section": "devDependencies",
+      "name": "@types/node",
+      "specified": "24.19.1",
+      "installed": true,
+      "installedVersion": "24.19.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/@types/node/package.json",
+      "entryResolution": null,
+      "resolutionMethod": "createRequire.resolve.paths package-local metadata (entry exports may restrict require)",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@types/node",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/starter-app/package.json",
+      "section": "devDependencies",
+      "name": "@vitejs/plugin-vue",
+      "specified": "6.0.9",
+      "installed": true,
+      "installedVersion": "6.0.9",
+      "license": "MIT",
+      "metadataPath": "node_modules/@vitejs/plugin-vue/package.json",
+      "entryResolution": "node_modules/@vitejs/plugin-vue/dist/index.mjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@vitejs/plugin-vue",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "devDependencies",
+      "name": "@vitest/browser-playwright",
+      "specified": "4.1.11",
+      "installed": true,
+      "installedVersion": "4.1.11",
+      "license": "MIT",
+      "metadataPath": "node_modules/@vitest/browser-playwright/package.json",
+      "entryResolution": "node_modules/@vitest/browser-playwright/dist/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@vitest/browser-playwright",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "package.json",
+      "section": "devDependencies",
+      "name": "@vue/compiler-dom",
+      "specified": "3.5.43",
+      "installed": true,
+      "installedVersion": "3.5.43",
+      "license": "MIT",
+      "metadataPath": "node_modules/@vue/compiler-dom/package.json",
+      "entryResolution": "node_modules/@vue/compiler-dom/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@vue/compiler-dom",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "package.json",
+      "section": "devDependencies",
+      "name": "@vue/test-utils",
+      "specified": "2.5.1",
+      "installed": true,
+      "installedVersion": "2.5.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/@vue/test-utils/package.json",
+      "entryResolution": "node_modules/@vue/test-utils/dist/vue-test-utils.cjs.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@vue/test-utils",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/starter-app/package.json",
+      "section": "dependencies",
+      "name": "@vueuse/core",
+      "specified": "15.0.0",
+      "installed": true,
+      "installedVersion": "15.0.0",
+      "license": "MIT",
+      "metadataPath": "node_modules/@vueuse/core/package.json",
+      "entryResolution": "node_modules/@vueuse/core/dist/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/@vueuse/core",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "package.json",
+      "section": "devDependencies",
+      "name": "axe-core",
+      "specified": "4.14.0",
+      "installed": true,
+      "installedVersion": "4.14.0",
+      "license": "MPL-2.0",
+      "metadataPath": "node_modules/axe-core/package.json",
+      "entryResolution": "node_modules/axe-core/axe.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/axe-core",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MPL-2.0"
+    },
+    {
+      "importer": "frontend/packages/runtime/package.json",
+      "section": "dependencies",
+      "name": "axios",
+      "specified": "1.20.0",
+      "installed": true,
+      "installedVersion": "1.20.0",
+      "license": "MIT",
+      "metadataPath": "node_modules/axios/package.json",
+      "entryResolution": "node_modules/axios/dist/node/axios.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/axios",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/packages/date/package.json",
+      "section": "dependencies",
+      "name": "dayjs",
+      "specified": "1.11.23",
+      "installed": true,
+      "installedVersion": "1.11.23",
+      "license": "MIT",
+      "metadataPath": "node_modules/dayjs/package.json",
+      "entryResolution": "node_modules/dayjs/dayjs.min.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/dayjs",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/packages/ui/package.json",
+      "section": "dependencies",
+      "name": "echarts",
+      "specified": "6.1.0",
+      "installed": true,
+      "installedVersion": "6.1.0",
+      "license": "Apache-2.0",
+      "metadataPath": "node_modules/echarts/package.json",
+      "entryResolution": "node_modules/echarts/dist/echarts.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/echarts",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "Apache-2.0"
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "devDependencies",
+      "name": "esbuild",
+      "specified": "0.28.1",
+      "installed": true,
+      "installedVersion": "0.28.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/esbuild/package.json",
+      "entryResolution": "node_modules/esbuild/lib/main.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/esbuild",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "package.json",
+      "section": "devDependencies",
+      "name": "eslint",
+      "specified": "10.12.0",
+      "installed": true,
+      "installedVersion": "10.12.0",
+      "license": "MIT",
+      "metadataPath": "node_modules/eslint/package.json",
+      "entryResolution": "node_modules/eslint/lib/api.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/eslint",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "package.json",
+      "section": "devDependencies",
+      "name": "eslint-config-prettier",
+      "specified": "10.1.8",
+      "installed": true,
+      "installedVersion": "10.1.8",
+      "license": "MIT",
+      "metadataPath": "node_modules/eslint-config-prettier/package.json",
+      "entryResolution": "node_modules/eslint-config-prettier/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/eslint-config-prettier",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "package.json",
+      "section": "devDependencies",
+      "name": "eslint-plugin-vue",
+      "specified": "10.11.1",
+      "installed": true,
+      "installedVersion": "10.11.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/eslint-plugin-vue/package.json",
+      "entryResolution": "node_modules/eslint-plugin-vue/dist/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/eslint-plugin-vue",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/packages/excel/package.json",
+      "section": "dependencies",
+      "name": "exceljs",
+      "specified": "4.4.0",
+      "installed": true,
+      "installedVersion": "4.4.0",
+      "license": "MIT",
+      "metadataPath": "node_modules/exceljs/package.json",
+      "entryResolution": "node_modules/exceljs/excel.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/exceljs",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "package.json",
+      "section": "devDependencies",
+      "name": "globals",
+      "specified": "17.13.0",
+      "installed": true,
+      "installedVersion": "17.13.0",
+      "license": "MIT",
+      "metadataPath": "node_modules/globals/package.json",
+      "entryResolution": "node_modules/globals/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/globals",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "package.json",
+      "section": "devDependencies",
+      "name": "happy-dom",
+      "specified": "20.14.5",
+      "installed": true,
+      "installedVersion": "20.14.5",
+      "license": "MIT",
+      "metadataPath": "node_modules/happy-dom/package.json",
+      "entryResolution": "node_modules/happy-dom/lib/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/happy-dom",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/packages/ui/package.json",
+      "section": "dependencies",
+      "name": "konva",
+      "specified": "10.7.1",
+      "installed": true,
+      "installedVersion": "10.7.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/konva/package.json",
+      "entryResolution": "node_modules/konva/lib/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/konva",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "devDependencies",
+      "name": "msw",
+      "specified": "2.13.0",
+      "installed": true,
+      "installedVersion": "2.13.0",
+      "license": "MIT",
+      "metadataPath": "node_modules/msw/package.json",
+      "entryResolution": "node_modules/msw/lib/core/index.mjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/msw",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "devDependencies",
+      "name": "msw-storybook-addon",
+      "specified": "2.0.7",
+      "installed": true,
+      "installedVersion": "2.0.7",
+      "license": "MIT",
+      "metadataPath": "node_modules/msw-storybook-addon/package.json",
+      "entryResolution": "node_modules/msw-storybook-addon/dist/index.node.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/msw-storybook-addon",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "package.json",
+      "section": "devDependencies",
+      "name": "openapi-typescript",
+      "specified": "7.13.0",
+      "installed": true,
+      "installedVersion": "7.13.0",
+      "license": "MIT",
+      "metadataPath": "node_modules/openapi-typescript/package.json",
+      "entryResolution": "node_modules/openapi-typescript/dist/index.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/openapi-typescript",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/starter-app/package.json",
+      "section": "dependencies",
+      "name": "pinia",
+      "specified": "4.0.3",
+      "installed": true,
+      "installedVersion": "4.0.3",
+      "license": "MIT",
+      "metadataPath": "node_modules/pinia/package.json",
+      "entryResolution": "node_modules/pinia/dist/pinia.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/pinia",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "devDependencies",
+      "name": "playwright",
+      "specified": "1.63.0",
+      "installed": true,
+      "installedVersion": "1.63.0",
+      "license": "Apache-2.0",
+      "metadataPath": "node_modules/playwright/package.json",
+      "entryResolution": "node_modules/playwright/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/playwright",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "Apache-2.0"
+    },
+    {
+      "importer": "package.json",
+      "section": "devDependencies",
+      "name": "prettier",
+      "specified": "3.9.9",
+      "installed": true,
+      "installedVersion": "3.9.9",
+      "license": "MIT",
+      "metadataPath": "node_modules/prettier/package.json",
+      "entryResolution": "node_modules/prettier/index.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/prettier",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/starter-app/package.json",
+      "section": "devDependencies",
+      "name": "sass-embedded",
+      "specified": "1.105.1",
+      "installed": true,
+      "installedVersion": "1.105.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/sass-embedded/package.json",
+      "entryResolution": "node_modules/sass-embedded/dist/lib/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/sass-embedded",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "devDependencies",
+      "name": "storybook",
+      "specified": "10.4.1",
+      "installed": true,
+      "installedVersion": "10.4.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/storybook/package.json",
+      "entryResolution": null,
+      "resolutionMethod": "createRequire.resolve.paths package-local metadata (entry exports may restrict require)",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/storybook",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/starter-app/package.json",
+      "section": "devDependencies",
+      "name": "typescript",
+      "specified": "5.9.3",
+      "installed": true,
+      "installedVersion": "5.9.3",
+      "license": "Apache-2.0",
+      "metadataPath": "node_modules/typescript/package.json",
+      "entryResolution": "node_modules/typescript/lib/typescript.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/typescript",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "Apache-2.0"
+    },
+    {
+      "importer": "package.json",
+      "section": "devDependencies",
+      "name": "typescript-eslint",
+      "specified": "8.71.1",
+      "installed": true,
+      "installedVersion": "8.71.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/typescript-eslint/package.json",
+      "entryResolution": "node_modules/typescript-eslint/dist/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/typescript-eslint",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/starter-app/package.json",
+      "section": "dependencies",
+      "name": "vee-validate",
+      "specified": "4.15.1",
+      "installed": true,
+      "installedVersion": "4.15.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/vee-validate/package.json",
+      "entryResolution": "node_modules/vee-validate/dist/vee-validate.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vee-validate",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/starter-app/package.json",
+      "section": "devDependencies",
+      "name": "vite",
+      "specified": "8.3.1",
+      "installed": true,
+      "installedVersion": "8.3.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/vite/package.json",
+      "entryResolution": "node_modules/vite/dist/node/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vite",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/starter-app/package.json",
+      "section": "devDependencies",
+      "name": "vite-plugin-vuetify",
+      "specified": "2.1.3",
+      "installed": true,
+      "installedVersion": "2.1.3",
+      "license": "MIT",
+      "metadataPath": "node_modules/vite-plugin-vuetify/package.json",
+      "entryResolution": "node_modules/vite-plugin-vuetify/dist/index.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vite-plugin-vuetify",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "devDependencies",
+      "name": "vitest",
+      "specified": "4.1.11",
+      "installed": true,
+      "installedVersion": "4.1.11",
+      "license": "MIT",
+      "metadataPath": "node_modules/vitest/package.json",
+      "entryResolution": "node_modules/vitest/index.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vitest",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/starter-app/package.json",
+      "section": "dependencies",
+      "name": "vue",
+      "specified": "3.5.43",
+      "installed": true,
+      "installedVersion": "3.5.43",
+      "license": "MIT",
+      "metadataPath": "node_modules/vue/package.json",
+      "entryResolution": "node_modules/vue/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vue",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/catalog/package.json",
+      "section": "devDependencies",
+      "name": "vue-component-meta",
+      "specified": "2.2.12",
+      "installed": true,
+      "installedVersion": "2.2.12",
+      "license": "MIT",
+      "metadataPath": "node_modules/vue-component-meta/package.json",
+      "entryResolution": "node_modules/vue-component-meta/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vue-component-meta",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/packages/ui/package.json",
+      "section": "dependencies",
+      "name": "vue-echarts",
+      "specified": "8.3.1",
+      "installed": true,
+      "installedVersion": "8.3.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/vue-echarts/package.json",
+      "entryResolution": "node_modules/vue-echarts/dist/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vue-echarts",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "package.json",
+      "section": "devDependencies",
+      "name": "vue-eslint-parser",
+      "specified": "10.4.1",
+      "installed": true,
+      "installedVersion": "10.4.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/vue-eslint-parser/package.json",
+      "entryResolution": "node_modules/vue-eslint-parser/dist/index.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vue-eslint-parser",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/starter-app/package.json",
+      "section": "dependencies",
+      "name": "vue-i18n",
+      "specified": "11.4.13",
+      "installed": true,
+      "installedVersion": "11.4.13",
+      "license": "MIT",
+      "metadataPath": "node_modules/vue-i18n/package.json",
+      "entryResolution": "node_modules/vue-i18n/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vue-i18n",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/packages/ui/package.json",
+      "section": "dependencies",
+      "name": "vue-konva",
+      "specified": "4.0.1",
+      "installed": true,
+      "installedVersion": "4.0.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/vue-konva/package.json",
+      "entryResolution": "node_modules/vue-konva/dist/vue-konva.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vue-konva",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/starter-app/package.json",
+      "section": "dependencies",
+      "name": "vue-router",
+      "specified": "5.3.1",
+      "installed": true,
+      "installedVersion": "5.3.1",
+      "license": "MIT",
+      "metadataPath": "node_modules/vue-router/package.json",
+      "entryResolution": "node_modules/vue-router/index.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vue-router",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/starter-app/package.json",
+      "section": "devDependencies",
+      "name": "vue-tsc",
+      "specified": "3.3.12",
+      "installed": true,
+      "installedVersion": "3.3.12",
+      "license": "MIT",
+      "metadataPath": "node_modules/vue-tsc/package.json",
+      "entryResolution": "node_modules/vue-tsc/index.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vue-tsc",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/starter-app/package.json",
+      "section": "dependencies",
+      "name": "vuetify",
+      "specified": "4.2.4",
+      "installed": true,
+      "installedVersion": "4.2.4",
+      "license": "MIT",
+      "metadataPath": "node_modules/vuetify/package.json",
+      "entryResolution": "node_modules/vuetify/lib/framework.js",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/vuetify",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    },
+    {
+      "importer": "frontend/apps/starter-app/package.json",
+      "section": "dependencies",
+      "name": "zod",
+      "specified": "4.6.5",
+      "installed": true,
+      "installedVersion": "4.6.5",
+      "license": "MIT",
+      "metadataPath": "node_modules/zod/package.json",
+      "entryResolution": "node_modules/zod/index.cjs",
+      "resolutionMethod": "createRequire.resolve plus package-local metadata",
+      "workspace": false,
+      "exactVersionMatched": true,
+      "lockPackageKey": "node_modules/zod",
+      "lockInstalledVersionMatched": true,
+      "lockLicense": "MIT"
+    }
+  ],
+  "optionalDependencies": [
+    {
+      "lockPackageKey": "node_modules/@emnapi/core",
+      "version": "1.9.2",
+      "os": null,
+      "cpu": null,
+      "platformApplicable": true,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "optional dependency absent on this platform: inspect consumer necessity; not automatically a required direct dependency failure"
+    },
+    {
+      "lockPackageKey": "node_modules/@emnapi/runtime",
+      "version": "1.9.2",
+      "os": null,
+      "cpu": null,
+      "platformApplicable": true,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "optional dependency absent on this platform: inspect consumer necessity; not automatically a required direct dependency failure"
+    },
+    {
+      "lockPackageKey": "node_modules/@emnapi/wasi-threads",
+      "version": "1.2.1",
+      "os": null,
+      "cpu": null,
+      "platformApplicable": true,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "optional dependency absent on this platform: inspect consumer necessity; not automatically a required direct dependency failure"
+    },
+    {
+      "lockPackageKey": "node_modules/@esbuild/aix-ppc64",
+      "version": "0.28.1",
+      "os": [
+        "aix"
+      ],
+      "cpu": [
+        "ppc64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@esbuild/android-arm",
+      "version": "0.28.1",
+      "os": [
+        "android"
+      ],
+      "cpu": [
+        "arm"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@esbuild/android-arm64",
+      "version": "0.28.1",
+      "os": [
+        "android"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@esbuild/android-x64",
+      "version": "0.28.1",
+      "os": [
+        "android"
+      ],
+      "cpu": [
+        "x64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@esbuild/darwin-arm64",
+      "version": "0.28.1",
+      "os": [
+        "darwin"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": true,
+      "installed": true,
+      "installedVersion": "0.28.1",
+      "versionMatched": true,
+      "license": "MIT",
+      "absenceClassification": null
+    },
+    {
+      "lockPackageKey": "node_modules/@esbuild/darwin-x64",
+      "version": "0.28.1",
+      "os": [
+        "darwin"
+      ],
+      "cpu": [
+        "x64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@esbuild/freebsd-arm64",
+      "version": "0.28.1",
+      "os": [
+        "freebsd"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@esbuild/freebsd-x64",
+      "version": "0.28.1",
+      "os": [
+        "freebsd"
+      ],
+      "cpu": [
+        "x64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@esbuild/linux-arm",
+      "version": "0.28.1",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "arm"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@esbuild/linux-arm64",
+      "version": "0.28.1",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@esbuild/linux-ia32",
+      "version": "0.28.1",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "ia32"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@esbuild/linux-loong64",
+      "version": "0.28.1",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "loong64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@esbuild/linux-mips64el",
+      "version": "0.28.1",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "mips64el"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@esbuild/linux-ppc64",
+      "version": "0.28.1",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "ppc64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@esbuild/linux-riscv64",
+      "version": "0.28.1",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "riscv64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@esbuild/linux-s390x",
+      "version": "0.28.1",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "s390x"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@esbuild/linux-x64",
+      "version": "0.28.1",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "x64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@esbuild/netbsd-arm64",
+      "version": "0.28.1",
+      "os": [
+        "netbsd"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@esbuild/netbsd-x64",
+      "version": "0.28.1",
+      "os": [
+        "netbsd"
+      ],
+      "cpu": [
+        "x64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@esbuild/openbsd-arm64",
+      "version": "0.28.1",
+      "os": [
+        "openbsd"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@esbuild/openbsd-x64",
+      "version": "0.28.1",
+      "os": [
+        "openbsd"
+      ],
+      "cpu": [
+        "x64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@esbuild/openharmony-arm64",
+      "version": "0.28.1",
+      "os": [
+        "openharmony"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@esbuild/sunos-x64",
+      "version": "0.28.1",
+      "os": [
+        "sunos"
+      ],
+      "cpu": [
+        "x64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@esbuild/win32-arm64",
+      "version": "0.28.1",
+      "os": [
+        "win32"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@esbuild/win32-ia32",
+      "version": "0.28.1",
+      "os": [
+        "win32"
+      ],
+      "cpu": [
+        "ia32"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@esbuild/win32-x64",
+      "version": "0.28.1",
+      "os": [
+        "win32"
+      ],
+      "cpu": [
+        "x64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@napi-rs/wasm-runtime",
+      "version": "1.2.5",
+      "os": null,
+      "cpu": null,
+      "platformApplicable": true,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "optional dependency absent on this platform: inspect consumer necessity; not automatically a required direct dependency failure"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-parser/binding-android-arm-eabi",
+      "version": "0.127.0",
+      "os": [
+        "android"
+      ],
+      "cpu": [
+        "arm"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-parser/binding-android-arm64",
+      "version": "0.127.0",
+      "os": [
+        "android"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-parser/binding-darwin-arm64",
+      "version": "0.127.0",
+      "os": [
+        "darwin"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": true,
+      "installed": true,
+      "installedVersion": "0.127.0",
+      "versionMatched": true,
+      "license": "MIT",
+      "absenceClassification": null
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-parser/binding-darwin-x64",
+      "version": "0.127.0",
+      "os": [
+        "darwin"
+      ],
+      "cpu": [
+        "x64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-parser/binding-freebsd-x64",
+      "version": "0.127.0",
+      "os": [
+        "freebsd"
+      ],
+      "cpu": [
+        "x64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-parser/binding-linux-arm-gnueabihf",
+      "version": "0.127.0",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "arm"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-parser/binding-linux-arm-musleabihf",
+      "version": "0.127.0",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "arm"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-parser/binding-linux-arm64-gnu",
+      "version": "0.127.0",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-parser/binding-linux-arm64-musl",
+      "version": "0.127.0",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-parser/binding-linux-ppc64-gnu",
+      "version": "0.127.0",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "ppc64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-parser/binding-linux-riscv64-gnu",
+      "version": "0.127.0",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "riscv64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-parser/binding-linux-riscv64-musl",
+      "version": "0.127.0",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "riscv64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-parser/binding-linux-s390x-gnu",
+      "version": "0.127.0",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "s390x"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-parser/binding-linux-x64-gnu",
+      "version": "0.127.0",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "x64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-parser/binding-linux-x64-musl",
+      "version": "0.127.0",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "x64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-parser/binding-openharmony-arm64",
+      "version": "0.127.0",
+      "os": [
+        "openharmony"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-parser/binding-wasm32-wasi",
+      "version": "0.127.0",
+      "os": null,
+      "cpu": [
+        "wasm32"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-parser/binding-win32-arm64-msvc",
+      "version": "0.127.0",
+      "os": [
+        "win32"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-parser/binding-win32-ia32-msvc",
+      "version": "0.127.0",
+      "os": [
+        "win32"
+      ],
+      "cpu": [
+        "ia32"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-parser/binding-win32-x64-msvc",
+      "version": "0.127.0",
+      "os": [
+        "win32"
+      ],
+      "cpu": [
+        "x64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-resolver/binding-android-arm-eabi",
+      "version": "11.24.2",
+      "os": [
+        "android"
+      ],
+      "cpu": [
+        "arm"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-resolver/binding-android-arm64",
+      "version": "11.24.2",
+      "os": [
+        "android"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-resolver/binding-darwin-arm64",
+      "version": "11.24.2",
+      "os": [
+        "darwin"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": true,
+      "installed": true,
+      "installedVersion": "11.24.2",
+      "versionMatched": true,
+      "license": "MIT",
+      "absenceClassification": null
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-resolver/binding-darwin-x64",
+      "version": "11.24.2",
+      "os": [
+        "darwin"
+      ],
+      "cpu": [
+        "x64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-resolver/binding-freebsd-x64",
+      "version": "11.24.2",
+      "os": [
+        "freebsd"
+      ],
+      "cpu": [
+        "x64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-resolver/binding-linux-arm-gnueabihf",
+      "version": "11.24.2",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "arm"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-resolver/binding-linux-arm-musleabihf",
+      "version": "11.24.2",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "arm"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-resolver/binding-linux-arm64-gnu",
+      "version": "11.24.2",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-resolver/binding-linux-arm64-musl",
+      "version": "11.24.2",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-resolver/binding-linux-ppc64-gnu",
+      "version": "11.24.2",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "ppc64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-resolver/binding-linux-riscv64-gnu",
+      "version": "11.24.2",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "riscv64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-resolver/binding-linux-riscv64-musl",
+      "version": "11.24.2",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "riscv64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-resolver/binding-linux-s390x-gnu",
+      "version": "11.24.2",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "s390x"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-resolver/binding-linux-x64-gnu",
+      "version": "11.24.2",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "x64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-resolver/binding-linux-x64-musl",
+      "version": "11.24.2",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "x64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-resolver/binding-openharmony-arm64",
+      "version": "11.24.2",
+      "os": [
+        "openharmony"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-resolver/binding-wasm32-wasi",
+      "version": "11.24.2",
+      "os": null,
+      "cpu": [
+        "wasm32"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-resolver/binding-wasm32-wasi/node_modules/@emnapi/core",
+      "version": "1.11.2",
+      "os": null,
+      "cpu": null,
+      "platformApplicable": true,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "optional dependency absent on this platform: inspect consumer necessity; not automatically a required direct dependency failure"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-resolver/binding-wasm32-wasi/node_modules/@emnapi/runtime",
+      "version": "1.11.2",
+      "os": null,
+      "cpu": null,
+      "platformApplicable": true,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "optional dependency absent on this platform: inspect consumer necessity; not automatically a required direct dependency failure"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-resolver/binding-wasm32-wasi/node_modules/@emnapi/wasi-threads",
+      "version": "1.2.2",
+      "os": null,
+      "cpu": null,
+      "platformApplicable": true,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "optional dependency absent on this platform: inspect consumer necessity; not automatically a required direct dependency failure"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-resolver/binding-win32-arm64-msvc",
+      "version": "11.24.2",
+      "os": [
+        "win32"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@oxc-resolver/binding-win32-x64-msvc",
+      "version": "11.24.2",
+      "os": [
+        "win32"
+      ],
+      "cpu": [
+        "x64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@parcel/watcher",
+      "version": "2.6.0",
+      "os": null,
+      "cpu": null,
+      "platformApplicable": true,
+      "installed": true,
+      "installedVersion": "2.6.0",
+      "versionMatched": true,
+      "license": "MIT",
+      "absenceClassification": null
+    },
+    {
+      "lockPackageKey": "node_modules/@parcel/watcher-android-arm64",
+      "version": "2.6.0",
+      "os": [
+        "android"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@parcel/watcher-darwin-arm64",
+      "version": "2.6.0",
+      "os": [
+        "darwin"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": true,
+      "installed": true,
+      "installedVersion": "2.6.0",
+      "versionMatched": true,
+      "license": "MIT",
+      "absenceClassification": null
+    },
+    {
+      "lockPackageKey": "node_modules/@parcel/watcher-darwin-x64",
+      "version": "2.6.0",
+      "os": [
+        "darwin"
+      ],
+      "cpu": [
+        "x64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@parcel/watcher-freebsd-x64",
+      "version": "2.6.0",
+      "os": [
+        "freebsd"
+      ],
+      "cpu": [
+        "x64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@parcel/watcher-linux-arm-glibc",
+      "version": "2.6.0",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "arm"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@parcel/watcher-linux-arm-musl",
+      "version": "2.6.0",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "arm"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@parcel/watcher-linux-arm64-glibc",
+      "version": "2.6.0",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@parcel/watcher-linux-arm64-musl",
+      "version": "2.6.0",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@parcel/watcher-linux-x64-glibc",
+      "version": "2.6.0",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "x64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@parcel/watcher-linux-x64-musl",
+      "version": "2.6.0",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "x64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@parcel/watcher-win32-arm64",
+      "version": "2.6.0",
+      "os": [
+        "win32"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@parcel/watcher-win32-x64",
+      "version": "2.6.0",
+      "os": [
+        "win32"
+      ],
+      "cpu": [
+        "x64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@rolldown/binding-android-arm-eabi",
+      "version": "1.2.12",
+      "os": [
+        "android"
+      ],
+      "cpu": [
+        "arm"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@rolldown/binding-android-arm64",
+      "version": "1.2.12",
+      "os": [
+        "android"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@rolldown/binding-darwin-arm64",
+      "version": "1.2.12",
+      "os": [
+        "darwin"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": true,
+      "installed": true,
+      "installedVersion": "1.2.12",
+      "versionMatched": true,
+      "license": "MIT",
+      "absenceClassification": null
+    },
+    {
+      "lockPackageKey": "node_modules/@rolldown/binding-darwin-x64",
+      "version": "1.2.12",
+      "os": [
+        "darwin"
+      ],
+      "cpu": [
+        "x64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@rolldown/binding-freebsd-x64",
+      "version": "1.2.12",
+      "os": [
+        "freebsd"
+      ],
+      "cpu": [
+        "x64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@rolldown/binding-linux-arm-gnueabihf",
+      "version": "1.2.12",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "arm"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@rolldown/binding-linux-arm64-gnu",
+      "version": "1.2.12",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@rolldown/binding-linux-arm64-musl",
+      "version": "1.2.12",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@rolldown/binding-linux-ppc64-gnu",
+      "version": "1.2.12",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "ppc64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@rolldown/binding-linux-s390x-gnu",
+      "version": "1.2.12",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "s390x"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@rolldown/binding-linux-x64-gnu",
+      "version": "1.2.12",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "x64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@rolldown/binding-linux-x64-musl",
+      "version": "1.2.12",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "x64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@rolldown/binding-openharmony-arm64",
+      "version": "1.2.12",
+      "os": [
+        "openharmony"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@rolldown/binding-win32-arm64-msvc",
+      "version": "1.2.12",
+      "os": [
+        "win32"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@rolldown/binding-win32-x64-msvc",
+      "version": "1.2.12",
+      "os": [
+        "win32"
+      ],
+      "cpu": [
+        "x64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/@tiptap/extension-bubble-menu",
+      "version": "3.31.4",
+      "os": null,
+      "cpu": null,
+      "platformApplicable": true,
+      "installed": true,
+      "installedVersion": "3.31.4",
+      "versionMatched": true,
+      "license": "MIT",
+      "absenceClassification": null
+    },
+    {
+      "lockPackageKey": "node_modules/@tiptap/extension-floating-menu",
+      "version": "3.31.4",
+      "os": null,
+      "cpu": null,
+      "platformApplicable": true,
+      "installed": true,
+      "installedVersion": "3.31.4",
+      "versionMatched": true,
+      "license": "MIT",
+      "absenceClassification": null
+    },
+    {
+      "lockPackageKey": "node_modules/@tybys/wasm-util",
+      "version": "0.10.4",
+      "os": null,
+      "cpu": null,
+      "platformApplicable": true,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "optional dependency absent on this platform: inspect consumer necessity; not automatically a required direct dependency failure"
+    },
+    {
+      "lockPackageKey": "node_modules/fsevents",
+      "version": "2.3.3",
+      "os": [
+        "darwin"
+      ],
+      "cpu": null,
+      "platformApplicable": true,
+      "installed": true,
+      "installedVersion": "2.3.3",
+      "versionMatched": true,
+      "license": "MIT",
+      "absenceClassification": null
+    },
+    {
+      "lockPackageKey": "node_modules/lightningcss-android-arm64",
+      "version": "1.33.0",
+      "os": [
+        "android"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MPL-2.0",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/lightningcss-darwin-arm64",
+      "version": "1.33.0",
+      "os": [
+        "darwin"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": true,
+      "installed": true,
+      "installedVersion": "1.33.0",
+      "versionMatched": true,
+      "license": "MPL-2.0",
+      "absenceClassification": null
+    },
+    {
+      "lockPackageKey": "node_modules/lightningcss-darwin-x64",
+      "version": "1.33.0",
+      "os": [
+        "darwin"
+      ],
+      "cpu": [
+        "x64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MPL-2.0",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/lightningcss-freebsd-x64",
+      "version": "1.33.0",
+      "os": [
+        "freebsd"
+      ],
+      "cpu": [
+        "x64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MPL-2.0",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/lightningcss-linux-arm-gnueabihf",
+      "version": "1.33.0",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "arm"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MPL-2.0",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/lightningcss-linux-arm64-gnu",
+      "version": "1.33.0",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MPL-2.0",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/lightningcss-linux-arm64-musl",
+      "version": "1.33.0",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MPL-2.0",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/lightningcss-linux-x64-gnu",
+      "version": "1.33.0",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "x64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MPL-2.0",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/lightningcss-linux-x64-musl",
+      "version": "1.33.0",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "x64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MPL-2.0",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/lightningcss-win32-arm64-msvc",
+      "version": "1.33.0",
+      "os": [
+        "win32"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MPL-2.0",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/lightningcss-win32-x64-msvc",
+      "version": "1.33.0",
+      "os": [
+        "win32"
+      ],
+      "cpu": [
+        "x64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MPL-2.0",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/node-addon-api",
+      "version": "7.1.1",
+      "os": null,
+      "cpu": null,
+      "platformApplicable": true,
+      "installed": true,
+      "installedVersion": "7.1.1",
+      "versionMatched": true,
+      "license": "MIT",
+      "absenceClassification": null
+    },
+    {
+      "lockPackageKey": "node_modules/sass",
+      "version": "1.105.1",
+      "os": null,
+      "cpu": null,
+      "platformApplicable": true,
+      "installed": true,
+      "installedVersion": "1.105.1",
+      "versionMatched": true,
+      "license": "MIT",
+      "absenceClassification": null
+    },
+    {
+      "lockPackageKey": "node_modules/sass-embedded-all-unknown",
+      "version": "1.105.1",
+      "os": null,
+      "cpu": [
+        "!arm",
+        "!arm64",
+        "!riscv64",
+        "!x64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/sass-embedded-android-arm",
+      "version": "1.105.1",
+      "os": [
+        "android"
+      ],
+      "cpu": [
+        "arm"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/sass-embedded-android-arm64",
+      "version": "1.105.1",
+      "os": [
+        "android"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/sass-embedded-android-riscv64",
+      "version": "1.105.1",
+      "os": [
+        "android"
+      ],
+      "cpu": [
+        "riscv64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/sass-embedded-android-x64",
+      "version": "1.105.1",
+      "os": [
+        "android"
+      ],
+      "cpu": [
+        "x64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/sass-embedded-darwin-arm64",
+      "version": "1.105.1",
+      "os": [
+        "darwin"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": true,
+      "installed": true,
+      "installedVersion": "1.105.1",
+      "versionMatched": true,
+      "license": "MIT",
+      "absenceClassification": null
+    },
+    {
+      "lockPackageKey": "node_modules/sass-embedded-darwin-x64",
+      "version": "1.105.1",
+      "os": [
+        "darwin"
+      ],
+      "cpu": [
+        "x64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/sass-embedded-linux-arm",
+      "version": "1.105.1",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "arm"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/sass-embedded-linux-arm64",
+      "version": "1.105.1",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/sass-embedded-linux-musl-arm",
+      "version": "1.105.1",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "arm"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/sass-embedded-linux-musl-arm64",
+      "version": "1.105.1",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/sass-embedded-linux-musl-riscv64",
+      "version": "1.105.1",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "riscv64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/sass-embedded-linux-musl-x64",
+      "version": "1.105.1",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "x64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/sass-embedded-linux-riscv64",
+      "version": "1.105.1",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "riscv64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/sass-embedded-linux-x64",
+      "version": "1.105.1",
+      "os": [
+        "linux"
+      ],
+      "cpu": [
+        "x64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/sass-embedded-unknown-all",
+      "version": "1.105.1",
+      "os": [
+        "!android",
+        "!darwin",
+        "!linux",
+        "!win32"
+      ],
+      "cpu": null,
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/sass-embedded-win32-arm64",
+      "version": "1.105.1",
+      "os": [
+        "win32"
+      ],
+      "cpu": [
+        "arm64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    },
+    {
+      "lockPackageKey": "node_modules/sass-embedded-win32-x64",
+      "version": "1.105.1",
+      "os": [
+        "win32"
+      ],
+      "cpu": [
+        "x64"
+      ],
+      "platformApplicable": false,
+      "installed": false,
+      "installedVersion": null,
+      "versionMatched": null,
+      "license": "MIT",
+      "absenceClassification": "expected different-platform optional dependency omission"
+    }
+  ],
+  "passed": false,
+  "limits": [
+    "Package-local license declarations are factual metadata, not an independent legal review of all transitive or bundled assets.",
+    "Not an npm audit result and does not execute optional package consumers.",
+    "Redis/JWT/SSO are excluded; future RabbitMQ/Quartz/observability server dependencies are not npm runtime packages.",
+    "Platform-inapplicable optional native binaries are expected omissions and are recorded separately."
+  ]
+}

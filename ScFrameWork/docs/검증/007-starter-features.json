@@ -1,0 +1,20 @@
+{
+  "patternsEnabled": false,
+  "isolatedBuild": true,
+  "defaultBuildUnchanged": true,
+  "assets": [
+    "PatternsPage-DtGcNS1v.css",
+    "PatternsPage-WL5NDsbO.js",
+    "index-BHMNw_Qy.js",
+    "index-Bv8SeL7s.css",
+    "rolldown-runtime-Dd_uD5pT.js"
+  ],
+  "optionalChunkRequests": [],
+  "optionalChunksEmitted": [
+    "PatternsPage-DtGcNS1v.css",
+    "PatternsPage-WL5NDsbO.js"
+  ],
+  "unknownRouteRedirect": "/",
+  "browserErrors": [],
+  "apiRequests": []
+}

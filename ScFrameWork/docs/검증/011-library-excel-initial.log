@@ -1,0 +1,18 @@
+vite v8.3.1 building client environment for production...
+transforming...
+✓ 2 modules transformed.
+rendering chunks...
+computing gzip size...
+frontend/packages/excel/dist/index.js  5.79 kB │ gzip: 2.26 kB
+
+✓ built in 8ms
+../../../node_modules/exceljs/index.d.ts(1484,22): error TS2307: Cannot find module 'stream' or its corresponding type declarations.
+../../../node_modules/exceljs/index.d.ts(1505,23): error TS2307: Cannot find module 'stream' or its corresponding type declarations.
+../../../node_modules/exceljs/index.d.ts(1592,22): error TS2307: Cannot find module 'stream' or its corresponding type declarations.
+../../../node_modules/exceljs/index.d.ts(1597,63): error TS2307: Cannot find module 'events' or its corresponding type declarations.
+../../../node_modules/exceljs/index.d.ts(1612,23): error TS2307: Cannot find module 'stream' or its corresponding type declarations.
+../../../node_modules/exceljs/index.d.ts(1916,19): error TS2307: Cannot find module 'stream' or its corresponding type declarations.
+../../../node_modules/exceljs/index.d.ts(1960,25): error TS2503: Cannot find namespace 'NodeJS'.
+../../../node_modules/exceljs/index.d.ts(2012,39): error TS2307: Cannot find module 'stream' or its corresponding type declarations.
+../../../node_modules/exceljs/index.d.ts(2021,18): error TS2307: Cannot find module 'stream' or its corresponding type declarations.
+Library command failed: exit 2, signal none

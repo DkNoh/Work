@@ -1,0 +1,13 @@
+{
+  "stage": "010",
+  "run": "third",
+  "passed": 67,
+  "failed": 0,
+  "skipped": 4,
+  "reportSuite": {
+    "passed": 4,
+    "failed": 1,
+    "reason": "new chart and report table both display the same error; unscoped alert selector was ambiguous"
+  },
+  "buildLog": "010-integration-build-fifth.log"
+}

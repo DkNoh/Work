@@ -1,0 +1,292 @@
+{
+  "passed": true,
+  "target": "/private/tmp/sc-common-ui-consumer-SAHKkR",
+  "frameworkVersion": "0.3.0",
+  "templateVersion": 2,
+  "userServerTouched": false,
+  "checks": [
+    {
+      "name": "public UI contracts match current source",
+      "passed": true,
+      "details": {
+        "components": 25
+      }
+    },
+    {
+      "name": "public UI contracts count",
+      "passed": true
+    },
+    {
+      "name": "installed @sc/ui compiled public entry",
+      "passed": true,
+      "details": {
+        "entry": "/private/tmp/sc-common-ui-consumer-SAHKkR/node_modules/@sc/ui/dist/index.js",
+        "version": "0.3.0"
+      }
+    },
+    {
+      "name": "installed @sc/runtime compiled public entry",
+      "passed": true,
+      "details": {
+        "entry": "/private/tmp/sc-common-ui-consumer-SAHKkR/node_modules/@sc/runtime/dist/index.js",
+        "version": "0.3.0"
+      }
+    },
+    {
+      "name": "installed @sc/date compiled public entry",
+      "passed": true,
+      "details": {
+        "entry": "/private/tmp/sc-common-ui-consumer-SAHKkR/node_modules/@sc/date/dist/index.js",
+        "version": "0.3.0"
+      }
+    },
+    {
+      "name": "installed @sc/excel compiled public entry",
+      "passed": true,
+      "details": {
+        "entry": "/private/tmp/sc-common-ui-consumer-SAHKkR/node_modules/@sc/excel/dist/index.js",
+        "version": "0.3.0"
+      }
+    },
+    {
+      "name": "installed @sc/i18n compiled public entry",
+      "passed": true,
+      "details": {
+        "entry": "/private/tmp/sc-common-ui-consumer-SAHKkR/node_modules/@sc/i18n/dist/index.js",
+        "version": "0.3.0"
+      }
+    },
+    {
+      "name": "consumer source aliases absent",
+      "passed": true,
+      "details": {
+        "scannedFiles": 26,
+        "sourceAliases": []
+      }
+    },
+    {
+      "name": "installed framework source files absent",
+      "passed": true,
+      "details": {
+        "files": 0
+      }
+    },
+    {
+      "name": "fresh generated production JAR healthy",
+      "passed": true,
+      "details": {
+        "port": 61472,
+        "newRuntime": true
+      }
+    },
+    {
+      "name": "1440 login whole DOM axe",
+      "passed": true,
+      "details": {
+        "violations": [],
+        "incompleteRules": 1,
+        "incompleteNodes": 3,
+        "duplicateIds": [],
+        "overflow": false
+      }
+    },
+    {
+      "name": "1440 authenticated generated Notes",
+      "passed": true
+    },
+    {
+      "name": "1440 compiled shared button sizes",
+      "passed": true,
+      "details": {
+        "sm": 32,
+        "md": 38,
+        "lg": 44
+      }
+    },
+    {
+      "name": "1440 shared icon-only action",
+      "passed": true
+    },
+    {
+      "name": "1440 compact input updates",
+      "passed": true
+    },
+    {
+      "name": "1440 compact field geometry",
+      "passed": true,
+      "details": {
+        "height": 40
+      }
+    },
+    {
+      "name": "1440 compact combobox native Tab focus",
+      "passed": true
+    },
+    {
+      "name": "1440 compact choice updates",
+      "passed": true
+    },
+    {
+      "name": "1440 patterns whole DOM axe",
+      "passed": true,
+      "details": {
+        "violations": [],
+        "incompleteRules": 3,
+        "incompleteNodes": 57,
+        "duplicateIds": [],
+        "overflow": false
+      }
+    },
+    {
+      "name": "1440 toolbar locale updates",
+      "passed": true
+    },
+    {
+      "name": "1440 browser page errors absent",
+      "passed": true,
+      "details": {
+        "pageErrors": []
+      }
+    },
+    {
+      "name": "390 login whole DOM axe",
+      "passed": true,
+      "details": {
+        "violations": [],
+        "incompleteRules": 2,
+        "incompleteNodes": 4,
+        "duplicateIds": [],
+        "overflow": false
+      }
+    },
+    {
+      "name": "390 authenticated generated Notes",
+      "passed": true
+    },
+    {
+      "name": "390 compiled shared button sizes",
+      "passed": true,
+      "details": {
+        "sm": 32,
+        "md": 38,
+        "lg": 44
+      }
+    },
+    {
+      "name": "390 shared icon-only action",
+      "passed": true
+    },
+    {
+      "name": "390 compact input updates",
+      "passed": true
+    },
+    {
+      "name": "390 compact field geometry",
+      "passed": true,
+      "details": {
+        "height": 40
+      }
+    },
+    {
+      "name": "390 compact combobox native Tab focus",
+      "passed": true
+    },
+    {
+      "name": "390 compact choice updates",
+      "passed": true
+    },
+    {
+      "name": "390 patterns whole DOM axe",
+      "passed": true,
+      "details": {
+        "violations": [],
+        "incompleteRules": 3,
+        "incompleteNodes": 51,
+        "duplicateIds": [],
+        "overflow": false
+      }
+    },
+    {
+      "name": "390 toolbar locale updates",
+      "passed": true
+    },
+    {
+      "name": "390 browser page errors absent",
+      "passed": true,
+      "details": {
+        "pageErrors": []
+      }
+    }
+  ],
+  "axe": [
+    {
+      "viewport": 1440,
+      "label": "login",
+      "labelAnimationsAwaited": 2,
+      "violations": [],
+      "incompleteRules": 1,
+      "incompleteNodes": 3,
+      "duplicateIds": [],
+      "overflow": false
+    },
+    {
+      "viewport": 1440,
+      "label": "patterns",
+      "labelAnimationsAwaited": 0,
+      "violations": [],
+      "incompleteRules": 3,
+      "incompleteNodes": 57,
+      "duplicateIds": [],
+      "overflow": false
+    },
+    {
+      "viewport": 390,
+      "label": "login",
+      "labelAnimationsAwaited": 2,
+      "violations": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 4,
+      "duplicateIds": [],
+      "overflow": false
+    },
+    {
+      "viewport": 390,
+      "label": "patterns",
+      "labelAnimationsAwaited": 0,
+      "violations": [],
+      "incompleteRules": 3,
+      "incompleteNodes": 51,
+      "duplicateIds": [],
+      "overflow": false
+    }
+  ],
+  "temporaryServerStopped": true,
+  "temporaryRuntimeRemoved": true,
+  "installedPackages": [
+    {
+      "name": "@sc/ui",
+      "entry": "/private/tmp/sc-common-ui-consumer-SAHKkR/node_modules/@sc/ui/dist/index.js",
+      "version": "0.3.0"
+    },
+    {
+      "name": "@sc/runtime",
+      "entry": "/private/tmp/sc-common-ui-consumer-SAHKkR/node_modules/@sc/runtime/dist/index.js",
+      "version": "0.3.0"
+    },
+    {
+      "name": "@sc/date",
+      "entry": "/private/tmp/sc-common-ui-consumer-SAHKkR/node_modules/@sc/date/dist/index.js",
+      "version": "0.3.0"
+    },
+    {
+      "name": "@sc/excel",
+      "entry": "/private/tmp/sc-common-ui-consumer-SAHKkR/node_modules/@sc/excel/dist/index.js",
+      "version": "0.3.0"
+    },
+    {
+      "name": "@sc/i18n",
+      "entry": "/private/tmp/sc-common-ui-consumer-SAHKkR/node_modules/@sc/i18n/dist/index.js",
+      "version": "0.3.0"
+    }
+  ]
+}

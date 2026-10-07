@@ -1,0 +1,301 @@
+{
+  "stage": "010",
+  "buildLog": "010-integration-build-sixth.log",
+  "tests": {
+    "framework-core": {
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "framework-autoconfigure": {
+      "tests": 27,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "reference-app": {
+      "tests": 105,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "starter-app": {
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "apps": [
+    {
+      "app": "reference",
+      "jarSha256": "b395eb00b36480f04d383a416adfd6980a8afdace57b07af80486fe6694c54bb",
+      "distByteEqual": true,
+      "files": [
+        {
+          "path": "assets/AccountPage-BzZJ0qZg.js",
+          "sha256": "29d07cb1fb7ca47c5a60b8558332a39ec7893344a7f11f52339ee8edea1fcde5"
+        },
+        {
+          "path": "assets/AdminAuditPage-BqQoUJOH.css",
+          "sha256": "77fcda4042031bc17fe804db4a47eef55cf1dc10155bbf1db1d9ea4489a917be"
+        },
+        {
+          "path": "assets/AdminAuditPage-CjVQ6Gsa.js",
+          "sha256": "0a9d17e8b1b71666b472fa1e0999f4f2a3bf5d0322fed03b508c9738c5ac39b7"
+        },
+        {
+          "path": "assets/AdminMenusPage-C1i80pxe.js",
+          "sha256": "687237bdee2b2d8a38f5949ccf1ac924a1bf990e47d607d4fa2427dd0edc4d85"
+        },
+        {
+          "path": "assets/AdminNavigation-CGsS6gxN.css",
+          "sha256": "50cbacd941ca284b55306756bd2fd5b7bef107695bc83fac178936aa7e9622a7"
+        },
+        {
+          "path": "assets/AdminNavigation-Djr7XcmJ.js",
+          "sha256": "774d98138d54c2c20f0387bdc50a41c54618f70ac5a910507e0356f6e667cda5"
+        },
+        {
+          "path": "assets/AdminUsersPage-DDr16Ech.js",
+          "sha256": "cc04aafc1dffee3b3bc16c67af1af8c7c5aea5b7c11d61949b5d1f68fe6878dc"
+        },
+        {
+          "path": "assets/DocumentsPage-2SlJ98Iw.js",
+          "sha256": "fa8ec695ac87adfff3e86478566c34c7ae4dedf4bb527aa22f8f790d5166b080"
+        },
+        {
+          "path": "assets/DocumentsPage-CGzgDvdS.css",
+          "sha256": "5129fa389a6bb0265655d5479a7d312fa6c9595ef3c8042f3fe76d0e121aa36e"
+        },
+        {
+          "path": "assets/KanbanPage-CNcEcjrP.js",
+          "sha256": "746fd7e247539d29778d84f2304a7de1d7d51ca0a4c23d6abda8b16db54f4204"
+        },
+        {
+          "path": "assets/KanbanPage-ofD5_kor.css",
+          "sha256": "7fe39db3bf9122c265dc92d629671e29a550625465cb8b8959276ad5c1a7d53c"
+        },
+        {
+          "path": "assets/MediaWorkspacePage-og3aogW-.js",
+          "sha256": "73e3b462e90d03b71bb46578f4b56d6717bee7119929196b1ea5ffe9ac448924"
+        },
+        {
+          "path": "assets/NoticesPage-CE4PCd_p.js",
+          "sha256": "2436d64f430bee5eb6ffea5f6677cf8c69a32ef64fced3de2adffb71e844ebad"
+        },
+        {
+          "path": "assets/NoticesPage-DsFzkVWS.css",
+          "sha256": "a0077236df1ec4209d693bdff2e053c38cca410fcf0d41097ca93876d57b638b"
+        },
+        {
+          "path": "assets/PatternsPage-BFRxuoaL.css",
+          "sha256": "77d4632bbac9a620f1cfc6eeab334e4c82e038a6648717688a8c1cb3dea5c21d"
+        },
+        {
+          "path": "assets/PatternsPage-nEKABkaC.js",
+          "sha256": "531fff83f30910f620816a4ce0f5006dd04156043dffc8dd64d01fe7dc4d0c43"
+        },
+        {
+          "path": "assets/RequirementReportPage-BKY-UAMX.css",
+          "sha256": "1472b1350c03d42fc10597dff5b1e90adb4cda0d4b7df3985beb1096ac759f03"
+        },
+        {
+          "path": "assets/RequirementReportPage-DmXbCQ_9.js",
+          "sha256": "185e3f59a66541e935b7bc12064eb987b7effcfd1106b4821644fbfb9c7f7d6d"
+        },
+        {
+          "path": "assets/RequirementWorkspace-CFi7C6u6.css",
+          "sha256": "10908f8f28c22f99c8a2ba5ed0cf089ee0ae2099fa6ce965dc454e074698d637"
+        },
+        {
+          "path": "assets/RequirementWorkspace-CzMFwBMz.js",
+          "sha256": "99aa8960bf24d31d267d6bdb5e31e4e29ed0a6ac14d421ea77d92ea2b805d3fc"
+        },
+        {
+          "path": "assets/RequirementsPage-DHRt7bWb.css",
+          "sha256": "97cb7d146fede5181a642f8af3658d36be83f8c401aea08ee545b1fd1c14ba95"
+        },
+        {
+          "path": "assets/RequirementsPage-_lIZjFRL.js",
+          "sha256": "1e861b180f6efc89546a968fb0a7f34155850674b85833f1f65a326d5e216373"
+        },
+        {
+          "path": "assets/ScChart-BZbMKveq.css",
+          "sha256": "91fd017d8bdb19d50c6d2c94a81e733529afeaaad4b462226b7a33c043809374"
+        },
+        {
+          "path": "assets/ScChart-Cwp87Hq4.js",
+          "sha256": "5c2bf280a0951ecaea02c156935cd92169ea99058c4f781f9ff5e012199b493f"
+        },
+        {
+          "path": "assets/ScCheckbox-B5J_9nwH.css",
+          "sha256": "cc3bf4aee4762c10a6628b7160adb27e420aca9a2a2a39556de809ad269bf92c"
+        },
+        {
+          "path": "assets/ScCheckbox-Buq8IvMo.js",
+          "sha256": "c0fb027bc3ea734add2565f432ea09b37d84f3acda30f00c6160bb85a8167d38"
+        },
+        {
+          "path": "assets/ScRichTextEditor-Cc3cDB5b.css",
+          "sha256": "60ecf18dbe2ae5a487ad12932d94164d5b730ec4594adc01ba8341936d39a75f"
+        },
+        {
+          "path": "assets/ScRichTextEditor-Dp4riada.js",
+          "sha256": "2b1e539a5cdce68f7e8ba1be634d584dcc80efa703a24e5549f7352eac10dcc4"
+        },
+        {
+          "path": "assets/ScSelect-2Njy_uLt.js",
+          "sha256": "e0a1b5cf97dcf2d15f129478d38b1738dbac1d5d0248831308fbc30705a59a7b"
+        },
+        {
+          "path": "assets/ScSelect-BGJu9vpf.css",
+          "sha256": "0dc74e60c14edd94ea05933723b5148fc6e6b4274ee54b43b73708a1b83c53e7"
+        },
+        {
+          "path": "assets/ScTextArea-CcpH79C8.js",
+          "sha256": "28f0804f9bb27a2cd595a38ea9ed5c4e566896217893aa841e4c5ab1d72d5639"
+        },
+        {
+          "path": "assets/ScTextArea-tqM4coiX.css",
+          "sha256": "6c45fe0abdabacd81ef947b13aa459d08deed135c34fc34ba71db0b8b3d0927f"
+        },
+        {
+          "path": "assets/createSimpleFunctional-CeF4eGLA.js",
+          "sha256": "3d905eb486ca17cb6fb0717d996c1635d3be96ece801cfc7199bfe5264140cea"
+        },
+        {
+          "path": "assets/index-CLFnvQo6.js",
+          "sha256": "93621ba9152fe7bb072b746a04e86cfc98711a7a2e7a23f03445e0b553e8bb39"
+        },
+        {
+          "path": "assets/index-evTI6n9m.css",
+          "sha256": "88342580c1a69729dcb5d31a4eea314d90c5a0fe01eabd7dbbe875e411e0dbb6"
+        },
+        {
+          "path": "assets/input-accessibility-C6ma1lr0.js",
+          "sha256": "476ec4793f69cb3ce36afe92ff480050a4cac1a4a34a68b9711c55f3c65d35b9"
+        },
+        {
+          "path": "assets/query-CmVHqQH9.js",
+          "sha256": "b0a13a2e7704b74fe29cc7b9ccfa024673ec995d0939bb32dfda220bf7919b4d"
+        },
+        {
+          "path": "assets/src-B215ei74.js",
+          "sha256": "e7106e51652bf00b3fb7919601b77dc0c8b26e00106b5a68fbe7fe697d1702f6"
+        },
+        {
+          "path": "assets/src-DKEEVd_l.js",
+          "sha256": "9ed0e32b0814340e876cef2155bc1c8ad67b477156fa86ca841faa339f531360"
+        },
+        {
+          "path": "assets/useDraftGuard-D5Q_KObe.js",
+          "sha256": "b5f2aa901bf055df4bd25b43740f46412925cbf7c1210a5c21ff3d2ff07494f9"
+        },
+        {
+          "path": "assets/useImageFile-Bsqs7l42.js",
+          "sha256": "7ec63cf5cab29a32eaf11b1369839e152bed62997063fa5951adb03e805d0300"
+        },
+        {
+          "path": "assets/useImageFile-loC3sipM.css",
+          "sha256": "c7126a0285fa7698607f2fd5bafcaebe9c0c465bd2f11dd605fdbde66d02b5f2"
+        },
+        {
+          "path": "assets/validation-hl21o1zK.js",
+          "sha256": "3a2ffb915eb05d23c7eef17ab67ff7ae0adb300e64f696d179be1d4155cabf10"
+        },
+        {
+          "path": "assets/vue-i18n-CdxA0mVe.js",
+          "sha256": "cbb5d19193d9ccfac62599019a0877c5195efa641af0d2c1c21784f2f0378ad8"
+        },
+        {
+          "path": "assets/vue-i18n-Dp5_17Aq.css",
+          "sha256": "aa1a9834302dbf7c577b600a937f3fa05195f4781f00184d4e323aef90659513"
+        },
+        {
+          "path": "index.html",
+          "sha256": "c2436f4510f57241e56c55e3ed320b6f575e58d49e1b0c2097f549d92a490a29"
+        }
+      ],
+      "forbiddenLibraries": [],
+      "h2": [
+        "h2-2.3.232.jar"
+      ],
+      "referenceClasses": 170
+    },
+    {
+      "app": "starter",
+      "jarSha256": "b7fc0f8aef8afd4a89bf0f31fa8414787b61a4432344e294de57f84d451d0421",
+      "distByteEqual": true,
+      "files": [
+        {
+          "path": "assets/PatternsPage-C7Lyu0hs.css",
+          "sha256": "204fbde0fd646b5765ad174b2fd7e1db89fda3b88969f51c948565cf6d7948a5"
+        },
+        {
+          "path": "assets/PatternsPage-IgRfbp2x.js",
+          "sha256": "bae56617f2e8903f5a9c48e5bb973e21776018a11f134bf81a2777d6f879fbc2"
+        },
+        {
+          "path": "assets/index-1AoAAdsY.js",
+          "sha256": "423f36ab38f478804c7ba9f6b441ba969e50da1b48868d80f8b58b8e02b9afad"
+        },
+        {
+          "path": "assets/index-Bv8SeL7s.css",
+          "sha256": "95845420740335dacde28abcdc45f28c7066d4a8470effbc56d35769dcbd5763"
+        },
+        {
+          "path": "assets/rolldown-runtime-Dd_uD5pT.js",
+          "sha256": "c5f0356f5d0918a3137e4e811fd18950efe8ac8f6bf84d1d4da7811c477a24d8"
+        },
+        {
+          "path": "index.html",
+          "sha256": "8263d059612616992db815de55a3e4a9ac59c39e6b8e6e42544722034f50b40e"
+        }
+      ],
+      "forbiddenLibraries": [],
+      "h2": [
+        "h2-2.3.232.jar"
+      ],
+      "referenceClasses": 0
+    }
+  ],
+  "serverTotal": 143,
+  "unitSummary": [
+    [
+      "33",
+      "135"
+    ]
+  ],
+  "querydslSources": [
+    "backend/reference-app/target/generated-sources/annotations/dev/scframework/reference/identity/QUserEntity.java",
+    "backend/reference-app/target/generated-sources/annotations/dev/scframework/reference/example/QExampleEntry.java",
+    "backend/reference-app/target/generated-sources/annotations/dev/scframework/reference/requirements/QRequirementEntity.java",
+    "backend/reference-app/target/generated-sources/annotations/dev/scframework/reference/requirements/QReviewEntity.java",
+    "backend/reference-app/target/generated-sources/annotations/dev/scframework/reference/requirements/QCommentEntity.java",
+    "backend/reference-app/target/generated-sources/annotations/dev/scframework/reference/requirements/QHistoryEntity.java",
+    "backend/reference-app/target/generated-sources/annotations/dev/scframework/reference/notices/QNoticeEntity.java",
+    "backend/reference-app/target/generated-sources/annotations/dev/scframework/reference/kanban/QKanbanMemberEntity.java",
+    "backend/reference-app/target/generated-sources/annotations/dev/scframework/reference/kanban/QKanbanBoardEntity.java",
+    "backend/reference-app/target/generated-sources/annotations/dev/scframework/reference/kanban/QKanbanTaskEntity.java",
+    "backend/reference-app/target/generated-sources/annotations/dev/scframework/reference/menu/QMenuEntity.java",
+    "backend/reference-app/target/generated-sources/annotations/dev/scframework/reference/documents/QDocumentEntity.java",
+    "backend/reference-app/target/generated-sources/annotations/dev/scframework/reference/media/QScreenEntity.java",
+    "backend/reference-app/target/generated-sources/annotations/dev/scframework/reference/media/QStoredFileEntity.java",
+    "backend/reference-app/target/generated-sources/annotations/dev/scframework/reference/media/QAdoEntity.java",
+    "backend/reference-app/target/generated-sources/annotations/dev/scframework/reference/media/QAnnotationEntity.java",
+    "backend/reference-app/target/generated-sources/annotations/dev/scframework/reference/media/QScreenVersionEntity.java",
+    "backend/reference-app/target/generated-sources/annotations/dev/scframework/reference/media/QAttachmentEntity.java"
+  ],
+  "mapstructSources": [
+    "backend/reference-app/target/generated-sources/annotations/dev/scframework/reference/requirements/RequirementReadMapperImpl.java",
+    "backend/reference-app/target/generated-sources/annotations/dev/scframework/reference/kanban/KanbanReadMapperImpl.java"
+  ],
+  "browserStatus": "full 72 PASS, sixth focus 15 PASS; final spacing/Starter/cancel checks pending",
+  "storyStatus": "95 stories, 22 Docs, 10 Controls PASS",
+  "frontendFinalLog": "010-frontend-verify-final.log",
+  "packageFinalLog": "010-jar-static-package-final.log",
+  "serverTestReport": "010-integration-sixth-reports/summary.json",
+  "packageSkippedTests": true
+}

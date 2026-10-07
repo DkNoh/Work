@@ -1,0 +1,4 @@
+frontend/apps/starter-app/src/config.ts 17ms (unchanged)
+frontend/apps/starter-app/src/main.ts 5ms
+frontend/apps/starter-app/src/App.vue 30ms
+scripts/check-ui-boundaries.mjs 11ms

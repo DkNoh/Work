@@ -1,0 +1,4 @@
+
+> sc-framework@0.3.0 typecheck:e2e
+> tsc --noEmit -p frontend/tsconfig.e2e.json
+

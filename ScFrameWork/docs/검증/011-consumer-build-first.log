@@ -1,0 +1,30 @@
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated lodash.isequal@4.5.0: This package is deprecated. Use require('node:util').isDeepStrictEqual instead.
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated fstream@1.0.12: This package is no longer supported.
+npm warn deprecated vue-i18n@11.1.12: This version is NOT deprecated. Previous deprecation was a mistake.
+
+added 456 packages, and audited 457 packages in 3s
+
+129 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+[INFO] Scanning for projects...
+[INFO] Downloading from sc-generated-vendor: file://${project.basedir}/../vendor/maven/dev/scframework/sc-framework-parent/0.1.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from sc-generated-vendor: file://${project.basedir}/../vendor/maven/dev/scframework/sc-framework-parent/0.1.0-SNAPSHOT/sc-framework-parent-0.1.0-SNAPSHOT.pom
+[ERROR] [ERROR] Some problems were encountered while processing the POMs:
+[FATAL] Non-resolvable parent POM for dev.scconsumer.notesapp:sc-notes:1.0.0: The following artifacts could not be resolved: dev.scframework:sc-framework-parent:pom:0.1.0-SNAPSHOT (absent): Could not find artifact dev.scframework:sc-framework-parent:pom:0.1.0-SNAPSHOT in sc-generated-vendor (file://${project.basedir}/../vendor/maven) and 'parent.relativePath' points at no local POM @ line 4, column 11
+ @ 
+[ERROR] The build could not read 1 project -> [Help 1]
+[ERROR]   
+[ERROR]   The project dev.scconsumer.notesapp:sc-notes:1.0.0 (/private/tmp/sc-framework-consumer-011-20261007/sc-notes/backend/pom.xml) has 1 error
+[ERROR]     Non-resolvable parent POM for dev.scconsumer.notesapp:sc-notes:1.0.0: The following artifacts could not be resolved: dev.scframework:sc-framework-parent:pom:0.1.0-SNAPSHOT (absent): Could not find artifact dev.scframework:sc-framework-parent:pom:0.1.0-SNAPSHOT in sc-generated-vendor (file://${project.basedir}/../vendor/maven) and 'parent.relativePath' points at no local POM @ line 4, column 11 -> [Help 2]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/ProjectBuildingException
+[ERROR] [Help 2] http://cwiki.apache.org/confluence/display/MAVEN/UnresolvableModelException

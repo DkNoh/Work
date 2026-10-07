@@ -1,0 +1,184 @@
+{
+  "format": 1,
+  "stage": "012",
+  "checkedAt": "2026-10-06T22:32:23.948642+00:00",
+  "passed": true,
+  "products": [
+    {
+      "product": "rabbitmq",
+      "repository": "https://github.com/rabbitmq/rabbitmq-server",
+      "tag": "v4.3.6",
+      "license": "MPL-2.0; component Apache-2.0",
+      "rootDirectorySource": "https://api.github.com/repos/rabbitmq/rabbitmq-server/contents?ref=v4.3.6",
+      "image": "rabbitmq:4.3.6-management@sha256:8dd6e3570ddaa2ef82a6c3a8950e79c1f73893adfbdddbc374fc1f1ac8a0f5dd",
+      "imagePlatform": "linux/arm64",
+      "files": [
+        {
+          "file": "infra/operations/third-party/rabbitmq/v4.3.6/LICENSE",
+          "upstreamFilename": "LICENSE",
+          "url": "https://raw.githubusercontent.com/rabbitmq/rabbitmq-server/v4.3.6/LICENSE",
+          "gitBlobSha": "f11c11ba8822950d709f1b69d883d6e2db19a6af",
+          "sha256": "02a4e44df118d5ff8cd873463f4e4828833261e5e2678b87871515286a8de0f0",
+          "bytes": 364,
+          "originalBytesPreserved": true
+        },
+        {
+          "file": "infra/operations/third-party/rabbitmq/v4.3.6/LICENSE-APACHE2",
+          "upstreamFilename": "LICENSE-APACHE2",
+          "url": "https://raw.githubusercontent.com/rabbitmq/rabbitmq-server/v4.3.6/LICENSE-APACHE2",
+          "gitBlobSha": "012c24c00992b5f24b2d794da892b09aba1e3039",
+          "sha256": "983bf16ee19b54bef36cfd733dd2dc1b4c62441cbc435d10cf9a54e0ee68c96c",
+          "bytes": 11441,
+          "originalBytesPreserved": true
+        },
+        {
+          "file": "infra/operations/third-party/rabbitmq/v4.3.6/LICENSE-MPL-RabbitMQ",
+          "upstreamFilename": "LICENSE-MPL-RabbitMQ",
+          "url": "https://raw.githubusercontent.com/rabbitmq/rabbitmq-server/v4.3.6/LICENSE-MPL-RabbitMQ",
+          "gitBlobSha": "14e2f777f6c395e7e04ab4aa306bbcc4b0c1120e",
+          "sha256": "fab3dd6bdab226f1c08630b1dd917e11fcb4ec5e1e020e2c16f83a0a13863e85",
+          "bytes": 16726,
+          "originalBytesPreserved": true
+        }
+      ],
+      "rootNoticePresent": false
+    },
+    {
+      "product": "prometheus",
+      "repository": "https://github.com/prometheus/prometheus",
+      "tag": "v3.13.4",
+      "license": "Apache-2.0",
+      "rootDirectorySource": "https://api.github.com/repos/prometheus/prometheus/contents?ref=v3.13.4",
+      "image": "prom/prometheus:v3.13.4@sha256:87861b8cf91579109319ebc300f3f1060e6da9c05d6ae8ad15a20c879e84e32e",
+      "imagePlatform": "linux/arm64",
+      "files": [
+        {
+          "file": "infra/operations/third-party/prometheus/v3.13.4/LICENSE",
+          "upstreamFilename": "LICENSE",
+          "url": "https://raw.githubusercontent.com/prometheus/prometheus/v3.13.4/LICENSE",
+          "gitBlobSha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357,
+          "originalBytesPreserved": true
+        },
+        {
+          "file": "infra/operations/third-party/prometheus/v3.13.4/NOTICE",
+          "upstreamFilename": "NOTICE",
+          "url": "https://raw.githubusercontent.com/prometheus/prometheus/v3.13.4/NOTICE",
+          "gitBlobSha": "b82d284fb1990d45cc1a8f567e0f54580b75fd37",
+          "sha256": "ac9e304462a58a4d71b6488423d4447e614c8b31d517fe24345016522c102a78",
+          "bytes": 4370,
+          "originalBytesPreserved": true
+        }
+      ],
+      "rootNoticePresent": true
+    },
+    {
+      "product": "grafana",
+      "repository": "https://github.com/grafana/grafana",
+      "tag": "v13.2.3",
+      "license": "AGPLv3 (upstream root LICENSE)",
+      "rootDirectorySource": "https://api.github.com/repos/grafana/grafana/contents?ref=v13.2.3",
+      "image": "grafana/grafana:13.2.3@sha256:b28bae15e219c998fb0e0424ed724930cc61b1f61fb404d47c862f9a23f9e572",
+      "imagePlatform": "linux/arm64",
+      "files": [
+        {
+          "file": "infra/operations/third-party/grafana/v13.2.3/LICENSE",
+          "upstreamFilename": "LICENSE",
+          "url": "https://raw.githubusercontent.com/grafana/grafana/v13.2.3/LICENSE",
+          "gitBlobSha": "be3f7b28e564e7dd05eaf59d64adba1a4065ac0e",
+          "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0",
+          "bytes": 34523,
+          "originalBytesPreserved": true
+        },
+        {
+          "file": "infra/operations/third-party/grafana/v13.2.3/NOTICE.md",
+          "upstreamFilename": "NOTICE.md",
+          "url": "https://raw.githubusercontent.com/grafana/grafana/v13.2.3/NOTICE.md",
+          "gitBlobSha": "15bc6c61bf38e5687d1b194fbd37d7a2297b0081",
+          "sha256": "78cf8b70fbfde43dbc26e91f9b9039b52afcbc5ca0b5b3dcdfb226d275849ee4",
+          "bytes": 105,
+          "originalBytesPreserved": true
+        }
+      ],
+      "rootNoticePresent": true
+    },
+    {
+      "product": "collector",
+      "repository": "https://github.com/open-telemetry/opentelemetry-collector-contrib",
+      "tag": "v0.162.0",
+      "license": "Apache-2.0",
+      "rootDirectorySource": "https://api.github.com/repos/open-telemetry/opentelemetry-collector-contrib/contents?ref=v0.162.0",
+      "image": "otel/opentelemetry-collector-contrib:0.162.0@sha256:39923a8e431bd1f57be82411999d389fcfe40857492e4365456d97a4c1f74be6",
+      "imagePlatform": "linux/arm64",
+      "files": [
+        {
+          "file": "infra/operations/third-party/collector/v0.162.0/LICENSE",
+          "upstreamFilename": "LICENSE",
+          "url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-collector-contrib/v0.162.0/LICENSE",
+          "gitBlobSha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357,
+          "originalBytesPreserved": true
+        },
+        {
+          "file": "infra/operations/third-party/collector/v0.162.0/NOTICE",
+          "upstreamFilename": "NOTICE",
+          "url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-collector-contrib/v0.162.0/NOTICE",
+          "gitBlobSha": "c3c924e79ce603d70028b19830e79f2f546e7408",
+          "sha256": "6d7a5113049e69b6068c8304f4b2b67be17ae4a4679e1534539481cdcfda3dd9",
+          "bytes": 2253,
+          "originalBytesPreserved": true
+        }
+      ],
+      "rootNoticePresent": true
+    },
+    {
+      "product": "tempo",
+      "repository": "https://github.com/grafana/tempo",
+      "tag": "v3.1.0",
+      "license": "AGPLv3 (upstream root LICENSE)",
+      "rootDirectorySource": "https://api.github.com/repos/grafana/tempo/contents?ref=v3.1.0",
+      "image": "grafana/tempo:3.1.0@sha256:3076b8dcdfb32fd6bc5ccef85e7b7313e6199b9cb84366257fc17ecb696db5fd",
+      "imagePlatform": "linux/arm64",
+      "files": [
+        {
+          "file": "infra/operations/third-party/tempo/v3.1.0/LICENSE",
+          "upstreamFilename": "LICENSE",
+          "url": "https://raw.githubusercontent.com/grafana/tempo/v3.1.0/LICENSE",
+          "gitBlobSha": "be3f7b28e564e7dd05eaf59d64adba1a4065ac0e",
+          "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0",
+          "bytes": 34523,
+          "originalBytesPreserved": true
+        }
+      ],
+      "rootNoticePresent": false
+    },
+    {
+      "product": "loki",
+      "repository": "https://github.com/grafana/loki",
+      "tag": "v3.7.8",
+      "license": "AGPLv3 (upstream root LICENSE)",
+      "rootDirectorySource": "https://api.github.com/repos/grafana/loki/contents?ref=v3.7.8",
+      "image": "grafana/loki:3.7.8@sha256:1107dd5274e0ada47e42472b7a7e71f3b2a2fe878878108f3e2f9e51528f0193",
+      "imagePlatform": "linux/arm64",
+      "files": [
+        {
+          "file": "infra/operations/third-party/loki/v3.7.8/LICENSE",
+          "upstreamFilename": "LICENSE",
+          "url": "https://raw.githubusercontent.com/grafana/loki/v3.7.8/LICENSE",
+          "gitBlobSha": "be3f7b28e564e7dd05eaf59d64adba1a4065ac0e",
+          "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0",
+          "bytes": 34523,
+          "originalBytesPreserved": true
+        }
+      ],
+      "rootNoticePresent": false
+    }
+  ],
+  "scope": "Original upstream root LICENSE/NOTICE-family files at six exact image version tags; not an image OS/transitive SBOM or a legal conclusion.",
+  "upstreamModified": false,
+  "yzenMaterialsUsed": false,
+  "redisJwtSsoUsed": false,
+  "legalRedistributionReviewCompleted": false
+}

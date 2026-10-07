@@ -1,0 +1,10 @@
+PASS profile and PID process ownership guards
+PASS default prod OFF
+PASS selected profile audit
+PASS selected profile file-storage
+PASS selected profile audit,file-storage
+PASS selected profile dev,audit
+PASS selected profile dev,file-storage
+PASS selected profile dev,audit,file-storage
+PASS dev helper own Vite proxy and graceful shutdown
+{"passed": true, "groupsPassed": 9, "temporaryDataRemoved": true}

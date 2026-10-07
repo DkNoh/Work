@@ -1,0 +1,10 @@
+{
+  "expectedFailure": true,
+  "exitCode": 1,
+  "detectedVisualMismatch": true,
+  "oneFailed": true,
+  "baselineFiles": 17,
+  "baselineUnchanged": true,
+  "changedFiles": [],
+  "log": "007-visual-negative-probe.log"
+}

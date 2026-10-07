@@ -1,0 +1,19 @@
+package dev.scframework.autoconfigure.audit;
+
+import java.util.concurrent.atomic.AtomicLong;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+/** 동기 저장 실패의 운영 신호. 영구 전달/outbox 보장은 후속 운영 모듈의 책임이다. */
+public final class AuditWriteDiagnostics {
+    private static final Logger LOG = LoggerFactory.getLogger(AuditWriteDiagnostics.class);
+    private final AtomicLong failedWrites = new AtomicLong();
+
+    public long getFailedWrites() { return failedWrites.get(); }
+
+    void failed() {
+        failedWrites.incrementAndGet();
+        // 예외 message/stack·SQL·사용자·원문을 로그에 복사하지 않는다.
+        LOG.warn("Security audit write failed; reasonCode=AUDIT_SINK_FAILURE");
+    }
+}

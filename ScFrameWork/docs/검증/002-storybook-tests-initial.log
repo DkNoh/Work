@@ -1,0 +1,98 @@
+
+> sc-framework@0.1.0 test:stories
+> npm run test:stories --workspace @sc/catalog
+
+
+> @sc/catalog@0.1.0 test:stories
+> vitest run --config vitest.config.ts
+
+
+ RUN  v4.1.2 /Users/dk/Work/ScFramework/frontend/apps/catalog
+
+6:55:29 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+6:55:29 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+6:55:29 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+6:55:29 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+6:55:29 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+6:55:29 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+6:55:29 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+6:55:29 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+ ❯ |storybook (chromium)| src/ScAppShell.stories.ts (5 tests | 1 failed) 587ms
+   × 모바일 탐색·포커스 복귀 94ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |storybook (chromium)| src/ScAppShell.stories.ts > 모바일 탐색·포커스 복귀
+Error: 
+[34mClick to debug the error directly in Storybook: http://localhost:6006/?path=/story/공통-배치-scappshell--mobile-navigation&addonPanel=storybook/interactions/panel[39m
+
+expect(element).toHaveFocus()
+
+Expected element with focus:
+  <button
+  aria-controls="sc-navigation-v-0"
+  aria-expanded="true"
+  aria-haspopup="dialog"
+  aria-label="탐색 메뉴 열기"
+  class="sc-app-shell__menu-toggle"
+  data-v-dbcc044f=""
+  type="button"
+>
+  <svg
+    aria-hidden="true"
+    data-v-dbcc044f=""
+    height="22"
+    viewBox="0 0 24 24"
+    width="22"
+  >
+    <path
+      d="M4 6h16M4 12h16M4 18h16"
+      data-v-dbcc044f=""
+    />
+  </svg>
+</button>
+Received element with focus:
+  <a
+  aria-current="page"
+  class="sc-shell-navigation__link"
+  data-v-577e4833=""
+  href="#examples"
+>
+  <span
+    data-v-577e4833=""
+  >
+    예제 업무
+  </span>
+</a>
+ ❯ Proxy.expectWrapper ../../../node_modules/storybook/dist/test/index.js:15100:16
+ ❯ Proxy.<anonymous> ../../../node_modules/storybook/dist/test/index.js:14620:17
+ ❯ Proxy.methodWrapper ../../../node_modules/storybook/dist/test/index.js:9105:24
+ ❯ Instrumenter.invoke ../../../node_modules/storybook/dist/instrumenter/index.js:322:22
+ ❯ Instrumenter.intercept ../../../node_modules/storybook/dist/instrumenter/index.js:243:139
+ ❯ Instrumenter.track ../../../node_modules/storybook/dist/instrumenter/index.js:238:378
+ ❯ Proxy.toHaveFocus ../../../node_modules/storybook/dist/instrumenter/index.js:224:263
+ ❯ toHaveFocus src/ScAppShell.stories.ts:95:26
+     93|     await expect(within(dialog).getByRole("link", { name: "예제 업무" })).…
+     94|     await userEvent.keyboard("{Escape}");
+     95|     await expect(trigger).toHaveFocus();
+       |                          ^
+     96|     await expect(trigger).toHaveAttribute("aria-expanded", "false");
+     97|     await userEvent.click(trigger);
+ ❯ runStory ../../../node_modules/storybook/dist/_browser-chunks/chunk-SZQXB3JV.js:1325:6
+ ❯ ../../../node_modules/@storybook/addon-vitest/dist/vitest-plugin/test-utils.js:108:184
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 4 passed (5)
+      Tests  1 failed | 17 passed (18)
+   Start at  18:55:27
+   Duration  2.44s (transform 0ms, setup 5.33s, import 559ms, tests 1.94s, environment 0ms)
+
+npm error Lifecycle script `test:stories` failed with error:
+npm error code 1
+npm error path /Users/dk/Work/ScFramework/frontend/apps/catalog
+npm error workspace @sc/catalog@0.1.0
+npm error location /Users/dk/Work/ScFramework/frontend/apps/catalog
+npm error command failed
+npm error command sh -c vitest run --config vitest.config.ts

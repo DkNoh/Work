@@ -1,0 +1,243 @@
+
+> sc-framework@0.3.0 api:check
+> node scripts/openapi-types.mjs --check
+
+neutral compatibility: OpenAPI 명세와 생성 타입 일치
+reference: OpenAPI 명세와 생성 타입 일치
+starter: OpenAPI 명세와 생성 타입 일치
+
+> sc-framework@0.3.0 ui:contracts:check
+> node scripts/ui-contracts.mjs --check
+
+공개 UI 22개: imported props/events/slots/default 계약 일치
+
+> sc-framework@0.3.0 ui:boundaries:check
+> node scripts/check-ui-boundaries.mjs
+
+공개 UI/소비 앱 경계: import 1331개 확인
+
+> sc-framework@0.3.0 visual:manifest:check
+> node scripts/verify-visual-baselines.mjs --profile darwin-chromium
+
+{"result":"verified","profile":"darwin-chromium","images":16,"platform":"darwin","browserVersion":"153.0.8010.12"}
+
+> sc-framework@0.3.0 typecheck
+> npm run typecheck --workspace @sc/date && npm run typecheck --workspace @sc/i18n && npm run typecheck --workspace @sc/excel && npm run typecheck --workspace @sc/ui && npm run typecheck --workspace @sc/runtime && npm run typecheck --workspace @sc/reference-app && npm run typecheck --workspace @sc/starter-app && npm run typecheck --workspace @sc/catalog && npm run typecheck:e2e
+
+
+> @sc/date@0.3.0 typecheck
+> tsc --noEmit -p tsconfig.json
+
+
+> @sc/i18n@0.3.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/excel@0.3.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/ui@0.3.0 typecheck
+> npm run tokens:check && vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/ui@0.3.0 tokens:check
+> node scripts/generate-tokens.mjs --check
+
+Design token CSS matches tokens.ts.
+
+> @sc/runtime@0.3.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/reference-app@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/starter-app@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/catalog@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> sc-framework@0.3.0 typecheck:e2e
+> tsc --noEmit -p frontend/tsconfig.e2e.json
+
+
+> sc-framework@0.3.0 test:unit
+> vitest run --config vitest.config.ts
+
+
+ RUN  v4.1.11 /Users/dk/Work/ScFramework
+
+
+ Test Files  36 passed (36)
+      Tests  149 passed (149)
+   Start at  07:16:39
+   Duration  3.00s (transform 21.73s, setup 0ms, import 30.75s, tests 2.19s, environment 5.26s)
+
+
+> sc-framework@0.3.0 build
+> npm run build --workspace @sc/date && npm run build --workspace @sc/i18n && npm run build --workspace @sc/excel && npm run build --workspace @sc/ui && npm run build --workspace @sc/runtime && npm run build --workspace @sc/reference-app && npm run build --workspace @sc/starter-app
+
+
+> @sc/date@0.3.0 build
+> node ../../../scripts/build-library.mjs .
+
+vite v8.3.1 building client environment for production...
+transforming...
+✓ 2 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.js  5.16 kB │ gzip: 2.01 kB
+
+✓ built in 9ms
+@sc/date@0.3.0: compiled ESM/declarations/assets ready
+
+> @sc/i18n@0.3.0 build
+> node ../../../scripts/build-library.mjs .
+
+vite v8.3.1 building client environment for production...
+transforming...
+✓ 3 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.js  3.30 kB │ gzip: 1.49 kB
+
+✓ built in 10ms
+@sc/i18n@0.3.0: compiled ESM/declarations/assets ready
+
+> @sc/excel@0.3.0 build
+> node ../../../scripts/build-library.mjs .
+
+vite v8.3.1 building client environment for production...
+transforming...
+✓ 2 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.js  5.77 kB │ gzip: 2.25 kB
+
+✓ built in 8ms
+@sc/excel@0.3.0: compiled ESM/declarations/assets ready
+
+> @sc/ui@0.3.0 build
+> node ../../../scripts/build-library.mjs .
+
+Design token CSS matches tokens.ts.
+vite v8.3.1 building client environment for production...
+transforming...
+✓ 100 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/sc-ui.css                                     33.23 kB │ gzip: 5.01 kB
+dist/__styles.js                                    0.00 kB │ gzip: 0.02 kB
+dist/chunks/_plugin-vue_export-helper-Pzq_nHDg.js   0.98 kB │ gzip: 0.58 kB
+dist/chunks/tokens-Gi1pjZK9.js                      1.67 kB │ gzip: 0.90 kB
+dist/chunks/ScActionButton-DKPA-6Pm.js              2.70 kB │ gzip: 1.16 kB
+dist/charts.js                                      9.28 kB │ gzip: 3.07 kB
+dist/editor.js                                     16.87 kB │ gzip: 5.08 kB
+dist/board.js                                      17.71 kB │ gzip: 4.84 kB
+dist/image.js                                      18.16 kB │ gzip: 5.30 kB
+dist/table.js                                      49.02 kB │ gzip: 9.56 kB
+dist/index.js                                      50.72 kB │ gzip: 9.34 kB
+
+✓ built in 172ms
+@sc/ui@0.3.0: compiled ESM/declarations/assets ready
+
+> @sc/runtime@0.3.0 build
+> node ../../../scripts/build-library.mjs .
+
+vite v8.3.1 building client environment for production...
+transforming...
+✓ 5 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.js  13.17 kB │ gzip: 4.45 kB
+
+✓ built in 10ms
+@sc/runtime@0.3.0: compiled ESM/declarations/assets ready
+
+> @sc/reference-app@0.1.0 build
+> vue-tsc --noEmit -p tsconfig.json && vite build
+
+vite v8.3.1 building client environment for production...
+transforming...
+✓ 1926 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                   0.56 kB │ gzip:   0.33 kB
+dist/assets/useImageFile-1hkDtVIH.css             0.06 kB │ gzip:   0.08 kB
+dist/assets/DocumentsPage-CGzgDvdS.css            0.11 kB │ gzip:   0.11 kB
+dist/assets/AdminNavigation-CGsS6gxN.css          0.13 kB │ gzip:   0.13 kB
+dist/assets/BrowserErrorsPage-C05_MT3O.css        0.15 kB │ gzip:   0.15 kB
+dist/assets/MessagesPage-BCmKWFZt.css             0.15 kB │ gzip:   0.15 kB
+dist/assets/NoticesPage-DsFzkVWS.css              0.21 kB │ gzip:   0.14 kB
+dist/assets/OperationsTable-xRkMfjgk.css          0.37 kB │ gzip:   0.19 kB
+dist/assets/PatternsPage-D9wSiuNv.css             0.59 kB │ gzip:   0.29 kB
+dist/assets/AdminAuditPage-BqQoUJOH.css           0.62 kB │ gzip:   0.31 kB
+dist/assets/RequirementsPage-DHRt7bWb.css         0.83 kB │ gzip:   0.30 kB
+dist/assets/RequirementWorkspace-CFi7C6u6.css     1.28 kB │ gzip:   0.48 kB
+dist/assets/KanbanPage-6zvtfWED.css               1.45 kB │ gzip:   0.48 kB
+dist/assets/RequirementReportPage-BKY-UAMX.css    1.90 kB │ gzip:   0.57 kB
+dist/assets/vue-i18n-Bw7auy6a.css                95.15 kB │ gzip:  13.21 kB
+dist/assets/index-CTX-M5wf.css                  232.17 kB │ gzip:  34.77 kB
+dist/assets/validation-hl21o1zK.js                0.11 kB │ gzip:   0.11 kB
+dist/assets/useDraftGuard-DI7A31T0.js             0.65 kB │ gzip:   0.40 kB
+dist/assets/query-1YvvfP4A.js                     1.31 kB │ gzip:   0.59 kB
+dist/assets/AccountPage-ivH1fIVs.js               3.37 kB │ gzip:   1.54 kB
+dist/assets/AdminNavigation-DwdNVTwu.js           3.38 kB │ gzip:   1.79 kB
+dist/assets/AdminUsersPage-IUV7uFK9.js            3.93 kB │ gzip:   1.67 kB
+dist/assets/RequirementsPage-B4c_toZi.js          4.86 kB │ gzip:   1.98 kB
+dist/assets/AdminMenusPage-Dz66_jHz.js            4.95 kB │ gzip:   2.12 kB
+dist/assets/BrowserErrorsPage--v4wKA35.js         5.39 kB │ gzip:   2.07 kB
+dist/assets/MessagesPage-AEjJiZfV.js              5.47 kB │ gzip:   2.27 kB
+dist/assets/AdminAuditPage-laC5XtFh.js            5.75 kB │ gzip:   2.24 kB
+dist/assets/OperationsTable-XQ3xy1Ax.js           8.18 kB │ gzip:   3.56 kB
+dist/assets/MediaWorkspacePage-7lRKTctV.js       10.77 kB │ gzip:   3.81 kB
+dist/assets/SchedulesPage-3r2fqidN.js            11.51 kB │ gzip:   3.95 kB
+dist/assets/PatternsPage-SPAWExam.js             11.82 kB │ gzip:   4.45 kB
+dist/assets/NoticesPage-DJ-Ea53V.js              11.83 kB │ gzip:   4.51 kB
+dist/assets/DocumentsPage-BQiHQmwM.js            12.27 kB │ gzip:   4.77 kB
+dist/assets/dist-nEO7PU3y.js                     16.09 kB │ gzip:   6.17 kB
+dist/assets/RequirementReportPage-DmvWncsh.js    16.48 kB │ gzip:   5.46 kB
+dist/assets/RequirementWorkspace-Cb-AVKuv.js     29.51 kB │ gzip:   8.32 kB
+dist/assets/KanbanPage-DUBuQHAm.js              148.73 kB │ gzip:  47.88 kB
+dist/assets/useImageFile-C7tw6Qa5.js            212.60 kB │ gzip:  66.10 kB
+dist/assets/index-wMfAe9e4.js                   277.58 kB │ gzip:  85.75 kB
+dist/assets/editor-CWzv_Igk.js                  387.46 kB │ gzip: 122.69 kB
+dist/assets/charts-DZvfRw5H.js                  560.12 kB │ gzip: 191.56 kB
+dist/assets/vue-i18n-BQzf3H0D.js                565.77 kB │ gzip: 195.50 kB
+dist/assets/dist-Bbo5EMju.js                    933.03 kB │ gzip: 258.12 kB
+
+✓ built in 1.04s
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+> @sc/starter-app@0.1.0 build
+> vue-tsc --noEmit -p tsconfig.json && vite build
+
+vite v8.3.1 building client environment for production...
+transforming...
+✓ 1812 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                              0.40 kB │ gzip:   0.27 kB
+dist/assets/OperationsPage-DK8xgzrY.css      0.41 kB │ gzip:   0.24 kB
+dist/assets/PatternsPage-DxdglvMl.css        0.92 kB │ gzip:   0.40 kB
+dist/assets/index-CLP9tEG4.css             326.84 kB │ gzip:  46.99 kB
+dist/assets/OperationsPage-YDWUKRJw.js      24.38 kB │ gzip:   7.77 kB
+dist/assets/dist-B4TS5Tug.js               216.97 kB │ gzip:  64.80 kB
+dist/assets/index-DluxC3SV.js              614.28 kB │ gzip: 208.94 kB
+dist/assets/PatternsPage-DsOhR5ta.js     2,217.71 kB │ gzip: 677.80 kB
+
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 486ms

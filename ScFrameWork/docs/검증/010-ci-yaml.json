@@ -1,0 +1,10 @@
+{
+  "stage": "010",
+  "parser": "js-yaml",
+  "parsed": true,
+  "reportSuiteInRootE2eScript": true,
+  "reportResultsInArtifact": true,
+  "storageAndMediaLifecycleSteps": true,
+  "evidenceStage": "010",
+  "remoteExecuted": false
+}

@@ -1,0 +1,212 @@
+{
+  "format": 1,
+  "checkedAt": "2026-10-06T21:08:29.896Z",
+  "status": "static-check-passed",
+  "workflow": ".github/workflows/verify.yml",
+  "sha256": "b73b9f0cbae50f7d53ad4b6fcc90387c7ec8bf90b432d4e5765aafe5c43f319c",
+  "yamlParsed": true,
+  "bashBlocks": 36,
+  "bashResults": [
+    {
+      "job": "verify",
+      "name": "Use the pinned npm version",
+      "exitCode": 0
+    },
+    {
+      "job": "verify",
+      "name": "Build frontend and verify Maven modules",
+      "exitCode": 0
+    },
+    {
+      "job": "verify",
+      "name": "Verify Java processor success and unmapped DTO failure gates",
+      "exitCode": 0
+    },
+    {
+      "job": "verify",
+      "name": "Check live server OpenAPI snapshot",
+      "exitCode": 0
+    },
+    {
+      "job": "verify",
+      "name": "Check committed OpenAPI types",
+      "exitCode": 0
+    },
+    {
+      "job": "verify",
+      "name": "Build isolated UI catalog",
+      "exitCode": 0
+    },
+    {
+      "job": "verify",
+      "name": "Install Chromium",
+      "exitCode": 0
+    },
+    {
+      "job": "verify",
+      "name": "Verify framework checker failure gates",
+      "exitCode": 0
+    },
+    {
+      "job": "verify",
+      "name": "Verify Storybook accessibility failure gate",
+      "exitCode": 0
+    },
+    {
+      "job": "verify",
+      "name": "Verify Starter with optional features disabled",
+      "exitCode": 0
+    },
+    {
+      "job": "verify",
+      "name": "Verify Swagger UI CSRF and session workflow",
+      "exitCode": 0
+    },
+    {
+      "job": "verify",
+      "name": "Verify optional Starter audit profile with real JAR lifecycle",
+      "exitCode": 0
+    },
+    {
+      "job": "verify",
+      "name": "Verify optional local file storage with actual Starter profiles",
+      "exitCode": 0
+    },
+    {
+      "job": "verify",
+      "name": "Verify Reference media metadata and original blobs after clean restart",
+      "exitCode": 0
+    },
+    {
+      "job": "verify",
+      "name": "Verify UI interaction and accessibility stories",
+      "exitCode": 0
+    },
+    {
+      "job": "verify",
+      "name": "Verify built Storybook Docs and Controls",
+      "exitCode": 0
+    },
+    {
+      "job": "verify",
+      "name": "Verify isolated JAR HTTP and H2 restart",
+      "exitCode": 0
+    },
+    {
+      "job": "verify",
+      "name": "Verify isolated development launcher and shutdown",
+      "exitCode": 0
+    },
+    {
+      "job": "verify",
+      "name": "Verify browser workflows against both new app JARs",
+      "exitCode": 0
+    },
+    {
+      "job": "package-consumer",
+      "name": "Use the pinned npm version",
+      "exitCode": 0
+    },
+    {
+      "job": "package-consumer",
+      "name": "Create private canonical temporary directories outside the repository",
+      "exitCode": 0
+    },
+    {
+      "job": "package-consumer",
+      "name": "Reproduce installed tools and compile the five framework packages",
+      "exitCode": 0
+    },
+    {
+      "job": "package-consumer",
+      "name": "Verify and install only the four plain framework Maven coordinates",
+      "exitCode": 0
+    },
+    {
+      "job": "package-consumer",
+      "name": "Pack complete JS, declarations, styles and plain Maven artifacts",
+      "exitCode": 0
+    },
+    {
+      "job": "package-consumer",
+      "name": "Verify the actual five tarballs and seven Maven files",
+      "exitCode": 0
+    },
+    {
+      "job": "package-consumer",
+      "name": "Verify rejecting archive CLI gates and unchanged original inputs",
+      "exitCode": 0
+    },
+    {
+      "job": "package-consumer",
+      "name": "Verify generator options, templates and actual artifact gates",
+      "exitCode": 0
+    },
+    {
+      "job": "package-consumer",
+      "name": "Generate a real new standalone consumer outside the workspace",
+      "exitCode": 0
+    },
+    {
+      "job": "package-consumer",
+      "name": "Install the consumer tarballs and create its independent lock file",
+      "exitCode": 0
+    },
+    {
+      "job": "package-consumer",
+      "name": "Build metadata, capture app API, then verify the consumer and its new JAR",
+      "exitCode": 0
+    },
+    {
+      "job": "package-consumer",
+      "name": "Verify public types, private imports, native neutral APIs and Sass",
+      "exitCode": 0
+    },
+    {
+      "job": "package-consumer",
+      "name": "Install the root verifier's Chromium for real consumer browser tests",
+      "exitCode": 0
+    },
+    {
+      "job": "package-consumer",
+      "name": "Verify the standalone JAR, security, H2 restart and installed UI browser",
+      "exitCode": 0
+    },
+    {
+      "job": "package-consumer",
+      "name": "Verify generated optional profiles and its own launchers",
+      "exitCode": 0
+    },
+    {
+      "job": "package-consumer",
+      "name": "Collect only public consumer build and test evidence",
+      "exitCode": 0
+    },
+    {
+      "job": "package-consumer",
+      "name": "Remove only this job's private generated project and Maven caches",
+      "exitCode": 0
+    }
+  ],
+  "embeddedPythonBlocks": 3,
+  "embeddedPythonResults": [
+    {
+      "name": "Create private canonical temporary directories outside the repository",
+      "exitCode": 0
+    },
+    {
+      "name": "Collect only public consumer build and test evidence",
+      "exitCode": 0
+    },
+    {
+      "name": "Remove only this job's private generated project and Maven caches",
+      "exitCode": 0
+    }
+  ],
+  "generatedFeatureScriptAst": true,
+  "generatedFeatureCliFlags": ["--app", "--label"],
+  "generatedOptionalProfilesStep": true,
+  "remoteExecution": false,
+  "consumerExecuted": false,
+  "dependencyInstallExecuted": false
+}

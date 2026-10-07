@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "v2Files": 82,
+  "changed": [
+    {
+      "source": "frontend/src/App.vue",
+      "before": "cac473af7bcdd2a9c81bb865bc6f0b071ce13e25968608705e55eefb9a739e14",
+      "after": "883d4c7eaaf33c2925fd00fd0ca2b76622ec7469123801e34f60c2cbd17a291b"
+    },
+    {
+      "source": "frontend/src/features/patterns/PatternsPage.vue",
+      "before": "66b7d7e5bd2b315c92f9057a9516a0f1b8b6937f44792fe5a14f9d458b45824c",
+      "after": "37c0001e5d721915fa1519aacb1397fde0000b752f9b2866eec9e7cb57d72377"
+    }
+  ],
+  "v1Files": 61,
+  "v1Unchanged": true
+}

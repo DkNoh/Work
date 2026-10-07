@@ -1,0 +1,436 @@
+name: Verify framework
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    defaults:
+      run:
+        shell: bash
+    env:
+      SC_EVIDENCE_STAGE: "012"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.16.0
+          cache: npm
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+          cache: maven
+          cache-dependency-path: backend/**/pom.xml
+      - name: Use the pinned npm version
+        run: npm install --global npm@11.13.0
+      - name: Build frontend and verify Maven modules
+        run: ./scripts/build.sh
+      - name: Verify Java processor success and unmapped DTO failure gates
+        run: python3 -B scripts/verify-java-processors.py --stage 012
+      - name: Check live server OpenAPI snapshot
+        run: npm run api:check-server
+      - name: Check committed OpenAPI types
+        run: npm run api:check
+      - name: Build isolated UI catalog
+        run: npm run build-storybook
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Verify framework checker failure gates
+        run: npm run test:framework-gates
+      - name: Verify Storybook accessibility failure gate
+        env:
+          SC_VERIFY_STAGE: "012"
+        run: npm run test:a11y-gate
+      - name: Verify Starter with optional features disabled
+        run: npm run starter:features:verify
+      - name: Verify Swagger UI CSRF and session workflow
+        run: python3 scripts/verify-swagger.py --log docs/검증/012-swagger-browser.log
+      - name: Verify optional Starter audit profile with real JAR lifecycle
+        run: python3 scripts/verify-starter-audit.py --log docs/검증/012-starter-audit-launcher.log
+      - name: Verify optional local file storage with actual Starter profiles
+        run: python3 -B scripts/verify-starter-storage.py
+      - name: Verify Reference media metadata and original blobs after clean restart
+        run: python3 -B scripts/verify-reference-media.py
+      - name: Verify UI interaction and accessibility stories
+        run: npm run test:stories
+      - name: Verify built Storybook Docs and Controls
+        env:
+          SC_VERIFY_STAGE: "012"
+        run: npm run storybook:verify
+      - name: Verify isolated JAR HTTP and H2 restart
+        run: python3 scripts/smoke-test.py | tee docs/검증/012-http-smoke.log
+      - name: Verify isolated development launcher and shutdown
+        run: python3 scripts/verify-dev-launcher.py --log docs/검증/012-dev-launcher.log
+      - name: Verify browser workflows against both new app JARs
+        run: npm run test:e2e
+      - name: Keep build and test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: framework-verification
+          if-no-files-found: ignore
+          path: |
+            backend/**/target/surefire-reports/
+            backend/**/target/failsafe-reports/
+            frontend/test-results/
+            frontend/test-results-reports/
+            frontend/playwright-report/
+            frontend/apps/catalog/storybook-static/
+            docs/검증/001-swagger-browser.log
+            docs/검증/001-http-smoke.log
+            docs/검증/001-dev-launcher.log
+            docs/검증/002-*.log
+            docs/검증/002-*.json
+            docs/검증/002-*.png
+            docs/검증/003-*.log
+            docs/검증/003-*.json
+            docs/검증/003-*.png
+            docs/검증/004-*.log
+            docs/검증/004-*.json
+            docs/검증/004-*.png
+            docs/검증/005-*.log
+            docs/검증/005-*.json
+            docs/검증/005-*.png
+            docs/검증/006-*.log
+            docs/검증/006-*.json
+            docs/검증/006-*.png
+            docs/검증/007-*
+            docs/검증/008-*
+            docs/검증/009-*
+            docs/검증/010-*
+            docs/검증/011-*
+            docs/검증/012-*
+            !**/.runtime/**
+          retention-days: 7
+
+  package-consumer:
+    name: Verify packaged framework in a new standalone Starter
+    needs: verify
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    defaults:
+      run:
+        shell: bash
+    env:
+      SC_EVIDENCE_STAGE: "012"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.16.0
+          cache: npm
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+      - name: Use the pinned npm version
+        run: npm install --global npm@11.13.0
+      - name: Create private canonical temporary directories outside the repository
+        run: |
+          python3 -B - <<'PY'
+          import os
+          import pathlib
+          import tempfile
+          parent = pathlib.Path(os.environ["RUNNER_TEMP"]).resolve(strict=True)
+          workspace = pathlib.Path(os.environ["GITHUB_WORKSPACE"]).resolve(strict=True)
+          base = pathlib.Path(tempfile.mkdtemp(prefix="sc-package-ci.", dir=parent)).resolve(strict=True)
+          assert not base.is_relative_to(workspace)
+          assert not base.is_symlink()
+          base.chmod(0o700)
+          values = {
+              "SC_CI_PACKAGE_BASE": base,
+              "SC_CI_RELEASE": base / "release",
+              "SC_CI_PRODUCER_M2": base / "producer-m2",
+              "SC_CI_CONSUMER_M2": base / "consumer-m2",
+              "SC_CI_CONSUMER": base / "sc-ci-consumer",
+          }
+          with pathlib.Path(os.environ["GITHUB_ENV"]).open("a") as destination:
+              for key, value in values.items():
+                  destination.write(f"{key}={value}\n")
+          PY
+      - name: Reproduce installed tools and compile the five framework packages
+        run: |
+          npm ci
+          npm run build --workspace @sc/date
+          npm run build --workspace @sc/i18n
+          npm run build --workspace @sc/excel
+          npm run build --workspace @sc/ui
+          npm run build --workspace @sc/runtime
+      - name: Verify and install only the four plain framework Maven coordinates
+        run: |
+          ./backend/mvnw -f backend/pom.xml -B -ntp \
+            "-Dmaven.repo.local=$SC_CI_PRODUCER_M2" \
+            -pl framework-core,framework-autoconfigure,framework-spring-boot-starter -am \
+            clean install 2>&1 | tee docs/검증/012-package-common-maven-ci.log
+      - name: Pack complete JS, declarations, styles and plain Maven artifacts
+        run: |
+          node scripts/package-framework.mjs \
+            --output "$SC_CI_RELEASE" \
+            --maven-repository "$SC_CI_PRODUCER_M2" \
+            2>&1 | tee docs/검증/012-package-ci.log
+      - name: Verify the actual five tarballs and seven Maven files
+        run: |
+          node scripts/verify-package-artifacts.mjs \
+            --artifacts "$SC_CI_RELEASE" \
+            --report docs/검증/012-package-artifacts-ci.json \
+            2>&1 | tee docs/검증/012-package-artifacts-ci.log
+      - name: Verify rejecting archive CLI gates and unchanged original inputs
+        run: |
+          node scripts/verify-package-gates.mjs \
+            --artifacts "$SC_CI_RELEASE" \
+            --report docs/검증/012-package-gates-ci.json \
+            2>&1 | tee docs/검증/012-package-gates-ci.log
+      - name: Verify generator options, templates and actual artifact gates
+        run: |
+          node scripts/verify-starter-generator.mjs \
+            --artifacts "$SC_CI_RELEASE" \
+            --report docs/검증/012-starter-generator-ci.json \
+            2>&1 | tee docs/검증/012-starter-generator-ci.log
+      - name: Generate a real new standalone consumer outside the workspace
+        run: |
+          node scripts/create-starter.mjs \
+            --target "$SC_CI_CONSUMER" \
+            --name sc-ci-consumer \
+            --java-package dev.scframework.ciconsumer \
+            --frontend-port 5178 \
+            --server-port 18088 \
+            --artifacts "$SC_CI_RELEASE" \
+            2>&1 | tee docs/검증/012-starter-create-ci.log
+      - name: Install the consumer tarballs and create its independent lock file
+        run: |
+          cd "$SC_CI_CONSUMER"
+          npm install 2>&1 | tee "$GITHUB_WORKSPACE/docs/검증/012-consumer-install-ci.log"
+      - name: Build metadata, capture app API, then verify the consumer and its new JAR
+        env:
+          MAVEN_OPTS: "-Xmx768m -Dmaven.repo.local=${{ env.SC_CI_CONSUMER_M2 }}"
+        run: |
+          cd "$SC_CI_CONSUMER"
+          # The first metadata package skips tests; build.sh must finish with clean Maven verify.
+          bash scripts/build.sh 2>&1 | tee "$GITHUB_WORKSPACE/docs/검증/012-consumer-build-ci.log"
+      - name: Verify public types, private imports, native neutral APIs and Sass
+        run: |
+          node scripts/verify-package-consumer.mjs \
+            --consumer "$SC_CI_CONSUMER" \
+            --report docs/검증/012-package-consumer-ci.json \
+            2>&1 | tee docs/검증/012-package-consumer-ci.log
+      - name: Install the root verifier's Chromium for real consumer browser tests
+        run: npx playwright install --with-deps chromium
+      - name: Verify the standalone JAR, security, H2 restart and installed UI browser
+        run: |
+          python3 -B scripts/verify-generated-app.py \
+            --consumer "$SC_CI_CONSUMER" --label ci012 --patterns on \
+            2>&1 | tee docs/검증/012-generated-ci.log
+      - name: Verify generated optional profiles and its own launchers
+        run: |
+          python3 -B scripts/verify-generated-features.py \
+            --app "$SC_CI_CONSUMER" --label ci012 \
+            2>&1 | tee docs/검증/012-generated-features-ci.log
+      - name: Collect only public consumer build and test evidence
+        if: always() && env.SC_CI_CONSUMER != ''
+        run: |
+          python3 -B - <<'PY'
+          import os
+          import pathlib
+          import shutil
+          consumer = pathlib.Path(os.environ["SC_CI_CONSUMER"])
+          evidence = pathlib.Path(os.environ["GITHUB_WORKSPACE"]) / "docs/검증/012-consumer-ci-reports"
+          evidence.mkdir(exist_ok=True)
+          for name in ("surefire-reports", "failsafe-reports"):
+              source = consumer / "backend/target" / name
+              if source.is_dir():
+                  shutil.copytree(source, evidence / name, dirs_exist_ok=True)
+          for name in ("sc-starter.lock.json", "package-lock.json"):
+              source = consumer / name
+              if source.is_file():
+                  shutil.copyfile(source, evidence / name)
+          # Runtime folders, H2, uploads and secret files are deliberately not collected.
+          PY
+      - name: Keep package manifests, public archives and consumer failure evidence
+        if: always() && env.SC_CI_RELEASE != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: framework-packages-and-consumer
+          if-no-files-found: ignore
+          path: |
+            docs/검증/011-generated-ci012*
+            docs/검증/011-generated-features-ci012*
+            docs/검증/012-*
+            ${{ env.SC_CI_RELEASE }}/artifacts.json
+            ${{ env.SC_CI_RELEASE }}/npm-pack.json
+            ${{ env.SC_CI_RELEASE }}/*.tgz
+            ${{ env.SC_CI_RELEASE }}/maven/**/*.pom
+            ${{ env.SC_CI_RELEASE }}/maven/**/*.jar
+            !**/.runtime/**
+            !**/bootstrap.secret
+            !**/application.log
+            !**/*.mv.db
+            !**/*.trace.db
+          retention-days: 7
+      - name: Remove only this job's private generated project and Maven caches
+        if: always() && env.SC_CI_PACKAGE_BASE != ''
+        run: |
+          python3 -B - <<'PY'
+          import os
+          import pathlib
+          import shutil
+          base = pathlib.Path(os.environ["SC_CI_PACKAGE_BASE"]).resolve(strict=True)
+          parent = pathlib.Path(os.environ["RUNNER_TEMP"]).resolve(strict=True)
+          assert base.parent == parent and base.name.startswith("sc-package-ci.")
+          assert not base.is_symlink()
+          shutil.rmtree(base)
+          PY
+
+  operations:
+    name: Verify selected operations against private infrastructure
+    needs: verify
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    defaults:
+      run:
+        shell: bash
+    env:
+      SC_EVIDENCE_STAGE: "012"
+      SC_MQ_PORT: "5679"
+      # Normal build skips the three broker-only tests; the explicit MQ step turns them on.
+      SC_MQ_TEST: "false"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.16.0
+          cache: npm
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+          cache: maven
+          cache-dependency-path: backend/**/pom.xml
+      - name: Use the pinned npm version
+        run: npm install --global npm@11.13.0
+      - name: Prepare new private infrastructure configuration outside the repository
+        run: |
+          python3 -B - <<'PY'
+          import os
+          import pathlib
+          import tempfile
+          parent = pathlib.Path(os.environ["RUNNER_TEMP"]).resolve(strict=True)
+          workspace = pathlib.Path(os.environ["GITHUB_WORKSPACE"]).resolve(strict=True)
+          base = pathlib.Path(tempfile.mkdtemp(prefix="sc-operations-ci.", dir=parent)).resolve(strict=True)
+          assert base.parent == parent and not base.is_relative_to(workspace)
+          assert not base.is_symlink()
+          base.chmod(0o700)
+          home = base / "runtime"
+          project = "scframework-012-" + os.environ["GITHUB_RUN_ID"] + "-" + os.environ["GITHUB_RUN_ATTEMPT"]
+          values = {
+              "SC_CI_OPERATIONS_BASE": base,
+              "SC_OPERATIONS_HOME": home,
+              "SC_CI_OPERATIONS_PROJECT": project,
+              "SC_MQ_PASSWORD_FILE": home / "secrets/operations/spring.rabbitmq.password",
+              "JAVA21_HOME": os.environ["JAVA_HOME"],
+          }
+          with pathlib.Path(os.environ["GITHUB_ENV"]).open("a") as destination:
+              for key, value in values.items():
+                  destination.write(f"{key}={value}\n")
+          PY
+      - name: Generate mode 600 secrets without printing their values
+        run: python3 -B scripts/prepare-operations.py --home "$SC_OPERATIONS_HOME"
+      - name: Start six infrastructure services in this job's Compose project
+        run: |
+          docker compose -p "$SC_CI_OPERATIONS_PROJECT" -f compose.operations.yaml config --quiet
+          docker compose -p "$SC_CI_OPERATIONS_PROJECT" -f compose.operations.yaml \
+            up -d --wait --wait-timeout 180
+      - name: Reproduce frontend and default-OFF backend verification
+        run: ./scripts/build.sh 2>&1 | tee docs/검증/012-ci-operations-build.log
+      - name: Verify actual confirm, manual ACK, retry and JVM crash boundaries
+        env:
+          SC_MQ_TEST: "true"
+        run: |
+          ./backend/mvnw -f backend/pom.xml -B -ntp \
+            -pl framework-autoconfigure -am \
+            -Dtest=RabbitDurableIntegrationTest,MessageCrashBoundaryTest \
+            -Dsurefire.failIfNoSpecifiedTests=false test \
+            2>&1 | tee docs/검증/012-ci-real-mq.log
+      - name: Check selected-profile live OpenAPI and neutral technical contracts
+        run: |
+          npm run api:check-operations-server
+          python3 -B scripts/neutral-openapi-operations.py --check
+      - name: Verify real scheduler and bounded browser reports in both JARs
+        run: |
+          python3 -B scripts/verify-operational-boundaries.py \
+            --application both \
+            --report docs/검증/012-ci-operational-boundaries.json \
+            --log docs/검증/012-ci-operational-boundaries.log
+      - name: Verify actual runtime recovery and stopped backup restoration
+        run: |
+          python3 -B scripts/verify-runtime-recovery.py \
+            --shared-home "$SC_OPERATIONS_HOME" \
+            --report docs/검증/012-ci-runtime-recovery.json \
+            2>&1 | tee docs/검증/012-ci-runtime-recovery.log
+      - name: Install Chromium for Grafana and application browser checks
+        run: npx playwright install --with-deps chromium
+      - name: Verify populated metrics, traces, logs and actual Grafana browser panels
+        run: |
+          python3 -B scripts/verify-observability.py \
+            --shared-home "$SC_OPERATIONS_HOME" \
+            --report docs/검증/012-ci-observability.json \
+            --grafana-browser-output docs/검증/012-ci-grafana-browser \
+            2>&1 | tee docs/검증/012-ci-observability.log
+      - name: Verify authenticated operations UI with real JARs
+        run: npm run test:operations 2>&1 | tee docs/검증/012-ci-operations-e2e.log
+      - name: Build the actual application image with the selected operations profile
+        run: |
+          docker compose -p "$SC_CI_OPERATIONS_PROJECT" -f compose.operations.yaml \
+            --profile app build reference-app
+      - name: Verify selected Docker application and preserved private runtime
+        run: |
+          python3 -B scripts/verify-docker-operations.py \
+            --project "$SC_CI_OPERATIONS_PROJECT" \
+            --operations-home "$SC_OPERATIONS_HOME" \
+            --report docs/검증/012-ci-docker-operations.json \
+            --log docs/검증/012-ci-docker-operations.log
+      - name: Keep only public operations evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: framework-operations-verification
+          if-no-files-found: ignore
+          path: |
+            docs/검증/012-ci-*
+            backend/**/target/surefire-reports/
+            backend/**/target/failsafe-reports/
+            frontend/test-results-operations/
+            !**/.runtime/**
+            !**/*.secret
+            !**/spring.rabbitmq.password
+            !**/rabbitmq.conf
+            !**/*.mv.db
+            !**/*.trace.db
+          retention-days: 7
+      - name: Remove only this job's application, infrastructure and named volumes
+        if: always() && env.SC_CI_OPERATIONS_PROJECT != ''
+        run: |
+          docker compose -p "$SC_CI_OPERATIONS_PROJECT" -f compose.operations.yaml \
+            --profile app down --volumes --remove-orphans --timeout 45
+      - name: Remove only this job's private runtime and connection files
+        if: always() && env.SC_CI_OPERATIONS_BASE != ''
+        run: |
+          python3 -B - <<'PY'
+          import os
+          import pathlib
+          import shutil
+          base = pathlib.Path(os.environ["SC_CI_OPERATIONS_BASE"])
+          parent = pathlib.Path(os.environ["RUNNER_TEMP"]).resolve(strict=True)
+          assert not base.is_symlink()
+          base = base.resolve(strict=True)
+          assert base.parent == parent and base.name.startswith("sc-operations-ci.")
+          shutil.rmtree(base)
+          PY

@@ -1,0 +1,43 @@
+{
+  "stage": "012",
+  "passed": true,
+  "panels": [
+    {
+      "id": 1,
+      "title": "Requests / second",
+      "visible": true
+    },
+    {
+      "id": 2,
+      "title": "HTTP 5xx / second",
+      "visible": true
+    },
+    {
+      "id": 3,
+      "title": "HTTP p95 seconds",
+      "visible": true
+    },
+    {
+      "id": 4,
+      "title": "JVM heap bytes",
+      "visible": true
+    },
+    {
+      "id": 5,
+      "title": "Operational events",
+      "visible": true
+    },
+    {
+      "id": 6,
+      "title": "Sanitized operational logs",
+      "visible": true
+    }
+  ],
+  "successfulQueries": 6,
+  "dataFrames": 11,
+  "populatedMetricQueries": 5,
+  "pageErrorTypes": [],
+  "screenshots": [
+    "grafana-1440.png"
+  ]
+}

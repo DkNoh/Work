@@ -1,0 +1,21 @@
+{
+  "stage": "012",
+  "checkedAt": "2026-10-06T22:40:20.228788+00:00",
+  "passed": true,
+  "documents": 2,
+  "localLinks": 64,
+  "officialExternalLinks": 13,
+  "tables": 7,
+  "fences": 3,
+  "jsonExamples": 1,
+  "licenseProducts": 6,
+  "originalFiles": 11,
+  "originalSha256AndUpstreamGitBlobVerified": 11,
+  "composeImagesMatch": 6,
+  "actualServerTests": 196,
+  "observabilityGroups": 8,
+  "dockerGroups": 7,
+  "rawUpstreamFilesFormatted": false,
+  "remoteCiExecuted": false,
+  "errors": []
+}

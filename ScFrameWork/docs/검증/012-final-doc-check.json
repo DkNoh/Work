@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "documents": 7,
+  "localLinks": 159,
+  "missing": [],
+  "frontEndNineDocs": "012-frontend-docs-check-final.json",
+  "format": "012-global-format-final.log",
+  "lint": "012-global-lint-final.log"
+}

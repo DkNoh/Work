@@ -1,0 +1,57 @@
+{
+  "stage": "012",
+  "passed": true,
+  "cases": [
+    {
+      "version": "0.1.0",
+      "expected": 1,
+      "actual": 1
+    },
+    {
+      "version": "0.1.9",
+      "expected": 1,
+      "actual": 1
+    },
+    {
+      "version": "0.2.0",
+      "expected": 1,
+      "actual": 1
+    },
+    {
+      "version": "0.2.9",
+      "expected": 1,
+      "actual": 1
+    },
+    {
+      "version": "0.3.0",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "version": "0.3.9",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "version": "0.4.0",
+      "expected": null,
+      "actual": null
+    },
+    {
+      "version": "1.0.0",
+      "expected": null,
+      "actual": null
+    },
+    {
+      "version": "0.3.0-SNAPSHOT",
+      "expected": null,
+      "actual": null
+    },
+    {
+      "version": null,
+      "expected": null,
+      "actual": null
+    }
+  ],
+  "artifactPackagesExecuted": false
+}

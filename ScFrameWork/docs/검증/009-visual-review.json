@@ -1,0 +1,107 @@
+{
+  "stage": "009",
+  "reviewedBy": "root",
+  "baselineFiles": 17,
+  "pngs": 16,
+  "changedFilesFrom007": [
+    "manifest.json",
+    "reference-1366-shell-inputs-darwin.png"
+  ],
+  "unchangedPngsFrom007": 15,
+  "initialComparison": {
+    "passed": 3,
+    "failed": 1,
+    "differentPixels": 18928,
+    "reason": "Added requirements report navigation item shifts later sidebar items; root reviewed actual/diff."
+  },
+  "explicitUpdateRun": "009-reviewed-report-navigation",
+  "normalComparison": {
+    "passed": 4,
+    "log": "009-visual-compact-final-compare.log",
+    "freshCompactJar": true
+  },
+  "approvedHashes": {
+    "starter-390-chart-darwin.png": "c02e6a959636a65f3fc3ffab0d9367a50cb579796caa312d72ce5838345cbd66",
+    "starter-390-shell-inputs-darwin.png": "208e49a998f0f1115523b14405a131fd01064e91ed6d1919c9072677300ded0c",
+    "reference-390-editor-darwin.png": "bbbcc0e766f038d4e02416801012e5f490d756207322711002f31114074bcf05",
+    "starter-1366-shell-inputs-darwin.png": "c6cbcf3040cb0e38a8ad80d08376b6253eeff69698d633363dd378ce7f67f833",
+    "reference-1366-editor-darwin.png": "9e58ef0de61703e2d51586be92edf2585c58df1c87c06b1da424da08e1ea040d",
+    "reference-1366-chart-darwin.png": "21a9d380b1af3847c722c1210111f1ff332312784d726d62b5761e3b1df7f470",
+    "reference-390-shell-inputs-darwin.png": "abe82328fed388191be21e88f9e4e71267a825335bf3346266ff5e2e76043828",
+    "starter-1366-table-darwin.png": "22231d94c925f4043bb2b3578c9d1657275d296dac1979884c2556dd6ebf74cd",
+    "reference-390-table-darwin.png": "940ec7a8e1a7bc3f04c05dde974b6f742d1e0d6f1d79e70f21fdec5254626070",
+    "reference-1366-table-darwin.png": "22231d94c925f4043bb2b3578c9d1657275d296dac1979884c2556dd6ebf74cd",
+    "reference-390-chart-darwin.png": "c02e6a959636a65f3fc3ffab0d9367a50cb579796caa312d72ce5838345cbd66",
+    "manifest.json": "faf87415a60807fee8defb8ce28d87bddb4eff8c334c16012be9205dd33f46d2",
+    "reference-1366-shell-inputs-darwin.png": "1c7ff817aaa195b37ea59a15868a1c7c9f72904137ebca12cff01ee2197054c6",
+    "starter-1366-chart-darwin.png": "21a9d380b1af3847c722c1210111f1ff332312784d726d62b5761e3b1df7f470",
+    "starter-1366-editor-darwin.png": "9e58ef0de61703e2d51586be92edf2585c58df1c87c06b1da424da08e1ea040d",
+    "starter-390-table-darwin.png": "940ec7a8e1a7bc3f04c05dde974b6f742d1e0d6f1d79e70f21fdec5254626070",
+    "starter-390-editor-darwin.png": "bbbcc0e766f038d4e02416801012e5f490d756207322711002f31114074bcf05"
+  },
+  "frozenDirectory": "docs/검증/009-visual-approved-baseline",
+  "reportScreenshotsFinalReview": {
+    "reviewedBy": "root",
+    "uniquePngs": 12,
+    "images": [
+      {
+        "file": "docs/검증/009-report-e2e-compact-final-results/requirements-report-10k-보고-4fcdc-focus·일반표·URL·한영·전체-DOM-접근성/report-1366-ko-virtual.png",
+        "sha256": "fad615909f85a21fb317bd40b671a90c279e3ed599cf9224b6c2853f9e46bfe1"
+      },
+      {
+        "file": "docs/검증/009-report-e2e-compact-final-results/requirements-report-10k-보고-4fcdc-focus·일반표·URL·한영·전체-DOM-접근성/report-1366-en-virtual.png",
+        "sha256": "ddb94e3e4909eec636c518e5baa9f8204164269de20e4c187cddb0b246ad0c9d"
+      },
+      {
+        "file": "docs/검증/009-report-e2e-compact-final-results/requirements-report-10k-보고-4fcdc-focus·일반표·URL·한영·전체-DOM-접근성/report-1366-en-virtual-results.png",
+        "sha256": "146b9cf30518fe6ea017e2a9fd40882cd5fc781dda6fe36a77143eb43cc1707c"
+      },
+      {
+        "file": "docs/검증/009-report-e2e-compact-final-results/requirements-report-10k-보고-4fcdc-focus·일반표·URL·한영·전체-DOM-접근성/report-1366-ko-standard.png",
+        "sha256": "dd2a7174e38cc23f474f6440d154bf830bf0f921e0cc56ae3f3ea1759bac0677"
+      },
+      {
+        "file": "docs/검증/009-report-e2e-compact-final-results/requirements-report-10k-보고-4fcdc-focus·일반표·URL·한영·전체-DOM-접근성/report-1366-ko-standard-results.png",
+        "sha256": "d46b73b0f67b3ba20208979228f3e58121237c8e33384bc55726a8b0d2a6bb4f"
+      },
+      {
+        "file": "docs/검증/009-report-e2e-compact-final-results/requirements-report-10k-보고-4fcdc-focus·일반표·URL·한영·전체-DOM-접근성/report-1366-ko-virtual-results.png",
+        "sha256": "c09b7b4f8d03be783aa8b6e6baff7f1ca02916adba02d13e1f1616eacfbb78b0"
+      },
+      {
+        "file": "docs/검증/009-report-e2e-compact-final-results/requirements-report-10k-보고-c6239-focus·일반표·URL·한영·전체-DOM-접근성/report-390-ko-standard-results.png",
+        "sha256": "cdc3fddd7de8e806a1516baf9d1a63591fe8eadb4f15a8a036a323703a202d3d"
+      },
+      {
+        "file": "docs/검증/009-report-e2e-compact-final-results/requirements-report-10k-보고-c6239-focus·일반표·URL·한영·전체-DOM-접근성/report-390-en-virtual-results.png",
+        "sha256": "861f19d94016a365d11b0e84b633773e7fe82fd11c28eb46e75aa2a33dc162a5"
+      },
+      {
+        "file": "docs/검증/009-report-e2e-compact-final-results/requirements-report-10k-보고-c6239-focus·일반표·URL·한영·전체-DOM-접근성/report-390-ko-virtual-results.png",
+        "sha256": "cf66273cbfc167f2a80d6dd54702eb27841301e84ed27602762c1c4116e204c1"
+      },
+      {
+        "file": "docs/검증/009-report-e2e-compact-final-results/requirements-report-10k-보고-c6239-focus·일반표·URL·한영·전체-DOM-접근성/report-390-ko-virtual.png",
+        "sha256": "db8b1a638255dba5b82c731c1cd58f6ed8fee4538c99ee4c185878d34eb67aaf"
+      },
+      {
+        "file": "docs/검증/009-report-e2e-compact-final-results/requirements-report-10k-보고-c6239-focus·일반표·URL·한영·전체-DOM-접근성/report-390-en-virtual.png",
+        "sha256": "88215c54ae6afbd17929737df7a3976c2e2300c276495f7d2ae0aab9f96d4356"
+      },
+      {
+        "file": "docs/검증/009-report-e2e-compact-final-results/requirements-report-10k-보고-c6239-focus·일반표·URL·한영·전체-DOM-접근성/report-390-ko-standard.png",
+        "sha256": "bb67f5f366eca86fca1a0a014c755fdd984428a438bded9a1665529da62366ea"
+      }
+    ],
+    "findings": [
+      "390px summary tiles use two columns; desktop actions share one row.",
+      "Korean and English labels readable; no page horizontal overflow in assertions.",
+      "Standard and virtual table headers/first rows/selection visible in dedicated result crops; internal table horizontal scrolling retained."
+    ],
+    "manualVoiceNarrationVerified": false
+  },
+  "negativeGate": {
+    "log": "009-visual-negative-probe.log",
+    "result": "Expected exit1 with1436pixels difference; outer0,17 baseline files unchanged."
+  }
+}

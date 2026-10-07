@@ -1,0 +1,87 @@
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated lodash.isequal@4.5.0: This package is deprecated. Use require('node:util').isDeepStrictEqual instead.
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated fstream@1.0.12: This package is no longer supported.
+
+added 694 packages in 5s
+
+> sc-framework@0.1.0 verify
+> npm run format:check && npm run lint && npm run api:check && npm run ui:contracts:check && npm run ui:boundaries:check && npm run visual:manifest:check && npm run typecheck && npm run test:unit && npm run build
+
+
+> sc-framework@0.1.0 format:check
+> prettier --check .
+
+Checking formatting...
+All matched files use Prettier code style!
+
+> sc-framework@0.1.0 lint
+> eslint frontend scripts --max-warnings 0
+
+
+> sc-framework@0.1.0 api:check
+> node scripts/openapi-types.mjs --check
+
+neutral compatibility: OpenAPI 명세와 생성 타입 일치
+reference: OpenAPI 명세와 생성 타입 일치
+starter: OpenAPI 명세와 생성 타입 일치
+
+> sc-framework@0.1.0 ui:contracts:check
+> node scripts/ui-contracts.mjs --check
+
+공개 UI 20개: imported props/events/slots/default 계약 일치
+
+> sc-framework@0.1.0 ui:boundaries:check
+> node scripts/check-ui-boundaries.mjs
+
+공개 UI/소비 앱 경계: import 755개 확인
+
+> sc-framework@0.1.0 visual:manifest:check
+> node scripts/verify-visual-baselines.mjs --profile darwin-chromium
+
+{"result":"verified","profile":"darwin-chromium","images":16,"platform":"darwin","browserVersion":"153.0.8010.12"}
+
+> sc-framework@0.1.0 typecheck
+> npm run typecheck --workspace @sc/date && npm run typecheck --workspace @sc/i18n && npm run typecheck --workspace @sc/excel && npm run typecheck --workspace @sc/ui && npm run typecheck --workspace @sc/runtime && npm run typecheck --workspace @sc/reference-app && npm run typecheck --workspace @sc/starter-app && npm run typecheck --workspace @sc/catalog && npm run typecheck:e2e
+
+
+> @sc/date@0.1.0 typecheck
+> tsc --noEmit -p tsconfig.json
+
+
+> @sc/i18n@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/excel@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/ui@0.1.0 typecheck
+> npm run tokens:check && vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/ui@0.1.0 tokens:check
+> node scripts/generate-tokens.mjs --check
+
+Design token CSS matches tokens.ts.
+
+> @sc/runtime@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/reference-app@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+src/features/reports/requirements/api.ts(13,40): error TS2322: Type 'number' is not assignable to type 'string'.
+src/features/reports/requirements/api.ts(13,60): error TS2322: Type 'number' is not assignable to type 'string'.
+npm error Lifecycle script `typecheck` failed with error:
+npm error code 2
+npm error path /Users/dk/Work/ScFramework/frontend/apps/reference-app
+npm error workspace @sc/reference-app@0.1.0
+npm error location /Users/dk/Work/ScFramework/frontend/apps/reference-app
+npm error command failed
+npm error command sh -c vue-tsc --noEmit -p tsconfig.json

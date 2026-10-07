@@ -1,0 +1,12 @@
+.git
+.runtime
+**/node_modules
+**/target
+**/dist
+**/storybook-static
+**/test-results
+**/test-results-*
+**/playwright-report
+docs/검증
+*.log
+**/__pycache__

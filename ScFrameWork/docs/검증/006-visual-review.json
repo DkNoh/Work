@@ -1,0 +1,34 @@
+{
+  "reviewer": "Codex actual image inspection",
+  "runId": "006-third",
+  "images": 16,
+  "verifiedAreas": [
+    "two-app desktop/mobile shell and Korean inputs",
+    "complete table card and all 10 rows; title not covered by sticky header",
+    "chart legend and category B visible separately",
+    "JSON summary disclosure marker and expanded hit target"
+  ],
+  "limitations": [
+    "Real screen-reader narration and full WCAG manual audit not executed",
+    "Linux baseline and remote CI not executed"
+  ],
+  "baselineHashes": {
+    "manifest.json": "0922c7d225a4053c91365a946dbf3b4773b1abe5763a0547ae7486db0c3969cd",
+    "reference-1366-chart-darwin.png": "21a9d380b1af3847c722c1210111f1ff332312784d726d62b5761e3b1df7f470",
+    "reference-1366-editor-darwin.png": "9e58ef0de61703e2d51586be92edf2585c58df1c87c06b1da424da08e1ea040d",
+    "reference-1366-shell-inputs-darwin.png": "9caabd6f08ec42a7ffc79db763bcaa4f6b7aadee8d4003a542b7b300db582209",
+    "reference-1366-table-darwin.png": "22231d94c925f4043bb2b3578c9d1657275d296dac1979884c2556dd6ebf74cd",
+    "reference-390-chart-darwin.png": "c02e6a959636a65f3fc3ffab0d9367a50cb579796caa312d72ce5838345cbd66",
+    "reference-390-editor-darwin.png": "bbbcc0e766f038d4e02416801012e5f490d756207322711002f31114074bcf05",
+    "reference-390-shell-inputs-darwin.png": "abe82328fed388191be21e88f9e4e71267a825335bf3346266ff5e2e76043828",
+    "reference-390-table-darwin.png": "940ec7a8e1a7bc3f04c05dde974b6f742d1e0d6f1d79e70f21fdec5254626070",
+    "starter-1366-chart-darwin.png": "21a9d380b1af3847c722c1210111f1ff332312784d726d62b5761e3b1df7f470",
+    "starter-1366-editor-darwin.png": "9e58ef0de61703e2d51586be92edf2585c58df1c87c06b1da424da08e1ea040d",
+    "starter-1366-shell-inputs-darwin.png": "c6cbcf3040cb0e38a8ad80d08376b6253eeff69698d633363dd378ce7f67f833",
+    "starter-1366-table-darwin.png": "22231d94c925f4043bb2b3578c9d1657275d296dac1979884c2556dd6ebf74cd",
+    "starter-390-chart-darwin.png": "c02e6a959636a65f3fc3ffab0d9367a50cb579796caa312d72ce5838345cbd66",
+    "starter-390-editor-darwin.png": "bbbcc0e766f038d4e02416801012e5f490d756207322711002f31114074bcf05",
+    "starter-390-shell-inputs-darwin.png": "208e49a998f0f1115523b14405a131fd01064e91ed6d1919c9072677300ded0c",
+    "starter-390-table-darwin.png": "940ec7a8e1a7bc3f04c05dde974b6f742d1e0d6f1d79e70f21fdec5254626070"
+  }
+}

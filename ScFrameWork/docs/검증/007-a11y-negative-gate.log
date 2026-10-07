@@ -1,0 +1,5 @@
+
+> sc-framework@0.1.0 test:a11y-gate
+> node scripts/verify-a11y-gate.mjs
+
+접근성 실패 gate 통과: 실제 Storybook Browser 1개가 button-name으로 실패, 내부 exit 1 확인

@@ -1,0 +1,218 @@
+{
+  "auditReportVersion": 2,
+  "vulnerabilities": {
+    "@vitest/browser": {
+      "name": "@vitest/browser",
+      "severity": "critical",
+      "isDirect": false,
+      "via": [
+        "@vitest/mocker",
+        {
+          "source": 1120010,
+          "name": "@vitest/browser",
+          "dependency": "@vitest/browser",
+          "title": "Vitest browser mode serves unsanitized otelCarrier query parameter as inline script",
+          "url": "https://github.com/advisories/GHSA-2h32-95rg-cppp",
+          "severity": "critical",
+          "cwe": [
+            "CWE-79"
+          ],
+          "cvss": {
+            "score": 9.6,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H"
+          },
+          "range": ">=4.0.17 <4.1.6"
+        },
+        {
+          "source": 1139523,
+          "name": "@vitest/browser",
+          "dependency": "@vitest/browser",
+          "title": "@vitest/browser: Browser Mode provider commands bypass the file-access permission gate",
+          "url": "https://github.com/advisories/GHSA-p63j-vcc4-9vmv",
+          "severity": "critical",
+          "cwe": [
+            "CWE-22",
+            "CWE-552",
+            "CWE-862"
+          ],
+          "cvss": {
+            "score": 9.4,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L"
+          },
+          "range": ">=4.0.0 <4.1.10"
+        },
+        {
+          "source": 1139526,
+          "name": "@vitest/browser",
+          "dependency": "@vitest/browser",
+          "title": "Vitest Browser: Exposed Browser Mode API Can Proxy CDP and Overwrite Config Files, Leading to RCE",
+          "url": "https://github.com/advisories/GHSA-g8mr-85jm-7xhm",
+          "severity": "critical",
+          "cwe": [
+            "CWE-749",
+            "CWE-862"
+          ],
+          "cvss": {
+            "score": 9.8,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+          },
+          "range": ">=4.0.0 <=4.1.7"
+        },
+        "vitest"
+      ],
+      "effects": [
+        "@vitest/browser-playwright"
+      ],
+      "range": "2.1.0-beta.1 - 4.1.10",
+      "nodes": [
+        "node_modules/@vitest/browser"
+      ],
+      "fixAvailable": {
+        "name": "vitest",
+        "version": "4.1.11",
+        "isSemVerMajor": false
+      }
+    },
+    "@vitest/browser-playwright": {
+      "name": "@vitest/browser-playwright",
+      "severity": "critical",
+      "isDirect": true,
+      "via": [
+        "@vitest/browser",
+        "@vitest/mocker",
+        "vitest"
+      ],
+      "effects": [
+        "vitest"
+      ],
+      "range": "<=4.1.10",
+      "nodes": [
+        "node_modules/@vitest/browser-playwright"
+      ],
+      "fixAvailable": {
+        "name": "vitest",
+        "version": "4.1.11",
+        "isSemVerMajor": false
+      }
+    },
+    "@vitest/mocker": {
+      "name": "@vitest/mocker",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1193684,
+          "name": "@vitest/mocker",
+          "dependency": "@vitest/mocker",
+          "title": "Vitest: Path Traversal / Arbitrary File Read via @vitest/mocker Redirect Mock",
+          "url": "https://github.com/advisories/GHSA-82fw-gwwq-j7x9",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-22"
+          ],
+          "cvss": {
+            "score": 5.9,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N"
+          },
+          "range": ">=2.1.0 <4.1.11"
+        }
+      ],
+      "effects": [
+        "@vitest/browser",
+        "@vitest/browser-playwright",
+        "vitest"
+      ],
+      "range": "2.1.0 - 4.1.10",
+      "nodes": [
+        "node_modules/@vitest/mocker"
+      ],
+      "fixAvailable": {
+        "name": "vitest",
+        "version": "4.1.11",
+        "isSemVerMajor": false
+      }
+    },
+    "esbuild": {
+      "name": "esbuild",
+      "severity": "low",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1120680,
+          "name": "esbuild",
+          "dependency": "esbuild",
+          "title": "esbuild allows arbitrary file read when running the development server on Windows",
+          "url": "https://github.com/advisories/GHSA-g7r4-m6w7-qqqr",
+          "severity": "low",
+          "cwe": [
+            "CWE-22"
+          ],
+          "cvss": {
+            "score": 2.5,
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N"
+          },
+          "range": ">=0.27.3 <0.28.1"
+        }
+      ],
+      "effects": [],
+      "range": "0.27.3 - 0.28.0",
+      "nodes": [
+        "node_modules/esbuild"
+      ],
+      "fixAvailable": true
+    },
+    "vitest": {
+      "name": "vitest",
+      "severity": "critical",
+      "isDirect": true,
+      "via": [
+        "@vitest/browser-playwright",
+        "@vitest/mocker",
+        {
+          "source": 1193683,
+          "name": "vitest",
+          "dependency": "vitest",
+          "title": "Vitest: Path Traversal / Arbitrary File Read via @vitest/mocker Redirect Mock",
+          "url": "https://github.com/advisories/GHSA-82fw-gwwq-j7x9",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-22"
+          ],
+          "cvss": {
+            "score": 5.9,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N"
+          },
+          "range": ">=2.1.0 <4.1.11"
+        }
+      ],
+      "effects": [],
+      "range": "2.1.0-beta.1 - 4.1.10",
+      "nodes": [
+        "node_modules/vitest"
+      ],
+      "fixAvailable": {
+        "name": "vitest",
+        "version": "4.1.11",
+        "isSemVerMajor": false
+      }
+    }
+  },
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 1,
+      "moderate": 1,
+      "high": 0,
+      "critical": 3,
+      "total": 5
+    },
+    "dependencies": {
+      "prod": 152,
+      "dev": 410,
+      "optional": 133,
+      "peer": 9,
+      "peerOptional": 0,
+      "total": 647
+    }
+  }
+}

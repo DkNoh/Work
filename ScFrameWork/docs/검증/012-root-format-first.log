@@ -1,0 +1,19 @@
+eslint.config.mjs 11ms (unchanged)
+compose.yaml 8ms (unchanged)
+compose.operations.yaml 7ms
+infra/operations/collector.yml 2ms
+infra/operations/prometheus.yml 1ms (unchanged)
+infra/operations/tempo.yml 1ms (unchanged)
+infra/operations/loki.yml 1ms (unchanged)
+infra/operations/grafana/provisioning/datasources/sc-framework.yml 1ms (unchanged)
+infra/operations/grafana/provisioning/dashboards/sc-framework.yml 1ms (unchanged)
+scripts/verify-grafana-browser.mjs 13ms
+scripts/verify-package-consumer.mjs 10ms (unchanged)
+scripts/verify-package-browser.mjs 15ms (unchanged)
+docs/질의/프레임워크.md 31ms
+docs/질의/012-운영계약.md 41ms
+docs/질의/012-운영모듈-준비검토.md 13ms (unchanged)
+docs/질의/조건부기술-전체구현.md 19ms (unchanged)
+docs/openapi.json 30ms
+docs/openapi-starter.json 6ms
+docs/openapi-neutral.json 6ms

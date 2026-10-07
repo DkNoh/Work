@@ -1,0 +1,57 @@
+
+ RUN  v4.1.2 /Users/dk/Work/ScFramework/frontend/apps/catalog
+
+7:00:36 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+7:00:36 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+7:00:36 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+7:00:36 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+7:00:36 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+ ❯ |storybook (chromium)| src/ScTextField.stories.ts (3 tests | 1 failed) 451ms
+   × Readonly 152ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |storybook (chromium)| src/ScTextField.stories.ts > Readonly
+Error: 
+[34mClick to debug the error directly in Storybook: http://localhost:6006/?path=/story/공통-ui-sctextfield--readonly&addonPanel=storybook/interactions/panel[39m
+
+[2mexpect([22m[31mreceived[39m[2m).toHaveNoViolations([22m[32mexpected[39m[2m)[22m
+
+Expected the HTML found at $('.v-field-label--floating') to have no violations:
+
+[90m<label class="v-label v-field-label v-field-label--floating" aria-hidden="false" for="sc-field-v-0"><!---->제목</label>[39m
+
+Received:
+
+[31m"Elements must meet minimum color contrast ratio thresholds (color-contrast)"[39m
+
+[33mFix any of the following:[39m
+[33m  Element has insufficient color contrast of 2.85 (foreground color: #84969f, background color: #f5f7f8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1[39m
+
+You can find more information on this issue here: 
+[34mhttps://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI[39m
+ ❯ Proxy.expectWrapper ../../../node_modules/storybook/dist/test/index.js:15100:16
+ ❯ Proxy.<anonymous> ../../../node_modules/storybook/dist/test/index.js:14620:17
+ ❯ Proxy.methodWrapper ../../../node_modules/storybook/dist/test/index.js:9105:24
+ ❯ Instrumenter.invoke ../../../node_modules/storybook/dist/instrumenter/index.js:322:22
+ ❯ Instrumenter.intercept ../../../node_modules/storybook/dist/instrumenter/index.js:243:139
+ ❯ Instrumenter.track ../../../node_modules/storybook/dist/instrumenter/index.js:238:378
+ ❯ Proxy.toHaveNoViolations ../../../node_modules/storybook/dist/instrumenter/index.js:224:263
+ ❯ afterEach ../../../node_modules/@storybook/addon-a11y/dist/_browser-chunks/chunk-2FVV6YOY.js:155:25
+    153|             expect.extend({ toHaveNoViolations }), vitestMatchersExten…
+    154|           }
+    155|           expect(result).toHaveNoViolations();
+       |                         ^
+    156|         }
+    157|       }
+ ❯ Object.applyAfterEach ../../../node_modules/storybook/dist/_browser-chunks/chunk-SZQXB3JV.js:780:6
+ ❯ runStory ../../../node_modules/storybook/dist/_browser-chunks/chunk-SZQXB3JV.js:1327:100
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 2 passed (3)
+      Tests  1 failed | 10 passed (11)
+   Start at  19:00:35
+   Duration  2.16s (transform 0ms, setup 2.72s, import 125ms, tests 1.32s, environment 0ms)
+

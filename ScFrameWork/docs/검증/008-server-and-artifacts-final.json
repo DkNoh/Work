@@ -1,0 +1,418 @@
+{
+  "stage": "008",
+  "sourceLog": "008-integration-build-final.log",
+  "modules": {
+    "framework-autoconfigure": {
+      "tests": 20,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "framework-core": {
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "reference-app": {
+      "tests": 49,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "starter-app": {
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "total": 77,
+  "tests": [
+    {
+      "class": "dev.scframework.autoconfigure.AuditAutoConfigurationTest",
+      "name": "disabledMinimalConsumerNeedsNoDatasourceOrSchema"
+    },
+    {
+      "class": "dev.scframework.autoconfigure.AuditAutoConfigurationTest",
+      "name": "meFlagOnlyDisablesDefaultSessionAndConsumerEndpointBacksOff"
+    },
+    {
+      "class": "dev.scframework.autoconfigure.AuditAutoConfigurationTest",
+      "name": "enabledAuditCannotSilentlyBecomeNoopWithoutStorage"
+    },
+    {
+      "class": "dev.scframework.autoconfigure.AuditAutoConfigurationTest",
+      "name": "consumerSinkAndClockBackOffDefaultsWithoutBeanOverride"
+    },
+    {
+      "class": "dev.scframework.autoconfigure.FeignConsumerConfigurationTest",
+      "name": "explicitConsumerRetryAndFailureAndHeaderPoliciesBackOffDefaults"
+    },
+    {
+      "class": "dev.scframework.autoconfigure.FeignConsumerConfigurationTest",
+      "name": "feignCanBeAbsentInAMinimalConsumer"
+    },
+    {
+      "class": "dev.scframework.autoconfigure.HealthReadinessTest",
+      "name": "healthDoesNotReportUpBeforeBootstrapFinishes"
+    },
+    {
+      "class": "dev.scframework.autoconfigure.QuerydslAutoConfigurationTest",
+      "name": "consumersCanReplaceTheFactoryWithoutBeanOverride"
+    },
+    {
+      "class": "dev.scframework.autoconfigure.QuerydslAutoConfigurationTest",
+      "name": "singlePersistenceFactoryEnablesTheSharedConsumerBean"
+    },
+    {
+      "class": "dev.scframework.autoconfigure.QuerydslAutoConfigurationTest",
+      "name": "multipleDatabasesRequireAnExplicitPrimaryOrConsumerFactory"
+    },
+    {
+      "class": "dev.scframework.autoconfigure.QuerydslAutoConfigurationTest",
+      "name": "noPersistenceOrOptionalLibraryDoesNotCreateAFactory"
+    },
+    {
+      "class": "dev.scframework.autoconfigure.RequestIdFilterTest",
+      "name": "invalidUntrustedHeaderIsReplaced"
+    },
+    {
+      "class": "dev.scframework.autoconfigure.RequestIdFilterTest",
+      "name": "requestIdIsBoundOnlyForTheCurrentRequestEvenWhenTheChainFails"
+    },
+    {
+      "class": "dev.scframework.autoconfigure.SecretFileUsersTest",
+      "name": "privateSyntheticSecretCreatesOnlyAHash"
+    },
+    {
+      "class": "dev.scframework.autoconfigure.SecretFileUsersTest",
+      "name": "missingFileFailsClosedWithoutPasswordFallback"
+    },
+    {
+      "class": "dev.scframework.autoconfigure.SecurityAuditTransactionTest",
+      "name": "committedBusinessResultSurvivesSinkFailureWithOperationalSignal"
+    },
+    {
+      "class": "dev.scframework.autoconfigure.SecurityAuditTransactionTest",
+      "name": "missingConsumerSchemaFailsWithoutGeneratingDdl"
+    },
+    {
+      "class": "dev.scframework.autoconfigure.SecurityAuditTransactionTest",
+      "name": "commitRecordsAfterCompletionAndRollbackNeverRecordsSuccess"
+    },
+    {
+      "class": "dev.scframework.autoconfigure.SecurityOverrideTest",
+      "name": "consumerSecurityChainReplacesTheDefaultConfiguration"
+    },
+    {
+      "class": "dev.scframework.autoconfigure.SecurityOverrideTest",
+      "name": "missingAuthenticationAdapterFailsBeforeBootCanGenerateAUser"
+    },
+    {
+      "class": "dev.scframework.core.ApiErrorTest",
+      "name": "fieldErrorsCannotBeChangedAfterTheResponseIsCreated"
+    },
+    {
+      "class": "dev.scframework.core.audit.SecurityAuditEventTest",
+      "name": "acceptsAnonymousAndNullableIdentityWithoutApplicationDependencies"
+    },
+    {
+      "class": "dev.scframework.core.audit.SecurityAuditEventTest",
+      "name": "rejectsUnboundedOrStructuredValuesWithoutRepeatingSubmittedContent"
+    },
+    {
+      "class": "dev.scframework.reference.H2PersistenceTest",
+      "name": "appOwnedBaselineSurvivesFileDatabaseReopenAndPreservesBigintIds"
+    },
+    {
+      "class": "dev.scframework.reference.ReferenceIntegrationTest",
+      "name": "devSwaggerContainsFilterLoginTypedErrorsAndJsonCsrfInterceptor"
+    },
+    {
+      "class": "dev.scframework.reference.ReferenceIntegrationTest",
+      "name": "jpaFlushBecomesVisibleToMyBatisAndBothUseTheSameRollbackBoundary"
+    },
+    {
+      "class": "dev.scframework.reference.ReferenceIntegrationTest",
+      "name": "upstreamHttpStatusesStayBounded502WithoutForwardingSensitiveHeadersOrRetrying"
+    },
+    {
+      "class": "dev.scframework.reference.ReferenceIntegrationTest",
+      "name": "actualReadTimeoutIs504AndOneRequestCompletesWithoutAutomaticRetry"
+    },
+    {
+      "class": "dev.scframework.reference.ReferenceIntegrationTest",
+      "name": "sessionLoginRequiresCsrfAndRenewedTokenProtectsWritesAndLogout"
+    },
+    {
+      "class": "dev.scframework.reference.ReferenceIntegrationTest",
+      "name": "structurallyInvalidSuccessResponsesAndNoContentAreBounded502WithoutRetries"
+    },
+    {
+      "class": "dev.scframework.reference.ReferenceIntegrationTest",
+      "name": "typedCrudValidationTrimAndRevisionConflictKeepTheSavedRecord"
+    },
+    {
+      "class": "dev.scframework.reference.ReferenceIntegrationTest",
+      "name": "refusedSeparateLoopbackTargetIs504WithoutStoppingTheSharedFixtureListener"
+    },
+    {
+      "class": "dev.scframework.reference.ReferenceIntegrationTest",
+      "name": "malformedUpstreamJsonIsBounded502AndDecoderBodyNeverLeaks"
+    },
+    {
+      "class": "dev.scframework.reference.ReferenceIntegrationTest",
+      "name": "feignUsesLoopbackTimeoutConfigurationWithoutForwardingSessionCredentialsOrRetryingFailures"
+    },
+    {
+      "class": "dev.scframework.reference.audit.AuditControllerTest",
+      "name": "liveOpenApiDescribesAlwaysPresentNullableAuditFieldsAndOutcomeCodes"
+    },
+    {
+      "class": "dev.scframework.reference.audit.AuditControllerTest",
+      "name": "invalidBoundsAndSqlLikeInputAreRejectedWithoutExposingIt"
+    },
+    {
+      "class": "dev.scframework.reference.audit.AuditControllerTest",
+      "name": "currentDbRoleRejectsStaleAdminSessionAndRecordsDenied"
+    },
+    {
+      "class": "dev.scframework.reference.audit.AuditControllerTest",
+      "name": "pagedLatestAndBoundFiltersReturnOnlyTheOwnSafeDto"
+    },
+    {
+      "class": "dev.scframework.reference.audit.AuditSinkFailureHttpTest",
+      "name": "committedUserCreationStillReturns200AndSignalsMissingAuditWithoutPrivateLog"
+    },
+    {
+      "class": "dev.scframework.reference.requirements.RequirementIntegrationTest",
+      "name": "failedReviewHistoryRollsBackUpsertStatusAndRevisionTogether"
+    },
+    {
+      "class": "dev.scframework.reference.requirements.RequirementIntegrationTest",
+      "name": "failedHistoryInsertRollsBackBodyVersionAndCurrentReview"
+    },
+    {
+      "class": "dev.scframework.reference.requirements.RequirementIntegrationTest",
+      "name": "archivedMenuCanBeKeptOnExistingRequestButCannotReceiveNewOrMovedRequest"
+    },
+    {
+      "class": "dev.scframework.reference.requirements.RequirementIntegrationTest",
+      "name": "authorAndPrivateDraftPermissionsDoNotGiveAdminAnOwnerOverride"
+    },
+    {
+      "class": "dev.scframework.reference.requirements.RequirementIntegrationTest",
+      "name": "reviewerAuthorsCannotReviewOwnRequestAndReviewInputValidatesWithoutChangingCurrentState"
+    },
+    {
+      "class": "dev.scframework.reference.requirements.RequirementIntegrationTest",
+      "name": "existingAdminSessionUsesCurrentDatabaseRoleForDynamicListVisibility"
+    },
+    {
+      "class": "dev.scframework.reference.requirements.RequirementIntegrationTest",
+      "name": "userAndMenuCreationRequireCurrentDatabaseAdminRoleAndKeepOriginalJson"
+    },
+    {
+      "class": "dev.scframework.reference.requirements.RequirementIntegrationTest",
+      "name": "twoRealEntityManagerTransactionsDetectRaceAfterBothReadSameRevision"
+    },
+    {
+      "class": "dev.scframework.reference.requirements.RequirementIntegrationTest",
+      "name": "fixedClockAndIdenticalCommandsStillIncrementOnceWhileCommentsDoNot"
+    },
+    {
+      "class": "dev.scframework.reference.requirements.RequirementIntegrationTest",
+      "name": "composedFiltersKeepPrivateDraftsOutOfBothCountAndEveryPage"
+    },
+    {
+      "class": "dev.scframework.reference.requirements.RequirementIntegrationTest",
+      "name": "inputValidationRejectsUnknownFieldsMissingRevisionAndUnsupportedImageContract"
+    },
+    {
+      "class": "dev.scframework.reference.requirements.RequirementIntegrationTest",
+      "name": "literalSearchPreservesIndividualWildcardsQuotesKoreanAndWhitespace"
+    },
+    {
+      "class": "dev.scframework.reference.requirements.RequirementIntegrationTest",
+      "name": "concurrentHttpEditsYieldOneSuccessOneConflictAndOneCommittedHistory"
+    },
+    {
+      "class": "dev.scframework.reference.requirements.RequirementIntegrationTest",
+      "name": "updatedTimeTakesPriorityOverIdAndEmptyMaximumPageRetainsActualCount"
+    },
+    {
+      "class": "dev.scframework.reference.requirements.RequirementIntegrationTest",
+      "name": "listAndCountShareDraftVisibilityLiteralSearchAndStableTieOrdering"
+    },
+    {
+      "class": "dev.scframework.reference.requirements.RequirementIntegrationTest",
+      "name": "identityIsDatabaseBackedNumericAndBootstrapDoesNotResetExistingHash"
+    },
+    {
+      "class": "dev.scframework.reference.requirements.RequirementIntegrationTest",
+      "name": "agreementRequiresPossibleCurrentReviewerAndAllThreeScopeFields"
+    },
+    {
+      "class": "dev.scframework.reference.requirements.RequirementIntegrationTest",
+      "name": "assigneeSameIsNoOpButChangeDeletesCurrentReviewAndPreservesBeforeSnapshot"
+    },
+    {
+      "class": "dev.scframework.reference.requirements.RequirementIntegrationTest",
+      "name": "createPreservesWhitespaceNullAndZeroOneAndSnapshotIsStringWithoutHistoryRecursion"
+    },
+    {
+      "class": "dev.scframework.reference.requirements.RequirementIntegrationTest",
+      "name": "concurrentFirstReviewUsesRequestCasBeforeReviewInsertAndReturnsRevisionConflict"
+    },
+    {
+      "class": "dev.scframework.reference.requirements.RequirementIntegrationTest",
+      "name": "submittedAssignedReviewNeedsInfoResubmitAgreementAndEditKeepHistoryAndCurrentReview"
+    },
+    {
+      "class": "dev.scframework.reference.requirements.RequirementIntegrationTest",
+      "name": "requiredAndLengthErrorsExposeActualFieldNamesAndRejectedWritesDoNotAllocateRequests"
+    },
+    {
+      "class": "dev.scframework.reference.requirements.RequirementMixedPersistenceTest",
+      "name": "outerRollbackRevertsFlushedServiceCommandRevisionAndHistoryWithoutFalseSuccessAudit"
+    },
+    {
+      "class": "dev.scframework.reference.requirements.RequirementMixedPersistenceTest",
+      "name": "explicitJpaFlushChangesBothReadersAndChildHistoryRollsBackOnTheSameTransaction"
+    },
+    {
+      "class": "dev.scframework.reference.requirements.RequirementMixedPersistenceTest",
+      "name": "guardedServiceCommitIsVisibleToQuerydslAndMyBatisWithExactlyOneCommittedAudit"
+    },
+    {
+      "class": "dev.scframework.reference.requirements.RequirementMixedPersistenceTest",
+      "name": "outerTransactionDoesNotBypassServiceOwnerAndRevisionGuardsOrAppendPartialHistory"
+    },
+    {
+      "class": "dev.scframework.reference.requirements.RequirementPersistenceTest",
+      "name": "upgradingExistingV1PreservesExamplesAndNewRequirementBigintAndUtcPrecisionOnReopen"
+    },
+    {
+      "class": "dev.scframework.reference.requirements.RequirementPersistenceTest",
+      "name": "realMigrationRejectsDuplicateForeignKeysInvalidFlagsStatusAndUnsupportedScreenVersion"
+    },
+    {
+      "class": "dev.scframework.reference.requirements.RequirementReadMapperTest",
+      "name": "absentOptionalDetailValuesStayNullAndCollectionsStayArrays"
+    },
+    {
+      "class": "dev.scframework.reference.requirements.RequirementReadMapperTest",
+      "name": "mapperKeepsAssignedIdsAndAllExistingStatusStringsWithoutInputWrites"
+    },
+    {
+      "class": "dev.scframework.reference.requirements.RequirementReadMapperTest",
+      "name": "reviewReadPreservesDecisionAndUtcWithoutExposingCommandNeedsInfo"
+    },
+    {
+      "class": "dev.scframework.reference.requirements.RequirementReadMapperTest",
+      "name": "summaryPreservesWhitespaceNumericFlagsAndNullableIdentity"
+    },
+    {
+      "class": "dev.scframework.reference.requirements.RequirementReadMapperTest",
+      "name": "commentAndHistoryRemainOrderedAndOpaqueSnapshotsRemainStrings"
+    },
+    {
+      "class": "dev.scframework.starter.StarterAuditConsumerTest",
+      "name": "filterEventsAndDefaultMeUseTheActualOptionalH2Migration"
+    },
+    {
+      "class": "dev.scframework.starter.StarterAuditConsumerTest",
+      "name": "optimisticDataAndInternalFailuresPreserveSafeJsonAndAuditOnce"
+    },
+    {
+      "class": "dev.scframework.starter.StarterConsumerTest",
+      "name": "minimalAppConsumesSharedAuthHealthAndH2WithoutReferenceBusinessClasses"
+    },
+    {
+      "class": "dev.scframework.starter.StarterConsumerTest",
+      "name": "documentationIsDeniedWithoutTheDevProfile"
+    },
+    {
+      "class": "dev.scframework.starter.StarterConsumerTest",
+      "name": "optionalQueryAndHttpPoliciesAreConsumedWithoutReferenceBusinessClasses"
+    }
+  ],
+  "runtimeDependencies": {
+    "reference": {
+      "libraries": 106,
+      "querydslJPA": "6.12",
+      "forbiddenCompilerOrExcludedLibraries": [],
+      "referenceClasses": 74,
+      "jarSha256": "0e21a422f582c1fb15024f92af30b78b3a2027944068849737330b58833cc5b4",
+      "assetsByteEqual": [
+        "assets/PatternsPage-BF-wkgSB.css",
+        "assets/PatternsPage-Q5RQGyx6.js",
+        "assets/RequirementWorkspace-DkjkJ8_2.js",
+        "assets/RequirementWorkspace-dPY6yZ-e.css",
+        "assets/RequirementsPage-BDwdLByv.js",
+        "assets/RequirementsPage-DHRt7bWb.css",
+        "assets/ScSelect-BGJu9vpf.css",
+        "assets/ScSelect-DamHq5M0.js",
+        "assets/ScTextArea-BFUyV3-Q.js",
+        "assets/ScTextArea-BgpqzF2n.css",
+        "assets/index-CE1cfFJM.css",
+        "assets/index-jgB_HoR8.js",
+        "assets/query-aLHnzLmq.js",
+        "assets/vue-i18n-CWXBLfed.css",
+        "assets/vue-i18n-DmqYYGtx.js",
+        "index.html"
+      ]
+    },
+    "starter": {
+      "libraries": 105,
+      "querydslJPA": "6.12",
+      "forbiddenCompilerOrExcludedLibraries": [],
+      "referenceClasses": 0,
+      "jarSha256": "1ea0af4dfba1a2a48e318ff63319234aa288f56d27bfca42289e0d717e95587a",
+      "assetsByteEqual": [
+        "assets/PatternsPage-CyAlQ0Gx.js",
+        "assets/PatternsPage-DtGcNS1v.css",
+        "assets/index-Bv8SeL7s.css",
+        "assets/index-DSpjGeSH.js",
+        "assets/rolldown-runtime-Dd_uD5pT.js",
+        "index.html"
+      ]
+    }
+  },
+  "generatedSources": [
+    {
+      "path": "backend/reference-app/target/generated-sources/annotations/dev/scframework/reference/example/QExampleEntry.java",
+      "sha256": "a1e0515439c797414ecbbc3927979dc7924b7b22056e16e7a244c9a0f34eb2ee"
+    },
+    {
+      "path": "backend/reference-app/target/generated-sources/annotations/dev/scframework/reference/identity/QUserEntity.java",
+      "sha256": "da780d2ca2fd04f044fb8149649d1b59e99d5263508d67dcf2908f69e1b8fb23"
+    },
+    {
+      "path": "backend/reference-app/target/generated-sources/annotations/dev/scframework/reference/menu/QMenuEntity.java",
+      "sha256": "420c9d94b50a10414b7234dc0ff4caa39bbdc3521965281c6a6df3e4ecb84b6c"
+    },
+    {
+      "path": "backend/reference-app/target/generated-sources/annotations/dev/scframework/reference/requirements/QCommentEntity.java",
+      "sha256": "7060da222896955264300e224ef4baa393e91a978d07421af90a4faac000f2f4"
+    },
+    {
+      "path": "backend/reference-app/target/generated-sources/annotations/dev/scframework/reference/requirements/QHistoryEntity.java",
+      "sha256": "5f30603e39cb89f8cbe82d55869939e346009aaf9cad16c41cdeca2890fa55d3"
+    },
+    {
+      "path": "backend/reference-app/target/generated-sources/annotations/dev/scframework/reference/requirements/QRequirementEntity.java",
+      "sha256": "a9c84ac9c4ec30238e9a0701377e999ddd07617e821fe8f396641bb8ee61e9a8"
+    },
+    {
+      "path": "backend/reference-app/target/generated-sources/annotations/dev/scframework/reference/requirements/QReviewEntity.java",
+      "sha256": "fe3ead69ee80c989508a0f625fec8ee991b549153539936eef7fa54b3f241a2a"
+    },
+    {
+      "path": "backend/reference-app/target/generated-sources/annotations/dev/scframework/reference/requirements/RequirementReadMapperImpl.java",
+      "sha256": "27b070e1b17ca0feb8b4bfdb8937365a0b9da7f0deaf8bd9566b4df415df669e"
+    }
+  ],
+  "initialEvidence": "008-server-and-artifacts.json"
+}

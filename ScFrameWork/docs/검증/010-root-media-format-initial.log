@@ -1,0 +1,18 @@
+frontend/packages/runtime/src/http.spec.ts 39ms
+frontend/apps/reference-app/src/shared/useDraftGuard.ts 4ms
+frontend/apps/reference-app/src/shared/validation.ts 1ms (unchanged)
+frontend/apps/reference-app/src/features/media/api.ts 5ms
+frontend/apps/reference-app/src/features/media/image-decoder.spec.ts 4ms
+frontend/apps/reference-app/src/features/media/image-decoder.ts 3ms
+frontend/apps/reference-app/src/features/media/MediaWorkspacePage.vue 51ms
+frontend/apps/reference-app/src/features/media/messages.ts 2ms
+frontend/apps/reference-app/src/features/media/ScreenForm.vue 9ms
+frontend/apps/reference-app/src/features/media/useImageFile.ts 3ms
+frontend/apps/reference-app/src/features/media/VersionUpload.vue 6ms
+frontend/apps/reference-app/src/features/admin/MenuForm.vue 10ms (unchanged)
+frontend/apps/reference-app/src/features/requirements/useDraftGuard.ts 1ms (unchanged)
+frontend/apps/reference-app/src/features/requirements/RequirementForm.vue 19ms (unchanged)
+frontend/apps/reference-app/src/features/requirements/RequirementWorkspace.vue 42ms
+frontend/apps/reference-app/src/main.ts 3ms
+frontend/apps/reference-app/src/App.vue 10ms
+frontend/apps/reference-app/src/localization.ts 2ms (unchanged)

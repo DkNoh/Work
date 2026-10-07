@@ -1,0 +1,10 @@
+stage: 011
+command: npm audit --json
+startedAfterInventory: 2026-10-06T21:11:42.510Z
+exitCode: 0
+network: npm configured advisory registry
+install/build/testExecuted: false
+inputsUnchangedAfterAudit: true
+scopedPrettierWriteAndCheckExit: 0
+inventoryCountsAndOriginalLicenseFileHashesVerified: true
+historical010AndAllManifestsAndLockUnchanged: true

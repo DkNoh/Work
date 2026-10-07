@@ -1,0 +1,16 @@
+
+> sc-framework@0.3.0 api:generate
+> node scripts/openapi-types.mjs
+
+ ✘  Every operation must have a unique `operationId`. at #/paths/~1api~1operations~1messages/get/list
+file:///Users/dk/Work/ScFramework/node_modules/openapi-typescript/dist/lib/redoc.mjs:74
+      throw new Error(errorMessage);
+            ^
+
+Error: Every operation must have a unique `operationId`. at #/paths/~1api~1operations~1messages/get/list
+    at _processProblems (file:///Users/dk/Work/ScFramework/node_modules/openapi-typescript/dist/lib/redoc.mjs:74:13)
+    at validateAndBundle (file:///Users/dk/Work/ScFramework/node_modules/openapi-typescript/dist/lib/redoc.mjs:108:3)
+    at async openapiTS (file:///Users/dk/Work/ScFramework/node_modules/openapi-typescript/dist/index.mjs:40:18)
+    at async file:///Users/dk/Work/ScFramework/scripts/openapi-types.mjs:28:29
+
+Node.js v24.16.0

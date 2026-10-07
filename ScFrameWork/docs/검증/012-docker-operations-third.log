@@ -1,0 +1,6 @@
+PASS private Compose project/named runtime volume/read-only secret configuration
+PASS actual prod operations/loopback/UID10001/umask077/private600/700/Flyway7
+PASS database ADMIN/session/CSRF/four capabilities/MESSAGE_DEMO completed/four registered tasks
+PASS registered PULSE create/pause and stale revision409
+PASS synthetic requirement revision2/PDF originals use durable application volume
+FAIL only Reference container restarts and H2/metadata/bytes/schedules persist

@@ -1,0 +1,40 @@
+{
+  "capturedAt": "2026-10-06T22:10:40.246863+00:00",
+  "evidence": "012-backend-tests-third.log",
+  "modules": [
+    {
+      "module": "framework-core",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "framework-autoconfigure",
+      "tests": 52,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "reference-app",
+      "tests": 125,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "starter-app",
+      "tests": 13,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "total": {
+    "tests": 193,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  }
+}

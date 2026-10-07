@@ -1,0 +1,49 @@
+
+> sc-consumer-012@1.0.0 verify
+> npm run format:check && npm run lint && npm run api:check && npm run build
+
+
+> sc-consumer-012@1.0.0 format:check
+> prettier --check .
+
+Checking formatting...
+All matched files use Prettier code style!
+
+> sc-consumer-012@1.0.0 lint
+> eslint frontend scripts --max-warnings 0
+
+
+> sc-consumer-012@1.0.0 api:check
+> node scripts/openapi-types.mjs --check
+
+OpenAPI and generated application types match.
+
+> sc-consumer-012@1.0.0 build
+> npm run typecheck && vite build --config frontend/vite.config.ts
+
+
+> sc-consumer-012@1.0.0 typecheck
+> vue-tsc --noEmit -p frontend/tsconfig.json
+
+vite v8.3.1 building client environment for production...
+transforming...
+✓ 1801 modules transformed.
+rendering chunks...
+computing gzip size...
+frontend/dist/index.html                              0.55 kB │ gzip:   0.31 kB
+frontend/dist/assets/PatternsPage-DxdglvMl.css        0.92 kB │ gzip:   0.40 kB
+frontend/dist/assets/OperationsPage-CLOF6MX5.css      5.26 kB │ gzip:   1.45 kB
+frontend/dist/assets/schemas-Bw7auy6a.css            95.15 kB │ gzip:  13.21 kB
+frontend/dist/assets/index-Cj5rMp2c.css             219.67 kB │ gzip:  32.53 kB
+frontend/dist/assets/OperationsPage-BOolrFz8.js      27.56 kB │ gzip:   8.99 kB
+frontend/dist/assets/index-CkCDVi8y.js               32.75 kB │ gzip:  12.06 kB
+frontend/dist/assets/table-DDjgEEAH.js              100.06 kB │ gzip:  30.23 kB
+frontend/dist/assets/schemas-D9HAWbYe.js            680.39 kB │ gzip: 228.67 kB
+frontend/dist/assets/PatternsPage-RvdXTsMM.js     2,217.80 kB │ gzip: 677.82 kB
+
+✓ built in 737ms
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.

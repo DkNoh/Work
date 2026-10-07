@@ -1,0 +1,29 @@
+[
+  {
+    "image": "node:24.16.0-bookworm-slim",
+    "digest": "sha256:2c87ef9bd3c6a3bd4b472b4bec2ce9d16354b0c574f736c476489d09f560a203",
+    "pinned": "node:24.16.0-bookworm-slim@sha256:2c87ef9bd3c6a3bd4b472b4bec2ce9d16354b0c574f736c476489d09f560a203",
+    "metadataSource": "https://hub.docker.com/v2/repositories/library/node/tags/24.16.0-bookworm-slim",
+    "lastUpdated": "2026-06-11T08:41:02.970496Z",
+    "checkedAt": "2026-10-06T21:44:31.608112+00:00",
+    "pulled": false
+  },
+  {
+    "image": "eclipse-temurin:21-jdk-noble",
+    "digest": "sha256:b468c3fc688b14450571494f588bd939378e7fd542ed5a73f8efc13f17872a87",
+    "pinned": "eclipse-temurin:21-jdk-noble@sha256:b468c3fc688b14450571494f588bd939378e7fd542ed5a73f8efc13f17872a87",
+    "metadataSource": "https://hub.docker.com/v2/repositories/library/eclipse-temurin/tags/21-jdk-noble",
+    "lastUpdated": "2026-10-04T23:14:06.133162Z",
+    "checkedAt": "2026-10-06T21:44:31.885004+00:00",
+    "pulled": false
+  },
+  {
+    "image": "eclipse-temurin:21-jre-noble",
+    "digest": "sha256:000fd431958bc81a24abe1e8e5f0f0fd3ae365a594bd50aadb20696805f9408c",
+    "pinned": "eclipse-temurin:21-jre-noble@sha256:000fd431958bc81a24abe1e8e5f0f0fd3ae365a594bd50aadb20696805f9408c",
+    "metadataSource": "https://hub.docker.com/v2/repositories/library/eclipse-temurin/tags/21-jre-noble",
+    "lastUpdated": "2026-10-04T23:14:19.929324Z",
+    "checkedAt": "2026-10-06T21:44:32.161345+00:00",
+    "pulled": false
+  }
+]

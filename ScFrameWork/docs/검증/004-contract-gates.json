@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "probesRemoved": true,
+  "results": [
+    {
+      "gate": "public-contract-drift",
+      "blocked": true,
+      "exit": 1
+    },
+    {
+      "gate": "private-ui-import",
+      "blocked": true,
+      "exit": 1
+    }
+  ]
+}

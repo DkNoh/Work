@@ -1,0 +1,169 @@
+
+> sc-framework@0.3.0 test:operations
+> playwright test --config frontend/playwright.operations.config.ts
+
+
+Running 10 tests using 1 worker
+
+(node:59702) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 frontend/e2e/012-operations.spec.ts:147:1 › 메시지 DEAD 재시도는 실제 broker 완료 후 같은 이벤트를 다시 처리하지 않는다 (1.2s)
+  ✓   2 frontend/e2e/012-operations.spec.ts:186:1 › 등록된 예제 메시지는 실제 저장하고 URL 필터와 새로고침에서 조회한다 (2.1s)
+  ✓   3 frontend/e2e/012-operations.spec.ts:211:1 › 예약 409와 최신 GET 500은 기준 revision·입력을 유지하고 명시 reload만 초기화한다 (2.0s)
+  ✓   4 frontend/e2e/012-operations.spec.ts:271:1 › 예약 선택·이동 확인은 미저장 입력을 지키고 pause/resume은 revision을 갱신한다 (1.2s)
+  ✓   5 frontend/e2e/012-operations.spec.ts:308:1 › A 예약 저장이 B 선택 뒤 완료돼도 B 입력·revision을 교체하지 않는다 (1.4s)
+  ✓   6 frontend/e2e/012-operations.spec.ts:368:1 › 실제 window/rejection 수집은 로그인 후 코드만 보내고 동일 Error를 중복하지 않는다 (1.2s)
+  ✓   7 frontend/e2e/012-operations.spec.ts:453:1 › 수집 HTTP 실패는 재시도·재수집하지 않고 일반 사용자는 운영 조회가 금지된다 (598ms)
+  ✘   8 frontend/e2e/012-operations.spec.ts:507:3 › 운영 390px: KO/EN 예약·오류·메시지 전체 DOM 접근성과 키보드 가로 스크롤 (2.6s)
+(node:59723) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   9 frontend/e2e/012-operations.spec.ts:507:3 › 운영 1366px: KO/EN 예약·오류·메시지 전체 DOM 접근성과 키보드 가로 스크롤 (2.7s)
+(node:59732) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  10 frontend/e2e/012-operations.spec.ts:561:3 › Starter 중립 운영 소비 › Starter는 독립 예약·메시지 API와 실제 오류 수집을 공통 runtime/UI로 소비한다 (3.8s)
+
+
+  1) frontend/e2e/012-operations.spec.ts:507:3 › 운영 390px: KO/EN 예약·오류·메시지 전체 DOM 접근성과 키보드 가로 스크롤 ──
+
+    Error: operations-errors-en-390: document 전체 접근성
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  -  1
+    + Received  + 23
+
+      Object {
+        "duplicateIds": Array [],
+    -   "violations": Array [],
+    +   "violations": Array [
+    +     Object {
+    +       "help": "Elements must have their visible text as part of their accessible name",
+    +       "id": "label-content-name-mismatch",
+    +       "impact": "serious",
+    +       "nodes": Array [
+    +         Object {
+    +           "failureSummary": "Fix any of the following:
+    +   Text inside the element is not included in the accessible name",
+    +           "target": Array [
+    +             "button[aria-label=\"View error group 2 history\"]",
+    +           ],
+    +         },
+    +         Object {
+    +           "failureSummary": "Fix any of the following:
+    +   Text inside the element is not included in the accessible name",
+    +           "target": Array [
+    +             "button[aria-label=\"View error group 1 history\"]",
+    +           ],
+    +         },
+    +       ],
+    +     },
+    +   ],
+      }
+
+       at support/accessibility.ts:95
+
+      93 |     },
+      94 |     `${state}: document 전체 접근성`,
+    > 95 |   ).toEqual({ violations: [], duplicateIds: [] });
+         |     ^
+      96 | }
+      97 |
+        at assertAccessible (/Users/dk/Work/ScFramework/frontend/e2e/support/accessibility.ts:95:5)
+        at /Users/dk/Work/ScFramework/frontend/e2e/012-operations.spec.ts:551:7
+
+    attachment #1: operations-schedules-ko-390-axe.json (application/json) ─────────────────────────
+    frontend/test-results-operations/012-operations-운영-390px-KO-30098-·메시지-전체-DOM-접근성과-키보드-가로-스크롤/attachments/operations-schedules-ko-390-axe-json-ae73c9db1df9afda112957cd804cfd5e92edd9d9.json
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: operations-schedules-en-390-axe.json (application/json) ─────────────────────────
+    frontend/test-results-operations/012-operations-운영-390px-KO-30098-·메시지-전체-DOM-접근성과-키보드-가로-스크롤/attachments/operations-schedules-en-390-axe-json-f229b37f536af411c5db7faf6b7819b1aec0f550.json
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: operations-messages-en-390-axe.json (application/json) ──────────────────────────
+    frontend/test-results-operations/012-operations-운영-390px-KO-30098-·메시지-전체-DOM-접근성과-키보드-가로-스크롤/attachments/operations-messages-en-390-axe-json-483a759b047f3507eaa741f1d5dd4b446f3e4386.json
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #4: operations-errors-en-390-axe.json (application/json) ────────────────────────────
+    frontend/test-results-operations/012-operations-운영-390px-KO-30098-·메시지-전체-DOM-접근성과-키보드-가로-스크롤/attachments/operations-errors-en-390-axe-json-1d166841bb7734ff60a331976d514ed51462d713.json
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #5: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results-operations/012-operations-운영-390px-KO-30098-·메시지-전체-DOM-접근성과-키보드-가로-스크롤/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results-operations/012-operations-운영-390px-KO-30098-·메시지-전체-DOM-접근성과-키보드-가로-스크롤/error-context.md
+
+  2) frontend/e2e/012-operations.spec.ts:507:3 › 운영 1366px: KO/EN 예약·오류·메시지 전체 DOM 접근성과 키보드 가로 스크롤 ─
+
+    Error: operations-errors-en-1366: document 전체 접근성
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  -  1
+    + Received  + 23
+
+      Object {
+        "duplicateIds": Array [],
+    -   "violations": Array [],
+    +   "violations": Array [
+    +     Object {
+    +       "help": "Elements must have their visible text as part of their accessible name",
+    +       "id": "label-content-name-mismatch",
+    +       "impact": "serious",
+    +       "nodes": Array [
+    +         Object {
+    +           "failureSummary": "Fix any of the following:
+    +   Text inside the element is not included in the accessible name",
+    +           "target": Array [
+    +             "button[aria-label=\"View error group 2 history\"]",
+    +           ],
+    +         },
+    +         Object {
+    +           "failureSummary": "Fix any of the following:
+    +   Text inside the element is not included in the accessible name",
+    +           "target": Array [
+    +             "button[aria-label=\"View error group 1 history\"]",
+    +           ],
+    +         },
+    +       ],
+    +     },
+    +   ],
+      }
+
+       at support/accessibility.ts:95
+
+      93 |     },
+      94 |     `${state}: document 전체 접근성`,
+    > 95 |   ).toEqual({ violations: [], duplicateIds: [] });
+         |     ^
+      96 | }
+      97 |
+        at assertAccessible (/Users/dk/Work/ScFramework/frontend/e2e/support/accessibility.ts:95:5)
+        at /Users/dk/Work/ScFramework/frontend/e2e/012-operations.spec.ts:551:7
+
+    attachment #1: operations-schedules-ko-1366-axe.json (application/json) ────────────────────────
+    frontend/test-results-operations/012-operations-운영-1366px-K-47e3a-·메시지-전체-DOM-접근성과-키보드-가로-스크롤/attachments/operations-schedules-ko-1366-axe-json-a6c6a337758baf1939831db5efe23a2949d57557.json
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: operations-schedules-en-1366-axe.json (application/json) ────────────────────────
+    frontend/test-results-operations/012-operations-운영-1366px-K-47e3a-·메시지-전체-DOM-접근성과-키보드-가로-스크롤/attachments/operations-schedules-en-1366-axe-json-266084fa35d5c5447dba5e0410105700612e7b76.json
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: operations-messages-en-1366-axe.json (application/json) ─────────────────────────
+    frontend/test-results-operations/012-operations-운영-1366px-K-47e3a-·메시지-전체-DOM-접근성과-키보드-가로-스크롤/attachments/operations-messages-en-1366-axe-json-f3577bd27565415409f122964bd1076f7fcd7948.json
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #4: operations-errors-en-1366-axe.json (application/json) ───────────────────────────
+    frontend/test-results-operations/012-operations-운영-1366px-K-47e3a-·메시지-전체-DOM-접근성과-키보드-가로-스크롤/attachments/operations-errors-en-1366-axe-json-f7f73e76b211f48f1e78be7c67fdf98245d042c8.json
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #5: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results-operations/012-operations-운영-1366px-K-47e3a-·메시지-전체-DOM-접근성과-키보드-가로-스크롤/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results-operations/012-operations-운영-1366px-K-47e3a-·메시지-전체-DOM-접근성과-키보드-가로-스크롤/error-context.md
+
+  2 failed
+    frontend/e2e/012-operations.spec.ts:507:3 › 운영 390px: KO/EN 예약·오류·메시지 전체 DOM 접근성과 키보드 가로 스크롤 ───
+    frontend/e2e/012-operations.spec.ts:507:3 › 운영 1366px: KO/EN 예약·오류·메시지 전체 DOM 접근성과 키보드 가로 스크롤 ──
+  8 passed (42.2s)

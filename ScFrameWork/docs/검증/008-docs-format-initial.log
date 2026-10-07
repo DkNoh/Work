@@ -1,0 +1,15 @@
+$ ['/Users/dk/.nvm/versions/node/v24.16.0/bin/node', 'node_modules/prettier/bin/prettier.cjs', '--write', 'README.md', 'docs/api.md', 'docs/operations.md', 'docs/folder-structure.md', 'docs/maintenance-guide.md', 'docs/질의/README.md', 'docs/질의/개발단계.md', 'docs/질의/개발가이드.md', 'docs/질의/프레임워크.md', 'docs/질의/기술스택-적용현황.md', 'docs/질의/조건부기술-전체구현.md', 'docs/질의/008-조회매핑과외부연동.md']
+README.md 20ms (unchanged)
+docs/api.md 15ms (unchanged)
+docs/operations.md 13ms (unchanged)
+docs/folder-structure.md 27ms
+docs/maintenance-guide.md 33ms (unchanged)
+docs/질의/README.md 4ms (unchanged)
+docs/질의/개발단계.md 6ms
+docs/질의/개발가이드.md 6ms (unchanged)
+docs/질의/프레임워크.md 6ms (unchanged)
+docs/질의/기술스택-적용현황.md 10ms
+docs/질의/조건부기술-전체구현.md 10ms
+docs/질의/008-조회매핑과외부연동.md 12ms
+
+exit=0

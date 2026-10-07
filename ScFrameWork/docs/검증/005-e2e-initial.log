@@ -1,0 +1,475 @@
+
+> sc-framework@0.1.0 test:e2e
+> playwright test --config frontend/playwright.config.ts
+
+
+Running 18 tests using 1 worker
+
+(node:40810) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 frontend/e2e/framework.spec.ts:49:1 › 공통 UI로 등록·수정하고 409에서도 작성 중인 입력을 보존한다 (1.9s)
+  ✘   2 frontend/e2e/framework.spec.ts:109:1 › 서버 400 필드 오류에도 등록 입력과 필드 연결을 보존한다 (729ms)
+(node:40824) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   3 frontend/e2e/framework.spec.ts:136:1 › 409 후 최신 조회가 500으로 실패하면 입력과 revision을 보존하고 다시 조회할 수 있다 (1.3s)
+  ✓   4 frontend/e2e/framework.spec.ts:179:3 › 저장 중 선택 변경: 이전 항목의 success 응답이 새 폼을 바꾸지 않는다 (925ms)
+  ✓   5 frontend/e2e/framework.spec.ts:179:3 › 저장 중 선택 변경: 이전 항목의 conflict 응답이 새 폼을 바꾸지 않는다 (852ms)
+  ✘   6 frontend/e2e/layout.spec.ts:89:3 › 레퍼런스 390px: 한국어·본문·현재 메뉴·모바일 키보드 탐색 (15.2s)
+(node:40863) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   7 frontend/e2e/layout.spec.ts:89:3 › 레퍼런스 1366px: 한국어·본문·현재 메뉴·모바일 키보드 탐색 (10.2s)
+(node:40879) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   8 frontend/e2e/layout.spec.ts:89:3 › 레퍼런스 1920px: 한국어·본문·현재 메뉴·모바일 키보드 탐색 (10.2s)
+(node:40897) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   9 frontend/e2e/layout.spec.ts:147:5 › 최소 Starter의 독립적인 공통 셸 소비 › Starter 390px: 동일 UI·Router·본문 탐색 (10.2s)
+(node:40906) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  10 frontend/e2e/layout.spec.ts:147:5 › 최소 Starter의 독립적인 공통 셸 소비 › Starter 1366px: 동일 UI·Router·본문 탐색 (10.1s)
+(node:41070) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  11 frontend/e2e/layout.spec.ts:147:5 › 최소 Starter의 독립적인 공통 셸 소비 › Starter 1920px: 동일 UI·Router·본문 탐색 (10.1s)
+(node:41083) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  12 frontend/e2e/patterns.spec.ts:337:5 › reference 실제 JAR 공통 기능 소비 › 한영 입력 보존·Zod 검증·초기화·dirty 이동 확인 (10.2s)
+(node:41114) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  13 frontend/e2e/patterns.spec.ts:343:5 › reference 실제 JAR 공통 기능 소비 › 정렬·페이지·선택과 10,000행 실제 스크롤·focus·일반 보기 (10.1s)
+(node:41122) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  14 frontend/e2e/patterns.spec.ts:349:5 › reference 실제 JAR 공통 기능 소비 › SVG 차트·키보드 선택·JSON 서식과 XLSX 다운로드·검토·반영 (10.1s)
+(node:41160) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  15 frontend/e2e/patterns.spec.ts:337:5 › starter 실제 JAR 공통 기능 소비 › 한영 입력 보존·Zod 검증·초기화·dirty 이동 확인 (10.1s)
+(node:41183) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  16 frontend/e2e/patterns.spec.ts:343:5 › starter 실제 JAR 공통 기능 소비 › 정렬·페이지·선택과 10,000행 실제 스크롤·focus·일반 보기 (10.1s)
+(node:41204) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  17 frontend/e2e/patterns.spec.ts:349:5 › starter 실제 JAR 공통 기능 소비 › SVG 차트·키보드 선택·JSON 서식과 XLSX 다운로드·검토·반영 (10.1s)
+(node:41251) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  18 frontend/e2e/patterns.spec.ts:358:1 › Reference dirty 폼에서 로그아웃하면 확인 Promise에 갇히지 않고 로그인 화면에 도착한다 (15.1s)
+
+
+  1) frontend/e2e/framework.spec.ts:109:1 › 서버 400 필드 오류에도 등록 입력과 필드 연결을 보존한다 ──────────────────────
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator: getByRole('form', { name: '예제 등록', exact: true }).getByRole('alert')
+    Expected: "모의 서버 입력 오류"
+    Error: strict mode violation: getByRole('form', { name: '예제 등록', exact: true }).getByRole('alert') resolved to 2 elements:
+        1) <div role="alert" aria-live="polite" class="v-input__details" id="sc-field-sc-1-6-messages">…</div> aka locator('#sc-field-sc-1-6-messages')
+        2) <div role="alert" data-v-1214860b="" class="v-alert v-theme--sc bg-error v-alert--density-default v-alert--variant-flat">…</div> aka getByRole('alert').filter({ hasText: '모의 서버 입력 오류' })
+
+    Call log:
+      - Expect "toHaveText" getByRole('form', { name: '예제 등록', exact: true }).getByRole('alert') with timeout 10000ms
+      - waiting for getByRole('form', { name: '예제 등록', exact: true }).getByRole('alert')
+
+
+      131 |   await expect(input).toHaveValue("400에서도 남는 입력");
+      132 |   await expect(input).toHaveAccessibleDescription("서버 제목 검증 오류");
+    > 133 |   await expect(form.getByRole("alert")).toHaveText("모의 서버 입력 오류");
+          |                                         ^
+      134 | });
+      135 |
+      136 | test("409 후 최신 조회가 500으로 실패하면 입력과 revision을 보존하고 다시 조회할 수 있다", async ({
+        at /Users/dk/Work/ScFramework/frontend/e2e/framework.spec.ts:133:41
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results/framework-서버-400-필드-오류에도-등록-입력과-필드-연결을-보존한다/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results/framework-서버-400-필드-오류에도-등록-입력과-필드-연결을-보존한다/error-context.md
+
+  2) frontend/e2e/layout.spec.ts:89:3 › 레퍼런스 390px: 한국어·본문·현재 메뉴·모바일 키보드 탐색 ────────────────────────
+
+    TimeoutError: locator.fill: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for getByRole('form', { name: '예제 등록', exact: true }).getByLabel('제목', { exact: true })
+
+
+      120 |       .getByRole("form", { name: "예제 등록", exact: true })
+      121 |       .getByLabel("제목", { exact: true });
+    > 122 |     await input.fill(draft);
+          |                 ^
+      123 |     await page.getByRole("link", { name: "본문으로 이동", exact: true }).focus();
+      124 |     await assertShell(page, "레퍼런스 화면", "예제 목록", width);
+      125 |     await expect(input).toHaveValue(draft);
+        at /Users/dk/Work/ScFramework/frontend/e2e/layout.spec.ts:122:17
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results/layout-레퍼런스-390px-한국어·본문·현재-메뉴·모바일-키보드-탐색/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results/layout-레퍼런스-390px-한국어·본문·현재-메뉴·모바일-키보드-탐색/error-context.md
+
+  3) frontend/e2e/layout.spec.ts:89:3 › 레퍼런스 1366px: 한국어·본문·현재 메뉴·모바일 키보드 탐색 ───────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('navigation', { name: '레퍼런스 화면', exact: true }).getByRole('link', { name: '예제 목록', exact: true })
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('navigation', { name: '레퍼런스 화면', exact: true }).getByRole('link', { name: '예제 목록', exact: true }) with timeout 10000ms
+      - waiting for getByRole('navigation', { name: '레퍼런스 화면', exact: true }).getByRole('link', { name: '예제 목록', exact: true })
+
+
+      77 |       .getByRole("navigation", { name: label, exact: true })
+      78 |       .getByRole("link", { name: linkName, exact: true });
+    > 79 |     await expect(current).toBeVisible();
+         |                           ^
+      80 |     await expect(current).toHaveAttribute("aria-current", "page");
+      81 |   }
+      82 |   await main.focus();
+        at assertShell (/Users/dk/Work/ScFramework/frontend/e2e/layout.spec.ts:79:27)
+        at /Users/dk/Work/ScFramework/frontend/e2e/layout.spec.ts:124:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results/layout-레퍼런스-1366px-한국어·본문·현재-메뉴·모바일-키보드-탐색/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results/layout-레퍼런스-1366px-한국어·본문·현재-메뉴·모바일-키보드-탐색/error-context.md
+
+  4) frontend/e2e/layout.spec.ts:89:3 › 레퍼런스 1920px: 한국어·본문·현재 메뉴·모바일 키보드 탐색 ───────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('navigation', { name: '레퍼런스 화면', exact: true }).getByRole('link', { name: '예제 목록', exact: true })
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('navigation', { name: '레퍼런스 화면', exact: true }).getByRole('link', { name: '예제 목록', exact: true }) with timeout 10000ms
+      - waiting for getByRole('navigation', { name: '레퍼런스 화면', exact: true }).getByRole('link', { name: '예제 목록', exact: true })
+
+
+      77 |       .getByRole("navigation", { name: label, exact: true })
+      78 |       .getByRole("link", { name: linkName, exact: true });
+    > 79 |     await expect(current).toBeVisible();
+         |                           ^
+      80 |     await expect(current).toHaveAttribute("aria-current", "page");
+      81 |   }
+      82 |   await main.focus();
+        at assertShell (/Users/dk/Work/ScFramework/frontend/e2e/layout.spec.ts:79:27)
+        at /Users/dk/Work/ScFramework/frontend/e2e/layout.spec.ts:124:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results/layout-레퍼런스-1920px-한국어·본문·현재-메뉴·모바일-키보드-탐색/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results/layout-레퍼런스-1920px-한국어·본문·현재-메뉴·모바일-키보드-탐색/error-context.md
+
+  5) frontend/e2e/layout.spec.ts:147:5 › 최소 Starter의 독립적인 공통 셸 소비 › Starter 390px: 동일 UI·Router·본문 탐색 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('button', { name: '탐색 메뉴 열기', exact: true })
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('button', { name: '탐색 메뉴 열기', exact: true }) with timeout 10000ms
+      - waiting for getByRole('button', { name: '탐색 메뉴 열기', exact: true })
+
+
+      36 |   const opener = page.getByRole("button", { name: "탐색 메뉴 열기", exact: true });
+      37 |   if (width < 768) {
+    > 38 |     await expect(opener).toBeVisible();
+         |                          ^
+      39 |     await opener.click();
+      40 |     await expect(opener).toHaveAttribute("aria-expanded", "true");
+      41 |     const dialog = page.getByRole("dialog", { name: label, exact: true });
+        at assertShell (/Users/dk/Work/ScFramework/frontend/e2e/layout.spec.ts:38:26)
+        at /Users/dk/Work/ScFramework/frontend/e2e/layout.spec.ts:158:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results/layout-최소-Starter의-독립적인-공통-09158-er-390px-동일-UI·Router·본문-탐색/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results/layout-최소-Starter의-독립적인-공통-09158-er-390px-동일-UI·Router·본문-탐색/error-context.md
+
+  6) frontend/e2e/layout.spec.ts:147:5 › 최소 Starter의 독립적인 공통 셸 소비 › Starter 1366px: 동일 UI·Router·본문 탐색 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('navigation', { name: '시작 화면', exact: true }).getByRole('link', { name: '프로젝트 시작', exact: true })
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('navigation', { name: '시작 화면', exact: true }).getByRole('link', { name: '프로젝트 시작', exact: true }) with timeout 10000ms
+      - waiting for getByRole('navigation', { name: '시작 화면', exact: true }).getByRole('link', { name: '프로젝트 시작', exact: true })
+
+
+      77 |     await expect(opener).toBeVisible();
+      78 |     await expect(opener).toBeFocused();
+    > 79 |   } else {
+         |           ^
+      80 |     await expect(opener).not.toBeVisible();
+      81 |     const current = page
+      82 |       .getByRole("navigation", { name: label, exact: true })
+        at assertShell (/Users/dk/Work/ScFramework/frontend/e2e/layout.spec.ts:79:27)
+        at /Users/dk/Work/ScFramework/frontend/e2e/layout.spec.ts:158:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results/layout-최소-Starter의-독립적인-공통-cf663-r-1366px-동일-UI·Router·본문-탐색/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results/layout-최소-Starter의-독립적인-공통-cf663-r-1366px-동일-UI·Router·본문-탐색/error-context.md
+
+  7) frontend/e2e/layout.spec.ts:147:5 › 최소 Starter의 독립적인 공통 셸 소비 › Starter 1920px: 동일 UI·Router·본문 탐색 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('navigation', { name: '시작 화면', exact: true }).getByRole('link', { name: '프로젝트 시작', exact: true })
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('navigation', { name: '시작 화면', exact: true }).getByRole('link', { name: '프로젝트 시작', exact: true }) with timeout 10000ms
+      - waiting for getByRole('navigation', { name: '시작 화면', exact: true }).getByRole('link', { name: '프로젝트 시작', exact: true })
+
+
+      77 |     await expect(opener).toBeVisible();
+      78 |     await expect(opener).toBeFocused();
+    > 79 |   } else {
+         |           ^
+      80 |     await expect(opener).not.toBeVisible();
+      81 |     const current = page
+      82 |       .getByRole("navigation", { name: label, exact: true })
+        at assertShell (/Users/dk/Work/ScFramework/frontend/e2e/layout.spec.ts:79:27)
+        at /Users/dk/Work/ScFramework/frontend/e2e/layout.spec.ts:158:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results/layout-최소-Starter의-독립적인-공통-5f067-r-1920px-동일-UI·Router·본문-탐색/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results/layout-최소-Starter의-독립적인-공통-5f067-r-1920px-동일-UI·Router·본문-탐색/error-context.md
+
+  8) frontend/e2e/patterns.spec.ts:337:5 › reference 실제 JAR 공통 기능 소비 › 한영 입력 보존·Zod 검증·초기화·dirty 이동 확인 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('heading', { name: '공통 기능 예제', exact: true })
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('heading', { name: '공통 기능 예제', exact: true }) with timeout 10000ms
+      - waiting for getByRole('heading', { name: '공통 기능 예제', exact: true })
+
+
+      26 | async function openPatterns(page: Page) {
+      27 |   await page.goto("/patterns");
+    > 28 |   await expect(page.getByRole("heading", { name: "공통 기능 예제", exact: true })).toBeVisible();
+         |                                                                              ^
+      29 | }
+      30 |
+      31 | async function exerciseInputForm(page: Page, destination: "Examples" | "Get started") {
+        at openPatterns (/Users/dk/Work/ScFramework/frontend/e2e/patterns.spec.ts:28:78)
+        at /Users/dk/Work/ScFramework/frontend/e2e/patterns.spec.ts:339:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results/patterns-reference-실제-JAR--90fb5-력-보존·Zod-검증·초기화·dirty-이동-확인/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results/patterns-reference-실제-JAR--90fb5-력-보존·Zod-검증·초기화·dirty-이동-확인/error-context.md
+
+  9) frontend/e2e/patterns.spec.ts:343:5 › reference 실제 JAR 공통 기능 소비 › 정렬·페이지·선택과 10,000행 실제 스크롤·focus·일반 보기 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('heading', { name: '공통 기능 예제', exact: true })
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('heading', { name: '공통 기능 예제', exact: true }) with timeout 10000ms
+      - waiting for getByRole('heading', { name: '공통 기능 예제', exact: true })
+
+
+      26 | async function openPatterns(page: Page) {
+      27 |   await page.goto("/patterns");
+    > 28 |   await expect(page.getByRole("heading", { name: "공통 기능 예제", exact: true })).toBeVisible();
+         |                                                                              ^
+      29 | }
+      30 |
+      31 | async function exerciseInputForm(page: Page, destination: "Examples" | "Get started") {
+        at openPatterns (/Users/dk/Work/ScFramework/frontend/e2e/patterns.spec.ts:28:78)
+        at /Users/dk/Work/ScFramework/frontend/e2e/patterns.spec.ts:345:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results/patterns-reference-실제-JAR--f3a94--10-000행-실제-스크롤·focus·일반-보기/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results/patterns-reference-실제-JAR--f3a94--10-000행-실제-스크롤·focus·일반-보기/error-context.md
+
+  10) frontend/e2e/patterns.spec.ts:349:5 › reference 실제 JAR 공통 기능 소비 › SVG 차트·키보드 선택·JSON 서식과 XLSX 다운로드·검토·반영 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('heading', { name: '공통 기능 예제', exact: true })
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('heading', { name: '공통 기능 예제', exact: true }) with timeout 10000ms
+      - waiting for getByRole('heading', { name: '공통 기능 예제', exact: true })
+
+
+      26 | async function openPatterns(page: Page) {
+      27 |   await page.goto("/patterns");
+    > 28 |   await expect(page.getByRole("heading", { name: "공통 기능 예제", exact: true })).toBeVisible();
+         |                                                                              ^
+      29 | }
+      30 |
+      31 | async function exerciseInputForm(page: Page, destination: "Examples" | "Get started") {
+        at openPatterns (/Users/dk/Work/ScFramework/frontend/e2e/patterns.spec.ts:28:78)
+        at /Users/dk/Work/ScFramework/frontend/e2e/patterns.spec.ts:351:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results/patterns-reference-실제-JAR--0cfcb-선택·JSON-서식과-XLSX-다운로드·검토·반영/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results/patterns-reference-실제-JAR--0cfcb-선택·JSON-서식과-XLSX-다운로드·검토·반영/error-context.md
+
+  11) frontend/e2e/patterns.spec.ts:337:5 › starter 실제 JAR 공통 기능 소비 › 한영 입력 보존·Zod 검증·초기화·dirty 이동 확인 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('heading', { name: '공통 기능 예제', exact: true })
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('heading', { name: '공통 기능 예제', exact: true }) with timeout 10000ms
+      - waiting for getByRole('heading', { name: '공통 기능 예제', exact: true })
+
+
+      26 | async function openPatterns(page: Page) {
+      27 |   await page.goto("/patterns");
+    > 28 |   await expect(page.getByRole("heading", { name: "공통 기능 예제", exact: true })).toBeVisible();
+         |                                                                              ^
+      29 | }
+      30 |
+      31 | async function exerciseInputForm(page: Page, destination: "Examples" | "Get started") {
+        at openPatterns (/Users/dk/Work/ScFramework/frontend/e2e/patterns.spec.ts:28:78)
+        at /Users/dk/Work/ScFramework/frontend/e2e/patterns.spec.ts:339:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results/patterns-starter-실제-JAR-공통-bfbcc-력-보존·Zod-검증·초기화·dirty-이동-확인/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results/patterns-starter-실제-JAR-공통-bfbcc-력-보존·Zod-검증·초기화·dirty-이동-확인/error-context.md
+
+  12) frontend/e2e/patterns.spec.ts:343:5 › starter 실제 JAR 공통 기능 소비 › 정렬·페이지·선택과 10,000행 실제 스크롤·focus·일반 보기 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('heading', { name: '공통 기능 예제', exact: true })
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('heading', { name: '공통 기능 예제', exact: true }) with timeout 10000ms
+      - waiting for getByRole('heading', { name: '공통 기능 예제', exact: true })
+
+
+      26 | async function openPatterns(page: Page) {
+      27 |   await page.goto("/patterns");
+    > 28 |   await expect(page.getByRole("heading", { name: "공통 기능 예제", exact: true })).toBeVisible();
+         |                                                                              ^
+      29 | }
+      30 |
+      31 | async function exerciseInputForm(page: Page, destination: "Examples" | "Get started") {
+        at openPatterns (/Users/dk/Work/ScFramework/frontend/e2e/patterns.spec.ts:28:78)
+        at /Users/dk/Work/ScFramework/frontend/e2e/patterns.spec.ts:345:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results/patterns-starter-실제-JAR-공통-d5361--10-000행-실제-스크롤·focus·일반-보기/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results/patterns-starter-실제-JAR-공통-d5361--10-000행-실제-스크롤·focus·일반-보기/error-context.md
+
+  13) frontend/e2e/patterns.spec.ts:349:5 › starter 실제 JAR 공통 기능 소비 › SVG 차트·키보드 선택·JSON 서식과 XLSX 다운로드·검토·반영 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('heading', { name: '공통 기능 예제', exact: true })
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('heading', { name: '공통 기능 예제', exact: true }) with timeout 10000ms
+      - waiting for getByRole('heading', { name: '공통 기능 예제', exact: true })
+
+
+      26 | async function openPatterns(page: Page) {
+      27 |   await page.goto("/patterns");
+    > 28 |   await expect(page.getByRole("heading", { name: "공통 기능 예제", exact: true })).toBeVisible();
+         |                                                                              ^
+      29 | }
+      30 |
+      31 | async function exerciseInputForm(page: Page, destination: "Examples" | "Get started") {
+        at openPatterns (/Users/dk/Work/ScFramework/frontend/e2e/patterns.spec.ts:28:78)
+        at /Users/dk/Work/ScFramework/frontend/e2e/patterns.spec.ts:351:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results/patterns-starter-실제-JAR-공통-d40d0-선택·JSON-서식과-XLSX-다운로드·검토·반영/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results/patterns-starter-실제-JAR-공통-d40d0-선택·JSON-서식과-XLSX-다운로드·검토·반영/error-context.md
+
+  14) frontend/e2e/patterns.spec.ts:358:1 › Reference dirty 폼에서 로그아웃하면 확인 Promise에 갇히지 않고 로그인 화면에 도착한다 
+
+    TimeoutError: locator.fill: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for getByRole('form', { name: '공통 입력 폼', exact: true }).getByRole('textbox', { name: '제목', exact: true })
+
+
+      365 |     .getByRole("form", { name: "공통 입력 폼", exact: true })
+      366 |     .getByRole("textbox", { name: "제목", exact: true })
+    > 367 |     .fill("로그아웃 시 종료할 초안");
+          |      ^
+      368 |   await page.getByRole("button", { name: "로그아웃", exact: true }).click();
+      369 |   await expect(page).toHaveURL(/\/login$/);
+      370 |   await expect(page.getByLabel("아이디", { exact: true })).toBeVisible();
+        at /Users/dk/Work/ScFramework/frontend/e2e/patterns.spec.ts:367:6
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results/patterns-Reference-dirty-폼-da0a9-romise에-갇히지-않고-로그인-화면에-도착한다/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results/patterns-Reference-dirty-폼-da0a9-romise에-갇히지-않고-로그인-화면에-도착한다/error-context.md
+
+  14 failed
+    frontend/e2e/framework.spec.ts:109:1 › 서버 400 필드 오류에도 등록 입력과 필드 연결을 보존한다 ───────────────────────
+    frontend/e2e/layout.spec.ts:89:3 › 레퍼런스 390px: 한국어·본문·현재 메뉴·모바일 키보드 탐색 ─────────────────────────
+    frontend/e2e/layout.spec.ts:89:3 › 레퍼런스 1366px: 한국어·본문·현재 메뉴·모바일 키보드 탐색 ────────────────────────
+    frontend/e2e/layout.spec.ts:89:3 › 레퍼런스 1920px: 한국어·본문·현재 메뉴·모바일 키보드 탐색 ────────────────────────
+    frontend/e2e/layout.spec.ts:147:5 › 최소 Starter의 독립적인 공통 셸 소비 › Starter 390px: 동일 UI·Router·본문 탐색 
+    frontend/e2e/layout.spec.ts:147:5 › 최소 Starter의 독립적인 공통 셸 소비 › Starter 1366px: 동일 UI·Router·본문 탐색 
+    frontend/e2e/layout.spec.ts:147:5 › 최소 Starter의 독립적인 공통 셸 소비 › Starter 1920px: 동일 UI·Router·본문 탐색 
+    frontend/e2e/patterns.spec.ts:337:5 › reference 실제 JAR 공통 기능 소비 › 한영 입력 보존·Zod 검증·초기화·dirty 이동 확인 
+    frontend/e2e/patterns.spec.ts:343:5 › reference 실제 JAR 공통 기능 소비 › 정렬·페이지·선택과 10,000행 실제 스크롤·focus·일반 보기 
+    frontend/e2e/patterns.spec.ts:349:5 › reference 실제 JAR 공통 기능 소비 › SVG 차트·키보드 선택·JSON 서식과 XLSX 다운로드·검토·반영 
+    frontend/e2e/patterns.spec.ts:337:5 › starter 실제 JAR 공통 기능 소비 › 한영 입력 보존·Zod 검증·초기화·dirty 이동 확인 
+    frontend/e2e/patterns.spec.ts:343:5 › starter 실제 JAR 공통 기능 소비 › 정렬·페이지·선택과 10,000행 실제 스크롤·focus·일반 보기 
+    frontend/e2e/patterns.spec.ts:349:5 › starter 실제 JAR 공통 기능 소비 › SVG 차트·키보드 선택·JSON 서식과 XLSX 다운로드·검토·반영 
+    frontend/e2e/patterns.spec.ts:358:1 › Reference dirty 폼에서 로그아웃하면 확인 Promise에 갇히지 않고 로그인 화면에 도착한다 
+  4 passed (2.6m)

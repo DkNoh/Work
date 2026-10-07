@@ -1,0 +1,4 @@
+
+> sc-framework@0.2.0 lint
+> eslint frontend scripts --max-warnings 0
+

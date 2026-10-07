@@ -1,0 +1,13 @@
+{
+  "stage": "009",
+  "scope": "two additional current overview documents; does not replace earlier 15-document checks",
+  "documents": [
+    "docs/질의/개발가이드.md",
+    "docs/질의/프레임워크.md"
+  ],
+  "localLinksChecked": 28,
+  "fencedBlocksChecked": 3,
+  "formatCheckLog": "009-docs-root-extra-format-check.log",
+  "errors": [],
+  "status": "PASS"
+}

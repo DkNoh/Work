@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-10-07T00:00:23.414Z",
+  "tailnetOnly": true,
+  "passed": true,
+  "targets": [
+    {
+      "origin": "http://100.120.61.117:18082",
+      "httpStatus": 200,
+      "authenticatedDashboard": true,
+      "kpiCount": 4,
+      "realChartSvg": true,
+      "pageErrors": []
+    },
+    {
+      "origin": "https://macstudio.tailf9bcc5.ts.net:5176",
+      "httpStatus": 200,
+      "authenticatedDashboard": true,
+      "kpiCount": 4,
+      "realChartSvg": true,
+      "pageErrors": []
+    }
+  ]
+}

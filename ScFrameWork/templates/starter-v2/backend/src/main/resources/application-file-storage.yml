@@ -1,0 +1,10 @@
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 11MB
+sc:
+  framework:
+    file-storage:
+      enabled: true
+      root: ${SC_UPLOAD_ROOT:./.runtime/local/uploads}

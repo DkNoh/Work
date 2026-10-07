@@ -1,0 +1,99 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] ScFramework backend                                                [pom]
+[INFO] ScFramework core contracts                                         [jar]
+[INFO] ScFramework auto configuration                                     [jar]
+[INFO] ScFramework Spring Boot Starter                                    [jar]
+[INFO] ScFramework neutral reference app                                  [jar]
+[INFO] ScFramework minimal consumer app                                   [jar]
+[INFO] 
+[INFO] ----------------< dev.scframework:sc-framework-parent >-----------------
+[INFO] Building ScFramework backend 0.1.0-SNAPSHOT                        [1/6]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] -------------------< dev.scframework:framework-core >-------------------
+[INFO] Building ScFramework core contracts 0.1.0-SNAPSHOT                 [2/6]
+[INFO]   from framework-core/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ framework-core ---
+[INFO] skip non existing resourceDirectory /Users/dk/Work/ScFramework/backend/framework-core/src/main/resources
+[INFO] skip non existing resourceDirectory /Users/dk/Work/ScFramework/backend/framework-core/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ framework-core ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 6 source files with javac [debug parameters release 21] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ framework-core ---
+[INFO] Not copying test resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ framework-core ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ framework-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ framework-core ---
+[INFO] Building jar: /Users/dk/Work/ScFramework/backend/framework-core/target/framework-core-0.1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --------------< dev.scframework:framework-autoconfigure >---------------
+[INFO] Building ScFramework auto configuration 0.1.0-SNAPSHOT             [3/6]
+[INFO]   from framework-autoconfigure/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ framework-autoconfigure ---
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ framework-autoconfigure ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 16 source files with javac [debug parameters release 21] to target/classes
+[INFO] Annotation processing is enabled because one or more processors were found
+  on the class path. A future release of javac may disable annotation processing
+  unless at least one processor is specified by name (-processor), or a search
+  path is specified (--processor-path, --processor-module-path), or annotation
+  processing is enabled explicitly (-proc:only, -proc:full).
+  Use -Xlint:-options to suppress this message.
+  Use -proc:none to disable annotation processing.
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/dk/Work/ScFramework/backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/web/ApiExceptionHandler.java:[7,27] package jakarta.persistence does not exist
+[ERROR] /Users/dk/Work/ScFramework/backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/web/ApiExceptionHandler.java:[70,65] cannot find symbol
+  symbol:   class OptimisticLockException
+  location: class dev.scframework.autoconfigure.web.ApiExceptionHandler
+[INFO] 2 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for ScFramework backend 0.1.0-SNAPSHOT:
+[INFO] 
+[INFO] ScFramework backend ................................ SUCCESS [  0.001 s]
+[INFO] ScFramework core contracts ......................... SUCCESS [  0.569 s]
+[INFO] ScFramework auto configuration ..................... FAILURE [  0.378 s]
+[INFO] ScFramework Spring Boot Starter .................... SKIPPED
+[INFO] ScFramework neutral reference app .................. SKIPPED
+[INFO] ScFramework minimal consumer app ................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.110 s
+[INFO] Finished at: 2026-10-06T23:46:52+09:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.14.1:compile (default-compile) on project framework-autoconfigure: Compilation failure: Compilation failure: 
+[ERROR] /Users/dk/Work/ScFramework/backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/web/ApiExceptionHandler.java:[7,27] package jakarta.persistence does not exist
+[ERROR] /Users/dk/Work/ScFramework/backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/web/ApiExceptionHandler.java:[70,65] cannot find symbol
+[ERROR]   symbol:   class OptimisticLockException
+[ERROR]   location: class dev.scframework.autoconfigure.web.ApiExceptionHandler
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :framework-autoconfigure

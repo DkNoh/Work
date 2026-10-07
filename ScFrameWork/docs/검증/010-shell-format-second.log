@@ -1,0 +1,39 @@
+frontend/packages/ui/src/board/contracts.ts 20ms (unchanged)
+frontend/packages/ui/src/board/helpers.spec.ts 8ms (unchanged)
+frontend/packages/ui/src/board/helpers.ts 5ms (unchanged)
+frontend/packages/ui/src/board/index.ts 1ms (unchanged)
+frontend/packages/ui/src/board/ScBoardColumn.vue 26ms (unchanged)
+frontend/packages/ui/src/board/ScBoardItem.vue 23ms (unchanged)
+frontend/packages/ui/src/board/ScSortableBoard.vue 23ms
+frontend/packages/ui/src/image/contracts.ts 2ms (unchanged)
+frontend/packages/ui/src/image/coordinates.spec.ts 2ms (unchanged)
+frontend/packages/ui/src/image/coordinates.ts 2ms (unchanged)
+frontend/packages/ui/src/image/index.ts 0ms (unchanged)
+frontend/packages/ui/src/image/ScImageAnnotator.vue 32ms
+frontend/packages/excel/src/index.ts 8ms (unchanged)
+frontend/packages/excel/src/index.spec.ts 4ms (unchanged)
+frontend/apps/starter-app/src/features/patterns/board-image-labels.ts 1ms (unchanged)
+frontend/apps/starter-app/src/features/patterns/BoardPatterns.vue 5ms (unchanged)
+frontend/apps/starter-app/src/features/patterns/ImagePatterns.vue 4ms (unchanged)
+frontend/apps/starter-app/src/features/patterns/PatternsPage.vue 2ms (unchanged)
+frontend/apps/catalog/src/fixtures/ScSortableBoardStory.vue 5ms (unchanged)
+frontend/apps/catalog/src/fixtures/ScImageAnnotatorStory.vue 4ms
+frontend/apps/catalog/src/ScSortableBoard.stories.ts 4ms (unchanged)
+frontend/apps/catalog/src/ScImageAnnotator.stories.ts 4ms (unchanged)
+frontend/apps/reference-app/src/features/kanban/api.ts 3ms (unchanged)
+frontend/apps/reference-app/src/features/kanban/BoardsPanel.vue 6ms (unchanged)
+frontend/apps/reference-app/src/features/kanban/KanbanFilters.vue 9ms (unchanged)
+frontend/apps/reference-app/src/features/kanban/KanbanMembers.vue 3ms (unchanged)
+frontend/apps/reference-app/src/features/kanban/KanbanPage.vue 30ms (unchanged)
+frontend/apps/reference-app/src/features/kanban/messages.ts 2ms (unchanged)
+frontend/apps/reference-app/src/features/kanban/query.ts 2ms
+frontend/apps/reference-app/src/features/kanban/schema.spec.ts 1ms
+frontend/apps/reference-app/src/features/kanban/schema.ts 2ms (unchanged)
+frontend/apps/reference-app/src/features/kanban/TaskForm.vue 13ms
+frontend/apps/reference-app/src/features/kanban/TaskWorkbook.vue 13ms
+frontend/apps/reference-app/src/features/media/RequirementImageEditor.vue 10ms
+frontend/apps/reference-app/src/features/media/RequirementAttachments.vue 11ms
+frontend/apps/reference-app/src/features/media/RequirementAdoForm.vue 6ms
+frontend/apps/reference-app/src/features/media/ado-schema.ts 1ms
+frontend/apps/reference-app/src/features/media/ado-schema.spec.ts 1ms
+frontend/e2e/010-kanban.spec.ts 13ms

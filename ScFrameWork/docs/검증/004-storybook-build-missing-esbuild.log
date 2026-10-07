@@ -1,0 +1,75 @@
+
+> sc-framework@0.1.0 build-storybook
+> npm run build-storybook --workspace @sc/catalog
+
+
+> @sc/catalog@0.1.0 build-storybook
+> storybook build
+
+
+┌  Building storybook v10.4.1
+│
+◇  Cleaning outputDir: storybook-static
+│
+■  [38;2;241;97;97mSB_CORE-SERVER_0007 (MainFileEvaluationError): Storybook couldn't
+│  evaluate your .storybook/main.ts file.
+
+│  Original error:
+│  Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'esbuild' imported
+│  from
+│  /Users/dk/Work/ScFramework/node_modules/storybook/dist/bin/loader.js
+│  at Object.getPackageJSONURL
+│  (node:internal/modules/package_json_reader:301:9)
+│  at packageResolve (node:internal/modules/esm/resolve:768:81)
+│  at moduleResolve (node:internal/modules/esm/resolve:859:18)
+│  at defaultResolve (node:internal/modules/esm/resolve:992:11)
+│  at nextResolve (node:internal/modules/esm/hooks:785:28)
+│  at AsyncLoaderHooksOnLoaderHookWorker.resolve
+│  (node:internal/modules/esm/hooks:269:30)
+│  at #resolve (node:internal/modules/esm/loader:670:37)
+│  at ModuleLoader.getOrCreateModuleJob
+│  (node:internal/modules/esm/loader:593:35)
+│  at #asyncLink (node:internal/modules/esm/module_job:279:48)[39m
+│  at loadMainConfig
+│  (file:///Users/dk/Work/ScFramework/node_modules/storybook/dist/_node-chunks/chunk-PNYLLFX3.js:10157:11)
+│  at async buildStaticStandalone
+│  (file:///Users/dk/Work/ScFramework/node_modules/storybook/dist/core-server/index.js:16989:16)
+│  at async withTelemetry
+│  (file:///Users/dk/Work/ScFramework/node_modules/storybook/dist/_node-chunks/chunk-CUZMMOHY.js:655:12)
+│  at async build
+│  (file:///Users/dk/Work/ScFramework/node_modules/storybook/dist/bin/core.js:2679:3)
+│  at async _Command.<anonymous>
+│  (file:///Users/dk/Work/ScFramework/node_modules/storybook/dist/bin/core.js:2824:7)
+│
+▲  Failed to load preset:
+│  "/Users/dk/Work/ScFramework/frontend/apps/catalog/.storybook/main.ts"
+│
+■  Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'esbuild' imported
+│  from
+│  /Users/dk/Work/ScFramework/node_modules/storybook/dist/bin/loader.js
+│  at Object.getPackageJSONURL
+│  (node:internal/modules/package_json_reader:301:9)
+│  at packageResolve (node:internal/modules/esm/resolve:768:81)
+│  at moduleResolve (node:internal/modules/esm/resolve:859:18)
+│  at defaultResolve (node:internal/modules/esm/resolve:992:11)
+│  at nextResolve (node:internal/modules/esm/hooks:785:28)
+│  at AsyncLoaderHooksOnLoaderHookWorker.resolve
+│  (node:internal/modules/esm/hooks:269:30)
+│  at #resolve (node:internal/modules/esm/loader:670:37)
+│  at ModuleLoader.getOrCreateModuleJob
+│  (node:internal/modules/esm/loader:593:35)
+│  at #asyncLink (node:internal/modules/esm/module_job:279:48)
+│
+●  Storybook collects completely anonymous usage telemetry. We use it to
+│  shape Storybook's roadmap and prioritize features. You can learn more,
+│  including how to opt out, at ]8;;https://storybook.js.org/telemetryhttps://storybook.js.org/telemetry]8;;
+│
+└  Storybook exited with an error
+
+npm error Lifecycle script `build-storybook` failed with error:
+npm error code 1
+npm error path /Users/dk/Work/ScFramework/frontend/apps/catalog
+npm error workspace @sc/catalog@0.1.0
+npm error location /Users/dk/Work/ScFramework/frontend/apps/catalog
+npm error command failed
+npm error command sh -c storybook build

@@ -1,0 +1,44 @@
+{
+  "stage": "010",
+  "scope": "two owned 010 documents final format/link/fence/table/JSON and evidence-count assertions only",
+  "files": [
+    {
+      "file": "docs/질의/010-업무확장과파일작업실.md",
+      "sha256": "cb54cb9610e75bb47577eddafc1463fc73783b1890dea07a7e32c5d193c67f20",
+      "localLinks": 71,
+      "missingLocalLinks": [],
+      "fenceMarkers": 2,
+      "tables": 3,
+      "tableRows": 34,
+      "linkedJsonParsed": 14
+    },
+    {
+      "file": "docs/질의/010-파일저장계약.md",
+      "sha256": "d479b5663be95bb80750ab05a9d84c3615205a252140cc6516cd2cbfce0ff787",
+      "localLinks": 12,
+      "missingLocalLinks": [],
+      "fenceMarkers": 0,
+      "tables": 2,
+      "tableRows": 24,
+      "linkedJsonParsed": 4
+    }
+  ],
+  "formatWriteExit": 0,
+  "formatCheckExit": 0,
+  "latestActual": {
+    "unitTests": 139,
+    "unitFiles": 34,
+    "serverTests": 143,
+    "functionalE2e": 74,
+    "axeFullDocumentRuns": 111,
+    "normalVisual": 4,
+    "negativePixels": 1436,
+    "negativeBaselineImmutableFiles": 17
+  },
+  "stageMarkedLocallyComplete": true,
+  "manualVoiceOverExecuted": false,
+  "future011012MarkedComplete": false,
+  "originalRuntimeUsed": false,
+  "installJavaBrowserExecuted": false,
+  "passed": true
+}

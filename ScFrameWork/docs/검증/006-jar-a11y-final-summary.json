@@ -1,0 +1,605 @@
+{
+  "tests": 8,
+  "scans": 40,
+  "wholeDocument": true,
+  "rulesDisabled": [],
+  "domExcluded": [],
+  "manualScreenReaderVerified": false,
+  "reports": [
+    {
+      "file": "docs/검증/006-e2e-final-results/accessibility-reference-실제-91be3-366px-한국어·영어·오류·dirty·열린-모달/patterns-en-confirm-closed-axe.json",
+      "state": "patterns-en-confirm-closed",
+      "axeVersion": "4.14.0",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ],
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/006-e2e-final-results/accessibility-reference-실제-91be3-366px-한국어·영어·오류·dirty·열린-모달/patterns-en-confirm-open-axe.json",
+      "state": "patterns-en-confirm-open",
+      "axeVersion": "4.14.0",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": [
+        "color-contrast"
+      ],
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/006-e2e-final-results/accessibility-reference-실제-91be3-366px-한국어·영어·오류·dirty·열린-모달/patterns-en-dirty-errors-axe.json",
+      "state": "patterns-en-dirty-errors",
+      "axeVersion": "4.14.0",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ],
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/006-e2e-final-results/accessibility-reference-실제-91be3-366px-한국어·영어·오류·dirty·열린-모달/patterns-ko-default-axe.json",
+      "state": "patterns-ko-default",
+      "axeVersion": "4.14.0",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ],
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/006-e2e-final-results/accessibility-reference-실제-91be3-366px-한국어·영어·오류·dirty·열린-모달/patterns-ko-dirty-errors-editor-table-axe.json",
+      "state": "patterns-ko-dirty-errors-editor-table",
+      "axeVersion": "4.14.0",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ],
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/006-e2e-final-results/accessibility-reference-실제-91be3-366px-한국어·영어·오류·dirty·열린-모달/patterns-ko-select-menu-open-axe.json",
+      "state": "patterns-ko-select-menu-open",
+      "axeVersion": "4.14.0",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": [
+        "aria-valid-attr-value",
+        "color-contrast",
+        "target-size"
+      ],
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/006-e2e-final-results/accessibility-reference-실제-d8fb3-390px-한국어·영어·오류·dirty·열린-모달/patterns-en-confirm-closed-axe.json",
+      "state": "patterns-en-confirm-closed",
+      "axeVersion": "4.14.0",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ],
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/006-e2e-final-results/accessibility-reference-실제-d8fb3-390px-한국어·영어·오류·dirty·열린-모달/patterns-en-confirm-open-axe.json",
+      "state": "patterns-en-confirm-open",
+      "axeVersion": "4.14.0",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": [
+        "color-contrast"
+      ],
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/006-e2e-final-results/accessibility-reference-실제-d8fb3-390px-한국어·영어·오류·dirty·열린-모달/patterns-en-dirty-errors-axe.json",
+      "state": "patterns-en-dirty-errors",
+      "axeVersion": "4.14.0",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ],
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/006-e2e-final-results/accessibility-reference-실제-d8fb3-390px-한국어·영어·오류·dirty·열린-모달/patterns-en-mobile-navigation-closed-axe.json",
+      "state": "patterns-en-mobile-navigation-closed",
+      "axeVersion": "4.14.0",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ],
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/006-e2e-final-results/accessibility-reference-실제-d8fb3-390px-한국어·영어·오류·dirty·열린-모달/patterns-en-mobile-navigation-open-axe.json",
+      "state": "patterns-en-mobile-navigation-open",
+      "axeVersion": "4.14.0",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": [
+        "aria-valid-attr-value",
+        "color-contrast",
+        "label-content-name-mismatch"
+      ],
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/006-e2e-final-results/accessibility-reference-실제-d8fb3-390px-한국어·영어·오류·dirty·열린-모달/patterns-ko-default-axe.json",
+      "state": "patterns-ko-default",
+      "axeVersion": "4.14.0",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ],
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/006-e2e-final-results/accessibility-reference-실제-d8fb3-390px-한국어·영어·오류·dirty·열린-모달/patterns-ko-dirty-errors-editor-table-axe.json",
+      "state": "patterns-ko-dirty-errors-editor-table",
+      "axeVersion": "4.14.0",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ],
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/006-e2e-final-results/accessibility-reference-실제-d8fb3-390px-한국어·영어·오류·dirty·열린-모달/patterns-ko-select-menu-open-axe.json",
+      "state": "patterns-ko-select-menu-open",
+      "axeVersion": "4.14.0",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": [
+        "aria-valid-attr-value",
+        "color-contrast",
+        "target-size"
+      ],
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/006-e2e-final-results/accessibility-starter-실제-J-424a3-390px-한국어·영어·오류·dirty·열린-모달/patterns-en-confirm-closed-axe.json",
+      "state": "patterns-en-confirm-closed",
+      "axeVersion": "4.14.0",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ],
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/006-e2e-final-results/accessibility-starter-실제-J-424a3-390px-한국어·영어·오류·dirty·열린-모달/patterns-en-confirm-open-axe.json",
+      "state": "patterns-en-confirm-open",
+      "axeVersion": "4.14.0",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": [
+        "color-contrast"
+      ],
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/006-e2e-final-results/accessibility-starter-실제-J-424a3-390px-한국어·영어·오류·dirty·열린-모달/patterns-en-dirty-errors-axe.json",
+      "state": "patterns-en-dirty-errors",
+      "axeVersion": "4.14.0",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ],
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/006-e2e-final-results/accessibility-starter-실제-J-424a3-390px-한국어·영어·오류·dirty·열린-모달/patterns-en-mobile-navigation-closed-axe.json",
+      "state": "patterns-en-mobile-navigation-closed",
+      "axeVersion": "4.14.0",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ],
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/006-e2e-final-results/accessibility-starter-실제-J-424a3-390px-한국어·영어·오류·dirty·열린-모달/patterns-en-mobile-navigation-open-axe.json",
+      "state": "patterns-en-mobile-navigation-open",
+      "axeVersion": "4.14.0",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": [
+        "aria-valid-attr-value",
+        "color-contrast",
+        "label-content-name-mismatch"
+      ],
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/006-e2e-final-results/accessibility-starter-실제-J-424a3-390px-한국어·영어·오류·dirty·열린-모달/patterns-ko-default-axe.json",
+      "state": "patterns-ko-default",
+      "axeVersion": "4.14.0",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ],
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/006-e2e-final-results/accessibility-starter-실제-J-424a3-390px-한국어·영어·오류·dirty·열린-모달/patterns-ko-dirty-errors-editor-table-axe.json",
+      "state": "patterns-ko-dirty-errors-editor-table",
+      "axeVersion": "4.14.0",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ],
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/006-e2e-final-results/accessibility-starter-실제-J-424a3-390px-한국어·영어·오류·dirty·열린-모달/patterns-ko-select-menu-open-axe.json",
+      "state": "patterns-ko-select-menu-open",
+      "axeVersion": "4.14.0",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": [
+        "aria-valid-attr-value",
+        "color-contrast",
+        "target-size"
+      ],
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/006-e2e-final-results/accessibility-starter-실제-J-61ee3-366px-한국어·영어·오류·dirty·열린-모달/patterns-en-confirm-closed-axe.json",
+      "state": "patterns-en-confirm-closed",
+      "axeVersion": "4.14.0",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ],
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/006-e2e-final-results/accessibility-starter-실제-J-61ee3-366px-한국어·영어·오류·dirty·열린-모달/patterns-en-confirm-open-axe.json",
+      "state": "patterns-en-confirm-open",
+      "axeVersion": "4.14.0",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": [
+        "color-contrast"
+      ],
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/006-e2e-final-results/accessibility-starter-실제-J-61ee3-366px-한국어·영어·오류·dirty·열린-모달/patterns-en-dirty-errors-axe.json",
+      "state": "patterns-en-dirty-errors",
+      "axeVersion": "4.14.0",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ],
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/006-e2e-final-results/accessibility-starter-실제-J-61ee3-366px-한국어·영어·오류·dirty·열린-모달/patterns-ko-default-axe.json",
+      "state": "patterns-ko-default",
+      "axeVersion": "4.14.0",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ],
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/006-e2e-final-results/accessibility-starter-실제-J-61ee3-366px-한국어·영어·오류·dirty·열린-모달/patterns-ko-dirty-errors-editor-table-axe.json",
+      "state": "patterns-ko-dirty-errors-editor-table",
+      "axeVersion": "4.14.0",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ],
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/006-e2e-final-results/accessibility-starter-실제-J-61ee3-366px-한국어·영어·오류·dirty·열린-모달/patterns-ko-select-menu-open-axe.json",
+      "state": "patterns-ko-select-menu-open",
+      "axeVersion": "4.14.0",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": [
+        "aria-valid-attr-value",
+        "color-contrast",
+        "target-size"
+      ],
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/006-e2e-final-results/accessibility-접근성-Referenc-4ae3c-6px-기본·400-필드·409·native-확인/examples-confirm-closed-axe.json",
+      "state": "examples-confirm-closed",
+      "axeVersion": "4.14.0",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": [
+        "color-contrast"
+      ],
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/006-e2e-final-results/accessibility-접근성-Referenc-4ae3c-6px-기본·400-필드·409·native-확인/examples-confirm-open-axe.json",
+      "state": "examples-confirm-open",
+      "axeVersion": "4.14.0",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": [
+        "color-contrast"
+      ],
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/006-e2e-final-results/accessibility-접근성-Referenc-4ae3c-6px-기본·400-필드·409·native-확인/examples-conflict-409-axe.json",
+      "state": "examples-conflict-409",
+      "axeVersion": "4.14.0",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": [
+        "color-contrast"
+      ],
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/006-e2e-final-results/accessibility-접근성-Referenc-4ae3c-6px-기본·400-필드·409·native-확인/examples-default-axe.json",
+      "state": "examples-default",
+      "axeVersion": "4.14.0",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": [
+        "color-contrast"
+      ],
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/006-e2e-final-results/accessibility-접근성-Referenc-4ae3c-6px-기본·400-필드·409·native-확인/examples-field-error-400-axe.json",
+      "state": "examples-field-error-400",
+      "axeVersion": "4.14.0",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": [
+        "color-contrast"
+      ],
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/006-e2e-final-results/accessibility-접근성-Reference-예제-390px-기본·400-필드·409·native-확인/examples-confirm-closed-axe.json",
+      "state": "examples-confirm-closed",
+      "axeVersion": "4.14.0",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ],
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/006-e2e-final-results/accessibility-접근성-Reference-예제-390px-기본·400-필드·409·native-확인/examples-confirm-open-axe.json",
+      "state": "examples-confirm-open",
+      "axeVersion": "4.14.0",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": [
+        "color-contrast"
+      ],
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/006-e2e-final-results/accessibility-접근성-Reference-예제-390px-기본·400-필드·409·native-확인/examples-conflict-409-axe.json",
+      "state": "examples-conflict-409",
+      "axeVersion": "4.14.0",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ],
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/006-e2e-final-results/accessibility-접근성-Reference-예제-390px-기본·400-필드·409·native-확인/examples-default-axe.json",
+      "state": "examples-default",
+      "axeVersion": "4.14.0",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ],
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/006-e2e-final-results/accessibility-접근성-Reference-예제-390px-기본·400-필드·409·native-확인/examples-field-error-400-axe.json",
+      "state": "examples-field-error-400",
+      "axeVersion": "4.14.0",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ],
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/006-e2e-final-results/accessibility-접근성-로그인-1366px-닫힌-셸과-실제-로그인-필드/login-ko-axe.json",
+      "state": "login-ko",
+      "axeVersion": "4.14.0",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": [
+        "color-contrast"
+      ],
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/006-e2e-final-results/accessibility-접근성-로그인-390px-닫힌-셸과-실제-로그인-필드/login-ko-axe.json",
+      "state": "login-ko",
+      "axeVersion": "4.14.0",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ],
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    }
+  ]
+}

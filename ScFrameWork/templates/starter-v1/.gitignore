@@ -1,0 +1,9 @@
+node_modules/
+frontend/dist/
+backend/target/
+.runtime/
+.env
+.env.*
+*.secret
+*.mv.db
+*.trace.db

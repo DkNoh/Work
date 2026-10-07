@@ -1,0 +1,5 @@
+$ ['/Users/dk/.nvm/versions/node/v24.16.0/bin/node', 'node_modules/prettier/bin/prettier.cjs', '--check', 'README.md', 'docs/api.md', 'docs/operations.md', 'docs/folder-structure.md', 'docs/maintenance-guide.md', 'docs/질의/README.md', 'docs/질의/개발단계.md', 'docs/질의/개발가이드.md', 'docs/질의/프레임워크.md', 'docs/질의/기술스택-적용현황.md', 'docs/질의/조건부기술-전체구현.md', 'docs/질의/008-조회매핑과외부연동.md']
+Checking formatting...
+All matched files use Prettier code style!
+
+exit=0

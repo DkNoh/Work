@@ -1,0 +1,20 @@
+Design token CSS matches tokens.ts.
+vite v8.3.1 building client environment for production...
+transforming...
+✓ 100 modules transformed.
+rendering chunks...
+computing gzip size...
+frontend/packages/ui/dist/sc-ui.css                                     33.23 kB │ gzip: 5.01 kB
+frontend/packages/ui/dist/__styles.js                                    0.00 kB │ gzip: 0.02 kB
+frontend/packages/ui/dist/chunks/_plugin-vue_export-helper-Bm2-moSD.js   1.00 kB │ gzip: 0.59 kB
+frontend/packages/ui/dist/chunks/tokens-ttIY1ZG7.js                      1.69 kB │ gzip: 0.92 kB
+frontend/packages/ui/dist/chunks/ScActionButton-uKAjPCjN.js              2.73 kB │ gzip: 1.17 kB
+frontend/packages/ui/dist/charts.js                                      9.34 kB │ gzip: 3.08 kB
+frontend/packages/ui/dist/editor.js                                     16.94 kB │ gzip: 5.09 kB
+frontend/packages/ui/dist/board.js                                      17.86 kB │ gzip: 4.86 kB
+frontend/packages/ui/dist/image.js                                      18.22 kB │ gzip: 5.31 kB
+frontend/packages/ui/dist/table.js                                      49.21 kB │ gzip: 9.62 kB
+frontend/packages/ui/dist/index.js                                      51.29 kB │ gzip: 9.37 kB
+
+✓ built in 585ms
+@sc/ui@0.1.0: compiled ESM/declarations/assets ready

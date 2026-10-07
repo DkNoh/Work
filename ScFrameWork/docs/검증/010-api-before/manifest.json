@@ -1,0 +1,26 @@
+{
+  "reference-openapi.json": {
+    "source": "docs/openapi.json",
+    "sha256": "97ee831ae86219c518dc21c56a710017633fea4f8f04ecb0f29c124c64bc3061"
+  },
+  "starter-openapi.json": {
+    "source": "docs/openapi-starter.json",
+    "sha256": "2b8a83b9fb4135b4c1296f8288502c8933f191c93ede4358db41e3969d498cc1"
+  },
+  "reference-api.d.ts": {
+    "source": "frontend/apps/reference-app/src/generated/api.d.ts",
+    "sha256": "efacbe21b90e8f24da9b4c76446690bfa1527653c5e769ba27e67db038c2b623"
+  },
+  "starter-api.d.ts": {
+    "source": "frontend/apps/starter-app/src/generated/api.d.ts",
+    "sha256": "c45cf4423d7be46e418eaa07250561d0f3eec56d97fa7a936b14a80540e9415f"
+  },
+  "neutral-api.d.ts": {
+    "source": "frontend/packages/runtime/src/generated/api.d.ts",
+    "sha256": "2989e59d05eb3b92d5c5d25f5bba727e254f894e6c57d36bd7ae8df4de2c43a4"
+  },
+  "neutral-openapi.json": {
+    "source": "docs/openapi-neutral.json",
+    "sha256": "b8a88692ac4c41c8c42831412bf09cf1fca819ea9d07e34232aa9ff78bc32a6b"
+  }
+}

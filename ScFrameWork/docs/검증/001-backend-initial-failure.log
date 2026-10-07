@@ -1,0 +1,493 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] ScFramework backend                                                [pom]
+[INFO] ScFramework core contracts                                         [jar]
+[INFO] ScFramework auto configuration                                     [jar]
+[INFO] ScFramework Spring Boot Starter                                    [jar]
+[INFO] ScFramework neutral reference app                                  [jar]
+[INFO] ScFramework minimal consumer app                                   [jar]
+[INFO] 
+[INFO] ----------------< dev.scframework:sc-framework-parent >-----------------
+[INFO] Building ScFramework backend 0.1.0-SNAPSHOT                        [1/6]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] -------------------< dev.scframework:framework-core >-------------------
+[INFO] Building ScFramework core contracts 0.1.0-SNAPSHOT                 [2/6]
+[INFO]   from framework-core/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ framework-core ---
+[INFO] skip non existing resourceDirectory /Users/dk/Work/ScFramework/backend/framework-core/src/main/resources
+[INFO] skip non existing resourceDirectory /Users/dk/Work/ScFramework/backend/framework-core/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ framework-core ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ framework-core ---
+[INFO] skip non existing resourceDirectory /Users/dk/Work/ScFramework/backend/framework-core/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ framework-core ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 1 source file with javac [debug parameters release 21] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ framework-core ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running dev.scframework.core.ApiErrorTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s -- in dev.scframework.core.ApiErrorTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --------------< dev.scframework:framework-autoconfigure >---------------
+[INFO] Building ScFramework auto configuration 0.1.0-SNAPSHOT             [3/6]
+[INFO]   from framework-autoconfigure/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ framework-autoconfigure ---
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ framework-autoconfigure ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ framework-autoconfigure ---
+[INFO] skip non existing resourceDirectory /Users/dk/Work/ScFramework/backend/framework-autoconfigure/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ framework-autoconfigure ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 3 source files with javac [debug parameters release 21] to target/test-classes
+[INFO] Annotation processing is enabled because one or more processors were found
+  on the class path. A future release of javac may disable annotation processing
+  unless at least one processor is specified by name (-processor), or a search
+  path is specified (--processor-path, --processor-module-path), or annotation
+  processing is enabled explicitly (-proc:only, -proc:full).
+  Use -Xlint:-options to suppress this message.
+  Use -proc:none to disable annotation processing.
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ framework-autoconfigure ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running dev.scframework.autoconfigure.RequestIdFilterTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.066 s -- in dev.scframework.autoconfigure.RequestIdFilterTest
+[INFO] Running dev.scframework.autoconfigure.SecurityOverrideTest
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+WARNING: A Java agent has been loaded dynamically (/Users/dk/.m2/repository/net/bytebuddy/byte-buddy-agent/1.17.8/byte-buddy-agent-1.17.8.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.501 s -- in dev.scframework.autoconfigure.SecurityOverrideTest
+[INFO] Running dev.scframework.autoconfigure.SecretFileUsersTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.136 s -- in dev.scframework.autoconfigure.SecretFileUsersTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] -----------< dev.scframework:framework-spring-boot-starter >------------
+[INFO] Building ScFramework Spring Boot Starter 0.1.0-SNAPSHOT            [4/6]
+[INFO]   from framework-spring-boot-starter/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ framework-spring-boot-starter ---
+[INFO] skip non existing resourceDirectory /Users/dk/Work/ScFramework/backend/framework-spring-boot-starter/src/main/resources
+[INFO] skip non existing resourceDirectory /Users/dk/Work/ScFramework/backend/framework-spring-boot-starter/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ framework-spring-boot-starter ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ framework-spring-boot-starter ---
+[INFO] skip non existing resourceDirectory /Users/dk/Work/ScFramework/backend/framework-spring-boot-starter/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ framework-spring-boot-starter ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ framework-spring-boot-starter ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] ------------------< dev.scframework:sc-reference-app >------------------
+[INFO] Building ScFramework neutral reference app 0.1.0-SNAPSHOT          [5/6]
+[INFO]   from reference-app/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ sc-reference-app ---
+[INFO] Copying 3 resources from src/main/resources to target/classes
+[INFO] skip non existing resourceDirectory /Users/dk/Work/ScFramework/backend/reference-app/../../frontend/apps/reference-app/dist
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ sc-reference-app ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ sc-reference-app ---
+[INFO] skip non existing resourceDirectory /Users/dk/Work/ScFramework/backend/reference-app/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ sc-reference-app ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 2 source files with javac [debug parameters release 21] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ sc-reference-app ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running dev.scframework.reference.H2PersistenceTest
+18:06:10.452 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:h2:file:/var/folders/8k/rv4bxj0115g929lrxwybv_r80000gn/T/junit-1823565040557973437/isolated-reference (H2 2.3)
+18:06:10.465 [main] INFO org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory -- Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+18:06:10.466 [main] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 1 migration (execution time 00:00.005s)
+18:06:10.469 [main] INFO org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory -- Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+18:06:10.483 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema "PUBLIC": << Empty Schema >>
+18:06:10.486 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Migrating schema "PUBLIC" to version "1 - example baseline"
+18:06:10.494 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Successfully applied 1 migration to schema "PUBLIC", now at version v1 (execution time 00:00.002s)
+18:06:10.554 [main] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 1 migration (execution time 00:00.001s)
+18:06:10.555 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema "PUBLIC": 1
+18:06:10.555 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema "PUBLIC" is up to date. No migration necessary.
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.405 s -- in dev.scframework.reference.H2PersistenceTest
+[INFO] Running dev.scframework.reference.ReferenceIntegrationTest
+18:06:10.673 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [dev.scframework.reference.ReferenceIntegrationTest]: ReferenceIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+18:06:10.711 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration dev.scframework.reference.ReferenceApplication for test class dev.scframework.reference.ReferenceIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.16)
+
+2026-10-06T18:06:10.928+09:00  INFO [requestId:] 97814 --- [sc-reference-app] [           main] d.s.reference.ReferenceIntegrationTest   : Starting ReferenceIntegrationTest using Java 21.0.11 with PID 97814 (started by dk in /Users/dk/Work/ScFramework/backend/reference-app)
+2026-10-06T18:06:10.928+09:00  INFO [requestId:] 97814 --- [sc-reference-app] [           main] d.s.reference.ReferenceIntegrationTest   : The following 1 profile is active: "dev"
+2026-10-06T18:06:11.278+09:00  INFO [requestId:] 97814 --- [sc-reference-app] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06T18:06:11.297+09:00  INFO [requestId:] 97814 --- [sc-reference-app] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 1 JPA repository interface.
+2026-10-06T18:06:11.349+09:00  INFO [requestId:] 97814 --- [sc-reference-app] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=34ec9165-e4ac-3276-9770-3b20c0c93719
+2026-10-06T18:06:11.486+09:00  INFO [requestId:] 97814 --- [sc-reference-app] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2026-10-06T18:06:11.492+09:00  INFO [requestId:] 97814 --- [sc-reference-app] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-06T18:06:11.492+09:00  INFO [requestId:] 97814 --- [sc-reference-app] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.55]
+2026-10-06T18:06:11.512+09:00  INFO [requestId:] 97814 --- [sc-reference-app] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-10-06T18:06:11.513+09:00  INFO [requestId:] 97814 --- [sc-reference-app] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 576 ms
+2026-10-06T18:06:11.592+09:00  INFO [requestId:] 97814 --- [sc-reference-app] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-06T18:06:11.596+09:00  INFO [requestId:] 97814 --- [sc-reference-app] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn6: url=jdbc:h2:mem:reference-4120c421-3d14-4f4d-8a5f-0a108e5d9a2d user=SA
+2026-10-06T18:06:11.596+09:00  INFO [requestId:] 97814 --- [sc-reference-app] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-06T18:06:11.600+09:00  INFO [requestId:] 97814 --- [sc-reference-app] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:reference-4120c421-3d14-4f4d-8a5f-0a108e5d9a2d (H2 2.3)
+2026-10-06T18:06:11.602+09:00  INFO [requestId:] 97814 --- [sc-reference-app] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2026-10-06T18:06:11.602+09:00  INFO [requestId:] 97814 --- [sc-reference-app] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.000s)
+2026-10-06T18:06:11.603+09:00  INFO [requestId:] 97814 --- [sc-reference-app] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-10-06T18:06:11.606+09:00  INFO [requestId:] 97814 --- [sc-reference-app] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2026-10-06T18:06:11.607+09:00  INFO [requestId:] 97814 --- [sc-reference-app] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - example baseline"
+2026-10-06T18:06:11.609+09:00  INFO [requestId:] 97814 --- [sc-reference-app] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "PUBLIC", now at version v1 (execution time 00:00.001s)
+2026-10-06T18:06:11.637+09:00  INFO [requestId:] 97814 --- [sc-reference-app] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-10-06T18:06:11.653+09:00  INFO [requestId:] 97814 --- [sc-reference-app] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.53.Final
+2026-10-06T18:06:11.663+09:00  INFO [requestId:] 97814 --- [sc-reference-app] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-10-06T18:06:11.748+09:00  INFO [requestId:] 97814 --- [sc-reference-app] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06T18:06:11.769+09:00  INFO [requestId:] 97814 --- [sc-reference-app] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06T18:06:11.999+09:00  INFO [requestId:] 97814 --- [sc-reference-app] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06T18:06:12.005+09:00  INFO [requestId:] 97814 --- [sc-reference-app] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06T18:06:12.402+09:00  INFO [requestId:] 97814 --- [sc-reference-app] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name referenceUsers
+2026-10-06T18:06:12.447+09:00  INFO [requestId:] 97814 --- [sc-reference-app] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-06T18:06:12.528+09:00  INFO [requestId:] 97814 --- [sc-reference-app] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
+2026-10-06T18:06:12.528+09:00  INFO [requestId:] 97814 --- [sc-reference-app] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-06T18:06:12.529+09:00  INFO [requestId:] 97814 --- [sc-reference-app] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-10-06T18:06:12.613+09:00  INFO [requestId:] 97814 --- [sc-reference-app] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 60595 (http) with context path '/'
+2026-10-06T18:06:12.624+09:00  INFO [requestId:] 97814 --- [sc-reference-app] [           main] d.s.reference.ReferenceIntegrationTest   : Started ReferenceIntegrationTest in 1.821 seconds (process running for 2.569)
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+WARNING: A Java agent has been loaded dynamically (/Users/dk/.m2/repository/net/bytebuddy/byte-buddy-agent/1.17.8/byte-buddy-agent-1.17.8.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+2026-10-06T18:06:13.045+09:00  INFO [requestId:c0258195-397c-405a-adb4-d6820715dae1] 97814 --- [sc-reference-app] [           main] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 84 ms
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /v3/api-docs
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = org.springdoc.webmvc.api.OpenApiWebMvcResource
+           Method = org.springdoc.webmvc.api.OpenApiWebMvcResource#openapiJson(HttpServletRequest, String, Locale)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [X-Request-ID:"c0258195-397c-405a-adb4-d6820715dae1", Content-Type:"application/json", Content-Length:"5939", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = application/json
+             Body = {"openapi":"3.1.0","info":{"title":"sc-reference-app","version":"0.1.0"},"servers":[{"url":"http://localhost","description":"Generated server url"}],"security":[{"session":[]}],"paths":{"/api/auth/login":{"post":{"tags":["session"],"summary":"폼 로그인","parameters":[{"name":"X-CSRF-TOKEN","in":"header","description":"GET /api/auth/csrf가 발급한 token. Swagger interceptor가 갱신한다.","schema":{"type":"string"}}],"requestBody":{"content":{"application/x-www-form-urlencoded":{"schema":{"properties":{"username":{"type":"string"},"password":{"type":"string","format":"password"}},"required":["password","username"]}}},"required":true},"responses":{"204":{"description":"성공, 본문 없음"},"401":{"description":"인증 실패","content":{"application/json":{"schema":{"$ref":"#/components/schemas/ApiError"}}}},"403":{"description":"CSRF 거부","content":{"application/json":{"schema":{"$ref":"#/components/schemas/ApiError"}}}}},"security":[]}},"/api/auth/logout":{"post":{"tags":["session"],"summary":"세션 로그아웃","parameters":[{"name":"X-CSRF-TOKEN","in":"header","description":"GET /api/auth/csrf가 발급한 token. Swagger interceptor가 갱신한다.","schema":{"type":"string"}}],"responses":{"204":{"description":"성공, 본문 없음"},"401":{"description":"인증 실패","content":{"application/json":{"schema":{"$ref":"#/components/schemas/ApiError"}}}},"403":{"description":"CSRF 거부","content":{"application/json":{"schema":{"$ref":"#/components/schemas/ApiError"}}}}},"security":[{"session":[]}]}},"/api/examples/{id}":{"put":{"tags":["example-controller"],"summary":"revision을 확인하여 예제 수정","operationId":"update","parameters":[{"name":"id","in":"path","required":true,"schema":{"type":"integer","format":"int64","minimum":1}}],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/UpdateExample"}}},"required":true},"responses":{"409":{"description":"낙관적 잠금 충돌","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiError"}}}}}}},"/api/examples":{"get":{"tags":["example-controller"],"summary":"중립 예제 목록: 단순 조회는 JPA","operationId":"list","parameters":[{"name":"page","in":"query","required":false,"schema":{"type":"integer","format":"int32","default":0,"minimum":0}},{"name":"size","in":"query","required":false,"schema":{"type":"integer","format":"int32","default":20,"maximum":100,"minimum":1}}],"responses":{"200":{"description":"OK","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ExamplePage"}}}}}},"post":{"tags":["example-controller"],"summary":"예제 생성","operationId":"create","requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/CreateExample"}}},"required":true},"responses":{"400":{"description":"입력 오류","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiError"}}}},"201":{"description":"Created","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ExampleDto"}}}}}}},"/api/integration/echo":{"get":{"tags":["echo-controller"],"summary":"OpenFeign 외부 HTTP 연결 예제","operationId":"echo","responses":{"200":{"description":"OK","content":{"*/*":{"schema":{"$ref":"#/components/schemas/EchoResponse"}}}}}}},"/api/health":{"get":{"tags":["common-endpoints"],"summary":"애플리케이션 기본 상태","operationId":"health","responses":{"200":{"description":"OK","content":{"*/*":{"schema":{"$ref":"#/components/schemas/HealthResponse"}}}}}}},"/api/examples/summary":{"get":{"tags":["example-controller"],"summary":"MyBatis 읽기 연결 예제","operationId":"summary","responses":{"200":{"description":"OK","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ExampleSummary"}}}}}}},"/api/auth/me":{"get":{"tags":["common-endpoints"],"summary":"현재 로그인 사용자","operationId":"me","responses":{"200":{"description":"OK","content":{"*/*":{"schema":{"$ref":"#/components/schemas/SessionResponse"}}}}}}},"/api/auth/csrf":{"get":{"tags":["common-endpoints"],"summary":"현재 세션의 CSRF 토큰 발급","operationId":"csrf","responses":{"200":{"description":"OK","content":{"*/*":{"schema":{"$ref":"#/components/schemas/CsrfResponse"}}}}}}}},"components":{"schemas":{"ApiError":{"type":"object","properties":{"code":{"type":"string"},"message":{"type":"string"},"errors":{"type":"array","items":{"$ref":"#/components/schemas/FieldViolation"}}}},"FieldViolation":{"type":"object","properties":{"field":{"type":"string"},"message":{"type":"string"}}},"UpdateExample":{"type":"object","properties":{"title":{"type":"string","maxLength":200,"minLength":0},"revision":{"type":"integer","format":"int32","minimum":1}},"required":["title"]},"CreateExample":{"type":"object","properties":{"title":{"type":"string","maxLength":200,"minLength":0}},"required":["title"]},"ExampleDto":{"type":"object","properties":{"id":{"type":"integer","format":"int64"},"title":{"type":"string"},"revision":{"type":"integer","format":"int32"}}},"EchoResponse":{"type":"object","properties":{"message":{"type":"string"}}},"HealthResponse":{"type":"object","properties":{"status":{"type":"string"},"application":{"type":"string"}}},"ExamplePage":{"type":"object","properties":{"items":{"type":"array","items":{"$ref":"#/components/schemas/ExampleDto"}},"total":{"type":"integer","format":"int64"},"page":{"type":"integer","format":"int32"},"size":{"type":"integer","format":"int32"}}},"ExampleSummary":{"type":"object","properties":{"total":{"type":"integer","format":"int64"}}},"SessionResponse":{"type":"object","properties":{"username":{"type":"string"},"roles":{"type":"array","items":{"type":"string"}}}},"CsrfResponse":{"type":"object","properties":{"headerName":{"type":"string"},"token":{"type":"string"}}}},"securitySchemes":{"session":{"type":"apiKey","description":"같은 브라우저의 로그인 세션. HttpOnly 쿠키를 Authorize 입력으로 설정하지 않는다.","name":"JSESSIONID","in":"cookie"}}}}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /swagger-ui/index.html
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = org.springframework.web.servlet.resource.ResourceHttpRequestHandler
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [X-Request-ID:"4a2fad01-f9d0-4732-984b-e06b651217da", Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"text/html", Accept-Ranges:"bytes", Content-Length:"734", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", X-Frame-Options:"DENY"]
+     Content type = text/html
+             Body = <!-- HTML for static distribution bundle build -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Swagger UI</title>
+    <link rel="stylesheet" type="text/css" href="./swagger-ui.css" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16" />
+  </head>
+
+  <body>
+    <div id="swagger-ui"></div>
+    <script src="./swagger-ui-bundle.js" charset="UTF-8"> </script>
+    <script src="./swagger-ui-standalone-preset.js" charset="UTF-8"> </script>
+    <script src="./swagger-initializer.js" charset="UTF-8"> </script>
+  </body>
+</html>
+
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /swagger-ui/swagger-initializer.js
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = org.springframework.web.servlet.resource.ResourceHttpRequestHandler
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [X-Request-ID:"7bd06284-daf8-47b9-bbd9-bca107b42f42", Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"text/javascript", Accept-Ranges:"bytes", Content-Length:"640", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", X-Frame-Options:"DENY"]
+     Content type = text/javascript
+             Body = window.onload = function() {
+  //<editor-fold desc="Changeable Configuration Block">
+
+  // the following lines will be replaced by docker/configurator, when it runs in a docker-container
+  window.ui = SwaggerUIBundle({
+    url: "https://petstore.swagger.io/v2/swagger.json",
+    dom_id: '#swagger-ui',
+    deepLinking: true,
+    presets: [
+      SwaggerUIBundle.presets.apis,
+      SwaggerUIStandalonePreset
+    ],
+    plugins: [
+      SwaggerUIBundle.plugins.DownloadUrl
+    ],
+    layout: "StandaloneLayout" ,
+
+  "configUrl" : "/v3/api-docs/swagger-config",
+  "validatorUrl" : "",
+  "withCredentials" : true
+
+  });
+
+  //</editor-fold>
+};
+
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+[ERROR] Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 2.871 s <<< FAILURE! -- in dev.scframework.reference.ReferenceIntegrationTest
+[ERROR] dev.scframework.reference.ReferenceIntegrationTest.devSwaggerContainsFilterLoginTypedErrorsAndJsonCsrfInterceptor -- Time elapsed: 0.412 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting actual:
+  "window.onload = function() {
+  //<editor-fold desc="Changeable Configuration Block">
+
+  // the following lines will be replaced by docker/configurator, when it runs in a docker-container
+  window.ui = SwaggerUIBundle({
+    url: "https://petstore.swagger.io/v2/swagger.json",
+    dom_id: '#swagger-ui',
+    deepLinking: true,
+    presets: [
+      SwaggerUIBundle.presets.apis,
+      SwaggerUIStandalonePreset
+    ],
+    plugins: [
+      SwaggerUIBundle.plugins.DownloadUrl
+    ],
+    layout: "StandaloneLayout" ,
+
+  "configUrl" : "/v3/api-docs/swagger-config",
+  "validatorUrl" : "",
+  "withCredentials" : true
+
+  });
+
+  //</editor-fold>
+};
+"
+to contain:
+  ["requestInterceptor",
+    "fetch('/api/auth/csrf'",
+    "csrf.headerName",
+    "same-origin"]
+but could not find:
+  ["requestInterceptor",
+    "fetch('/api/auth/csrf'",
+    "csrf.headerName",
+    "same-origin"]
+ 
+	at dev.scframework.reference.ReferenceIntegrationTest.devSwaggerContainsFilterLoginTypedErrorsAndJsonCsrfInterceptor(ReferenceIntegrationTest.java:186)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   ReferenceIntegrationTest.devSwaggerContainsFilterLoginTypedErrorsAndJsonCsrfInterceptor:186 
+Expecting actual:
+  "window.onload = function() {
+  //<editor-fold desc="Changeable Configuration Block">
+
+  // the following lines will be replaced by docker/configurator, when it runs in a docker-container
+  window.ui = SwaggerUIBundle({
+    url: "https://petstore.swagger.io/v2/swagger.json",
+    dom_id: '#swagger-ui',
+    deepLinking: true,
+    presets: [
+      SwaggerUIBundle.presets.apis,
+      SwaggerUIStandalonePreset
+    ],
+    plugins: [
+      SwaggerUIBundle.plugins.DownloadUrl
+    ],
+    layout: "StandaloneLayout" ,
+
+  "configUrl" : "/v3/api-docs/swagger-config",
+  "validatorUrl" : "",
+  "withCredentials" : true
+
+  });
+
+  //</editor-fold>
+};
+"
+to contain:
+  ["requestInterceptor",
+    "fetch('/api/auth/csrf'",
+    "csrf.headerName",
+    "same-origin"]
+but could not find:
+  ["requestInterceptor",
+    "fetch('/api/auth/csrf'",
+    "csrf.headerName",
+    "same-origin"]
+ 
+[INFO] 
+[ERROR] Tests run: 6, Failures: 1, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for ScFramework backend 0.1.0-SNAPSHOT:
+[INFO] 
+[INFO] ScFramework backend ................................ SUCCESS [  0.001 s]
+[INFO] ScFramework core contracts ......................... SUCCESS [  0.645 s]
+[INFO] ScFramework auto configuration ..................... SUCCESS [  1.270 s]
+[INFO] ScFramework Spring Boot Starter .................... SUCCESS [  0.071 s]
+[INFO] ScFramework neutral reference app .................. FAILURE [  5.818 s]
+[INFO] ScFramework minimal consumer app ................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.945 s
+[INFO] Finished at: 2026-10-06T18:06:15+09:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.6:test (default-test) on project sc-reference-app: There are test failures.
+[ERROR] 
+[ERROR] See /Users/dk/Work/ScFramework/backend/reference-app/target/surefire-reports for the individual test results.
+[ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :sc-reference-app

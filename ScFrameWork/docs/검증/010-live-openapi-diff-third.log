@@ -1,0 +1,11 @@
+FAIL actual JAR OpenAPI differs from snapshot: 9 changed fields.
+CHANGED $root['components']['schemas']['RequirementScreenVersionResponse']['properties']['archived']['enum'][0] (type)
+CHANGED $root['components']['schemas']['RequirementScreenVersionResponse']['properties']['archived']['enum'][1] (type)
+CHANGED $root['components']['schemas']['TaskCreateInput']['properties']['assigneeId']['type'] (type)
+ADDED $root['components']['schemas']['TaskCreateInput']['properties']['dueDate']['format']
+CHANGED $root['components']['schemas']['TaskCreateInput']['properties']['dueDate']['type'] (type)
+CHANGED $root['components']['schemas']['TaskInput']['properties']['assigneeId']['type'] (type)
+ADDED $root['components']['schemas']['TaskInput']['properties']['dueDate']['format']
+CHANGED $root['components']['schemas']['TaskInput']['properties']['dueDate']['type'] (type)
+CHANGED $root['components']['schemas']['TaskMoveInput']['properties']['beforeId']['type'] (type)
+Review the API change; use --update explicitly only after accepting it.

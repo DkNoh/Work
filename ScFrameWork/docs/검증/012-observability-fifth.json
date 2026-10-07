@@ -1,0 +1,59 @@
+{
+  "stage": "012",
+  "passed": true,
+  "groups": [
+    {
+      "name": "separate-observer-authentication-and-business-csrf",
+      "passed": true,
+      "rejectedCredentialBoundaries": 5
+    },
+    {
+      "name": "actual-feign-success-failure-timeout-and-trace-propagation",
+      "passed": true,
+      "attempts": 3,
+      "timeoutSeconds": 5.009
+    },
+    {
+      "name": "collector-tempo-actual-server-client-trace",
+      "passed": true,
+      "spanCount": 6,
+      "parentChild": true
+    },
+    {
+      "name": "collector-loki-actual-safe-log-trace-correlation",
+      "passed": true,
+      "matchedLogs": 1
+    },
+    {
+      "name": "prometheus-live-scrape-jvm-hikari-http-histogram-and-bounded-events",
+      "passed": true,
+      "metricNames": [
+        "jvm_memory_used_bytes",
+        "hikaricp_connections_active",
+        "http_server_requests_seconds_count",
+        "http_server_requests_seconds_bucket",
+        "sc_operations_events_total"
+      ],
+      "scrapeUp": true
+    },
+    {
+      "name": "grafana-provisioned-dashboard-and-three-real-datasource-queries",
+      "passed": true,
+      "dataSources": 3,
+      "panels": 6
+    },
+    {
+      "name": "actual-grafana-browser-five-populated-metric-panels-and-safe-logs",
+      "passed": true,
+      "populatedMetricQueries": 5,
+      "visiblePanels": 6
+    },
+    {
+      "name": "actual-metrics-traces-logs-and-process-log-secret-canary-scan",
+      "passed": true,
+      "secretMatches": 0,
+      "logFileMode": "600"
+    }
+  ],
+  "manualReviewComplete": false
+}

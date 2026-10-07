@@ -1,0 +1,104 @@
+
+> sc-framework@0.1.0 verify
+> npm run format:check && npm run lint && npm run api:check && npm run typecheck && npm run test:unit && npm run build
+
+
+> sc-framework@0.1.0 format:check
+> prettier --check .
+
+Checking formatting...
+All matched files use Prettier code style!
+
+> sc-framework@0.1.0 lint
+> eslint frontend scripts --max-warnings 0
+
+
+> sc-framework@0.1.0 api:check
+> node scripts/openapi-types.mjs --check
+
+OpenAPI 명세와 생성 타입 일치
+
+> sc-framework@0.1.0 typecheck
+> npm run typecheck --workspace @sc/ui && npm run typecheck --workspace @sc/runtime && npm run typecheck --workspace @sc/reference-app && npm run typecheck --workspace @sc/starter-app && npm run typecheck --workspace @sc/catalog
+
+
+> @sc/ui@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/runtime@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/reference-app@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/starter-app@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/catalog@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> sc-framework@0.1.0 test:unit
+> vitest run --config vitest.config.ts
+
+
+ RUN  v4.1.2 /Users/dk/Work/ScFramework
+
+
+ Test Files  3 passed (3)
+      Tests  9 passed (9)
+   Start at  18:36:29
+   Duration  1.43s (transform 986ms, setup 0ms, import 1.34s, tests 34ms, environment 411ms)
+
+
+> sc-framework@0.1.0 build
+> npm run build --workspace @sc/ui && npm run build --workspace @sc/runtime && npm run build --workspace @sc/reference-app && npm run build --workspace @sc/starter-app
+
+
+> @sc/ui@0.1.0 build
+> npm run typecheck
+
+
+> @sc/ui@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/runtime@0.1.0 build
+> npm run typecheck
+
+
+> @sc/runtime@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/reference-app@0.1.0 build
+> vue-tsc --noEmit -p tsconfig.json && vite build
+
+vite v8.3.1 building client environment for production...
+transforming...
+✓ 943 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.40 kB │ gzip:   0.29 kB
+dist/assets/index-C-gsC245.css  264.67 kB │ gzip:  38.32 kB
+dist/assets/index-sVdJM5XN.js   446.99 kB │ gzip: 152.66 kB
+
+✓ built in 215ms
+
+> @sc/starter-app@0.1.0 build
+> vue-tsc --noEmit -p tsconfig.json && vite build
+
+vite v8.3.1 building client environment for production...
+transforming...
+✓ 837 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.40 kB │ gzip:   0.27 kB
+dist/assets/index-C7n_EGL1.css  259.78 kB │ gzip:  37.49 kB
+dist/assets/index-LVtyO4a6.js   328.97 kB │ gzip: 117.09 kB
+
+✓ built in 176ms

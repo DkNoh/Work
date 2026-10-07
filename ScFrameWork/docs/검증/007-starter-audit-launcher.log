@@ -1,0 +1,8 @@
+PASS invalid profile and all Reference audit combinations rejected without runtime files
+PASS default Starter: login/logout, 401/403, exact username/roles, Swagger denial, no tables
+PASS run.sh TERM forwarded to Java; port, lock and process metadata removed
+PASS audit: 9 real security events persisted exactly once; own V1 only; no Reference tables
+PASS audit restart preserves all persisted event counts and its V1 migration
+PASS dev,audit: exact default me, Swagger allowed, retained and appended audit events
+PASS prod,audit: exact default me, Swagger denied, retained and appended audit events
+PASS all isolated servers, H2 files, extracted driver and synthetic secret files cleaned up

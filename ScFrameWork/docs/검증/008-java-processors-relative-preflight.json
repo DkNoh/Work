@@ -1,0 +1,34 @@
+{
+  "stage": "008",
+  "startedAt": "2026-10-06T16:23:14.235168+00:00",
+  "passed": false,
+  "parentPom": "backend/pom.xml",
+  "parentResolution": "fixture relativePath resolves to the actual parent; processor configuration is not copied",
+  "javaEnvironmentScript": "scripts/java-env.sh",
+  "mavenWrapper": "backend/mvnw",
+  "fixtureSource": "synthetic-only; no manually written Q type or Mapper implementation",
+  "positive": null,
+  "negative": null,
+  "temporaryDirectoryCleaned": true,
+  "errors": [
+    {
+      "phase": "부모 POM 및 wrapper 준비 확인",
+      "message": "Fixture의 부모 상대 경로가 실제 backend/pom.xml과 다릅니다.",
+      "type": "AssertionError"
+    }
+  ],
+  "parentSha256": "a3efd4b4afb71f030071198ccca9e937884f381c4517074476196eb55e685fb7",
+  "parentCoordinates": {
+    "groupId": "dev.scframework",
+    "artifactId": "sc-framework-parent",
+    "version": "0.1.0-SNAPSHOT"
+  },
+  "declaredVersions": {
+    "java.version": "21",
+    "sc-querydsl.version": "6.12",
+    "mapstruct.version": "1.6.3",
+    "lombok.version": "1.18.46",
+    "lombok-mapstruct-binding.version": "0.2.0"
+  },
+  "finishedAt": "2026-10-06T16:23:14.236357+00:00"
+}

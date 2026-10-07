@@ -1,0 +1,42 @@
+{
+  "stage": "009",
+  "isolatedNewJarDatabase": true,
+  "browserExecuted": false,
+  "mavenExecuted": false,
+  "plaintextOrHashPrinted": false,
+  "h2ToolCliFix": "-options CHARSET UTF-8",
+  "checks": [
+    {
+      "check": "offline-seed-counts",
+      "requirements": 10000,
+      "history": 14286,
+      "comments": 15000
+    },
+    {
+      "check": "admin-api-page",
+      "page": 0,
+      "total": 10000,
+      "items": 100
+    },
+    {
+      "check": "admin-api-page",
+      "page": 50,
+      "total": 10000,
+      "items": 100
+    },
+    {
+      "check": "admin-api-page",
+      "page": 99,
+      "total": 10000,
+      "items": 100
+    },
+    {
+      "check": "requester-draft-visibility",
+      "total": 9500,
+      "ownDrafts": 500
+    }
+  ],
+  "h2RuntimeLibrary": "h2-2.3.232.jar",
+  "passed": true,
+  "temporaryDatabaseAndSecretRemoved": true
+}

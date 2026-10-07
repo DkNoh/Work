@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "records": [
+    {
+      "target": "root",
+      "exit": 1,
+      "expectedRejection": true,
+      "probeCreated": false
+    },
+    {
+      "target": "child",
+      "exit": 1,
+      "expectedRejection": true,
+      "probeCreated": false
+    }
+  ]
+}

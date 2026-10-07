@@ -1,0 +1,18 @@
+PASS public health
+PASS Vue SPA is packaged in reference JAR
+PASS Reference DB identity contract
+PASS requirements routes are packaged in JAR
+PASS JPA save advances revision
+PASS stale revision is rejected
+PASS list returns the saved row
+PASS DB user and requirement assignment are stored
+PASS H2 persistent file exists
+PASS title and revision survive JAR restart
+PASS bootstrap does not replace persisted DB identity
+PASS requirement revision, assignment, timestamps and history survive restart
+PASS created DB user authenticates after restart
+PASS committed security audit survives restart
+PASS logout clears the session
+PASS independent Starter JAR starts
+PASS minimal Vue consumer is packaged in Starter JAR
+17 isolated HTTP checks passed.

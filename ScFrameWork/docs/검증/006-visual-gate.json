@@ -1,0 +1,9 @@
+{
+  "expectedCliExitCode": 1,
+  "actualCliExitCode": 1,
+  "pixelDifference": 1436,
+  "actualAndDiffPresent": true,
+  "baselineFiles": 17,
+  "baselineHashesUnchanged": true,
+  "normalComparisonCases": 4
+}

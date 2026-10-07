@@ -1,0 +1,5 @@
+
+> sc-framework@0.1.0 ui:contracts:generate
+> node scripts/ui-contracts.mjs
+
+공개 UI 3개 계약 생성 완료

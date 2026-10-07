@@ -1,0 +1,8 @@
+{
+  "stage": "010",
+  "files": 34,
+  "relativeLinks": 954,
+  "missing": [],
+  "check": "local relative links with optional source line suffix; historical reports excluded",
+  "initialParserFalsePositives": "initial checker did not remove :line; preserved separately"
+}

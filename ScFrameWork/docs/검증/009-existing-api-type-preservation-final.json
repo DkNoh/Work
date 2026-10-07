@@ -1,0 +1,8 @@
+{
+  "stage": "009",
+  "check": "Generated TypeScript AST preservation of every existing path/operation/schema",
+  "checked": 76,
+  "changed": [],
+  "baseline": "009-reference-types-before.d.ts",
+  "limitation": "Verifies public generated TS shape; a pre-change full OpenAPI snapshot was not retained."
+}

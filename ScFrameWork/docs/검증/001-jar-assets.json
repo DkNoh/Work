@@ -1,0 +1,12 @@
+[
+  {
+    "app": "reference",
+    "dist_files": 3,
+    "mismatched": []
+  },
+  {
+    "app": "starter",
+    "dist_files": 3,
+    "mismatched": []
+  }
+]

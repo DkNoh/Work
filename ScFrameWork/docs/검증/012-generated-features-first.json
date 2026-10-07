@@ -1,0 +1,215 @@
+{
+  "passed": true,
+  "groups": [
+    {
+      "name": "profile and PID process ownership guards",
+      "passed": true,
+      "invalidProfileRejected": true,
+      "non600SecretRejected": true,
+      "unrelatedPidPreserved": true,
+      "malformedPidRejected": true,
+      "symlinkPidPreserved": true
+    },
+    {
+      "name": "default prod OFF",
+      "passed": true,
+      "schema": {
+        "TABLES": 2,
+        "NOTES": 1,
+        "AUDIT": 0,
+        "REFERENCE": 0,
+        "MIGRATIONS": 1
+      },
+      "auditCountsBefore": null,
+      "auditCountsAfter": null,
+      "storageBytes": 0,
+      "restartPreservedNotes": true,
+      "restartMetadataWhitelist": false,
+      "normalShutdownOnly": true,
+      "secret600": true,
+      "ownedStopHelper": true
+    },
+    {
+      "name": "selected profile audit",
+      "passed": true,
+      "schema": {
+        "TABLES": 3,
+        "NOTES": 1,
+        "AUDIT": 1,
+        "REFERENCE": 0,
+        "MIGRATIONS": 2
+      },
+      "auditCountsBefore": {
+        "TOTAL": 8,
+        "LOGIN": 1,
+        "CREATE": 1,
+        "UPDATE": 1,
+        "UNEXPECTED_NOTE": 0
+      },
+      "auditCountsAfter": {
+        "TOTAL": 9,
+        "LOGIN": 2,
+        "CREATE": 1,
+        "UPDATE": 1,
+        "UNEXPECTED_NOTE": 0
+      },
+      "storageBytes": 0,
+      "restartPreservedNotes": true,
+      "restartMetadataWhitelist": false,
+      "normalShutdownOnly": true,
+      "secret600": true,
+      "ownedStopHelper": true
+    },
+    {
+      "name": "selected profile file-storage",
+      "passed": true,
+      "schema": {
+        "TABLES": 2,
+        "NOTES": 1,
+        "AUDIT": 0,
+        "REFERENCE": 0,
+        "MIGRATIONS": 1
+      },
+      "auditCountsBefore": null,
+      "auditCountsAfter": null,
+      "storageBytes": 31,
+      "restartPreservedNotes": true,
+      "restartMetadataWhitelist": true,
+      "normalShutdownOnly": true,
+      "secret600": true,
+      "ownedStopHelper": true
+    },
+    {
+      "name": "selected profile audit,file-storage",
+      "passed": true,
+      "schema": {
+        "TABLES": 3,
+        "NOTES": 1,
+        "AUDIT": 1,
+        "REFERENCE": 0,
+        "MIGRATIONS": 2
+      },
+      "auditCountsBefore": {
+        "TOTAL": 9,
+        "LOGIN": 1,
+        "CREATE": 1,
+        "UPDATE": 1,
+        "UNEXPECTED_NOTE": 0
+      },
+      "auditCountsAfter": {
+        "TOTAL": 11,
+        "LOGIN": 2,
+        "CREATE": 1,
+        "UPDATE": 1,
+        "UNEXPECTED_NOTE": 0
+      },
+      "storageBytes": 31,
+      "restartPreservedNotes": true,
+      "restartMetadataWhitelist": true,
+      "normalShutdownOnly": true,
+      "secret600": true,
+      "ownedStopHelper": true
+    },
+    {
+      "name": "selected profile dev,audit",
+      "passed": true,
+      "schema": {
+        "TABLES": 3,
+        "NOTES": 1,
+        "AUDIT": 1,
+        "REFERENCE": 0,
+        "MIGRATIONS": 2
+      },
+      "auditCountsBefore": {
+        "TOTAL": 7,
+        "LOGIN": 1,
+        "CREATE": 1,
+        "UPDATE": 1,
+        "UNEXPECTED_NOTE": 0
+      },
+      "auditCountsAfter": {
+        "TOTAL": 8,
+        "LOGIN": 2,
+        "CREATE": 1,
+        "UPDATE": 1,
+        "UNEXPECTED_NOTE": 0
+      },
+      "storageBytes": 0,
+      "restartPreservedNotes": true,
+      "restartMetadataWhitelist": false,
+      "normalShutdownOnly": true,
+      "secret600": true,
+      "ownedStopHelper": true
+    },
+    {
+      "name": "selected profile dev,file-storage",
+      "passed": true,
+      "schema": {
+        "TABLES": 2,
+        "NOTES": 1,
+        "AUDIT": 0,
+        "REFERENCE": 0,
+        "MIGRATIONS": 1
+      },
+      "auditCountsBefore": null,
+      "auditCountsAfter": null,
+      "storageBytes": 31,
+      "restartPreservedNotes": true,
+      "restartMetadataWhitelist": true,
+      "normalShutdownOnly": true,
+      "secret600": true,
+      "ownedStopHelper": true
+    },
+    {
+      "name": "selected profile dev,audit,file-storage",
+      "passed": true,
+      "schema": {
+        "TABLES": 3,
+        "NOTES": 1,
+        "AUDIT": 1,
+        "REFERENCE": 0,
+        "MIGRATIONS": 2
+      },
+      "auditCountsBefore": {
+        "TOTAL": 8,
+        "LOGIN": 1,
+        "CREATE": 1,
+        "UPDATE": 1,
+        "UNEXPECTED_NOTE": 0
+      },
+      "auditCountsAfter": {
+        "TOTAL": 10,
+        "LOGIN": 2,
+        "CREATE": 1,
+        "UPDATE": 1,
+        "UNEXPECTED_NOTE": 0
+      },
+      "storageBytes": 31,
+      "restartPreservedNotes": true,
+      "restartMetadataWhitelist": true,
+      "normalShutdownOnly": true,
+      "secret600": true,
+      "ownedStopHelper": true
+    },
+    {
+      "name": "dev helper own Vite proxy and graceful shutdown",
+      "passed": true,
+      "viteProxy": true,
+      "noBuildOrInstall": true
+    }
+  ],
+  "groupsPassed": 9,
+  "failure": null,
+  "jarSha256": "70f20c47ce7284ee9f975639570448581b4fad7893e59ae59b645448d06d8648",
+  "plannedSelectedProfileGroups": 6,
+  "selectedProfileGroupsPassed": 6,
+  "plannedDefaultOffGroups": 1,
+  "defaultOffGroupsPassed": 1,
+  "temporaryDataRemoved": true,
+  "auditInspection": "stopped private H2 counts only; no HTTP audit controller",
+  "normalShutdownOnly": true,
+  "crashRecoveryVerified": false,
+  "npmInstallExecuted": false,
+  "mavenExecuted": false,
+  "browserExecuted": false
+}

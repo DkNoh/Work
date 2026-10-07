@@ -1,0 +1,7 @@
+node --check scripts/verify-package-artifacts.mjs: exit 0
+node --check scripts/verify-package-gates.mjs: exit 0
+scoped prettier --write 2 scripts + 011-패키지계약검증.md: exit 0
+scoped eslint 2 scripts: exit 1
+verify-package-artifacts.mjs:63:8 Unexpected control character(s) in regular expression: \x00, \x1f (no-control-regex)
+Control-character validation remains required; replace the regex with explicit character-code checks and rerun.
+No compiled artifact/checker CLI success was claimed in this initial syntax/format/lint run.

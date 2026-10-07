@@ -1,0 +1,156 @@
+{
+  "stage": "010",
+  "files": 34,
+  "relativeLinks": 954,
+  "missing": [
+    {
+      "file": "docs/질의/007-요구사항계약조사.md",
+      "link": "../../../WorkboardVue/frontend/src/app/router.ts:9"
+    },
+    {
+      "file": "docs/질의/007-요구사항계약조사.md",
+      "link": "../../../WorkboardVue/backend/src/main/java/kr/co/screenreq/Spa.java:11"
+    },
+    {
+      "file": "docs/질의/007-요구사항계약조사.md",
+      "link": "../../../WorkboardVue/backend/src/main/java/kr/co/screenreq/Api.java:90"
+    },
+    {
+      "file": "docs/질의/007-요구사항계약조사.md",
+      "link": "../../../WorkboardVue/backend/src/main/java/kr/co/screenreq/Inputs.java:23"
+    },
+    {
+      "file": "docs/질의/007-요구사항계약조사.md",
+      "link": "../../../WorkboardVue/frontend/src/features/requirements/api.ts:16"
+    },
+    {
+      "file": "docs/질의/007-요구사항계약조사.md",
+      "link": "../../../WorkboardVue/backend/src/main/java/kr/co/screenreq/Api.java:169"
+    },
+    {
+      "file": "docs/질의/007-요구사항계약조사.md",
+      "link": "../../../WorkboardVue/backend/src/main/java/kr/co/screenreq/Store.java:356"
+    },
+    {
+      "file": "docs/질의/007-요구사항계약조사.md",
+      "link": "../../../WorkboardVue/frontend/src/types.ts:1"
+    },
+    {
+      "file": "docs/질의/007-요구사항계약조사.md",
+      "link": "../../../WorkboardVue/backend/src/main/java/kr/co/screenreq/Store.java:310"
+    },
+    {
+      "file": "docs/질의/007-요구사항계약조사.md",
+      "link": "../../../WorkboardVue/backend/src/main/java/kr/co/screenreq/WorkService.java:104"
+    },
+    {
+      "file": "docs/질의/007-요구사항계약조사.md",
+      "link": "../../../WorkboardVue/backend/src/main/java/kr/co/screenreq/Inputs.java:45"
+    },
+    {
+      "file": "docs/질의/007-요구사항계약조사.md",
+      "link": "../../../WorkboardVue/frontend/src/features/requirements/schema.ts:1"
+    },
+    {
+      "file": "docs/질의/007-요구사항계약조사.md",
+      "link": "../../../WorkboardVue/backend/src/main/java/kr/co/screenreq/WorkService.java:41"
+    },
+    {
+      "file": "docs/질의/007-요구사항계약조사.md",
+      "link": "../../../WorkboardVue/backend/src/main/java/kr/co/screenreq/WorkService.java:61"
+    },
+    {
+      "file": "docs/질의/007-요구사항계약조사.md",
+      "link": "../../../WorkboardVue/backend/src/main/java/kr/co/screenreq/WorkService.java:258"
+    },
+    {
+      "file": "docs/질의/007-요구사항계약조사.md",
+      "link": "../../../WorkboardVue/backend/src/main/java/kr/co/screenreq/persistence/RequirementEntity.java:44"
+    },
+    {
+      "file": "docs/질의/007-요구사항계약조사.md",
+      "link": "../../../WorkboardVue/backend/src/main/java/kr/co/screenreq/Store.java:417"
+    },
+    {
+      "file": "docs/질의/007-요구사항계약조사.md",
+      "link": "../../../WorkboardVue/backend/src/main/java/kr/co/screenreq/WorkService.java:117"
+    },
+    {
+      "file": "docs/질의/007-요구사항계약조사.md",
+      "link": "../../../WorkboardVue/backend/src/main/java/kr/co/screenreq/Inputs.java:29"
+    },
+    {
+      "file": "docs/질의/007-요구사항계약조사.md",
+      "link": "../../../WorkboardVue/backend/src/main/java/kr/co/screenreq/WorkService.java:157"
+    },
+    {
+      "file": "docs/질의/007-요구사항계약조사.md",
+      "link": "../../../WorkboardVue/backend/src/main/resources/schema-v1.sql:18"
+    },
+    {
+      "file": "docs/질의/007-요구사항계약조사.md",
+      "link": "../../../WorkboardVue/frontend/src/features/requirements/geometry.ts:1"
+    },
+    {
+      "file": "docs/질의/007-요구사항계약조사.md",
+      "link": "../../../WorkboardVue/frontend/src/features/requirements/components/AnnotationCanvas.vue:90"
+    },
+    {
+      "file": "docs/질의/007-요구사항계약조사.md",
+      "link": "../../../WorkboardVue/backend/src/main/java/kr/co/screenreq/FilesService.java:41"
+    },
+    {
+      "file": "docs/질의/007-요구사항계약조사.md",
+      "link": "../../../WorkboardVue/backend/src/main/java/kr/co/screenreq/Api.java:290"
+    },
+    {
+      "file": "docs/질의/007-요구사항계약조사.md",
+      "link": "../../../WorkboardVue/backend/src/main/java/kr/co/screenreq/Store.java:94"
+    },
+    {
+      "file": "docs/질의/007-요구사항계약조사.md",
+      "link": "../../../WorkboardVue/backend/src/main/java/kr/co/screenreq/Api.java:50"
+    },
+    {
+      "file": "docs/질의/007-요구사항계약조사.md",
+      "link": "../../frontend/packages/runtime/src/runtime.ts:13"
+    },
+    {
+      "file": "docs/질의/007-요구사항계약조사.md",
+      "link": "../../backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/web/CommonEndpoints.java:29"
+    },
+    {
+      "file": "docs/질의/007-요구사항계약조사.md",
+      "link": "../../backend/reference-app/src/main/java/dev/scframework/reference/AppAuthentication.java:10"
+    },
+    {
+      "file": "docs/질의/007-서버검증계획.md",
+      "link": "../../../WorkboardVue/backend/src/main/java/kr/co/screenreq/WorkService.java:41"
+    },
+    {
+      "file": "docs/질의/007-서버설계.md",
+      "link": "../../../WorkboardVue/backend/src/main/java/kr/co/screenreq/Api.java:50"
+    },
+    {
+      "file": "docs/질의/007-서버설계.md",
+      "link": "../../frontend/packages/runtime/src/runtime.ts:13"
+    },
+    {
+      "file": "docs/질의/007-서버설계.md",
+      "link": "../../../WorkboardVue/backend/src/main/java/kr/co/screenreq/WorkService.java:83"
+    },
+    {
+      "file": "docs/질의/007-서버설계.md",
+      "link": "../../../WorkboardVue/backend/src/main/java/kr/co/screenreq/Store.java:310"
+    },
+    {
+      "file": "docs/질의/007-서버설계.md",
+      "link": "../../../WorkboardVue/backend/src/main/java/kr/co/screenreq/WorkService.java:94"
+    },
+    {
+      "file": "docs/질의/007-서버설계.md",
+      "link": "../../../WorkboardVue/backend/src/main/java/kr/co/screenreq/WorkService.java:41"
+    }
+  ],
+  "check": "documentation local paths; excludes historical validation reports"
+}

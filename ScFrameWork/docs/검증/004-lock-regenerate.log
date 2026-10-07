@@ -1,0 +1,12 @@
+
+up to date, audited 529 packages in 3s
+
+138 packages are looking for funding
+  run `npm fund` for details
+
+1 low severity vulnerability
+
+To address all issues, run:
+  npm audit fix
+
+Run `npm audit` for details.

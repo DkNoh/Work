@@ -1,0 +1,162 @@
+{
+  "stage": "011",
+  "status": "implementation-and-local-verification-complete",
+  "passed": true,
+  "build": "011-integration-build-first.log",
+  "unit": {
+    "files": 34,
+    "passed": 139
+  },
+  "server": {
+    "passed": 143,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "browser": {
+    "main": 69,
+    "reports": 5,
+    "passed": 74,
+    "failed": 0,
+    "visualSkippedFromMain": 4,
+    "visualSeparatePassed": 4
+  },
+  "axe": {
+    "fullDocumentRuns": 111,
+    "violations": 0,
+    "duplicateIds": 0,
+    "incompleteRules": 232,
+    "incompleteNodes": 2117,
+    "manualVoiceOverExecuted": false
+  },
+  "storybook": {
+    "stories": 95,
+    "files": 28,
+    "docs": 22,
+    "controls": 10,
+    "browserErrors": 0,
+    "apiLeaks": 0,
+    "passed": true
+  },
+  "packages": {
+    "version": "0.2.0",
+    "backendVersion": "0.2.0-SNAPSHOT",
+    "npm": 5,
+    "mavenCoordinates": 4,
+    "mavenFiles": 7,
+    "negativeCliChecks": 25,
+    "protectedInputs": 128,
+    "generatorChecks": 48,
+    "templateFiles": 61,
+    "generatedFiles": 74
+  },
+  "external": {
+    "nativeModules": 4,
+    "publicTypes": 12,
+    "privateImportRejections": 3,
+    "sassTokens": true,
+    "notesServerTests": 5,
+    "httpGroups": 2,
+    "browserGroups": 7,
+    "axeRuns": 4,
+    "profileLauncherGroups": 9,
+    "optionalOffBrowserGroups": 4,
+    "manuallyViewedScreenshots": [
+      "notes-1366-ko.png",
+      "notes-conflict-1366-ko.png",
+      "patterns-1366-en.png",
+      "patterns-390-en.png"
+    ],
+    "upgradeRollback": {
+      "stage": "011",
+      "passed": true,
+      "phases": [
+        {
+          "name": "old baseline",
+          "version": "0.1.0",
+          "revision": 1,
+          "passed": true
+        },
+        {
+          "name": "upgrade",
+          "version": "0.2.0",
+          "revision": 2,
+          "exactCommonJarBytes": true,
+          "appSourceChanged": 0,
+          "passed": true
+        },
+        {
+          "name": "rollback",
+          "version": "0.1.0",
+          "revision": 3,
+          "exactCommonJarBytes": true,
+          "exactOldLockRestored": true,
+          "passed": true
+        }
+      ],
+      "appSourcePreserved": true,
+      "sameH2Preserved": true,
+      "originalRuntimeAccessed": false,
+      "protectedSourceFiles": 47,
+      "normalizedApiUnchanged": true,
+      "normalizedApiExcludedFields": [
+        "servers"
+      ],
+      "compatibilityScope": "same API/DDL, no destructive schema migration",
+      "temporaryRuntimeRemoved": true
+    }
+  },
+  "visual": {
+    "stage": "011",
+    "passed": 4,
+    "failed": 0,
+    "baselineFiles": 17,
+    "baselineChanged": 0,
+    "recordOrUpdateInvoked": false
+  },
+  "dependencies": {
+    "manifestFiles": 9,
+    "directDeclarations": 133,
+    "uniqueExternalProducts": 62,
+    "versionOrLockMismatches": 0,
+    "npmAuditVulnerabilities": 0,
+    "licenseMetadataMissing": 0,
+    "originalDevelopmentToolLicenseFilesMissing": 6,
+    "originalRuntimePeerLicenseFilesMissing": 0
+  },
+  "originalSourcePreservation": {
+    "files": 170,
+    "changed": 0,
+    "originalRuntimeAccessed": false
+  },
+  "notVerified": {
+    "remoteCi": true,
+    "publicRegistryPublication": true,
+    "windowsWrapper": true,
+    "linuxPixelBaseline": true,
+    "voiceOverAudio": true,
+    "axeIncompleteManualReview": true,
+    "stage012OperationalExecution": true
+  },
+  "uiVendorStrict": {
+    "skipLibCheckFalseSupported": false,
+    "diagnostics": 696,
+    "vuetify": 695,
+    "libDom": 1,
+    "ownSource": 0,
+    "supportedSkipLibCheck": true
+  },
+  "completedAt": "2026-10-06T21:24:51.170702+00:00",
+  "documents": {
+    "stage": "011",
+    "passed": true,
+    "markdownFiles": 40,
+    "localLinks": 1370,
+    "linkedJsonChecks": 445,
+    "tables": 185,
+    "errors": [],
+    "scope": "all ScFramework developer markdown except archived evidence, plus authorized original docs pointer"
+  },
+  "formatPassed": true,
+  "lintPassed": true
+}

@@ -1,0 +1,133 @@
+
+> sc-framework@0.1.0 test:e2e
+> playwright test --config frontend/playwright.config.ts framework.spec.ts layout.spec.ts patterns.spec.ts
+
+
+Running 18 tests using 1 worker
+
+(node:44470) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 frontend/e2e/framework.spec.ts:49:1 › 공통 UI로 등록·수정하고 409에서도 작성 중인 입력을 보존한다 (2.1s)
+  ✓   2 frontend/e2e/framework.spec.ts:109:1 › 서버 400 필드 오류에도 등록 입력과 필드 연결을 보존한다 (612ms)
+  ✓   3 frontend/e2e/framework.spec.ts:138:1 › 409 후 최신 조회가 500으로 실패하면 입력과 revision을 보존하고 다시 조회할 수 있다 (1.4s)
+  ✓   4 frontend/e2e/framework.spec.ts:181:3 › 저장 중 선택 변경: 이전 항목의 success 응답이 새 폼을 바꾸지 않는다 (820ms)
+  ✓   5 frontend/e2e/framework.spec.ts:181:3 › 저장 중 선택 변경: 이전 항목의 conflict 응답이 새 폼을 바꾸지 않는다 (877ms)
+  ✘   6 frontend/e2e/layout.spec.ts:94:3 › 레퍼런스 390px: 한국어·본문·현재 메뉴·모바일 키보드 탐색 (11.2s)
+(node:44493) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   7 frontend/e2e/layout.spec.ts:94:3 › 레퍼런스 1366px: 한국어·본문·현재 메뉴·모바일 키보드 탐색 (862ms)
+  ✓   8 frontend/e2e/layout.spec.ts:94:3 › 레퍼런스 1920px: 한국어·본문·현재 메뉴·모바일 키보드 탐색 (770ms)
+  ✓   9 frontend/e2e/layout.spec.ts:155:5 › 최소 Starter의 독립적인 공통 셸 소비 › Starter 390px: 동일 UI·Router·본문 탐색 (2.1s)
+  ✓  10 frontend/e2e/layout.spec.ts:155:5 › 최소 Starter의 독립적인 공통 셸 소비 › Starter 1366px: 동일 UI·Router·본문 탐색 (958ms)
+  ✓  11 frontend/e2e/layout.spec.ts:155:5 › 최소 Starter의 독립적인 공통 셸 소비 › Starter 1920px: 동일 UI·Router·본문 탐색 (999ms)
+  ✘  12 frontend/e2e/patterns.spec.ts:337:5 › reference 실제 JAR 공통 기능 소비 › 한영 입력 보존·Zod 검증·초기화·dirty 이동 확인 (10.6s)
+(node:44537) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  13 frontend/e2e/patterns.spec.ts:343:5 › reference 실제 JAR 공통 기능 소비 › 정렬·페이지·선택과 10,000행 실제 스크롤·focus·일반 보기 (2.1s)
+  ✓  14 frontend/e2e/patterns.spec.ts:349:5 › reference 실제 JAR 공통 기능 소비 › SVG 차트·키보드 선택·JSON 서식과 XLSX 다운로드·검토·반영 (2.0s)
+  ✘  15 frontend/e2e/patterns.spec.ts:337:5 › starter 실제 JAR 공통 기능 소비 › 한영 입력 보존·Zod 검증·초기화·dirty 이동 확인 (10.4s)
+(node:44613) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  16 frontend/e2e/patterns.spec.ts:343:5 › starter 실제 JAR 공통 기능 소비 › 정렬·페이지·선택과 10,000행 실제 스크롤·focus·일반 보기 (2.3s)
+  ✓  17 frontend/e2e/patterns.spec.ts:349:5 › starter 실제 JAR 공통 기능 소비 › SVG 차트·키보드 선택·JSON 서식과 XLSX 다운로드·검토·반영 (1.7s)
+  ✓  18 frontend/e2e/patterns.spec.ts:358:1 › Reference dirty 폼에서 로그아웃하면 확인 Promise에 갇히지 않고 로그인 화면에 도착한다 (754ms)
+
+
+  1) frontend/e2e/layout.spec.ts:94:3 › 레퍼런스 390px: 한국어·본문·현재 메뉴·모바일 키보드 탐색 ────────────────────────
+
+    Error: expect(locator).toHaveValue(expected) failed
+
+    Locator: getByRole('form', { name: '예제 등록', exact: true }).getByLabel('제목', { exact: true })
+    Expected: "레이아웃 변경 중 보존할 등록 제목"
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveValue" getByRole('form', { name: '예제 등록', exact: true }).getByLabel('제목', { exact: true }) with timeout 10000ms
+      - waiting for getByRole('form', { name: '예제 등록', exact: true }).getByLabel('제목', { exact: true })
+
+
+      131 |     await page.getByRole("link", { name: "본문으로 이동", exact: true }).focus();
+      132 |     await assertShell(page, "화면 탐색", "예제 목록", width);
+    > 133 |     await expect(input).toHaveValue(draft);
+          |                         ^
+      134 |     if (width === 390) {
+      135 |       expect(
+      136 |         await page
+        at /Users/dk/Work/ScFramework/frontend/e2e/layout.spec.ts:133:25
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results/layout-레퍼런스-390px-한국어·본문·현재-메뉴·모바일-키보드-탐색/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results/layout-레퍼런스-390px-한국어·본문·현재-메뉴·모바일-키보드-탐색/error-context.md
+
+  2) frontend/e2e/patterns.spec.ts:337:5 › reference 실제 JAR 공통 기능 소비 › 한영 입력 보존·Zod 검증·초기화·dirty 이동 확인 
+
+    Error: expect(locator).toHaveValue(expected) failed
+
+    Locator:  getByRole('form', { name: '공통 입력 폼', exact: true }).locator('input[role=\'combobox\']')
+    Expected: "개발"
+    Received: ""
+    Timeout:  10000ms
+
+    Call log:
+      - Expect "toHaveValue" getByRole('form', { name: '공통 입력 폼', exact: true }).locator('input[role=\'combobox\']') with timeout 10000ms
+      - waiting for getByRole('form', { name: '공통 입력 폼', exact: true }).locator('input[role=\'combobox\']')
+        24 × locator resolved to <input size="1" value="" type="text" required="" role="combobox" inputmode="none" aria-invalid="true" aria-expanded="true" aria-required="true" id="sc-select-sc-1-7" aria-controls="menu-sc-1-8" aria-labelledby="sc-select-sc-1-7-label" aria-describedby="sc-select-sc-1-7-messages"/>
+           - unexpected value ""
+
+
+      48 |   await page.keyboard.press("End");
+      49 |   await page.keyboard.press("Enter");
+    > 50 |   await expect(category).toHaveValue("개발");
+         |                          ^
+      51 |   await accepted.focus();
+      52 |   await accepted.press("Space");
+      53 |   await expect(accepted).toBeChecked();
+        at exerciseInputForm (/Users/dk/Work/ScFramework/frontend/e2e/patterns.spec.ts:50:26)
+        at /Users/dk/Work/ScFramework/frontend/e2e/patterns.spec.ts:340:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results/patterns-reference-실제-JAR--90fb5-력-보존·Zod-검증·초기화·dirty-이동-확인/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results/patterns-reference-실제-JAR--90fb5-력-보존·Zod-검증·초기화·dirty-이동-확인/error-context.md
+
+  3) frontend/e2e/patterns.spec.ts:337:5 › starter 실제 JAR 공통 기능 소비 › 한영 입력 보존·Zod 검증·초기화·dirty 이동 확인 
+
+    Error: expect(locator).toHaveValue(expected) failed
+
+    Locator:  getByRole('form', { name: '공통 입력 폼', exact: true }).locator('input[role=\'combobox\']')
+    Expected: "개발"
+    Received: ""
+    Timeout:  10000ms
+
+    Call log:
+      - Expect "toHaveValue" getByRole('form', { name: '공통 입력 폼', exact: true }).locator('input[role=\'combobox\']') with timeout 10000ms
+      - waiting for getByRole('form', { name: '공통 입력 폼', exact: true }).locator('input[role=\'combobox\']')
+        24 × locator resolved to <input size="1" value="" type="text" required="" role="combobox" inputmode="none" aria-invalid="true" aria-expanded="true" aria-required="true" id="sc-select-sc-1-6" aria-controls="menu-sc-1-7" aria-labelledby="sc-select-sc-1-6-label" aria-describedby="sc-select-sc-1-6-messages"/>
+           - unexpected value ""
+
+
+      48 |   await page.keyboard.press("End");
+      49 |   await page.keyboard.press("Enter");
+    > 50 |   await expect(category).toHaveValue("개발");
+         |                          ^
+      51 |   await accepted.focus();
+      52 |   await accepted.press("Space");
+      53 |   await expect(accepted).toBeChecked();
+        at exerciseInputForm (/Users/dk/Work/ScFramework/frontend/e2e/patterns.spec.ts:50:26)
+        at /Users/dk/Work/ScFramework/frontend/e2e/patterns.spec.ts:340:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results/patterns-starter-실제-JAR-공통-bfbcc-력-보존·Zod-검증·초기화·dirty-이동-확인/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results/patterns-starter-실제-JAR-공통-bfbcc-력-보존·Zod-검증·초기화·dirty-이동-확인/error-context.md
+
+  3 failed
+    frontend/e2e/layout.spec.ts:94:3 › 레퍼런스 390px: 한국어·본문·현재 메뉴·모바일 키보드 탐색 ─────────────────────────
+    frontend/e2e/patterns.spec.ts:337:5 › reference 실제 JAR 공통 기능 소비 › 한영 입력 보존·Zod 검증·초기화·dirty 이동 확인 
+    frontend/e2e/patterns.spec.ts:337:5 › starter 실제 JAR 공통 기능 소비 › 한영 입력 보존·Zod 검증·초기화·dirty 이동 확인 
+  15 passed (1.0m)

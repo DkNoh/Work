@@ -1,0 +1,19 @@
+
+> sc-framework@0.1.0 test:e2e
+> playwright test --config frontend/playwright.config.ts accessibility.spec.ts
+
+
+Running 8 tests using 1 worker
+
+(node:49004) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 frontend/e2e/accessibility.spec.ts:127:3 › 접근성 로그인 390px: 닫힌 셸과 실제 로그인 필드 (377ms)
+  ✓  2 frontend/e2e/accessibility.spec.ts:142:3 › 접근성 Reference 예제 390px: 기본·400 필드·409·native 확인 (3.1s)
+  ✓  3 frontend/e2e/accessibility.spec.ts:127:3 › 접근성 로그인 1366px: 닫힌 셸과 실제 로그인 필드 (312ms)
+  ✓  4 frontend/e2e/accessibility.spec.ts:142:3 › 접근성 Reference 예제 1366px: 기본·400 필드·409·native 확인 (3.3s)
+  ✓  5 frontend/e2e/accessibility.spec.ts:223:7 › reference 실제 JAR 공통 예제 접근성 › 접근성 patterns 390px: 한국어·영어·오류·dirty·열린 모달 (6.5s)
+  ✓  6 frontend/e2e/accessibility.spec.ts:223:7 › reference 실제 JAR 공통 예제 접근성 › 접근성 patterns 1366px: 한국어·영어·오류·dirty·열린 모달 (4.7s)
+  ✓  7 frontend/e2e/accessibility.spec.ts:223:7 › starter 실제 JAR 공통 예제 접근성 › 접근성 patterns 390px: 한국어·영어·오류·dirty·열린 모달 (6.1s)
+  ✓  8 frontend/e2e/accessibility.spec.ts:223:7 › starter 실제 JAR 공통 예제 접근성 › 접근성 patterns 1366px: 한국어·영어·오류·dirty·열린 모달 (4.9s)
+
+  8 passed (35.7s)

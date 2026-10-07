@@ -1,0 +1,12 @@
+README.md 23ms (unchanged)
+docs/folder-structure.md 52ms
+docs/maintenance-guide.md 54ms
+docs/operations.md 26ms
+docs/api.md 21ms
+docs/질의/README.md 10ms
+docs/질의/기술스택-적용현황.md 21ms
+docs/질의/개발가이드.md 8ms
+docs/질의/개발단계.md 15ms
+frontend/apps/reference-app/src/features/operations/SchedulesPage.vue 73ms (unchanged)
+frontend/apps/starter-app/src/features/operations/SchedulePanel.vue 38ms (unchanged)
+frontend/e2e/012-operations.spec.ts 30ms

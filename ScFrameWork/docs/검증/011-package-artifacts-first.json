@@ -1,0 +1,14 @@
+{
+  "stage": "011",
+  "passed": false,
+  "code": "SC_DECL_UNDECLARED_BARE",
+  "message": "SC_DECL_UNDECLARED_BARE: A bare module reference is not declared as dependency or peer",
+  "context": {
+    "package": "@sc/ui",
+    "file": "dist/types/table/model.d.ts",
+    "referenceKind": "bare-or-absolute"
+  },
+  "exceptionType": "PackageArtifactError",
+  "packageCodeExecuted": false,
+  "temporaryDirectoryRemoved": true
+}

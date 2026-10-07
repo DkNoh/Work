@@ -1,0 +1,39 @@
+docker.io/library/rabbitmq@sha256:8dd6e3570ddaa2ef82a6c3a8950e79c1f73893adfbdddbc374fc1f1ac8a0f5dd: Pulling from library/rabbitmq
+474909e71cb7: Pulling fs layer
+ccfb279379d8: Pulling fs layer
+0f3b159fecc9: Pulling fs layer
+1e83c66ef9a4: Pulling fs layer
+064a6e2e0c65: Pulling fs layer
+19f2f4b53d36: Pulling fs layer
+90812e242c93: Pulling fs layer
+a14a8d530fb9: Pulling fs layer
+e6eb09420438: Pulling fs layer
+ba4c64595e1c: Pulling fs layer
+de8115d2d693: Pulling fs layer
+ccfb279379d8: Download complete
+0f3b159fecc9: Download complete
+ba4c64595e1c: Download complete
+90812e242c93: Download complete
+474909e71cb7: Download complete
+19f2f4b53d36: Download complete
+de8115d2d693: Download complete
+064a6e2e0c65: Download complete
+a14a8d530fb9: Download complete
+e6eb09420438: Download complete
+1e83c66ef9a4: Download complete
+2d7528053089: Download complete
+ef90a9d8335a: Download complete
+90812e242c93: Pull complete
+e6eb09420438: Pull complete
+19f2f4b53d36: Pull complete
+de8115d2d693: Pull complete
+ccfb279379d8: Pull complete
+0f3b159fecc9: Pull complete
+ba4c64595e1c: Pull complete
+064a6e2e0c65: Pull complete
+a14a8d530fb9: Pull complete
+1e83c66ef9a4: Pull complete
+474909e71cb7: Pull complete
+Digest: sha256:8dd6e3570ddaa2ef82a6c3a8950e79c1f73893adfbdddbc374fc1f1ac8a0f5dd
+Status: Downloaded newer image for rabbitmq@sha256:8dd6e3570ddaa2ef82a6c3a8950e79c1f73893adfbdddbc374fc1f1ac8a0f5dd
+docker.io/library/rabbitmq:4.3.6-management@sha256:8dd6e3570ddaa2ef82a6c3a8950e79c1f73893adfbdddbc374fc1f1ac8a0f5dd

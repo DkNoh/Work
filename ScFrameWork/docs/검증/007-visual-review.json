@@ -1,0 +1,64 @@
+{
+  "reviewer": "Codex actual image inspection",
+  "runId": "007-reviewed-navigation",
+  "images": 16,
+  "changedImages": [
+    "reference-1366-shell-inputs-darwin.png"
+  ],
+  "unchangedImagesComparedTo006": 15,
+  "verifiedAreas": [
+    "Reference desktop navigation includes requirements and creation routes; active Patterns item position changed intentionally",
+    "Remaining 15 PNGs byte-identical to reviewed 006 baseline",
+    "Six real requirements screenshots inspected; desktop/detail/reviewer/history layouts reviewed"
+  ],
+  "businessMobileList": {
+    "status": "fixed-and-verified",
+    "finding": "390px six-column table wraps title and timestamp into individual characters",
+    "initialEvidenceDirectory": "007-business-visual-results",
+    "finalEvidenceDirectory": "007-e2e-mobile-final-results",
+    "source": "RequirementsPage.vue app-scoped table widths; unchanged common table scroll region",
+    "checks": [
+      "native focused region ArrowRight scrolls horizontally",
+      "page has no horizontal overflow",
+      "title content width >=180px; at most two lines",
+      "timestamp stays one line; all desktop columns visible"
+    ]
+  },
+  "normalComparison": {
+    "passed": 4,
+    "log": "007-visual-final-compare.log"
+  },
+  "negativeProbe": {
+    "expectedExitCode": 1,
+    "baselineFiles": 17,
+    "baselineUnchanged": true,
+    "report": "007-visual-negative-gate.json"
+  },
+  "limitations": [
+    "Real screen-reader narration and full manual WCAG audit not executed",
+    "Linux visual baseline and remote CI not executed",
+    "Business screenshots contain synthetic dynamic values and are manual QA evidence, not deterministic snapshot baselines"
+  ],
+  "baselineHashes": {
+    "manifest.json": "8bf31f57b7594096a4d4c7cb9c4e9969b4bccf36c7d5e219398f30b9ab151c6b",
+    "reference-1366-chart-darwin.png": "21a9d380b1af3847c722c1210111f1ff332312784d726d62b5761e3b1df7f470",
+    "reference-1366-editor-darwin.png": "9e58ef0de61703e2d51586be92edf2585c58df1c87c06b1da424da08e1ea040d",
+    "reference-1366-shell-inputs-darwin.png": "bc4372ffb2c4604104a2a6b1e238432639a262134b814c16a259a06ff205797a",
+    "reference-1366-table-darwin.png": "22231d94c925f4043bb2b3578c9d1657275d296dac1979884c2556dd6ebf74cd",
+    "reference-390-chart-darwin.png": "c02e6a959636a65f3fc3ffab0d9367a50cb579796caa312d72ce5838345cbd66",
+    "reference-390-editor-darwin.png": "bbbcc0e766f038d4e02416801012e5f490d756207322711002f31114074bcf05",
+    "reference-390-shell-inputs-darwin.png": "abe82328fed388191be21e88f9e4e71267a825335bf3346266ff5e2e76043828",
+    "reference-390-table-darwin.png": "940ec7a8e1a7bc3f04c05dde974b6f742d1e0d6f1d79e70f21fdec5254626070",
+    "starter-1366-chart-darwin.png": "21a9d380b1af3847c722c1210111f1ff332312784d726d62b5761e3b1df7f470",
+    "starter-1366-editor-darwin.png": "9e58ef0de61703e2d51586be92edf2585c58df1c87c06b1da424da08e1ea040d",
+    "starter-1366-shell-inputs-darwin.png": "c6cbcf3040cb0e38a8ad80d08376b6253eeff69698d633363dd378ce7f67f833",
+    "starter-1366-table-darwin.png": "22231d94c925f4043bb2b3578c9d1657275d296dac1979884c2556dd6ebf74cd",
+    "starter-390-chart-darwin.png": "c02e6a959636a65f3fc3ffab0d9367a50cb579796caa312d72ce5838345cbd66",
+    "starter-390-editor-darwin.png": "bbbcc0e766f038d4e02416801012e5f490d756207322711002f31114074bcf05",
+    "starter-390-shell-inputs-darwin.png": "208e49a998f0f1115523b14405a131fd01064e91ed6d1919c9072677300ded0c",
+    "starter-390-table-darwin.png": "940ec7a8e1a7bc3f04c05dde974b6f742d1e0d6f1d79e70f21fdec5254626070"
+  },
+  "frozenDirectory": "007-visual-approved-baseline",
+  "businessFinalImagesActuallyInspected": 6,
+  "finalE2EPassed": 41
+}

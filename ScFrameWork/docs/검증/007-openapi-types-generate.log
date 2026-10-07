@@ -1,0 +1,7 @@
+
+> sc-framework@0.1.0 api:generate
+> node scripts/openapi-types.mjs
+
+neutral compatibility: OpenAPI 타입 생성 완료
+reference: OpenAPI 타입 생성 완료
+starter: OpenAPI 타입 생성 완료

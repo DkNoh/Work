@@ -1,0 +1,9 @@
+# 명시 audit profile만 자체 H2 migration과 공통 adapter를 활성화한다.
+spring:
+  flyway:
+    enabled: true
+    locations: classpath:db/audit-migration
+sc:
+  framework:
+    audit:
+      enabled: true

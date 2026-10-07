@@ -1,0 +1,19 @@
+
+> sc-framework@0.1.0 storybook:verify
+> node scripts/verify-storybook.mjs
+
+node:internal/fs/promises:640
+  return new FileHandle(await PromisePrototypeThen(
+                        ^
+
+Error: ENOENT: no such file or directory, open '/Users/dk/Work/ScFramework/frontend/apps/catalog/storybook-static/index.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async readFile (node:internal/fs/promises:1287:14)
+    at async file:///Users/dk/Work/ScFramework/scripts/verify-storybook.mjs:13:26 {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/dk/Work/ScFramework/frontend/apps/catalog/storybook-static/index.json'
+}
+
+Node.js v24.16.0

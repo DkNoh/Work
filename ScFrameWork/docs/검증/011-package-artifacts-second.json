@@ -1,0 +1,12 @@
+{
+  "stage": "011",
+  "passed": false,
+  "code": "SC_UI_COMPONENT_EXPORT",
+  "message": "SC_UI_COMPONENT_EXPORT: A public UI component is missing from its JS or declaration entry",
+  "context": {
+    "package": "@sc/ui"
+  },
+  "exceptionType": "PackageArtifactError",
+  "packageCodeExecuted": false,
+  "temporaryDirectoryRemoved": true
+}

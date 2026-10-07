@@ -1,0 +1,192 @@
+{
+  "format": 1,
+  "stage": "011",
+  "packages": [
+    {
+      "name": "@sc/ui",
+      "version": "0.1.0",
+      "buildExitCode": 0,
+      "strict": true,
+      "skipLibCheck": true,
+      "files": [
+        "dist/CONTRACTS.json",
+        "dist/board.js",
+        "dist/build-manifest.json",
+        "dist/charts.js",
+        "dist/chunks/ScActionButton-uKAjPCjN.js",
+        "dist/chunks/_plugin-vue_export-helper-Bm2-moSD.js",
+        "dist/chunks/tokens-ttIY1ZG7.js",
+        "dist/editor.js",
+        "dist/image.js",
+        "dist/index.js",
+        "dist/sc-ui.css",
+        "dist/table.js",
+        "dist/tokens.scss",
+        "dist/types/ScActionButton.vue.d.ts",
+        "dist/types/ScTextField.vue.d.ts",
+        "dist/types/board/ScBoardColumn.vue.d.ts",
+        "dist/types/board/ScBoardItem.vue.d.ts",
+        "dist/types/board/ScSortableBoard.vue.d.ts",
+        "dist/types/board/contracts.d.ts",
+        "dist/types/board/helpers.d.ts",
+        "dist/types/board/index.d.ts",
+        "dist/types/charts/ScChart.vue.d.ts",
+        "dist/types/charts/chart-model.d.ts",
+        "dist/types/charts/contracts.d.ts",
+        "dist/types/charts/index.d.ts",
+        "dist/types/contracts.d.ts",
+        "dist/types/editor/ScRichTextEditor.vue.d.ts",
+        "dist/types/editor/contracts.d.ts",
+        "dist/types/editor/document.d.ts",
+        "dist/types/editor/index.d.ts",
+        "dist/types/forms/ScConfirmDialog.vue.d.ts",
+        "dist/types/forms/ScFormActions.vue.d.ts",
+        "dist/types/forms/form-contracts.d.ts",
+        "dist/types/forms/index.d.ts",
+        "dist/types/image/ScImageAnnotator.vue.d.ts",
+        "dist/types/image/contracts.d.ts",
+        "dist/types/image/coordinates.d.ts",
+        "dist/types/image/index.d.ts",
+        "dist/types/index.d.ts",
+        "dist/types/inputs/ScCheckbox.vue.d.ts",
+        "dist/types/inputs/ScSelect.vue.d.ts",
+        "dist/types/inputs/ScTextArea.vue.d.ts",
+        "dist/types/inputs/index.d.ts",
+        "dist/types/inputs/input-accessibility.d.ts",
+        "dist/types/inputs/input-contracts.d.ts",
+        "dist/types/layout/ScAppShell.vue.d.ts",
+        "dist/types/layout/ScShellNavigation.vue.d.ts",
+        "dist/types/layout/index.d.ts",
+        "dist/types/layout/types.d.ts",
+        "dist/types/patterns/ScEmptyState.vue.d.ts",
+        "dist/types/patterns/ScErrorPanel.vue.d.ts",
+        "dist/types/patterns/ScListDetailLayout.vue.d.ts",
+        "dist/types/patterns/ScLoadingState.vue.d.ts",
+        "dist/types/patterns/ScPageHeader.vue.d.ts",
+        "dist/types/patterns/ScSearchPanel.vue.d.ts",
+        "dist/types/patterns/ScSectionCard.vue.d.ts",
+        "dist/types/patterns/contracts.d.ts",
+        "dist/types/patterns/index.d.ts",
+        "dist/types/styles.d.ts",
+        "dist/types/table/ScDataTable.vue.d.ts",
+        "dist/types/table/ScVirtualList.vue.d.ts",
+        "dist/types/table/ScVirtualTable.vue.d.ts",
+        "dist/types/table/contracts.d.ts",
+        "dist/types/table/index.d.ts",
+        "dist/types/table/labels.d.ts",
+        "dist/types/table/model.d.ts",
+        "dist/types/table/useVirtualRows.d.ts",
+        "dist/types/theme.d.ts",
+        "dist/types/tokens.d.ts"
+      ],
+      "stamp": {
+        "format": 1,
+        "name": "@sc/ui",
+        "version": "0.1.0",
+        "inputsDigest": "730931d0052d07b86b6ebfdbf58358ee6573f11930db7096f7c93b655f4c94aa"
+      },
+      "digestMatches": true,
+      "exportTargetsExist": true,
+      "noticeBytes": 28557
+    },
+    {
+      "name": "@sc/runtime",
+      "version": "0.1.0",
+      "buildExitCode": 0,
+      "strict": true,
+      "skipLibCheck": false,
+      "files": [
+        "dist/build-manifest.json",
+        "dist/index.js",
+        "dist/types/generated/api.d.ts",
+        "dist/types/http.d.ts",
+        "dist/types/index.d.ts",
+        "dist/types/runtime.d.ts"
+      ],
+      "stamp": {
+        "format": 1,
+        "name": "@sc/runtime",
+        "version": "0.1.0",
+        "inputsDigest": "14068eb26faedf2266739834a6bdacd28e8208d94c822a4c230f1f62217778b4"
+      },
+      "digestMatches": true,
+      "exportTargetsExist": true,
+      "noticeBytes": 6071
+    },
+    {
+      "name": "@sc/date",
+      "version": "0.1.0",
+      "buildExitCode": 0,
+      "strict": true,
+      "skipLibCheck": false,
+      "files": [
+        "dist/build-manifest.json",
+        "dist/index.js",
+        "dist/types/index.d.ts"
+      ],
+      "stamp": {
+        "format": 1,
+        "name": "@sc/date",
+        "version": "0.1.0",
+        "inputsDigest": "83b458624db77b28cb6427b6c1ab62c977a96ff8913721c6ff0dfa02cda51925"
+      },
+      "digestMatches": true,
+      "exportTargetsExist": true,
+      "noticeBytes": 1475
+    },
+    {
+      "name": "@sc/excel",
+      "version": "0.1.0",
+      "buildExitCode": 0,
+      "strict": true,
+      "skipLibCheck": false,
+      "files": [
+        "dist/build-manifest.json",
+        "dist/index.js",
+        "dist/types/index.d.ts"
+      ],
+      "stamp": {
+        "format": 1,
+        "name": "@sc/excel",
+        "version": "0.1.0",
+        "inputsDigest": "dee606006f23dd8e6a95c23e48badf5bbd8a879708a573007048344b464e34ff"
+      },
+      "digestMatches": true,
+      "exportTargetsExist": true,
+      "noticeBytes": 1488
+    },
+    {
+      "name": "@sc/i18n",
+      "version": "0.1.0",
+      "buildExitCode": 0,
+      "strict": true,
+      "skipLibCheck": false,
+      "files": [
+        "dist/build-manifest.json",
+        "dist/index.js",
+        "dist/types/index.d.ts",
+        "dist/types/messages.d.ts"
+      ],
+      "stamp": {
+        "format": 1,
+        "name": "@sc/i18n",
+        "version": "0.1.0",
+        "inputsDigest": "3dc55440b7f7cccba2f3b6377fc10f58106ae0b946173a0164c3876367196291"
+      },
+      "digestMatches": true,
+      "exportTargetsExist": true,
+      "noticeBytes": 3778
+    }
+  ],
+  "uiContractFormat": 2,
+  "uiContractComponents": 22,
+  "helperTests": {
+    "passed": 4,
+    "failed": 0
+  },
+  "limitations": [
+    "UI producer skips upstream declaration-file checks while keeping strict own-source checks.",
+    "Actual packed artifact, clean external consumer, browser and UI strict-vendor probe are separate pending root checks.",
+    "Direct vendor license texts are copied; this is not a complete transitive npm license inventory."
+  ]
+}

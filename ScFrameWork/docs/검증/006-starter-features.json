@@ -1,0 +1,20 @@
+{
+  "patternsEnabled": false,
+  "isolatedBuild": true,
+  "defaultBuildUnchanged": true,
+  "assets": [
+    "PatternsPage-B36EwM92.css",
+    "PatternsPage-ChCBk9cs.js",
+    "index-Bv8SeL7s.css",
+    "index-DdiNpk9a.js",
+    "rolldown-runtime-Dd_uD5pT.js"
+  ],
+  "optionalChunkRequests": [],
+  "optionalChunksEmitted": [
+    "PatternsPage-B36EwM92.css",
+    "PatternsPage-ChCBk9cs.js"
+  ],
+  "unknownRouteRedirect": "/",
+  "browserErrors": [],
+  "apiRequests": []
+}

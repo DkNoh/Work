@@ -1,0 +1,31 @@
+
+> sc-framework@0.1.0 test:e2e
+> playwright test --config frontend/playwright.config.ts visual.spec.ts --update-snapshots=all
+
+
+Running 4 tests using 1 worker
+
+(node:49327) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+A snapshot doesn't exist at /Users/dk/Work/ScFramework/frontend/e2e/visual.spec.ts-snapshots/darwin-chromium/reference-1366-shell-inputs-darwin.png, writing actual.
+A snapshot doesn't exist at /Users/dk/Work/ScFramework/frontend/e2e/visual.spec.ts-snapshots/darwin-chromium/reference-1366-table-darwin.png, writing actual.
+A snapshot doesn't exist at /Users/dk/Work/ScFramework/frontend/e2e/visual.spec.ts-snapshots/darwin-chromium/reference-1366-chart-darwin.png, writing actual.
+A snapshot doesn't exist at /Users/dk/Work/ScFramework/frontend/e2e/visual.spec.ts-snapshots/darwin-chromium/reference-1366-editor-darwin.png, writing actual.
+  ✓  1 frontend/e2e/visual.spec.ts:203:7 › reference 1366px 시각 기준 › 셸·입력·표·차트·서식의 승인 이미지와 비교 (6.5s)
+A snapshot doesn't exist at /Users/dk/Work/ScFramework/frontend/e2e/visual.spec.ts-snapshots/darwin-chromium/reference-390-shell-inputs-darwin.png, writing actual.
+A snapshot doesn't exist at /Users/dk/Work/ScFramework/frontend/e2e/visual.spec.ts-snapshots/darwin-chromium/reference-390-table-darwin.png, writing actual.
+A snapshot doesn't exist at /Users/dk/Work/ScFramework/frontend/e2e/visual.spec.ts-snapshots/darwin-chromium/reference-390-chart-darwin.png, writing actual.
+A snapshot doesn't exist at /Users/dk/Work/ScFramework/frontend/e2e/visual.spec.ts-snapshots/darwin-chromium/reference-390-editor-darwin.png, writing actual.
+  ✓  2 frontend/e2e/visual.spec.ts:203:7 › reference 390px 시각 기준 › 셸·입력·표·차트·서식의 승인 이미지와 비교 (5.7s)
+A snapshot doesn't exist at /Users/dk/Work/ScFramework/frontend/e2e/visual.spec.ts-snapshots/darwin-chromium/starter-1366-shell-inputs-darwin.png, writing actual.
+A snapshot doesn't exist at /Users/dk/Work/ScFramework/frontend/e2e/visual.spec.ts-snapshots/darwin-chromium/starter-1366-table-darwin.png, writing actual.
+A snapshot doesn't exist at /Users/dk/Work/ScFramework/frontend/e2e/visual.spec.ts-snapshots/darwin-chromium/starter-1366-chart-darwin.png, writing actual.
+A snapshot doesn't exist at /Users/dk/Work/ScFramework/frontend/e2e/visual.spec.ts-snapshots/darwin-chromium/starter-1366-editor-darwin.png, writing actual.
+  ✓  3 frontend/e2e/visual.spec.ts:203:7 › starter 1366px 시각 기준 › 셸·입력·표·차트·서식의 승인 이미지와 비교 (5.2s)
+A snapshot doesn't exist at /Users/dk/Work/ScFramework/frontend/e2e/visual.spec.ts-snapshots/darwin-chromium/starter-390-shell-inputs-darwin.png, writing actual.
+A snapshot doesn't exist at /Users/dk/Work/ScFramework/frontend/e2e/visual.spec.ts-snapshots/darwin-chromium/starter-390-table-darwin.png, writing actual.
+A snapshot doesn't exist at /Users/dk/Work/ScFramework/frontend/e2e/visual.spec.ts-snapshots/darwin-chromium/starter-390-chart-darwin.png, writing actual.
+A snapshot doesn't exist at /Users/dk/Work/ScFramework/frontend/e2e/visual.spec.ts-snapshots/darwin-chromium/starter-390-editor-darwin.png, writing actual.
+  ✓  4 frontend/e2e/visual.spec.ts:203:7 › starter 390px 시각 기준 › 셸·입력·표·차트·서식의 승인 이미지와 비교 (5.0s)
+
+  4 passed (28.6s)

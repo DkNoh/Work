@@ -1,0 +1,140 @@
+{
+  "stage": "012",
+  "passed": true,
+  "consumer": "/private/tmp/sc-framework-consumer-012-20261007",
+  "workspaceAliases": 0,
+  "nativeLibraries": [
+    {
+      "name": "@sc/date",
+      "exports": [
+        "createDateFormatter",
+        "isCalendarDate",
+        "parseUtcTimestamp"
+      ]
+    },
+    {
+      "name": "@sc/excel",
+      "exports": [
+        "readWorkbook",
+        "writeWorkbook"
+      ]
+    },
+    {
+      "name": "@sc/i18n",
+      "exports": [
+        "commonMessages",
+        "createScI18n"
+      ]
+    },
+    {
+      "name": "@sc/runtime",
+      "exports": [
+        "ApiError",
+        "createBrowserErrorCollector",
+        "createFrameworkRuntime",
+        "createHttpClient",
+        "useFrameworkRuntime"
+      ]
+    }
+  ],
+  "publicTypes": [
+    {
+      "name": "positive",
+      "exit": 0
+    },
+    {
+      "name": "wrong-prop",
+      "expectedFailure": true,
+      "exit": 2,
+      "code": "TS2322"
+    },
+    {
+      "name": "wrong-emit",
+      "expectedFailure": true,
+      "exit": 2,
+      "code": "TS2345"
+    },
+    {
+      "name": "wrong-generic",
+      "expectedFailure": true,
+      "exit": 2,
+      "code": "TS2339"
+    },
+    {
+      "name": "wrong-identity",
+      "expectedFailure": true,
+      "exit": 2,
+      "code": "TS2322"
+    },
+    {
+      "name": "missing-decoder",
+      "expectedFailure": true,
+      "exit": 2,
+      "code": "TS2345"
+    },
+    {
+      "name": "private-type",
+      "expectedFailure": true,
+      "exit": 2,
+      "code": "TS2307"
+    },
+    {
+      "name": "sfc-positive",
+      "exit": 0
+    },
+    {
+      "name": "sfc-generic-slot",
+      "expectedFailure": true,
+      "exit": 2,
+      "code": "TS2339"
+    },
+    {
+      "name": "sfc-wrong-model",
+      "expectedFailure": true,
+      "exit": 2,
+      "code": "TS2322"
+    },
+    {
+      "name": "sfc-wrong-event",
+      "expectedFailure": true,
+      "exit": 2,
+      "code": "TS2322"
+    },
+    {
+      "name": "non-ui-strict",
+      "exit": 0,
+      "skipLibCheck": false
+    }
+  ],
+  "privateImports": [
+    {
+      "name": "@sc/ui/src/contracts",
+      "expectedRejection": "ERR_PACKAGE_PATH_NOT_EXPORTED"
+    },
+    {
+      "name": "@sc/ui/dist/index.js",
+      "expectedRejection": "ERR_PACKAGE_PATH_NOT_EXPORTED"
+    },
+    {
+      "name": "@sc/runtime/src/http",
+      "expectedRejection": "ERR_PACKAGE_PATH_NOT_EXPORTED"
+    }
+  ],
+  "vendorStrictProbe": {
+    "exit": 2,
+    "diagnostics": 696,
+    "supportedSkipLibCheck": true,
+    "ownSourceDiagnostics": 0,
+    "codes": [
+      "TS2687",
+      "TS2344",
+      "TS2308"
+    ]
+  },
+  "sassTokens": {
+    "publicPackageImporter": true,
+    "breakpoint": "768px",
+    "emitCssFalse": true
+  },
+  "temporaryProbeRemoved": true
+}

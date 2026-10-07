@@ -1,0 +1,185 @@
+{
+  "format": 1,
+  "stage": "012",
+  "startedAt": "2026-10-06T22:10:13.618758+00:00",
+  "passed": true,
+  "execution": "actual-jars-private-h2-http",
+  "checks": [
+    {
+      "application": "reference",
+      "code": "authenticated-capabilities-and-defaults",
+      "passed": true,
+      "details": {
+        "defaultSchedules": 3,
+        "registeredJobs": 4,
+        "jarSha256": "d5fae4b7ff57f2a066a38f8516de86f1e4ea4e45141208e7c2a44be8b8853090"
+      }
+    },
+    {
+      "application": "reference",
+      "code": "schedule-validation-cas-pause-resume",
+      "passed": true,
+      "details": {
+        "acceptedRevision": 3,
+        "staleStatus": 409
+      }
+    },
+    {
+      "application": "reference",
+      "code": "browser-401-403-allowlist-and-real-chunked-413",
+      "passed": true,
+      "details": {
+        "chunkedBytes": 4097,
+        "rejectedOccurrences": 0
+      }
+    },
+    {
+      "application": "reference",
+      "code": "browser-concurrent-aggregation-and-receipt-idempotency",
+      "passed": true,
+      "details": {
+        "parallelDistinct": 8,
+        "acceptedOccurrences": 9,
+        "groups": 1
+      }
+    },
+    {
+      "application": "reference",
+      "code": "current-requester-cannot-read-admin-operations",
+      "passed": true,
+      "details": {
+        "deniedEndpoints": 2
+      }
+    },
+    {
+      "application": "reference",
+      "code": "browser-actual-429-with-safe-retry-after",
+      "passed": true,
+      "details": {
+        "acceptedBefore429": 6,
+        "retryAfterSeconds": 42
+      }
+    },
+    {
+      "application": "reference",
+      "code": "registered-minute-pulse-actually-executes",
+      "passed": true,
+      "details": {
+        "completedRuns": 1,
+        "observedWaitSeconds": 41.607
+      }
+    },
+    {
+      "application": "reference",
+      "code": "same-h2-restart-preserves-defaults-history-and-receipts",
+      "passed": true,
+      "details": {
+        "preservedSchedules": 4,
+        "preservedPulseRuns": 1,
+        "preservedBrowserOccurrences": 15
+      }
+    },
+    {
+      "application": "reference",
+      "code": "stopped-h2-safe-fields-and-redacted-logs",
+      "passed": true,
+      "details": {
+        "rawColumns": 0,
+        "rawCanaryRows": 0,
+        "javaSerializedPayloads": 0,
+        "persistedPulseEffects": 1
+      }
+    },
+    {
+      "application": "starter",
+      "code": "authenticated-capabilities-and-defaults",
+      "passed": true,
+      "details": {
+        "defaultSchedules": 3,
+        "registeredJobs": 4,
+        "jarSha256": "df927a5c389ddb3e92ea23d8f3c51a8ca52f8a0f9995b3e2d202ea987d164b1d"
+      }
+    },
+    {
+      "application": "starter",
+      "code": "schedule-validation-cas-pause-resume",
+      "passed": true,
+      "details": {
+        "acceptedRevision": 3,
+        "staleStatus": 409
+      }
+    },
+    {
+      "application": "starter",
+      "code": "browser-401-403-allowlist-and-real-chunked-413",
+      "passed": true,
+      "details": {
+        "chunkedBytes": 4097,
+        "rejectedOccurrences": 0
+      }
+    },
+    {
+      "application": "starter",
+      "code": "browser-concurrent-aggregation-and-receipt-idempotency",
+      "passed": true,
+      "details": {
+        "parallelDistinct": 8,
+        "acceptedOccurrences": 9,
+        "groups": 1
+      }
+    },
+    {
+      "application": "starter",
+      "code": "browser-actual-429-with-safe-retry-after",
+      "passed": true,
+      "details": {
+        "acceptedBefore429": 6,
+        "retryAfterSeconds": 48
+      }
+    },
+    {
+      "application": "starter",
+      "code": "registered-minute-pulse-actually-executes",
+      "passed": true,
+      "details": {
+        "completedRuns": 1,
+        "observedWaitSeconds": 47.644
+      }
+    },
+    {
+      "application": "starter",
+      "code": "same-h2-restart-preserves-defaults-history-and-receipts",
+      "passed": true,
+      "details": {
+        "preservedSchedules": 4,
+        "preservedPulseRuns": 1,
+        "preservedBrowserOccurrences": 15
+      }
+    },
+    {
+      "application": "starter",
+      "code": "stopped-h2-safe-fields-and-redacted-logs",
+      "passed": true,
+      "details": {
+        "rawColumns": 0,
+        "rawCanaryRows": 0,
+        "javaSerializedPayloads": 0,
+        "persistedPulseEffects": 1
+      }
+    },
+    {
+      "application": "all",
+      "code": "private-processes-h2-and-synthetic-secrets-cleaned",
+      "passed": true,
+      "details": {}
+    }
+  ],
+  "limitations": [
+    "single-process actor/global rate limit",
+    "no claim of exactly-once Quartz delivery",
+    "PULSE uses API minute cron; no test-only trigger API",
+    "force-kill recovery is a separate verifier"
+  ],
+  "completedAt": "2026-10-06T22:12:07.262890+00:00",
+  "passedChecks": 18
+}

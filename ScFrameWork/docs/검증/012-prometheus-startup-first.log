@@ -1,0 +1,2 @@
+prometheus-1  | Error parsing command line arguments: unexpected false
+prometheus-1  | prometheus: error: unexpected false

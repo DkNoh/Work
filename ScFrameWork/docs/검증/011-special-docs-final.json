@@ -1,0 +1,451 @@
+{
+  "format": 1,
+  "checkedAt": "2026-10-06T21:22:40.053724+00:00",
+  "status": "passed",
+  "documents": [
+    {
+      "file": "docs/질의/011-Starter생성기.md",
+      "localLinks": 38,
+      "linkChecks": [
+        {
+          "target": "../../scripts/create-starter.mjs",
+          "exists": true
+        },
+        {
+          "target": "../../templates/starter-v1/template.json",
+          "exists": true
+        },
+        {
+          "target": "../../scripts/verify-starter-generator.mjs",
+          "exists": true
+        },
+        {
+          "target": "011-배포와생성기-준비검토.md",
+          "exists": true
+        },
+        {
+          "target": "../../scripts/verify-package-artifacts.mjs",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-consumer-build-first.log",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-consumer-build-second.log",
+          "exists": true
+        },
+        {
+          "target": "../../templates/starter-v1/backend/.mvn/sc-vendor-settings.xml",
+          "exists": true
+        },
+        {
+          "target": "../../templates/starter-v1/scripts/vendor-uri.mjs",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-consumer-build-third.log",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-generated-candidate4-create.json",
+          "exists": true
+        },
+        {
+          "target": "../../templates/starter-v1/README.md",
+          "exists": true
+        },
+        {
+          "target": "../../templates/starter-v1/scripts/build.sh",
+          "exists": true
+        },
+        {
+          "target": "../../templates/starter-v1/scripts/bootstrap-api.mjs",
+          "exists": true
+        },
+        {
+          "target": "../../templates/starter-v1/scripts/openapi-types.mjs",
+          "exists": true
+        },
+        {
+          "target": "../../templates/starter-v1/backend/src/test/java/__JAVA_PATH__/GeneratedAppIntegrationTest.java",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-consumer-build-third.log",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-consumer-build-fourth.log",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-generated-fourth/summary.json",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-generated-fourth/browser/summary.json",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-generated-fourth/browser/summary.json",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-generated-features-second.json",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-generated-features-second.log",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-generated-optionaloff/summary.json",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-generated-optionaloff/browser/summary.json",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-consumer-types-v02.json",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-upgrade-rollback-second/summary.json",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-upgrade-rollback-second.log",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-consumer-build-third.log",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-consumer-build-fourth.log",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-generator-v02.json",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-storybook-browser.json",
+          "exists": true
+        },
+        {
+          "target": "../검증/012-preparation-ci-check.json",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-generated-first/summary.json",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-generated-second/summary.json",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-generated-third/summary.json",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-generated-features-first.json",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-upgrade-first-failure.json",
+          "exists": true
+        }
+      ],
+      "tables": [
+        {
+          "rows": 13,
+          "columns": 2,
+          "consistent": true
+        },
+        {
+          "rows": 7,
+          "columns": 2,
+          "consistent": true
+        },
+        {
+          "rows": 13,
+          "columns": 2,
+          "consistent": true
+        },
+        {
+          "rows": 10,
+          "columns": 3,
+          "consistent": true
+        }
+      ],
+      "fencesBalanced": true,
+      "completedChecks": 12,
+      "uncheckedChecks": 0,
+      "sha256": "56ba19d711f701874ff0d7d850466cc062d74ccef4eda7e4cec1ef8ead581542"
+    },
+    {
+      "file": "docs/질의/011-패키지계약검증.md",
+      "localLinks": 49,
+      "linkChecks": [
+        {
+          "target": "011-공통패키지-배포설계.md",
+          "exists": true
+        },
+        {
+          "target": "011-배포와생성기-준비검토.md",
+          "exists": true
+        },
+        {
+          "target": "UI-공개계약.md",
+          "exists": true
+        },
+        {
+          "target": "../../scripts/build-library.mjs",
+          "exists": true
+        },
+        {
+          "target": "../../scripts/library-artifacts.mjs",
+          "exists": true
+        },
+        {
+          "target": "../../scripts/package-framework.mjs",
+          "exists": true
+        },
+        {
+          "target": "../../scripts/verify-package-artifacts.mjs",
+          "exists": true
+        },
+        {
+          "target": "../../scripts/verify-package-gates.mjs",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-consumer-types-v02.json",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-package-artifacts-first.log",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-package-artifacts-first.json",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-package-artifacts-second.log",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-package-artifacts-second.json",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-package-artifacts-third.log",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-package-artifacts-third.json",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-package-gates-first.log",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-package-gates-first.json",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-package-artifacts-final.log",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-package-artifacts-final.json",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-package-gates-final.log",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-package-gates-final.json",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-package-artifacts-v02.json",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-package-artifacts-v02.log",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-package-gates-v02.json",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-package-gates-v02.log",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-generator-v02.json",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-generator-v02.log",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-generated-candidate4-create.json",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-consumer-build-third.log",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-consumer-build-fourth.log",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-generated-fourth/summary.json",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-generated-fourth/browser/summary.json",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-generated-features-second.json",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-generated-features-second.log",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-generated-optionaloff/summary.json",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-generated-optionaloff/browser/summary.json",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-upgrade-rollback-second/summary.json",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-upgrade-rollback-second.log",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-upgrade-first-failure.json",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-generated-features-first.json",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-server-and-artifacts-first.json",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-e2e-first.log",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-storybook-browser.json",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-storybook-browser-docs-first.json",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-package-checker-scoped-initial.log",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-package-checker-scoped-final.log",
+          "exists": true
+        },
+        {
+          "target": "../../.github/workflows/verify.yml",
+          "exists": true
+        },
+        {
+          "target": "../검증/011-ci-yaml.json",
+          "exists": true
+        },
+        {
+          "target": "../검증/012-preparation-ci-check.json",
+          "exists": true
+        }
+      ],
+      "tables": [
+        {
+          "rows": 7,
+          "columns": 3,
+          "consistent": true
+        },
+        {
+          "rows": 7,
+          "columns": 4,
+          "consistent": true
+        },
+        {
+          "rows": 19,
+          "columns": 2,
+          "consistent": true
+        },
+        {
+          "rows": 7,
+          "columns": 6,
+          "consistent": true
+        },
+        {
+          "rows": 11,
+          "columns": 3,
+          "consistent": true
+        }
+      ],
+      "fencesBalanced": true,
+      "completedChecks": 10,
+      "uncheckedChecks": 0,
+      "sha256": "86649bf87f5feb59362c382e7ff6fbe01438acb40c7dd1544bef3bcc127fb78f"
+    }
+  ],
+  "jsonReferencesParsed": 28,
+  "currentVersion": "0.2.0",
+  "verifiedEvidence": {
+    "frontendArtifacts": 5,
+    "mavenFiles": 7,
+    "negativeGates": 25,
+    "protectedArtifactInputs": 128,
+    "generatorChecks": 48,
+    "templateFiles": 61,
+    "generatedFiles": 74,
+    "typeProbes": 12,
+    "nativeLibraries": 4,
+    "privateImports": 3,
+    "uiVendorDiagnostics": 696,
+    "ownSourceDiagnostics": 0,
+    "upgradeProtectedHandwrittenFiles": 47,
+    "sameH2Revisions": [
+      1,
+      2,
+      3
+    ],
+    "profiles": 9,
+    "selectedProfiles": 6
+  },
+  "errors": [],
+  "sourceEdited": false,
+  "remoteExecution": false
+}

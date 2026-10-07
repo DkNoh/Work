@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "applications": [
+    {
+      "app": "reference",
+      "files": 46,
+      "jarMatchesBuiltFrontend": true,
+      "jarSha256": "08a1ae9aa3d208a4faadff914e0e62df26094c96c13d02c1718132e2ab6b8490"
+    },
+    {
+      "app": "starter",
+      "files": 8,
+      "jarMatchesBuiltFrontend": true,
+      "jarSha256": "65d00a427f995df9a4f228c6217ad31b8ceb318c9cfd3c02a2655e868745d6e5"
+    }
+  ]
+}

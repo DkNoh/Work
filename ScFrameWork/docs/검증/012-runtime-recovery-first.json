@@ -1,0 +1,49 @@
+{
+  "stage": "012",
+  "passed": false,
+  "checks": [
+    {
+      "name": "active Java NIO lock rejects Python backup",
+      "passed": true
+    },
+    {
+      "name": "create actual durable metadata original image PDF and message",
+      "passed": true,
+      "revision": 2
+    },
+    {
+      "name": "SIGKILL actual storage adapter after forced journal and partial bytes",
+      "passed": true,
+      "actualAdapterChildKilled": true,
+      "orphanPartialRemoved": true
+    },
+    {
+      "name": "stop and backup single H2 uploads journal set",
+      "passed": true,
+      "migrationCount": 7,
+      "files": 3
+    },
+    {
+      "name": "tampered hash path symlink build and nonempty target reject without source mutation",
+      "passed": true,
+      "rejectionCases": 5,
+      "backupImmutable": true
+    },
+    {
+      "name": "fresh empty root restore validates same schema build metadata bytes and inbox",
+      "passed": true,
+      "preservedRevision": 2,
+      "sameImageSha256": "8fe3ba8071ed7ddeffc44fb1a45b537742be0adb0db7ccc0781590db509bd7a6",
+      "samePdfSha256": "fa498885fdb47cee85c8298fbf737f782e1d7d9a881001a9216189d6a96b4b37"
+    },
+    {
+      "name": "restored authored deletion commits FILE_DELETE outbox and preserves referenced original",
+      "passed": false,
+      "exceptionType": "AssertionError"
+    }
+  ],
+  "temporaryDirectoriesRemoved": true,
+  "originalRuntimeUsed": false,
+  "crashScope": "actual LocalFileStorage child SIGKILL at partial-write boundary; main JVM crash/replay separately validated",
+  "wholeSystemSnapshot": "stopped own H2/uploads/journal, same exact JAR and Flyway checksums"
+}

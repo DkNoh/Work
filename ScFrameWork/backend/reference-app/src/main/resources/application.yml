@@ -1,0 +1,74 @@
+spring:
+  application:
+    name: sc-reference-app
+  datasource:
+    url: ${SC_DB_URL:jdbc:h2:file:./.runtime/dev/data/sc-reference;DB_CLOSE_ON_EXIT=FALSE}
+    username: ${SC_DB_USERNAME:sa}
+    password: ${SC_DB_PASSWORD:}
+    hikari:
+      maximum-pool-size: 5
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate.jdbc.time_zone: UTC
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 11MB
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: true
+server:
+  port: ${SC_PORT:18082}
+  address: ${SC_ADDRESS:127.0.0.1}
+  servlet:
+    session:
+      cookie:
+        http-only: true
+        same-site: lax
+  error:
+    include-message: never
+    include-stacktrace: never
+mybatis:
+  configuration:
+    # 같은 세션에서 JPA flush 전후를 조회해도 MyBatis의 1차 캐시가 옛 값을 반환하지 않게 한다.
+    local-cache-scope: STATEMENT
+sc:
+  framework:
+    application-name: sc-reference-app
+    session-endpoint:
+      enabled: false
+    audit:
+      enabled: true
+    file-storage:
+      enabled: true
+      root: ${SC_UPLOAD_DIR:./.runtime/dev/uploads}
+  reference:
+    echo-url: ${SC_ECHO_URL:http://127.0.0.1:9}
+springdoc:
+  api-docs:
+    enabled: false
+  swagger-ui:
+    enabled: false
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: never
+spring.cloud.openfeign.client.config.default:
+  connectTimeout: 2000
+  readTimeout: 5000
+  loggerLevel: none
+logging:
+  file:
+    name: ${SC_LOG_FILE:./.runtime/dev/logs/sc-reference.log}
+  pattern:
+    level: "%5p [requestId:%X{requestId:-}]"

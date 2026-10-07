@@ -1,0 +1,146 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------< dev.scframework.verification:operations-dependencies >--------
+[INFO] Building operations-dependencies 1
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.8.1:resolve (default-cli) @ operations-dependencies ---
+[INFO] 
+[INFO] The following files have been resolved:
+[INFO]    org.springframework.boot:spring-boot-starter-web:jar:3.5.16:compile -- module spring.boot.starter.web [auto]
+[INFO]    org.springframework.boot:spring-boot-starter:jar:3.5.16:compile -- module spring.boot.starter [auto]
+[INFO]    org.springframework.boot:spring-boot:jar:3.5.16:compile -- module spring.boot [auto]
+[INFO]    org.springframework.boot:spring-boot-autoconfigure:jar:3.5.16:compile -- module spring.boot.autoconfigure [auto]
+[INFO]    org.springframework.boot:spring-boot-starter-logging:jar:3.5.16:compile -- module spring.boot.starter.logging [auto]
+[INFO]    ch.qos.logback:logback-classic:jar:1.5.34:compile -- module ch.qos.logback.classic
+[INFO]    ch.qos.logback:logback-core:jar:1.5.34:compile -- module ch.qos.logback.core
+[INFO]    org.apache.logging.log4j:log4j-to-slf4j:jar:2.24.3:compile -- module org.apache.logging.log4j.to.slf4j
+[INFO]    org.apache.logging.log4j:log4j-api:jar:2.24.3:compile -- module org.apache.logging.log4j
+[INFO]    org.slf4j:jul-to-slf4j:jar:2.0.18:compile -- module jul.to.slf4j
+[INFO]    jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile -- module jakarta.annotation
+[INFO]    org.yaml:snakeyaml:jar:2.4:compile -- module org.yaml.snakeyaml
+[INFO]    org.springframework.boot:spring-boot-starter-json:jar:3.5.16:compile -- module spring.boot.starter.json [auto]
+[INFO]    com.fasterxml.jackson.core:jackson-databind:jar:2.21.4:compile -- module com.fasterxml.jackson.databind
+[INFO]    com.fasterxml.jackson.core:jackson-annotations:jar:2.21:compile -- module com.fasterxml.jackson.annotation
+[INFO]    com.fasterxml.jackson.core:jackson-core:jar:2.21.4:compile -- module com.fasterxml.jackson.core
+[INFO]    com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.21.4:compile -- module com.fasterxml.jackson.datatype.jdk8
+[INFO]    com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.21.4:compile -- module com.fasterxml.jackson.datatype.jsr310
+[INFO]    com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.21.4:compile -- module com.fasterxml.jackson.module.paramnames
+[INFO]    org.springframework.boot:spring-boot-starter-tomcat:jar:3.5.16:compile -- module spring.boot.starter.tomcat [auto]
+[INFO]    org.apache.tomcat.embed:tomcat-embed-core:jar:10.1.55:compile -- module org.apache.tomcat.embed.core
+[INFO]    org.apache.tomcat.embed:tomcat-embed-websocket:jar:10.1.55:compile -- module org.apache.tomcat.embed.websocket
+[INFO]    org.springframework:spring-web:jar:6.2.19:compile -- module spring.web [auto]
+[INFO]    org.springframework:spring-webmvc:jar:6.2.19:compile -- module spring.webmvc [auto]
+[INFO]    org.springframework:spring-context:jar:6.2.19:compile -- module spring.context [auto]
+[INFO]    org.springframework:spring-expression:jar:6.2.19:compile -- module spring.expression [auto]
+[INFO]    org.springframework.boot:spring-boot-starter-security:jar:3.5.16:compile -- module spring.boot.starter.security [auto]
+[INFO]    org.springframework:spring-aop:jar:6.2.19:compile -- module spring.aop [auto]
+[INFO]    org.springframework.security:spring-security-config:jar:6.5.11:compile -- module spring.security.config [auto]
+[INFO]    org.springframework.security:spring-security-core:jar:6.5.11:compile -- module spring.security.core [auto]
+[INFO]    org.springframework.security:spring-security-web:jar:6.5.11:compile -- module spring.security.web [auto]
+[INFO]    org.springframework.boot:spring-boot-starter-validation:jar:3.5.16:compile -- module spring.boot.starter.validation [auto]
+[INFO]    org.apache.tomcat.embed:tomcat-embed-el:jar:10.1.55:compile -- module org.apache.tomcat.embed.el
+[INFO]    org.hibernate.validator:hibernate-validator:jar:8.0.3.Final:compile -- module org.hibernate.validator [auto]
+[INFO]    jakarta.validation:jakarta.validation-api:jar:3.0.2:compile -- module jakarta.validation
+[INFO]    org.jboss.logging:jboss-logging:jar:3.6.3.Final:compile -- module org.jboss.logging
+[INFO]    com.fasterxml:classmate:jar:1.7.3:compile -- module com.fasterxml.classmate
+[INFO]    org.springframework.boot:spring-boot-starter-amqp:jar:3.5.16:compile -- module spring.boot.starter.amqp [auto]
+[INFO]    org.springframework:spring-messaging:jar:6.2.19:compile -- module spring.messaging [auto]
+[INFO]    org.springframework.amqp:spring-rabbit:jar:3.2.12:compile -- module spring.rabbit [auto]
+[INFO]    org.springframework.amqp:spring-amqp:jar:3.2.12:compile -- module spring.amqp [auto]
+[INFO]    org.springframework.retry:spring-retry:jar:2.0.13:compile -- module spring.retry [auto]
+[INFO]    com.rabbitmq:amqp-client:jar:5.25.0:compile -- module com.rabbitmq.client [auto]
+[INFO]    org.springframework.boot:spring-boot-starter-quartz:jar:3.5.16:compile -- module spring.boot.starter.quartz [auto]
+[INFO]    org.springframework:spring-context-support:jar:6.2.19:compile -- module spring.context.support [auto]
+[INFO]    org.springframework:spring-tx:jar:6.2.19:compile -- module spring.tx [auto]
+[INFO]    org.quartz-scheduler:quartz:jar:2.5.2:compile -- module org.quartz [auto]
+[INFO]    jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.5:compile -- module jakarta.xml.bind
+[INFO]    jakarta.activation:jakarta.activation-api:jar:2.1.4:compile -- module jakarta.activation
+[INFO]    org.springframework.boot:spring-boot-starter-actuator:jar:3.5.16:compile -- module spring.boot.starter.actuator [auto]
+[INFO]    org.springframework.boot:spring-boot-actuator-autoconfigure:jar:3.5.16:compile -- module spring.boot.actuator.autoconfigure [auto]
+[INFO]    org.springframework.boot:spring-boot-actuator:jar:3.5.16:compile -- module spring.boot.actuator [auto]
+[INFO]    io.micrometer:micrometer-observation:jar:1.15.12:compile -- module micrometer.observation [auto]
+[INFO]    io.micrometer:micrometer-commons:jar:1.15.12:compile -- module micrometer.commons [auto]
+[INFO]    io.micrometer:micrometer-jakarta9:jar:1.15.12:compile -- module micrometer.jakarta9 [auto]
+[INFO]    io.micrometer:micrometer-registry-prometheus:jar:1.15.12:compile -- module micrometer.registry.prometheus [auto]
+[INFO]    io.micrometer:micrometer-core:jar:1.15.12:compile -- module micrometer.core [auto]
+[INFO]    org.hdrhistogram:HdrHistogram:jar:2.2.2:runtime -- module HdrHistogram (auto)
+[INFO]    org.latencyutils:LatencyUtils:jar:2.0.3:runtime -- module LatencyUtils (auto)
+[INFO]    io.prometheus:prometheus-metrics-core:jar:1.3.10:compile -- module io.prometheus.metrics.core [auto]
+[INFO]    io.prometheus:prometheus-metrics-model:jar:1.3.10:compile -- module io.prometheus.metrics.model [auto]
+[INFO]    io.prometheus:prometheus-metrics-config:jar:1.3.10:compile -- module io.prometheus.metrics.config [auto]
+[INFO]    io.prometheus:prometheus-metrics-tracer-common:jar:1.3.10:compile -- module io.prometheus.metrics.tracer.common [auto]
+[INFO]    io.prometheus:prometheus-metrics-exposition-formats:jar:1.3.10:runtime -- module io.prometheus.metrics.expositionformats [auto]
+[INFO]    io.prometheus:prometheus-metrics-exposition-textformats:jar:1.3.10:runtime -- module io.prometheus.writer.text [auto]
+[INFO]    io.micrometer:micrometer-tracing-bridge-otel:jar:1.5.12:compile -- module micrometer.tracing.bridge.otel [auto]
+[INFO]    io.micrometer:micrometer-tracing:jar:1.5.12:compile -- module micrometer.tracing [auto]
+[INFO]    io.micrometer:context-propagation:jar:1.1.4:compile -- module context.propagation [auto]
+[INFO]    aopalliance:aopalliance:jar:1.0:compile -- module aopalliance (auto)
+[INFO]    org.slf4j:slf4j-api:jar:2.0.18:compile -- module org.slf4j
+[INFO]    io.opentelemetry:opentelemetry-api:jar:1.49.0:compile -- module io.opentelemetry.api [auto]
+[INFO]    io.opentelemetry:opentelemetry-context:jar:1.49.0:compile -- module io.opentelemetry.context [auto]
+[INFO]    io.opentelemetry.semconv:opentelemetry-semconv:jar:1.32.0:compile -- module io.opentelemetry.semconv [auto]
+[INFO]    io.opentelemetry:opentelemetry-sdk-common:jar:1.49.0:compile -- module io.opentelemetry.sdk.common [auto]
+[INFO]    io.opentelemetry:opentelemetry-sdk-trace:jar:1.49.0:compile -- module io.opentelemetry.sdk.trace [auto]
+[INFO]    io.opentelemetry:opentelemetry-sdk:jar:1.49.0:compile -- module io.opentelemetry.sdk [auto]
+[INFO]    io.opentelemetry:opentelemetry-extension-trace-propagators:jar:1.49.0:compile -- module io.opentelemetry.extension.trace.propagation [auto]
+[INFO]    io.opentelemetry:opentelemetry-exporter-otlp:jar:1.49.0:compile -- module io.opentelemetry.exporter.otlp [auto]
+[INFO]    io.opentelemetry:opentelemetry-sdk-metrics:jar:1.49.0:compile -- module io.opentelemetry.sdk.metrics [auto]
+[INFO]    io.opentelemetry:opentelemetry-sdk-logs:jar:1.49.0:compile -- module io.opentelemetry.sdk.logs [auto]
+[INFO]    io.opentelemetry:opentelemetry-exporter-otlp-common:jar:1.49.0:runtime -- module io.opentelemetry.exporter.internal.otlp [auto]
+[INFO]    io.opentelemetry:opentelemetry-exporter-common:jar:1.49.0:runtime -- module io.opentelemetry.exporter.internal [auto]
+[INFO]    io.opentelemetry:opentelemetry-exporter-sender-okhttp:jar:1.49.0:runtime -- module io.opentelemetry.exporter.sender.okhttp.internal [auto]
+[INFO]    com.squareup.okhttp3:okhttp:jar:4.12.0:runtime -- module okhttp3 [auto]
+[INFO]    com.squareup.okio:okio:jar:3.6.0:runtime -- module okio (auto)
+[INFO]    com.squareup.okio:okio-jvm:jar:3.6.0:runtime -- module okio [auto]
+[INFO]    org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.9.25:runtime -- module kotlin.stdlib.common (auto)
+[INFO]    org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.9.25:runtime -- module kotlin.stdlib.jdk8
+[INFO]    org.jetbrains.kotlin:kotlin-stdlib:jar:1.9.25:runtime -- module kotlin.stdlib
+[INFO]    org.jetbrains:annotations:jar:13.0:runtime -- module annotations (auto)
+[INFO]    org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.9.25:runtime -- module kotlin.stdlib.jdk7
+[INFO]    io.opentelemetry:opentelemetry-sdk-extension-autoconfigure-spi:jar:1.49.0:runtime -- module io.opentelemetry.sdk.autoconfigure.spi [auto]
+[INFO]    io.github.openfeign:feign-micrometer:jar:13.6.1:compile -- module feign.micrometer
+[INFO]    io.github.openfeign:feign-core:jar:13.6.1:compile -- module feign.core
+[INFO]    org.springframework:spring-jdbc:jar:6.2.19:compile -- module spring.jdbc [auto]
+[INFO]    org.springframework:spring-beans:jar:6.2.19:compile -- module spring.beans [auto]
+[INFO]    org.springframework:spring-core:jar:6.2.19:compile -- module spring.core [auto]
+[INFO]    org.springframework:spring-jcl:jar:6.2.19:compile -- module spring.jcl [auto]
+[INFO]    org.springframework:spring-orm:jar:6.2.19:compile -- module spring.orm [auto]
+[INFO]    jakarta.persistence:jakarta.persistence-api:jar:3.1.0:compile -- module jakarta.persistence
+[INFO]    io.github.openfeign.querydsl:querydsl-jpa:jar:6.12:compile (optional) -- module com.querydsl.jpa [auto]
+[INFO]    io.github.openfeign.querydsl:querydsl-core:jar:6.12:compile (optional) -- module com.querydsl.core [auto]
+[INFO]    com.mysema.commons:mysema-commons-lang:jar:0.2.4:compile (optional) -- module mysema.commons.lang (auto)
+[INFO]    io.projectreactor:reactor-core:jar:3.7.19:compile (optional) -- module reactor.core [auto]
+[INFO]    org.reactivestreams:reactive-streams:jar:1.0.4:compile (optional) -- module org.reactivestreams [auto]
+[INFO]    org.springframework.cloud:spring-cloud-starter-openfeign:jar:4.3.3:compile (optional) -- module spring.cloud.starter.openfeign (auto)
+[INFO]    org.springframework.cloud:spring-cloud-starter:jar:4.3.3:compile (optional) -- module spring.cloud.starter (auto)
+[INFO]    org.springframework.cloud:spring-cloud-context:jar:4.3.3:compile (optional) -- module spring.cloud.context (auto)
+[INFO]    org.bouncycastle:bcprov-jdk18on:jar:1.80.2:compile (optional) -- module org.bouncycastle.provider
+[INFO]    org.springframework.cloud:spring-cloud-openfeign-core:jar:4.3.3:compile (optional) -- module spring.cloud.openfeign.core (auto)
+[INFO]    io.github.openfeign:feign-form-spring:jar:13.6.1:compile (optional) -- module feign.form.spring (auto)
+[INFO]    org.apache.commons:commons-text:jar:1.13.0:compile (optional) -- module org.apache.commons.text
+[INFO]    io.github.openfeign:feign-form:jar:13.6.1:compile (optional) -- module feign.form
+[INFO]    commons-fileupload:commons-fileupload:jar:1.6.0:compile (optional) -- module org.apache.commons.fileupload
+[INFO]    org.springframework.cloud:spring-cloud-commons:jar:4.3.3:compile (optional) -- module spring.cloud.commons (auto)
+[INFO]    org.springframework.security:spring-security-crypto:jar:6.5.11:compile -- module spring.security.crypto [auto]
+[INFO]    io.github.openfeign:feign-slf4j:jar:13.6.1:compile (optional) -- module feign.slf4j
+[INFO]    org.springdoc:springdoc-openapi-starter-webmvc-ui:jar:2.9.1:compile (optional) -- module org.springdoc.openapi.ui [auto]
+[INFO]    org.springdoc:springdoc-openapi-starter-webmvc-api:jar:2.9.1:compile (optional) -- module org.springdoc.openapi.webmvc.core [auto]
+[INFO]    org.springdoc:springdoc-openapi-starter-common:jar:2.9.1:compile (optional) -- module org.springdoc.openapi.common [auto]
+[INFO]    org.apache.commons:commons-lang3:jar:3.17.0:compile (optional) -- module org.apache.commons.lang3
+[INFO]    io.swagger.core.v3:swagger-core-jakarta:jar:2.2.55:compile (optional) -- module io.swagger.v3.core [auto]
+[INFO]    io.swagger.core.v3:swagger-annotations-jakarta:jar:2.2.55:compile (optional) -- module io.swagger.v3.oas.annotations [auto]
+[INFO]    io.swagger.core.v3:swagger-models-jakarta:jar:2.2.55:compile (optional) -- module io.swagger.v3.oas.models [auto]
+[INFO]    com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.21.4:compile (optional) -- module com.fasterxml.jackson.dataformat.yaml
+[INFO]    org.webjars:swagger-ui:jar:5.32.14:compile (optional) -- module swagger.ui (auto)
+[INFO]    org.webjars:webjars-locator-lite:jar:1.1.3:compile (optional) -- module org.webjars.locator_lite [auto]
+[INFO]    org.jspecify:jspecify:jar:1.0.0:compile (optional) -- module org.jspecify
+[INFO]    org.springframework.boot:spring-boot-configuration-processor:jar:3.5.16:compile (optional) -- module spring.boot.configuration.processor [auto]
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.433 s
+[INFO] Finished at: 2026-10-07T06:36:24+09:00
+[INFO] ------------------------------------------------------------------------

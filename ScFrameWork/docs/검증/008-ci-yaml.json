@@ -1,0 +1,14 @@
+{
+  "stage": "008",
+  "files": [
+    ".github/workflows/verify.yml"
+  ],
+  "parser": "js-yaml",
+  "result": "passed",
+  "processorGate": true,
+  "remoteExecution": false,
+  "initialPythonParser": {
+    "result": "could-not-run",
+    "reason": "PyYAML is not installed"
+  }
+}

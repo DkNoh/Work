@@ -1,0 +1,5 @@
+frontend/packages/runtime/src/browserErrors.ts 34ms
+frontend/packages/runtime/src/browserErrors.spec.ts 13ms
+frontend/apps/reference-app/src/features/operations/ScheduleForm.spec.ts 6ms (unchanged)
+frontend/e2e/012-operations.spec.ts 40ms
+frontend/e2e/012-operations-off.spec.ts 5ms

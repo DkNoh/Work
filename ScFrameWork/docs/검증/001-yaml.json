@@ -1,0 +1,8 @@
+{
+  "workflow_steps": 15,
+  "compose_services": [
+    "reference-app"
+  ],
+  "yaml_syntax": "PASS",
+  "remote_run": false
+}

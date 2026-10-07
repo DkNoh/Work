@@ -1,0 +1,9 @@
+PASS mounted Swagger requestInterceptor is a function
+PASS tokenless browser login is rejected: HTTP 403
+PASS mounted interceptor form login: HTTP 204
+PASS browser cookie authenticated me: HTTP 200
+PASS mounted interceptor refreshes CSRF after login and saves example: HTTP 201
+PASS browser stores an HttpOnly session cookie
+PASS mounted interceptor logout: HTTP 204; me after logout: HTTP 401; cookie removed
+7 mounted Swagger browser checks passed. Browser: Playwright bundled Chromium.
+PASS isolated JAR server and synthetic account files cleaned up.

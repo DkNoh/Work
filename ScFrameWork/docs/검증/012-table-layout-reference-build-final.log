@@ -1,0 +1,59 @@
+
+> @sc/reference-app@0.1.0 build
+> vue-tsc --noEmit -p tsconfig.json && vite build
+
+vite v8.3.1 building client environment for production...
+transforming...
+✓ 1926 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                   0.56 kB │ gzip:   0.33 kB
+dist/assets/useImageFile-1hkDtVIH.css             0.06 kB │ gzip:   0.08 kB
+dist/assets/DocumentsPage-CGzgDvdS.css            0.11 kB │ gzip:   0.11 kB
+dist/assets/AdminNavigation-CGsS6gxN.css          0.13 kB │ gzip:   0.13 kB
+dist/assets/BrowserErrorsPage-X5oY8iVF.css        0.15 kB │ gzip:   0.15 kB
+dist/assets/MessagesPage-BCmKWFZt.css             0.15 kB │ gzip:   0.15 kB
+dist/assets/NoticesPage-DsFzkVWS.css              0.21 kB │ gzip:   0.14 kB
+dist/assets/OperationsTable-DM5CDPoB.css          0.39 kB │ gzip:   0.20 kB
+dist/assets/PatternsPage-D9wSiuNv.css             0.59 kB │ gzip:   0.29 kB
+dist/assets/AdminAuditPage-BqQoUJOH.css           0.62 kB │ gzip:   0.31 kB
+dist/assets/RequirementsPage-DHRt7bWb.css         0.83 kB │ gzip:   0.30 kB
+dist/assets/RequirementWorkspace-CFi7C6u6.css     1.28 kB │ gzip:   0.48 kB
+dist/assets/KanbanPage-6zvtfWED.css               1.45 kB │ gzip:   0.48 kB
+dist/assets/RequirementReportPage-BKY-UAMX.css    1.90 kB │ gzip:   0.57 kB
+dist/assets/vue-i18n-Bw7auy6a.css                95.15 kB │ gzip:  13.21 kB
+dist/assets/index-CTX-M5wf.css                  232.17 kB │ gzip:  34.77 kB
+dist/assets/validation-hl21o1zK.js                0.11 kB │ gzip:   0.11 kB
+dist/assets/useDraftGuard-DrgTtFW-.js             0.65 kB │ gzip:   0.40 kB
+dist/assets/query-B6yhcF5t.js                     1.31 kB │ gzip:   0.59 kB
+dist/assets/AccountPage-BfkGVH91.js               3.37 kB │ gzip:   1.54 kB
+dist/assets/AdminNavigation-CzsGXW8e.js           3.38 kB │ gzip:   1.79 kB
+dist/assets/AdminUsersPage-BcPzRVP6.js            3.93 kB │ gzip:   1.67 kB
+dist/assets/RequirementsPage-C6gE02Z-.js          4.86 kB │ gzip:   1.98 kB
+dist/assets/AdminMenusPage-_nwGdfyr.js            4.95 kB │ gzip:   2.13 kB
+dist/assets/BrowserErrorsPage-D3_OMeiJ.js         5.42 kB │ gzip:   2.08 kB
+dist/assets/MessagesPage-DdV2nVxy.js              5.47 kB │ gzip:   2.27 kB
+dist/assets/AdminAuditPage-S4kvw89i.js            5.75 kB │ gzip:   2.24 kB
+dist/assets/OperationsTable-D0jt6j3o.js           8.18 kB │ gzip:   3.56 kB
+dist/assets/MediaWorkspacePage-BblTpwrk.js       10.77 kB │ gzip:   3.81 kB
+dist/assets/SchedulesPage-CGB1ph8Q.js            11.54 kB │ gzip:   3.96 kB
+dist/assets/PatternsPage-C5eg4cU6.js             11.82 kB │ gzip:   4.45 kB
+dist/assets/NoticesPage-ChqbPdPH.js              11.83 kB │ gzip:   4.51 kB
+dist/assets/DocumentsPage-CFnVwsij.js            12.27 kB │ gzip:   4.77 kB
+dist/assets/dist-nEO7PU3y.js                     16.09 kB │ gzip:   6.17 kB
+dist/assets/RequirementReportPage-CXIntheL.js    16.48 kB │ gzip:   5.46 kB
+dist/assets/RequirementWorkspace-ITi9DhpM.js     29.51 kB │ gzip:   8.32 kB
+dist/assets/KanbanPage-DulItcZG.js              148.73 kB │ gzip:  47.88 kB
+dist/assets/useImageFile-DnM1J4AX.js            212.60 kB │ gzip:  66.10 kB
+dist/assets/index-D1uQIGNP.js                   277.58 kB │ gzip:  85.74 kB
+dist/assets/editor-CWzv_Igk.js                  387.46 kB │ gzip: 122.69 kB
+dist/assets/charts-DZvfRw5H.js                  560.12 kB │ gzip: 191.56 kB
+dist/assets/vue-i18n-BQzf3H0D.js                565.77 kB │ gzip: 195.50 kB
+dist/assets/dist-Bbo5EMju.js                    933.03 kB │ gzip: 258.12 kB
+
+✓ built in 462ms
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.

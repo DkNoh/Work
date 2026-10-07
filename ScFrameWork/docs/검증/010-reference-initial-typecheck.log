@@ -1,0 +1,23 @@
+frontend/apps/reference-app/src/features/kanban/KanbanPage.vue(395,7): error TS2322: Type 'number | null' is not assignable to type 'number | undefined'.
+  Type 'null' is not assignable to type 'number | undefined'.
+frontend/apps/reference-app/src/features/kanban/KanbanPage.vue(436,16): error TS2339: Property 'taskId' does not exist on type '{ boardId: string; }'.
+frontend/apps/reference-app/src/features/kanban/TaskForm.vue(157,3): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(evt: "save", input: { assigneeId?: number | undefined; description?: string | undefined; dueDate?: string | undefined; priority: "MEDIUM" | "LOW" | "HIGH"; status: "TODO" | "IN_PROGRESS" | "DONE" | "REJECTED"; tags?: string[] | undefined; title: string; }): void', gave the following error.
+    Argument of type '{ title: string; description: string; status: "TODO" | "IN_PROGRESS" | "DONE" | "REJECTED"; priority: "MEDIUM" | "LOW" | "HIGH"; assigneeId: number | null; dueDate: string | null; tags: string[]; }' is not assignable to parameter of type '{ assigneeId?: number | undefined; description?: string | undefined; dueDate?: string | undefined; priority: "MEDIUM" | "LOW" | "HIGH"; status: "TODO" | "IN_PROGRESS" | "DONE" | "REJECTED"; tags?: string[] | undefined; title: string; }'.
+      Types of property 'assigneeId' are incompatible.
+        Type 'number | null' is not assignable to type 'number | undefined'.
+          Type 'null' is not assignable to type 'number | undefined'.
+  Overload 2 of 2, '(evt: "dirty-change", dirty: boolean): void', gave the following error.
+    Argument of type '"save"' is not assignable to parameter of type '"dirty-change"'.
+frontend/apps/reference-app/src/features/kanban/TaskWorkbook.vue(142,54): error TS2322: Type '{ title: string; description: string; status: "TODO" | "IN_PROGRESS" | "DONE" | "REJECTED"; priority: "MEDIUM" | "LOW" | "HIGH"; assigneeId: number | null; dueDate: string | null; tags: string[]; }' is not assignable to type '{ assigneeId?: number | undefined; description?: string | undefined; dueDate?: string | undefined; priority: "MEDIUM" | "LOW" | "HIGH"; status: "TODO" | "IN_PROGRESS" | "DONE" | "REJECTED"; tags?: string[] | undefined; title: string; }'.
+  Types of property 'assigneeId' are incompatible.
+    Type 'number | null' is not assignable to type 'number | undefined'.
+      Type 'null' is not assignable to type 'number | undefined'.
+frontend/apps/reference-app/src/features/media/MediaWorkspacePage.vue(48,16): error TS2367: This comparison appears to be unintentional because the types 'string' and 'number' have no overlap.
+frontend/apps/reference-app/src/features/media/MediaWorkspacePage.vue(57,20): error TS2367: This comparison appears to be unintentional because the types 'string' and 'number' have no overlap.
+frontend/apps/reference-app/src/features/media/MediaWorkspacePage.vue(66,30): error TS2367: This comparison appears to be unintentional because the types 'string' and 'number' have no overlap.
+frontend/apps/reference-app/src/features/media/MediaWorkspacePage.vue(68,12): error TS2322: Type 'number | null' is not assignable to type 'PropertyKey | undefined'.
+  Type 'null' is not assignable to type 'PropertyKey | undefined'.
+frontend/apps/reference-app/src/features/media/MediaWorkspacePage.vue(172,60): error TS2367: This comparison appears to be unintentional because the types 'string' and 'number' have no overlap.
+frontend/apps/reference-app/src/features/media/MediaWorkspacePage.vue(194,5): error TS2367: This comparison appears to be unintentional because the types 'string' and 'number' have no overlap.
+frontend/apps/reference-app/src/features/media/MediaWorkspacePage.vue(289,5): error TS2367: This comparison appears to be unintentional because the types 'string' and 'number' have no overlap.

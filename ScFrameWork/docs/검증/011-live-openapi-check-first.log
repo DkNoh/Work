@@ -1,0 +1,6 @@
+
+> sc-framework@0.2.0 api:check-server
+> python3 scripts/check-openapi.py && python3 scripts/check-openapi.py --jar backend/starter-app/target/sc-starter-app.jar --snapshot docs/openapi-starter.json
+
+PASS actual dev JAR OpenAPI matches snapshot; only server metadata was normalized.
+PASS actual dev JAR OpenAPI matches snapshot; only server metadata was normalized.

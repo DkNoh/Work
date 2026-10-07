@@ -1,0 +1,24 @@
+{
+  "from": "0.1.0",
+  "to": "0.2.0",
+  "backend": "0.2.0-SNAPSHOT",
+  "changedFiles": [
+    "package.json",
+    "frontend/packages/ui/package.json",
+    "frontend/packages/date/package.json",
+    "frontend/packages/runtime/package.json",
+    "frontend/packages/excel/package.json",
+    "frontend/packages/i18n/package.json",
+    "frontend/apps/catalog/package.json",
+    "frontend/apps/starter-app/package.json",
+    "frontend/apps/reference-app/package.json",
+    "backend/pom.xml",
+    "backend/framework-autoconfigure/pom.xml",
+    "backend/starter-app/pom.xml",
+    "backend/reference-app/pom.xml",
+    "backend/framework-spring-boot-starter/pom.xml",
+    "backend/framework-core/pom.xml"
+  ],
+  "appOwnVersionsUnchanged": true,
+  "apiVersionChanged": false
+}

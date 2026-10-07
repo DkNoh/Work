@@ -1,0 +1,78 @@
+spring:
+  config:
+    import: configtree:${SC_OPERATIONS_SECRETS_DIR:${SC_HOME:./.runtime/local}/secrets/operations/}
+  flyway:
+    enabled: true
+    locations: classpath:db/audit-migration,classpath:db/operations-migration
+  rabbitmq:
+    host: ${SC_MQ_HOST:127.0.0.1}
+    port: ${SC_MQ_PORT:5679}
+    username: sc-framework
+    connection-timeout: 3s
+    publisher-confirm-type: correlated
+    publisher-returns: true
+    template:
+      mandatory: true
+  quartz:
+    job-store-type: jdbc
+    jdbc:
+      initialize-schema: never
+    wait-for-jobs-to-complete-on-shutdown: true
+    properties:
+      org.quartz.scheduler.instanceName: sc-starter-operations
+      org.quartz.scheduler.instanceId: AUTO
+      org.quartz.jobStore.useProperties: true
+      org.quartz.threadPool.threadCount: 3
+      org.quartz.jobStore.misfireThreshold: 60000
+sc:
+  framework:
+    operations:
+      enabled: true
+      runtime-root: ${SC_HOME:./.runtime/local}
+    messaging:
+      enabled: true
+      application-id: sc-starter
+    scheduler:
+      enabled: true
+      bootstrap-defaults: true
+    browser-errors:
+      enabled: true
+      app-version: 0.1.0
+      route-codes: [login,start,patterns,operations-messages,operations-schedules,operations-browser-errors]
+      component-codes: [ROOT]
+    audit:
+      enabled: true
+      durable-enabled: true
+    file-storage:
+      enabled: true
+      root: ${SC_UPLOAD_DIR:./.runtime/local/uploads}
+      durable-cleanup-enabled: true
+    observability:
+      enabled: true
+      otlp-endpoint: ${SC_OTLP_ENDPOINT:http://127.0.0.1:4319/v1/traces}
+      event-log: ${SC_HOME:./.runtime/local}/logs/operations.ndjson
+      observer-secret-file: ${SC_OPERATIONS_SECRETS_DIR:${SC_HOME:./.runtime/local}/secrets/operations/}observer.secret
+management:
+  metrics:
+    distribution:
+      percentiles-histogram:
+        http.server.requests: true
+  server:
+    port: ${SC_MANAGEMENT_PORT:18482}
+    address: ${SC_MANAGEMENT_ADDRESS:127.0.0.1}
+  endpoints:
+    web:
+      exposure:
+        include: health,prometheus
+  tracing:
+    sampling:
+      probability: 1.0
+    baggage:
+      remote-fields: []
+      correlation:
+        fields: []
+  prometheus:
+    metrics:
+      export:
+        enabled: true
+spring.cloud.openfeign.micrometer.enabled: true

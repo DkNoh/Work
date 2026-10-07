@@ -1,0 +1,78 @@
+{
+  "stage": "012",
+  "passed": true,
+  "groups": [
+    {
+      "name": "packed login, native form and CSS tokens",
+      "passed": true
+    },
+    {
+      "name": "typed Notes API, Zod, Query invalidation and 409 draft preservation",
+      "passed": true
+    },
+    {
+      "name": "packed shared form, locale preservation and dialog focus",
+      "passed": true
+    },
+    {
+      "name": "packed table, 10000-row virtual view and keyboard focus",
+      "passed": true
+    },
+    {
+      "name": "packed SVG chart, rich text and XLSX download/import",
+      "passed": true
+    },
+    {
+      "name": "packed board movement, normalized image box and zoom",
+      "passed": true
+    },
+    {
+      "name": "logout clears the shared session",
+      "passed": true
+    }
+  ],
+  "axe": [
+    {
+      "name": "notes-1366-ko",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 1,
+      "manualReviewComplete": false
+    },
+    {
+      "name": "notes-conflict-1366-ko",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 1,
+      "manualReviewComplete": false
+    },
+    {
+      "name": "patterns-1366-en",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 3,
+      "manualReviewComplete": false
+    },
+    {
+      "name": "patterns-390-en",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 3,
+      "manualReviewComplete": false
+    }
+  ],
+  "errors": [],
+  "failedAssets": [],
+  "screenshots": [
+    "notes-1366-ko.png",
+    "notes-conflict-1366-ko.png",
+    "patterns-1366-en.png",
+    "patterns-390-en.png"
+  ],
+  "css": {
+    "primary": "#21647a",
+    "spacing": "16px",
+    "buttonRadius": "6px"
+  },
+  "noteId": 2
+}

@@ -1,0 +1,16 @@
+{
+  "text": "제목",
+  "color": "color(srgb 0.145098 0.231373 0.270588 / 0.87)",
+  "opacity": 0.85,
+  "fontSize": "12px",
+  "fontWeight": "400",
+  "background": "rgb(245, 247, 248)",
+  "effectiveOpacity": 0.7394999999999999,
+  "effectiveForeground": [
+    91,
+    108,
+    116
+  ],
+  "contrast": 5.09,
+  "minimum": 4.5
+}

@@ -1,0 +1,88 @@
+
+> sc-framework@0.1.0 verify
+> npm run format:check && npm run lint && npm run api:check && npm run ui:contracts:check && npm run ui:boundaries:check && npm run typecheck && npm run test:unit && npm run build
+
+
+> sc-framework@0.1.0 format:check
+> prettier --check .
+
+Checking formatting...
+All matched files use Prettier code style!
+
+> sc-framework@0.1.0 lint
+> eslint frontend scripts --max-warnings 0
+
+
+> sc-framework@0.1.0 api:check
+> node scripts/openapi-types.mjs --check
+
+OpenAPI 명세와 생성 타입 일치
+
+> sc-framework@0.1.0 ui:contracts:check
+> node scripts/ui-contracts.mjs --check
+
+공개 UI 20개: imported props/events/slots/default 계약 일치
+
+> sc-framework@0.1.0 ui:boundaries:check
+> node scripts/check-ui-boundaries.mjs
+
+공개 UI/소비 앱 경계: import 567개 확인
+
+> sc-framework@0.1.0 typecheck
+> npm run typecheck --workspace @sc/i18n && npm run typecheck --workspace @sc/excel && npm run typecheck --workspace @sc/ui && npm run typecheck --workspace @sc/runtime && npm run typecheck --workspace @sc/reference-app && npm run typecheck --workspace @sc/starter-app && npm run typecheck --workspace @sc/catalog
+
+
+> @sc/i18n@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/excel@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/ui@0.1.0 typecheck
+> npm run tokens:check && vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/ui@0.1.0 tokens:check
+> node scripts/generate-tokens.mjs --check
+
+Design token CSS matches tokens.ts.
+
+> @sc/runtime@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/reference-app@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/starter-app@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/catalog@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+src/ValidatedForm.stories.ts(68,70): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(role: ByRoleMatcher, options?: ByRoleOptions | undefined): HTMLElement', gave the following error.
+    Object literal may only specify known properties, and 'exact' does not exist in type 'ByRoleOptions'.
+  Overload 2 of 2, '(role: ByRoleMatcher, options?: ByRoleOptions | undefined): HTMLElement', gave the following error.
+    Object literal may only specify known properties, and 'exact' does not exist in type 'ByRoleOptions'.
+src/ValidatedForm.stories.ts(73,61): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(role: ByRoleMatcher, options?: ByRoleOptions | undefined): HTMLElement', gave the following error.
+    Object literal may only specify known properties, and 'exact' does not exist in type 'ByRoleOptions'.
+  Overload 2 of 2, '(role: ByRoleMatcher, options?: ByRoleOptions | undefined): HTMLElement', gave the following error.
+    Object literal may only specify known properties, and 'exact' does not exist in type 'ByRoleOptions'.
+src/ValidatedForm.stories.ts(108,71): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(role: ByRoleMatcher, options?: ByRoleOptions | undefined): HTMLElement', gave the following error.
+    Object literal may only specify known properties, and 'exact' does not exist in type 'ByRoleOptions'.
+  Overload 2 of 2, '(role: ByRoleMatcher, options?: ByRoleOptions | undefined): HTMLElement', gave the following error.
+    Object literal may only specify known properties, and 'exact' does not exist in type 'ByRoleOptions'.
+npm error Lifecycle script `typecheck` failed with error:
+npm error code 2
+npm error path /Users/dk/Work/ScFramework/frontend/apps/catalog
+npm error workspace @sc/catalog@0.1.0
+npm error location /Users/dk/Work/ScFramework/frontend/apps/catalog
+npm error command failed
+npm error command sh -c vue-tsc --noEmit -p tsconfig.json

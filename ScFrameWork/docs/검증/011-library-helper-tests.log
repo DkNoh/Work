@@ -1,0 +1,12 @@
+✔ declaration AST normalizes nested imports and Vue declaration paths without editing text (16.689125ms)
+✔ dangling declaration import stops library completion (1.057417ms)
+✔ import-only vendor license is copied from package-local installation without executing it (2.123584ms)
+✔ a directory named LICENSE does not satisfy original license evidence (1.441917ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 148.4775

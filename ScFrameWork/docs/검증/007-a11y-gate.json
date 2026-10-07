@@ -1,0 +1,35 @@
+{
+  "stage": "007",
+  "passed": true,
+  "expected": {
+    "cliExitCode": 1,
+    "tests": 1,
+    "failed": 1,
+    "skipped": 0,
+    "violation": "button-name"
+  },
+  "pipeline": "@storybook/addon-vitest Browser → reused preview a11y.test:error → addon-a11y afterEach",
+  "catalogIsolation": {
+    "normalGlobs": [
+      "../src/**/*.stories.ts"
+    ],
+    "negativeGlobs": [
+      "../negative/ScA11yFailure.stories.ts"
+    ]
+  },
+  "normalCatalogIncludesNegativeFixture": false,
+  "cliExitCode": 1,
+  "signal": null,
+  "actual": {
+    "tests": 1,
+    "failed": 1,
+    "passed": 0,
+    "skipped": 0,
+    "todo": 0,
+    "story": "이름 없는 버튼",
+    "violations": [
+      "button-name"
+    ],
+    "failureReason": "Error: expect(received).toHaveNoViolations(expected)\n\nExpected the HTML found at $('button[type=\"button\"]') to have no violations:\n\n<button type=\"button\" data-sc-a11y-negative=\"unnamed-button\" style=\"width: 48px; min-height: 48px; border: 1px solid var(--sc-color-control-border); background: var(--sc-color-surface); color: var(--sc-color-text);\"><span aria-hidden=\"true\">!</span></button>\n\nReceived:\n\n\"Buttons must have discernible text (button-name)\"\n\nFix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"\n\nYou can find more information on this issue here: \nhttps://dequeuniversity.com/rules/axe/4.14/button-name?application=axeAPI\n    at Proxy.expectWrapper (http://localhost:63315/node_modules/.cache/storybook/10.4.1/9e929f3c01336b1672cadf33cda18aa79073d6d84fdf4d4c13620b86998e4349/sb-vitest/deps/test-qPTfGWiA.js?v=cc5b9654:15534:49)\n    at Proxy.<anonymous> (http://localhost:63315/node_modules/.cache/storybook/10.4.1/9e929f3c01336b1672cadf33cda18aa79073d6d84fdf4d4c13620b86998e4349/sb-vitest/deps/test-qPTfGWiA.js?v=cc5b9654:15076:101)\n    at Proxy.methodWrapper (http://localhost:63315/node_modules/.cache/storybook/10.4.1/9e929f3c01336b1672cadf33cda18aa79073d6d84fdf4d4c13620b86998e4349/sb-vitest/deps/test-qPTfGWiA.js?v=cc5b9654:10674:23)\n    at Instrumenter.invoke (http://localhost:63315/node_modules/.cache/storybook/10.4.1/9e929f3c01336b1672cadf33cda18aa79073d6d84fdf4d4c13620b86998e4349/sb-vitest/deps/test-qPTfGWiA.js?v=cc5b9654:2429:20)\n    at Instrumenter.intercept (http://localhost:63315/node_modules/.cache/storybook/10.4.1/9e929f3c01336b1672cadf33cda18aa79073d6d84fdf4d4c13620b86998e4349/sb-vitest/deps/test-qPTfGWiA.js?v=cc5b9654:2332:138)\n    at Instrumenter.track (http://localhost:63315/node_modules/.cache/storybook/10.4.1/9e929f3c01336b1672cadf33cda18aa79073d6d84fdf4d4c13620b86998e4349/sb-vitest/deps/test-qPTfGWiA.js?v=cc5b9654:2323:83)\n    at Proxy.toHaveNoViolations (http://localhost:63315/node_modules/.cache/storybook/10.4.1/9e929f3c01336b1672cadf33cda18aa79073d6d84fdf4d4c13620b86998e4349/sb-vitest/deps/test-qPTfGWiA.js?v=cc5b9654:2301:151)\n    at afterEach (http://localhost:63315/@fs/Users/dk/Work/ScFramework/node_modules/@storybook/addon-a11y/dist/_browser-chunks/chunk-2FVV6YOY.js?v=cc5b9654:155:26)\n    at async Object.applyAfterEach (http://localhost:63315/node_modules/.cache/storybook/10.4.1/9e929f3c01336b1672cadf33cda18aa79073d6d84fdf4d4c13620b86998e4349/sb-vitest/deps/csf-E4R7Z05z.js?v=cc5b9654:4534:4)\n    at async runStory (http://localhost:63315/node_modules/.cache/storybook/10.4.1/9e929f3c01336b1672cadf33cda18aa79073d6d84fdf4d4c13620b86998e4349/sb-vitest/deps/csf-E4R7Z05z.js?v=cc5b9654:4967:100)"
+  }
+}

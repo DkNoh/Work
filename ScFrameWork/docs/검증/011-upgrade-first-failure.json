@@ -1,0 +1,17 @@
+{
+  "passed": false,
+  "buildPassed": true,
+  "reason": "guard compared generated OpenAPI dynamic server port as handwritten source",
+  "normalizedApiSame": true,
+  "sourceModified": 0,
+  "preservedEvidenceFiles": {
+    "summary.json": "8067e09f64f91f73cafbb4228a59e0f0121ea6cd4bf3c13eddbe193d480d1cac",
+    "new-artifacts.log": "d23b2bcd727fd31e17dd841ac4eb7ed7f39e29abb409fe61da6a212090b0f70e",
+    "process-1.log": "986c3c2acd4c72cf6caab8052cd3c8daa22ef7aa8c2fb3ccbdcf7289f5c06c26",
+    "old-artifacts.json": "d95eda1e8f6674a3179a6827ab0006d93209db5d86ef789b3826bfb71bc997e4",
+    "new-artifacts.json": "1fab65531c8a5b83fe17203b35b42bfac23f9e54595844ff6ec5e0bb16b61c01",
+    "old-artifacts.log": "d23b2bcd727fd31e17dd841ac4eb7ed7f39e29abb409fe61da6a212090b0f70e",
+    "upgrade-build.log": "9aa23ca661a8db592ad8db4163dbda7c95e6d16f56bda6c18a472fd836962d35",
+    "upgrade-install.log": "90b37b5d0e25a014ffd56588a781114284c2985e8dcc3a64ce5aee91061c790c"
+  }
+}

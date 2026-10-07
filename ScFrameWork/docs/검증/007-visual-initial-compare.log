@@ -1,0 +1,62 @@
+
+Running 4 tests using 1 worker
+
+(node:65385) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 frontend/e2e/visual.spec.ts:201:7 › reference 1366px 시각 기준 › 셸·입력·표·차트·서식의 승인 이미지와 비교 (2.0s)
+(node:65392) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 frontend/e2e/visual.spec.ts:201:7 › reference 390px 시각 기준 › 셸·입력·표·차트·서식의 승인 이미지와 비교 (2.7s)
+  ✓  3 frontend/e2e/visual.spec.ts:201:7 › starter 1366px 시각 기준 › 셸·입력·표·차트·서식의 승인 이미지와 비교 (2.8s)
+  ✓  4 frontend/e2e/visual.spec.ts:201:7 › starter 390px 시각 기준 › 셸·입력·표·차트·서식의 승인 이미지와 비교 (2.8s)
+
+
+  1) frontend/e2e/visual.spec.ts:201:7 › reference 1366px 시각 기준 › 셸·입력·표·차트·서식의 승인 이미지와 비교 ─────────
+
+    Error: expect(page).toHaveScreenshot(expected) failed
+
+      18841 pixels (ratio 0.02 of all image pixels) are different.
+
+      Snapshot: darwin-chromium/reference-1366-shell-inputs.png
+
+    Call log:
+      - Expect "toHaveScreenshot(darwin-chromium/reference-1366-shell-inputs.png)" with timeout 10000ms
+        - verifying given screenshot expectation
+      - taking page screenshot
+        - disabled all CSS animations
+      - waiting for fonts to load...
+      - fonts loaded
+      - 18841 pixels (ratio 0.02 of all image pixels) are different.
+      - waiting 100ms before taking screenshot
+      - taking page screenshot
+        - disabled all CSS animations
+      - waiting for fonts to load...
+      - fonts loaded
+      - captured a stable screenshot
+      - 18841 pixels (ratio 0.02 of all image pixels) are different.
+
+
+      280 |             await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
+      281 |             await neutralFocus(page);
+    > 282 |             await expect(page).toHaveScreenshot([profile, name], { ...options, fullPage: false });
+          |                                ^
+      283 |           } else {
+      284 |             const card = capture === "table" ? table : capture === "chart" ? chart : editor;
+      285 |             const clip = await cardClip(page, card);
+        at /Users/dk/Work/ScFramework/frontend/e2e/visual.spec.ts:282:32
+
+    attachment #1: darwin-chromium/reference-1366-shell-inputs (image/png) ─────────────────────────
+    Expected: frontend/e2e/visual.spec.ts-snapshots/darwin-chromium/reference-1366-shell-inputs-darwin.png
+    Received: docs/검증/007-visual-initial-results/visual-reference-1366px-시각-기준-셸·입력·표·차트·서식의-승인-이미지와-비교/darwin-chromium/reference-1366-shell-inputs-actual.png
+    Diff:     docs/검증/007-visual-initial-results/visual-reference-1366px-시각-기준-셸·입력·표·차트·서식의-승인-이미지와-비교/darwin-chromium/reference-1366-shell-inputs-diff.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    docs/검증/007-visual-initial-results/visual-reference-1366px-시각-기준-셸·입력·표·차트·서식의-승인-이미지와-비교/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: docs/검증/007-visual-initial-results/visual-reference-1366px-시각-기준-셸·입력·표·차트·서식의-승인-이미지와-비교/error-context.md
+
+  1 failed
+    frontend/e2e/visual.spec.ts:201:7 › reference 1366px 시각 기준 › 셸·입력·표·차트·서식의 승인 이미지와 비교 ──────────
+  3 passed (17.8s)

@@ -1,0 +1,73 @@
+{
+  "stage": "012",
+  "passed": false,
+  "groups": [
+    {
+      "name": "installed-cohort-and-native-notes-login",
+      "passed": true
+    },
+    {
+      "name": "notes-validation-save-revision-conflict-and-locale-draft",
+      "passed": true
+    },
+    {
+      "name": "actual-window-and-rejection-collector-own-version-and-notes-route",
+      "passed": true
+    }
+  ],
+  "axe": [
+    {
+      "name": "login-1366-ko",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 1
+    },
+    {
+      "name": "notes-1366-ko",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 1
+    },
+    {
+      "name": "notes-conflict-1366-en",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 1
+    },
+    {
+      "name": "messages-1366-ko",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 2
+    },
+    {
+      "name": "schedules-1366-ko",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 2
+    }
+  ],
+  "screenshots": [
+    "login-1366-ko.png",
+    "notes-1366-ko.png",
+    "notes-conflict-1366-en.png",
+    "messages-1366-ko.png",
+    "schedules-1366-ko.png"
+  ],
+  "unexpectedErrors": [],
+  "failedAssets": [],
+  "manualReviewComplete": false,
+  "traceEnabled": false,
+  "collector": {
+    "events": 2,
+    "appVersion": "1.0.0",
+    "routeCode": "notes",
+    "rawFields": 0,
+    "expectedRuntimeErrors": 2
+  },
+  "failure": {
+    "phase": "operations-three-pages-1366-ko",
+    "type": "Error",
+    "code": "GENERATED_BROWSER_ASSERTION"
+  }
+}

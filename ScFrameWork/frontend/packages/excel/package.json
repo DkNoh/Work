@@ -1,0 +1,33 @@
+{
+  "name": "@sc/excel",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "typecheck": "vue-tsc --noEmit -p tsconfig.json",
+    "build": "node ../../../scripts/build-library.mjs ."
+  },
+  "dependencies": {
+    "exceljs": "4.4.0"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "vue-tsc": "3.3.12"
+  },
+  "license": "UNLICENSED",
+  "files": [
+    "dist",
+    "README.md",
+    "UNLICENSED",
+    "THIRD_PARTY_NOTICES"
+  ],
+  "types": "./dist/types/index.d.ts",
+  "sideEffects": false
+}

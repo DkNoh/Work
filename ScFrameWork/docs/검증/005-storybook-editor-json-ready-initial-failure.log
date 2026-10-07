@@ -1,0 +1,18 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+locator.click: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('table').first().getByRole('row').filter({ has: getByText('modelValue', { exact: true }) }).getByRole('button', { name: 'Set object', exact: true })[22m
+
+    at jsonControl (/Users/dk/Work/ScFramework/scripts/verify-storybook.mjs:323:79)
+    at async writeJson (/Users/dk/Work/ScFramework/scripts/verify-storybook.mjs:329:20)
+    at async file:///Users/dk/Work/ScFramework/scripts/verify-storybook.mjs:506:19 {
+  log: [
+    "  - waiting for getByRole('table').first().getByRole('row').filter({ has: getByText('modelValue', { exact: true }) }).getByRole('button', { name: 'Set object', exact: true })"
+  ],
+  name: 'TimeoutError'
+}
+
+Node.js v24.16.0

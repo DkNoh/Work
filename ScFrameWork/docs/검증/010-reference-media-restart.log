@@ -1,0 +1,5 @@
+PASS session/CSRF creation of independent H2 author/menu/screen
+PASS actual PNG/normalized box/PDF metadata and original bytes persisted
+PASS same isolated H2/uploads clean restart preserved identity/detail/revision/version/bytes
+PASS author-only committed deletion/file404/PDF cleanup with unchanged image
+PASS normal final shutdown keeps durable image and prints no synthetic credential

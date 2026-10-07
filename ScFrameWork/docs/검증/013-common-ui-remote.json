@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "origin": "http://100.120.61.117:18083",
+  "businessWrites": 0,
+  "views": [
+    {
+      "page": "dashboard",
+      "width": 1440,
+      "kpiCards": 4,
+      "sharedTable": true,
+      "sharedIconButton": true
+    },
+    {
+      "page": "patterns",
+      "width": 1440,
+      "buttonHeights": [
+        32,
+        38,
+        44
+      ],
+      "overflow": false
+    },
+    {
+      "page": "patterns",
+      "width": 390,
+      "buttonHeights": [
+        32,
+        38,
+        44
+      ],
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "axe": [
+    {
+      "label": "remote-dashboard-desktop",
+      "violations": [],
+      "incompleteRules": 2
+    },
+    {
+      "label": "remote-patterns-1440",
+      "violations": [],
+      "incompleteRules": 2
+    },
+    {
+      "label": "remote-patterns-390",
+      "violations": [],
+      "incompleteRules": 2
+    }
+  ],
+  "loginStatus": 204
+}

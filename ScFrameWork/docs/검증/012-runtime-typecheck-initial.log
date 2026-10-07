@@ -1,0 +1,4 @@
+
+> @sc/runtime@0.2.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+

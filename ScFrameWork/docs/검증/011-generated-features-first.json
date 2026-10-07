@@ -1,0 +1,34 @@
+{
+  "passed": false,
+  "groups": [
+    {
+      "name": "profile and PID process ownership guards",
+      "passed": true,
+      "invalidProfileRejected": true,
+      "non600SecretRejected": true,
+      "unrelatedPidPreserved": true,
+      "malformedPidRejected": true,
+      "symlinkPidPreserved": true
+    },
+    {
+      "name": "default prod OFF",
+      "passed": false
+    }
+  ],
+  "groupsPassed": 1,
+  "failure": {
+    "phase": "default prod OFF",
+    "exceptionType": "AssertionError",
+    "message": "Launcher does not own exactly one selected JAR child"
+  },
+  "jarSha256": "7691cd20561efba5be787fa6a8dd2a1564f270317a0e49603d02910ad8479302",
+  "selectedProfileGroups": 6,
+  "defaultOffGroups": 1,
+  "temporaryDataRemoved": true,
+  "auditInspection": "stopped private H2 counts only; no HTTP audit controller",
+  "normalShutdownOnly": true,
+  "crashRecoveryVerified": false,
+  "npmInstallExecuted": false,
+  "mavenExecuted": false,
+  "browserExecuted": false
+}

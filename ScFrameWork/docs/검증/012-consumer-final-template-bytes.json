@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "freshGeneration": "012-consumer-create-final.log",
+  "newConsumer": "/private/tmp/sc-framework-consumer-012-final-20261007",
+  "executableBuildRepeated": false,
+  "purpose": "Verify fresh template provenance and the exact BrowserPanel bytes tested in repaired independent consumer; prior server/API evidence remains distinct",
+  "file": "frontend/src/features/operations/BrowserPanel.vue",
+  "freshSha256": "26b0175ff496c29acdd6b357babcc9fba069e3a4a562124c13a63fd75a5347b9",
+  "testedSha256": "26b0175ff496c29acdd6b357babcc9fba069e3a4a562124c13a63fd75a5347b9"
+}

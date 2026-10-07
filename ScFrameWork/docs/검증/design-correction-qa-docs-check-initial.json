@@ -1,0 +1,9 @@
+{
+  "format": 1,
+  "passed": false,
+  "exitCode": 1,
+  "failureCode": "DOC_CHECK_ARCHIVE_FIELD_NAME",
+  "detail": "Read-only documentation checker expected unit.tests, but the generated historical archive uses a different field. Product/source/records were not modified by this failed assertion.",
+  "initialDraftWriterFailure": "A large Python here-document failed UTF-8 source parsing before execution; smaller apply_patch edits replaced it.",
+  "sourceEdited": false
+}

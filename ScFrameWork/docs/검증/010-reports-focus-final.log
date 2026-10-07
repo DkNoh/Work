@@ -1,0 +1,12 @@
+
+Running 5 tests using 1 worker
+
+(node:19931) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 frontend/e2e-reports/requirements-report.spec.ts:163:1 › 10,000개 실제 H2 보고서의 첫·중간·끝 페이지/count·다중 자식 집계·정렬·literal 조건을 확인한다 (2.0s)
+  ✓  2 frontend/e2e-reports/requirements-report.spec.ts:222:1 › 일반 사용자 보고서는 타인 DRAFT와 자식 집계를 모든 페이지/count/stats에서 제외한다 (524ms)
+  ✓  3 frontend/e2e-reports/requirements-report.spec.ts:248:1 › 보고서 500 재조회·재시도는 작성 중 조건/선택/URL을 보존하고 이전 조건의 늦은 응답을 폐기한다 (2.6s)
+  ✓  4 frontend/e2e-reports/requirements-report.spec.ts:431:3 › 10k 보고서 390px의 global ARIA·가상 DOM/focus·일반표·URL·한영·전체 DOM 접근성 (10.4s)
+  ✓  5 frontend/e2e-reports/requirements-report.spec.ts:431:3 › 10k 보고서 1366px의 global ARIA·가상 DOM/focus·일반표·URL·한영·전체 DOM 접근성 (12.3s)
+
+  5 passed (37.3s)

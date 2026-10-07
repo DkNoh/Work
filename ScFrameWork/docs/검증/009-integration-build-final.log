@@ -1,0 +1,38 @@
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated lodash.isequal@4.5.0: This package is deprecated. Use require('node:util').isDeepStrictEqual instead.
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated fstream@1.0.12: This package is no longer supported.
+
+added 694 packages in 4s
+
+> sc-framework@0.1.0 verify
+> npm run format:check && npm run lint && npm run api:check && npm run ui:contracts:check && npm run ui:boundaries:check && npm run visual:manifest:check && npm run typecheck && npm run test:unit && npm run build
+
+
+> sc-framework@0.1.0 format:check
+> prettier --check .
+
+Checking formatting...
+[warn] frontend/test-results-reports/.last-run.json
+[warn] frontend/test-results-reports/requirements-report-10k-보고-4fcdc-focus·일반표·URL·한영·전체-DOM-접근성/attachments/report-1366-en-standard-alternative-axe-json-5ebda2a1b72a7c6ff8ac674adb70bf36febf2fb3.json
+[warn] frontend/test-results-reports/requirements-report-10k-보고-4fcdc-focus·일반표·URL·한영·전체-DOM-접근성/attachments/report-1366-en-virtual-axe-json-10c5a1cc13310ff724a91fff2f7cfbcec30c1e93.json
+[warn] frontend/test-results-reports/requirements-report-10k-보고-4fcdc-focus·일반표·URL·한영·전체-DOM-접근성/attachments/report-1366-ko-standard-axe-json-f2aa8398ff4f8892df524bc91a8128ceb932d6c1.json
+[warn] frontend/test-results-reports/requirements-report-10k-보고-4fcdc-focus·일반표·URL·한영·전체-DOM-접근성/attachments/report-1366-ko-virtual-axe-json-9f986a0510fa36d47dbc29c1d762742aa3450789.json
+[warn] frontend/test-results-reports/requirements-report-10k-보고-4fcdc-focus·일반표·URL·한영·전체-DOM-접근성/report-1366-en-standard-alternative-axe.json
+[warn] frontend/test-results-reports/requirements-report-10k-보고-4fcdc-focus·일반표·URL·한영·전체-DOM-접근성/report-1366-en-virtual-axe.json
+[warn] frontend/test-results-reports/requirements-report-10k-보고-4fcdc-focus·일반표·URL·한영·전체-DOM-접근성/report-1366-ko-standard-axe.json
+[warn] frontend/test-results-reports/requirements-report-10k-보고-4fcdc-focus·일반표·URL·한영·전체-DOM-접근성/report-1366-ko-virtual-axe.json
+[warn] frontend/test-results-reports/requirements-report-10k-보고-c6239-focus·일반표·URL·한영·전체-DOM-접근성/attachments/report-390-en-standard-alternative-axe-json-d9e940d512b953d00ef605c809da9b4896001055.json
+[warn] frontend/test-results-reports/requirements-report-10k-보고-c6239-focus·일반표·URL·한영·전체-DOM-접근성/attachments/report-390-en-virtual-axe-json-3882ce52a4377def753afe8ecc53e98290e9d3c2.json
+[warn] frontend/test-results-reports/requirements-report-10k-보고-c6239-focus·일반표·URL·한영·전체-DOM-접근성/attachments/report-390-ko-standard-axe-json-e621ac9ba9947aae6c3be08b1c34132a4d7fc1c0.json
+[warn] frontend/test-results-reports/requirements-report-10k-보고-c6239-focus·일반표·URL·한영·전체-DOM-접근성/attachments/report-390-ko-virtual-axe-json-8eb1b328cc16deff7d392176ea578017319d3e26.json
+[warn] frontend/test-results-reports/requirements-report-10k-보고-c6239-focus·일반표·URL·한영·전체-DOM-접근성/report-390-en-standard-alternative-axe.json
+[warn] frontend/test-results-reports/requirements-report-10k-보고-c6239-focus·일반표·URL·한영·전체-DOM-접근성/report-390-en-virtual-axe.json
+[warn] frontend/test-results-reports/requirements-report-10k-보고-c6239-focus·일반표·URL·한영·전체-DOM-접근성/report-390-ko-standard-axe.json
+[warn] frontend/test-results-reports/requirements-report-10k-보고-c6239-focus·일반표·URL·한영·전체-DOM-접근성/report-390-ko-virtual-axe.json
+[warn] frontend/test-results-reports/requirements-report-보고서-50-b8d19-RL을-보존하고-이전-조건의-늦은-응답을-폐기한다/attachments/report-refresh-failed-axe-json-618fd4280b4f0ee0463b2cc347091d14fbe9deeb.json
+[warn] frontend/test-results-reports/requirements-report-보고서-50-b8d19-RL을-보존하고-이전-조건의-늦은-응답을-폐기한다/report-refresh-failed-axe.json
+[warn] Code style issues found in 19 files. Run Prettier with --write to fix.

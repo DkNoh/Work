@@ -1,0 +1,6 @@
+{
+  "rows" : [ 1, 100 ],
+  "emptyJpaStatementsIncludingActor" : 3,
+  "mybatisReportStatements" : 2,
+  "jpaStatementsIncludingActor" : [ 5, 5 ]
+}

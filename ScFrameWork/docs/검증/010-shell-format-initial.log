@@ -1,0 +1,33 @@
+frontend/packages/ui/src/board/contracts.ts 20ms (unchanged)
+frontend/packages/ui/src/board/helpers.spec.ts 8ms
+frontend/packages/ui/src/board/helpers.ts 6ms
+frontend/packages/ui/src/board/index.ts 1ms
+frontend/packages/ui/src/board/ScBoardColumn.vue 26ms
+frontend/packages/ui/src/board/ScBoardItem.vue 18ms
+frontend/packages/ui/src/board/ScSortableBoard.vue 24ms
+frontend/packages/ui/src/image/contracts.ts 2ms
+frontend/packages/ui/src/image/coordinates.spec.ts 2ms
+frontend/packages/ui/src/image/coordinates.ts 3ms
+frontend/packages/ui/src/image/index.ts 1ms
+frontend/packages/ui/src/image/ScImageAnnotator.vue 31ms
+frontend/packages/ui/package.json 1ms (unchanged)
+frontend/packages/excel/src/index.ts 8ms
+frontend/packages/excel/src/index.spec.ts 4ms
+frontend/apps/starter-app/src/features/patterns/board-image-labels.ts 1ms
+frontend/apps/starter-app/src/features/patterns/BoardPatterns.vue 6ms
+frontend/apps/starter-app/src/features/patterns/ImagePatterns.vue 4ms
+frontend/apps/starter-app/src/features/patterns/PatternsPage.vue 1ms (unchanged)
+frontend/apps/catalog/src/fixtures/ScSortableBoardStory.vue 7ms
+frontend/apps/catalog/src/fixtures/ScImageAnnotatorStory.vue 4ms
+frontend/apps/catalog/src/ScSortableBoard.stories.ts 4ms
+frontend/apps/catalog/src/ScImageAnnotator.stories.ts 4ms
+frontend/apps/reference-app/src/features/kanban/api.ts 3ms
+frontend/apps/reference-app/src/features/kanban/BoardsPanel.vue 7ms
+frontend/apps/reference-app/src/features/kanban/KanbanFilters.vue 8ms
+frontend/apps/reference-app/src/features/kanban/KanbanMembers.vue 4ms
+frontend/apps/reference-app/src/features/kanban/KanbanPage.vue 30ms
+frontend/apps/reference-app/src/features/kanban/messages.ts 2ms
+frontend/apps/reference-app/src/features/kanban/query.ts 3ms
+frontend/apps/reference-app/src/features/kanban/schema.ts 2ms
+frontend/apps/reference-app/src/features/kanban/TaskForm.vue 11ms
+frontend/apps/reference-app/src/features/kanban/TaskWorkbook.vue 13ms

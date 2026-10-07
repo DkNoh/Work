@@ -1,0 +1,832 @@
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated lodash.isequal@4.5.0: This package is deprecated. Use require('node:util').isDeepStrictEqual instead.
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated fstream@1.0.12: This package is no longer supported.
+
+added 694 packages in 5s
+
+> sc-framework@0.1.0 verify
+> npm run format:check && npm run lint && npm run api:check && npm run ui:contracts:check && npm run ui:boundaries:check && npm run typecheck && npm run test:unit && npm run build
+
+
+> sc-framework@0.1.0 format:check
+> prettier --check .
+
+Checking formatting...
+All matched files use Prettier code style!
+
+> sc-framework@0.1.0 lint
+> eslint frontend scripts --max-warnings 0
+
+
+> sc-framework@0.1.0 api:check
+> node scripts/openapi-types.mjs --check
+
+neutral compatibility: OpenAPI 명세와 생성 타입 일치
+reference: OpenAPI 명세와 생성 타입 일치
+starter: OpenAPI 명세와 생성 타입 일치
+
+> sc-framework@0.1.0 ui:contracts:check
+> node scripts/ui-contracts.mjs --check
+
+공개 UI 20개: imported props/events/slots/default 계약 일치
+
+> sc-framework@0.1.0 ui:boundaries:check
+> node scripts/check-ui-boundaries.mjs
+
+공개 UI/소비 앱 경계: import 704개 확인
+
+> sc-framework@0.1.0 typecheck
+> npm run typecheck --workspace @sc/date && npm run typecheck --workspace @sc/i18n && npm run typecheck --workspace @sc/excel && npm run typecheck --workspace @sc/ui && npm run typecheck --workspace @sc/runtime && npm run typecheck --workspace @sc/reference-app && npm run typecheck --workspace @sc/starter-app && npm run typecheck --workspace @sc/catalog && npm run typecheck:e2e
+
+
+> @sc/date@0.1.0 typecheck
+> tsc --noEmit -p tsconfig.json
+
+
+> @sc/i18n@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/excel@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/ui@0.1.0 typecheck
+> npm run tokens:check && vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/ui@0.1.0 tokens:check
+> node scripts/generate-tokens.mjs --check
+
+Design token CSS matches tokens.ts.
+
+> @sc/runtime@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/reference-app@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/starter-app@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/catalog@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> sc-framework@0.1.0 typecheck:e2e
+> tsc --noEmit -p frontend/tsconfig.e2e.json
+
+
+> sc-framework@0.1.0 test:unit
+> vitest run --config vitest.config.ts
+
+
+ RUN  v4.1.11 /Users/dk/Work/ScFramework
+
+
+ Test Files  23 passed (23)
+      Tests  108 passed (108)
+   Start at  00:16:40
+   Duration  2.15s (transform 12.37s, setup 0ms, import 18.20s, tests 796ms, environment 3.56s)
+
+
+> sc-framework@0.1.0 build
+> npm run build --workspace @sc/date && npm run build --workspace @sc/i18n && npm run build --workspace @sc/excel && npm run build --workspace @sc/ui && npm run build --workspace @sc/runtime && npm run build --workspace @sc/reference-app && npm run build --workspace @sc/starter-app
+
+
+> @sc/date@0.1.0 build
+> npm run typecheck
+
+
+> @sc/date@0.1.0 typecheck
+> tsc --noEmit -p tsconfig.json
+
+
+> @sc/i18n@0.1.0 build
+> npm run typecheck
+
+
+> @sc/i18n@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/excel@0.1.0 build
+> npm run typecheck
+
+
+> @sc/excel@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/ui@0.1.0 build
+> npm run typecheck
+
+
+> @sc/ui@0.1.0 typecheck
+> npm run tokens:check && vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/ui@0.1.0 tokens:check
+> node scripts/generate-tokens.mjs --check
+
+Design token CSS matches tokens.ts.
+
+> @sc/runtime@0.1.0 build
+> npm run typecheck
+
+
+> @sc/runtime@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/reference-app@0.1.0 build
+> vue-tsc --noEmit -p tsconfig.json && vite build
+
+vite v8.3.1 building client environment for production...
+transforming...
+✓ 1803 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                    0.56 kB │ gzip:   0.33 kB
+dist/assets/RequirementsPage-B5Vbbmy8.css          0.27 kB │ gzip:   0.20 kB
+dist/assets/RequirementWorkspace-dPY6yZ-e.css      1.09 kB │ gzip:   0.43 kB
+dist/assets/ScTextArea-BgpqzF2n.css                3.10 kB │ gzip:   0.77 kB
+dist/assets/PatternsPage-BF-wkgSB.css              8.06 kB │ gzip:   1.47 kB
+dist/assets/ScSelect-BGJu9vpf.css                 37.29 kB │ gzip:   5.65 kB
+dist/assets/vue-i18n-CWXBLfed.css                 58.41 kB │ gzip:   8.76 kB
+dist/assets/index-CE1cfFJM.css                   217.11 kB │ gzip:  33.18 kB
+dist/assets/RequirementsPage-Ci0rj9N0.js           4.83 kB │ gzip:   1.97 kB
+dist/assets/ScTextArea-BFUyV3-Q.js                10.08 kB │ gzip:   3.57 kB
+dist/assets/query-C1XdRVy4.js                     17.36 kB │ gzip:   6.65 kB
+dist/assets/RequirementWorkspace-BHVPCY6s.js      22.66 kB │ gzip:   6.44 kB
+dist/assets/ScSelect-DamHq5M0.js                 127.92 kB │ gzip:  42.70 kB
+dist/assets/index-Cd7qTPj4.js                    248.02 kB │ gzip:  80.70 kB
+dist/assets/vue-i18n-DmqYYGtx.js                 393.56 kB │ gzip: 138.95 kB
+dist/assets/PatternsPage-BKT8z-i0.js           1,934.55 kB │ gzip: 588.73 kB
+
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 722ms
+
+> @sc/starter-app@0.1.0 build
+> vue-tsc --noEmit -p tsconfig.json && vite build
+
+vite v8.3.1 building client environment for production...
+transforming...
+✓ 1778 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                               0.49 kB │ gzip:   0.30 kB
+dist/assets/PatternsPage-DtGcNS1v.css        53.73 kB │ gzip:   7.86 kB
+dist/assets/index-Bv8SeL7s.css              269.22 kB │ gzip:  39.47 kB
+dist/assets/rolldown-runtime-Dd_uD5pT.js      1.10 kB │ gzip:   0.62 kB
+dist/assets/index-DSpjGeSH.js               456.56 kB │ gzip: 163.01 kB
+dist/assets/PatternsPage-CyAlQ0Gx.js      2,257.28 kB │ gzip: 688.36 kB
+
+✓ built in 480ms
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] ScFramework backend                                                [pom]
+[INFO] ScFramework core contracts                                         [jar]
+[INFO] ScFramework auto configuration                                     [jar]
+[INFO] ScFramework Spring Boot Starter                                    [jar]
+[INFO] ScFramework neutral reference app                                  [jar]
+[INFO] ScFramework minimal consumer app                                   [jar]
+[INFO] 
+[INFO] ----------------< dev.scframework:sc-framework-parent >-----------------
+[INFO] Building ScFramework backend 0.1.0-SNAPSHOT                        [1/6]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ sc-framework-parent ---
+[INFO] 
+[INFO] -------------------< dev.scframework:framework-core >-------------------
+[INFO] Building ScFramework core contracts 0.1.0-SNAPSHOT                 [2/6]
+[INFO]   from framework-core/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ framework-core ---
+[INFO] Deleting /Users/dk/Work/ScFramework/backend/framework-core/target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ framework-core ---
+[INFO] skip non existing resourceDirectory /Users/dk/Work/ScFramework/backend/framework-core/src/main/resources
+[INFO] skip non existing resourceDirectory /Users/dk/Work/ScFramework/backend/framework-core/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ framework-core ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 6 source files with javac [debug parameters release 21] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ framework-core ---
+[INFO] skip non existing resourceDirectory /Users/dk/Work/ScFramework/backend/framework-core/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ framework-core ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 2 source files with javac [debug parameters release 21] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ framework-core ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running dev.scframework.core.ApiErrorTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s -- in dev.scframework.core.ApiErrorTest
+[INFO] Running dev.scframework.core.audit.SecurityAuditEventTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in dev.scframework.core.audit.SecurityAuditEventTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ framework-core ---
+[INFO] Building jar: /Users/dk/Work/ScFramework/backend/framework-core/target/framework-core-0.1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --------------< dev.scframework:framework-autoconfigure >---------------
+[INFO] Building ScFramework auto configuration 0.1.0-SNAPSHOT             [3/6]
+[INFO]   from framework-autoconfigure/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ framework-autoconfigure ---
+[INFO] Deleting /Users/dk/Work/ScFramework/backend/framework-autoconfigure/target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ framework-autoconfigure ---
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ framework-autoconfigure ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 16 source files with javac [debug parameters release 21] to target/classes
+[INFO] Annotation processing is enabled because one or more processors were found
+  on the class path. A future release of javac may disable annotation processing
+  unless at least one processor is specified by name (-processor), or a search
+  path is specified (--processor-path, --processor-module-path), or annotation
+  processing is enabled explicitly (-proc:only, -proc:full).
+  Use -Xlint:-options to suppress this message.
+  Use -proc:none to disable annotation processing.
+[INFO] /Users/dk/Work/ScFramework/backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/ScOpenApiAutoConfiguration.java: /Users/dk/Work/ScFramework/backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/ScOpenApiAutoConfiguration.java uses unchecked or unsafe operations.
+[INFO] /Users/dk/Work/ScFramework/backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/ScOpenApiAutoConfiguration.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ framework-autoconfigure ---
+[INFO] skip non existing resourceDirectory /Users/dk/Work/ScFramework/backend/framework-autoconfigure/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ framework-autoconfigure ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 6 source files with javac [debug parameters release 21] to target/test-classes
+[INFO] Annotation processing is enabled because one or more processors were found
+  on the class path. A future release of javac may disable annotation processing
+  unless at least one processor is specified by name (-processor), or a search
+  path is specified (--processor-path, --processor-module-path), or annotation
+  processing is enabled explicitly (-proc:only, -proc:full).
+  Use -Xlint:-options to suppress this message.
+  Use -proc:none to disable annotation processing.
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ framework-autoconfigure ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running dev.scframework.autoconfigure.RequestIdFilterTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.062 s -- in dev.scframework.autoconfigure.RequestIdFilterTest
+[INFO] Running dev.scframework.autoconfigure.SecurityAuditTransactionTest
+00:16:58.027 [main] WARN dev.scframework.autoconfigure.audit.AuditWriteDiagnostics -- Security audit write failed; reasonCode=AUDIT_SINK_FAILURE
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.110 s -- in dev.scframework.autoconfigure.SecurityAuditTransactionTest
+[INFO] Running dev.scframework.autoconfigure.SecurityOverrideTest
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+WARNING: A Java agent has been loaded dynamically (/Users/dk/.m2/repository/net/bytebuddy/byte-buddy-agent/1.17.8/byte-buddy-agent-1.17.8.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+00:16:58.913 [main] WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebApplicationContext -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'scRequiredUserDetailsService' defined in dev.scframework.autoconfigure.ScSecurityAutoConfiguration: Failed to instantiate [org.springframework.security.core.userdetails.UserDetailsService]: Factory method 'scRequiredUserDetailsService' threw exception with message: Supply a UserDetailsService; generated/default passwords are disabled
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.846 s -- in dev.scframework.autoconfigure.SecurityOverrideTest
+[INFO] Running dev.scframework.autoconfigure.AuditAutoConfigurationTest
+00:16:59.011 [main] WARN org.springframework.context.annotation.AnnotationConfigApplicationContext -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'scSecurityAuditPublisher' defined in dev.scframework.autoconfigure.ScAuditAutoConfiguration: Unsatisfied dependency expressed through method 'scSecurityAuditPublisher' parameter 0: No qualifying bean of type 'dev.scframework.core.audit.SecurityAuditSink' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.146 s -- in dev.scframework.autoconfigure.AuditAutoConfigurationTest
+[INFO] Running dev.scframework.autoconfigure.HealthReadinessTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.026 s -- in dev.scframework.autoconfigure.HealthReadinessTest
+[INFO] Running dev.scframework.autoconfigure.SecretFileUsersTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.133 s -- in dev.scframework.autoconfigure.SecretFileUsersTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ framework-autoconfigure ---
+[INFO] Building jar: /Users/dk/Work/ScFramework/backend/framework-autoconfigure/target/framework-autoconfigure-0.1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] -----------< dev.scframework:framework-spring-boot-starter >------------
+[INFO] Building ScFramework Spring Boot Starter 0.1.0-SNAPSHOT            [4/6]
+[INFO]   from framework-spring-boot-starter/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ framework-spring-boot-starter ---
+[INFO] Deleting /Users/dk/Work/ScFramework/backend/framework-spring-boot-starter/target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ framework-spring-boot-starter ---
+[INFO] skip non existing resourceDirectory /Users/dk/Work/ScFramework/backend/framework-spring-boot-starter/src/main/resources
+[INFO] skip non existing resourceDirectory /Users/dk/Work/ScFramework/backend/framework-spring-boot-starter/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ framework-spring-boot-starter ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ framework-spring-boot-starter ---
+[INFO] skip non existing resourceDirectory /Users/dk/Work/ScFramework/backend/framework-spring-boot-starter/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ framework-spring-boot-starter ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ framework-spring-boot-starter ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ framework-spring-boot-starter ---
+[WARNING] JAR will be empty - no content was marked for inclusion!
+[INFO] Building jar: /Users/dk/Work/ScFramework/backend/framework-spring-boot-starter/target/framework-spring-boot-starter-0.1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] ------------------< dev.scframework:sc-reference-app >------------------
+[INFO] Building ScFramework neutral reference app 0.1.0-SNAPSHOT          [5/6]
+[INFO]   from reference-app/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ sc-reference-app ---
+[INFO] Deleting /Users/dk/Work/ScFramework/backend/reference-app/target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ sc-reference-app ---
+[INFO] Copying 5 resources from src/main/resources to target/classes
+[INFO] Copying 16 resources from ../../frontend/apps/reference-app/dist to target/classes/static
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ sc-reference-app ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 36 source files with javac [debug parameters release 21] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ sc-reference-app ---
+[INFO] skip non existing resourceDirectory /Users/dk/Work/ScFramework/backend/reference-app/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ sc-reference-app ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 6 source files with javac [debug parameters release 21] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ sc-reference-app ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running dev.scframework.reference.H2PersistenceTest
+00:17:00.225 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:h2:file:/var/folders/8k/rv4bxj0115g929lrxwybv_r80000gn/T/junit-17760479638292373013/isolated-reference (H2 2.3)
+00:17:00.240 [main] INFO org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory -- Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+00:17:00.241 [main] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 3 migrations (execution time 00:00.005s)
+00:17:00.244 [main] INFO org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory -- Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+00:17:00.257 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema "PUBLIC": << Empty Schema >>
+00:17:00.261 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Migrating schema "PUBLIC" to version "1 - example baseline"
+00:17:00.272 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Migrating schema "PUBLIC" to version "2 - requirements baseline"
+00:17:00.284 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Migrating schema "PUBLIC" to version "3 - security audit"
+00:17:00.290 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Successfully applied 3 migrations to schema "PUBLIC", now at version v3 (execution time 00:00.012s)
+00:17:00.351 [main] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 3 migrations (execution time 00:00.001s)
+00:17:00.352 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema "PUBLIC": 3
+00:17:00.352 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema "PUBLIC" is up to date. No migration necessary.
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.413 s -- in dev.scframework.reference.H2PersistenceTest
+[INFO] Running dev.scframework.reference.requirements.RequirementIntegrationTest
+00:17:00.508 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration dev.scframework.reference.ReferenceApplication for test class dev.scframework.reference.requirements.RequirementIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.16)
+
+2026-10-07T00:17:00.707+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] d.s.r.r.RequirementIntegrationTest       : Starting RequirementIntegrationTest using Java 21.0.11 with PID 62874 (started by dk in /Users/dk/Work/ScFramework/backend/reference-app)
+2026-10-07T00:17:00.708+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] d.s.r.r.RequirementIntegrationTest       : No active profile set, falling back to 1 default profile: "default"
+2026-10-07T00:17:01.033+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-07T00:17:01.053+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 7 JPA repository interfaces.
+2026-10-07T00:17:01.130+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d56dcb7b-0903-3da6-a9d0-04cf4c9a9dda
+2026-10-07T00:17:01.225+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-07T00:17:01.230+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn6: url=jdbc:h2:mem:requirements-sc-requirements-007-8171524586177397848 user=SA
+2026-10-07T00:17:01.231+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-07T00:17:01.235+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:requirements-sc-requirements-007-8171524586177397848 (H2 2.3)
+2026-10-07T00:17:01.237+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2026-10-07T00:17:01.238+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.001s)
+2026-10-07T00:17:01.238+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-10-07T00:17:01.241+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2026-10-07T00:17:01.242+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - example baseline"
+2026-10-07T00:17:01.246+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - requirements baseline"
+2026-10-07T00:17:01.253+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "3 - security audit"
+2026-10-07T00:17:01.256+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 3 migrations to schema "PUBLIC", now at version v3 (execution time 00:00.005s)
+2026-10-07T00:17:01.290+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-10-07T00:17:01.307+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.53.Final
+2026-10-07T00:17:01.317+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-10-07T00:17:01.403+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-07T00:17:01.424+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-07T00:17:01.717+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-07T00:17:01.724+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-07T00:17:02.033+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-10-07T00:17:02.117+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name referenceUsers
+2026-10-07T00:17:02.176+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-07T00:17:02.251+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-07T00:17:02.251+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-07T00:17:02.252+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-10-07T00:17:02.285+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] d.s.r.r.RequirementIntegrationTest       : Started RequirementIntegrationTest in 1.697 seconds (process running for 2.47)
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+WARNING: A Java agent has been loaded dynamically (/Users/dk/.m2/repository/net/bytebuddy/byte-buddy-agent/1.17.8/byte-buddy-agent-1.17.8.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+2026-10-07T00:17:03.605+09:00  WARN [requestId:c1de0a53-c96a-4a93-8a76-5d65f3e49246] 62874 --- [sc-reference-app] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 23513, SQLState: 23513
+2026-10-07T00:17:03.605+09:00 ERROR [requestId:c1de0a53-c96a-4a93-8a76-5d65f3e49246] 62874 --- [sc-reference-app] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Check constraint violation: "SYNTHETIC_REVIEW_FAILURE: "; SQL statement:
+insert into requirement_history (action,actor_id,after_json,before_json,created_at,requirement_id,id) values (?,?,?,?,?,?,default) [23513-232]
+2026-10-07T00:17:04.088+09:00  WARN [requestId:f71df330-ed49-4c06-bb2f-40902af21c87] 62874 --- [sc-reference-app] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 23513, SQLState: 23513
+2026-10-07T00:17:04.088+09:00 ERROR [requestId:f71df330-ed49-4c06-bb2f-40902af21c87] 62874 --- [sc-reference-app] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Check constraint violation: "SYNTHETIC_HISTORY_FAILURE: "; SQL statement:
+insert into requirement_history (action,actor_id,after_json,before_json,created_at,requirement_id,id) values (?,?,?,?,?,?,default) [23513-232]
+2026-10-07T00:17:05.995+09:00  WARN [requestId:460671a3-b0e1-4bb6-a197-2c86a36c2a75] 62874 --- [sc-reference-app] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 23505, SQLState: 23505
+2026-10-07T00:17:05.996+09:00 ERROR [requestId:460671a3-b0e1-4bb6-a197-2c86a36c2a75] 62874 --- [sc-reference-app] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unique index or primary key violation: "PUBLIC.CONSTRAINT_INDEX_E ON PUBLIC.REFERENCE_USER(USERNAME NULLS FIRST) VALUES ( /* 17 */ 'alice' )"; SQL statement:
+insert into reference_user (created_at,display_name,password_hash,role,username,id) values (?,?,?,?,?,default) [23505-232]
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.89 s -- in dev.scframework.reference.requirements.RequirementIntegrationTest
+[INFO] Running dev.scframework.reference.requirements.RequirementPersistenceTest
+2026-10-07T00:17:11.323+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:file:/var/folders/8k/rv4bxj0115g929lrxwybv_r80000gn/T/junit-11818139967462752639/upgrade (H2 2.3)
+2026-10-07T00:17:11.324+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2026-10-07T00:17:11.325+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.000s)
+2026-10-07T00:17:11.325+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-10-07T00:17:11.326+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2026-10-07T00:17:11.327+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - example baseline"
+2026-10-07T00:17:11.328+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "PUBLIC", now at version v1 (execution time 00:00.000s)
+2026-10-07T00:17:11.350+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:file:/var/folders/8k/rv4bxj0115g929lrxwybv_r80000gn/T/junit-11818139967462752639/upgrade (H2 2.3)
+2026-10-07T00:17:11.351+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.000s)
+2026-10-07T00:17:11.352+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": 1
+2026-10-07T00:17:11.353+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - requirements baseline"
+2026-10-07T00:17:11.356+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "3 - security audit"
+2026-10-07T00:17:11.357+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PUBLIC", now at version v3 (execution time 00:00.001s)
+2026-10-07T00:17:11.401+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:file:/var/folders/8k/rv4bxj0115g929lrxwybv_r80000gn/T/junit-11818139967462752639/upgrade (H2 2.3)
+2026-10-07T00:17:11.403+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.000s)
+2026-10-07T00:17:11.403+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": 3
+2026-10-07T00:17:11.403+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbMigrate      : Schema "PUBLIC" is up to date. No migration necessary.
+2026-10-07T00:17:11.468+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:file:/var/folders/8k/rv4bxj0115g929lrxwybv_r80000gn/T/junit-7147363795817062311/constraints (H2 2.3)
+2026-10-07T00:17:11.469+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2026-10-07T00:17:11.469+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.000s)
+2026-10-07T00:17:11.469+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-10-07T00:17:11.470+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2026-10-07T00:17:11.471+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - example baseline"
+2026-10-07T00:17:11.472+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - requirements baseline"
+2026-10-07T00:17:11.474+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "3 - security audit"
+2026-10-07T00:17:11.475+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 3 migrations to schema "PUBLIC", now at version v3 (execution time 00:00.001s)
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.174 s -- in dev.scframework.reference.requirements.RequirementPersistenceTest
+[INFO] Running dev.scframework.reference.audit.AuditSinkFailureHttpTest
+2026-10-07T00:17:11.495+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [dev.scframework.reference.audit.AuditSinkFailureHttpTest]: AuditSinkFailureHttpTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-07T00:17:11.499+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration dev.scframework.reference.ReferenceApplication for test class dev.scframework.reference.audit.AuditSinkFailureHttpTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.16)
+
+2026-10-07T00:17:11.515+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] d.s.r.audit.AuditSinkFailureHttpTest     : Starting AuditSinkFailureHttpTest using Java 21.0.11 with PID 62874 (started by dk in /Users/dk/Work/ScFramework/backend/reference-app)
+2026-10-07T00:17:11.515+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] d.s.r.audit.AuditSinkFailureHttpTest     : No active profile set, falling back to 1 default profile: "default"
+2026-10-07T00:17:11.599+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-07T00:17:11.603+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 7 JPA repository interfaces.
+2026-10-07T00:17:11.615+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=416d77bd-6dee-3aeb-b127-705c6082cee3
+2026-10-07T00:17:11.783+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-10-07T00:17:11.785+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn23: url=jdbc:h2:mem:audit-http-sc-audit-http-13171470659878527551 user=SA
+2026-10-07T00:17:11.786+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-10-07T00:17:11.789+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:audit-http-sc-audit-http-13171470659878527551 (H2 2.3)
+2026-10-07T00:17:11.795+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2026-10-07T00:17:11.796+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.002s)
+2026-10-07T00:17:11.796+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-10-07T00:17:11.803+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2026-10-07T00:17:11.806+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - example baseline"
+2026-10-07T00:17:11.812+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - requirements baseline"
+2026-10-07T00:17:11.825+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "3 - security audit"
+2026-10-07T00:17:11.830+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 3 migrations to schema "PUBLIC", now at version v3 (execution time 00:00.014s)
+2026-10-07T00:17:11.850+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-10-07T00:17:11.851+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-10-07T00:17:11.857+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-07T00:17:11.858+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-07T00:17:11.928+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-07T00:17:11.930+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-07T00:17:12.050+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-10-07T00:17:12.079+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name referenceUsers
+2026-10-07T00:17:12.095+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-07T00:17:12.116+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-07T00:17:12.116+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-07T00:17:12.116+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-10-07T00:17:12.136+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] d.s.r.audit.AuditSinkFailureHttpTest     : Started AuditSinkFailureHttpTest in 0.634 seconds (process running for 12.32)
+2026-10-07T00:17:12.295+09:00  WARN [requestId:ad157066-db6c-4073-bf8e-20edab21625a] 62874 --- [sc-reference-app] [           main] d.s.a.audit.AuditWriteDiagnostics        : Security audit write failed; reasonCode=AUDIT_SINK_FAILURE
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.809 s -- in dev.scframework.reference.audit.AuditSinkFailureHttpTest
+[INFO] Running dev.scframework.reference.audit.AuditControllerTest
+2026-10-07T00:17:12.306+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [dev.scframework.reference.audit.AuditControllerTest]: AuditControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-07T00:17:12.307+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration dev.scframework.reference.ReferenceApplication for test class dev.scframework.reference.audit.AuditControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.16)
+
+2026-10-07T00:17:12.334+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] d.s.reference.audit.AuditControllerTest  : Starting AuditControllerTest using Java 21.0.11 with PID 62874 (started by dk in /Users/dk/Work/ScFramework/backend/reference-app)
+2026-10-07T00:17:12.334+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] d.s.reference.audit.AuditControllerTest  : The following 1 profile is active: "dev"
+2026-10-07T00:17:12.485+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-07T00:17:12.490+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 7 JPA repository interfaces.
+2026-10-07T00:17:12.503+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ac7947f0-e3a6-39be-9af3-55d208c69e24
+2026-10-07T00:17:12.525+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-10-07T00:17:12.527+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn28: url=jdbc:h2:mem:reference-audit-sc-reference-audit-16634308919667693833 user=SA
+2026-10-07T00:17:12.527+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-10-07T00:17:12.528+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:reference-audit-sc-reference-audit-16634308919667693833 (H2 2.3)
+2026-10-07T00:17:12.529+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2026-10-07T00:17:12.529+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.000s)
+2026-10-07T00:17:12.530+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-10-07T00:17:12.532+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2026-10-07T00:17:12.533+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - example baseline"
+2026-10-07T00:17:12.536+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - requirements baseline"
+2026-10-07T00:17:12.542+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "3 - security audit"
+2026-10-07T00:17:12.545+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 3 migrations to schema "PUBLIC", now at version v3 (execution time 00:00.006s)
+2026-10-07T00:17:12.551+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-10-07T00:17:12.551+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-10-07T00:17:12.554+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-07T00:17:12.555+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-07T00:17:12.582+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-07T00:17:12.583+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-07T00:17:12.681+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-10-07T00:17:12.747+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name referenceUsers
+2026-10-07T00:17:12.758+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-07T00:17:12.796+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-07T00:17:12.796+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-07T00:17:12.796+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-10-07T00:17:12.810+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] d.s.reference.audit.AuditControllerTest  : Started AuditControllerTest in 0.499 seconds (process running for 12.994)
+2026-10-07T00:17:13.111+09:00  INFO [requestId:04ba6bfd-0f99-46ba-a4fa-2c25b9a35473] 62874 --- [sc-reference-app] [           main] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 168 ms
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.884 s -- in dev.scframework.reference.audit.AuditControllerTest
+[INFO] Running dev.scframework.reference.ReferenceIntegrationTest
+2026-10-07T00:17:13.190+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [dev.scframework.reference.ReferenceIntegrationTest]: ReferenceIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-07T00:17:13.192+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration dev.scframework.reference.ReferenceApplication for test class dev.scframework.reference.ReferenceIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.16)
+
+2026-10-07T00:17:13.220+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] d.s.reference.ReferenceIntegrationTest   : Starting ReferenceIntegrationTest using Java 21.0.11 with PID 62874 (started by dk in /Users/dk/Work/ScFramework/backend/reference-app)
+2026-10-07T00:17:13.220+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] d.s.reference.ReferenceIntegrationTest   : The following 1 profile is active: "dev"
+2026-10-07T00:17:13.298+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-07T00:17:13.302+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 7 JPA repository interfaces.
+2026-10-07T00:17:13.314+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7bdcacfd-ffb0-343c-82ae-1fa27773d1a7
+2026-10-07T00:17:13.367+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2026-10-07T00:17:13.373+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-07T00:17:13.373+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.55]
+2026-10-07T00:17:13.394+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-10-07T00:17:13.395+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 175 ms
+2026-10-07T00:17:13.423+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2026-10-07T00:17:13.424+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection conn33: url=jdbc:h2:mem:reference-b2b310d4-3d2d-4003-8533-2248012a7f34 user=SA
+2026-10-07T00:17:13.424+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2026-10-07T00:17:13.425+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:reference-b2b310d4-3d2d-4003-8533-2248012a7f34 (H2 2.3)
+2026-10-07T00:17:13.426+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2026-10-07T00:17:13.426+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.000s)
+2026-10-07T00:17:13.427+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-10-07T00:17:13.429+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2026-10-07T00:17:13.430+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - example baseline"
+2026-10-07T00:17:13.432+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - requirements baseline"
+2026-10-07T00:17:13.435+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "3 - security audit"
+2026-10-07T00:17:13.437+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 3 migrations to schema "PUBLIC", now at version v3 (execution time 00:00.003s)
+2026-10-07T00:17:13.441+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-10-07T00:17:13.442+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-10-07T00:17:13.444+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-07T00:17:13.445+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-4)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-07T00:17:13.465+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-07T00:17:13.466+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-07T00:17:13.512+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-10-07T00:17:13.529+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name referenceUsers
+2026-10-07T00:17:13.536+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-07T00:17:13.552+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
+2026-10-07T00:17:13.552+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-07T00:17:13.552+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-10-07T00:17:13.624+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 65108 (http) with context path '/'
+2026-10-07T00:17:13.629+09:00  INFO [requestId:] 62874 --- [sc-reference-app] [           main] d.s.reference.ReferenceIntegrationTest   : Started ReferenceIntegrationTest in 0.425 seconds (process running for 13.814)
+2026-10-07T00:17:13.784+09:00  INFO [requestId:f6a72443-9d72-4afd-82cd-f83360738ed2] 62874 --- [sc-reference-app] [           main] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 88 ms
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.990 s -- in dev.scframework.reference.ReferenceIntegrationTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 31, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ sc-reference-app ---
+[INFO] Building jar: /Users/dk/Work/ScFramework/backend/reference-app/target/sc-reference-app.jar
+[INFO] 
+[INFO] --- spring-boot:3.5.16:repackage (repackage) @ sc-reference-app ---
+[INFO] Replacing main artifact /Users/dk/Work/ScFramework/backend/reference-app/target/sc-reference-app.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /Users/dk/Work/ScFramework/backend/reference-app/target/sc-reference-app.jar.original
+[INFO] 
+[INFO] -------------------< dev.scframework:sc-starter-app >-------------------
+[INFO] Building ScFramework minimal consumer app 0.1.0-SNAPSHOT           [6/6]
+[INFO]   from starter-app/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ sc-starter-app ---
+[INFO] Deleting /Users/dk/Work/ScFramework/backend/starter-app/target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ sc-starter-app ---
+[INFO] Copying 4 resources from src/main/resources to target/classes
+[INFO] Copying 6 resources from ../../frontend/apps/starter-app/dist to target/classes/static
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ sc-starter-app ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 3 source files with javac [debug parameters release 21] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ sc-starter-app ---
+[INFO] skip non existing resourceDirectory /Users/dk/Work/ScFramework/backend/starter-app/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ sc-starter-app ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 2 source files with javac [debug parameters release 21] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ sc-starter-app ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running dev.scframework.starter.StarterAuditConsumerTest
+00:17:17.402 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration dev.scframework.starter.StarterApplication for test class dev.scframework.starter.StarterAuditConsumerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.16)
+
+2026-10-07T00:17:17.637+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] d.s.starter.StarterAuditConsumerTest     : Starting StarterAuditConsumerTest using Java 21.0.11 with PID 62926 (started by dk in /Users/dk/Work/ScFramework/backend/starter-app)
+2026-10-07T00:17:17.637+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] d.s.starter.StarterAuditConsumerTest     : The following 1 profile is active: "audit"
+2026-10-07T00:17:17.969+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-07T00:17:17.975+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2026-10-07T00:17:18.017+09:00  WARN [requestId:] 62926 --- [sc-starter-app] [           main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[dev.scframework.starter]' package. Please check your configuration.
+2026-10-07T00:17:18.021+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f13e800c-132c-3215-8ccf-c5cbd619eba9
+2026-10-07T00:17:18.169+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-07T00:17:18.226+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:starter-audit-sc-starter-audit-7350732407013961384 user=SA
+2026-10-07T00:17:18.227+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-07T00:17:18.243+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:starter-audit-sc-starter-audit-7350732407013961384 (H2 2.3)
+2026-10-07T00:17:18.252+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2026-10-07T00:17:18.253+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.004s)
+2026-10-07T00:17:18.255+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-10-07T00:17:18.267+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2026-10-07T00:17:18.270+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - security audit"
+2026-10-07T00:17:18.280+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "PUBLIC", now at version v1 (execution time 00:00.004s)
+2026-10-07T00:17:18.310+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-10-07T00:17:18.328+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.53.Final
+2026-10-07T00:17:18.339+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-10-07T00:17:18.434+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-07T00:17:18.454+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-07T00:17:18.551+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-07T00:17:18.553+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-07T00:17:18.677+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-10-07T00:17:18.799+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name starterUsers
+2026-10-07T00:17:18.853+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-07T00:17:18.983+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-07T00:17:18.983+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-07T00:17:18.984+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-10-07T00:17:19.029+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] d.s.starter.StarterAuditConsumerTest     : Started StarterAuditConsumerTest in 1.533 seconds (process running for 1.903)
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+WARNING: A Java agent has been loaded dynamically (/Users/dk/.m2/repository/net/bytebuddy/byte-buddy-agent/1.17.8/byte-buddy-agent-1.17.8.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.376 s -- in dev.scframework.starter.StarterAuditConsumerTest
+[INFO] Running dev.scframework.starter.StarterConsumerTest
+2026-10-07T00:17:19.688+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [dev.scframework.starter.StarterConsumerTest]: StarterConsumerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-07T00:17:19.689+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration dev.scframework.starter.StarterApplication for test class dev.scframework.starter.StarterConsumerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.16)
+
+2026-10-07T00:17:19.706+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] d.s.starter.StarterConsumerTest          : Starting StarterConsumerTest using Java 21.0.11 with PID 62926 (started by dk in /Users/dk/Work/ScFramework/backend/starter-app)
+2026-10-07T00:17:19.706+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] d.s.starter.StarterConsumerTest          : No active profile set, falling back to 1 default profile: "default"
+2026-10-07T00:17:19.779+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-07T00:17:19.780+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2026-10-07T00:17:19.794+09:00  WARN [requestId:] 62926 --- [sc-starter-app] [           main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[dev.scframework.starter]' package. Please check your configuration.
+2026-10-07T00:17:19.795+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=6b672bf1-6a94-32b2-8809-13e70ab5a30a
+2026-10-07T00:17:19.810+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-10-07T00:17:19.811+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-10-07T00:17:19.814+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-07T00:17:19.814+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-10-07T00:17:19.816+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:starter-361a901e-02e4-47e3-8e85-48ef1f35df1f user=SA
+2026-10-07T00:17:19.816+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-10-07T00:17:19.816+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-07T00:17:19.822+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-07T00:17:19.822+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-07T00:17:19.893+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-10-07T00:17:19.914+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name starterUsers
+2026-10-07T00:17:19.925+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-07T00:17:19.945+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-07T00:17:19.945+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-07T00:17:19.945+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-10-07T00:17:19.960+09:00  INFO [requestId:] 62926 --- [sc-starter-app] [           main] d.s.starter.StarterConsumerTest          : Started StarterConsumerTest in 0.27 seconds (process running for 2.834)
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.469 s -- in dev.scframework.starter.StarterConsumerTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ sc-starter-app ---
+[INFO] Building jar: /Users/dk/Work/ScFramework/backend/starter-app/target/sc-starter-app.jar
+[INFO] 
+[INFO] --- spring-boot:3.5.16:repackage (repackage) @ sc-starter-app ---
+[INFO] Replacing main artifact /Users/dk/Work/ScFramework/backend/starter-app/target/sc-starter-app.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /Users/dk/Work/ScFramework/backend/starter-app/target/sc-starter-app.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for ScFramework backend 0.1.0-SNAPSHOT:
+[INFO] 
+[INFO] ScFramework backend ................................ SUCCESS [  0.043 s]
+[INFO] ScFramework core contracts ......................... SUCCESS [  0.763 s]
+[INFO] ScFramework auto configuration ..................... SUCCESS [  2.125 s]
+[INFO] ScFramework Spring Boot Starter .................... SUCCESS [  0.049 s]
+[INFO] ScFramework neutral reference app .................. SUCCESS [ 17.637 s]
+[INFO] ScFramework minimal consumer app ................... SUCCESS [  3.625 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  24.382 s
+[INFO] Finished at: 2026-10-07T00:17:20+09:00
+[INFO] ------------------------------------------------------------------------
+통합 빌드 완료: reference-app과 starter-app의 실행 JAR를 생성했습니다.

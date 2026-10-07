@@ -1,0 +1,39 @@
+# scripts/create-secret.py로 새 container secret를 준비한 뒤 사용한다. 값을 환경변수에 넣지 않는다.
+services:
+  reference-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "127.0.0.1:18082:18082"
+    environment:
+      SC_DB_URL: jdbc:h2:file:/app/data/sc-reference;DB_CLOSE_ON_EXIT=FALSE
+      SC_BOOTSTRAP_USERNAME: admin
+      SC_ADDRESS: 0.0.0.0
+      SC_PORT: "18082"
+      SC_UPLOAD_DIR: /app/uploads
+    volumes:
+      - framework-data:/app/data
+      - framework-uploads:/app/uploads
+      - framework-logs:/app/logs
+    secrets:
+      - bootstrap_secret
+    tmpfs:
+      - /run/sc-secret:mode=0700
+    stop_grace_period: 45s
+    mem_limit: 768m
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "--silent", "http://127.0.0.1:18082/api/health"]
+      interval: 15s
+      timeout: 5s
+      start_period: 60s
+      retries: 3
+
+volumes:
+  framework-data:
+  framework-uploads:
+  framework-logs:
+
+secrets:
+  bootstrap_secret:
+    file: ${SC_BOOTSTRAP_SECRET_SOURCE:-./.runtime/container/secrets/bootstrap.secret}

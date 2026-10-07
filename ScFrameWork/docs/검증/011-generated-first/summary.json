@@ -1,0 +1,28 @@
+{
+  "stage": "011",
+  "passed": false,
+  "consumer": "/private/tmp/sc-framework-consumer-011-20261007/sc-notes-candidate3",
+  "groups": [
+    {
+      "name": "real H2/JPA/Querydsl/MyBatis flush, session/CSRF/validation/revision",
+      "passed": true
+    },
+    {
+      "name": "clean process restart retains app-owned H2 notes",
+      "passed": true
+    }
+  ],
+  "originalRuntimeAccessed": false,
+  "jar": {
+    "sha256": "7691cd20561efba5be787fa6a8dd2a1564f270317a0e49603d02910ad8479302",
+    "staticFiles": 5,
+    "exactDistBytes": true,
+    "frameworkJars": [
+      "BOOT-INF/lib/framework-spring-boot-starter-0.1.0-SNAPSHOT.jar",
+      "BOOT-INF/lib/framework-autoconfigure-0.1.0-SNAPSHOT.jar",
+      "BOOT-INF/lib/framework-core-0.1.0-SNAPSHOT.jar"
+    ],
+    "referenceClasses": 0
+  },
+  "temporaryRuntimeRemoved": true
+}

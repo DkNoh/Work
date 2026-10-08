@@ -28,7 +28,8 @@ for (const artifact of artifacts) {
   const types = astToString(await openapiTS(source));
   if (process.argv.includes("--check")) {
     const existing = await readFile(outputUrl, "utf8");
-    if (existing !== types)
+    // Git의 Windows CRLF checkout은 API 변경이 아니다. 줄 끝만 맞추고 타입 본문은 그대로 비교한다.
+    if (existing.replaceAll("\r\n", "\n") !== types.replaceAll("\r\n", "\n"))
       throw new Error(
         `${artifact.name}: OpenAPI 타입이 명세와 다릅니다. npm run api:generate로 다시 생성하세요.`,
       );

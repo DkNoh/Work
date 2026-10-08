@@ -1,4 +1,7 @@
 spring:
+  config:
+    # 잘못된 vendor는 시작 때 실패한다. DB별 비밀값은 저장소가 아닌 환경/configtree에서 공급한다.
+    import: classpath:database/${SC_DB_VENDOR:h2}.yml
   application:
     name: sc-reference-app
   datasource:
@@ -15,7 +18,7 @@ spring:
       hibernate.jdbc.time_zone: UTC
   flyway:
     enabled: true
-    locations: classpath:db/migration
+    locations: ${sc.app.database.migration:classpath:db/migration}
   servlet:
     multipart:
       max-file-size: 10MB

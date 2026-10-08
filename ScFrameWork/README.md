@@ -1,5 +1,33 @@
 # ScFramework
 
+## DB 선택과 레거시 이관 리뷰
+
+H2 기본 개발 경로와 함께 Oracle·Db2 LUW·SQL Server·PostgreSQL용 드라이버 선택,
+앱 설정·migration 및 공통 JDBC 방언을 제공한다. 외부 DB의 실제 실행 인증은 미완료다.
+[DB 선택/빌드/실행 가이드](docs/database-support.md)와 [리뷰 판단·이번 검증](docs/리뷰정리.md)을 따른다.
+
+
+## Windows 개발 실행
+
+PowerShell에서 프로젝트 루트로 이동한 뒤 `npm run dev`를 실행한다. Windows에서는
+`scripts/dev.ps1`로 Java와 Vite를 함께 실행하므로 Git Bash와 Python은 필요하지 않다.
+JDK 21과 Node.js/npm은 필요하며 Java는 `JAVA21_HOME`, `JAVA_BIN`, `JAVA_HOME`, PATH 순으로 찾는다.
+
+```powershell
+cd C:\work\ScFrameWork
+npm run dev
+```
+
+화면은 `http://localhost:5175`, 서버는 `http://localhost:18082`다. 처음 실행할 때 필요한
+프런트 산출물/JAR가 없으면 개발용 빌드를 수행한다. 서버 소스 변경 후에는
+`npm run dev -- --rebuild`로 다시 빌드한다. 개발용 Maven 패키징은 테스트를 생략하며 전체
+검증 성공을 뜻하지 않는다. macOS/Linux의 기존 Bash 개발 실행 경로는 유지한다.
+
+종료는 `Ctrl+C` 또는 다른 터미널에서 `npm run dev -- --stop`이다. 로그는
+`.runtime/dev/logs`, 최초 `admin` 비밀번호는 `.runtime/dev/secrets/bootstrap.secret`에 있다.
+Windows에서는 비밀번호 디렉터리/파일에 현재 사용자 전용 ACL을 적용하고 기존 값은 보존한다.
+자세한 확인 범위와 기존 Windows 검증 제한은 [실행·운영](docs/operations.md#windows-개발-실행기)을 따른다.
+
 JSP·Java 개발자를 위한 [Vue 3·TypeScript·서버 코드 읽기 안내](docs/developer-reading-guide.md)를 추가했다. 수작업 프런트·Java 기능 코드와 현재 v2 생성 템플릿에 한국어 역할·흐름 주석을 유지한다. 범위와 실제 검증은 [상세 주석 적용 기록](docs/질의/상세주석-개발자학습가이드.md)을 따른다.
 
 ## 현재 상태: Yzen 시안 재정렬 후보·로컬 검증 완료

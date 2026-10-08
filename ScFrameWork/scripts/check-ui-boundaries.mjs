@@ -1,5 +1,5 @@
 import { readFile, readdir } from "node:fs/promises";
-import { dirname, relative, resolve } from "node:path";
+import { dirname, relative, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 import ts from "typescript";
 
@@ -21,6 +21,9 @@ const ignored = new Set([
   "playwright-report",
   "public",
 ]);
+// Windows의 역슬래시와 POSIX의 슬래시를 실제 OS 구분자로 비교한다.
+// 단순 문자열 prefix는 ui와 ui-other도 혼동하므로 반드시 디렉터리 경계를 붙인다.
+const inside = (file, directory) => file.startsWith(directory + sep);
 async function sourceFiles(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
   const groups = await Promise.all(
@@ -88,14 +91,12 @@ for (const file of await sourceFiles(frontend)) {
   for (const specifier of imports) {
     checked += 1;
     const path = specifier.startsWith(".") ? resolve(dirname(file), specifier) : null;
-    const shared = file.startsWith(packages + "/");
-    const consumer = file.startsWith(apps + "/");
+    const shared = inside(file, packages);
+    const consumer = inside(file, apps);
     const sharedOwner = [...sharedModules].find(([, module]) =>
-      file.startsWith(module.directory + "/"),
+      inside(file, module.directory),
     )?.[0];
-    const owner = [...appDirectories].find(([, directory]) =>
-      file.startsWith(directory + "/"),
-    )?.[0];
+    const owner = [...appDirectories].find(([, directory]) => inside(file, directory))?.[0];
     if (
       consumer &&
       [...appDirectories].some(
@@ -104,7 +105,7 @@ for (const file of await sourceFiles(frontend)) {
           (specifier === name ||
             specifier.startsWith(name + "/") ||
             path === directory ||
-            path?.startsWith(directory + "/")),
+            (path && inside(path, directory))),
       )
     ) {
       violations.push(`${relative(root, file)}: 소비 앱끼리 구현을 참조하지 마세요: ${specifier}`);
@@ -112,7 +113,7 @@ for (const file of await sourceFiles(frontend)) {
     if (
       shared &&
       ([...appNames].some((name) => specifier === name || specifier.startsWith(name + "/")) ||
-        path?.startsWith(apps + "/"))
+        (path && inside(path, apps)))
     ) {
       violations.push(`${relative(root, file)}: 공통 패키지가 소비 앱을 참조합니다: ${specifier}`);
     }
@@ -122,7 +123,7 @@ for (const file of await sourceFiles(frontend)) {
         (((specifier === name || specifier.startsWith(name + "/")) &&
           !module.exports.has(specifier)) ||
           path === module.directory ||
-          path?.startsWith(module.directory + "/"))
+          (path && inside(path, module.directory)))
       ) {
         violations.push(
           `${relative(root, file)}: ${name}의 공개 export를 사용하세요: ${specifier}`,

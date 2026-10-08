@@ -8,8 +8,16 @@ parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("--jar", default=ROOT / "backend/reference-app/target/sc-reference-app.jar")
 parser.add_argument("--starter-jar", default=ROOT / "backend/starter-app/target/sc-starter-app.jar")
 parser.add_argument("--keep", action="store_true", help="합성 DB/로그만 보관; 비밀번호 파일은 삭제")
+parser.add_argument("--h2-write-through", action="store_true",
+                    help="합성 H2에 WRITE_DELAY=0 사용; Windows 강제 종료 후 commit 보존 확인용이며 정상 종료 시험과 구분")
 args = parser.parse_args()
 server = JarServer(args.jar)
+if args.h2_write_through:
+    # Windows terminate()는 JVM 종료 hook 없이 프로세스를 끊는다. 기본 지연 쓰기의 crash 보장을
+    # 정상 종료로 오인하지 않도록 명시적으로 선택한 합성 DB에만 즉시 쓰기를 적용한다.
+    server.extra_environment["SC_DB_URL"] = (
+        f"jdbc:h2:file:{server.folder / 'data' / 'test'};DB_CLOSE_ON_EXIT=FALSE;WRITE_DELAY=0"
+    )
 checks = 0
 
 

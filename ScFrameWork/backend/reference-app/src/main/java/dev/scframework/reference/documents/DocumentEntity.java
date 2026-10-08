@@ -8,9 +8,12 @@ import lombok.*;
  */
 @Entity @Table(name="reference_document") @Getter @NoArgsConstructor(access=AccessLevel.PROTECTED)
 public class DocumentEntity {
+    // 긴 JSON의 저장 용량은 dialect에 맡기고 문자 값으로 바인딩한다. PostgreSQL의 @Lob OID를 만들지 않는다.
+    // JDBC 타입을 VARCHAR로 고정하지 않아 SQL Server의 nationalized 설정이 NVARCHAR(MAX)를 선택할 수 있다.
+    // H2/Oracle/DB2는 CLOB, PostgreSQL은 TEXT를 기대한다. API의 별도 JSON 크기 제한은 그대로 적용된다.
  @Id @GeneratedValue(strategy=GenerationType.IDENTITY)Long id;
  @Column(nullable=false,length=200)String title;
- @Lob @Column(nullable=false)String documentJson;
+ @Column(nullable=false,length=Integer.MAX_VALUE)String documentJson;
  @Column(nullable=false,updatable=false)Long authorId;
  // 요청 revision 비교 후에도 동시 UPDATE/DELETE가 생길 수 있다. @Version 조건이 DB의 마지막 경쟁을 감지한다.
  // flush는 SQL/버전 검사를 앞당기지만 commit은 아니므로 뒤 단계 실패 시 같은 트랜잭션의 변경도 rollback된다.

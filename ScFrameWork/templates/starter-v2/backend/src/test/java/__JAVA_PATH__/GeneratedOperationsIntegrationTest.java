@@ -3,7 +3,6 @@ package __JAVA_PACKAGE__;
 import dev.scframework.autoconfigure.scheduling.OperationalSchedulerService;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.attribute.PosixFilePermissions;
 import java.time.Instant;
 import java.util.Base64;
 import java.util.Comparator;
@@ -70,6 +69,6 @@ class GeneratedOperationsIntegrationTest {
         assertThat(jdbc.queryForObject("SELECT SUM(occurrence_count) FROM browser_error_group",Long.class)).isEqualTo(1);
         assertThat(jdbc.queryForObject("SELECT COUNT(*) FROM browser_error_occurrence WHERE actor_id IS NOT NULL",Long.class)).isZero();
     }
-    static Path fixture(){try{var root=Files.createTempDirectory("generated-operation-test-");byte[] random=new byte[32];new java.security.SecureRandom().nextBytes(random);var secret=Files.writeString(root.resolve("bootstrap.secret"),Base64.getUrlEncoder().withoutPadding().encodeToString(random));Files.setPosixFilePermissions(secret,PosixFilePermissions.fromString("rw-------"));return root;}catch(Exception error){throw new IllegalStateException("Synthetic operations fixture failed");}}
+    static Path fixture(){try{var root=Files.createTempDirectory("generated-operation-test-");byte[] random=new byte[32];new java.security.SecureRandom().nextBytes(random);SyntheticSecretFiles.write(root.resolve("bootstrap.secret"),Base64.getUrlEncoder().withoutPadding().encodeToString(random));return root;}catch(Exception error){throw new IllegalStateException("Synthetic operations fixture failed",error);}}
     @AfterAll static void stop()throws Exception{try(var paths=Files.walk(TEMP)){for(var file:paths.sorted(Comparator.reverseOrder()).toList())Files.deleteIfExists(file);}}
 }

@@ -1,5 +1,8 @@
 package dev.scframework.autoconfigure;
 
+import dev.scframework.core.database.DatabaseDialect;
+import dev.scframework.autoconfigure.database.StandardDatabaseDialect;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import dev.scframework.autoconfigure.browsererrors.*;
 import dev.scframework.core.operations.OperationalEventSink;
@@ -45,8 +48,8 @@ public class ScBrowserErrorsAutoConfiguration {
     BrowserErrorRateLimiter scBrowserErrorRateLimiter(Clock clock,ScBrowserErrorsProperties properties){properties.validate();return new BrowserErrorRateLimiter(clock,properties);}
     @Bean @ConditionalOnMissingBean @DependsOnDatabaseInitialization
     // ObjectProvider는 관측 sink가 없는 기본 실행도 허용한다. verifySchema는 필수 앱 migration 누락을 기동 시 발견한다.
-    BrowserErrorService scBrowserErrorService(DataSource source,Clock clock,ScBrowserErrorsProperties properties,BrowserErrorRateLimiter limiter,ObjectProvider<OperationalEventSink> events){
-        var service=new BrowserErrorService(source,clock,properties,limiter,events);service.verifySchema();return service;
+    BrowserErrorService scBrowserErrorService(DataSource source,Clock clock,ScBrowserErrorsProperties properties,BrowserErrorRateLimiter limiter,ObjectProvider<OperationalEventSink> events,ObjectProvider<DatabaseDialect> dialect){
+        var service=new BrowserErrorService(source,clock,properties,limiter,events,dialect.getIfAvailable(()->StandardDatabaseDialect.detect(source)));service.verifySchema();return service;
     }
     @Bean @ConditionalOnMissingBean(name="scBrowserErrorBodyFilter")
     // 본문을 읽는 필터는 이 단일 경로에만 연결한다. 다른 업무 JSON의 파싱 계약을 변경하지 않는다.

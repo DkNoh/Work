@@ -79,6 +79,7 @@ class StarterOperationsIntegrationTest {
         assertThat(schemas.get("OperationalScheduleResponse").get("required").size()).isEqualTo(10);assertThat(schemas.get("BrowserErrorOccurrenceResponse").get("required").size()).isEqualTo(6);
         assertThat(result.getResponse().getContentAsString()).doesNotContain("OPERATION_PRIVATE_CANARY");
     }
-    private static Path fixture(){try{var directory=Files.createTempDirectory("sc-starter-operations-");var secret=Files.writeString(directory.resolve("bootstrap.secret"),"synthetic-starter-operations-secret");Files.setPosixFilePermissions(secret,PosixFilePermissions.fromString("rw-------"));return directory;}catch(Exception failure){throw new IllegalStateException("Could not prepare isolated starter fixture");}}
+    // 합성 계정 fixture만 만든다. Windows에는 POSIX API를 호출하지 않으며 운영 ACL 검증을 뜻하지 않는다.
+    private static Path fixture(){try{var directory=Files.createTempDirectory("sc-starter-operations-");var secret=Files.writeString(directory.resolve("bootstrap.secret"),"synthetic-starter-operations-secret");if(Files.getFileStore(secret).supportsFileAttributeView("posix"))Files.setPosixFilePermissions(secret,PosixFilePermissions.fromString("rw-------"));return directory;}catch(Exception failure){throw new IllegalStateException("Could not prepare isolated starter fixture");}}
     @AfterAll static void cleanup()throws Exception{try(var paths=Files.walk(TEMP)){for(var path:paths.sorted(Comparator.reverseOrder()).toList())Files.deleteIfExists(path);}}
 }

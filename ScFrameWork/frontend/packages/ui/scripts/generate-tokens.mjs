@@ -43,7 +43,8 @@ const generated = [
   "",
 ].join("\n");
 if (process.argv.includes("--check")) {
-  if ((await readFile(output, "utf8")) !== generated) {
+  // Windows 체크아웃의 CRLF는 내용 변경이 아니므로 줄바꿈을 정규화해 비교한다.
+  if ((await readFile(output, "utf8")).replace(/\r\n/g, "\n") !== generated) {
     throw new Error("Design token CSS is stale. Run npm run tokens:generate --workspace @sc/ui.");
   }
   process.stdout.write("Design token CSS matches tokens.ts.\n");

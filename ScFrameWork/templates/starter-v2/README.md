@@ -1,5 +1,20 @@
 # `__APP_NAME__`
 
+## DB 선택
+
+기본은 H2다. Maven `-Pdb-oracle`, `-Pdb-db2`, `-Pdb-mssql`, `-Pdb-postgresql`로 해당 JDBC/Flyway를
+선택하고 실행 시 `SC_DB_VENDOR=oracle|db2|sqlserver|postgresql`와 `SC_DB_URL`, `SC_DB_USERNAME`,
+`SC_DB_PASSWORD`를 배포 환경에서 공급한다. 비밀번호 값을 소스/명령 이력에 남기지 않는다.
+각 vendor 설정은 `backend/src/main/resources/database/`, 앱 소유 DDL은 `db/<vendor>/`에 있다.
+기존 H2 데이터 이관을 자동 수행하지 않으며 새 예제 DDL은 기존 고객 schema에 그대로 적용하지 않는다.
+Db2는 LUW 대상이며 외부 DB별 실기동 수락 시험은 고객 환경에서 수행해야 한다.
+
+외부 DB 빌드에는 `SC_API_SCHEMA=/private/app-openapi.json` 또는
+`SC_API_URL=http://127.0.0.1:18199/v3/api-docs` 중 하나를 지정하고
+`bash scripts/build.sh -Pdb-postgresql`처럼 동일 profile로 빌드한다.
+`node scripts/openapi-types.mjs --schema /private/app-openapi.json`은 DB 기동 없이 타입을 만든다.
+기본 H2 빌드는 기존 임시 H2 경로를 유지한다. 테스트 secret은 Windows ACL/POSIX 600으로 작성한다.
+
 ScFramework 배포 파일을 소비하는 독립 앱입니다. 자신의 소스·npm 잠금 파일·H2·마이그레이션을 소유하며 프레임워크 저장소의 workspaces나 상대 import를 사용하지 않습니다. 라이선스는 UNLICENSED/internal입니다. 공개 npm 배포를 수행하지 않습니다.
 
 ```bash

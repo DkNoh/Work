@@ -24,7 +24,9 @@ public final class OperationalTestSupport {
     public static final String PASSWORD="synthetic-operations-test-password";
     private OperationalTestSupport(){}
     public static Path fixture(){
-        try{Path root=Files.createTempDirectory("sc-operational-test-");Path secret=Files.writeString(root.resolve("bootstrap.secret"),PASSWORD);Files.setPosixFilePermissions(secret,PosixFilePermissions.fromString("rw-------"));return root;}
+        // 합성 계정용 임시 파일이다. POSIX 권한 API가 없는 Windows에서는 해당 호출을 생략한다.
+        // 운영 secret의 사용자 전용 ACL은 실행기가 별도로 관리하며 이 테스트로 운영 ACL을 검증하지 않는다.
+        try{Path root=Files.createTempDirectory("sc-operational-test-");Path secret=Files.writeString(root.resolve("bootstrap.secret"),PASSWORD);if(Files.getFileStore(secret).supportsFileAttributeView("posix"))Files.setPosixFilePermissions(secret,PosixFilePermissions.fromString("rw-------"));return root;}
         catch(IOException failure){throw new IllegalStateException("Could not prepare isolated operation fixture");}
     }
     public static void properties(DynamicPropertyRegistry registry,Path root,String database,String username){

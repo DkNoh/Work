@@ -2,7 +2,6 @@ package __JAVA_PACKAGE__;
 import __JAVA_PACKAGE__.notes.*;
 import com.sun.net.httpserver.HttpServer;
 import java.nio.file.*;
-import java.nio.file.attribute.PosixFilePermissions;
 import java.security.SecureRandom;
 import java.util.Base64;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -34,8 +33,7 @@ class GeneratedAppIntegrationTest {
         try {
             TEMP=Files.createTempDirectory("generated-starter-test-");SECRET=TEMP.resolve("bootstrap.secret");
             byte[] bytes=new byte[32];new SecureRandom().nextBytes(bytes);
-            Files.writeString(SECRET,Base64.getUrlEncoder().withoutPadding().encodeToString(bytes),StandardOpenOption.CREATE_NEW);
-            Files.setPosixFilePermissions(SECRET,PosixFilePermissions.fromString("rw-------"));
+            SyntheticSecretFiles.write(SECRET,Base64.getUrlEncoder().withoutPadding().encodeToString(bytes));
             UPSTREAM=HttpServer.create(new java.net.InetSocketAddress("127.0.0.1",0),0);
             UPSTREAM.createContext("/health",exchange->{
                 CALLS.incrementAndGet();byte[] body="{\"status\":\"UP\"}".getBytes(java.nio.charset.StandardCharsets.UTF_8);

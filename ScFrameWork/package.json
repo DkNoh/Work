@@ -13,7 +13,7 @@
     "frontend/apps/*"
   ],
   "scripts": {
-    "dev": "bash scripts/dev.sh",
+    "dev": "node scripts/dev.mjs",
     "build": "npm run build --workspace @sc/date && npm run build --workspace @sc/i18n && npm run build --workspace @sc/excel && npm run build --workspace @sc/ui && npm run build --workspace @sc/runtime && npm run build --workspace @sc/reference-app && npm run build --workspace @sc/starter-app",
     "typecheck": "npm run typecheck --workspace @sc/date && npm run typecheck --workspace @sc/i18n && npm run typecheck --workspace @sc/excel && npm run typecheck --workspace @sc/ui && npm run typecheck --workspace @sc/runtime && npm run typecheck --workspace @sc/reference-app && npm run typecheck --workspace @sc/starter-app && npm run typecheck --workspace @sc/catalog && npm run typecheck:e2e",
     "lint": "eslint frontend scripts --max-warnings 0",
@@ -36,6 +36,8 @@
     "ui:contracts:generate": "node scripts/ui-contracts.mjs",
     "ui:contracts:check": "node scripts/ui-contracts.mjs --check",
     "ui:boundaries:check": "node scripts/check-ui-boundaries.mjs",
+    "db:config:check": "node scripts/verify-database-config.mjs",
+    "test:generated-db-tools": "node scripts/verify-generated-db-tools.mjs",
     "storybook:verify": "node scripts/verify-storybook.mjs",
     "typecheck:e2e": "tsc --noEmit -p frontend/tsconfig.e2e.json",
     "visual:manifest:check": "node scripts/verify-visual-baselines.mjs --profile darwin-chromium",

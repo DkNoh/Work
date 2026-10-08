@@ -1,5 +1,20 @@
 # ScFramework 수정 위치
 
+## DB별 변경을 유지하는 기준
+
+H2는 기본 개발 DB다. Oracle·Db2 LUW·SQL Server·PostgreSQL은 소비 앱의 Maven `db-*` profile과
+`SC_DB_VENDOR`를 함께 선택한다. [DB 가이드](database-support.md)의 새 schema/기존 schema 경계를 따른다.
+공통 SQL의 DB 차이는 `DatabaseDialect`에 두고 앱 업무 Mapper/DDL은 앱에서 관리한다.
+기존 H2 migration을 편집해 checksum을 바꾸지 않는다. 신규 DDL 변경은 해당 DB 실기동 테스트,
+JPA/MyBatis rollback·중복 충돌·시간/UUID·Quartz와 생성 앱의 회귀를 함께 확인한다.
+정적 설정 검사 통과를 실제 외부 DB 인증으로 표시하지 않는다.
+
+
+Windows 개발 실행은 `scripts/dev.mjs`와 `scripts/dev.ps1`에서 수정한다. Java 선택·포트 충돌·
+현재 사용자 전용 secret ACL·기존 secret 보존·별도 실행 자료·API proxy·자식 프로세스 종료를
+함께 확인한다. 실행 중인 실제 개발 DB 대신 별도 `SC_HOME`과 포트로 검사한다.
+명령과 검증 제한은 [Windows 개발 실행](operations.md#windows-개발-실행기)을 따른다.
+
 JSP·Java 개발자를 위한 [Vue 3·TypeScript·서버 코드 읽기 안내](developer-reading-guide.md)를 추가했다. 수작업 프런트·Java 기능 코드와 현재 v2 생성 템플릿에 한국어 역할·흐름 주석을 유지한다. 범위와 실제 검증은 [상세 주석 적용 기록](질의/상세주석-개발자학습가이드.md)을 따른다.
 
 ## 공통 디자인·글꼴을 수정할 때

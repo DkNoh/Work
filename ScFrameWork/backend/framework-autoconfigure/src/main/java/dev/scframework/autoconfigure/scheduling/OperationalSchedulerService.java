@@ -1,6 +1,9 @@
 package dev.scframework.autoconfigure.scheduling;
 
 import dev.scframework.core.ApiException;
+import dev.scframework.core.database.DatabaseDialect;
+import dev.scframework.autoconfigure.database.StandardDatabaseDialect;
+import dev.scframework.autoconfigure.database.JdbcDuplicateInsert;
 import dev.scframework.core.scheduling.RegisteredOperationalTask;
 import dev.scframework.core.scheduling.ScheduledRunContext;
 import dev.scframework.core.operations.OperationalEvent;
@@ -10,9 +13,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.Clock;
 import java.time.Instant;
-import java.time.OffsetDateTime;
 import java.time.ZoneId;
-import java.time.ZoneOffset;
 import java.time.temporal.ChronoUnit;
 import java.util.Date;
 import java.util.List;
@@ -29,7 +30,6 @@ import org.quartz.Scheduler;
 import org.quartz.SchedulerException;
 import org.quartz.TriggerBuilder;
 import org.quartz.TriggerKey;
-import org.springframework.dao.DuplicateKeyException;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
@@ -48,6 +48,8 @@ import org.springframework.transaction.support.TransactionTemplate;
 public class OperationalSchedulerService {
     public static final String GROUP = "sc-operational";
     private final JdbcTemplate jdbc;
+    private final DatabaseDialect dialect;
+    private final JdbcDuplicateInsert duplicateInsert;
     private final Scheduler scheduler;
     private final RegisteredTaskRegistry registry;
     private final Clock clock;
@@ -60,7 +62,13 @@ public class OperationalSchedulerService {
 
     public OperationalSchedulerService(DataSource source, PlatformTransactionManager manager, Scheduler scheduler,
             RegisteredTaskRegistry registry, Clock clock, ScSchedulerProperties properties,ObjectProvider<OperationalEventSink> events) {
+        this(source,manager,scheduler,registry,clock,properties,events,StandardDatabaseDialect.detect(source));
+    }
+
+    public OperationalSchedulerService(DataSource source, PlatformTransactionManager manager, Scheduler scheduler,
+            RegisteredTaskRegistry registry, Clock clock, ScSchedulerProperties properties,ObjectProvider<OperationalEventSink> events,DatabaseDialect dialect) {
         jdbc = new JdbcTemplate(source); this.scheduler = scheduler; this.registry = registry;
+        this.dialect=dialect;this.duplicateInsert=new JdbcDuplicateInsert(source);
         this.clock = clock; this.properties = properties;
         this.events = events;
         fresh = new TransactionTemplate(manager); fresh.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRES_NEW);
@@ -79,9 +87,16 @@ public class OperationalSchedulerService {
         for (int index = 0; index < defaults.length; index++) {
             String code = defaults[index]; long id = index + 1L;
             if (!codes.contains(code)) continue;
+            if (!dialect.permitsExplicitIdentityValues()) {
+                // SQL Server는 IDENTITY_INSERT 세션 설정을 바꾸지 않고 일반 생성 키 계약으로 초기 자료를 만든다.
+                // 시스템 예약의 정체성은 jobCode다. 기존 예약의 ID/설정/revision을 재기동 때 덮어쓰지 않는다.
+                if(jdbc.queryForObject("SELECT COUNT(*) FROM operation_schedule WHERE job_code=?",Long.class,code)==0)
+                    create(new Input(code,crons[index],"UTC","SKIP",true),"SYSTEM");
+                continue;
+            }
             if (jdbc.queryForObject("SELECT COUNT(*) FROM operation_schedule WHERE id=? OR job_code=?", Long.class, id, code) > 0) continue;
             var input = new Input(code, crons[index], "UTC", "SKIP", true); validate(input);
-            jdbc.update("INSERT INTO operation_schedule(id,job_code,cron,time_zone,misfire_policy,enabled,revision,created_by,created_at,updated_at) VALUES(?,?,?,?,?,TRUE,1,'SYSTEM',?,?)", id,code,crons[index],"UTC","SKIP",utc(now()),utc(now()));
+            jdbc.update("INSERT INTO operation_schedule(id,job_code,cron,time_zone,misfire_policy,enabled,revision,created_by,created_at,updated_at) VALUES(?,?,?,?,?,?,1,'SYSTEM',?,?)", id,code,crons[index],"UTC","SKIP",true,utc(now()),utc(now()));
             apply(id,input);
         }
     }
@@ -95,7 +110,7 @@ public class OperationalSchedulerService {
     public Page<Schedule> schedules(int page, int size) {
         bounds(page, size);
         long total = jdbc.queryForObject("SELECT COUNT(*) FROM operation_schedule", Long.class);
-        var items = jdbc.query("SELECT * FROM operation_schedule ORDER BY id DESC LIMIT ? OFFSET ?", this::schedule, size, (long) page * size);
+        var items = jdbc.query(dialect.pageSql("SELECT * FROM operation_schedule ORDER BY id DESC", (long)page*size, size), this::schedule);
         return new Page<>(List.copyOf(items), total, page, size);
     }
 
@@ -161,8 +176,7 @@ public class OperationalSchedulerService {
         String filter = scheduleId == null ? "" : " WHERE schedule_id=?";
         Object[] args = scheduleId == null ? new Object[]{} : new Object[]{scheduleId};
         long total = jdbc.queryForObject("SELECT COUNT(*) FROM operation_job_run" + filter, Long.class, args);
-        var values = new java.util.ArrayList<>(List.of(args)); values.add(size); values.add((long) page * size);
-        var items = jdbc.query("SELECT * FROM operation_job_run" + filter + " ORDER BY started_at DESC,id DESC LIMIT ? OFFSET ?", this::run, values.toArray());
+        var items = jdbc.query(dialect.pageSql("SELECT * FROM operation_job_run" + filter + " ORDER BY started_at DESC,id DESC", (long)page*size, size), this::run, args);
         return new Page<>(List.copyOf(items), total, page, size);
     }
 
@@ -199,11 +213,10 @@ public class OperationalSchedulerService {
         var schedule = jdbc.query("SELECT job_code,enabled FROM operation_schedule WHERE id=?", (row, index) -> new String[]{row.getString(1), Boolean.toString(row.getBoolean(2))}, scheduleId);
         if (schedule.isEmpty() || !schedule.get(0)[0].equals(code) || !Boolean.parseBoolean(schedule.get(0)[1])) return null;
         String token = UUID.randomUUID().toString(); Instant now = now();
-        try {
-            jdbc.update("INSERT INTO operation_job_run(schedule_id,run_key,job_code,scheduled_at,started_at,state,attempt,run_owner,execution_token) VALUES(?,?,?,?,?,'RUNNING',1,?,?)",
-                    scheduleId, key, code, utc(scheduledAt.truncatedTo(ChronoUnit.MICROS)), utc(now), owner, token);
+        if(duplicateInsert.insert(()->jdbc.update("INSERT INTO operation_job_run(schedule_id,run_key,job_code,scheduled_at,started_at,state,attempt,run_owner,execution_token) VALUES(?,?,?,?,?,'RUNNING',1,?,?)",
+                    scheduleId, key, code, utc(scheduledAt.truncatedTo(ChronoUnit.MICROS)), utc(now), owner, token))) {
             return new Claim(token, 1);
-        } catch (DuplicateKeyException duplicate) {
+        } else {
             // 현재 프로세스의 중복 실행과 완료된 실행은 폐기한다. 이전 run의 RUNNING만 새 프로세스가 회수한다.
             int claimed = jdbc.update("UPDATE operation_job_run SET run_owner=?,execution_token=?,attempt=attempt+1,started_at=? WHERE run_key=? AND state='RUNNING' AND run_owner<>?", owner, token, utc(now), key, owner);
             return claimed == 1 ? new Claim(token, jdbc.queryForObject("SELECT attempt FROM operation_job_run WHERE run_key=?", Integer.class, key)) : null;
@@ -220,7 +233,7 @@ public class OperationalSchedulerService {
     // 완료 시각이 지난 비실행 이력만 제한 수만큼 삭제한다. RUNNING 기록은 복구 판단에 필요하므로 보존한다.
     public int retainFinishedRuns() {
         Instant cutoff = now().minus(properties.getRunRetentionDays(), ChronoUnit.DAYS);
-        var ids = jdbc.queryForList("SELECT id FROM operation_job_run WHERE completed_at<? AND state<>'RUNNING' ORDER BY id LIMIT ?", Long.class, utc(cutoff), properties.getRetentionBatchSize());
+        var ids = jdbc.queryForList(dialect.pageSql("SELECT id FROM operation_job_run WHERE completed_at<? AND state<>'RUNNING' ORDER BY id",0,properties.getRetentionBatchSize()), Long.class, utc(cutoff));
         int deleted = 0; for (Long id : ids) deleted += jdbc.update("DELETE FROM operation_job_run WHERE id=? AND completed_at<? AND state<>'RUNNING'", id, utc(cutoff));
         return deleted;
     }
@@ -238,8 +251,8 @@ public class OperationalSchedulerService {
         return new Schedule(row.getLong("id"), row.getString("job_code"), row.getString("cron"), row.getString("time_zone"), row.getString("misfire_policy"), row.getBoolean("enabled"), row.getInt("revision"), instant(row,"created_at"), instant(row,"updated_at"), next == null ? null : next.toInstant());
     }
     private Run run(ResultSet row, int index) throws SQLException {
-        var completed = row.getObject("completed_at", OffsetDateTime.class);
-        return new Run(row.getLong("id"), row.getLong("schedule_id"), row.getString("run_key"), row.getString("job_code"), instant(row,"scheduled_at"), instant(row,"started_at"), completed == null ? null : completed.toInstant(), row.getString("state"), row.getString("reason_code"), row.getInt("attempt"));
+        var completed = dialect.readInstant(row,"completed_at");
+        return new Run(row.getLong("id"), row.getLong("schedule_id"), row.getString("run_key"), row.getString("job_code"), instant(row,"scheduled_at"), instant(row,"started_at"), completed, row.getString("state"), row.getString("reason_code"), row.getInt("attempt"));
     }
     // 등록 jobCode, 초 필드 0인 Quartz cron, 실제 IANA zone, 다음 실행 존재를 확인한다. 임의 초단위 실행/클래스 payload는 받지 않는다.
     private void validate(Input input) {
@@ -256,8 +269,8 @@ public class OperationalSchedulerService {
     public static TriggerKey triggerKey(long id) { return new TriggerKey(Long.toString(id), GROUP); }
     public static void bounds(int page, int size) { if (page < 0 || page > 1_000_000 || size < 1 || size > 100) throw invalid(); }
     private Instant now() { return clock.instant().truncatedTo(ChronoUnit.MICROS); }
-    private static OffsetDateTime utc(Instant value) { return value.atOffset(ZoneOffset.UTC); }
-    private static Instant instant(ResultSet row, String field) throws SQLException { return row.getObject(field, OffsetDateTime.class).toInstant(); }
+    private Object utc(Instant value) { return dialect.timestamp(value); }
+    private Instant instant(ResultSet row, String field) throws SQLException { return dialect.readInstant(row,field); }
     private static ApiException invalid() { return new ApiException(400,"INVALID_INPUT","예약 작업 입력을 확인해 주세요."); }
     private static ApiException conflict() { return new ApiException(409,"REVISION_CONFLICT","다른 변경을 확인하고 다시 저장해 주세요."); }
     private static ApiException unavailable() { return new ApiException(503,"SCHEDULER_UNAVAILABLE","예약 작업 서비스에 연결하지 못했습니다."); }

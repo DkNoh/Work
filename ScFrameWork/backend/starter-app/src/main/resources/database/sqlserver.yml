@@ -1,0 +1,20 @@
+# 새 sqlserver 스키마용 선택 설정. SC_DB_URL/USERNAME/PASSWORD는 배포 환경이 소유한다.
+# 기존 H2 Flyway 이력을 다른 DB에 복사하는 데이터 이관 기능이 아니다.
+spring:
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: ${SC_DB_URL}
+    username: ${SC_DB_USERNAME}
+    password: ${SC_DB_PASSWORD}
+  jpa:
+    properties:
+      hibernate.use_nationalized_character_data: true
+  quartz:
+    properties:
+      org.quartz.jobStore.driverDelegateClass: org.quartz.impl.jdbcjobstore.MSSQLDelegate
+sc:
+  app:
+    database:
+      migration: classpath:db/sqlserver/migration
+      audit-migration: classpath:db/sqlserver/audit-migration
+      operations-migration: classpath:db/sqlserver/operations-migration

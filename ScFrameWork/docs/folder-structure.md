@@ -1,5 +1,20 @@
 # ScFramework 구조와 책임
 
+## DB별 구성 위치
+
+공통 `backend/framework-core/.../database/DatabaseDialect.java`는 JDBC 차이의 공개 계약이며
+`framework-autoconfigure/.../database/`는 metadata 선택·시간/페이지 SQL·중복 INSERT 복구를 담당한다.
+Reference/Starter/생성 v2의 `src/main/resources/database/<vendor>.yml`과 `db/<vendor>/`는
+앱이 소유하는 DB 설정과 신규 schema migration이다. 기존 H2 migration 경로와 checksum은 유지한다.
+JDBC 드라이버·Flyway 확장은 각 소비 앱 POM의 `db-*` profile이 선택한다.
+`scripts/verify-database-config.mjs`는 연결된 설정/DDL 파일의 정적 검사를 수행한다.
+[상세 경로·실행 계약](database-support.md), [리뷰와 검증 한계](리뷰정리.md)를 함께 확인한다.
+
+
+Windows 개발 진입점은 `scripts/dev.mjs` → `scripts/dev.ps1`이다. 루트 `npm run dev`가
+운영체제를 선택하며 Windows 실행기는 개발 빌드·비공개 secret 준비·Java/Vite 시작·포트 준비·
+소유 프로세스 종료를 담당한다. macOS/Linux는 기존 `scripts/dev.sh` 경로를 사용한다.
+
 JSP·Java 개발자를 위한 [Vue 3·TypeScript·서버 코드 읽기 안내](developer-reading-guide.md)를 추가했다. 수작업 프런트·Java 기능 코드와 현재 v2 생성 템플릿에 한국어 역할·흐름 주석을 유지한다. 범위와 실제 검증은 [상세 주석 적용 기록](질의/상세주석-개발자학습가이드.md)을 따른다.
 
 ## 시안 재정렬: 공통 글꼴·표현 토큰

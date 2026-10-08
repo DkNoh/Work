@@ -308,6 +308,8 @@ test("검색·페이지 URL은 새로고침과 상세 복귀에서 유지되고 
   await expect(page.getByLabel("Requirement title", { exact: true })).toHaveValue(
     "언어 전환 중인 업무 입력",
   );
+  // 현재 셸의 로그아웃은 사용자 메뉴 안에 있다. 언어 전환 후에도 실제 사용자의 클릭 경로를 따른다.
+  await page.getByRole("button", { name: /^Open user menu:/ }).click();
   await page.getByRole("button", { name: "Sign out", exact: true }).click();
   await expect(page.getByRole("form", { name: "로그인", exact: true })).toBeVisible();
 });

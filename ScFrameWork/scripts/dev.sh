@@ -13,11 +13,23 @@ export SC_PORT="${SC_PORT:-18082}"
 export SC_ADDRESS=127.0.0.1
 export SC_APP=reference
 export SC_APP_JAR="$ROOT/backend/reference-app/target/sc-reference-app.jar"
-# dev에서는 외부 DB URL·계정·secret/JAR/log 경로를 상속하지 않고 새 개발 경로를 사용한다.
+# H2는 기존 격리 개발 경로를 유지한다. 외부 DB는 제품명을 명시했을 때만 전달한다.
+export SC_DB_VENDOR="${SC_DB_VENDOR:-h2}"
+case "$SC_DB_VENDOR" in
+  h2) DB_BUILD_PROFILE=db-h2 ;;
+  oracle|db2|postgresql) DB_BUILD_PROFILE="db-$SC_DB_VENDOR" ;;
+  sqlserver) DB_BUILD_PROFILE=db-mssql ;;
+  *) echo 'SC_DB_VENDOR는 h2/oracle/db2/sqlserver/postgresql이어야 합니다.' >&2; exit 1 ;;
+esac
 export SC_DB_BASE="$SC_HOME/data/sc-reference"
-export SC_DB_URL="jdbc:h2:file:$SC_DB_BASE;DB_CLOSE_ON_EXIT=FALSE"
-export SC_DB_USERNAME=sa
-export SC_DB_PASSWORD=''
+if [[ "$SC_DB_VENDOR" == h2 ]]; then
+  export SC_DB_URL="jdbc:h2:file:$SC_DB_BASE;DB_CLOSE_ON_EXIT=FALSE"
+  export SC_DB_USERNAME=sa SC_DB_PASSWORD=''
+else
+  : "${SC_DB_URL:?외부 DB의 SC_DB_URL을 지정하세요.}"
+  : "${SC_DB_USERNAME:?외부 DB의 SC_DB_USERNAME을 지정하세요.}"
+  : "${SC_DB_PASSWORD?외부 DB의 SC_DB_PASSWORD를 지정하세요.}"
+fi
 export SC_BOOTSTRAP_USERNAME=admin
 export SC_BOOTSTRAP_SECRET_FILE="$SC_HOME/secrets/bootstrap.secret"
 export SC_LOG_FILE="$SC_HOME/logs/application.log"
@@ -29,7 +41,7 @@ export SC_ECHO_URL=http://127.0.0.1:9
 export SC_PROFILE="${SC_PROFILE:-dev}"
 export SC_API_TARGET="http://127.0.0.1:$SC_PORT"
 FRONTEND_PORT="${SC_FRONTEND_PORT:-5175}"
-[[ -f "$ROOT/backend/reference-app/target/sc-reference-app.jar" ]] || "$ROOT/scripts/build.sh"
+[[ -f "$ROOT/backend/reference-app/target/sc-reference-app.jar" ]] || "$ROOT/scripts/build.sh" "-P$DB_BUILD_PROFILE"
 [[ -d "$ROOT/node_modules" ]] || (cd "$ROOT" && npm ci --no-audit --no-fund)
 python3 "$ROOT/scripts/create-secret.py" "$SC_BOOTSTRAP_SECRET_FILE"
 "$ROOT/scripts/run.sh" &

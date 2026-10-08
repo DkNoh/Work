@@ -2,7 +2,7 @@
 spring:
   flyway:
     enabled: true
-    locations: classpath:db/audit-migration
+    locations: ${sc.app.database.audit-migration:classpath:db/audit-migration}
 sc:
   framework:
     audit:

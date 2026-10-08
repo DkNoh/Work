@@ -1,5 +1,56 @@
 # 신규 프로젝트 실행·운영 기준
 
+## 다중 DB 실행
+
+H2 기본 외 Oracle·Db2 LUW·SQL Server·PostgreSQL을 선택하는 [DB 운영 가이드](database-support.md)를 추가했다.
+드라이버를 넣는 Maven profile과 실행 `SC_DB_VENDOR`를 맞추고 URL·계정·비밀정보는 환경에서 주입한다.
+기존 H2 백업/복원 스크립트를 외부 DB에 적용하지 않는다. 외부 DB의 backup/restore·TLS·schema 권한은
+고객 환경에서 별도 검증한다. [이번 결과](리뷰정리.md)는 과거 001~012의 실행 기록과 구분한다.
+
+
+## Windows 개발 실행기
+
+2026-10-09 Windows 실행 오류를 확인하여 `npm run dev`에 운영체제별 진입점
+`scripts/dev.mjs`를 연결했다. Windows는 `scripts/dev.ps1`, macOS/Linux는 기존 `scripts/dev.sh`를 실행한다.
+Windows 개발 실행에는 JDK 21, Node.js/npm이 필요하다. Bash/Python은 사용하지 않는다.
+
+- 실행: 프로젝트 루트의 PowerShell에서 `npm run dev`.
+- 서버 소스 재빌드 후 실행: `npm run dev -- --rebuild`.
+- 종료: `Ctrl+C` 또는 다른 터미널의 `npm run dev -- --stop`.
+- 기본 화면/서버: `http://localhost:5175`, `http://localhost:18082`.
+- `SC_HOME`은 Windows 절대 경로, 포트는 `SC_PORT`/`SC_FRONTEND_PORT`로 변경할 수 있다.
+  별도 `SC_HOME`으로 실행했다면 종료 요청도 동일한 환경변수로 실행한다.
+- 로그: 선택한 `SC_HOME` 아래 `logs/backend.stdout.log`, `backend.stderr.log`,
+  `frontend.stdout.log`, `frontend.stderr.log`, `application.log`.
+- 최초 아이디는 `admin`, 비밀번호 파일은 `secrets/bootstrap.secret`이다.
+  현재 사용자 전용 ACL을 적용하고 값은 출력하거나 덮어쓰지 않는다.
+- 실행기는 포트 충돌을 거부하고 `run/app.lock`을 획득한다. 자기가 시작한 Java/Vite만 종료하고
+  PID/잠금 파일을 정리한다. 터미널 강제 종료/전원 차단으로 남은 잠금은 자동으로 지우지 않는다.
+- Windows 종료에서는 소유 프로세스를 `Stop-Process`로 종료한다. 정상 HTTP 요청 완료를 기다리는
+  운영용 graceful shutdown이나 강제 종료 시 데이터 무손실을 보장하는 실행기는 아니다.
+
+필요한 라이브러리/JAR가 없거나 `--rebuild`를 지정하면 프런트 `npm run build`와 Maven
+`-DskipTests package`를 수행한다. 개발 기동을 위한 패키징이며 전체 검증 성공으로 합산하지 않는다.
+기존 Unix CI/통합 검증은 `scripts/build.sh`를 유지한다.
+
+Windows에서 추가 확인한 호환 문제는 Java 경로의 `C:/...` 변환, 생성 토큰 SCSS의 CRLF 비교,
+Maven Wrapper의 일반 디렉터리 `Target` null 처리, PowerShell 7에서 상속된 모듈 경로다.
+
+이번 실제 검증: 프런트 빌드 성공, 단위 테스트 40파일/167개 통과, 변경 JS lint 통과,
+두 실행 JAR 패키징 성공. 별도 `.runtime/windows-check`와 18195/5179에서 브라우저 로그인,
+대시보드 표시, 프런트→API health 200, 실행 secret HTTP 403, 브라우저 오류 0,
+재시작 로그인, 중복 포트 거부, 종료 요청 후 포트/잠금 정리를 확인했다.
+Node의 SIGINT 이벤트를 통한 종료 요청과 포트/잠금 정리도 확인했다. 실제 사용자 터미널의
+Ctrl+C 키 전달은 별도 미확인이며 `npm run dev -- --stop`으로도 종료할 수 있다.
+기본 5175/18082에서는 실제 사용자 권한으로 실행하고 로그인 화면 표시·HTTP 200·브라우저 오류0을
+확인했다. 로그인 동작 검사는 위 별도 테스트 자료에서만 수행했다.
+
+전체 검증은 통과하지 않았다. `npm run verify`는 기존 체크아웃의 형식 검사 515파일에서
+실패했으며 전체 파일 자동 재포맷은 하지 않았다. Maven `verify`는 autoconfigure 테스트
+55개 중 실패1/오류3/skip3이었다. 실패는 Python Unix lockf 기반 잠금 테스트1건과
+Windows 심볼릭 링크 권한이 필요한 테스트3건이며 기존 테스트를 삭제하거나 완화하지 않았다.
+실제 서버 기동/개발용 패키징 성공과 전체 CI 성공은 구분한다.
+
 ## 현재 화면: 디자인 교정 후보·사용자 승인 대기
 
 001~012의 기능 구현·로컬 검증 기록은 아래에 보존한다. 현재workspace와프리뷰는 Yzen정보계층을 참고한 **디자인 교정 후보**다. [교정의 새 근거](검증/design-correction-final-summary.json)는live40검사/wholeDOMaxe14회 위반0·통합unit155/선별서버10·새JAR관련30고유 케이스·정적파일46/8해시일치·Tailnet로그인/4KPI/SVG/pageerror0이다. 새JAR생성/재시작과직접접속도 확인했다. 새 시각 기준16PNG의 명시 갱신·정상 비교4개와 전체 Storybook105개/30files도 통과했다. 새패키지 독립 설치소비와 사용자 디자인 수락은 미확인이고 `accepted=false`다. 불변 `.runtime/releases/012`의0.3.0 기능아카이브와 현재source24공개UI/candidate를 구분한다. 과거unit149/서버196·Docs22를 새교정성적으로 표시하지 않는다.

@@ -1,3 +1,5 @@
+dev.scframework.autoconfigure.ScDatabaseAutoConfiguration
+dev.scframework.autoconfigure.ScMyBatisDatabaseAutoConfiguration
 dev.scframework.autoconfigure.ScWebAutoConfiguration
 dev.scframework.autoconfigure.ScAuditAutoConfiguration
 dev.scframework.autoconfigure.ScSecurityAutoConfiguration

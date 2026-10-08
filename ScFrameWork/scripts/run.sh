@@ -34,7 +34,12 @@ if [[ -n "${SC_PROFILE:-}" ]]; then
 fi
 export SC_DB_BASE="${SC_DB_BASE:-$SC_HOME/data/sc-$SC_APP}"
 export SC_HOME
-export SC_DB_URL="${SC_DB_URL:-jdbc:h2:file:$SC_DB_BASE;DB_CLOSE_ON_EXIT=FALSE}"
+export SC_DB_VENDOR="${SC_DB_VENDOR:-h2}"
+case "$SC_DB_VENDOR" in
+  h2) export SC_DB_URL="${SC_DB_URL:-jdbc:h2:file:$SC_DB_BASE;DB_CLOSE_ON_EXIT=FALSE}" ;;
+  oracle|db2|sqlserver|postgresql) : "${SC_DB_URL:?외부 DB의 SC_DB_URL을 지정하세요.}" ;;
+  *) echo '지원하지 않는 SC_DB_VENDOR입니다.' >&2; exit 1 ;;
+esac
 export SC_PORT="${SC_PORT:-18082}"
 export SC_ADDRESS="${SC_ADDRESS:-127.0.0.1}"
 export SC_LOG_FILE="${SC_LOG_FILE:-$SC_HOME/logs/application.log}"

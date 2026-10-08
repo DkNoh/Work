@@ -2,6 +2,8 @@
 
 ScFramework는 `/Users/dk/Work/WorkboardVue`의 업무·API·UI 계약을 참고해 만드는 독립 공통 프레임워크다. WorkboardVue와 `/Users/dk/Work/workboard`의 실행 코드·의존성·DB·업로드·비밀번호·`.runtime`을 수정하거나 복사하지 않는다. 레퍼런스의 문서 작업은 `WorkboardVue/docs/질의`에 기록할 수 있다.
 
+제품 목적은 판매용 공통 프레임워크를 제공하여 고객의 레거시 내부 시스템을 마이그레이션하고 개발하기 쉽게 만드는 것이다. 주요 대상은 업무 로직이 JSP에 혼재한 순수 JSP·EJB·구형 Spring 시스템이다. 현재 업무 앱은 그 목적을 검증하는 레퍼런스이며, 반복되는 개발 기능은 공통 패키지·확장점·생성 템플릿으로 제공하는 방향으로 판단한다. 고객별 업무 규칙과 데이터는 소비 앱의 확장 영역에 두며, 기존 시스템과의 병행 운영·데이터 및 트랜잭션 보존·개발자 사용성·독립 배포와 업그레이드를 함께 검토한다.
+
 - 개발 단계는 `001`~`012` 순서다. 실제 구현·실행 확인과 후속 업무 작업을 구분한다.
 - 신규 기술 기준은 Vue 3/Vuetify·Spring Boot 3.5.16·JDK 21·H2다. JPA는 단순 조회·쓰기, MyBatis는 복잡 조회, OpenFeign은 서버의 외부 HTTP 연동을 맡는다.
 - 사용자 요청에 따라 Redis·JWT·SSO는 제외한다. 서버 세션·CSRF를 유지한다.
@@ -16,6 +18,7 @@ ScFramework는 `/Users/dk/Work/WorkboardVue`의 업무·API·UI 계약을 참고
 - props는 읽기 전용, 입력 변경은 model/emit, 업무 권한·상태 전이·revision은 앱의 Service와 기능 폴더가 소유한다.
 - 성공 JSON을 일괄 success/data 봉투로 바꾸지 않는다. 서버 오류는 code/message/errors[], 프런트는 ApiError.fields로 연결한다.
 - H2 migration은 앱이 소유한다. JPA/MyBatis는 같은 DataSource/트랜잭션을 사용하고 JPA 변경 후 Mapper 조회는 flush를 검증한다. DDL 커밋과 DML rollback을 구분한다.
+- H2는 기본 개발 DB이며 Oracle·Db2 LUW·SQL Server·PostgreSQL은 `docs/database-support.md`의 Maven profile/SC_DB_VENDOR로 선택한다. DB별 migration은 앱이 소유하고 기존 H2 checksum을 보존한다. 공통 JDBC 차이는 DatabaseDialect 확장점에 두며 외부 DB 실제 검증과 H2/정적 검사를 구분한다.
 - OpenFeign은 명시적인 client 목록·URL·timeout·오류 매핑으로 구성한다. 수신 사용자 cookie/CSRF를 외부로 자동 전달하지 않는다. 실제 외부 API 대신 loopback mock으로 테스트한다.
 - npm workspaces와 루트 package-lock.json 하나를 사용한다. 정확한 직접 버전을 관리하고 `npm ci`로 재현한다.
 - 신규 개발 기본값은 Vue 5175/Spring 18082다. E2E는 별도 포트·임시 H2/계정 자료를 사용한다. 실제 사용자 실행 자료를 테스트에 사용하지 않는다.

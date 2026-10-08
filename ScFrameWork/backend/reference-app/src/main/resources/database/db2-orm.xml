@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="https://jakarta.ee/xml/ns/persistence/orm" version="3.1">
+  <!-- DB2의 VARCHAR는 최대 32K byte이므로 한국어 10,000~20,000자 업무 본문은 CLOB이다.
+       앱 소유 DB2 설정에서만 annotation의 열 용량을 덮어쓴다. Java/API 최대 길이 검증은 유지한다.
+       metadata-complete를 켜지 않아 IDENTITY·@Version·권한과 나머지 매핑을 보존한다. -->
+  <entity class="dev.scframework.reference.requirements.RequirementEntity" access="FIELD">
+    <attributes>
+      <basic name="desired"><column nullable="false" length="2147483647" /></basic>
+      <basic name="reason"><column nullable="false" length="2147483647" /></basic>
+      <basic name="referenceText"><column nullable="false" length="2147483647" /></basic>
+      <basic name="followParts"><column nullable="false" length="2147483647" /></basic>
+    </attributes>
+  </entity>
+  <entity class="dev.scframework.reference.requirements.ReviewEntity" access="FIELD">
+    <attributes>
+      <basic name="rationale"><column nullable="false" length="2147483647" /></basic>
+      <basic name="conditions"><column nullable="false" length="2147483647" /></basic>
+      <basic name="scope"><column nullable="false" length="2147483647" /></basic>
+      <basic name="exclusions"><column nullable="false" length="2147483647" /></basic>
+      <basic name="acceptance"><column nullable="false" length="2147483647" /></basic>
+    </attributes>
+  </entity>
+  <entity class="dev.scframework.reference.requirements.CommentEntity" access="FIELD">
+    <attributes>
+      <basic name="body"><column nullable="false" length="2147483647" /></basic>
+    </attributes>
+  </entity>
+  <entity class="dev.scframework.reference.kanban.KanbanTaskEntity" access="FIELD">
+    <attributes>
+      <basic name="description"><column nullable="false" length="2147483647" /></basic>
+    </attributes>
+  </entity>
+</entity-mappings>

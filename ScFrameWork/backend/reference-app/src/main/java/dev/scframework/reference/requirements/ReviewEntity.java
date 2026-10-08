@@ -33,4 +33,11 @@ public class ReviewEntity {
         exclusions = input.exclusions(); acceptance = input.acceptance(); estimate = input.estimate();
         this.reviewerId = reviewerId; updatedAt = now;
     }
+    // Oracle의 빈 문자열=NULL 저장 규칙은 읽기 getter에서만 복원한다.
+    // 엔티티 필드를 @PostLoad에서 바꾸면 조회만 해도 dirty/revision 변경이 생길 수 있어 상태는 보존한다.
+    // API/MapStruct는 다른 DB와 동일한 빈 문자열을 받으며 필수 본문 null은 숨기지 않는다.
+    public String getConditions() { return conditions == null ? "" : conditions; }
+    public String getScope() { return scope == null ? "" : scope; }
+    public String getExclusions() { return exclusions == null ? "" : exclusions; }
+    public String getAcceptance() { return acceptance == null ? "" : acceptance; }
 }

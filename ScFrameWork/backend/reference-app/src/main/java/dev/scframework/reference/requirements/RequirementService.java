@@ -165,7 +165,7 @@ public class RequirementService {
         if (!"REVIEWING".equals(request.status) || review == null || request.assignedReviewerId == null
                 || !Objects.equals(review.reviewerId, request.assignedReviewerId)
                 || !Set.of("POSSIBLE", "CONDITIONAL").contains(review.decision)) throw invalid("가능 또는 조건부 가능 검토 후에 합의할 수 있습니다.");
-        if (review.scope.isBlank() || review.exclusions.isBlank() || review.acceptance.isBlank())
+        if (review.getScope().isBlank() || review.getExclusions().isBlank() || review.getAcceptance().isBlank())
             throw invalid("검토자가 반영 범위·제외 범위·완료 기준을 모두 작성해야 합니다. 제외 범위가 없으면 '없음'으로 작성하세요.");
         var before = snapshot(request); request.changed("AGREED", now()); flush();
         record(request, "AGREE", before, actor); publish(request, "REQUIREMENT_AGREE", actor);

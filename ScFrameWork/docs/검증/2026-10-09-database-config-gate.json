@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-09",
+  "platform": "win32",
+  "command": "node scripts/verify-database-config.mjs",
+  "databaseExecuted": false,
+  "positive": {
+    "passed": 447,
+    "failed": 0
+  },
+  "negative": [
+    {
+      "name": "missing-profile",
+      "detected": true,
+      "failures": 4,
+      "expected": "backend/starter-app:oracle:maven-profile"
+    },
+    {
+      "name": "credential-fallback",
+      "detected": true,
+      "failures": 1,
+      "expected": "backend/starter-app:sqlserver:required-password"
+    },
+    {
+      "name": "wrong-migration-path",
+      "detected": true,
+      "failures": 1,
+      "expected": "backend/starter-app:postgresql:audit-migration:path"
+    },
+    {
+      "name": "missing-table",
+      "detected": true,
+      "failures": 1,
+      "expected": "backend/starter-app:oracle:audit-migration:V1__security_audit.sql:tables"
+    },
+    {
+      "name": "wrong-column-type",
+      "detected": true,
+      "failures": 1,
+      "expected": "backend/starter-app:postgresql:audit-migration:V1__security_audit.sql:types"
+    }
+  ],
+  "fixtureContainsSecrets": false,
+  "limitation": "Static configuration and synthetic file mutation checks; no external DB engine was executed."
+}

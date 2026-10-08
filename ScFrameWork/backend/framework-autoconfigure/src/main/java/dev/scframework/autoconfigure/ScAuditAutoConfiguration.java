@@ -1,5 +1,8 @@
 package dev.scframework.autoconfigure;
 
+import dev.scframework.core.database.DatabaseDialect;
+import dev.scframework.autoconfigure.database.StandardDatabaseDialect;
+
 import dev.scframework.autoconfigure.audit.AuditWriteDiagnostics;
 import dev.scframework.autoconfigure.audit.JdbcSecurityAuditSink;
 import dev.scframework.autoconfigure.audit.RequestAuditRecorder;
@@ -39,7 +42,7 @@ public class ScAuditAutoConfiguration {
     @ConditionalOnProperty(prefix = "sc.framework.audit", name = "enabled", havingValue = "true")
     @DependsOnDatabaseInitialization
     // @DependsOnDatabaseInitialization은 앱 Flyway 실행 뒤 스키마를 확인하게 한다. 공통은 DDL을 실행하지 않는다.
-    JdbcSecurityAuditSink scJdbcSecurityAuditSink(DataSource dataSource) { return new JdbcSecurityAuditSink(dataSource); }
+    JdbcSecurityAuditSink scJdbcSecurityAuditSink(DataSource dataSource,org.springframework.beans.factory.ObjectProvider<DatabaseDialect> dialect) { return new JdbcSecurityAuditSink(dataSource,dialect.getIfAvailable(()->StandardDatabaseDialect.detect(dataSource))); }
 
     @Bean @ConditionalOnMissingBean(SecurityAuditPublisher.class)
     @ConditionalOnProperty(prefix = "sc.framework.audit", name = "enabled", havingValue = "true")

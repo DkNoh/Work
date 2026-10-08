@@ -1,5 +1,8 @@
 package dev.scframework.autoconfigure;
 
+import dev.scframework.core.database.DatabaseDialect;
+import dev.scframework.autoconfigure.database.StandardDatabaseDialect;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import dev.scframework.autoconfigure.audit.*;
 import dev.scframework.autoconfigure.messaging.*;
@@ -38,7 +41,7 @@ import org.springframework.transaction.PlatformTransactionManager;
 public class ScMessagingAutoConfiguration {
     @Bean @ConditionalOnMissingBean MessageDiagnostics scMessageDiagnostics(){return new MessageDiagnostics();}
     @Bean @ConditionalOnMissingBean MessageEvents scMessageEvents(ObjectProvider<OperationalEventSink> sinks){return new MessageEvents(sinks);}
-    @Bean @ConditionalOnMissingBean @DependsOnDatabaseInitialization JdbcMessageStore scMessageStore(DataSource source,ScMessagingProperties props){props.validate();return new JdbcMessageStore(source);}
+    @Bean @ConditionalOnMissingBean @DependsOnDatabaseInitialization JdbcMessageStore scMessageStore(DataSource source,ScMessagingProperties props,ObjectProvider<DatabaseDialect> dialect){props.validate();return new JdbcMessageStore(source,dialect.getIfAvailable(()->StandardDatabaseDialect.detect(source)));}
     @Bean @ConditionalOnProperty(prefix="sc.framework.audit",name="durable-enabled",havingValue="true") SecurityAuditMessageHandler scAuditMessageHandler(ObjectMapper mapper,ObjectProvider<SecurityAuditSink> sink){return new SecurityAuditMessageHandler(mapper,sink);}
     @Bean @ConditionalOnBean(FileStorage.class) @ConditionalOnProperty(prefix="sc.framework.file-storage",name="durable-cleanup-enabled",havingValue="true") FileDeleteMessageHandler scFileDeleteHandler(FileStorage storage,ObjectProvider<FileReferenceLookup> references,ObjectMapper mapper){return new FileDeleteMessageHandler(storage,references,mapper);}
     @Bean @ConditionalOnMissingBean MessageRegistry scMessageRegistry(List<MessageHandler> handlers,ScMessagingProperties props){return new MessageRegistry(handlers,props.getMaxPayloadBytes());}

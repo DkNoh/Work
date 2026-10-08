@@ -27,7 +27,8 @@ async function collectPublicComponents(file) {
   if (visited.has(file)) return;
   visited.add(file);
   if (file.endsWith(".vue")) {
-    components.push(relative(resolve(uiRoot, "src"), file));
+    // 파일 탐색은 OS 경로를 사용하되 공개 계약의 경로·컴포넌트 이름은 항상 / 기준으로 만든다.
+    components.push(relative(resolve(uiRoot, "src"), file).replaceAll("\\", "/"));
     return;
   }
   if (!file.endsWith(".ts")) return;
@@ -106,7 +107,8 @@ const contracts = components.map((file) => {
 });
 const content = JSON.stringify({ format: 2, components: contracts }, null, 2) + "\n";
 if (checking) {
-  if ((await readFile(destination, "utf8")) !== content) {
+  // Git의 CRLF checkout만 허용한다. props/events/slots/default 등 실제 계약 차이는 계속 실패한다.
+  if ((await readFile(destination, "utf8")).replaceAll("\r\n", "\n") !== content) {
     throw new Error(
       "공개 UI 계약이 변경되었습니다. 문서와 호환성을 검토한 뒤 npm run ui:contracts:generate를 실행하세요.",
     );

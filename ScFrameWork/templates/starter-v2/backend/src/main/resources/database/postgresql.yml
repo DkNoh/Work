@@ -1,0 +1,17 @@
+# 새 postgresql 스키마용 선택 설정. SC_DB_URL/USERNAME/PASSWORD는 배포 환경이 소유한다.
+# 기존 H2 Flyway 이력을 다른 DB에 복사하는 데이터 이관 기능이 아니다.
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: ${SC_DB_URL}
+    username: ${SC_DB_USERNAME}
+    password: ${SC_DB_PASSWORD}
+  quartz:
+    properties:
+      org.quartz.jobStore.driverDelegateClass: org.quartz.impl.jdbcjobstore.PostgreSQLDelegate
+sc:
+  app:
+    database:
+      migration: classpath:db/postgresql/migration
+      audit-migration: classpath:db/postgresql/audit-migration
+      operations-migration: classpath:db/postgresql/operations-migration

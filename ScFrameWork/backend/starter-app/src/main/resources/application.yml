@@ -1,4 +1,7 @@
 spring:
+  config:
+    # 잘못된 vendor는 시작 때 실패한다. DB별 비밀값은 저장소가 아닌 환경/configtree에서 공급한다.
+    import: classpath:database/${SC_DB_VENDOR:h2}.yml
   application:
     name: sc-starter-app
   datasource:
@@ -7,6 +10,8 @@ spring:
     password: ${SC_DB_PASSWORD:}
   jpa:
     open-in-view: false
+    properties:
+      hibernate.jdbc.time_zone: UTC
     hibernate:
       ddl-auto: none
   flyway:

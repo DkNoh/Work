@@ -1,6 +1,7 @@
 package dev.scframework.reference.audit;
 
 import dev.scframework.core.ApiException;
+import dev.scframework.core.database.DatabaseDialect;
 import dev.scframework.reference.identity.ActorResolver;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -8,7 +9,6 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.Instant;
-import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import javax.sql.DataSource;
@@ -30,9 +30,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class AuditController {
     private final ActorResolver actors;
     private final JdbcTemplate jdbc;
+    private final DatabaseDialect dialect;
 
-    public AuditController(ActorResolver actors, DataSource dataSource) {
+    public AuditController(ActorResolver actors, DataSource dataSource, DatabaseDialect dialect) {
         this.actors = actors;
+        this.dialect = dialect;
         jdbc = new JdbcTemplate(dataSource);
     }
 
@@ -55,22 +57,20 @@ public class AuditController {
         if (action != null) { filter.append(" AND action = ?"); values.add(action); }
         if (outcome != null) { filter.append(" AND outcome = ?"); values.add(outcome); }
         if (actorSubject != null) { filter.append(" AND actor_subject = ?"); values.add(actorSubject); }
-        if (from != null) { filter.append(" AND occurred_at >= ?"); values.add(from.atOffset(java.time.ZoneOffset.UTC)); }
-        if (to != null) { filter.append(" AND occurred_at <= ?"); values.add(to.atOffset(java.time.ZoneOffset.UTC)); }
+        if (from != null) { filter.append(" AND occurred_at >= ?"); values.add(dialect.timestamp(from)); }
+        if (to != null) { filter.append(" AND occurred_at <= ?"); values.add(dialect.timestamp(to)); }
         // 건수와 페이지는 같은 filter/인수를 사용한다. 이 메서드는 별도 스냅샷 트랜잭션을 선언하지 않으므로 reports의 SERIALIZABLE 보장과 혼동하지 않는다.
         Long count = jdbc.queryForObject("SELECT COUNT(*) FROM security_audit_event" + filter, Long.class, values.toArray());
-        List<Object> pageValues = new ArrayList<>(values);
-        pageValues.add(size);
-        pageValues.add((long) page * size);
-        List<AuditItem> items = jdbc.query("SELECT * FROM security_audit_event" + filter
-                + " ORDER BY occurred_at DESC, id DESC LIMIT ? OFFSET ?", AuditController::item, pageValues.toArray());
+        // DB별 페이지 구문만 공통 dialect에 위임한다. 필터는 계속 바인딩하며 offset/limit는 검증된 숫자다.
+        List<AuditItem> items = jdbc.query(dialect.pageSql("SELECT * FROM security_audit_event" + filter
+                + " ORDER BY occurred_at DESC, id DESC", (long) page * size, size), this::item, values.toArray());
         return new AuditPage(List.copyOf(items), count == null ? 0 : count, page, size);
     }
 
     // 공개 record의 제한된 메타데이터 열만 읽는다. SELECT 결과의 모든 열을 동적 Map으로 직렬화하지 않는다.
-    private static AuditItem item(ResultSet row, int index) throws SQLException {
+    private AuditItem item(ResultSet row, int index) throws SQLException {
         return new AuditItem(row.getLong("id"), row.getString("actor_subject"),
-                row.getObject("actor_id", Long.class), row.getObject("occurred_at", OffsetDateTime.class).toInstant(),
+                row.getObject("actor_id", Long.class), dialect.readInstant(row, "occurred_at"),
                 row.getString("action"), row.getString("outcome"), row.getString("resource_type"),
                 row.getString("resource_id"), row.getString("request_id"), row.getString("reason_code"));
     }

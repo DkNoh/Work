@@ -18,7 +18,12 @@ export SC_HOME SC_PROFILE SC_BOOTSTRAP_SECRET_FILE
 export SC_OPERATIONS_SECRETS_DIR="${SC_OPERATIONS_SECRETS_DIR:-$SC_HOME/secrets/operations/}"
 export SC_BOOTSTRAP_USERNAME="${SC_BOOTSTRAP_USERNAME:-admin}"
 export SC_PORT="${SC_PORT:-__SERVER_PORT__}" SC_ADDRESS="${SC_ADDRESS:-127.0.0.1}"
-export SC_DB_URL="${SC_DB_URL:-jdbc:h2:file:$SC_HOME/data/app;DB_CLOSE_ON_EXIT=FALSE}"
+export SC_DB_VENDOR="${SC_DB_VENDOR:-h2}"
+case "$SC_DB_VENDOR" in
+  h2) export SC_DB_URL="${SC_DB_URL:-jdbc:h2:file:$SC_HOME/data/app;DB_CLOSE_ON_EXIT=FALSE}" ;;
+  oracle|db2|sqlserver|postgresql) : "${SC_DB_URL:?외부 DB의 SC_DB_URL을 지정하세요.}" ;;
+  *) echo '지원하지 않는 SC_DB_VENDOR입니다.' >&2; exit 1 ;;
+esac
 export SC_LOG_FILE="${SC_LOG_FILE:-$SC_HOME/logs/app.log}" SC_UPLOAD_ROOT="${SC_UPLOAD_ROOT:-$SC_HOME/uploads}"
 SC_APP_JAR="${SC_APP_JAR:-$TASK_ROOT/backend/target/__APP_NAME__.jar}"
 [[ -f "$SC_APP_JAR" ]] || { echo 'scripts/build.sh로 JAR를 먼저 생성하세요.' >&2; exit 1; }

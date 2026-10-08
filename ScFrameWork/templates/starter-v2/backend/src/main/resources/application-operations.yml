@@ -3,7 +3,7 @@ spring:
     import: configtree:${SC_OPERATIONS_SECRETS_DIR:${SC_HOME:./.runtime/local}/secrets/operations/}
   flyway:
     enabled: true
-    locations: classpath:db/migration,classpath:db/audit-migration,classpath:db/operations-migration
+    locations: ${sc.app.database.migration:classpath:db/migration},${sc.app.database.audit-migration:classpath:db/audit-migration},${sc.app.database.operations-migration:classpath:db/operations-migration}
   rabbitmq:
     host: ${SC_MQ_HOST:127.0.0.1}
     port: ${SC_MQ_PORT:5679}

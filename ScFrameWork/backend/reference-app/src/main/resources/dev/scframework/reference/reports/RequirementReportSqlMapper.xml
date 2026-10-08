@@ -80,7 +80,9 @@
     LEFT JOIN requirement_review review ON review.requirement_id = r.id
     LEFT JOIN comment_totals c ON c.requirement_id = r.id
     LEFT JOIN history_totals h ON h.requirement_id = r.id
+    <!-- CASE로 NULL을 뒤에 두면 SQL Server의 NULLS LAST 미지원에도 같은 정렬을 보존한다. -->
     ORDER BY
+    <if test="sort == 'lastCommentAt'">CASE WHEN c.last_comment_at IS NULL THEN 1 ELSE 0 END ASC,</if>
     <choose>
       <when test="sort == 'title'">r.title</when>
       <when test="sort == 'commentCount'">COALESCE(c.comment_count, 0)</when>
@@ -89,7 +91,8 @@
       <otherwise>r.updated_at</otherwise>
     </choose>
     <choose><when test="direction == 'asc'">ASC</when><otherwise>DESC</otherwise></choose>
-    <if test="sort == 'lastCommentAt'">NULLS LAST</if>, r.id DESC
-    LIMIT #{size} OFFSET #{offset}
+    , r.id DESC
+    <!-- H2·PostgreSQL·Oracle 12c+·DB2 LUW·SQL Server의 공통 ANSI 페이지 구문이다. -->
+    OFFSET #{offset} ROWS FETCH NEXT #{size} ROWS ONLY
   </select>
 </mapper>

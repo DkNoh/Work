@@ -1,0 +1,37 @@
+# Generated environment template. Supply MFA_DB_URL / MFA_DB_USERNAME / MFA_DB_PASSWORD externally.
+# Review query.* against the target TEST database before starting.
+# 실제 비밀번호를 이 파일에 커밋하지 않는다. 환경변수가 같은 설정 키보다 우선한다.
+
+# TCP 서버
+server.bind-address=127.0.0.1
+server.port=9200
+server.charset=EUC-KR
+server.worker-threads=50
+server.queue-capacity=200
+server.read-timeout-ms=5000
+server.shutdown-timeout-seconds=15
+
+# Oracle / HikariCP
+db.url=
+db.username=
+db.password=
+db.driver-class-name=oracle.jdbc.OracleDriver
+db.maximum-pool-size=10
+db.minimum-idle=2
+db.connection-timeout-ms=5000
+db.validation-timeout-ms=3000
+
+# MFA 인증번호 유효시간
+auth.ttl-minutes=5
+
+# SQL: 운영 DDL과 컬럼을 대조한 뒤 확정한다.
+query.select-sequence=SELECT SQ_SMS_REAL.NEXTVAL FROM DUAL
+query.select-phone=SELECT MBLPHN_TELNO FROM SMS.CLERK WHERE CLERK_NO = ?
+query.select-auth-code=SELECT EXPIRE_DTTM FROM SMS.MFA WHERE SEQ = ? AND AUTH_CODE = ? AND RES_DT IS NULL
+query.insert-auth-code=INSERT INTO SMS.MFA VALUES(?, ?, ?, ?, ?, ?, ?, NULL, NULL, ?)
+query.insert-sms=INSERT INTO SMS.SMS_REAL(CMP_MSG_ID, CMP_USR_ID, ODR_FG, MSG_GB, WRT_DTTM, USED_CD, SMS_GB, RCV_PHN_ID, SND_DTTM, WRT_DATE, SND_MSG, EXPIRE_VAL, SMS_ST, RSLT_VAL, EMP_ID, SND_NM, SVC_M_ID, DEP_ID, SVC_L_ID, CALLBACK) VALUES(?, '00000', '1', 'A', ?, '00', '1', ?, ?, ?, ?, '0', '0', '99', ?, 'IV', 'IV', 'DP6-BK4-QY5', 'DP6-BK4-QY5', '15881599')
+# 마지막 조건으로 만료와 미사용을 원자적으로 다시 확인한다. 컬럼 타입에 맞게 DBA 검토가 필요하다.
+query.consume-auth-code=UPDATE SMS.MFA SET RES_DT = ?, RES_TM = ?, EXPIRE_DTTM = ? WHERE SEQ = ? AND AUTH_CODE = ? AND RES_DT IS NULL AND EXPIRE_DTTM >= ?
+
+# HealthCheck host defaults to bind-address; wildcard binds use loopback.
+health.timeout-ms=3000

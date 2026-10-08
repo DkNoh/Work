@@ -1,0 +1,8 @@
+/target/
+/logs/
+/run/
+/.scannerwork/
+/.env
+/.env.*
+/conf/*.properties
+/conf/*.env

@@ -1,0 +1,26 @@
+[Unit]
+Description=SCBK MFA TCP daemon
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=mfa
+Group=mfa
+WorkingDirectory=/opt/scbk/mfa
+Environment=MFA_CONFIG=/etc/scbk/mfa/mfa.properties
+EnvironmentFile=-/etc/scbk/mfa/mfa.env
+ExecStart=/usr/bin/java -XX:MaxRAMPercentage=70 -jar /opt/scbk/mfa/mfa-daemon.jar
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=30
+SuccessExitStatus=143
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/log/scbk/mfa
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

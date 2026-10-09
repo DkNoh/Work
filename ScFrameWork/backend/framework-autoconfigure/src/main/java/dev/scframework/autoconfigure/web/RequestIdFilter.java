@@ -9,6 +9,11 @@ import java.util.UUID;
 import org.slf4j.MDC;
 import org.springframework.web.filter.OncePerRequestFilter;
 
+/*
+ * 요청 추적 ID를 허용 형식의 수신 헤더 또는 새 UUID로 정하고 응답/MDC에 연결한다.
+ * MDC는 서블릿 스레드에 묶이므로 finally에서 이전 값을 복원/제거해야 재사용 스레드에 이전 요청 정보가 남지 않는다.
+ */
+
 public final class RequestIdFilter extends OncePerRequestFilter {
     public static final String HEADER = "X-Request-ID";
     public static final String MDC_KEY = "requestId";

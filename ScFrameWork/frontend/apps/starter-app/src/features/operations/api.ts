@@ -1,3 +1,8 @@
+/**
+ * Starter 운영 기능의 HTTP factory와 Query 키다. 공통 runtime.client 한 개에 모든 조회/명령을 위임한다.
+ * DTO 타입을 계약에서 선택하고 queryKey prefix로 관련 목록/상세/실행 이력의 캐시 갱신 범위를 정한다.
+ * GET의 signal은 취소를 전달한다. 변경 요청의 revision과 허용 action은 서버 동시성/상태 전이 계약이며 프런트 타입만으로 권한을 보장하지 않는다.
+ */
 import type { components } from "../../generated/api";
 import type { FrameworkRuntime } from "@sc/runtime";
 

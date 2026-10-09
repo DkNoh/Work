@@ -50,6 +50,17 @@
 </template>
 
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 필드를 v-model로 폼에 연결하고, submit 시 applyFilters를 호출한다. reset 이벤트의 URL 초기화는 부모가 담당한다.
+ */
+
+/**
+ * 서버 조회에 적용하기 전의 검색 폼. props.filters는 현재 적용된 URL 조건이고 useForm 값은 사용자가 작성 중인 초안이다.
+ * 선택 필드는 문자열로 입력받고 Zod schema가 API용 숫자/null/허용 상태로 변환한다. TypeScript 선언만으로 입력값이 변환되지는 않는다.
+ * watch 대상을 검색 조건만으로 좁혀 페이지/정렬/보기 변경이 아직 제출하지 않은 검색어를 지우지 않게 한다.
+ */
+
 import { computed, watch } from "vue";
 import { useForm } from "vee-validate";
 import { useI18n } from "vue-i18n";
@@ -72,6 +83,9 @@ const props = defineProps<{
 }>();
 const emit = defineEmits<{ apply: [input: ReportFilterInput]; reset: [] }>();
 const { t } = useI18n({ useScope: "global" });
+/**
+ * 서버/URL의 number|null을 선택 input이 사용하는 문자열/빈 문자열로 바꾼다.
+ */
 function initialValues(): ReportFilterDraft {
   return {
     q: props.filters.q,
@@ -133,6 +147,9 @@ watch(
   },
   { immediate: true },
 );
+/**
+ * busy 상태의 중복 적용을 막고 safeParse 오류를 필드에 연결한다. 성공한 타입으로 좁혀진 값만 apply 이벤트로 보낸다.
+ */
 function applyFilters() {
   if (props.busy) return;
   clearErrors();

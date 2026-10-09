@@ -37,6 +37,17 @@
 </template>
 
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * #header-actions/#sidebar-footer/#notice는 ScAppShell이 제공하는 삽입 위치다. @navigate 이벤트를 받아 Router로 이동한다.
+ */
+
+/**
+ * Starter의 최상위 공통 shell 조립자다. 업무 데이터 대신 탐색/언어/로그아웃 UI를 소유하고 router-view에 현재 화면을 배치한다.
+ * 메뉴와 활성 항목은 URL/capability에서 computed로 계산한다. 운영 기능이 켜진 경우에만 해당 메뉴를 보여준다.
+ * locale watch는 Vue i18n·Vuetify·HTML lang을 동기화한다. API를 호출하는 로그아웃은 공통 runtime.auth를 경유한다.
+ */
+
 import { computed, ref, watch } from "vue";
 import { useI18n } from "vue-i18n";
 import { useLocale } from "vuetify";
@@ -101,6 +112,9 @@ const activeItem = computed(() =>
     : "",
 );
 
+/**
+ * 중복 로그아웃을 막고 실패를 shell notice에 표시한다. 성공 시 공통 auth의 세션/캐시 정리 후 공개 시작 화면으로 이동한다.
+ */
 async function logout() {
   if (loggingOut.value) return;
   loggingOut.value = true;

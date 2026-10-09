@@ -6,6 +6,10 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+/**
+ * 요구사항 명령의 저장 전/후 스냅샷과 실행자를 보존하는 업무 이력이다. 보안 감사의 제한된 메타데이터와 다른 자료다.
+ */
+
 @Entity @Table(name = "requirement_history")
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)

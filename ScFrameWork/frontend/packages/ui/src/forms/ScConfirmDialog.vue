@@ -37,6 +37,17 @@
 </template>
 
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 브라우저 native dialog에 제목·설명·추가 slot·확인/취소 버튼을 표시한다.
+ * @cancel.prevent는 브라우저 기본 닫기를 막고 부모 모델을 통한 닫기 요청으로 통일한다. busy 동안 사용자 취소/확인을 제한한다.
+ */
+
+/*
+ * 열림 상태 modelValue와 저장/삭제 결과는 부모가 소유한다. 확인은 confirm만 emit하며 성공할 때 닫을지는 부모가 결정한다.
+ *  ref<HTMLDialogElement>는 화면에 생성된 dialog DOM 참조다. Vue 상태와 showModal/close라는 브라우저 명령을 동기화해야 한다.
+ *  caller는 열기 전 포커스 위치, actionPending은 부모 busy 반영 전의 같은 렌더 주기 중복 이벤트를 막는 내부 값이다.
+ */
 import { computed, nextTick, onBeforeUnmount, onMounted, ref, useAttrs, useId, watch } from "vue";
 import ScActionButton from "../ScActionButton.vue";
 import { pickScHtmlAttrs } from "../contracts";
@@ -81,6 +92,7 @@ function dialogAttrs() {
   });
 }
 
+// 현재 보이는 활성 컨트롤만 수집해 Tab 순환에 사용한다. 숨김/disabled/inert 요소를 포함하면 사용자가 포커스를 잃을 수 있다.
 function focusableControls(): HTMLElement[] {
   return Array.from(
     dialog.value?.querySelectorAll<HTMLElement>(
@@ -95,6 +107,7 @@ function focusableControls(): HTMLElement[] {
   );
 }
 
+// 닫힘 후 원래 버튼으로 돌아간다. 화면 전환으로 사라졌거나 비활성화된 요소에는 포커스를 강제로 돌리지 않는다.
 function restoreCaller() {
   if (caller?.isConnected && !caller.closest("[inert]") && !caller.matches(":disabled")) {
     caller.focus({ preventScroll: true });
@@ -102,6 +115,7 @@ function restoreCaller() {
   caller = undefined;
 }
 
+// DOM 생성 이후 실행해야 showModal을 호출할 수 있다. 부모가 false로 바꾸는 닫기는 busy 중에도 반영한다.
 function synchronizeDialog() {
   const element = dialog.value;
   if (!element?.isConnected) return;
@@ -120,6 +134,7 @@ function synchronizeDialog() {
   }
 }
 
+// 취소 이유는 string union으로 제한된다. cancel 알림과 update:modelValue(false)를 보내도 props 자체를 바꾸지는 않는다.
 function cancelConfirmation(reason: ScConfirmDialogCancelReason) {
   if (!props.modelValue || props.busy || actionPending) return;
   actionPending = true;
@@ -133,6 +148,7 @@ function cancelConfirmation(reason: ScConfirmDialogCancelReason) {
   }
 }
 
+// 확인은 닫기와 분리한다. 서버 실패 시 같은 대화상자에서 오류/재시도를 보여 줄 수 있도록 부모의 후속 판단을 기다린다.
 function confirmAction() {
   if (!props.modelValue || props.busy || actionPending) return;
   actionPending = true;
@@ -145,6 +161,7 @@ function confirmAction() {
   }
 }
 
+// Escape와 Tab 경계를 직접 처리해 키보드 사용자가 열린 modal 밖으로 빠져나가지 않도록 한다.
 function handleKeydown(event: KeyboardEvent) {
   if (event.key === "Escape") {
     event.preventDefault();
@@ -174,6 +191,7 @@ function handleKeydown(event: KeyboardEvent) {
   }
 }
 
+// dialog 내부 빈 공간의 클릭과 진짜 바깥 배경 클릭을 좌표로 구분한다.
 function closeOnBackdrop(event: MouseEvent) {
   const element = dialog.value;
   if (!element || event.target !== element) return;
@@ -188,6 +206,8 @@ function closeOnBackdrop(event: MouseEvent) {
   }
 }
 
+// watch는 값 변경에 따른 부수 효과(DOM dialog 명령)에 사용한다. flush:post는 Vue DOM 반영 뒤 실행한다.
+// 초기 mount에서도 동기화하고 unmount 때 열린 dialog와 포커스를 정리해 화면 전환에 흔적을 남기지 않는다.
 watch(() => props.modelValue, synchronizeDialog, { flush: "post" });
 onMounted(synchronizeDialog);
 onBeforeUnmount(() => {

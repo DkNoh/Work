@@ -63,6 +63,17 @@
   </section>
 </template>
 <script setup lang="ts" generic="T">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 열·항목을 안정적인 업무 key로 반복하며 drag provider 안에 배치한다. item scoped slot으로 부모가 업무 카드를 채운다.
+ * native 위/아래·목적 열 이동도 requestMove로 모으고 결과를 status 영역에 안내한다.
+ */
+
+/*
+ * generic T로 업무 항목 타입을 유지하는 중립 보드다. columns 배열은 부모가 조회한 원본이며 공통 UI는 순서를 직접 변경하지 않는다.
+ *  드래그/버튼은 itemKey·출발열·도착열·beforeKey라는 이동 의도를 emit한다. 권한·상태 전이·revision 저장은 앱 Service 책임이다.
+ *  ref는 화면 안내/스크롤 DOM, computed는 번역·검증·목적지 목록에 쓴다. pendingFocus는 승인된 새 자료를 기다리는 임시 포커스 정보다.
+ */
 import { computed, nextTick, ref, useAttrs, useId, watch } from "vue";
 import {
   DragDropProvider,
@@ -108,6 +119,7 @@ const defaults: ScBoardLabels = {
   requested: "이동 요청",
 };
 const text = computed(() => ({ ...defaults, ...props.labels }));
+// 전체 보드에서 열/항목 키의 유일성을 검사한다. 충돌하는 key는 드래그 대상과 Vue DOM 재사용을 혼동시킨다.
 const checkedColumns = computed(() => {
   validateBoard(props.columns, props.getItemKey);
   return props.columns;
@@ -122,6 +134,7 @@ let pendingFocus: {
   beforeKey: string | null;
   caller: HTMLElement;
 } | null = null;
+// 상태 변경의 결과가 props에 실제 도착했을 때만 포커스를 복원한다. nextTick 뒤에 최신 DOM을 찾고 사용자가 이미 다른 곳으로 이동했다면 가로채지 않는다.
 watch(
   // 부모가 같은 배열을 splice해도 실제 항목 위치가 바뀌면 이동 후 focus를 복구한다.
   () => props.columns.map((column) => [column.id, column.items.map(props.getItemKey)]),
@@ -161,6 +174,7 @@ watch(
     if (handle && !handle.disabled) handle.focus({ preventScroll: true });
   },
 );
+// vendor 접근성 안내를 앱 번역으로 교체하고 instanceId를 붙여 여러 보드의 설명 ID가 겹치지 않게 한다.
 const plugins = computed<DragDropProviderProps["plugins"]>(
   () => (preset) =>
     preset.map((plugin) =>
@@ -181,6 +195,7 @@ const plugins = computed<DragDropProviderProps["plugins"]>(
     ),
 );
 let dragOrigin: { itemKey: string; columnId: string } | null = null;
+// vendor 이벤트의 data는 unknown이다. 객체와 문자열 필드를 확인한 뒤 내부의 작은 target 타입으로 좁힌다.
 function readTarget(data: unknown): { columnId: string; itemKey?: string } | null {
   if (
     !data ||
@@ -202,6 +217,7 @@ function startDrag(event: DragStartEvent) {
   dragOrigin = source?.itemKey ? { itemKey: source.itemKey, columnId: source.columnId } : null;
   announcement.value = dragOrigin ? `${text.value.started}: ${dragOrigin.itemKey}` : "";
 }
+// drop 위치를 DOM index가 아닌 beforeKey 계약으로 변환한다. 취소되면 자료 변경 요청 없이 안내만 남긴다.
 function finishDrag(event: DragEndEvent) {
   const source = dragOrigin;
   dragOrigin = null;
@@ -232,6 +248,7 @@ function finishDrag(event: DragEndEvent) {
     beforeKey,
   });
 }
+// 모든 이동 경로의 공통 검증 출구다. 이동 가능 콜백·출발 항목·목적 위치를 확인한 후 emit만 하고 서버 성공을 추측하지 않는다.
 function requestMove(move: ScBoardMove) {
   const item = props.columns
     .find((column) => column.id === move.fromColumnId)
@@ -252,6 +269,7 @@ function requestMove(move: ScBoardMove) {
     };
   emit("move", move);
 }
+// 아래로 한 칸 이동은 현재 다음 항목의 다음 key 앞에 삽입하는 의도로 표현한다. null은 목적 열의 끝이다.
 function moveRelative(column: Column<T>, item: T, index: number, direction: -1 | 1) {
   const before = direction === -1 ? column.items[index - 1] : column.items[index + 2];
   requestMove({

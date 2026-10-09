@@ -50,6 +50,18 @@
   </sc-section-card>
 </template>
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * v-model은 폼 필드 ref와 공통 입력의 model/emit을 연결한다. submit.prevent로 기본 전송을 막고 safeParse 결과를 안내한다.
+ */
+
+/**
+ * 생성 앱의 공통 입력 검증/미저장 이탈 예제다. PatternInput은 컴파일 타입, Zod는 실제 값 검사, VeeValidate는 폼 값/오류/dirty 상태를 담당한다.
+ * 저장은 이 예제의 성공 문구만 변경한다. 실제 서버 저장은 NotesPage의 runtime API/Service 연결을 참고한다.
+ * Router 이탈은 로그인 상태의 dirty 입력을 확인한다. 브라우저 닫기/새로고침의 beforeunload는 dirty 기준으로 별도 확인한다.
+ * 확인 dialog의 Promise resolve를 보관해 Router가 결정을 기다리게 하고 unmount에서 미결 Promise를 종료한다.
+ */
+
 import { computed, ref, onBeforeUnmount } from "vue";
 import { onBeforeRouteLeave } from "vue-router";
 import { useEventListener } from "@vueuse/core";
@@ -100,6 +112,9 @@ useEventListener(window, "beforeunload", (event) => {
   event.preventDefault();
   event.returnValue = "";
 });
+/**
+ * 이탈 대기 중이면 이동 허용 응답을 반환하고, 아니면 폼을 초기 상태로 되돌린다.
+ */
 function approveReset() {
   if (leaveResolve.value) {
     const resolve = leaveResolve.value;
@@ -115,6 +130,9 @@ function rejectLeave() {
   resolve?.(false);
 }
 onBeforeUnmount(() => rejectLeave());
+/**
+ * 이전 오류를 지우고 safeParse한 뒤 실패한 필드에만 메시지를 연결한다. 성공한 parsed.data를 사용하고 실패 입력을 저장하지 않는다.
+ */
 function validateInput() {
   result.value = "";
   form.setErrors({

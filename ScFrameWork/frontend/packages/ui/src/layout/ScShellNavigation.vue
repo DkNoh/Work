@@ -36,6 +36,17 @@
 </template>
 
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 연속된 메뉴 그룹을 nav/ul/li/a로 표시한다. 실제 href를 남겨 새 탭 열기·주소 복사 같은 브라우저 기능을 유지한다.
+ * activeItem이 같은 링크만 aria-current=page가 되고 접힘 상태에서는 title로 메뉴 이름을 보완한다.
+ */
+
+/*
+ * ScAppShell 내부 탐색 부품이다. props.items는 이미 앱이 권한/기능에 맞게 만든 메뉴이며 여기서 필터링 정책을 결정하지 않는다.
+ *  computed는 연속된 groupLabel을 표시용 그룹으로 묶는다. 원본 항목 객체와 메뉴 순서는 보존한다.
+ *  일반 클릭만 navigate emit으로 부모에게 전달해 Router 연결을 허용하고 수정키 클릭은 native href 동작으로 남긴다.
+ */
 import { computed } from "vue";
 import type { ScAppShellNavItem } from "./types";
 
@@ -62,6 +73,7 @@ const groups = computed(() => {
 
 const emit = defineEmits<{ navigate: [item: ScAppShellNavItem] }>();
 
+// event.preventDefault는 일반 좌클릭에서만 호출한다. Ctrl/Meta/Shift/Alt를 사용한 링크 행동을 SPA 라우팅으로 가로채지 않는다.
 function selectItem(event: MouseEvent, item: ScAppShellNavItem) {
   // 새 탭 열기 같은 브라우저 동작은 유지하고 일반 선택만 앱의 Router에 전달한다.
   if (
@@ -85,8 +97,8 @@ function selectItem(event: MouseEvent, item: ScAppShellNavItem) {
 }
 
 .sc-shell-navigation__label {
-  margin: 0 0 var(--sc-space-2);
-  padding-inline: var(--sc-space-4);
+  margin: 0 0 var(--sc-space-4);
+  padding-inline: 28px var(--sc-space-4);
   color: var(--sc-shell-nav-muted, var(--sc-color-text-muted));
   font-size: 10px;
   font-weight: 500;
@@ -108,8 +120,8 @@ function selectItem(event: MouseEvent, item: ScAppShellNavItem) {
   align-items: center;
   gap: var(--sc-space-3);
   min-height: 44px;
-  padding: var(--sc-space-2) var(--sc-space-4);
-  border-radius: 24px;
+  padding: var(--sc-space-2) var(--sc-space-4) var(--sc-space-2) 22px;
+  border-radius: 0 24px 24px 0;
   color: var(--sc-shell-nav-text, var(--sc-color-text));
   font-size: 13px;
   font-weight: 500;
@@ -130,7 +142,7 @@ function selectItem(event: MouseEvent, item: ScAppShellNavItem) {
 
 .sc-shell-navigation__link:focus-visible {
   outline: 3px solid var(--sc-shell-nav-focus, var(--sc-color-focus));
-  outline-offset: 3px;
+  outline-offset: -3px;
 }
 
 .sc-shell-navigation__icon,

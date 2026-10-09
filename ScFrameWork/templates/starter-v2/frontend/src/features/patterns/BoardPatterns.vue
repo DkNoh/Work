@@ -18,6 +18,17 @@
   </sc-section-card>
 </template>
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * ScSortableBoard의 move 이벤트를 moveItem에 연결한다. 키보드와 포인터 이동이 같은 부모 갱신 함수로 모인다.
+ */
+
+/**
+ * 공통 보드가 이동 의도를 emit하면 부모가 실제 배열을 갱신하는 최소 예제다. props 내부 배열을 공통 UI가 직접 변경하지 않는다.
+ * Item은 행의 TypeScript 구조 타입이다. 열 ID/항목 ID/beforeKey로 이동 위치를 표현하여 DOM 인덱스에 업무 규칙을 결합하지 않는다.
+ * values는 로컬 예제 자료이며 columns는 번역 label을 더한 computed다. 실제 업무 보드는 Service 권한/revision 검사 후 결과를 반영해야 한다.
+ */
+
 import { computed, ref } from "vue";
 import { useI18n } from "vue-i18n";
 import { ScSectionCard } from "@sc/ui";
@@ -54,6 +65,9 @@ const columns = computed<readonly ScBoardColumn<Item>[]>(() =>
 );
 const getKey = (item: Item) => item.id;
 const getLabel = (item: Item) => item.title;
+/**
+ * 원본 열에서 항목을 꺼내 목적 열의 beforeKey 앞에 넣는다. beforeKey가 없으면 끝에 추가하며 이 예제는 서버 저장을 수행하지 않는다.
+ */
 function moveItem(move: ScBoardMove) {
   const source = values.value.find((column) => column.id === move.fromColumnId);
   const target = values.value.find((column) => column.id === move.toColumnId);

@@ -3,6 +3,12 @@ package dev.scframework.autoconfigure.messaging;
 import java.time.Duration;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
+/*
+ * 메시징 활성/앱 ID/본문 크기/배치/confirm/lease/재시도/보존 기간을 설정한다.
+ * validate에서 각 범위와 lease > confirm timeout 관계를 검사해 아직 전송 중인 claim을 너무 일찍 회수하지 않게 한다.
+ * getter/setter는 Spring 바인딩을 위한 코드이고 실제 외부 연결은 자동설정이 수행한다.
+ */
+
 @ConfigurationProperties("sc.framework.messaging")
 public class ScMessagingProperties {
     private boolean enabled;

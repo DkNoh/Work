@@ -3,7 +3,20 @@
     <header class="dashboard-heading">
       <div>
         <h1>{{ text.greeting }}, {{ runtime.session.identity?.username }}{{ isKo ? "님" : "" }}</h1>
-        <p>{{ text.subtitle }}</p>
+        <p class="dashboard-data-note">
+          <span class="dashboard-subtitle">{{ text.subtitle }}</span>
+          <span
+            class="dashboard-data-source"
+            :title="mode === 'sample' ? text.sampleNote : text.liveNote"
+          >
+            <span class="dashboard-data-dot" />
+            {{
+              mode === "sample"
+                ? words("샘플 데이터", "Sample data")
+                : words("실제 업무 데이터", "Live workspace")
+            }}
+          </span>
+        </p>
       </div>
       <div class="dashboard-controls">
         <sc-select
@@ -34,10 +47,6 @@
         />
       </div>
     </header>
-    <p class="dashboard-data-note">
-      <span class="dashboard-data-dot" />
-      {{ mode === "sample" ? text.sampleNote : text.liveNote }}
-    </p>
     <p v-if="report.error.value && mode === 'live'" role="alert" class="dashboard-error">
       {{ report.error.value.message }}
       <sc-action-button size="sm" variant="text" intent="danger" @click="report.refetch()">
@@ -71,11 +80,21 @@
               <span class="dashboard-card-period">
                 {{ mode === "sample" ? periodLabel : words("최근 20건", "Latest 20 items") }}
               </span>
+              <sc-action-button
+                size="sm"
+                intent="neutral"
+                variant="tonal"
+                :icon-path="mdiDownload"
+                :aria-label="words('차트 내보내기 CSV', 'Export chart as CSV')"
+                @click="exportChart"
+              >
+                {{ words("내보내기", "Export") }}
+              </sc-action-button>
             </template>
             <sc-series-chart
               :series="chartSeries"
               :label="mode === 'sample' ? text.revenue : text.workTrend"
-              :height="338"
+              :height="322"
               :data-label="text.chartData"
               :category-label="mode === 'sample' ? text.period : text.date"
               :empty-label="text.noData"
@@ -295,7 +314,7 @@
               class="dashboard-browser-icon"
               :style="{ background: browser.tint, color: browser.color }"
             >
-              {{ browser.initial }}
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path :d="browser.icon" /></svg>
             </span>
             <div>
               <strong>{{ browser.name }}</strong>
@@ -360,6 +379,19 @@
 </template>
 
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * KPI → 차트/분포 → 주문 표와 보조 위젯 순서로 공통 컴포넌트를 조립한다. sample/live 분기에 따라 표시 문구와 자료 범위가 달라진다.
+ * v-for의 key는 항목 식별자, :prop은 표현식 전달, #cell-*은 표가 제공하는 행별 표시 slot이다.
+ */
+
+/**
+ * 판매 디자인 예제와 실제 요구사항 집계를 같은 공통 UI로 보여주는 대시보드다. source/period 선택 원본은 Router query다.
+ * sample의 매출·방문·결제·일정은 고정 예제다. live일 때만 useRequirementReport로 현재 계정의 서버 자료를 읽는다.
+ * computed는 조회 결과/locale/기간에서 KPI·표·차트 입력을 만드는 계산식이다. 집계 결과를 별도 Pinia/ref에 중복 저장하지 않는다.
+ * ScTableColumn<DashboardOrder> 같은 제네릭은 표의 행 타입을 연결한다. type/import type은 JavaScript 출력에서 사라지며 서버 검증을 대체하지 않는다.
+ */
+
 import { computed, onBeforeUnmount } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { useI18n } from "vue-i18n";
@@ -385,6 +417,13 @@ import {
   mdiKeyboardOutline,
   mdiLaptop,
   mdiBriefcaseOutline,
+  mdiGoogleChrome,
+  mdiMicrosoftEdge,
+  mdiFirefox,
+  mdiOpera,
+  mdiAppleSafari,
+  mdiWeb,
+  mdiShoppingOutline,
 } from "@mdi/js";
 import { useReferenceRuntime } from "../../auth/identity";
 import { useRequirementReport } from "../reports/requirements/query";
@@ -488,8 +527,8 @@ const text = computed(() =>
         status: "Status",
         date: "Date",
         widgets: "Dashboard widgets",
-        promoTitle: "Better screens, built faster",
-        promoDescription: "Compose forms, tables, charts and dashboards with shared components.",
+        promoTitle: "Build better screens",
+        promoDescription: "Shared components for your next workspace.",
         promoAction: "Explore components",
         browserActivity: "Browser activity",
         browser: "Browser",
@@ -516,6 +555,9 @@ const periodLabel = computed(() =>
 const reportFilters = computed(
   () => parseReportQuery({ page: "0", size: "20", sort: "updatedAt", direction: "desc" }).filters,
 );
+/**
+ * 실제 업무 모드에서만 서버 보고서를 활성화한다. sample 기간 배수는 시각 예제이며 live API에 기간 검색 조건을 추가하는 값이 아니다.
+ */
 const report = useRequirementReport(
   reportFilters,
   computed(() => mode.value === "live"),
@@ -580,6 +622,9 @@ const cards = computed(() => {
     icon: [mdiCartOutline, mdiWalletOutline, mdiCashMultiple, mdiAccountGroupOutline][index]!,
   }));
 });
+/**
+ * live 차트는 최근 20개 조회 행의 수정일 분포이고 전체 기간 이력 통계가 아니다. KPI와 상태 분포는 응답 stats/total을 사용한다.
+ */
 const chartSeries = computed<ScChartSeries[]>(() => {
   if (mode.value === "live") {
     const days = new Map<string, number>();
@@ -656,6 +701,9 @@ const distribution = computed(() => {
 const distributionTotal = computed(() =>
   distribution.value.reduce((sum, entry) => sum + entry.value, 0),
 );
+/**
+ * 분포 합계 대비 각 항목 비율을 반원 SVG의 시작/끝 좌표로 바꾼다. 합계가 0이면 경로를 만들지 않아 0 나눗셈을 피한다.
+ */
 function arcPath(index: number) {
   if (!distributionTotal.value) return "";
   const start =
@@ -707,7 +755,7 @@ const browsers = [
   {
     name: "Chrome",
     company: "Google",
-    initial: "C",
+    icon: mdiGoogleChrome,
     sessions: 1248,
     color: "#087d47",
     tint: "#e5f7ee",
@@ -715,7 +763,7 @@ const browsers = [
   {
     name: "Edge",
     company: "Microsoft",
-    initial: "E",
+    icon: mdiMicrosoftEdge,
     sessions: 982,
     color: "#167bb5",
     tint: "#e9f5fc",
@@ -723,7 +771,7 @@ const browsers = [
   {
     name: "Firefox",
     company: "Mozilla",
-    initial: "F",
+    icon: mdiFirefox,
     sessions: 816,
     color: "#bc5b12",
     tint: "#fff2e5",
@@ -731,7 +779,7 @@ const browsers = [
   {
     name: "Opera",
     company: "Opera",
-    initial: "O",
+    icon: mdiOpera,
     sessions: 1324,
     color: "#c8384f",
     tint: "#feecf0",
@@ -739,10 +787,18 @@ const browsers = [
   {
     name: "Safari",
     company: "Apple",
-    initial: "S",
+    icon: mdiAppleSafari,
     sessions: 1126,
     color: "#355db4",
     tint: "#ecf1ff",
+  },
+  {
+    name: "Samsung Internet",
+    company: "Samsung",
+    icon: mdiWeb,
+    sessions: 1189,
+    color: "#7156d9",
+    tint: "#f0ecff",
   },
 ];
 const categories = computed(() => [
@@ -766,6 +822,13 @@ const categories = computed(() => [
     icon: mdiBriefcaseOutline,
     color: "#9c6108",
     tint: "#ffe0a2",
+  },
+  {
+    label: words("라이프스타일", "Lifestyle"),
+    value: "₩11.4M",
+    icon: mdiShoppingOutline,
+    color: "#c42f4d",
+    tint: "#ffe0e7",
   },
 ]);
 const sampleOrders = computed(() => [
@@ -810,6 +873,9 @@ const sampleOrders = computed(() => [
     icon: mdiBriefcaseOutline,
   },
 ]);
+/**
+ * 서버 DTO를 화면의 주문/업무 공통 행 모양으로 변환한다. 표시용 slice(0, 6)는 서버 전체 건수 또는 통계를 변경하지 않는다.
+ */
 const visibleOrders = computed(() =>
   mode.value === "sample"
     ? sampleOrders.value
@@ -850,6 +916,9 @@ const orderTableLabels = computed<Partial<ScTableLabels>>(() => ({
       : words("최근 요구사항 표", "Recent requirements table"),
 }));
 const getOrderKey = (row: DashboardOrder) => row.id;
+/**
+ * 허용 값만 URL로 반영한다. replace는 선택 변경마다 브라우저 방문 이력을 쌓지 않고 현재 대시보드 URL을 갱신한다.
+ */
 function changeMode(value: string | null) {
   if (value !== "sample" && value !== "live") return;
   void router.replace({ query: { ...route.query, source: value } });
@@ -863,24 +932,11 @@ function csvValue(value: string) {
   return /^[=+\-@]/.test(value.trimStart()) || /^[\t\r\n]/.test(value) ? "'" + value : value;
 }
 let exportUrl: string | undefined;
-function exportRows() {
+/**
+ * 현재 화면 자료를 UTF-8 BOM CSV로 직렬화한다. 따옴표 escape와 수식 모양 셀의 중립화를 적용하고 이전 Object URL은 반환한다.
+ */
+function downloadCsv(rows: string[][], filename: string) {
   if (exportUrl) URL.revokeObjectURL(exportUrl);
-  const rows = [
-    [
-      text.value.product,
-      text.value.customer,
-      text.value.amount,
-      text.value.status,
-      text.value.date,
-    ],
-    ...visibleOrders.value.map((item) => [
-      item.title,
-      item.customer,
-      item.amount,
-      item.status,
-      item.date,
-    ]),
-  ];
   const content = rows
     .map((row) => row.map((cell) => '"' + csvValue(cell).replaceAll('"', '""') + '"').join(","))
     .join("\r\n");
@@ -889,8 +945,47 @@ function exportRows() {
   );
   const link = document.createElement("a");
   link.href = exportUrl;
-  link.download = "sc-dashboard.csv";
+  link.download = filename;
   link.click();
+}
+/**
+ * 차트에 전달한 실제 series를 CSV로 변환하므로 sample/live 선택과 다운로드 내용이 일치한다.
+ */
+function exportChart() {
+  downloadCsv(
+    [
+      [
+        mode.value === "sample" ? text.value.period : text.value.date,
+        ...chartSeries.value.map((line) => line.name),
+      ],
+      ...(chartSeries.value[0]?.data ?? []).map((point, index) => [
+        point.label,
+        ...chartSeries.value.map((line) => String(line.data[index]?.value ?? "")),
+      ]),
+    ],
+    "sc-dashboard-chart.csv",
+  );
+}
+function exportRows() {
+  downloadCsv(
+    [
+      [
+        text.value.product,
+        text.value.customer,
+        text.value.amount,
+        text.value.status,
+        text.value.date,
+      ],
+      ...visibleOrders.value.map((item) => [
+        item.title,
+        item.customer,
+        item.amount,
+        item.status,
+        item.date,
+      ]),
+    ],
+    "sc-dashboard.csv",
+  );
 }
 onBeforeUnmount(() => {
   if (exportUrl) URL.revokeObjectURL(exportUrl);
@@ -899,8 +994,8 @@ onBeforeUnmount(() => {
 
 <style scoped lang="scss">
 .dashboard {
-  padding: 22px 24px 0;
-  max-width: 1900px;
+  padding: 18px 12px 0;
+  max-width: 1920px;
   margin-inline: auto;
 }
 .dashboard-heading {
@@ -908,11 +1003,13 @@ onBeforeUnmount(() => {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
+  margin-bottom: 18px;
 }
 h1 {
   font-size: 18px;
-  font-weight: 650;
-  margin: 0 0 4px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0 0 2px;
 }
 .dashboard-heading p {
   color: var(--sc-color-text-muted);
@@ -931,10 +1028,18 @@ svg {
 .dashboard-data-note {
   display: flex;
   align-items: center;
-  gap: 7px;
-  font-size: 11px;
+  flex-wrap: wrap;
+  gap: 6px 12px;
   color: var(--sc-color-text-muted);
-  margin: 12px 0 16px;
+  margin: 0;
+  line-height: 1.5;
+}
+.dashboard-data-source {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  white-space: nowrap;
 }
 .dashboard-data-dot {
   width: 6px;
@@ -945,8 +1050,11 @@ svg {
 }
 .dashboard-layout {
   display: grid;
-  grid-template-columns: minmax(0, 3fr) minmax(255px, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 24px;
+}
+.dashboard-main {
+  grid-column: span 3;
 }
 .dashboard-main,
 .dashboard-widgets {
@@ -958,12 +1066,16 @@ svg {
 .dashboard-kpis {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 20px;
+  gap: 24px;
+  min-height: 148px;
 }
 .dashboard-chart-grid {
   display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
+}
+.dashboard-revenue {
+  grid-column: span 2;
 }
 .dashboard-small-grid {
   display: grid;
@@ -971,8 +1083,11 @@ svg {
   gap: 24px;
 }
 .dashboard-card-period {
-  font-size: 11px;
-  color: var(--sc-color-text-muted);
+  font-size: 12px;
+  color: var(--sc-color-primary);
+  background: color-mix(in srgb, #03b562 13%, white);
+  border-radius: 4px;
+  padding: 6px 10px;
   text-decoration: none;
   white-space: nowrap;
 }
@@ -981,7 +1096,8 @@ svg {
   text-decoration: underline;
 }
 .dashboard-gauge {
-  padding: 24px 0 18px;
+  padding: 8px 0 20px;
+  margin-inline: -12px;
 }
 .dashboard-gauge svg {
   display: block;
@@ -1008,13 +1124,13 @@ svg {
   grid-template-columns: 10px minmax(0, 1fr) auto auto;
   align-items: center;
   gap: 8px;
-  padding: 15px 16px;
+  padding: 13px 16px;
   border-top: 1px solid var(--sc-color-border);
-  font-size: 12px;
+  font-size: 13px;
 }
 .dashboard-distribution small {
   color: var(--sc-color-text-muted);
-  font-size: 11px;
+  font-size: 12px;
 }
 .dashboard-distribution strong {
   font-weight: 600;
@@ -1046,7 +1162,7 @@ svg {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 11px;
+  font-size: 12px;
   margin: 0 0 15px;
 }
 .dashboard-channel {
@@ -1057,14 +1173,14 @@ svg {
   padding: 9px;
   border: 1px solid var(--sc-color-border);
   border-radius: 6px;
-  font-size: 10px;
+  font-size: 12px;
 }
 .dashboard-channel > div {
   flex: 1;
   min-width: 0;
 }
 .dashboard-channel strong {
-  font-size: 11px;
+  font-size: 13px;
 }
 .dashboard-channel-icon {
   display: grid;
@@ -1089,9 +1205,9 @@ svg {
   display: flex;
   align-items: center;
   gap: 9px;
-  padding: 17px 0;
+  padding: 16px 0;
   border-bottom: 1px solid var(--sc-color-border);
-  font-size: 10px;
+  font-size: 12px;
 }
 .dashboard-transaction:last-child {
   border: 0;
@@ -1104,14 +1220,14 @@ svg {
   white-space: nowrap;
 }
 .dashboard-transaction div strong {
-  font-size: 11px;
+  font-size: 13px;
   display: block;
   overflow-wrap: anywhere;
 }
 .dashboard-transaction small {
   display: block;
   color: var(--sc-color-text-muted);
-  font-size: 10px;
+  font-size: 12px;
   margin-top: 4px;
 }
 .dashboard-payment-icon {
@@ -1154,7 +1270,7 @@ svg {
 .dashboard-timeline time {
   padding-top: 12px;
   color: var(--sc-color-text-muted);
-  font-size: 10px;
+  font-size: 12px;
 }
 .dashboard-timeline li > div {
   position: relative;
@@ -1178,7 +1294,7 @@ svg {
 }
 .dashboard-timeline strong {
   display: block;
-  font-size: 11px;
+  font-size: 12px;
 }
 .dashboard-timeline span {
   display: inline-block;
@@ -1186,17 +1302,17 @@ svg {
   padding: 2px 4px;
   color: #087d47;
   background: #e6f8ed;
-  font-size: 10px;
+  font-size: 12px;
 }
 .dashboard-timeline p {
-  font-size: 10px;
+  font-size: 12px;
   color: var(--sc-color-text-muted);
   margin: 0;
 }
 .dashboard-promotion {
   position: relative;
-  min-height: 205px;
-  padding: 22px 18px;
+  min-height: 210px;
+  padding: 24px;
   overflow: hidden;
   border: 1px dashed #7fcda5;
   border-radius: 8px;
@@ -1216,7 +1332,7 @@ svg {
 }
 .dashboard-promotion p {
   max-width: 155px;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.5;
   margin: 0 0 16px;
 }
@@ -1242,7 +1358,7 @@ svg {
   display: flex;
   align-items: center;
   gap: 9px;
-  padding: 15px 0;
+  padding: 12px 0;
   border-top: 1px solid var(--sc-color-border);
 }
 .dashboard-browser > div {
@@ -1250,27 +1366,32 @@ svg {
   min-width: 0;
 }
 .dashboard-browser strong {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 550;
 }
 .dashboard-browser small {
   display: block;
-  font-size: 11px;
+  font-size: 12px;
   color: var(--sc-color-text-muted);
   margin-top: 2px;
 }
 .dashboard-browser-icon {
   display: grid;
   place-items: center;
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
   border-radius: 50%;
   font-size: 20px;
   font-weight: 600;
 }
+.dashboard-browser-icon svg {
+  width: 24px;
+  height: 24px;
+}
 .dashboard-categories {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 8px;
   padding-block: 7px;
 }
@@ -1295,7 +1416,7 @@ svg {
 .dashboard-categories strong,
 .dashboard-categories small {
   display: block;
-  font-size: 10px;
+  font-size: 12px;
 }
 .dashboard-categories small {
   margin-top: 4px;
@@ -1352,7 +1473,7 @@ svg {
   place-items: center;
   width: 24px;
   height: 24px;
-  font-size: 10px;
+  font-size: 12px;
   color: #3b497e;
   background: #edf0fa;
   margin-right: 7px;
@@ -1383,7 +1504,7 @@ svg {
   display: flex;
   justify-content: space-between;
   padding: 24px 0;
-  font-size: 11px;
+  font-size: 12px;
   color: var(--sc-color-text-muted);
 }
 .sr-only {
@@ -1405,6 +1526,9 @@ svg {
   .dashboard-layout {
     grid-template-columns: minmax(0, 1fr);
   }
+  .dashboard-main {
+    grid-column: auto;
+  }
   .dashboard-widgets {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1412,6 +1536,11 @@ svg {
   }
   .dashboard-quick-links {
     grid-column: auto;
+  }
+}
+@media (min-width: 1280px) and (max-width: 1399px) {
+  .dashboard-kpis {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 @media (max-width: 999px) {
@@ -1443,14 +1572,18 @@ svg {
     grid-template-columns: minmax(0, 1fr);
   }
   .dashboard-kpis {
-    gap: 16px;
+    gap: 24px;
+    min-height: 0;
+  }
+  .dashboard-revenue {
+    grid-column: auto;
   }
   .dashboard-data-note {
     line-height: 1.6;
   }
   .dashboard-layout,
   .dashboard-main {
-    gap: 20px;
+    gap: 24px;
   }
   .dashboard-widgets {
     display: grid;

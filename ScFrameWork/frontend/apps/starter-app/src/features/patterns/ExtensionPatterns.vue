@@ -111,6 +111,18 @@
   </div>
 </template>
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 파일 선택은 stagedRows에 미리보기만 만든다. 검증 오류가 없을 때 적용 버튼으로 표시 자료를 교체한다.
+ */
+
+/**
+ * 차트·구조화 문서 편집·XLSX 읽기/쓰기를 공통 패키지로 조합한 로컬 예제다. 서버 저장이나 업무 권한을 제공하지 않는다.
+ * 차트는 불변 배열 교체, 에디터는 문서 JSON v-model, Excel은 읽기→검증 결과 미리보기→명시적 적용으로 상태 변경을 나눈다.
+ * Record<ExcelKey, ScExcelCell>은 정해진 열 키의 맵 타입이다. 파일의 실제 셀 값은 readWorkbook의 런타임 검증 결과로 확인한다.
+ * operation은 파일 읽기 순번이다. 늦게 끝난 이전 읽기가 새 선택을 덮지 않게 비교하고 unmount에서 URL/timer를 정리한다.
+ */
+
 import { computed, ref, shallowRef, onBeforeUnmount } from "vue";
 import { useI18n } from "vue-i18n";
 import { ScSectionCard, ScActionButton, ScErrorPanel } from "@sc/ui";
@@ -169,6 +181,9 @@ const urls = new Map<string, ReturnType<typeof setTimeout>>();
 function formatCell(value: ScExcelCell) {
   return value instanceof Date ? value.toISOString() : (value ?? "");
 }
+/**
+ * 현재 열/행으로 workbook bytes를 만든 뒤 Blob URL로 다운로드한다. document라는 에디터 변수와 구분하여 globalThis.document를 사용한다.
+ */
 async function downloadWorkbook() {
   if (exporting.value) return;
   exporting.value = true;
@@ -200,6 +215,9 @@ async function downloadWorkbook() {
     exporting.value = false;
   }
 }
+/**
+ * 파일 크기를 먼저 확인하고 비동기 읽기/파싱 전후에 작업 순번을 검사한다. 파싱 결과의 rows와 errors를 함께 보관한다.
+ */
 async function previewWorkbook(event: Event) {
   const file = (event.target as HTMLInputElement).files?.[0];
   if (!file) return;
@@ -222,6 +240,9 @@ async function previewWorkbook(event: Event) {
     if (id === operation) excelError.value = error instanceof Error ? error.message : String(error);
   }
 }
+/**
+ * 검증 오류가 없는 미리보기만 현재 표에 반영한다. 적용 후 파일 input도 초기화하여 같은 파일을 다시 선택할 수 있게 한다.
+ */
 function applyWorkbook() {
   if (!stagedRows.value || importErrors.value.length) return;
   excelRows.value = stagedRows.value;

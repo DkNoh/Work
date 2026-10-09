@@ -1,3 +1,7 @@
+/**
+ * 운영 화면의 한영 문구 사전이다. local scope로 사용하여 각 운영 화면의 키를 앱 전체 번역 공간과 구분한다.
+ * 서버 state/jobCode/eventCode는 업무 계약 값으로 유지하고 버튼·레이블·검증 안내만 번역한다.
+ */
 export const operationMessages = {
   ko: {
     enabledYes: "활성",

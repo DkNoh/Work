@@ -26,6 +26,12 @@ import org.springframework.security.web.csrf.CsrfException;
 import org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository;
 import dev.scframework.autoconfigure.observability.OperationalSecurityFilterChain;
 
+/*
+ * Servlet 앱의 기본 세션 인증과 CSRF 필터 체인을 구성한다. 앱의 명시적 인증 어댑터를 요구한다.
+ * 로그인/로그아웃은 HTML redirect 대신 204를, 거부는 code/message/errors JSON을 반환한다.
+ * 업무 API의 인증은 여기서, 자원 소유자/상태 전이 같은 업무 권한은 각 앱 Service에서 검사한다.
+ */
+
 @AutoConfiguration(before = {SecurityAutoConfiguration.class, UserDetailsServiceAutoConfiguration.class})
 @ConditionalOnWebApplication(type = ConditionalOnWebApplication.Type.SERVLET)
 public class ScSecurityAutoConfiguration {
@@ -39,6 +45,7 @@ public class ScSecurityAutoConfiguration {
     }
 
     @Bean @ConditionalOnMissingBean(value = SecurityFilterChain.class, ignored = OperationalSecurityFilterChain.class)
+    // HttpSession 기반 CSRF를 유지하고 API는 인증을 요구한다. dev 문서 공개와 운영 문서 차단도 이 체인에서 결정한다.
     SecurityFilterChain scSecurityFilterChain(HttpSecurity http, ObjectMapper mapper,
             Environment environment, UserDetailsService users,
             ObjectProvider<RequestAuditRecorder> audit) throws Exception {
@@ -83,6 +90,7 @@ public class ScSecurityAutoConfiguration {
         return http.build();
     }
 
+    // 보안 필터의 실패는 MVC Advice 이전에 발생하므로 같은 ApiError JSON을 이 위치에서 직접 쓴다.
     private static void writeError(ObjectMapper mapper, HttpServletResponse response, int status,
             String code, String message) throws IOException {
         response.setStatus(status);

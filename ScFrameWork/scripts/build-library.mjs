@@ -57,6 +57,11 @@ async function main() {
     );
   }
   if (name === "ui") {
+    await fs.mkdir(path.join(dist, "fonts"), { recursive: true });
+    await fs.copyFile(
+      path.join(packageDirectory, "src/fonts/OFL.txt"),
+      path.join(dist, "fonts/OFL.txt"),
+    );
     await fs.copyFile(
       path.join(packageDirectory, "src/tokens.scss"),
       path.join(dist, "tokens.scss"),

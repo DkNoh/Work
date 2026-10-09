@@ -1,3 +1,5 @@
+// 공지의 한국어/영어 표시 문구다. 서버 상태 코드나 API 필드명을 번역하지 않고 같은 키의 문장만 바꾼다.
+// useI18n의 local messages로 전달하며, 언어 선택 자체는 앱의 locale을 따른다.
 export const noticeMessages = {
   ko: {
     title: "제목",
@@ -72,6 +74,7 @@ export const noticeMessages = {
 } as const;
 
 // 업무 메시지는 lazy 화면이 소유하고 locale만 앱의 전역 선택을 상속한다.
+// 화면의 t("네임스페이스.키")가 찾는 구조로 한 번 감싼다. as const는 키/문자열을 좁은 타입으로 유지하며 런타임 동결은 아니다.
 export const noticeScopedMessages = {
   ko: { notice: noticeMessages.ko },
   en: { notice: noticeMessages.en },

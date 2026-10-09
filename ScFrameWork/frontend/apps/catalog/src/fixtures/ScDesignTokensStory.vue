@@ -117,6 +117,15 @@
 </template>
 
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 공개 uiTokens를 반복해 색/간격/글꼴/형태/반응형 기준을 실제 값으로 보여 준다. section prop은 표시할 설명 영역만 선택한다.
+ */
+
+/*
+ * 토큰 값을 다시 하드코딩하지 않고 @sc/ui의 공개 객체를 읽는 살아 있는 가이드다. keyof typeof color는 실제 존재하는 색 이름만 예제에 사용할 수 있게 한다.
+ *  ref 두 개는 포커스 버튼과 긴 입력을 직접 조작하기 위한 합성 상태다. 토큰 자체는 수정하지 않는다.
+ */
 import { ref } from "vue";
 import { ScActionButton, ScTextField, uiTokens } from "@sc/ui";
 
@@ -126,6 +135,7 @@ const color = uiTokens.color;
 const focusCount = ref(0);
 const sampleTitle = ref("업무 제목이 길어져도 입력값과 조작 이름을 유지합니다");
 const radiusUsage = { sm: "버튼·입력", md: "영역 카드", lg: "대화상자" };
+// 배경 토큰과 그 위의 글자 토큰을 쌍으로 표시해 개발자가 의미색/대비 관계를 함께 확인하게 한다.
 const colorExamples: {
   label: string;
   background: keyof typeof color;
@@ -140,6 +150,7 @@ const colorExamples: {
   { label: "안내", background: "info", foreground: "onInfo" },
   { label: "업무 탐색", background: "navBackground", foreground: "navText" },
 ];
+// Section union은 가이드의 다섯 영역만 허용한다. Controls에서 all을 선택하면 모든 영역을 표시한다.
 function show(section: Section) {
   return props.section === "all" || props.section === section;
 }

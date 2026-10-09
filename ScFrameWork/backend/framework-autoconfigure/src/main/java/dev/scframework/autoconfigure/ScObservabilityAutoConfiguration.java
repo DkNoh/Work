@@ -38,6 +38,12 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
 
+/*
+ * 선택 관측 기능의 정제 span exporter·운영 로그/metric·별도 observer 인증 체인을 만든다.
+ * OTLP endpoint와 앱 이름을 검사하고 http/feign 태그에 등록 route만 남겨 입력/URL 원문 유출을 줄인다.
+ * Prometheus만 별도 management 포트의 stateless Basic 인증을 쓰며 일반 업무의 세션/CSRF 체인은 유지된다.
+ */
+
 @AutoConfiguration(before = ScSecurityAutoConfiguration.class,
         afterName = "org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration")
 @ConditionalOnProperty(prefix = "sc.framework.observability", name = "enabled", havingValue = "true")
@@ -51,6 +57,7 @@ public class ScObservabilityAutoConfiguration {
         return registration;
     }
     @Bean @ConditionalOnMissingBean(SpanExporter.class)
+    // exporter 연결 URL에 사용자 정보/query/fragment를 허용하지 않는다. timeout으로 관측 전송 대기를 제한한다.
     SafeSpanExporter scSafeSpanExporter(ScObservabilityProperties properties, Environment environment,
             ObjectProvider<RequestMappingHandlerMapping> mappings) {
         URI endpoint;
@@ -89,6 +96,7 @@ public class ScObservabilityAutoConfiguration {
                         .setMaxExportBatchSize(128).setScheduleDelay(Duration.ofMillis(500)).build()).build();
     }
     @Bean
+    // 동적으로 늘어날 수 있는 URL/예외 태그를 등록 route 또는 고정 코드로 축소한다.
     MeterFilter scSafeHttpMetricTags(ObjectProvider<RequestMappingHandlerMapping> mappings) {
         return new MeterFilter() {
             @Override public Meter.Id map(Meter.Id id) {
@@ -106,6 +114,7 @@ public class ScObservabilityAutoConfiguration {
         };
     }
     @Bean @Order(0) @ConditionalOnMissingBean(name = "scObserverSecurityChain")
+    // 별도 management 포트의 /actuator/prometheus만 매칭한다. 이 한정된 stateless 체인의 CSRF 비활성은 업무 API에 적용되지 않는다.
     OperationalSecurityFilterChain scObserverSecurityChain(HttpSecurity http, ScObservabilityProperties properties,
             Environment environment) throws Exception {
         Integer managementPort = environment.getProperty("management.server.port", Integer.class);

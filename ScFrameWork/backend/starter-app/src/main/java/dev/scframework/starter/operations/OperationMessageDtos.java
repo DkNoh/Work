@@ -6,6 +6,12 @@ import java.time.Instant;
 import java.util.List;
 import java.util.UUID;
 
+/*
+ * 관리 화면에 outbox의 상태/시각/시도 수만 공개하는 DTO 모음이다. payload 본문은 내보내지 않는다.
+ * from은 JDBC 상태 행을 공개 record로 복사하며 Page는 목록과 페이지 메타데이터를 묶는다.
+ * @Schema는 OpenAPI 타입/nullable 설명이다. EmptyCommand는 추가 업무 입력 없이 실행하는 명령의 계약이다.
+ */
+
 public final class OperationMessageDtos {
     private OperationMessageDtos(){}
     public record OperationMessageItem(

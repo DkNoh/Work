@@ -35,6 +35,16 @@
 </template>
 
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * boolean 체크 입력을 표시한다. #label은 Vuetify의 label slot을 채워 고유 label ID를 보장한다.
+ * true-value/false-value를 명시해 문자열 체크값이 부모 모델로 섞이지 않게 한다.
+ */
+
+/*
+ * 동의 여부 등 업무 boolean은 부모가 소유한다. 이 컴포넌트는 boolean 변경과 포커스 이벤트만 전달한다.
+ *  useId/computed는 label·오류의 접근성 연결을, ref는 포커스 동안 표시할 hint 상태를 관리한다.
+ */
 import { computed, ref, useAttrs, useId } from "vue";
 import { VCheckbox } from "vuetify/components";
 import { inputErrors, inputHtmlAttrs } from "./input-accessibility";
@@ -57,6 +67,7 @@ const focused = ref(false);
 const fieldId = computed(() => props.id?.trim() || `sc-checkbox-${instanceId}`);
 const fieldErrors = computed(() => inputErrors(props.errorMessages));
 
+// aria-checked는 실제 체크 상태와 같아야 하므로 외부 attrs가 덮어쓰지 못하게 예약한다.
 function fieldAttrs() {
   return inputHtmlAttrs(attrs, {
     id: fieldId.value,
@@ -64,6 +75,7 @@ function fieldAttrs() {
     reserved: ["aria-checked"],
   });
 }
+// unknown을 boolean으로 좁힌 뒤 emit한다. null/문자열 또는 읽기 전용 상태의 변경은 부모에게 전달하지 않는다.
 function changeValue(value: unknown) {
   if (props.disabled || props.readonly || typeof value !== "boolean") return;
   emit("update:modelValue", value);

@@ -31,6 +31,12 @@ import org.springdoc.webmvc.ui.SwaggerIndexTransformer;
 import org.springdoc.webmvc.ui.SwaggerWelcomeCommon;
 import dev.scframework.autoconfigure.web.JsonCsrfSwaggerTransformer;
 
+/*
+ * dev 프로필에서 세션·CSRF·공통 오류의 OpenAPI 문서를 구성한다. 문서 설정 자체가 인증을 수행하지는 않는다.
+ * Spring Security 필터가 처리하는 로그인/로그아웃도 명시하며 운영 API operationId를 경로 기반으로 고정한다.
+ * Swagger 변환기를 연결해 쓰기 요청 전에 현재 세션 CSRF JSON을 조회하도록 한다.
+ */
+
 @AutoConfiguration(after = ScWebAutoConfiguration.class, before = SwaggerConfig.class)
 @ConditionalOnClass(OpenAPI.class)
 @Profile("dev")
@@ -55,6 +61,7 @@ public class ScOpenApiAutoConfiguration {
     }
 
     @Bean @ConditionalOnMissingBean(name = "scPublicOpenApiOperations")
+    // 공개 health/CSRF/login은 전역 session 요구를 문서상 해제한다. 실제 접근 허용은 Security 체인의 책임이다.
     OpenApiCustomizer scPublicOpenApiOperations() {
         return api -> {
             for (String path : java.util.List.of("/api/health", "/api/auth/csrf", "/api/auth/login")) {
@@ -65,6 +72,7 @@ public class ScOpenApiAutoConfiguration {
     }
 
     @Bean @ConditionalOnMissingBean(OpenAPI.class)
+    // Controller가 없는 Security 필터 endpoint도 명세에 넣는다. 성공 204/오류 JSON/쿠키 세션을 실제 HTTP 계약과 맞춘다.
     OpenAPI scOpenApi(ScFrameworkProperties properties) {
         Components components = new Components().addSecuritySchemes("session", new SecurityScheme()
                 .type(SecurityScheme.Type.APIKEY).in(SecurityScheme.In.COOKIE).name("JSESSIONID")

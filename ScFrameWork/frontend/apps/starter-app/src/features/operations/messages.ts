@@ -1,3 +1,6 @@
+/**
+ * Starter 운영 예제의 local scope 한영 사전이다. 상태 코드/ID를 바꾸지 않고 화면 안내·접근성 label만 번역한다.
+ */
 export const messages = {
   ko: {
     enabledYes: "활성",

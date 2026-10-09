@@ -1,3 +1,9 @@
+/**
+ * 이미지 작업실/첨부/주석 기능의 HTTP 경계. 실제 서버 DTO 타입은 OpenAPI 생성 components에서 선택하여 재사용한다.
+ * components["schemas"][...]는 맵의 키로 타입을 꺼내는 indexed access다. 런타임 객체 조회가 아니라 컴파일 시 타입 선언이다.
+ * factory에 앱 runtime을 전달하는 방식은 Service 생성자 의존성 주입과 비슷하다. 모든 요청은 이 runtime.client 하나를 경유한다.
+ * mediaKeys의 as const는 Query 키 tuple을 읽기 전용 리터럴로 고정한다. 이 키가 목록/버전/파일 캐시의 갱신 범위를 결정한다.
+ */
 import type { FrameworkRuntime } from "@sc/runtime";
 import type { ReferenceIdentity } from "../../auth/identity";
 import type { components } from "../../generated/api";
@@ -12,6 +18,10 @@ export const mediaKeys = {
   annotations: (id: number | null) => ["media", "annotations", id] as const,
   file: (id: number | null) => ["media-file", id] as const,
 };
+/**
+ * 파일 업로드는 FormData, 다운로드는 responseType blob으로 구분한다. 세션 쿠키/CSRF/timeout/오류 변환은 공통 client가 담당한다.
+ * 수정/삭제의 revision은 다른 사용자의 변경을 덮지 않기 위한 업무 동시성 값이며 API 규칙은 서버 Service가 최종 검증한다.
+ */
 export function createMediaApi(runtime: FrameworkRuntime<ReferenceIdentity>) {
   const request = runtime.client.request;
   return {

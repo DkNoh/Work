@@ -109,6 +109,15 @@
 </template>
 
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 버튼 크기/표현/의미색/처리 상태와 기본·compact 입력/카드, toolbar select, 상태 배지를 한 화면에서 비교한다.
+ */
+
+/*
+ * 공개 size/intent/variant/density/surface props만으로 화면을 조립하는 개발자용 사용 예제다. 공통 내부 CSS를 덮어쓰지 않는다.
+ *  입력과 actionCount는 각 예제의 로컬 ref이며 API나 실제 업무 저장을 수행하지 않는다. 배지 자료는 readonly 공개 Props 배열로 타입을 검증한다.
+ */
 import { ref } from "vue";
 import { mdiDownload, mdiRefresh } from "@mdi/js";
 import {
@@ -135,6 +144,7 @@ const periodOptions = [
   { value: "month", label: "이번 달" },
   { value: "quarter", label: "이번 분기" },
 ];
+// 업무별 상태 문구를 공통 tone에 연결한 합성 목록이다. 색만으로 상태 의미를 전달하지 않는다.
 const badges: readonly ScStatusBadgeProps[] = [
   { label: "작성 중", tone: "neutral" },
   { label: "진행 중", tone: "primary" },
@@ -144,6 +154,7 @@ const badges: readonly ScStatusBadgeProps[] = [
   { label: "처리 실패", tone: "danger" },
   { label: "안내", tone: "info" },
 ];
+// 활성 클릭이 전달될 때만 증가한다. busy/disabled 버튼을 눌렀을 때 값이 그대로인지 Story 테스트가 확인할 수 있다.
 function executeAction() {
   actionCount.value += 1;
 }

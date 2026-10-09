@@ -33,6 +33,15 @@
 </template>
 
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * Select/Checkbox/TextArea와 공통 행동 막대를 실제 form 안에 배치한다. 별도 확인 버튼은 FormData에 포함된 값을 출력한다.
+ */
+
+/*
+ * 각 입력의 ref는 부모 폼이 소유하는 모델이다. ScFormActions는 form ID와 busy/disabled를 받아 제출 버튼을 연결할 뿐 값을 저장하지 않는다.
+ *  useId는 여러 Story를 함께 볼 때 form 연결이 겹치지 않게 한다. 제출/취소 횟수는 카탈로그 테스트용 합성 결과다.
+ */
 import { ref, useId } from "vue";
 import {
   ScActionButton,
@@ -55,10 +64,12 @@ const options = [
 const submissions = ref(0);
 const cancellations = ref(0);
 const submitted = ref("제출 전");
+// native name/form 계약을 확인하기 위해 ref 객체가 아닌 실제 form의 FormData를 읽는다.
 function inspectForm() {
   const form = document.getElementById(formId) as HTMLFormElement;
   submitted.value = JSON.stringify(Object.fromEntries(new FormData(form)));
 }
+// 부모에서 처리 중/비활성을 확인하는 예다. 이 fixture는 카운터만 늘리고 실제 API는 호출하지 않는다.
 function submitForm() {
   if (props.busy || props.disabled) return;
   submissions.value += 1;

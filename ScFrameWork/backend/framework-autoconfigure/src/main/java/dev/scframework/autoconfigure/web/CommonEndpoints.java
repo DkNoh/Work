@@ -14,6 +14,11 @@ import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/*
+ * 서버 준비 상태와 현재 세션의 CSRF 토큰을 제공하는 공통 REST Controller다. JSP view 이름을 반환하지 않는다.
+ * health는 Boot readiness에 따라 200/503을 선택한다. csrf는 Security가 요청에 제공한 토큰을 JSON headerName/token으로 반환한다.
+ */
+
 @RestController
 public class CommonEndpoints {
     private final ScFrameworkProperties properties;
@@ -39,6 +44,7 @@ public class CommonEndpoints {
 
     @GetMapping("/api/auth/csrf")
     @Operation(summary = "현재 세션의 CSRF 토큰 발급", security = {})
+    // 지연 생성 CSRF token을 읽어 현재 세션과 연결한다. 프런트는 여기서 받은 headerName을 그대로 다음 쓰기 요청에 사용한다.
     public CsrfResponse csrf(@Parameter(hidden = true) CsrfToken token) {
         return new CsrfResponse(token.getHeaderName(), token.getToken());
     }

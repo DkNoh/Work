@@ -4,6 +4,12 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import java.time.Instant;
 import java.util.List;
 
+/*
+ * 등록 작업/예약 설정/실행 이력의 공개 HTTP DTO를 제공한다. 내부 서비스 record와 JSON 스키마 이름을 분리한다.
+ * revision은 동시 변경 충돌 검사용, nullable nextFireAt/completedAt은 비활성 예약/미완료 실행을 표현한다.
+ * response/runs는 서비스 결과를 복사 매핑할 뿐 예약 실행이나 추가 조회를 수행하지 않는다.
+ */
+
 public final class OperationalScheduleContracts {
     private OperationalScheduleContracts(){}
     @Schema(name="OperationalRegisteredJobResponse")

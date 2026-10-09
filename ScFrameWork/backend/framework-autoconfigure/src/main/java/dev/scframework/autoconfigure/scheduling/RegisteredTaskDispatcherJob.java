@@ -6,6 +6,12 @@ import org.quartz.Job;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 
+/*
+ * Quartz Job과 공통 예약 실행 서비스 사이의 어댑터다. JobDataMap의 등록 코드/예약 ID만 읽는다.
+ * 복구 실행은 원래 예정 시각을 복원해 동일 runKey를 사용하며 @DisallowConcurrentExecution이 같은 JobKey 겹침을 막는다.
+ * 실패는 원문을 제거한 JobExecutionException으로 바꿔 Quartz 로그에도 업무 입력이 남지 않게 한다.
+ */
+
 /** 같은 jobCode는 항상 같은 JobKey로 등록하여 겹치는 실행을 막는다. */
 @DisallowConcurrentExecution
 public final class RegisteredTaskDispatcherJob implements Job {

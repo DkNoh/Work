@@ -9,6 +9,11 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import org.springframework.web.filter.OncePerRequestFilter;
 
+/*
+ * API 요청 완료 여부와 HTTP 상태를 고정 SUCCESS/FAILURE 관측 이벤트로 변환한다.
+ * finally에서 기록해 예외로 끝난 요청도 반영하고, sink 실패는 기존 Servlet 응답/예외 흐름을 보존한다.
+ */
+
 /** HTTP trace가 활성인 동안 고정 결과 코드만 기록한다. URI·입력·identity는 기록하지 않는다. */
 public final class SafeHttpEventFilter extends OncePerRequestFilter {
     private final OperationalEventSink events;

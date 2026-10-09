@@ -1,3 +1,8 @@
+/**
+ * ADO 링크 폼의 실행 시점 입력 규칙. TypeScript 타입은 컴파일 후 없어지므로 외부 입력은 Zod로 별도 확인한다.
+ * ticket은 허용 문자/길이를 제한한다. URL은 HTTP(S)이고 사용자명/비밀번호가 포함되지 않은 주소만 받는다.
+ * refine 콜백은 기본 문자열 검사 뒤 추가 규칙을 적용한다. Java Bean Validation의 커스텀 제약과 유사한 역할이다.
+ */
 import { z } from "zod";
 export const adoSchema = z.object({
   ticket: z

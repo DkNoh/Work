@@ -1,3 +1,8 @@
+/*
+ * compiled UI 패키지의 공개 계약 JSON을 Storybook Docs/Controls 표로 연결하는 adapter다. UI 소스 import 없이 문서와 실제 패키지 소비를 연결한다.
+ *  PublicContract는 JSON의 모양, StrictArgTypes는 Storybook이 기대하는 모양이다. Map은 컴포넌트 이름으로 계약을 빠르게 찾는다.
+ *  이 모듈은 표시용 metadata만 만들며 Story args 값이나 이벤트 처리·UI 동작을 변경하지 않는다.
+ */
 import type { StrictArgTypes, StrictInputType } from "storybook/internal/types";
 import contracts from "../../../../docs/ui-contracts.json";
 
@@ -18,6 +23,7 @@ const publicContracts: ReadonlyMap<string, PublicContract> = new Map(
   contracts.components.map((contract) => [contract.component, contract]),
 );
 
+// 공개 union 선택지는 Story가 명시한 options만 사용한다. scalar는 알맞은 입력을, 함수/HTMLImageElement는 편집 불가 Controls를 제공한다.
 function propControl(
   prop: PublicProp,
   initialValue: unknown,
@@ -78,6 +84,7 @@ function propControl(
   };
 }
 
+// description/type/default를 문서 표에 채운다. 기본값 표시와 실제 args 주입은 다른 책임이므로 여기서는 실행 값을 바꾸지 않는다.
 function documentedProp(
   prop: PublicProp,
   initialValue: unknown,
@@ -99,6 +106,7 @@ function documentedProp(
   };
 }
 
+// CSF title 끝의 공개 컴포넌트 이름으로 계약을 찾는다. 일치하지 않는 합성 Story는 원래 추론 결과를 유지한다.
 export function publicContractArgTypes(
   title: string,
   inferred: StrictArgTypes,

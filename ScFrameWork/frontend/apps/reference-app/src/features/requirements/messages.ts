@@ -1,3 +1,5 @@
+// 요구사항의 한국어/영어 표시 문구다. 서버 상태 코드나 API 필드명을 번역하지 않고 같은 키의 문장만 바꾼다.
+// 요구사항 화면은 전역 i18n에 등록된 request 네임스페이스로 읽는다.
 export const requirementMessages = {
   ko: {
     list: "요구사항 목록",

@@ -17,6 +17,12 @@ import java.util.List;
 import java.util.Set;
 import java.util.function.Supplier;
 
+/*
+ * OTLP 전송 직전에 span의 공개 필드를 허용 목록으로 다시 만든다.
+ * 등록 route/HTTP method/status만 남기고 이벤트·링크·상태 설명·원래 resource/scope는 제거/대체한다.
+ * trace 연결 자체는 delegate span 정보를 활용하며 export 이후 flush/shutdown은 실제 exporter에 위임한다.
+ */
+
 /** OTLP 경계에서 allowlist로 다시 작성한다. 원문 URL·SQL·예외·baggage는 export하지 않는다. */
 public final class SafeSpanExporter implements SpanExporter {
     private static final Set<String> METHODS = Set.of("GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS");
@@ -30,6 +36,7 @@ public final class SafeSpanExporter implements SpanExporter {
         this.routes = routes;
         this.resource = Resource.create(Attributes.of(AttributeKey.stringKey("service.name"), application));
     }
+    // 원본을 직접 수정하지 않고 DelegatingSpanData로 공개 부분만 교체한다. 원문 속성을 복사하는 방식이 아닌 허용값 재구성이다.
     public SpanData sanitize(SpanData original) {
         var builder = Attributes.builder();
         String method = original.getAttributes().get(AttributeKey.stringKey("http.request.method"));

@@ -72,6 +72,17 @@
 </template>
 
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 필터 제출 → URL 변경 → Query 재조회 순서다. row-actions slot의 버튼이 그룹을 선택하면 하단 발생 이력 표가 나타난다.
+ */
+
+/**
+ * 브라우저 오류 그룹 목록과 선택 그룹의 발생 이력을 조회한다. 필터/그룹 ID/두 페이지 번호의 원본은 Router query다.
+ * 폼 초안은 VeeValidate, 적용 조건은 Zod로 검증한 URL, 결과는 Vue Query가 소유한다. 그룹과 발생 이력은 서로 다른 cache key를 사용한다.
+ * 응답에는 허용된 분류 코드와 식별 정보만 표시한다. 원문 stack/message나 입력 내용을 수집하는 화면이 아니다.
+ */
+
 import { computed, watch } from "vue";
 import { useRoute } from "vue-router";
 import { useQuery } from "@tanstack/vue-query";
@@ -129,11 +140,17 @@ const parameters = computed(() => {
 const historyParameters = computed(() =>
   new URLSearchParams({ page: String(historyPage.value ?? 0), size: "20" }).toString(),
 );
+/**
+ * capability와 URL 유효성이 모두 확인되어야 그룹을 조회한다. queryFn은 요청 시작 당시 queryKey와 signal을 사용한다.
+ */
 const groups = useQuery({
   queryKey: computed(() => [...operationKeys.browserGroups, parameters.value]),
   queryFn: ({ queryKey, signal }) => api.browserGroups(queryKey[2]!, signal),
   enabled: computed(() => access.browserErrors.value && valid.value),
 });
+/**
+ * 그룹 ID와 이력 페이지를 키에 포함하여 서로 다른 그룹의 응답을 같은 캐시로 섞지 않는다.
+ */
 const occurrences = useQuery({
   queryKey: computed(
     () => [...operationKeys.browserOccurrences, groupId.value, historyParameters.value] as const,
@@ -146,6 +163,9 @@ const form = useForm<{ source: string; eventCode: string }>({
 });
 const [source] = form.defineField("source");
 const [eventCode] = form.defineField("eventCode");
+/**
+ * 실제 검색 조건이 URL에서 바뀔 때만 폼을 맞춘다. 이력 페이지 이동으로 작성 중인 필터를 지우지 않게 감시 범위를 좁힌다.
+ */
 watch(
   [() => route.query.source, () => route.query.eventCode],
   () => {
@@ -195,6 +215,9 @@ const occurrenceColumns = computed<readonly ScTableColumn<Occurrence>[]>(() => [
 ]);
 const groupKey = (row: Group) => String(row.id);
 const occurrenceKey = (row: Occurrence) => String(row.id);
+/**
+ * 검증한 폼 값을 URL로 적용하면서 첫 페이지로 이동한다. 새 검색에는 기존 그룹/이력 선택을 가져가지 않는다.
+ */
 async function applyFilters() {
   const result = schema.safeParse(form.values);
   if (!result.success) {
@@ -214,6 +237,9 @@ async function changePage(page: number) {
     query: { ...route.query, page: String(page), group: undefined, historyPage: undefined },
   });
 }
+/**
+ * 선택 그룹과 historyPage=0을 함께 반영한다. 그룹 변경 후 이전 그룹의 이력 페이지를 그대로 요청하지 않는다.
+ */
 async function selectGroup(id: number) {
   await runtime.router.push({ query: { ...route.query, group: String(id), historyPage: "0" } });
 }

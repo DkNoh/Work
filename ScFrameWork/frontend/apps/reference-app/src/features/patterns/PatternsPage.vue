@@ -55,6 +55,17 @@
   </section>
 </template>
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 상단은 같은 공통 컴포넌트의 prop 변형을 비교하고, 아래는 목적별 하위 SFC를 조립한다.
+ */
+
+/**
+ * 공통 UI를 실제 SFC에서 조립하는 Reference 예제 화면이다. 디자인 prop과 폼/표/차트/에디터/Excel 하위 예제를 한곳에 배치한다.
+ * designActionCount/title/category는 이 화면의 임시 시연 상태다. 실행 횟수나 입력을 서버에 저장하는 업무 기능은 아니다.
+ * 버튼 크기/색/밀도는 공개 props로 선택하고 컴포넌트 내부 CSS를 복제하지 않는다. 번역/옵션은 computed로 locale을 따라간다.
+ */
+
 import { computed, ref } from "vue";
 import { useI18n } from "vue-i18n";
 import { mdiRefresh } from "@mdi/js";

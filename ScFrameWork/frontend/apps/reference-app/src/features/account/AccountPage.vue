@@ -38,6 +38,12 @@
   </section>
 </template>
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 비밀번호 세 필드는 useForm 입력과 연결된다. 확인 값은 브라우저 검증용이며 실제 API에는 현재/새 비밀번호만 보낸다.
+ */
+
+// 내 계정의 비밀번호 변경 흐름이다. 폼 입력/필드 오류는 VeeValidate, 요청과 세션 정리는 공통 runtime이 담당한다.
 import { ref } from "vue";
 import { useI18n } from "vue-i18n";
 import { useForm } from "vee-validate";
@@ -46,6 +52,7 @@ import { ApiError } from "@sc/runtime";
 import { ScPageHeader, ScSectionCard, ScTextField, ScFormActions } from "@sc/ui";
 import { useReferenceRuntime } from "../../auth/identity";
 import { formIssueMessages } from "../../shared/validation";
+// useI18n local 메시지는 이 화면의 문구 사전이다. t는 현재 언어로 표시할 문자열을 반환한다.
 const { t } = useI18n({
   useScope: "local",
   messages: {
@@ -72,12 +79,15 @@ const { t } = useI18n({
   },
 });
 const runtime = useReferenceRuntime();
+// initialValues로 값 타입이 추론된다. defineField의 첫 ref가 v-model과 연결되고 errors는 입력별 검증 결과를 표시한다.
 const form = useForm({ initialValues: { currentPassword: "", newPassword: "", confirmation: "" } });
 const [currentPassword] = form.defineField("currentPassword");
 const [newPassword] = form.defineField("newPassword");
 const [confirmation] = form.defineField("confirmation");
 const busy = ref(false);
 const error = ref("");
+// 제출 시 Zod safeParse로 현재 값·새 비밀번호 길이/바이트 수·확인 일치를 검사한다.
+// 문자 수와 UTF-8 바이트 수는 다르므로 TextEncoder로 실제 72바이트 제한을 확인한다. 타입 선언만으로는 이 검증이 되지 않는다.
 async function changePassword() {
   if (busy.value) return;
   error.value = "";
@@ -91,6 +101,7 @@ async function changePassword() {
         .refine((value) => new TextEncoder().encode(value).byteLength <= 72, t("hint")),
       confirmation: z.string(),
     })
+    // 객체 전체의 교차 필드 검증이다. 오류 path를 confirmation으로 지정해 확인 입력 아래에 표시한다.
     .refine((value) => value.newPassword === value.confirmation, {
       path: ["confirmation"],
       message: t("mismatch"),
@@ -102,10 +113,12 @@ async function changePassword() {
   }
   busy.value = true;
   try {
+    // request<void>는 성공 응답 본문을 사용하지 않는다는 TS 계약이다. DB 변경과 기존 세션 종료는 서버가 처리한다.
     await runtime.client.request<void>("/auth/password", "POST", {
       currentPassword: result.data.currentPassword,
       newPassword: result.data.newPassword,
     });
+    // 성공한 경우에만 비밀번호 입력을 지우고 브라우저 인증/Query 상태를 정리한 뒤 로그인 화면으로 이동한다.
     form.resetForm();
     runtime.resetSession();
     await runtime.router.replace("/login");

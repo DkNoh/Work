@@ -14,6 +14,7 @@
       :detail-visible="!!selected || route.query.edit === 'new'"
       @show-list="cancelEdit"
     >
+      <!-- 표의 rows/loading/error는 Query 결과이며 @change-pagination은 Router 변경, @retry는 같은 Query의 재조회다. -->
       <template #list>
         <sc-section-card title="목록" :description="`전체 ${query.data.value?.total ?? 0}건`">
           <sc-data-table
@@ -43,6 +44,7 @@
           </sc-data-table>
         </sc-section-card>
       </template>
+      <!-- v-model은 아직 저장되지 않은 폼 값이다. busy는 중복 제출을 막고 error-messages는 Zod/API 오류를 입력 아래에 연결한다. -->
       <template #detail>
         <div class="sc-stack">
           <sc-section-card title="새 예제">
@@ -108,6 +110,7 @@
         </div>
       </template>
     </sc-list-detail-layout>
+    <!-- 모달은 입력 폐기 여부만 묻는다. 확인되기 전에는 선택 교체/최신 데이터로 reset을 실행하지 않는다. -->
     <sc-confirm-dialog
       v-model="confirmationOpen"
       title="입력 변경 확인"
@@ -120,6 +123,13 @@
 </template>
 
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 목록/상세 슬롯으로 서버 표와 두 입력 폼을 조립한다. scoped slot의 row는 공통 표가 현재 행 데이터를 제공한 값이다.
+ */
+
+// 가장 작은 CRUD 읽기 예제다. URL의 page/edit → computed → Query 목록 → 사용자가 선택한 폼 기준 → API → 목록 무효화 흐름을 따른다.
+// 두 useForm은 신규 입력과 수정 입력을 분리한다. selected는 편집 시작 DTO/revision이며 Query 캐시를 대체하지 않는다.
 import { computed, onBeforeUnmount, ref, watch } from "vue";
 import { useRoute, onBeforeRouteLeave, onBeforeRouteUpdate } from "vue-router";
 import { useQuery } from "@tanstack/vue-query";
@@ -142,15 +152,18 @@ import { exampleSchema, type ExampleInput } from "./schema";
 const runtime = useFrameworkRuntime();
 const route = useRoute();
 const api = createExamplesApi(runtime);
+// route.query는 검증된 숫자가 아니다. 안전한 0 이상 정수로 해석하고 잘못된 입력은 첫 페이지로 처리한다.
 const page = computed(() => {
   const parsed = Number(route.query.page ?? 0);
   return Number.isSafeInteger(parsed) && parsed >= 0 ? parsed : 0;
 });
+// 페이지를 캐시 키에 포함하고 공통 API의 GET으로 조회한다. Query의 signal은 페이지 변경 등으로 취소된 요청에 전달된다.
 const query = useQuery({
   queryKey: computed(() => ["examples", page.value]),
   queryFn: ({ signal }) => api.list(page.value, signal),
   enabled: computed(() => !!runtime.session.identity),
 });
+// useForm<ExampleInput>의 제네릭은 필드 타입 계약이다. Java 제네릭과 유사한 용도지만 런타임 입력 검증은 아래 safeParse가 한다.
 const createForm = useForm<ExampleInput>({ initialValues: { title: "" } });
 const editForm = useForm<ExampleInput>({ initialValues: { title: "" } });
 const [createTitle] = createForm.defineField("title");
@@ -176,6 +189,7 @@ const rowKey = (row: ExampleEntry) => String(row.id);
 const rowLabel = (row: ExampleEntry) => row.title;
 const confirmationOpen = ref(false);
 const confirmationMessage = ref("");
+// 확인 모달의 응답을 기다리는 Promise resolver다. @confirm/@cancel이 finishConfirmation을 호출하면 원래 핸들러가 계속 실행된다.
 let resolveConfirmation: ((allowed: boolean) => void) | undefined;
 function confirmInputChange(message: string): Promise<boolean> {
   if (resolveConfirmation) return Promise.resolve(false);
@@ -191,6 +205,7 @@ function finishConfirmation(allowed: boolean) {
   resolveConfirmation = undefined;
   resolve?.(allowed);
 }
+// 컴포넌트 제거 이후의 비동기 응답 반영을 막고, 열린 확인창의 대기를 false로 끝낸다.
 onBeforeUnmount(() => {
   disposed = true;
   finishConfirmation(false);
@@ -245,6 +260,7 @@ watch(
   { immediate: true },
 );
 
+// 표 페이지 이벤트는 Router만 갱신한다. URL을 원본으로 두므로 새로고침/뒤로 가기도 같은 조회를 재현한다.
 async function selectPage(nextPage: number) {
   await runtime.router.replace({ query: { ...route.query, page: String(nextPage) } });
 }
@@ -259,6 +275,8 @@ async function cancelEdit() {
   await runtime.router.replace({ query: nextQuery });
 }
 
+// 신규 폼 제출 → safeParse → POST → 목록 invalidate → 성공 시 신규 폼 reset 순서다.
+// 서버 필드 오류는 ApiError.fields.title을 폼 오류로 연결하고, 실패한 입력은 그대로 남긴다.
 async function createExample() {
   if (creating.value) return;
   createError.value = "";
@@ -286,6 +304,8 @@ async function createExample() {
   }
 }
 
+// 수정 시작 시 id/revision을 캡처한다. PUT 성공 후 목록을 갱신하되 ownsTarget()을 통과한 현재 선택만 입력을 초기화한다.
+// 409는 다른 저장과 기준 버전이 충돌했다는 뜻이며 자동으로 새 revision에 덮어쓰지 않는다.
 async function saveExample() {
   if (!selected.value || saving.value || reloading.value) return;
   const target = { id: selected.value.id, revision: selected.value.revision };
@@ -321,6 +341,7 @@ async function saveExample() {
   }
 }
 
+// 충돌 후 사용자가 최신 조회를 명시적으로 요청하는 경로다. 확인창 대기 중에도 id/revision/draft가 변하지 않았는지 검사한다.
 async function reloadSelected() {
   if (!selected.value || saving.value || reloading.value) return;
   const target = {

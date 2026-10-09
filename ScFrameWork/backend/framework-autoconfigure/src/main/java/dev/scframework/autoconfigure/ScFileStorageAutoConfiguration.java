@@ -8,6 +8,11 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 
+/*
+ * file-storage.enabled를 선택했을 때만 로컬 저장소와 DB-파일 생명주기 어댑터를 등록한다.
+ * FileStorage SPI를 앱이 제공하면 기본 저장소를 대체한다. durable 옵션은 journal/outbox 정리 사용 여부를 결정한다.
+ */
+
 @AutoConfiguration
 @EnableConfigurationProperties({ScFileStorageProperties.class,ScDurableStorageProperties.class})
 @ConditionalOnProperty(prefix = "sc.framework.file-storage", name = "enabled", havingValue = "true")

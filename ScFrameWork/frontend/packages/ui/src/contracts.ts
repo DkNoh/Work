@@ -1,3 +1,8 @@
+/*
+ * 기본 버튼·문자열 입력의 공개 TypeScript 계약과 HTML 속성 필터다. Java interface처럼 사용 위치의 형태를 검사한다.
+ *  리터럴 union(예: button|submit|reset)은 허용 문자열을 제한한다. ?는 선택 입력, [event: MouseEvent]는 emit 인자의 튜플 타입이다.
+ *  import type은 타입 참조만 가져온다. VNode[]는 부모가 slot에 넣을 Vue 화면 노드 목록이며 서버 HTML 문자열이 아니다.
+ */
 import type { HTMLAttributes, VNode } from "vue";
 
 export type ScActionButtonType = "button" | "submit" | "reset";
@@ -89,6 +94,7 @@ export interface ScTextFieldEmits {
 export type ScTextFieldSlots = Record<string, never>;
 
 /** props 이외에 허용하는 공통 DOM 속성. ARIA와 data 속성의 DOM 대상은 각 부품의 계약을 따른다. */
+// aria-${string}/data-${string}는 해당 접두사를 가진 속성만 받는 템플릿 리터럴 타입이다. 일반 vendor props까지 허용하지 않는다.
 export interface ScHtmlAttrs {
   id?: string;
   class?: HTMLAttributes["class"];
@@ -123,11 +129,13 @@ export function pickScHtmlAttrs(
   attrs: Readonly<Record<string, unknown>>,
   options: HtmlAttrOptions = {},
 ): Record<string, unknown> {
+  // 각 부품이 추가 허용한 속성과 공통 DOM 속성을 합친다. Set은 빠른 중복 제거와 이름 조회에 사용한다.
   const allowed = new Set([
     ...globalAttributes,
     ...(options.attributes ?? []),
     ...(options.events ?? []),
   ]);
+  // omit을 먼저 적용해 내부에서 계산한 ARIA 값이 외부 attrs로 덮이지 않게 한다.
   const omitted = new Set(options.omit ?? []);
   return Object.fromEntries(
     Object.entries(attrs).filter(

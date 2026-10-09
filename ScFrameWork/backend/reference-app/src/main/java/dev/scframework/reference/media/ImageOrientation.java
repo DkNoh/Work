@@ -3,6 +3,11 @@ package dev.scframework.reference.media;
 import java.io.*;
 import java.util.Arrays;
 
+/**
+ * PNG/JPEG의 제한된 방향 메타데이터만 해석한다. 픽셀을 회전하거나 원본 파일을 재압축하지 않는다.
+ * 외부 파일의 길이/offset/개수는 먼저 범위를 확인하며 미지원/중복 메타데이터는 IOException으로 거절한다.
+ */
+
 /** EXIF만 제한적으로 읽으며 원본 bytes를 변환하거나 재압축하지 않는다. */
 final class ImageOrientation {
     private static final byte[] PNG = {(byte)137,80,78,71,13,10,26,10};
@@ -12,6 +17,7 @@ final class ImageOrientation {
         DataInputStream input = new DataInputStream(source);
         return png ? png(input) : jpeg(input);
     }
+    // JPEG marker를 따라 APP1 EXIF 블록만 제한적으로 읽는다. scan 시작/종료 전에 얻은 방향을 반환하고 중복 EXIF는 거절한다.
     private static int jpeg(DataInputStream input) throws IOException {
         if (input.readUnsignedShort()!=0xffd8) throw invalid();
         int orientation=1; boolean found=false;
@@ -27,6 +33,7 @@ final class ImageOrientation {
             }
         }
     }
+    // PNG chunk 길이를 파일 상한으로 제한하고 eXIf만 TIFF로 해석한다. 다른 chunk는 건너뛰며 bytes를 변경하지 않는다.
     private static int png(DataInputStream input) throws IOException {
         if(!Arrays.equals(input.readNBytes(8),PNG)) throw invalid();
         int orientation=1;boolean found=false;
@@ -42,6 +49,7 @@ final class ImageOrientation {
             if(type==0x49454e44) return orientation;
         }
     }
+    // byte order, TIFF magic, IFD offset/entry 수를 검증한 뒤 방향 tag 하나만 읽는다. count/offset 연산은 overflow/범위 이탈을 검사한다.
     static int tiff(byte[] bytes) throws IOException {
         if(bytes.length<8) throw invalid();
         boolean little;
@@ -64,6 +72,7 @@ final class ImageOrientation {
         return orientation;
     }
     private static int u16(byte[] bytes,int offset,boolean little) { return little ? (bytes[offset]&255)|((bytes[offset+1]&255)<<8) : ((bytes[offset]&255)<<8)|(bytes[offset+1]&255); }
+    // 부호 없는 32비트 값을 long에 누적해 큰 offset이 음수로 바뀌지 않게 한다. 검증된 byte order에 따라 읽는 순서만 바꾼다.
     private static long u32(byte[] bytes,int offset,boolean little) {
         long value=0;for(int i=0;i<4;i++) value=(value<<8)|(bytes[offset+(little?3-i:i)]&255);return value;
     }

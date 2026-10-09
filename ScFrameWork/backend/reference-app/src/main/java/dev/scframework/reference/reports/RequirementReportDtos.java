@@ -6,6 +6,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.List;
 
+/**
+ * 본문/이력 JSON을 제외한 보고서 응답이다. 현재 페이지 items와 전체 조건의 total/stats를 한 응답으로 전달한다.
+ */
+
 /** 보고서는 업무 입력이나 이력 본문을 복제하지 않는 조회 전용 계약이다. */
 public final class RequirementReportDtos {
     private RequirementReportDtos() {}
@@ -30,6 +34,7 @@ public final class RequirementReportDtos {
             @Schema(requiredMode = REQUIRED, nullable = true, format = "date-time") String lastCommentAt) {}
 
     @Schema(name = "RequirementReportStats", description = "필터와 읽기 권한을 적용한 전체 결과의 상태 건수와 미지정 건수")
+    // 통계는 페이지 items만 세는 값이 아니라 동일 필터/읽기 권한의 전체 결과다. JSON 키는 기존 상태 코드 대문자를 보존한다.
     public record RequirementReportStats(
             @JsonProperty("DRAFT") @Schema(name = "DRAFT", requiredMode = REQUIRED, minimum = "0") long draft,
             @JsonProperty("REQUESTED") @Schema(name = "REQUESTED", requiredMode = REQUIRED, minimum = "0") long requested,
@@ -40,6 +45,7 @@ public final class RequirementReportDtos {
             @Schema(requiredMode = REQUIRED, minimum = "0") long unassigned) {}
 
     @Schema(name = "RequirementReportPage")
+    // items를 방어 복사해 반환한다. 성공 응답에 추가 success/data 래퍼를 넣지 않아 Vue 표/차트가 이 계약을 그대로 소비한다.
     public record RequirementReportPage(
             @Schema(requiredMode = REQUIRED) List<RequirementReportItem> items,
             @Schema(requiredMode = REQUIRED, minimum = "0") long total,

@@ -1,3 +1,7 @@
+/**
+ * 보고서 필터·정렬·페이지·접근성 안내에 사용하는 한영 사전. localization.ts가 report namespace로 등록한다.
+ * 서버 enum 코드는 그대로 유지하고 화면에서 t(...)로 표시명만 바꾼다. 검증 메시지의 키는 filters.ts가 반환하는 오류 코드와 맞춰야 한다.
+ */
 export const requirementReportMessages = {
   ko: {
     title: "요구사항 보고서",

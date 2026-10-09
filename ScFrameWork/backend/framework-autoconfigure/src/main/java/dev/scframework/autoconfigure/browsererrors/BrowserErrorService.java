@@ -23,6 +23,12 @@ import org.springframework.transaction.support.TransactionSynchronization;
 import org.springframework.transaction.support.TransactionSynchronizationManager;
 import static dev.scframework.autoconfigure.browsererrors.BrowserErrorContracts.*;
 
+/*
+ * 허용된 브라우저 오류 코드만 receipt/그룹/발생 이력으로 저장하는 JDBC 서비스다.
+ * 동일 actor와 clientEventId는 receipt로 중복 판별하고 fingerprint 그룹 count를 원자적 UPDATE로 합산한다.
+ * 수집은 인증된 앱 Controller, 목록/상세 권한은 앱 Controller가 담당하며 이 서비스는 검증/집계/보존 경계를 제공한다.
+ */
+
 public class BrowserErrorService {
     private final JdbcTemplate jdbc;
     private final Clock clock;
@@ -41,6 +47,7 @@ public class BrowserErrorService {
     public void rejected(){event(OperationalEvent.Kind.BROWSER_ERROR_REJECTED,OperationalEvent.Outcome.FAILURE,null);}
 
     @Transactional
+    // receipt와 fingerprint 집계/occurrence INSERT는 한 TX다. 같은 clientEventId의 동일 보고는 count를 다시 올리지 않는다.
     public Accepted accept(Input input,Long actorId,String subject,String requestId){
         String fingerprint;
         try{fingerprint=validate(input);if(actorId!=null&&actorId<1||subject==null||!subject.matches("[A-Za-z0-9._@-]{1,64}"))throw invalid();}
@@ -63,6 +70,7 @@ public class BrowserErrorService {
     }
 
     @Transactional(readOnly=true)
+    // 필터 값은 등록 집합을 검사하고 SQL 값은 ? 파라미터로 전달한다. 정렬/페이지 상한을 서버에서 고정한다.
     public GroupPage groups(int page,int size,String source,String eventCode){
         bounds(page,size);
         if(source!=null&&!List.of("VUE","WINDOW","REJECTION").contains(source)||eventCode!=null&&!codes().contains(eventCode))throw invalid();
@@ -82,6 +90,7 @@ public class BrowserErrorService {
         return new OccurrencePage(List.copyOf(rows),total,page,size);
     }
     @Transactional
+    // 발생/receipt/비활성 그룹을 각 보존 기한과 배치 상한으로 정리한다. 발생 이력이 남은 그룹은 삭제하지 않는다.
     public int retain(){
         Instant now=now();int removed=0;int limit=properties.getRetentionBatchSize();
         var occurrences=jdbc.queryForList("SELECT id FROM browser_error_occurrence WHERE occurred_at<? ORDER BY id LIMIT ?",Long.class,utc(now.minus(properties.getOccurrenceRetentionDays(),ChronoUnit.DAYS)),limit);
@@ -92,6 +101,7 @@ public class BrowserErrorService {
         for(long id:groups)removed+=jdbc.update("DELETE FROM browser_error_group WHERE id=? AND NOT EXISTS(SELECT 1 FROM browser_error_occurrence WHERE group_id=?)",id,id);
         return removed;
     }
+    // appVersion/route/component allowlist와 source-eventCode 조합을 검사해 고정 필드만 fingerprint에 포함한다.
     private String validate(Input value){
         if(value==null||value.schemaVersion()==null||value.schemaVersion()!=1||value.clientEventId()==null||value.source()==null||value.eventCode()==null
                 ||!properties.getAppVersion().equals(value.appVersion())||!properties.getRouteCodes().contains(value.routeCode())||!properties.getComponentCodes().contains(value.componentCode())
@@ -104,6 +114,7 @@ public class BrowserErrorService {
     }
     private static void bounds(int page,int size){if(page<0||page>1_000_000||size<1||size>100)throw invalid();}
     private static List<String> codes(){return List.of("VUE_ERROR","WINDOW_ERROR","UNHANDLED_REJECTION","UNKNOWN_RUNTIME");}
+    // 수집 성공 관측은 DB commit 후에만 발행해 rollback된 보고를 성공으로 집계하지 않는다.
     private void afterCommit(OperationalEvent.Outcome outcome,UUID id){
         if(TransactionSynchronizationManager.isSynchronizationActive())TransactionSynchronizationManager.registerSynchronization(new TransactionSynchronization(){@Override public void afterCommit(){event(OperationalEvent.Kind.BROWSER_ERROR_ACCEPTED,outcome,id);}});
         else event(OperationalEvent.Kind.BROWSER_ERROR_ACCEPTED,outcome,id);

@@ -3,6 +3,11 @@ package dev.scframework.reference.identity;
 import jakarta.persistence.*;
 import java.time.Instant;
 
+/**
+ * Reference 앱이 소유하는 사용자 영속 모델이다. 비밀번호는 encoder 결과인 passwordHash로만 보유한다.
+ * 클라이언트 응답에는 이 엔티티를 직접 직렬화하지 않고 UserResponse를 사용한다.
+ */
+
 @Entity
 @Table(name = "reference_user")
 public class UserEntity {

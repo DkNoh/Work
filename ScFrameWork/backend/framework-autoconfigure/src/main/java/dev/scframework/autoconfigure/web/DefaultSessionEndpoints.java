@@ -8,6 +8,11 @@ import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/*
+ * 최소 앱에서 /auth/me를 username/roles로 제공하는 세션 조회 Controller다.
+ * Spring Authentication에서 ROLE_ 접두사를 제거해 runtime Identity 계약에 맞춘다. 업무 사용자 추가 필드는 앱 endpoint가 소유한다.
+ */
+
 /** 최소 소비 앱의 기본 me 계약. 업무 사용자 DTO는 앱이 별도 endpoint로 제공한다. */
 @RestController
 public class DefaultSessionEndpoints {

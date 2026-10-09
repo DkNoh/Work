@@ -27,6 +27,17 @@
   </section>
 </template>
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * submit.prevent는 브라우저 기본 form 요청 대신 signIn을 실행한다. busy 동안 입력/중복 요청을 막고 실패를 role=alert로 알린다.
+ */
+
+/**
+ * 생성 앱의 세션 로그인 화면이다. username/password는 브라우저 폼 초안 ref이고 서버 계정 정보는 runtime.auth.login이 확인한다.
+ * ref는 script에서 .value, template에서는 자동 해제하여 사용한다. 성공/실패 모두 finally에서 비밀번호 초안을 지운다.
+ * 서버 비밀번호 초기값을 코드에 넣지 않는다. runtime이 CSRF 획득·쿠키 로그인·사용자 조회·세션 세대 변경을 함께 처리한다.
+ */
+
 import { ref } from "vue";
 import { useI18n } from "vue-i18n";
 import { ApiError, useFrameworkRuntime } from "@sc/runtime";

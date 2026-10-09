@@ -1,5 +1,15 @@
 # ScFramework 수정 위치
 
+JSP·Java 개발자를 위한 [Vue 3·TypeScript·서버 코드 읽기 안내](developer-reading-guide.md)를 추가했다. 수작업 프런트·Java 기능 코드와 현재 v2 생성 템플릿에 한국어 역할·흐름 주석을 유지한다. 범위와 실제 검증은 [상세 주석 적용 기록](질의/상세주석-개발자학습가이드.md)을 따른다.
+
+## 공통 디자인·글꼴을 수정할 때
+
+상용 프레임워크의 표현 규칙은 공통 `tokens.ts`와 공개 UI에서 변경하고 Reference/Starter/Storybook에서 확인한다. KPI의 `tone`은 중앙 파스텔/텍스트 토큰을 고르고 `density`는 크기만 선택한다. 카드 내부 색·패딩을 업무 앱의 `:deep` 스타일로 재정의하지 않는다.
+
+Plus Jakarta Sans는 `ui/src/fonts/`의 공식 OFL 배포본을 자체 제공한다. 교체 시 `_fonts.scss`의 전체 라이선스 고지와 `fonts/OFL.txt`를 함께 갱신하고, UI 패키지 빌드 CSS의 글꼴 포함·OFL 배포·외부 폰트 요청 없음·독립 소비 앱 표시를 확인한다. 한글은 시스템 글꼴 fallback을 사용한다. 생성 `tokens.scss`는 직접 편집하지 않는다.
+
+[시안 재정렬 기록](질의/디자인시안-재정렬.md)에서 현재 규격과 이번 실행 범위를 확인한다.
+
 ## 013 공통 디자인 규격을 사용할 때
 
 [013 공통 디자인 프레임워크](질의/013-공통디자인프레임워크.md)의 공통 규격과 로컬 검증을 완료했다. 독립 소비 앱의 실제 브라우저도 확인했으며 사용자 수락은 미확인이다. 버튼 `size/intent/icon`, 입력 `density`, 선택 `presentation/tone`, 카드 `density/surface`, 표 `density/captionVisibility/minTableWidth`는 공개 prop으로 선택한다. 상태 문구는 [ScStatusBadge.vue](../frontend/packages/ui/src/patterns/ScStatusBadge.vue)의 `label/tone`으로 표시한다. 반복되는 색·padding·font를 공통 내부 `:deep`으로 덮어쓰거나 배지를 앱마다 복제하지 않는다. 업무 열 너비·콘텐츠 배치의 기능 소유 scoped 스타일은 유지할 수 있다.

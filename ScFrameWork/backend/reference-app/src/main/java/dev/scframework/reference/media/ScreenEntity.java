@@ -6,6 +6,10 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+/**
+ * 업무 메뉴에 속하는 참고 화면과 다음 버전 번호를 저장한다. 업로드에서 이 행을 잠가 nextVersion 배정을 직렬화한다.
+ */
+
 @Entity @Table(name="screen_entry")
 @Getter @NoArgsConstructor(access=AccessLevel.PROTECTED)
 public class ScreenEntity {

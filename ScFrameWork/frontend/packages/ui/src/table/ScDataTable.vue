@@ -159,6 +159,18 @@
 </template>
 
 <script setup lang="ts" generic="T extends object">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 조회 상태·선택 개수·실제 table·페이지 버튼을 표시한다. cell/row-actions scoped slot으로 부모가 업무별 셀을 채운다.
+ * 행의 :key는 getRowKey 결과이며 선택 checkbox/radio의 change는 부모 선택 key 갱신 요청이다.
+ * server 모드의 aria-rowcount/rowindex는 현재 DOM 행 수가 아닌 전체 결과에서의 위치를 설명한다.
+ */
+
+/*
+ * generic T extends object는 소비 앱의 업무 행 타입을 그대로 props와 slots에 연결한다. 정렬/선택/페이지의 원본은 부모다.
+ *  computed는 총건수·페이지수·선택 상태를 유도하고, 실제 표시 행은 useTableModel이 client/server 정책에 맞춰 만든다.
+ *  이 표는 Router/Query/권한을 알지 못한다. 부모가 emit을 받아 URL과 서버 조회를 갱신한다.
+ */
 import { computed, useAttrs, useId } from "vue";
 import ScActionButton from "../ScActionButton.vue";
 import { pickScHtmlAttrs } from "../contracts";
@@ -180,6 +192,7 @@ const props = withDefaults(defineProps<ScDataTableProps<T>>(), {
 const emit = defineEmits<ScDataTableEmits>();
 const slots = defineSlots<ScDataTableSlots<T>>();
 const attrs = useAttrs();
+// 최소 너비는 유효한 숫자만 CSS px로 변환한다. 모바일 가로 스크롤은 표 내부 영역에서 처리한다.
 const tableStyle = computed(() => ({
   "--sc-table-min-width":
     (Number.isFinite(props.minTableWidth) ? Math.max(0, props.minTableWidth) : 0) + "px",
@@ -198,6 +211,7 @@ const rowOffset = computed(() =>
 );
 const canSelect = (row: T) => props.isRowSelectable?.(row) ?? true;
 const rowLabel = (row: T) => props.getRowLabel?.(row) ?? props.getRowKey(row);
+// 전체 선택은 현재 표시된 행 중 선택 가능한 키만 대상으로 한다. 기존 다른 서버 페이지의 선택 key는 지우지 않는다.
 const selectableKeys = computed(() =>
   displayRows.value.filter((entry) => canSelect(entry.original)).map((entry) => entry.key),
 );
@@ -216,6 +230,7 @@ function tableAttrs() {
     omit: ["role", "aria-busy"],
   });
 }
+// 정렬된 열의 현재 ARIA 상태와 버튼을 눌렀을 때의 다음 정렬 설명을 따로 제공한다.
 function ariaSort(id: string, sortable?: boolean) {
   if (!sortable) return undefined;
   return props.sorting?.columnId === id
@@ -230,6 +245,7 @@ function sortLabel(id: string, label: string) {
 function sortColumn(id: string) {
   if (!props.loading) emit("change-sort", nextSort(props.sorting, id));
 }
+// DOM 이벤트 target의 checked를 읽은 뒤 새 key 배열을 emit한다. props.selectedKeys를 push/splice로 변경하지 않는다.
 function selectRow(key: string, event: Event) {
   const row = displayRows.value.find((entry) => entry.key === key);
   if (props.loading || !row || !canSelect(row.original)) return;
@@ -254,6 +270,7 @@ function selectPage(event: Event) {
       ),
     );
 }
+// 페이지 이동은 범위 검사 뒤 부모에 요청한다. 표가 자체 HTTP를 호출하거나 서버 rows를 임의로 재분할하지 않는다.
 function changePage(pageIndex: number) {
   if (!props.loading && props.pagination && pageIndex >= 0 && pageIndex < pageCount.value)
     emit("change-pagination", { ...props.pagination, pageIndex, total: total.value });

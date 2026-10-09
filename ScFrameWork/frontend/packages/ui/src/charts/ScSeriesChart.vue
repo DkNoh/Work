@@ -32,6 +32,16 @@
 </template>
 
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 여러 선을 한 그래프에 그리고 하단 details 표에 모든 범주·series 값을 나란히 보여 준다.
+ * 가로로 긴 표는 키보드 포커스가 가능한 scroll region 안에 있어 마우스 없이도 데이터를 확인할 수 있다.
+ */
+
+/*
+ * 서로 같은 범주를 가진 최대 여섯 series를 읽기 전용으로 표시한다. 업무 집계/기간 선택은 부모가 결정한다.
+ *  computed는 첫 series에서 범주를 만들고 모든 series의 길이/이름/수치가 맞는지 검사한다. 오류일 때 잘못 정렬된 선을 그리지 않는다.
+ */
 import { computed, useAttrs, useId } from "vue";
 import { use } from "echarts/core";
 import { LineChart } from "echarts/charts";
@@ -54,6 +64,7 @@ defineSlots<ScSeriesChartSlots>();
 const attrs = useAttrs();
 const titleId = "sc-series-" + useId();
 const categories = computed(() => props.series[0]?.data.map((item) => item.label) ?? []);
+// 이름 중복·빈 이름·1,000개 초과·범주 순서 불일치·NaN/Infinity를 거절한다. 같은 x축을 비교하는 데 필요한 표시 계약이다.
 const valid = computed(
   () =>
     props.series.length <= 6 &&
@@ -75,6 +86,7 @@ const plotHeight = computed(() =>
   Number.isFinite(props.height) ? Math.max(160, props.height) : 320,
 );
 const colors = ["#7f67ff", "#03b562", "#fd4963", "#ffb51b", "#21b6d7", "#3b497e"];
+// 부모 자료를 ECharts 옵션으로 변환한다. animation=false로 자료 교체 시 움직임을 없애며 tooltip은 HTML 문자열 대신 richText를 쓴다.
 const option = computed(() => ({
   animation: false,
   textStyle: { fontFamily: uiTokens.fontFamily, fontSize: 11, color: uiTokens.color.textMuted },
@@ -101,6 +113,7 @@ const option = computed(() => ({
     axisLabel: { color: uiTokens.color.textMuted },
     splitLine: { lineStyle: { color: uiTokens.color.border, type: "dashed" } },
   },
+  // 각 series의 색은 6자리 hex만 허용한다. 지정되지 않은 경우 공통 차트 팔레트를 순서대로 사용한다.
   series: props.series.map((line, index) => ({
     name: line.name,
     type: "line",

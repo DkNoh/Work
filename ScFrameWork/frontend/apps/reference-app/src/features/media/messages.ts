@@ -1,3 +1,7 @@
+/**
+ * 이미지 작업실 전용 한영 문구와 공통 이미지 UI의 label 사전. useI18n({ useScope: "local", messages })로 해당 기능에 연결한다.
+ * 화면에 보여줄 말만 관리한다. 서버 상태 코드·권한·파일 제한의 실제 검증 규칙은 번역 문구와 분리한다.
+ */
 export const mediaMessages = {
   ko: {
     title: "이미지 작업실",

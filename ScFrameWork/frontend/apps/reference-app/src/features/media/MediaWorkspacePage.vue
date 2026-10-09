@@ -90,6 +90,19 @@
   </section>
 </template>
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 선택한 화면·버전의 이미지와 주석을 표시하고, 아래 업무 폼의 저장 이벤트를 createRequirement에 연결한다.
+ * 콜론(:)은 JavaScript 값을 prop으로 전달하고 @이벤트는 자식의 알림을 부모 함수에 연결한다. 서버 저장은 부모가 담당한다.
+ */
+
+/**
+ * 이미지 작업실의 화면 조립자: 화면/버전 선택 → 메타데이터 조회 → 인증된 이미지 다운로드 → 영역 지정 → 요구사항 생성 순서다.
+ * 선택 ID의 원본은 Router query(screenId/versionId), 서버 목록의 원본은 Vue Query, 편집 영역/dirty는 ref, 자식 폼 초안은 useForm이 소유한다.
+ * computed는 원본에서 화면용 값을 계산하며 별도 복사본을 저장하지 않는다. ref는 script에서 .value로 읽고 template에서는 자동 해제된다.
+ * epoch는 선택 화면이 바뀌었는지, client generation은 로그인 세션이 바뀌었는지 검사한다. 늦게 도착한 이전 작업이 현재 입력을 덮지 않게 한다.
+ */
+
 import { computed, onBeforeUnmount, ref, watch } from "vue";
 import { useRoute } from "vue-router";
 import { useQuery } from "@tanstack/vue-query";
@@ -114,6 +127,9 @@ const api = createMediaApi(runtime);
 const requirements = createRequirementsApi(runtime);
 const { t, locale } = useI18n({ useScope: "local", messages: mediaMessages });
 const lookups = useRequirementLookups();
+/**
+ * URL 문자열을 양의 안전한 정수로만 해석한다. TypeScript number 타입만으로 잘못된 URL 입력을 거절할 수는 없다.
+ */
 function id(value: unknown) {
   return typeof value === "string" &&
     /^[1-9]\d*$/.test(value) &&
@@ -201,6 +217,9 @@ const error = ref("");
 const fields = ref<Record<string, string>>({});
 const resetKey = ref(0);
 const dirty = computed(() => bodyDirty.value || box.value !== null);
+/**
+ * 브라우저 이동 전에 미저장 본문 또는 영역이 있는지 확인한다. 동일 화면/버전 내 이동만 예외로 허용한다.
+ */
 const guard = useDraftGuard(
   dirty,
   (to, from) =>
@@ -226,6 +245,9 @@ onBeforeUnmount(() => {
   disposed = true;
   epoch++;
 });
+/**
+ * 비동기 작업 시작 당시 선택/세션이 현재와 같을 때만 화면 상태를 갱신한다. 이미 떠난 화면의 finally도 현재 busy를 건드리지 않는다.
+ */
 function owns(selection: number, generation: number) {
   return (
     !disposed &&
@@ -262,6 +284,9 @@ async function reloadMetadata() {
 async function openRequirement(value: string) {
   await runtime.router.push(`/requests/${value}`);
 }
+/**
+ * 사용자 확인 후 선택 버전을 보관 처리하고 해당 버전 목록 캐시를 무효화한다. UI의 canArchive는 안내이며 서버가 실제 권한을 판정한다.
+ */
 async function archiveVersion() {
   const version = selectedVersion.value;
   if (!version || busy.value || !canArchive.value) return;
@@ -282,6 +307,9 @@ async function archiveVersion() {
     if (owns(selection, generation)) busy.value = false;
   }
 }
+/**
+ * 편집 중 폼과 0~1 정규화 영역을 묶어 저장한다. 성공한 상세는 Query 캐시에 넣고 목록/이미지 주석을 갱신한 뒤 상세 URL로 이동한다.
+ */
 async function createRequirement(draft: RequirementDraft) {
   const version = selectedVersion.value;
   if (

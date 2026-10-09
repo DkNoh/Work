@@ -1,0 +1,79 @@
+{
+  "checkedAt": "2026-10-08T15:24:08.191049+00:00",
+  "userAccepted": false,
+  "frontend": {
+    "format": true,
+    "lint": true,
+    "typecheck": true,
+    "unitTests": 167,
+    "unitFiles": 40,
+    "appsBuilt": 2
+  },
+  "backend": {
+    "selectedReferenceIntegrationTests": 10,
+    "failures": 0,
+    "finalResourceRepackTestsSkipped": true
+  },
+  "e2e": {
+    "tests": 12,
+    "failed": 0
+  },
+  "storybook": {
+    "tests": 119,
+    "files": 32,
+    "staticBuilt": true
+  },
+  "visual": {
+    "views": 6,
+    "widths": [
+      1440,
+      1920,
+      1366,
+      390
+    ],
+    "violations": 0,
+    "pageErrors": 0,
+    "externalRequests": 0,
+    "chartCsvDownloads": 4
+  },
+  "packageConsumer": {
+    "realTarballInstall": true,
+    "ownLockAndNpmCi": true,
+    "typecheck": true,
+    "build": true,
+    "browserWidths": [
+      1280,
+      390
+    ],
+    "isolatedServerStopped": true
+  },
+  "jars": [
+    {
+      "app": "reference",
+      "staticFiles": 46,
+      "mismatched": [],
+      "sha256": "515d873d8c64180f8f9a20d6d00f7fa4c267b7c19e7fe08e84540230e6d86482"
+    },
+    {
+      "app": "starter",
+      "staticFiles": 8,
+      "mismatched": [],
+      "sha256": "c753aea2e8862d52a6ad7e208c942d711acb84fd7a38a6782cb635f0e1bac888"
+    }
+  ],
+  "preview": {
+    "dashboard": 200,
+    "health": 200,
+    "runtimeDeny": 403,
+    "existingBackendPort": 18082,
+    "frontendPort": 18083,
+    "tailscaleChanged": false,
+    "userRuntimeUsedForTests": false
+  },
+  "limits": [
+    "Visual reference similarity is reviewed by screenshots; user acceptance is pending.",
+    "Existing golden visual baselines were not updated.",
+    "Axe incomplete and screen-reader manual review are not completed.",
+    "Remote publication/production rollout were not performed."
+  ]
+}

@@ -47,6 +47,15 @@
 </template>
 
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 10,000행 가상 표의 정렬·선택·행 행동 slot·폭 변경·연결 해제 도구를 제공한다. F6/F7은 행 포커스를 유지한 채 자료만 바꾼다.
+ */
+
+/*
+ * rows/sorting/selectedKeys는 부모 fixture의 로컬 상태다. 표 ref는 DOM 전체가 아니라 공개 ScVirtualHandle 명령 두 개만 사용한다.
+ *  nextTick은 새 props에 맞는 DOM 처리가 진행된 뒤 선택 key로 포커스를 복원할 때 기다리는 Vue 갱신 경계다.
+ */
 import { nextTick, ref } from "vue";
 import { ScVirtualTable, type ScTableSort, type ScVirtualHandle } from "@sc/ui/table";
 import {
@@ -64,6 +73,7 @@ const table = ref<ScVirtualHandle | null>(null);
 const opened = ref("");
 const narrow = ref(false);
 const mounted = ref(true);
+// 버튼 클릭은 자체적으로 포커스를 가져가므로 정렬 뒤 명시적으로 key 기반 focusRow를 호출해 소비 앱 사용법을 보여 준다.
 async function restoreSort() {
   sorting.value = { columnId: "amount", direction: "desc" };
   await nextTick();
@@ -74,6 +84,7 @@ async function replaceRows() {
   await nextTick();
   if (selectedKeys.value[0]) await table.value?.focusRow(selectedKeys.value[0]);
 }
+// F6/F7은 행의 기존 포커스를 옮기지 않고 정렬/동일 ID 객체 교체를 일으켜 공통 가상화의 자동 포커스 보존 경로를 확인한다.
 function changeSourceByKeyboard(event: KeyboardEvent) {
   if (event.key === "F6") {
     event.preventDefault();

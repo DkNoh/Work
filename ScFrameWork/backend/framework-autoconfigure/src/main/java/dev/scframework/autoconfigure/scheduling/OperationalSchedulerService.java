@@ -38,6 +38,12 @@ import org.springframework.transaction.TransactionDefinition;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.support.TransactionTemplate;
 
+/*
+ * 앱 소유 예약 테이블과 Quartz JDBC JobStore를 같은 DS/TM에서 갱신하는 공통 예약 서비스다.
+ * 설정 변경은 revision CAS와 등록 작업/cron/timezone 검사로 보호하고 실행은 runKey/token으로 중복을 제어한다.
+ * TRANSACTIONAL 효과는 성공 이력과 한 TX, NON_TRANSACTIONAL 효과는 TX 밖 실행 후 별도 성공 기록임을 구분한다.
+ */
+
 /** 앱 DDL·같은 DS/TM을 소비한다. 예약 변경은 Quartz와 같이 commit/rollback한다. */
 public class OperationalSchedulerService {
     public static final String GROUP = "sc-operational";
@@ -64,6 +70,7 @@ public class OperationalSchedulerService {
 
     public List<RegisteredOperationalTask> registered() { return registry.all(); }
     @Transactional
+    // 등록된 기본 코드가 DB에 아직 없을 때만 최초 예약을 만든다. 기존 cron/enabled/revision을 재기동 때 덮어쓰지 않는다.
     public void bootstrapDefaults() {
         if (!properties.isBootstrapDefaults()) return;
         var codes = registry.all().stream().map(RegisteredOperationalTask::jobCode).toList();
@@ -96,6 +103,7 @@ public class OperationalSchedulerService {
     public Schedule detail(long id) { return get(id); }
 
     @Transactional
+    // 앱 예약 행 INSERT와 Quartz trigger 적용을 같은 TX에서 수행한다. Quartz 적용 실패는 DB 변경도 rollback한다.
     public Schedule create(Input input, String actorSubject) {
         validate(input);
         Instant now = now();
@@ -112,6 +120,7 @@ public class OperationalSchedulerService {
     }
 
     @Transactional
+    // 클라이언트 revision을 확인한 뒤 UPDATE WHERE revision으로 경쟁 변경을 다시 막는다. 동일 입력은 불필요한 revision 증가를 하지 않는다.
     public Schedule update(long id, Input input, int revision) {
         validate(input); var old = get(id);
         if (revision < 1 || old.revision() != revision) throw conflict();
@@ -130,6 +139,7 @@ public class OperationalSchedulerService {
         return update(id, new Input(old.jobCode(), old.cron(), old.timeZone(), old.misfirePolicy(), enabled), revision);
     }
 
+    // 등록 dispatcher Job에 코드/예약 ID만 넣는다. enabled=false면 trigger를 제거하고 SKIP/FIRE_ONCE를 Quartz misfire 정책으로 매핑한다.
     private void apply(long id, Input input) {
         try {
             var data = new JobDataMap(); data.put("scheduleId", Long.toString(id)); data.put("jobCode", input.jobCode());
@@ -157,6 +167,7 @@ public class OperationalSchedulerService {
     }
 
     /** 네트워크 작업에는 ambient TX를 남기지 않는다. 성공 효과/이력의 원자성은 모드별로 구분한다. */
+    // 예정 시각으로 결정되는 runKey를 claim한 후 실행한다. 트랜잭션 모드에 따라 업무 효과와 성공 이력의 원자성 범위가 달라진다.
     public void execute(String jobCode, long scheduleId, Instant scheduledAt) throws Exception {
         var task = registry.require(jobCode);
         String runKey = UUID.nameUUIDFromBytes((scheduleId + ":" + scheduledAt.toEpochMilli()).getBytes(StandardCharsets.UTF_8)).toString();
@@ -183,6 +194,7 @@ public class OperationalSchedulerService {
     }
     private void event(OperationalEvent.Outcome outcome,String key) { events.ifAvailable(sink->{try{sink.record(new OperationalEvent(OperationalEvent.Kind.SCHEDULE_RUN,outcome,UUID.fromString(key)));}catch(RuntimeException ignored){}}); }
 
+    // 현재 프로세스의 중복/완료 실행은 폐기하고 이전 owner의 RUNNING만 회수한다. token은 이전 실행의 늦은 완료 갱신을 차단한다.
     private Claim claim(String key, String code, long scheduleId, Instant scheduledAt) {
         var schedule = jdbc.query("SELECT job_code,enabled FROM operation_schedule WHERE id=?", (row, index) -> new String[]{row.getString(1), Boolean.toString(row.getBoolean(2))}, scheduleId);
         if (schedule.isEmpty() || !schedule.get(0)[0].equals(code) || !Boolean.parseBoolean(schedule.get(0)[1])) return null;
@@ -198,12 +210,14 @@ public class OperationalSchedulerService {
         }
     }
 
+    // 같은 execution token의 RUNNING만 종료 상태로 바꾼다. 소유권이 바뀌었으면 성공으로 확정하지 않는다.
     private void complete(String key, String token, String state, String reason) {
         int updated = jdbc.update("UPDATE operation_job_run SET state=?,reason_code=?,completed_at=? WHERE run_key=? AND execution_token=? AND state='RUNNING'", state, reason, utc(now()), key, token);
         if (updated != 1) throw new OperationalTaskFailure();
     }
 
     @Transactional
+    // 완료 시각이 지난 비실행 이력만 제한 수만큼 삭제한다. RUNNING 기록은 복구 판단에 필요하므로 보존한다.
     public int retainFinishedRuns() {
         Instant cutoff = now().minus(properties.getRunRetentionDays(), ChronoUnit.DAYS);
         var ids = jdbc.queryForList("SELECT id FROM operation_job_run WHERE completed_at<? AND state<>'RUNNING' ORDER BY id LIMIT ?", Long.class, utc(cutoff), properties.getRetentionBatchSize());
@@ -227,6 +241,7 @@ public class OperationalSchedulerService {
         var completed = row.getObject("completed_at", OffsetDateTime.class);
         return new Run(row.getLong("id"), row.getLong("schedule_id"), row.getString("run_key"), row.getString("job_code"), instant(row,"scheduled_at"), instant(row,"started_at"), completed == null ? null : completed.toInstant(), row.getString("state"), row.getString("reason_code"), row.getInt("attempt"));
     }
+    // 등록 jobCode, 초 필드 0인 Quartz cron, 실제 IANA zone, 다음 실행 존재를 확인한다. 임의 초단위 실행/클래스 payload는 받지 않는다.
     private void validate(Input input) {
         if (input == null || input.jobCode() == null || input.cron() == null || input.timeZone() == null || input.misfirePolicy() == null) throw invalid();
         registry.require(input.jobCode());

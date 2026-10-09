@@ -1,0 +1,66 @@
+{
+  "checkedAt": "2026-10-08T15:14:23.455Z",
+  "status": "PASS",
+  "command": "npm pack --dry-run --json --workspace @sc/ui",
+  "scope": "Read-only package validation of existing fresh dist; only this evidence file was written.",
+  "package": {
+    "name": "@sc/ui",
+    "version": "0.3.0",
+    "entryCount": 77,
+    "size": 111250,
+    "unpackedSize": 475370,
+    "dryRunShasum": "6af4228f8ae5adb483ca5bb2dc3bd38dcd83309f"
+  },
+  "checks": {
+    "dryRunSucceeded": true,
+    "exportsUnchangedFromHead": true,
+    "publicEntrypointsComplete": true,
+    "noSourceRuntimeOrTestFiles": true,
+    "noAbsoluteSourceOrRuntimeContent": true,
+    "currentInputDigestMatchesBuild": true,
+    "oneEmbeddedLocalWoff2": true,
+    "embeddedFontBytesMatchSource": true,
+    "compiledCssContainsFontLicense": true,
+    "separateFontLicenseIncluded": true,
+    "noExternalCssUrlRequests": true,
+    "normalizedCardTokensPresent": true
+  },
+  "publicEntrypoints": [
+    ".",
+    "./styles",
+    "./tokens",
+    "./table",
+    "./charts",
+    "./editor",
+    "./board",
+    "./image"
+  ],
+  "font": {
+    "family": "Plus Jakarta Sans",
+    "transport": "embedded WOFF2 data URL in dist/sc-ui.css",
+    "bytes": 27272,
+    "sha256": "cd8db90cd950e26bc8761f65d323588bd5cd112d326d6d322bc7c8ea86771215",
+    "licensePath": "dist/fonts/OFL.txt",
+    "licenseSha256": "995c7199cab65954f545996326755daee7b63cc6b42b06c13da1f9502ab08a99"
+  },
+  "assets": {
+    "cssSha256": "bb3d0281680cfcd2f4d5f251f158c33b3210d678f9d82039915975a6d459d442",
+    "buildInputsDigest": "2a128846669fabdd918355b093b71f9e2583df068c2b3d2ca3d26b15fccb1e3c"
+  },
+  "findings": {
+    "missingExportTargets": [],
+    "forbiddenFiles": [],
+    "unexpectedFiles": [],
+    "leakedContentPaths": []
+  },
+  "notExecuted": [
+    "source edits",
+    "library build",
+    "actual tarball creation",
+    "generator validation",
+    "external install",
+    "external browser run",
+    "registry publish"
+  ],
+  "limitation": "Dry-run verifies distribution membership and existing compiled assets; it does not prove a fresh external consumer installs and runs."
+}

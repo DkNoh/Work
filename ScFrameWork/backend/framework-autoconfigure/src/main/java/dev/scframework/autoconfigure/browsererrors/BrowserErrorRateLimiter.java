@@ -5,6 +5,12 @@ import java.time.Clock;
 import java.util.HashMap;
 import java.util.Map;
 
+/*
+ * 단일 프로세스의 분 단위 전체/인증 사용자별 수집 횟수를 제한한다.
+ * synchronized로 카운터 확인과 증가를 한 구간으로 묶고 분이 바뀌면 지난 bucket을 제거한다.
+ * 최대 actor 수를 제한하며 429와 다음 분까지의 Retry-After 계산을 제공한다. 분산 제한기는 아니다.
+ */
+
 /** 단일 앱 프로세스의 제한이다. IP/사용자 입력을 key나 metric label로 저장하지 않는다. */
 public final class BrowserErrorRateLimiter {
     private final Clock clock;

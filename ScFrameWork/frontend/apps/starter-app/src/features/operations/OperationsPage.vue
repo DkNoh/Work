@@ -64,6 +64,17 @@
 </template>
 
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 현재 route.name에 맞는 운영 패널을 렌더링한다. v-if가 false인 컴포넌트의 setup과 Query도 생성되지 않는다.
+ */
+
+/**
+ * Starter 운영 기능의 진입 화면이다. 세션 없음/기능 확인/권한 없음/기능별 패널을 나누고 로그인 입력도 여기서 처리한다.
+ * 로그인은 공통 runtime.auth를 사용한다. VeeValidate 값에 Zod safeParse를 직접 적용하고 성공 후 입력값을 비운다.
+ * 하위 Messages/Schedule/Browser 패널은 이 화면의 capability 조건을 통과한 경우에만 마운트된다. 실제 서버는 요청마다 권한을 확인한다.
+ */
+
 import { ref } from "vue";
 import { useRoute } from "vue-router";
 import { useForm } from "vee-validate";
@@ -85,6 +96,9 @@ const [username] = form.defineField("username");
 const [password] = form.defineField("password");
 const busy = ref(false);
 const error = ref("");
+/**
+ * 빈 입력을 먼저 안내하고 중복 제출을 막는다. auth.login이 CSRF/세션 생성/identity 갱신을 담당하므로 화면에서 fetch를 별도로 만들지 않는다.
+ */
 async function login() {
   if (busy.value) return;
   const result = z

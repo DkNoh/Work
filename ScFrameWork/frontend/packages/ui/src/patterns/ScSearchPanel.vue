@@ -21,6 +21,16 @@
   </form>
 </template>
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 검색 필드는 기본 slot, 버튼은 actions slot에 넣는다. 기본 버튼의 submit/reset은 실제 form 이벤트를 발생시킨다.
+ * .prevent는 서버 페이지 이동이나 브라우저의 자동 초기화를 막고 부모의 검색/초기화 처리로 연결한다.
+ */
+
+/*
+ * 검색어 입력과 URL 조건은 부모가 소유한다. 이 부품은 form·fieldset·버튼의 배치와 이벤트 전달만 담당한다.
+ *  disabled는 fieldset의 입력과 기본 버튼을 함께 막는다. actions slot을 교체한 부모는 자신의 버튼 상태도 연결해야 한다.
+ */
 import { useAttrs } from "vue";
 import ScActionButton from "../ScActionButton.vue";
 import { pickScHtmlAttrs } from "../contracts";
@@ -35,6 +45,7 @@ const props = withDefaults(defineProps<ScSearchPanelProps>(), {
 const emit = defineEmits<ScSearchPanelEmits>();
 defineSlots<ScSearchPanelSlots>();
 const attrs = useAttrs();
+// submit/reset 이벤트 객체를 그대로 부모에 전달한다. 검색 실행 시점과 Query key 변경은 여기서 결정하지 않는다.
 function submitSearch(event: SubmitEvent) {
   if (!props.disabled) emit("submit", event);
 }

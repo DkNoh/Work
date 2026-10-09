@@ -50,6 +50,17 @@
   </sc-section-card>
 </template>
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * submit.prevent로 전체 문서 전송을 막고 validateInput을 실행한다. reset/leave 두 확인 동작이 dialog를 공유한다.
+ */
+
+/**
+ * 공통 입력 + VeeValidate + Zod를 연결하는 로컬 폼 예제다. PatternInput은 컴파일 시 모양이고 Zod는 실제 입력 값의 유효성을 검사한다.
+ * defineField의 ref를 v-model로 연결하며 값/오류/dirty의 원본은 useForm이다. 검증 성공 메시지는 예제일 뿐 서버 저장을 실행하지 않는다.
+ * 미저장 입력 이탈은 Router 가드와 브라우저 beforeunload로 다룬다. Promise resolve를 dialog에 연결하고 unmount에서 대기를 끝낸다.
+ */
+
 import { computed, ref, onBeforeUnmount } from "vue";
 import { onBeforeRouteLeave } from "vue-router";
 import { useEventListener } from "@vueuse/core";
@@ -98,6 +109,9 @@ useEventListener(window, "beforeunload", (event) => {
   event.preventDefault();
   event.returnValue = "";
 });
+/**
+ * 라우트 이동 대기가 있으면 허용 응답을 주고, 없으면 폼을 초기화한다. 같은 확인 UI가 두 동작을 구분하는 지점이다.
+ */
 function approveReset() {
   if (leaveResolve.value) {
     const resolve = leaveResolve.value;
@@ -113,6 +127,9 @@ function rejectLeave() {
   resolve?.(false);
 }
 onBeforeUnmount(() => rejectLeave());
+/**
+ * 필드 오류를 먼저 비우고 safeParse한다. 실패 경로를 허용 필드에만 연결하며 parsed.data를 성공 결과의 원본으로 쓴다.
+ */
 function validateInput() {
   result.value = "";
   form.setErrors({

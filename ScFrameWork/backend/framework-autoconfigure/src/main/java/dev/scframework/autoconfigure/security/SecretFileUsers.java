@@ -11,6 +11,12 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
+/*
+ * 개발/observer용 명시적 private 파일을 읽어 인메모리 UserDetailsService를 만드는 어댑터다.
+ * 파일 가독성·POSIX 600·UTF-8 길이를 검사한 뒤 encoder로 해시를 만들어 인증 저장소에 전달한다.
+ * 파일 생성이나 값 출력은 하지 않는다. 실제 업무 사용자 저장소는 앱의 UserDetailsService로 대체한다.
+ */
+
 /** 001 개발 계정 어댑터. 운영 사용자 저장소는 소비 앱이 UserDetailsService로 대체한다. */
 public final class SecretFileUsers {
     private SecretFileUsers() {}

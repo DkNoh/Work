@@ -4,6 +4,11 @@ import java.time.Instant;
 import java.util.List;
 import org.mapstruct.*;
 
+/**
+ * MapStruct 변환기이며 SQL을 실행하는 MyBatis Mapper가 아니다.
+ * Service가 조회한 사용자 이름·태그·canRename을 받아 공개 응답을 구성하고 시각만 UTC 문자열로 바꾼다.
+ */
+
 /** 읽기만 변환한다. 작성자·권한·순서·변경은 Service의 책임이다. */
 @Mapper(componentModel = "spring", unmappedTargetPolicy = ReportingPolicy.ERROR)
 public interface KanbanReadMapper {

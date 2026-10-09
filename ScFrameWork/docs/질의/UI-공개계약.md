@@ -4,21 +4,25 @@
 
 현재 공개 UI는25개다. 버튼·입력·카드·KPI·상태 배지·표의 반복 표현을 아래 공개 prop으로 제공하고 Reference·Starter·생성 앱·Storybook에서 같은 부품을 소비한다. [013 공통 디자인 규격과 사용 예제](013-공통디자인프레임워크.md), [현재 계약 snapshot](../ui-contracts.json), [실제 검증 집계](../검증/013-common-ui-summary.json)가 현재 기준이다. 아래005의20개·81Story와010의22개 기록은 당시 결과로 보존한다.
 
-| 부품                           | 추가 공개 계약                                                                                           | 실제 기본값·규칙                                                                   |
-| ------------------------------ | -------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `ScActionButton`               | `size: ScActionButtonSize`, `intent: ScActionButtonIntent`, `iconPath?:string`, `iconOnly?:boolean`      | `size='md'`, `intent='primary'`, `iconOnly=false`; `color` 미지정일 때 intent 사용 |
-| `ScTextField`/`ScTextArea`     | `density: ScControlDensity`                                                                              | `comfortable`; `compact`는 같은 모델·오류·readonly 계약으로 밀도만 선택            |
-| `ScSelect`                     | `density: ScControlDensity`, `presentation:'field'\|'toolbar'`, `tone:'surface'\|'primary'\|'secondary'` | `comfortable/field/surface`; tone은 toolbar에만 적용                               |
-| `ScSectionCard`                | `density: ScCardDensity`, `surface: ScSectionCardSurface`                                                | `comfortable/bordered`; compact 헤더/본문 밀도, plain은 구분선 생략                |
-| `ScKpiCard`                    | `density: ScCardDensity`                                                                                 | `comfortable`; compact gap12px·값22px, 앱이 업무 숫자·추세 문구 소유               |
-| `ScStatusBadge`                | `label:string` 필수, `tone: ScStatusBadgeTone`                                                           | `tone='neutral'`; events/slots 없음, 색 외에 실제 문구로 상태 제공                 |
-| `ScDataTable`/`ScVirtualTable` | `density:'comfortable'\|'compact'`, `captionVisibility:'visible'\|'sr-only'`, `minTableWidth:number`     | `comfortable/visible/0`; caption을 접근성 읽기 순서에 유지                         |
+| 부품                           | 추가 공개 계약                                                                                           | 실제 기본값·규칙                                                                                         |
+| ------------------------------ | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `ScActionButton`               | `size: ScActionButtonSize`, `intent: ScActionButtonIntent`, `iconPath?:string`, `iconOnly?:boolean`      | `size='md'`, `intent='primary'`, `iconOnly=false`; `color` 미지정일 때 intent 사용                       |
+| `ScTextField`/`ScTextArea`     | `density: ScControlDensity`                                                                              | `comfortable`; `compact`는 같은 모델·오류·readonly 계약으로 밀도만 선택                                  |
+| `ScSelect`                     | `density: ScControlDensity`, `presentation:'field'\|'toolbar'`, `tone:'surface'\|'primary'\|'secondary'` | `comfortable/field/surface`; tone은 toolbar에만 적용                                                     |
+| `ScSectionCard`                | `density: ScCardDensity`, `surface: ScSectionCardSurface`                                                | `comfortable/bordered`; compact 제목15.2px·헤더16px·본문8/16/16px, plain은 구분선 생략                   |
+| `ScKpiCard`                    | `density: ScCardDensity`                                                                                 | `comfortable`; 값24px/compact22px, 공통 gap16px·padding16px·최소높이128px, 앱이 업무 숫자·추세 문구 소유 |
+| `ScStatusBadge`                | `label:string` 필수, `tone: ScStatusBadgeTone`                                                           | `tone='neutral'`; events/slots 없음, 색 외에 실제 문구로 상태 제공                                       |
+| `ScDataTable`/`ScVirtualTable` | `density:'comfortable'\|'compact'`, `captionVisibility:'visible'\|'sr-only'`, `minTableWidth:number`     | `comfortable/visible/0`; caption을 접근성 읽기 순서에 유지                                               |
 
 `ScActionButtonSize`는 `sm/md/lg`이며 높이32/38/44px·아이콘·여백을 함께 선택한다. `ScActionButtonIntent`는 `primary/secondary/success/warning/danger/neutral`이다. 기존 `color`를 명시하면 intent보다 우선한다. 임의 Vuetify size/icon/loading prop을 attrs로 전달하여 공개 규격을 우회하지 않는다.
 
 `iconPath`는 장식 SVG path이며 `aria-hidden` 처리한다. `iconOnly=true`는 아이콘과 비어 있지 않은 `aria-label` 또는 `title`이 필수다. title만 제공하면 접근성 이름으로 연결하며 누락은 명시적으로 거절한다. busy 중에는 기존 busyLabel이 처리 상태의 이름을 제공한다. slot 안에 직접 아이콘을 그리는 기존 버튼 계약도 유지한다.
 
 `ScControlDensity`와 `ScCardDensity`는 `comfortable/compact`다. `ScSectionCardSurface`는 `bordered/plain`이다. `ScStatusBadgeTone`은 `neutral/primary/secondary/success/warning/danger/info`다. 배지는 허용 HTML/ARIA/data 속성을 전달하되 `role`, `aria-live/atomic/relevant`를 차단하여 정적 상태 문구를 자동 알림 영역으로 바꾸지 않는다. 이름·aria-labelledby가 필요한 카드의 내부 제목 참조는 기존 계약을 유지한다.
+
+카드의 현재 표현은 위 표를 따른다. `ScKpiCard`의 `tone`은 `green/violet/pink/amber` 중 하나다. 두 density에서 같은 `uiTokens.color.accentGreenSoft/accentVioletSoft/accentPinkSoft/accentAmberSoft` 배경과 `color.text` 아이콘 색을 사용한다. 아이콘은 36×40px, 지표 이름은 13px, 지표 값은 600 굵기다. density는 값의 크기를 선택하며 tone·업무 의미를 바꾸지 않는다. 아이콘과 배경 장식은 `aria-hidden`이고 카드 이름은 실제 제목과 연결한다. 숫자 형식·증감의 완결된 문구·설명은 앱이 전달하며 긴 문구는 줄바꿈한다. Storybook `FourMetrics`는 네 tone을 유지하고 density Controls를 네 카드에 함께 적용한다.
+
+`ScSectionCard`의 compact 제목은 `uiTokens.fontSize.cardTitle`(15.2px)·600 굵기를 사용한다. `surface='plain'`은 카드와 헤더의 구분선만 생략하며 배경·그림자·제목의 접근성 참조와 `default/actions` slots를 유지한다. 위 값은 현재 소스의 규격이다. 005/013 당시 검증 기록은 당시 소스의 결과로 보존하며 이번 수정의 실행 결과로 합산하지 않는다.
 
 toolbar `ScSelect`는 native select와 화면에서 숨긴 label을 연결한다. 오류·hint는 aria-describedby로 연결하고 disabled는 폼 제출에서 제외한다. readonly는 선택 편집을 차단하되 name/form 값을 hidden input으로 제출한다. clearable을 제공할 때만 null 선택을 허용한다. 일반 field 표현은 기존 Vuetify·v-model·options/오류 계약을 유지한다.
 

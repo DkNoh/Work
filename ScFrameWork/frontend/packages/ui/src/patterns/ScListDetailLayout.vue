@@ -26,6 +26,17 @@
   </div>
 </template>
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * header/search/toolbar와 list/detail slot을 배치한다. detailVisible은 CSS 클래스를 바꾸어 모바일에서 보일 영역을 선택한다.
+ * 목록과 상세 slot 자체는 v-if로 제거하지 않으므로 모바일 전환 시 입력 컴포넌트가 다시 생성되지 않는다.
+ */
+
+/*
+ * 목록 선택 ID와 뒤로 이동할 URL은 부모 화면의 Router 상태다. 이 부품은 화면 분할만 담당한다.
+ *  show-list emit은 목록 표시 요청이며 실제 선택 해제와 미저장 변경 확인은 부모가 처리한다.
+ *  slot별 접근성 이름은 props로 받아 한국어/영어를 공통 레이아웃에 하드코딩하지 않는다.
+ */
 import { useAttrs } from "vue";
 import ScActionButton from "../ScActionButton.vue";
 import { pickScHtmlAttrs } from "../contracts";

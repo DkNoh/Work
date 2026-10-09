@@ -1,0 +1,3065 @@
+{
+  "passed": true,
+  "productionFiles": 434,
+  "frontendFiles": 233,
+  "javaFiles": 201,
+  "counts": {
+    "frontend/apps/reference-app": 87,
+    "frontend/apps/starter-app": 22,
+    "frontend/apps/catalog": 34,
+    "frontend/packages/i18n": 2,
+    "frontend/packages/excel": 1,
+    "frontend/packages/runtime": 4,
+    "frontend/packages/date": 1,
+    "frontend/packages/ui": 58,
+    "templates/starter-v2": 20,
+    "templates/starter-v2/frontend": 24,
+    "backend/framework-core": 18,
+    "backend/reference-app": 88,
+    "backend/starter-app": 11,
+    "backend/framework-autoconfigure": 64
+  },
+  "javaMethod": "Java lexical tokens; comments/whitespace ignored, strings/character literals/text blocks preserved",
+  "javaDifferences": [],
+  "unchangedInScope": [],
+  "files": [
+    {
+      "file": "frontend/apps/reference-app/src/App.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "e47512704f139fcfcc09c284cdec0ed45efc6c1eb0c0b11a1d5412873e312f72",
+      "afterSha256": "49c54aa36b4a59e43aee314d295ba261af38229b6a129cdf38528e6006f08850"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/main.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "8ae2e55148b29959b86e11b1776733f69800e74f19cc8f2f9ac8ceca5fefa061",
+      "afterSha256": "baee7f5ce541fad3acb91ecfd48c56cdfe6351bd6e924e9498e67be4f3067bb7"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/localization.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "2ef780e04bc050eefad1cdfdaeff14583aa9a87b3c8e94010e21bd9a95465a9c",
+      "afterSha256": "aa46b79004e3edce57e4062bd21c5e667af4b50c76d533ea974b2334c34b137c"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/auth/identity.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "d3fe82abdd14afe6b742487d4625ce4b7675915e61e23522b6c469bf29fa7434",
+      "afterSha256": "4e941d0731a19c598c45594f35bf3a3b6d96a387f5c84233a15b9462d99204f5"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/shared/validation.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "99c25fa596b50404d61a9836575691bddc7d2f35b2c812bd94f12a1a6658b8f9",
+      "afterSha256": "e873f1f2266684e2ebe351751827ede15296443c03ac0cd68a6e287b8f2b3a32"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/shared/useDraftGuard.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "687675edebe65439551d5abada12d015f8824bc10fbe72bdcecfbee2c99e84a3",
+      "afterSha256": "322142b5245799575a29d27fed01cf41f0f672bd8628b469a4495dff224be5fa"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/patterns/PatternForm.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "19f09ac579c0d3bb25b43eec3e8e38b52428d4e76985c75a6f4643cf928bb7fd",
+      "afterSha256": "34348764febb404707817efdba28c8d0504d2666895419ab95364f1810ea5416"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/patterns/PatternsPage.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "c954fce2dbf4a5c3dfabe04ebe5ad72048085c36244581bf005c20eb5a0e7cd8",
+      "afterSha256": "523ef55b6ddded8759e06d02eeafc1ad2b9f5f65ab540de2cc4efcb7b2d0b447"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/patterns/TablePatterns.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "fa6acc9bde18d203f45d9b08718677a27433917f45efe4312edbb8480d32304d",
+      "afterSha256": "3b15724eefd60038765d18616eefca20d5bfb68968a2927c9652fe968aa86c1a"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/patterns/ExtensionPatterns.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "72b3fb416a540c407f6bac8a5e8b99ae009af4cecfe7bc5b6e1db0b4d9ce528c",
+      "afterSha256": "b1f24bfc86d7d6c3a02718b3610550f9d39ee54f4d90fca97e93670c6c396cbc"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/auth/LoginPage.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "4cd685e4c87d07d82f42de772eac1dd74e2b03abf1f1de916556e07753523eec",
+      "afterSha256": "5fe1dee6830805c64e8cf641c4d9a644f50b46e64f2e95acea67c2b8d056a9ab"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/admin/AdminMenusPage.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "02a23d2afbe96258872394771108efd1c8eb68f75bfbc15fa33d1bf3b3d9f667",
+      "afterSha256": "0e9888d6a9ec4a5a6787a70f8343a61b5fa5bfcd654a59720a238d3a1e24f371"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/admin/messages.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "b72005aeefdd3070c2b82ffaa5203ef6b413c6ee3d1ecca5277a9cdcf1e9fb2b",
+      "afterSha256": "26c9139bf55fde1b1c775b5fb1f8da10ae3d738e1f8a43cfbcd4a16c2a20aaf7"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/admin/api.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "17f9cdb1b1a6f06cfbc1e1062a91d75612d3daf9a814276ecc99d942464c4e53",
+      "afterSha256": "34337d4da7268b6805b31ee4816ed2e2dcc68ab4dd1d99ba1d8b3a41e5abfe88"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/admin/AdminUsersPage.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "36d39305e64e400e17f8b682235e5186428fcb072952bcad5fef863f7755106c",
+      "afterSha256": "649cfb84c31e4a6dda1fb6dc785fdf4cf10b3c26f405e45802314077f0f615a0"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/admin/AdminAuditPage.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "f755b65986eba1f92f88bc77678d80672c42dcb3750bcbde0eda68cee7513bd5",
+      "afterSha256": "aa6990effe9a4bd7423a3ab0fb1557148537c19d0799b182416fc4f6a61af8e8"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/admin/AdminNavigation.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "1acd37cdd69dec1a431e703a400b4abf2af6c1b6e4d2700de161c7d39ea7c2eb",
+      "afterSha256": "2ada9a3c9ca4b4e06858ca0268f00237399dd2cd5ee2e08a07f2fe87f0cda554"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/admin/MenuForm.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "50b1357bd288316587cebafa9b773d328fad8d5dbf0369ee2244b3f1a2aa30b8",
+      "afterSha256": "84368ea7cd94fa3f5221533c2d124fd11164719069aeec5080f69394ec095645"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/requirements/RequirementHistory.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "af43945502f92c41b946d95608d0aae53c6f4793457a2e2388b4505b079ef483",
+      "afterSha256": "5c2fd3e945984cc4f5c6b4d7a431f2409e973b2719a2d3b4a080e43ce7f8094e"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/requirements/schema.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "a87feff00910e479286bfecdf4e19be6a30bed9673a2f5937969cd295a75a79f",
+      "afterSha256": "2f8fb68b15a4a67fcb16de1307ecc88774431cb6f9c7cc7963428117d38f4e0d"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/requirements/messages.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "827e7c5f647eca506ab725fa322064973b6fd6a53c4b46d0b3eeb5fea002a03d",
+      "afterSha256": "e25eb37992019b03e1cc230697d116b5e992ee1aac0e70e6407cedfafccbaee2"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/requirements/permissions.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "3e17a2d0234203d1a210d626a1d056236ed37b33ab6ec105f5c401e97a9c00f3",
+      "afterSha256": "048566d1df78886b6150314ad7f311f2b838c8221b840c70992b4ab9b9b98b0a"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/requirements/useDraftGuard.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "0d82ad6a3e3bf90ce90205640b13a01705d1cf8b262c24e0d7fc297443f066bf",
+      "afterSha256": "bbc5a0921d17746ef8244f6b80ae206985f7b0ac0c178f79b2fba4d6c6b49e37"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/requirements/api.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "3fc359f75ce6830e1ec98430e1c2c5032dcaea635b72df99d7993199d6eeab41",
+      "afterSha256": "b8f4b7e8755c869eac1b7893f76b2c205f8601902df167947e17f99c2d3dd17b"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/requirements/ReviewForm.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "38c51c406f724f44a1669a6751d6527fd48116d9374265e7bf37b377c021eb90",
+      "afterSha256": "bff4d4935d2d0c5bfafcce6af0f93858f959cc79326f2fef2c5ab1aa52ea253b"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/requirements/RequirementForm.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "7d8808c23a3b348c6b7e39211b5ebb56c207b95083260bb4079f7eb4365946cb",
+      "afterSha256": "dd69f01b6809c17cdb20ef8b53a18c438be5b3d85875779889f2dbd1323b9616"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/requirements/RequirementWorkspace.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "d42f9c1e718647849724320bb5eeb97cc7ceadceff835feccd48d1ad85d56d70",
+      "afterSha256": "d3473b1b4181f1ee3384dc0346cce622b1ac46a92f2d12005dbf3b9352a3139d"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/requirements/RequirementComments.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "bed4a24b63a705a2f2e16ae1b581bd0029445e1214476a242aaee3e13fc5157e",
+      "afterSha256": "2f49abdb33f281e5ad3e07088d2af4df458c65a022e089185af235777da3089a"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/requirements/query.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "003cbfc035342f26485d04197da088f0f458137f43a562372592abb2a033d0f3",
+      "afterSha256": "ef240e42a504254a5ae74183af976edd8f1b28c98c25a89b9692f8568904c4dd"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/requirements/RequirementsPage.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "fa58b1aa2d6a2bfa56171b00a1950bb18ab39d921a8e21c5ebc73daacf040c4b",
+      "afterSha256": "84768688e94dd214f1ed9f042065bbb9eff2e80322d40c784ac50ba46183f14b"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/operations/ScheduleForm.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "793b3c179ff8343fe53ea889fabe5ef732ff1ecffc222f9ae4fb863cb780ff6f",
+      "afterSha256": "dedeaa2e1658aa979461fd239bb616e8d341b8d5938cd2c105f4363b94ab3a71"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/operations/OperationsNavigation.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "495849f40bf5c1b1e8c3315483fb6eca34f344dc2a1427c8e283ccbc7dc820f0",
+      "afterSha256": "5d79408bf72098859f0d0d52509d94d6aafeabdbcdf21c9196dbe01723d20fb3"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/operations/messages.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "f0931c92edb26cf0797f6262a8b15373ba99a07edde923ad87fa4cce21a716ea",
+      "afterSha256": "bc40c77ef00db1b5d226149e1b8a809b732d1cea52276c7ccfe3ac8b66977358"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/operations/OperationsGate.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "847355adeb261526060a9894ad3f09c44c09b996eda8ea34a2f7ec70cc3e77a4",
+      "afterSha256": "9e6fac8b9ecff37952662057c33d2a0fe3e13382496836159491d31e20802f64"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/operations/capabilities.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "e57ff538b39a0d513d7fa15b52ee5a9a4e60c27ee01d477be6e930496bbf8cc7",
+      "afterSha256": "017d0b637513c6368e539f4e5f198383d45395f142816cb01a9d8f2eb954c60f"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/operations/MessagesPage.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "127c6957b25fadb46ea0996cb56647d7f3de7761196efc292977054f14dc9718",
+      "afterSha256": "1e5241a345dd121fe73d656cfaa6577ba73b4975671ccbdffadb7ea3f4f064ae"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/operations/OperationsTable.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "2de024efbbeb9e46c97a16bfb1891516b8d98e8c1452fd8e1b8384a14522582f",
+      "afterSha256": "1e0d4e51c50e7d1d15d6a874b72139adf2b0732eb7e1ddab417817334b606df5"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/operations/SchedulesPage.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "12a174c9fc0617c0d63350faca6edfd32095dd5c7703e62cb9cdf249170e6e6f",
+      "afterSha256": "a8990be24729f3c6d9eb160c3688875a6aa83945399939089b14c2f02c732ff0"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/operations/api.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "6d68c8636e8efbc8ae4f94a32ef39bec88e53fdf30ea85d7936e1e8d37216b58",
+      "afterSha256": "daebada9107d583126a7dba0460d69cae6bdfe76a181da6bc99413039a79a3df"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/operations/url.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "9f3c9416bc65e2fa6201904341c42ee5df08fcdf7a7fa7a3960f67972b98a877",
+      "afterSha256": "5cde6fc4dbdf2a75e4a1c8f1558a8c9ef8da82ae659c8972e98fb375d458e63a"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/operations/BrowserErrorsPage.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "7bcc262b70e2262b8ca37752b5719c3f70b4acfb487ab4e55d2bb45e6204b843",
+      "afterSha256": "298427abd1d8e7304ea1977417f1fe53092f1a292c4667038fe6e40a49c3d22d"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/notices/schema.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "352da0a3c3ab2e50a6523d0397dbc66c65de330d06dea79948c2dc502e610dbc",
+      "afterSha256": "23ae4d8529413d76c486c44a4cebf0abd4378d5ba433d7478b71edecae1d998c"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/notices/messages.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "35dd29a1689d4ee53251f9b98bbbc13581636d7408b14f63d06892c621542355",
+      "afterSha256": "43773f5a9d84afd239e71b78034641f4aac78249a904691d17a04227d4ba6793"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/notices/NoticesPage.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "6e9423cb415db53d1a37372ff14a700ac8bee3a674ccff0f78b597b7e658b85d",
+      "afterSha256": "43043e25a8270e6c843067ec7ce2b8f10313ad0cb3edfa0655791fc8c0b04cd5"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/notices/api.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "6a2332807adf99623a5f08323e54d75bfc8b037c3013d48792d2a6e2e219f5bb",
+      "afterSha256": "cc44121bb6c19042451cf91047af91cc1068b7c62789976ac346dd5e466aba5a"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/notices/NoticeForm.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "3804a9f1278212adc03dcfbfbf6c5a3a29fbaf5b94ca93ef27589bab67050a51",
+      "afterSha256": "fdbd6c4f0f021078ec31f46933917b86d4e9c7904d31fdf99b0cd87b7faaf431"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/notices/query.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "f810980724adcda0242533758086b487127a30f99d54a01fab624926e55d2f8a",
+      "afterSha256": "61868591147fb59458f03590b71c5cdc8b4836f98d168dd81f16113a410a0e49"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/dashboard/DashboardPage.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "39afad7adecef981c1878f77be27a3e0e7d761061a6e34737bb0c552851c5139",
+      "afterSha256": "64e3d997f58feb980fbdbde351d951687887c28da8d628045fb8e86d231e47e5"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/examples/schema.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "ca74dbd42082695fa40d88c53dd46de3fedb82c667eb178075793224dc973d12",
+      "afterSha256": "3fc8363708ecfcc305b130790086f7be65b7ba785831e0c5157e563c61575c88"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/examples/ExamplesPage.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "f9501ced11d15b27ce232f78a2c59df7862c0e5bac58ac0408bf42b1f6b58d1e",
+      "afterSha256": "01c933057ebc5bbbe0f62738a2dc96710f9df467ee34a027e82e2c74dbfcb872"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/examples/api.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "dc0b064b0741f1b721270c4936eb0caeb931ce50ae533ddda1f85205720f9a75",
+      "afterSha256": "f631dc992b4b033d95a799024eb11a419eb2f63da0652328a5d0de0fca9548c2"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/kanban/schema.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "7cb637b6dc9fb2d39edbf699fc1f74bb13bb77e0b66c4b13e4613ca2955b9027",
+      "afterSha256": "d6eccf2434665b3b6888d65ce6180b0b9901739c9b5a14497ba711c76ee6164c"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/kanban/KanbanFilters.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "ad0bd666c434687023d7df6d38f5c264d71acb78c97c96f2eb1a82ad03eefed8",
+      "afterSha256": "cfda1872d64e0a9bc92b82591b76c3af2629686678610e766b4e2f1b92dd875b"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/kanban/TaskWorkbook.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "304eef16ae1866ff873f31bb4b51765b261acf5b6c5afc9ac13d6d637c35de3b",
+      "afterSha256": "d4b5428cb9cb53fe42a2590c9488b7a3a6357e598b46195ec60a52cd141f18c0"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/kanban/KanbanMembers.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "9bf3bec1ff55b89f3c8ce8eded9709413ccc4cb62fa567d8dfcaa90c67ad3044",
+      "afterSha256": "8ce924e5f0e1c3821498fd69bfaab6926fcbc2550ed576c4b9809a1d7f5aab45"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/kanban/messages.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "8a5b63f28ebea234a04a998e6ad828bff2d97ba75e1a47f6c5f340e1a6a3bce3",
+      "afterSha256": "892063a36b3d33f09d9af1d2c2af791d5062a726c5177ca2963567ceb646e7ef"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/kanban/api.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "29c11e125a1f624de2c641420afdbfc2d07e6d89dbdc6f92e9de26c06b763663",
+      "afterSha256": "1dc30742754af8fdd0f2850f564af8985869e329cbebda912315f2f86aceb8fe"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/kanban/BoardsPanel.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "a892addf4ca9d472bb3ac68378f8cc1a1413786dc2a9f4d7cec35d573adcf104",
+      "afterSha256": "7164a05f8df56a3ae53987deacbb4f8ee8dcd759b674954691d571b1fe7a77d2"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/kanban/query.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "4252751836cba14fc6f4e4a1b8b0cd5026bf851e668056fd9953ce55cffcdd2b",
+      "afterSha256": "2ba11e0882011801d52d0d97526fc8a13378d8b11102ae5b024673c1e84007a6"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/kanban/TaskForm.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "382812b2c17b6fdc246d1425ee665635baeff41b89334d6d8ce71f0c1cbd9294",
+      "afterSha256": "c49140cd8f20f7876044cc907a9731073585c59552395704382a0535d76bd639"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/kanban/KanbanPage.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "dc76930df331392929081c3db3d41f6bc7064e8b647e7a03bea0ce0ccccb8652",
+      "afterSha256": "6bbb09abb9a2f95bbfaca5bbf25c8517afed7c243e20645340bb13da69aa3637"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/documents/schema.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "3822b5c15816e725cb1d8a694edb3bf11a3231bc0df30396cd64bf03a8153257",
+      "afterSha256": "e81a5941634329565deb06375c3e254e08bc6f19d5528fd4d2c5f275ce8558bf"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/documents/DocumentForm.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "5576656624434184eb6600999a6ea4e5d2446a26b784aed7fd12db4aa650764c",
+      "afterSha256": "8d1b191d032d83b2421593fa39522c20794f7427facf025d41369a8dbfe4b4b5"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/documents/messages.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "2fc295f924638581116b83cd65de813d32da90e8bac3ebc32200107cc86986d0",
+      "afterSha256": "d508c1c78b8a1688e5b82fb0445f6d509baba5cbf844d9e3680599e521431c82"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/documents/api.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "fe0ef043763adb7bf539bf8d1634191ce6b288542f95206b1ba90e82c8f5677c",
+      "afterSha256": "cffbeea2b1af290351999aa40631229e6a0e3106788402c5b7bcb30ae41a4d91"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/documents/DocumentsPage.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "4ed6d831fece085b8c04a835224afd19827aaddb730da398a811f46d468e3a86",
+      "afterSha256": "9c5032aca08039cb77288af21316d6460d829a05b9a362d0cee90a925a9cc0b2"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/documents/query.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "f0c828f376e6e95bcdad916b080fb87cc49c0d1ffe2af0a7195f71a61ba5b9e8",
+      "afterSha256": "88870cc2085df0579982d7fb6ba303d894502f70909ddc17614476a47b48f874"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/account/AccountPage.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "3a434f9d1a5703883136b63c3d96ae61d0dd34a2a1dae3ec3249bd29263f3e0e",
+      "afterSha256": "848a774221b6fe9a8a49dd889c13eddd1787c656bf573c5a5c5d098c6dc87a24"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/media/useImageFile.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "13ac23b7d2ff0dce87842331df4db967067627d9885074cb11fbde3d2876ffb6",
+      "afterSha256": "bde70c318f5ecc23ab4d8235add9656b9eb7b5d3971a7095c4c393bb6f8771ea"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/media/RequirementImageEditor.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "45c91042dc98912d67fe326466f4dd8b0065834ae1e939b39dd6aafa577a9965",
+      "afterSha256": "b3153b43f832d5cce46b0a3a2b75fc07af0cafc4bdbeae9b8f6f497529bd5a1d"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/media/image-decoder.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "d1d295010fb2b8bcf08b45d6b6190b9b9fc7208041c391e8c979743599f2b831",
+      "afterSha256": "75f7e4bcecf4a0f686f75d69d0f3e99561c973c021c88f0e21d073fe505f6e24"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/media/messages.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "44adfda2ed0c0e05e1a51fda73ab08ec93a8f9b24e69d46cbcba469ef70ba948",
+      "afterSha256": "df7e24f3a344bad3a31e9ecc0dca8821c63631ce1df3168585e77f8df9458b31"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/media/VersionUpload.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "451c86e024e323d80ed9a5699d78ffa53335b3a4319c90b6f3b7ddccedfaab07",
+      "afterSha256": "8e9d923e3c14c80bd8c07491553a441b4b7332d09f32d58f6ec426f0e4ee5dd6"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/media/api.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "be425f1e1454203f586a5cf840a5d702f12c40239d7b0ced46152b90e620d438",
+      "afterSha256": "a68bcc1c3aedf2090997230863e80401967580b7e7dd34cf39a65d61e7514845"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/media/RequirementAdoForm.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "12ba294b7ecdf8ff1966499b41b6479e59b0d840320503307f44156c464f5eae",
+      "afterSha256": "120b67dba757993e08e8fa526630f19228bbc34e42743021adf1f5db9a2a2b3e"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/media/MediaWorkspacePage.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "9ef341f79439853eb722544ef043b5603286fd0753dc88f347ea1b544f47d78e",
+      "afterSha256": "b5b9c7848086b152c5e18acada1ea8188105c222bbd3c155a3139367c3d452a2"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/media/ScreenForm.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "e64fa795c55e86269a511dade281485b64244f876b0307d81ab7ae910fffbe5f",
+      "afterSha256": "11c0311c9ed41cc0809ea5799c49ee0ebd7958dcc2b6475d986e48a359cde67c"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/media/RequirementAttachments.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "c93358334101f7a3e74dec8ffb01420b7a7ab2968ce93fa50b981898c8331d6e",
+      "afterSha256": "4e74dbbee8e96f29352b8353dd049b3821cf4bd60db3f1a591b9d9727181692a"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/media/ado-schema.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "d4e917153abb002974e6d506dde6ee282f55c7cda4ede2e9639be3da2b93a154",
+      "afterSha256": "531fd2dfe6ed285b0a4661e9940026ac5bed0d13bce9c37b000f39e8a4b3a649"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/reports/requirements/filters.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "a06204c3e929fab4d1a2d1269e0c2773526ec8d57292885c0a8c37772f188552",
+      "afterSha256": "ef6374e00909e472daa4becc332ece4b83073f6b6508027349e845135a3d8047"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/reports/requirements/ReportTable.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "ca915ef5aeb84ac81139da2a63bf681a5728e8b5912603f31464a72fe44a95cf",
+      "afterSha256": "d04ecce243f38829f17c7e3dfcaaa8176f84700cd57cc4c8b81e0c0fe13399b1"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/reports/requirements/messages.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "9e74fa0986a92da5ba3b63b08402b89b129816a8cdf44d8380a0539814025994",
+      "afterSha256": "ad4d77958025da328613ff4ce538e85b00b3e4f8dd22b3c8ab484768b8a81ddd"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/reports/requirements/api.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "33262ec9167a34d652609830bf61411b26d50fb8991af64513964a9a725263ee",
+      "afterSha256": "b71adc3e0c3a7d263f22ba7c1afd0ccaeb55f07717225ce6770288bb98f461cb"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/reports/requirements/ReportChart.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "4b65664a3740dd3194fce0cf4d8458f719b057c88b1cf7d3a96183320cdac12c",
+      "afterSha256": "d0390ac7163a9129bec8c1e7baaac3666c1f8281a2c7109a3177716ff53d11d5"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/reports/requirements/ReportFilters.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "0f5d4adcc804bd655a2cecae6f5ecb58543517d015a34acfa77cdfc615c5e726",
+      "afterSha256": "53108a743095227e3b892ac78a96951a79f9512233df64c5128bdc6e24d42da7"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/reports/requirements/query.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "afc1241c5e7e65e88a5f582a3f6b5993ade09e8e15da15f36e33f729dffa9879",
+      "afterSha256": "b971e3eea2fbb5ca5078273ec344d0df59840dbffc1615bdf8c5918f6e895063"
+    },
+    {
+      "file": "frontend/apps/reference-app/src/features/reports/requirements/RequirementReportPage.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "327ff40568e32a25e961d953fa3f38908471160cac3b7c1beebba382ea5cb70b",
+      "afterSha256": "139de05b7311e3283a634a2a50d5537888d74ff7927b50a24ccb4ce2531a9e7b"
+    },
+    {
+      "file": "frontend/apps/starter-app/src/App.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "e4e95bc42b4e1c5512498b10a426030501d66ad9f101ab2744efb68570d22218",
+      "afterSha256": "b8ab68ff8bf7ee4b76597490d727ef297f16a1698d87a2e58b63aa138829b938"
+    },
+    {
+      "file": "frontend/apps/starter-app/src/main.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "0dd0068e23aa31401ea63948d1fb7a5ed70001bebafa042af126097c0e4be584",
+      "afterSha256": "38e6cbea66b0717303b8168dcbb43eaaf91feddcbc989334021b2651f9c4c585"
+    },
+    {
+      "file": "frontend/apps/starter-app/src/StartPage.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "7751ab030944fce9e67a375d698c709e1e86385e2990a400964e37d45137342a",
+      "afterSha256": "6493df89b7ecf3dc68f1cca9ba15c6b4a3246b717855f4f98605f230f8ea6f7d"
+    },
+    {
+      "file": "frontend/apps/starter-app/src/localization.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "fe044d8d270222208770390099c37c8c350a95ef8a76ac381d113f1dbb4f7b24",
+      "afterSha256": "00f4d4eb2646e31d24ff0025c0801293e0af853b6f5315e276cf71adbbe9e731"
+    },
+    {
+      "file": "frontend/apps/starter-app/src/config.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "b610c87ab21cc0b0a27c04b33f8697d1c1a839cb16eb183f6ae7fc2d2d612916",
+      "afterSha256": "94b2bf453a5bb31c60d3afd6434bc3792295c07418f66c024c78c8251f5676be"
+    },
+    {
+      "file": "frontend/apps/starter-app/src/features/patterns/board-image-labels.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "e9571fbbaf47fb4787090e9e2f92aab83c29a3e96b6317a90b4a8685d28a8804",
+      "afterSha256": "e7fd08b5b10979cb36b8ee6648c7d8e5148e5316d209e7f86f202777a4b9b6d3"
+    },
+    {
+      "file": "frontend/apps/starter-app/src/features/patterns/PatternForm.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "495437584c59805d8a9259cd9b4fd2900dda11eafa83004007f2bcb8ba69bc26",
+      "afterSha256": "d41db584020fd8d16e145fd7de89d3ef74dd5b939d4babd41d24f7232dd6341e"
+    },
+    {
+      "file": "frontend/apps/starter-app/src/features/patterns/DatePatterns.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "fe0d45041f9fd0b31a4aa6bd962b8c5b4c1e29f7ad06535ce323adaec365b4f0",
+      "afterSha256": "9774aeda42a0f42bc887593ed2d54670487467fb24f87c65f415ff290d7a62a1"
+    },
+    {
+      "file": "frontend/apps/starter-app/src/features/patterns/BoardPatterns.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "54eeb4967a0452499cdb0521c026482a8aef6283ad6d68cb87b4e7f3e8221c5f",
+      "afterSha256": "056afac784713077383d4dcb15c2d5a60dea00afd544306fbf6fc4ea67fab0a4"
+    },
+    {
+      "file": "frontend/apps/starter-app/src/features/patterns/PatternsPage.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "37c0001e5d721915fa1519aacb1397fde0000b752f9b2866eec9e7cb57d72377",
+      "afterSha256": "f96950fbc0f8fdbebab36e30832101e5623eaf63ae16b7c84a69c0979346a55b"
+    },
+    {
+      "file": "frontend/apps/starter-app/src/features/patterns/ImagePatterns.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "5f80093eb8f689da8c81634fba0f373b1cd6bf28887f34229c845e4b0d39ad44",
+      "afterSha256": "db660d10f17e47c7dd10e7d9e4823783e514fe4cacea77ff4d2769b805709774"
+    },
+    {
+      "file": "frontend/apps/starter-app/src/features/patterns/TablePatterns.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "fa6acc9bde18d203f45d9b08718677a27433917f45efe4312edbb8480d32304d",
+      "afterSha256": "3b15724eefd60038765d18616eefca20d5bfb68968a2927c9652fe968aa86c1a"
+    },
+    {
+      "file": "frontend/apps/starter-app/src/features/patterns/ExtensionPatterns.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "72b3fb416a540c407f6bac8a5e8b99ae009af4cecfe7bc5b6e1db0b4d9ce528c",
+      "afterSha256": "b1f24bfc86d7d6c3a02718b3610550f9d39ee54f4d90fca97e93670c6c396cbc"
+    },
+    {
+      "file": "frontend/apps/starter-app/src/features/operations/messages.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "e63fd5bd0d2555b045596e6ffb2623fd38a181ee9ec608fd37ce704bf72da013",
+      "afterSha256": "615ec527485eb67ab5343f666e1f244b539d317f5f860eba4d28e0c7c01050e2"
+    },
+    {
+      "file": "frontend/apps/starter-app/src/features/operations/BrowserPanel.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "26b0175ff496c29acdd6b357babcc9fba069e3a4a562124c13a63fd75a5347b9",
+      "afterSha256": "9618cc1ee4aa0c42f0ad88fa484b09011103ebc5ce8149682105c78b545447ca"
+    },
+    {
+      "file": "frontend/apps/starter-app/src/features/operations/capabilities.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "a5df9ff81b2c3aabaa88de5920084ca49985dab6c8921ac8d9945124a0d2dd9c",
+      "afterSha256": "2afa2a5ab3653f926ffaa7e9a430153f8142dc11b4a333c2b36d7e4fb82c017f"
+    },
+    {
+      "file": "frontend/apps/starter-app/src/features/operations/OperationsTable.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "60f258b4b98aa792d0ed2254652ecfc7ed9912f7d32b6a327833023b8b3adb2b",
+      "afterSha256": "9eb07bd994e6e901db51f522ebe01a6e22eeabbe80cd976ee4e7fd8f93819d07"
+    },
+    {
+      "file": "frontend/apps/starter-app/src/features/operations/api.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "15da95eb272485f6172bb4031e683c34508d76ebe01f301a8dd7ed9110914c31",
+      "afterSha256": "1ce06afa2fd9948b3f8b175ebc02ed27ad409b07a3b416614717cc8eb082373b"
+    },
+    {
+      "file": "frontend/apps/starter-app/src/features/operations/url.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "fef55205172345861dd0753b1e012247d1c56941c8d0a7c68c788ec6d2d58093",
+      "afterSha256": "83d9d85b75083769699c870f8f454bbe9d0aed8e26b5897393468e486cbce48b"
+    },
+    {
+      "file": "frontend/apps/starter-app/src/features/operations/SchedulePanel.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "b321e766ad07c832bc19ec5f9e8388c10788e758f79ddf83d8051a7feb633c29",
+      "afterSha256": "e1f7b51973a4bdad0f97be51152872e34d34edbb3dba5c54892cd45e54299281"
+    },
+    {
+      "file": "frontend/apps/starter-app/src/features/operations/OperationsPage.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "4d5c38fd2765dc465af3259841e110652201160eecbb28120fa08c2b9c2f4c0c",
+      "afterSha256": "e28b749334a68e3a66d3be3f9fe46c66c940e69aa12a3f3df7b8d93eb678e384"
+    },
+    {
+      "file": "frontend/apps/starter-app/src/features/operations/MessagesPanel.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "8a4269b8cfebc325a18a6997e1f7468f8c4227c35b2d0c794ed8d28162ed1c77",
+      "afterSha256": "f8281fb841a8a1726cb69bf0f8de1c39a2f5359fba528c93fb5cfe83578c6f23"
+    },
+    {
+      "file": "frontend/apps/catalog/src/public-contract-arg-types.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "e3d0e474ee7d2042528c91e6d916b12f361c5a70434552e26b11f6230ebba074",
+      "afterSha256": "e1066eeb2d166260187ae22c9b93ca7288c503de44be48757dff2fc73531d948"
+    },
+    {
+      "file": "frontend/apps/catalog/src/fixtures/ScVirtualListStory.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "2c3241c833785f5b59992884802f99ce5d18aa37d0e34686d65dc9261ee0980e",
+      "afterSha256": "8cd97472a40106214da49d822ea76ffc5c67b0106d8d0d3fc49ab346b849d0c2"
+    },
+    {
+      "file": "frontend/apps/catalog/src/fixtures/ScStoryLocale.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "ee50479aa25309e34cc46eb931a321130b8e59e255ac125111428ba297846e77",
+      "afterSha256": "bfaabead68a0a4338c3c17ad6296efa4f174619626ee0275e8155b4c96cbb7a8"
+    },
+    {
+      "file": "frontend/apps/catalog/src/fixtures/ScConfirmDialogStory.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "4b7405f1ef5d4d6581891c222900a833a5be0b3f139c2d0ce878e3fc5fcbd11f",
+      "afterSha256": "d9b972e0733731732d2bee48d5c9dd4e8c25cba24da34fe130503321866e035f"
+    },
+    {
+      "file": "frontend/apps/catalog/src/fixtures/ConnectedExamplesStory.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "682f60c7531abb1fd43f006b9edb4d811924eafd1e960e234dffb594e011163e",
+      "afterSha256": "f547c5b0051a4db51741f31e189ae19f928b5339e4a6e7d0dd332c27db879f74"
+    },
+    {
+      "file": "frontend/apps/catalog/src/fixtures/ScImageAnnotatorStory.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "7cef38983af8b5f9d9f6a7b91ce8c25403aac401767df8c751a1d97995ff65f0",
+      "afterSha256": "cd229e10778f492a8476a354f6b7485f3f931a8f1555c58809604033661cc5a9"
+    },
+    {
+      "file": "frontend/apps/catalog/src/fixtures/ScFormActionsStory.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "6bc28285f13f8e4ade49323e130b084ff60621c9d05b61585d1d0b3ca92164c4",
+      "afterSha256": "7981e0fe457ef7f2f720437ba5750be88903e4cc0af7290d15b58191554cd53d"
+    },
+    {
+      "file": "frontend/apps/catalog/src/fixtures/ScRichTextEditorStory.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "b80808552d57a24a5648d4810f351f31fe426b38db7c455022db364b485be10a",
+      "afterSha256": "3707615cbaf91a271f9dd61582df46156d0664f59de5528ed2f0120087cbfc74"
+    },
+    {
+      "file": "frontend/apps/catalog/src/fixtures/ScChartComparisonStory.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "e4a4c3d19a259f82cb7a39abcafc2c53dca3bdfd25c271d4e1ebeb70b8f9d875",
+      "afterSha256": "e62a5c405c89b9707fafae9b239741c4e3d5300a652599d7a5b9bc11adb0ffc5"
+    },
+    {
+      "file": "frontend/apps/catalog/src/fixtures/ScDesignTokensStory.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "bfefdffbf5da1d3e431d9f3a0b71b5e27946545dee4855769f03455832fe91a7",
+      "afterSha256": "96709f7ba9386acb69ed1d13d52db8a3953fec57aac0c52d3468b42439519d85"
+    },
+    {
+      "file": "frontend/apps/catalog/src/fixtures/ScListDetailStory.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "31d35e0893d4c644bd625ad3d919d9ac6b623c345c972b846ae9554d9b0481fa",
+      "afterSha256": "9a51ba4a304accc4bd1a010008be5822189b3b7c3d9d5b521c0bda4684bc52e7"
+    },
+    {
+      "file": "frontend/apps/catalog/src/fixtures/ScCheckboxStory.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "cf9a4a375419b571d3642530a916017ea83d6bddd97dd6f048d01f2b4028c041",
+      "afterSha256": "fda958ab051259278e23f33e6f87b72b768185707bcd11f8bf7235e17add4d9c"
+    },
+    {
+      "file": "frontend/apps/catalog/src/fixtures/DateFormatStory.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "891937e9761b10757fa11ab6297b3099ee584146fe7ee4a2f62e7bff062412b7",
+      "afterSha256": "73fa3ec950097c6647e3bdc23ac91f7dc13420d5c6e922151585de67b9e46de5"
+    },
+    {
+      "file": "frontend/apps/catalog/src/fixtures/ScAppShellStory.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "b19af0bff9a0f41f1b5b822497f747fb5d6e01ce38ad0fd626a7fac334f847ea",
+      "afterSha256": "78599983100fcfd585ee91a036eb549aededdccab19020536212d22aa8b00582"
+    },
+    {
+      "file": "frontend/apps/catalog/src/fixtures/ScActionButtonStory.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "467aa330caa1c333991c3ccac36750071bfe2c05d8f72b26a36d2355414309d3",
+      "afterSha256": "a4e319d5349272492992968c46f3fb4f474792bbebf1bcc1c2ac0742505cc877"
+    },
+    {
+      "file": "frontend/apps/catalog/src/fixtures/ScActionFormStory.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "6985f78c8e7596380ca35bccc2326828dd5eccec45160e4709eb03afcd335f60",
+      "afterSha256": "3a54e003ef5111fc7071252aebae38e3d67e7be9a6ebaed57ae20848a268bf4a"
+    },
+    {
+      "file": "frontend/apps/catalog/src/fixtures/ScStatusBadgeStory.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "4734a57bd3d5f1c9c53ea8becef173af6607096e06445cb102e8748a567eed33",
+      "afterSha256": "7dcd531ce90ee93ed5fafb52f06b142fb4ed139600a7e8eeb11a8a1c600cc35c"
+    },
+    {
+      "file": "frontend/apps/catalog/src/fixtures/ScSelectStory.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "b47262dfb28ca1b5e82967198dbf7e2784fa4a915adcd46b9e1b88c75176b0ce",
+      "afterSha256": "34f889306d745356451b2270d07fd4c53b0f755af6e093ab9e9ad29a2dfe2ba2"
+    },
+    {
+      "file": "frontend/apps/catalog/src/fixtures/ScTextAreaStory.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "8901d66ffa3af8d54d482660992461a5c3e77ff84be30a2a6584cc6ed85b86bd",
+      "afterSha256": "9c0fceb0b5663fc33cff05f49e0b7b83453bbab5284ed628eeb73027b5e4a814"
+    },
+    {
+      "file": "frontend/apps/catalog/src/fixtures/ScKpiCardStory.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "25f6f668ed09442147f5e87fe38ff3859b3fe6c8b92e9ed3334d373f4a40e4f8",
+      "afterSha256": "221cc4110a3d88415f5747697993b3dfa48c953a37eda1f4f87c71a786a9c3d0"
+    },
+    {
+      "file": "frontend/apps/catalog/src/fixtures/ScSectionCardStory.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "41510ead4ed480085f8aab4507860bebc2307eda3b9fcb4458fc3f5ea89cf64b",
+      "afterSha256": "2c2cbd7f67391f14b628c25e794b0407ac387a6a89d27e7e5b981e62f2829474"
+    },
+    {
+      "file": "frontend/apps/catalog/src/fixtures/ScSearchPanelStory.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "6730c6ed53b846dd79110c30546a317bd9e6556a1dc681dce1047deac2270873",
+      "afterSha256": "17921e7768ab1139a39c24b6ca76bd1228ce8f2792963e6f92e64e516c22a9f7"
+    },
+    {
+      "file": "frontend/apps/catalog/src/fixtures/ScExcelStory.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "0412f6fb2e983c2408812a98309fd361572f352518dbd1b3d0c58242811bfda0",
+      "afterSha256": "5140181ddbf81b3820a09ae565bda0b87bb5c39f412d7ea49d6c1c6f2f32df5e"
+    },
+    {
+      "file": "frontend/apps/catalog/src/fixtures/ScSeriesChartStory.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "3d603abe0e236b5a537418a5fd57b2dbdcf045bf3a9cc579167bd7c6272ece56",
+      "afterSha256": "7db9cd0fd9ca5e83bf6f5e0dc42f90e5d22fdecb1eb8eb73c26cc7a9ed805356"
+    },
+    {
+      "file": "frontend/apps/catalog/src/fixtures/ValidatedFormStory.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "472d0430f363e7bc3b931ecef6c71b94032e6111cbddfe002e97f3bbbb2d08ec",
+      "afterSha256": "f8ba390f84a8fc5a2761a3cd5e9d37e7f266e9ac9c25faf9045a2f023d3c2c69"
+    },
+    {
+      "file": "frontend/apps/catalog/src/fixtures/ScChartStory.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "4fbcdd0a1e77d0ea613691b59bc0d7baee75021b7b457c17fa87db0b9070eab2",
+      "afterSha256": "1ae853b829d9d89f1c315deaa833541e4ed05b85d4126abee3854a83b13dfc99"
+    },
+    {
+      "file": "frontend/apps/catalog/src/fixtures/ScControlStandardsStory.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "c61c7a7259401fca20d0e834957de297d83bb1dda51fd5b2de134d53ea5b839d",
+      "afterSha256": "62c6308421ec0f6c0fed62296954c25d449d6c4a14e224f12f67b35446f8d432"
+    },
+    {
+      "file": "frontend/apps/catalog/src/fixtures/ScDataTableStory.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "c7cb93a612423eb8f6a4e7149abfb2f1fc42f33c7ddff939f2b2271f163a8404",
+      "afterSha256": "e7eef6e0aa6bcc0391addd12c053994eae58058d99f397608202d40f3c437a75"
+    },
+    {
+      "file": "frontend/apps/catalog/src/fixtures/ScI18nStory.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "bb1a36897fec1c152b79d8fcc002fbdb9ab13d6c460a1129faba6a35cc0ad5b1",
+      "afterSha256": "bdb344b3f7e5045ab60ab5343e49c6ecdbe2d8f129179856c5a2d4571adbca62"
+    },
+    {
+      "file": "frontend/apps/catalog/src/fixtures/ScVirtualTableStory.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "d5fb63135cb7662b1be056cf4b8a2aa1a43f8fc615693d2ad4d48758e163f6ba",
+      "afterSha256": "a8f180a3cc1755e78d210c117da559092fd7c225358e382f88ff6bac2abc50cd"
+    },
+    {
+      "file": "frontend/apps/catalog/src/fixtures/ScStoryFrame.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "801305b8e209907eb3b205374f3bef450618a917bb8980bcfe8bfdc685f3e1c8",
+      "afterSha256": "088b5a4c7e467b98bb02707abdfbd9066ec890c4158e116b8818bb1b106b9342"
+    },
+    {
+      "file": "frontend/apps/catalog/src/fixtures/ScSortableBoardStory.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "81af7e3f151d56d6faa969e419e397f20a38044f2b011aa763b874ce522bcdc2",
+      "afterSha256": "5bacaae6543a9a5999d73a6f065ecdb2d652b0d24cd36e509e9b08502a77c9e9"
+    },
+    {
+      "file": "frontend/apps/catalog/src/fixtures/ScTableData.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "da5e19793311e9d00c92faa9668d196348c251525b5de43b99c36cefcaa1894c",
+      "afterSha256": "63202927719c2e6c88bbe5996f2be08ce96e96fed10070f97d095650b4062c8c"
+    },
+    {
+      "file": "frontend/apps/catalog/src/fixtures/ScTextFieldStory.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "8ac6fe3a3ea68851179899da9999ce2051714fa4d3f0cec08bfb92642c7f57b7",
+      "afterSha256": "9ed01991ec9043ae35fadd30d8feee21da7e3ed8fc4a6f9350dcee47bb044ac0"
+    },
+    {
+      "file": "frontend/packages/i18n/src/messages.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "6266f04125f1ae9deafa04188a0ff67826dc142c1b4baeadce0d80aa02707ad9",
+      "afterSha256": "e4fe92e362c4d3c68cb313f545abb497c5cadb385f321499bbf238eb46e9b56b"
+    },
+    {
+      "file": "frontend/packages/i18n/src/index.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "8d8511eb37cfcc20ef9461e160c2e8fc3ad94b6e26ceb582393a4ad47c548407",
+      "afterSha256": "377abf8e2f28cbd60c71c0a00119d3daf9f5398f86f6711a164e88b86f347663"
+    },
+    {
+      "file": "frontend/packages/excel/src/index.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "867c402e91fb0724adeb6a8205508e96c4dddc98ab064a9d70aeba78861c8915",
+      "afterSha256": "051a250f8f43bcdb34b53b7363eea55d4bdcbd596ddd79d9aefa6515f3f59608"
+    },
+    {
+      "file": "frontend/packages/runtime/src/http.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "e2d2c1caf0114ac19787f0c11a565d92971650f689b333694b417463d3d3663b",
+      "afterSha256": "96f850d7cb6c6d10f141f1aeb358feeca0398b87819130dbf1e9d1fbbf2ae68a"
+    },
+    {
+      "file": "frontend/packages/runtime/src/runtime.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "3e384ca0f2dbe579ec070e660bd57d6d14048b89e228822d2215f4d3dde44ce8",
+      "afterSha256": "70b521f60ee590aa79e785c6dd9ef73ac71e72c6efa01cff62163bfa3d0e2ac6"
+    },
+    {
+      "file": "frontend/packages/runtime/src/index.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "338dfc96fa7a60c8b292ece6b59aed153f1e97e5bb404b624a2a23306ae3c552",
+      "afterSha256": "64285d7986bdff10ed36d7df8d88627fcf47f4625ca47ffdb7125f72544c3840"
+    },
+    {
+      "file": "frontend/packages/runtime/src/browserErrors.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "d4b2262cfb3aa20031b608a48fea40518eeb5c3d2fb8524dd3b38e3e06a9a0df",
+      "afterSha256": "ba252f8f88c92739a655feb5e43e56289dad663081d06d707e8ab230881d248f"
+    },
+    {
+      "file": "frontend/packages/date/src/index.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "7a6705f469cc44fd950c34ffc2e724cf48cc3a4f78aa8b031d51311ef6464611",
+      "afterSha256": "790d89fe3778dcab3ddabba176114e49171c176ba11651b3167e5f2a862e0f25"
+    },
+    {
+      "file": "frontend/packages/ui/src/contracts.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "a9e5504acc0ee303a0975673daf7d58ec4ef926be77d066f1fc543182facb6b5",
+      "afterSha256": "dac7d39f0757ef1d7b207bc1ba906223fdf502a9484035fe64864a47cb882b29"
+    },
+    {
+      "file": "frontend/packages/ui/src/ScActionButton.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "466efa371eacbb93c735cd2e0ccb99c18502291e750cd773d1651080efc71320",
+      "afterSha256": "6f66070f269f6d33dcf7b5d3011b05c746d9eb83ffb3210f6973117af9c52b91"
+    },
+    {
+      "file": "frontend/packages/ui/src/tokens.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "1f096073edab50643688cb17538680ac1db2dc0b51a47276a7f050914c1f8c21",
+      "afterSha256": "e0076d16031a2eda8d46c124714597076a786fde8a887d7b398fa1fd750a2117"
+    },
+    {
+      "file": "frontend/packages/ui/src/ScTextField.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "56546333a3f05c10e04330a978b1f10e604294bf5691a4ff1ab3e140c924f5d7",
+      "afterSha256": "3064ec6ad33290a6eb845902d6c972cc500661079b73956d2f35a0fe3d4f3e3d"
+    },
+    {
+      "file": "frontend/packages/ui/src/index.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "186441675cb51337ba181bdd99d3157fe072b7a5381e4f9cceb564989141f0a4",
+      "afterSha256": "2b8166ef9dce970def70123363516fd682e2dc3649a53d9b2b05a452829499d0"
+    },
+    {
+      "file": "frontend/packages/ui/src/theme.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "872bf5f29b20e591bd26254132d95885e6c9ac50a55c544ce3b27d1d124feac8",
+      "afterSha256": "46d98026241ec3d5d9a3f209e9368380c2c2f3829d20aca28f3dfeac85a3d297"
+    },
+    {
+      "file": "frontend/packages/ui/src/forms/ScConfirmDialog.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "306fe61ff1316d770f2e69500627206bfe29b66e38131d43395b49c56956b54d",
+      "afterSha256": "2dacfdee74d8e8111d474ca566294a2fc85c8c00f45ff2697bf23eb736785c5a"
+    },
+    {
+      "file": "frontend/packages/ui/src/forms/ScFormActions.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "911a2a519183d0051f59195eecceeadd6901724b4a823f75cb0d449bcf230582",
+      "afterSha256": "aee4a7ddae1c224266b620eee7bfab47bcff5ee927f69e6cd3f51dd9f9eeb309"
+    },
+    {
+      "file": "frontend/packages/ui/src/forms/form-contracts.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "c8fcef839059b13c0f581a656763c7b6ea7b5f84788c6c8d0f8d12bef22b7281",
+      "afterSha256": "2e361f0b52b3fe42d9fd1c1125c5c00c5e843a7618b9663d79581881a121fe18"
+    },
+    {
+      "file": "frontend/packages/ui/src/forms/index.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "2a06117f329de1719161c7dea646404c9db8e10f49ffb04e4640dd6e2fccad27",
+      "afterSha256": "45d88ff727be9ff3c0936a961a86b93ead05e0e8f116c59003be69fcbc776b87"
+    },
+    {
+      "file": "frontend/packages/ui/src/patterns/ScLoadingState.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "0a696114fa2fbff34c9d57838cb53ea7fe8ff9f4fcb2e28ff531a163d11e8324",
+      "afterSha256": "90d57b52c1b4d7f48f36f65519ab5572c2914af9a4abe175e444ccca346de6b5"
+    },
+    {
+      "file": "frontend/packages/ui/src/patterns/ScErrorPanel.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "9be6f284a6055e2a68ab4fd6f1108b71c1941f1a32256468f4a8b6a506288a19",
+      "afterSha256": "b8202c55643a7a6d60767bb94f2cefa6ad5f9cdbf26997c9d254d491e01fdf24"
+    },
+    {
+      "file": "frontend/packages/ui/src/patterns/contracts.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "f627a28e530bb41a145bac6fcdf112e890f4121f74ce73b5c5510c0fc3353b7b",
+      "afterSha256": "b09834fdcd882d1f9ee5c69fc432dac17cf1d2df3f14541c6f0560cdf3d637be"
+    },
+    {
+      "file": "frontend/packages/ui/src/patterns/ScSectionCard.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "c4916a441d740672f15335e028ef29557f21dc0690792ac48c2662896b423f63",
+      "afterSha256": "1cb6b69f49883c7ec995aefe85970ce95327bb434126eb137322f7c7e81ca502"
+    },
+    {
+      "file": "frontend/packages/ui/src/patterns/ScPageHeader.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "21aea2a96aedb17cd7d82c0ff44b3efc9535c42095caa9b47c46c0d0bd7b22b1",
+      "afterSha256": "268561c1146b522301a2b646ca4aaf60574694a1e85ed85938bc9f4cc06c991d"
+    },
+    {
+      "file": "frontend/packages/ui/src/patterns/ScStatusBadge.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "e4eba3403f0bc8c0bce1bd6d0bd5b62620139322b72b32b4f584267e7aa86a6a",
+      "afterSha256": "168cc1d3b02bf2880c095dc053e42408671d4ea2c39444949dc20c50227988ec"
+    },
+    {
+      "file": "frontend/packages/ui/src/patterns/ScSearchPanel.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "93acd8f7c74bf0182a34fd50c7c922b7527175731168e04f64b840011cefd10b",
+      "afterSha256": "f24a5e3d5ec7e0a41450c884f15797082c8973ff83cab32666a783882e039d09"
+    },
+    {
+      "file": "frontend/packages/ui/src/patterns/index.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "276273fa5425328d7d2274981bff25a675136c0a05ba0d0b59adb1d86b770cdd",
+      "afterSha256": "5b2136724d7ebc77688bb1778be6661bd3b058dd2666f0d35f82e71fa6690ef8"
+    },
+    {
+      "file": "frontend/packages/ui/src/patterns/ScEmptyState.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "f5756db62dc2a5ee51a87ee73c03ba3b92f75ef530d3ec90207da1d212d9c1aa",
+      "afterSha256": "07c6801108ee9ae16abe6c087ab7da2d9a90c91b7116e6338dc867a1ba18d518"
+    },
+    {
+      "file": "frontend/packages/ui/src/patterns/ScListDetailLayout.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "8fa6fdf0fc229519a3da8fd20ad38387885f641aeb89d77b4e7c8925586a18c1",
+      "afterSha256": "dc28eac2e9a2bd667bdfd414545f2d46be7543a1cc7dbea2e16eed9d15106ccd"
+    },
+    {
+      "file": "frontend/packages/ui/src/patterns/ScKpiCard.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "ce8db6b42483f1c173d375648b73ab2939ea5e503624b19c9c80789abc1dd2c1",
+      "afterSha256": "7df04ecd573e7d0158c405a3526d1bebdbb2bdfe57c2f09b08943b90a7b80cb7"
+    },
+    {
+      "file": "frontend/packages/ui/src/board/helpers.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "a9b81b60facdd991ccc10a9762f53253865f1bf4170f6a1eb53041e0860e6d44",
+      "afterSha256": "d682e8a639641953c817e68ba1b7bf336bd23de11ccb8c61f42b7afbf5bd2d73"
+    },
+    {
+      "file": "frontend/packages/ui/src/board/ScBoardItem.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "87c83314a0214e8b556097ea99a646d150cd42c59646720c06031a2e8fcc038b",
+      "afterSha256": "326cea18746bd87c367d430112fce3440586012774cf891f27dfd324ef01e21b"
+    },
+    {
+      "file": "frontend/packages/ui/src/board/contracts.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "e091ef1be30139bf9701cb1ac606ef26ae97402d886b410951cdd81fb421ef35",
+      "afterSha256": "1c3473051fc503d1a7fdc3dc4bcd6ba5a7b43a4f4842a80c7b09fd0755963b2e"
+    },
+    {
+      "file": "frontend/packages/ui/src/board/ScSortableBoard.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "f65cebe2bf8fe5f665b588c2a0f8c83baab196033d68eb10e601ec3bb30a9dcd",
+      "afterSha256": "8240c3bf7b3ef84b9f22156b715b48d0c54e7ec4be984454ec0fae32b1a8ce85"
+    },
+    {
+      "file": "frontend/packages/ui/src/board/index.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "1d1dd24be75074191649c49aae068d66c7ae5b275e738f1ddd80501c683a5ce3",
+      "afterSha256": "94b5887db929f7ccee3afca1a3a07c281dfa34dd5907534b6642d8ef0bdd396b"
+    },
+    {
+      "file": "frontend/packages/ui/src/board/ScBoardColumn.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "76b2abc183c3a98015841f4ea1b748f5d194b24aa9c3abdff78098f0bd2d739d",
+      "afterSha256": "adb2c17733d696ecfe79981994712d0a549f2f5311705e6588293f3b8e9bcbda"
+    },
+    {
+      "file": "frontend/packages/ui/src/layout/ScShellNavigation.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "888a077fa20f535c50f2b8cd15a1b12d1a26a65036e937ee81bf8b2d61a18248",
+      "afterSha256": "ca6f5b6f3d77812e0b375e12c090ed60e6b66c915c4a257a09da0d1f07827464"
+    },
+    {
+      "file": "frontend/packages/ui/src/layout/ScAppShell.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "b278986bc43755b7a9eb86aaa96549b7a742bc7d0f7cb1ee2275dfb6ee6e58ef",
+      "afterSha256": "dd7d4b1c9c2b0abb37e364ac6b7c0c96b3097169a2d6112147ff96804e04b321"
+    },
+    {
+      "file": "frontend/packages/ui/src/layout/types.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "dcb6db0de6a88cc67677e76b2c0b05a05e40554c8f3ed32d5d097e7aa4b13478",
+      "afterSha256": "1cb8d096d594518a8cd27663da271b212e4d88e32cfd9ee6bb978e3aa0901e59"
+    },
+    {
+      "file": "frontend/packages/ui/src/layout/index.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "e3bd665b376910fd4280e5dc508af61eee7e9f64e52293075c5c21d56fad7383",
+      "afterSha256": "290d7379c41236ae587c9b481967c6bc68262810d7e227d51d7a8a37457cf138"
+    },
+    {
+      "file": "frontend/packages/ui/src/charts/contracts.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "52288d28449209745da38d2e3c1cd27dedc19262298c5504e7f3d0e9dbcbefbf",
+      "afterSha256": "002095576e39b751c288f995456bf111e5b5174f215735c61694b259cb409b84"
+    },
+    {
+      "file": "frontend/packages/ui/src/charts/ScSeriesChart.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "e88026397d18c15877d7984b33538105de7e7eaeb821dfeae2f25fcf4a14fcb9",
+      "afterSha256": "26740d02e62e1d6160ae5319966cb22a3a946091f1424331fe103dee154394af"
+    },
+    {
+      "file": "frontend/packages/ui/src/charts/index.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "1bc185991b6a4f198f6722b6f1ec1275d1215c5b05e54da57d0bb99850990d21",
+      "afterSha256": "e65786e70e571c851adb51552b47b80f5289489075302e8ad4ca081e7dcdd936"
+    },
+    {
+      "file": "frontend/packages/ui/src/charts/chart-model.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "6f2cc8d25c3c54ac0a27aa28b57a30a531bfc56e2093817ee18492b118ab046f",
+      "afterSha256": "c040e0a9570b12dc5ec799ea566be70bb0d1a7cf62a97e5a21ecba7d7be22674"
+    },
+    {
+      "file": "frontend/packages/ui/src/charts/ScChart.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "bc770e487ea027ed42f6850e351c9f07a9f7a3502930fac688822d3cd9195efe",
+      "afterSha256": "b23680d4e340a8faee08b56df23d11d389ab75ce23f1ed4023168affca2934a0"
+    },
+    {
+      "file": "frontend/packages/ui/src/image/coordinates.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "7b762bdc0ccbe0f2973801bbfcf9958487c17971a32564952de7ba6f3efd0c2c",
+      "afterSha256": "8bbdf391b64f1dfa07579b17175643ecb6d020b6859ca57173403716de9fc995"
+    },
+    {
+      "file": "frontend/packages/ui/src/image/contracts.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "0b8ea615e48d47de7e9bc8bb2febc9d24973451c6389e871c5723ccc7feab742",
+      "afterSha256": "6ffa38c36a05944aef397463a0941b5b8d8ac7bfd8965312a1fce3ec32e25983"
+    },
+    {
+      "file": "frontend/packages/ui/src/image/ScImageAnnotator.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "37d0e1ae0fc203d2251200d793216047a6e7dbd4f7abe8b1cf1c2875bf249b4c",
+      "afterSha256": "70344d13ec1909c746222e6276039427bfa7d6d71c83e29e25edc139f448ad0b"
+    },
+    {
+      "file": "frontend/packages/ui/src/image/index.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "f92fec6d21c62912a2c50491ed4918ccde1c57c4194f1070c2e6c303cd7ab7ad",
+      "afterSha256": "cb72974726dcc622a7cdf1915919335f562c079ae4a5d47e01cac1fed1c5c0f0"
+    },
+    {
+      "file": "frontend/packages/ui/src/table/contracts.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "8f75ae512f35bc54e8d231faa40062fb432aad4300bda12cc01d8673606bc279",
+      "afterSha256": "535c12815c5191d64bcbd2995eaaa4bb6667b031d6a89fb01047a166efad9e75"
+    },
+    {
+      "file": "frontend/packages/ui/src/table/ScVirtualList.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "083af8dc0a9972199af96c39c2b3019b90e5b9164ae22cf0124fc158cac5500a",
+      "afterSha256": "35564b1085787924320713fedf226307acfa2b96ab29b70dc7993bd4d79893c7"
+    },
+    {
+      "file": "frontend/packages/ui/src/table/model.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "0c8496e0299bd38fdf7390bf28afd6871d0ff5f689a4fb92a4639c70fd230632",
+      "afterSha256": "74addba15013bb6cd1fdce10fc05ae87510079660be27dce08c208307f820447"
+    },
+    {
+      "file": "frontend/packages/ui/src/table/ScVirtualTable.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "55decb0ca02802c88a05790c1acd812e87d7cc6c46bb09097f6b6e588f35617d",
+      "afterSha256": "91c01499b218d8b2c5f42ff42237df8deb11f239be2d41a7f1071ece3085b683"
+    },
+    {
+      "file": "frontend/packages/ui/src/table/useVirtualRows.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "d7aebfaa2f1eb5ec58556bcdfc20deaca1d505ac1e58be00b4dcdf97a5dcccc1",
+      "afterSha256": "02986d7764ef362d1d394c645d6c624a16283dfa6422ad5933925bf23af37799"
+    },
+    {
+      "file": "frontend/packages/ui/src/table/index.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "e8e8bde86846ee0db78df75526ab689592803467c5346cc6fb22e7b7f10d0b86",
+      "afterSha256": "146bc3464bec1466b89bcf24f461a42c367f8179f62bca4496a62378caa1e549"
+    },
+    {
+      "file": "frontend/packages/ui/src/table/labels.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "6a4c903d9b454dffad10463beeddfec194f89013193275db020c32bbed138229",
+      "afterSha256": "2b01025f0a31b068d1d53a34fc0bed552aaeed08df5081855d0c858091705b7c"
+    },
+    {
+      "file": "frontend/packages/ui/src/table/ScDataTable.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "1118a25cdb9151b3a2611602540c372a89193a8b70082618b5915fdd224bd8ad",
+      "afterSha256": "cac06c92c1e8d089168a7e6d322dae726b8e201ac6f43dd66eca73679fa68272"
+    },
+    {
+      "file": "frontend/packages/ui/src/editor/ScRichTextEditor.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "78e73a9af1a2ebc35c2b2c1cec8f51a79889187e653f1d5582a66330118682c7",
+      "afterSha256": "30e62886e2790c3636657bd8d876749c02a95ae08d58e7c87d554dfbb0957f10"
+    },
+    {
+      "file": "frontend/packages/ui/src/editor/contracts.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "d3104d0a7d9c1350430871554a7d280833735a4ad43e109a7b3d775772735042",
+      "afterSha256": "45b967113acf39af503a3ed1a0ab01aad79bea9189086bedffaa50c8219d51aa"
+    },
+    {
+      "file": "frontend/packages/ui/src/editor/document.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "e0c66e8f8d62cf24956fa98c7bbf28803d46bc4006dd67a55510e4c5af498565",
+      "afterSha256": "a0eaf60819b556a7bbe26bbd8c948a4f307529d96f92043624b3d1569305b438"
+    },
+    {
+      "file": "frontend/packages/ui/src/editor/index.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "85e7940d30022100cd357eb2ef82454e4a2efb953bb2253ef2fe106f8ac88bdf",
+      "afterSha256": "f0c53e30aaa72e049b4115818623d4a8a2a4a9fb28faa9b3095517de5c8a35f1"
+    },
+    {
+      "file": "frontend/packages/ui/src/inputs/input-accessibility.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "bad2c2969b0cb32626a0419ea9024432ded23d3b2d0d7c11bdbf966eee320695",
+      "afterSha256": "00775073565ed3d44e0cd2874eba77693a1f3e19a10d79d4cf1c2689fe61558f"
+    },
+    {
+      "file": "frontend/packages/ui/src/inputs/ScSelect.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "39344b4993291a76d334d0bc867cf630cd059ece86bd4f230386d0e233c37c3c",
+      "afterSha256": "79638c55e5e2279b531b9830241a9ef4233bb9ef50132191ce489113d9fae654"
+    },
+    {
+      "file": "frontend/packages/ui/src/inputs/input-contracts.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "2ef8e6ba8416fb2c7950063193e38a9ee4a2487fbd93bb9506d4f47015a213a5",
+      "afterSha256": "a9333bb39d242b3255f06f74dde5d3778f152174218d4cd5ce091e9bf35ced0c"
+    },
+    {
+      "file": "frontend/packages/ui/src/inputs/index.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "29d09762a40a2e63144eca8e0d78be00f1d16eba5cc16343923008a5551f4000",
+      "afterSha256": "f76abdb5408ae8e8f0c9ca46666666c4d70eb45dc37076541a0180431f5299ac"
+    },
+    {
+      "file": "frontend/packages/ui/src/inputs/ScCheckbox.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "575c68a71f7e88090747716c269e995aceeb21af8176e5ffa487e8cd10810564",
+      "afterSha256": "46df9d4fdbf89591be9f4717aa216dd13c67a08a433ee83e76b5034d5944d5ba"
+    },
+    {
+      "file": "frontend/packages/ui/src/inputs/ScTextArea.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "7bc6d17ceb2f1914a80ec9f466c8f8875210c659ad4d18e1cd928dfc9a42dd33",
+      "afterSha256": "b8e397b96e42213c1d121817fdecad6c755b4d1c2b3cfd023cab8a6578abb6c1"
+    },
+    {
+      "file": "templates/starter-v2/backend/src/main/java/__JAVA_PATH__/AppAuthentication.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "6ce3cfdbad2a3b84d1980ea50a676323c458f2efe85dd637687fac2c23ab03a3",
+      "afterSha256": "bdb08d3b7d32baf8bce2e2a332af47dd952490d1be5394d8f50d57faf00db0a1"
+    },
+    {
+      "file": "templates/starter-v2/backend/src/main/java/__JAVA_PATH__/SpaRoutes.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "bfc140c319033e8dc19d60e9460a322bef3e6419d7935765008fcbd6dcc83e0c",
+      "afterSha256": "cacadfcec81de4eef28fdb2529c85f1357aeb97f1e13ff9a4c81e2fd37440b52"
+    },
+    {
+      "file": "templates/starter-v2/backend/src/main/java/__JAVA_PATH__/GeneratedApplication.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "49a52df714ed1dc3b1bc42b20f11ce26e3ab996028d291040bed82cf3c59a05a",
+      "afterSha256": "4c4538449fd449cbf2c9170691a11b99e09677bb302229aabdf2a2ab21848be1"
+    },
+    {
+      "file": "templates/starter-v2/backend/src/main/java/__JAVA_PATH__/integration/SampleController.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "a63fe38d07efe3313ded8393ecc78edd3fb6cad6661130bb36ed7512804d0f8f",
+      "afterSha256": "3dde84df5695e3a79f92b2c188d54de94b8228e64a2e310ae9eea23fbb4796b8"
+    },
+    {
+      "file": "templates/starter-v2/backend/src/main/java/__JAVA_PATH__/integration/SampleClient.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "919b0497b2314fc29103a27571a8a0104894e4b863d7d22da3204b83b3aed769",
+      "afterSha256": "67632ae7805444f3ab74c1c926c9e66c33a16d2fc6645c90fb24bf8846eae07a"
+    },
+    {
+      "file": "templates/starter-v2/backend/src/main/java/__JAVA_PATH__/operations/OperationMessageDtos.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "d9ffbd6faf1763fdce538d884769108d6e8b64f9fc2b08929208690c406e565f",
+      "afterSha256": "1cd77d15ebb316188fa07c50154d5adae7dbf0c39f9c5e5076232047fcf87523"
+    },
+    {
+      "file": "templates/starter-v2/backend/src/main/java/__JAVA_PATH__/operations/StarterMessageAdapters.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "bff1758208a80a97d94203771be1b5bae602d6206aa2d3e0e400755a308afb05",
+      "afterSha256": "349f9554cbbe8795de3bf14b3170cf8a8c5e33659152b6ad789a2f3548c69d1e"
+    },
+    {
+      "file": "templates/starter-v2/backend/src/main/java/__JAVA_PATH__/operations/StarterMessageController.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "34723c9afef813159efeb496c1c793b06232200a5d89adb1b43d10e02afc5b30",
+      "afterSha256": "20fdac14e24b2665f728540a894b06209aee9f9d30f21c041bc7e80b719e78a0"
+    },
+    {
+      "file": "templates/starter-v2/backend/src/main/java/__JAVA_PATH__/storage/StorageDemoController.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "4534add17780a251fd4a1ad26f58f1facb017cd1ad01900bc92b4078c55b366a",
+      "afterSha256": "fdb73190022e1ef849bc27ec697b3d4921737ad2c463f00f84c7369e6b6abc37"
+    },
+    {
+      "file": "templates/starter-v2/backend/src/main/java/__JAVA_PATH__/notes/NoteController.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "4b897276b5423faafd79616a7613761db1f5f98a97196522b662f85f51f191f2",
+      "afterSha256": "6fbce6c3aaa9e00da3190aaeb61e1f51c8a2f8f72445975a2ed2d67ec00d70ba"
+    },
+    {
+      "file": "templates/starter-v2/backend/src/main/java/__JAVA_PATH__/notes/NoteReadMapper.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "81a6981d18f46773d5e7696ebf2836ee3ec604e40e37c613591dde4fa1482e7e",
+      "afterSha256": "e8f6189a58391934f5f2ac3f526ab176e76196c33fa0d68594c40da39e26aa30"
+    },
+    {
+      "file": "templates/starter-v2/backend/src/main/java/__JAVA_PATH__/notes/NoteRepository.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "b575905f94ace6cd2d754bb263607953fcebc2d9c5a26811a413cc3bb74685c4",
+      "afterSha256": "429ad904717db2a20e5fbe718ec5fd17d4119ae3a998c69d55e182b1d22a845d"
+    },
+    {
+      "file": "templates/starter-v2/backend/src/main/java/__JAVA_PATH__/notes/NoteService.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "c26f67fdb08505372bb547175af0cc86d5d3a7fc87d13ec57c87f335102309af",
+      "afterSha256": "c6dc0ce5ecba5e6de8382f322391921230c6a87ecaadd97bfd83f30462246349"
+    },
+    {
+      "file": "templates/starter-v2/backend/src/main/java/__JAVA_PATH__/notes/NoteDtos.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "55dba5b43e64a538f2e23a449ce8f1c7f30c385f9baa6d5232ae8e2729a9777a",
+      "afterSha256": "ddff153da82c0d4528738b26db0f873341458b9748ae1370d1eeb169dfac0770"
+    },
+    {
+      "file": "templates/starter-v2/backend/src/main/java/__JAVA_PATH__/notes/NoteEntity.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "4258a630708e50ee686d7be86df0496280b3864bf6865b0fcea794e04edee314",
+      "afterSha256": "9a1eb899d705c6b44181ea8283576ddb6fd498296b98f1c0aef281a9c923fdbb"
+    },
+    {
+      "file": "templates/starter-v2/backend/src/main/java/__JAVA_PATH__/notes/NoteSqlMapper.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "2785e48cee38e2b5ab0620ebe2f37370d81e1ec496daf463a580dc8f82650cd7",
+      "afterSha256": "c42c6eddc514ed0e2343cc279b6cc9ea1a73e103e2b77ed5b04aed87ba6b8a71"
+    },
+    {
+      "file": "templates/starter-v2/backend/src/main/java/__JAVA_PATH__/operations/browsererrors/BrowserErrorsController.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "f6f92c41e137db2c7a9d48d6ee9580ed104dd7caa2687e315b5128b5df9c979e",
+      "afterSha256": "4f2502bf6dbc2f09679265ccedb582915ca533117a931c60aae836c840fe1469"
+    },
+    {
+      "file": "templates/starter-v2/backend/src/main/java/__JAVA_PATH__/operations/scheduling/OperationalScheduleController.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "ea3323e087d452d7d5484467e5f26d4c0167f4466204c168c1a0db37d53e58a8",
+      "afterSha256": "8b856a051051d1301068a5f4733e8e4cc34a59aa3b7c0f1fd50af2eec0b94f55"
+    },
+    {
+      "file": "templates/starter-v2/backend/src/main/java/__JAVA_PATH__/operations/scheduling/PulseOperationalTask.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "4a53835db18a84d43ac9cc93d33f5b43e3a0e69a907e583e58fcd05ebd537534",
+      "afterSha256": "aa1d115398229cf5c8460d8569dd2ac305b36450e2acbb8ce6498fbcac3dd8eb"
+    },
+    {
+      "file": "templates/starter-v2/backend/src/main/java/__JAVA_PATH__/operations/scheduling/StarterOperationalActor.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "1481d3ee4dfc197b7117dca45a56e52ceffe781be8fb8c37cca03154828c93aa",
+      "afterSha256": "992c6ff677a4c61326f41af2b2a4b03ebded5c7d8578dac6fc427e50a26a1125"
+    },
+    {
+      "file": "templates/starter-v2/frontend/src/App.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "883d4c7eaaf33c2925fd00fd0ca2b76622ec7469123801e34f60c2cbd17a291b",
+      "afterSha256": "44a299f842a510c9f1969b307df832df580caf2c37dbaee66a54d74a557fe5f4"
+    },
+    {
+      "file": "templates/starter-v2/frontend/src/main.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "7ef3a960960242838252cf5ee4f2f83e44ab19ead05a2183065da494d4c23970",
+      "afterSha256": "f8042587cca6af5d8f5dfcc79149fe1b63ed62dbcb8abbbb06aec3e9a468003a"
+    },
+    {
+      "file": "templates/starter-v2/frontend/src/localization.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "c32dc7705f439464b59c29ddfb1b362d24f980cf13dfd75c7ee5df0e05edda16",
+      "afterSha256": "a6cef3d8b0cc548fd9171ff071fd38b6f6262cd340032a9b8c181f5797f401ef"
+    },
+    {
+      "file": "templates/starter-v2/frontend/src/config.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "b610c87ab21cc0b0a27c04b33f8697d1c1a839cb16eb183f6ae7fc2d2d612916",
+      "afterSha256": "94b2bf453a5bb31c60d3afd6434bc3792295c07418f66c024c78c8251f5676be"
+    },
+    {
+      "file": "templates/starter-v2/frontend/src/features/patterns/board-image-labels.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "e9571fbbaf47fb4787090e9e2f92aab83c29a3e96b6317a90b4a8685d28a8804",
+      "afterSha256": "e7fd08b5b10979cb36b8ee6648c7d8e5148e5316d209e7f86f202777a4b9b6d3"
+    },
+    {
+      "file": "templates/starter-v2/frontend/src/features/patterns/PatternForm.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "5da2a6d2ee26bd8eba1590831afb525f90173c128598b57f82fc419f860e4758",
+      "afterSha256": "ec7e2ebe631c18dc535345cda42bc68f48ac92b2afa2617f2bc18b6166ffe957"
+    },
+    {
+      "file": "templates/starter-v2/frontend/src/features/patterns/DatePatterns.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "fe0d45041f9fd0b31a4aa6bd962b8c5b4c1e29f7ad06535ce323adaec365b4f0",
+      "afterSha256": "9774aeda42a0f42bc887593ed2d54670487467fb24f87c65f415ff290d7a62a1"
+    },
+    {
+      "file": "templates/starter-v2/frontend/src/features/patterns/BoardPatterns.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "54eeb4967a0452499cdb0521c026482a8aef6283ad6d68cb87b4e7f3e8221c5f",
+      "afterSha256": "056afac784713077383d4dcb15c2d5a60dea00afd544306fbf6fc4ea67fab0a4"
+    },
+    {
+      "file": "templates/starter-v2/frontend/src/features/patterns/PatternsPage.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "37c0001e5d721915fa1519aacb1397fde0000b752f9b2866eec9e7cb57d72377",
+      "afterSha256": "f96950fbc0f8fdbebab36e30832101e5623eaf63ae16b7c84a69c0979346a55b"
+    },
+    {
+      "file": "templates/starter-v2/frontend/src/features/patterns/ImagePatterns.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "5f80093eb8f689da8c81634fba0f373b1cd6bf28887f34229c845e4b0d39ad44",
+      "afterSha256": "db660d10f17e47c7dd10e7d9e4823783e514fe4cacea77ff4d2769b805709774"
+    },
+    {
+      "file": "templates/starter-v2/frontend/src/features/patterns/TablePatterns.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "fa6acc9bde18d203f45d9b08718677a27433917f45efe4312edbb8480d32304d",
+      "afterSha256": "3b15724eefd60038765d18616eefca20d5bfb68968a2927c9652fe968aa86c1a"
+    },
+    {
+      "file": "templates/starter-v2/frontend/src/features/patterns/ExtensionPatterns.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "72b3fb416a540c407f6bac8a5e8b99ae009af4cecfe7bc5b6e1db0b4d9ce528c",
+      "afterSha256": "b1f24bfc86d7d6c3a02718b3610550f9d39ee54f4d90fca97e93670c6c396cbc"
+    },
+    {
+      "file": "templates/starter-v2/frontend/src/features/auth/LoginPage.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "ac7696d810e843dc10eba4efda662827ec534d2be80ba5cd4305f8731adb966d",
+      "afterSha256": "7d561f49d8dca5bc7366fc870216a7269a3f9952dfa6ec8ed51fa30f1789e86a"
+    },
+    {
+      "file": "templates/starter-v2/frontend/src/features/operations/messages.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "e63fd5bd0d2555b045596e6ffb2623fd38a181ee9ec608fd37ce704bf72da013",
+      "afterSha256": "615ec527485eb67ab5343f666e1f244b539d317f5f860eba4d28e0c7c01050e2"
+    },
+    {
+      "file": "templates/starter-v2/frontend/src/features/operations/BrowserPanel.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "26b0175ff496c29acdd6b357babcc9fba069e3a4a562124c13a63fd75a5347b9",
+      "afterSha256": "9618cc1ee4aa0c42f0ad88fa484b09011103ebc5ce8149682105c78b545447ca"
+    },
+    {
+      "file": "templates/starter-v2/frontend/src/features/operations/capabilities.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "5080c80fa6c7b9a2efab6eb00ec735e85c59355ef457d2859c3820a95b9aa55a",
+      "afterSha256": "dd916c51f8c308887349e557375b1a32484666349197e3e3870588363cd0334e"
+    },
+    {
+      "file": "templates/starter-v2/frontend/src/features/operations/OperationsTable.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "60f258b4b98aa792d0ed2254652ecfc7ed9912f7d32b6a327833023b8b3adb2b",
+      "afterSha256": "9eb07bd994e6e901db51f522ebe01a6e22eeabbe80cd976ee4e7fd8f93819d07"
+    },
+    {
+      "file": "templates/starter-v2/frontend/src/features/operations/api.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "32461942cd78091f7c8659700e5181f4b8aac2b554eb3797237faf75c4e26a8b",
+      "afterSha256": "d249c2a01f9418f9423bd8e5014ae5d5e12fd464af391521334299ee28809635"
+    },
+    {
+      "file": "templates/starter-v2/frontend/src/features/operations/url.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "fef55205172345861dd0753b1e012247d1c56941c8d0a7c68c788ec6d2d58093",
+      "afterSha256": "83d9d85b75083769699c870f8f454bbe9d0aed8e26b5897393468e486cbce48b"
+    },
+    {
+      "file": "templates/starter-v2/frontend/src/features/operations/SchedulePanel.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "b321e766ad07c832bc19ec5f9e8388c10788e758f79ddf83d8051a7feb633c29",
+      "afterSha256": "e1f7b51973a4bdad0f97be51152872e34d34edbb3dba5c54892cd45e54299281"
+    },
+    {
+      "file": "templates/starter-v2/frontend/src/features/operations/OperationsPage.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "4d5c38fd2765dc465af3259841e110652201160eecbb28120fa08c2b9c2f4c0c",
+      "afterSha256": "e28b749334a68e3a66d3be3f9fe46c66c940e69aa12a3f3df7b8d93eb678e384"
+    },
+    {
+      "file": "templates/starter-v2/frontend/src/features/operations/MessagesPanel.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "8a4269b8cfebc325a18a6997e1f7468f8c4227c35b2d0c794ed8d28162ed1c77",
+      "afterSha256": "f8281fb841a8a1726cb69bf0f8de1c39a2f5359fba528c93fb5cfe83578c6f23"
+    },
+    {
+      "file": "templates/starter-v2/frontend/src/features/notes/api.ts",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "655694de34b5ae1d019b2e89352501379f1fd36a3dddbc2c6f1c6b2e9ab0b545",
+      "afterSha256": "a485ac382c175176a0350bd8ada33b6dc184bd569491a715aaaf14fd2f9c595c"
+    },
+    {
+      "file": "templates/starter-v2/frontend/src/features/notes/NotesPage.vue",
+      "language": "Vue/TypeScript",
+      "changed": true,
+      "beforeSha256": "47df5673a2dae8a097cb63acacad0bfed057e720d520a444361553361fcc2123",
+      "afterSha256": "465f3d1818868ca717f54f6eba4a8755ea93d66e5e66856f8934bee3fb109f16"
+    },
+    {
+      "file": "backend/framework-core/src/main/java/dev/scframework/core/ApiException.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "e856dea393dfd5ddd64a6987dfa8861b6b923ddb7cfa856f0eb49d32a6e4adc2",
+      "afterSha256": "b0cbc832eb53193127aa7a2eb793ad7251f18edc1255e9a427e5969c010796fc"
+    },
+    {
+      "file": "backend/framework-core/src/main/java/dev/scframework/core/ApiError.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "8f73a790f5971ace840e1d4c68b1f99f49036948268312979af205556aa0e19f",
+      "afterSha256": "fc76f2893119f82e812ae2441d8f42ae1bfd26cbf2c415898397edf29e4930a3"
+    },
+    {
+      "file": "backend/framework-core/src/main/java/dev/scframework/core/FieldViolation.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "d4d561b8d871d38643f56cb3bbfa03792981bb298bda32fc0a7e1de6fda7bd59",
+      "afterSha256": "3e16b37edf6edd5a4e7b76bdd525a6bd6c0b37e55e06b39bcafe8906320e837c"
+    },
+    {
+      "file": "backend/framework-core/src/main/java/dev/scframework/core/scheduling/ScheduledRunContext.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "786ac89bc0da5224a3c6ec2795da93d8b079d43d0f05ace5211788b6e5ae22b4",
+      "afterSha256": "175aa3f26be4f411884f1176c5c2fa2dc6db996f331b3c0a9f1f6ea95c51d1b9"
+    },
+    {
+      "file": "backend/framework-core/src/main/java/dev/scframework/core/scheduling/RegisteredOperationalTask.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "ff87817b8580432d37b692eb44ccd8cc10ca120b46e7394cd9ede0a6a93569d8",
+      "afterSha256": "cf32f4be2ce3d43f1f117f46af45fb563b0207d85689f9206e772f0245982b7f"
+    },
+    {
+      "file": "backend/framework-core/src/main/java/dev/scframework/core/operations/OperationalEvent.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "cf87a3611935e373094dbb79dbe01fd4e749c291693e53785f4719c52ff82806",
+      "afterSha256": "9b8f6f36f4703d119601a1cff9d79cecf227d61facb6444fae43689a0608f168"
+    },
+    {
+      "file": "backend/framework-core/src/main/java/dev/scframework/core/operations/OperationalEventSink.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "a5e92508e73aa6cd19261f81a12b08f75eb1b612cb22b6fb8c835b8d269dd68f",
+      "afterSha256": "2d2b419b899413e9f5f3b119f5a7b6da2d4ede52e31025366c9454df47836560"
+    },
+    {
+      "file": "backend/framework-core/src/main/java/dev/scframework/core/storage/RecoverableFileStorage.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "a25fcb1af9a66970f41b6527bdbaedface6913fbc3135a8fb8ddb0465959ce2b",
+      "afterSha256": "e27dad07cb8444524a128486056be2748430761f685d1c1f73a446be207329ec"
+    },
+    {
+      "file": "backend/framework-core/src/main/java/dev/scframework/core/storage/FileReferenceLookup.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "febf6f54e2d5902efcb1636a0f6e9216f0ae9cafc4007cbd399840a4aa05b304",
+      "afterSha256": "5551e70ffadbc25ee63dc5496afaf6a147b1254b7123a57bc24bfe35429cb82d"
+    },
+    {
+      "file": "backend/framework-core/src/main/java/dev/scframework/core/storage/FileSizeLimitException.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "173fad893156b4ba4ead0f86914a790a541a784c449f48d730fae51fb0ec010a",
+      "afterSha256": "97ca77e01d3e83a8116933be265f9bdfe541a381ae8dde851452de561e85ea63"
+    },
+    {
+      "file": "backend/framework-core/src/main/java/dev/scframework/core/storage/StoredBlob.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "51cc9f49e8cd8747c23a3364245e812ea9f066873660b700ffa4deeecbd653d3",
+      "afterSha256": "9a5766e2e3f66fa555a08628d7d81b1599778ae1f8a4d46651b68401d7c9dc68"
+    },
+    {
+      "file": "backend/framework-core/src/main/java/dev/scframework/core/storage/FileStorage.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "a39a6b497ddb5d75cb1a38d8d9cd9838da663e1418dfb5a23f0f86e0c82287b5",
+      "afterSha256": "59c45bbb21a09b8e4b6a280f3e4e5301ac4fc909231ce49ccda9e98699f14114"
+    },
+    {
+      "file": "backend/framework-core/src/main/java/dev/scframework/core/audit/SecurityAuditEvent.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "af7d00943099a583e9c1136b87d31a957e00bfb81d6706092e56a52d9b849202",
+      "afterSha256": "705cbb41a260be577664204214b2d64f36cb1c0d0bd69a6246f43998a9d6e82e"
+    },
+    {
+      "file": "backend/framework-core/src/main/java/dev/scframework/core/audit/SecurityAuditSink.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "7bd28e343e3a7945b1720f25e2357f23fd704919040fc9977f43b2c6222737fe",
+      "afterSha256": "4d9b563fce0ad9a900b97fcaee0d37092f571529a8daecde2d3fb8ce4b7ef56e"
+    },
+    {
+      "file": "backend/framework-core/src/main/java/dev/scframework/core/audit/SecurityAuditPublisher.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "e981d65adf916b6a0675e26774db11d5f18b9483798883203107b02f79ca30b8",
+      "afterSha256": "70ea1bf18ed798026ea02c1a40fc92cd385f0a3a2db2c7209fbf959a57a2f6fe"
+    },
+    {
+      "file": "backend/framework-core/src/main/java/dev/scframework/core/messaging/ScMessage.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "551547c1f67db97d04647491569bf9c7fcae49285f6fc020811bccc65f8504af",
+      "afterSha256": "a2ff58386af45a4cf54d9d57c7b6cacfa36279b62e1e2adada9e25f9b3ef7a63"
+    },
+    {
+      "file": "backend/framework-core/src/main/java/dev/scframework/core/messaging/DurableMessagePublisher.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "c32c8f7065d53dfb3aa1bfc3fbfc0772ad594f4e34880238533ba29e3570483b",
+      "afterSha256": "9afe8ba05d76ef288d79d310f99433430b0296a4bef13f34df5bb262f0172247"
+    },
+    {
+      "file": "backend/framework-core/src/main/java/dev/scframework/core/messaging/MessageHandler.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "26ef497508cc00d7178d6a457d69502a567d0963b8d5f5973351e30beec8ca30",
+      "afterSha256": "3f6b75be2b12c2dfca1a07277157d05ec1b5a0b7b148a122d7f6e102dfefe525"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/AppAuthentication.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "820c549f2ad8f03555644e1022d118908b6054ce5b20978aaac7ee85b5c3c886",
+      "afterSha256": "faaa138a3d7db33e88fbf621091846509c1e64fc81fc5a26fdcd382d3a3996c7"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/SpaRoutes.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "2f030d28c1c7fd21edba5c331a54dd0c3b02e39f47200bb6aa29d0e9e603bd89",
+      "afterSha256": "f63b17ec476f955186e31da0d5e6979e011dfd2d4c7ef1ef634cd7f77ef510fe"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/ReferenceApplication.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "2d159dc71a4d1e51093eb2ebe9b140687e5ff9535cf1baf402d0f906cd4cd66b",
+      "afterSha256": "f784f49cda7d638a8ff186956a25eb13c20772ec7589219b9ab9e75c3c0363f8"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/identity/UserService.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "4d4747b44882c41b48475d4a29bb0b58c4cfd79bcfa6ce2c3d14d91db3b57463",
+      "afterSha256": "e3b4d3943bd84dd8ac7a793ae5bd7f9986f1a358a0ead559a19b3f2765a3edad"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/identity/ActorResolver.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "2304a5d23cd1a0ad3910d8d6135d2594aa97c98a45141602b7727891adcd9a75",
+      "afterSha256": "f1bd2e8d41bf718228b8215f6427f4eae5b43083852aadc63b39b79e0a4f1867"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/identity/UserDtos.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "93ee63fa6d34afab01a2ac952f6ca0b498f0da3ebd314b9218eaa156bad047aa",
+      "afterSha256": "823374db00085a7454cd1e38debf39b32b75e57c6e93399a92462dcb24dc5c78"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/identity/UserEntity.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "13f074be54b6e60f3331c65bdc681ea11a0411bfcf6dc10bee82943d103782e7",
+      "afterSha256": "d41893ab0ab79520f78e10b7077a360cef154c7f6d5ae61d3abe549e93202b96"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/identity/UserRepository.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "b35d7610c2aff1ec70d91e6457d0497d8e05283a7d16af488e9824bf3c8022cc",
+      "afterSha256": "eff0178063c1f57ca7786f04b61b9a37a249f6e5dba30bd823a409a1586eedb5"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/identity/UserController.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "94d7bf8a632902bca455304518515b5c1205f6a074b502b444b90beb2b1c38c1",
+      "afterSha256": "8469e1b363f2f205daf2f2a97358f28c1e1df1102f86d37287b559dee10257b5"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/example/ExampleReadMapper.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "a75b46681320a9fd1d8dbcdfbf20664fdb660b330f170ded6330708b8448133b",
+      "afterSha256": "3365fcca43233a62eeb93b5be28f1e8d90fb53b72c72e5609a91e251b0d2c56e"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/example/ExampleController.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "af2a4c7878b856e1f6ab8eecc2ff2951b0d7c2a42c0481d433036a3be7c643a6",
+      "afterSha256": "6db2f43cfa11cc8d43c6f9c97094126c6c31553950ddf9adeeaf68fd1e441592"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/example/ExampleRepository.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "8ba57ca86b7c2bda84d9a7b974ce4d25fec4b9fddaa2cb62bef47e18029cc819",
+      "afterSha256": "5afca119f99c68fc314622b687d5bf4ccfb27f20c0b8336b2ad637014d15b770"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/example/ExampleService.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "03964b91f8ac5e60d391913ec419e57000a0bcae9b0daf5a21fe64531f4515bc",
+      "afterSha256": "c10d8d2d97c451ed65125102e1fc669a4d5004d5c68203d0b0c87453609860ee"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/example/ExampleEntry.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "f64a2d9ea841d6ccde5469d371d82511519b42a550b281922700d8dec409983b",
+      "afterSha256": "d6fb0381d03be901fb8cf39d839fcff37cd6027fefa19e27c08d7f23166a726e"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/example/ExamplePage.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "a2d309987320e88eb88884e72273794e2d477580e3d06653a89eb47f388edb28",
+      "afterSha256": "8dae4db4af979c5b01470d42df253f2a8a848965fe99aba364b69389a98b3b57"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/example/ExampleDto.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "ff3c891632b0e459b1e8fb91b1fcdcba42796825d51b03389ceb6d81ee00f866",
+      "afterSha256": "db56382615a92624e76ef73416ee311f58652fd5cd44e5fca6c9b72ae7e880e6"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/integration/ReferenceEchoClient.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "008b58321f3ce663342103af6a654acb9ee7b11512214f163b9040ae849ec9d2",
+      "afterSha256": "8d7abecbbfe5de2afb5cb7b0bb54ae40ea33103a1f5cc8253bb239caadc8e27b"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/integration/EchoController.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "0b7de1fe1e64251997dde5ddceb0af288e835c8a3308f161966d5427f19b64f9",
+      "afterSha256": "40722ae3a4497cdb61396a06e99dc244a7509aa577fc9babe1d11e990c07031f"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/requirements/CommentRepository.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "0c811181acead4561ea67eac88cd10056c44e4629b6b06091416a0e499f59f98",
+      "afterSha256": "7aa195383582cac0f1493d8eaffda0dff553c7202ba73c04681c35678cdeb654"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/requirements/RequirementRepository.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "ae1eed63e284a5a0b933e84f3adf37efe7626d1f07249aa35af69c96aa8e2430",
+      "afterSha256": "7f2347580165a070d6d632dbfa3aaa5cf4291d827362574b6e833b15f8522273"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/requirements/RequirementReadMapper.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "47db5553a398514ec8531b253def7228f283966e7a32717ad0a204d746a39cf1",
+      "afterSha256": "67825dede7b9ab2284b650431779ae7a8e7e30f9d440565b64158fd799fcfc17"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/requirements/RequirementController.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "361dca9ca3f7bfa350ffd112c487f7486e65a1b838caf31a784a1d44ba0f6f1e",
+      "afterSha256": "f3648fcc102331b15ae9d0b48fb69a647075916eb41b745a4bdf30c2e974c2aa"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/requirements/RequirementQueryRepository.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "966c9a991847bdfc8b7e58915df699e9543e1e67dd3c1d8ed444a6fc516d4103",
+      "afterSha256": "846db561db62de653c6ed4ee74cf8b7a79d2516ff363a3db0df816f5d37cbdd5"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/requirements/RequirementEntity.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "749f7fd04ef9898257108cfb2fc196fd6b46d80ddec593374a5e9392c85d235c",
+      "afterSha256": "8171b8cd58360813cc0884de564a879c16670aa6fbfe3e9b93185ea134f3f910"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/requirements/RequirementService.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "a724f556bae67255c6fddc4ab83c1ad67c1f7602f81f1b0eb0712aa6a0bbc6c1",
+      "afterSha256": "8a6c9d230b7659f954e84db194f2ac1785b905784c31dfbb47d3e07bb6a288e5"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/requirements/ReviewRepository.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "7d66330118a22fa38b959e002930aad5f0d253f8febbb94127458033089e7594",
+      "afterSha256": "1e9982d0cfa0ecd9d2d188152cb1cdae95a84e702e93edd5d8316e4faf212e08"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/requirements/HistoryEntity.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "71351340da9f27e8c1e4f13d82732e22f53f63f6fe0181d29a73f2e73671cd1e",
+      "afterSha256": "6532d3e689ad7085d5316013f8082fc0b71fc385fe71267a18a85a5c146ae854"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/requirements/RequirementDtos.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "5622c2b3138183b58f4f93221e89c0bf74109f0cfd8932a03b52b76225486d7c",
+      "afterSha256": "3c728ca7917921097a42ce7996a5b0175ccc0eba75452c4b4709dcd40b352c11"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/requirements/RequirementOpenApiConfiguration.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "c36f273439e84145aa4ac36c7c0792d1a2e30665cc8d0fcf13b8c31f19ceb4ba",
+      "afterSha256": "d89d4771919ea431192eb5c53f81b4c051be6388ad2cba9a2ac35a27e937c632"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/requirements/CommentEntity.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "a5fd3e0748235a064926dcdf1cb5d889a779256974c9eed56786799b2a4c1d68",
+      "afterSha256": "ce83ed218d86ef4fbc47c8bcfdcfd9229afa095dbb01b43b5ca310e68c27e737"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/requirements/HistoryRepository.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "e5216be9dd98cc56d7733d77037d2619441c2c04ed9580f282512f2df26e333f",
+      "afterSha256": "366caa1bc1af94866df68f968efa59d7feec07cddc7d475f8f63b182d09630ad"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/requirements/ReviewEntity.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "c3d22080f3ab7bb3824aeb76e6901d12cc31547d4acf77b8484b6d8aeefeaf4c",
+      "afterSha256": "22692196d1b46248fce588f60ee9341753d6b24ae1c23451163a0439c734302c"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/notices/NoticeDtos.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "045ad49a09b4a8962fd090197889f3383f7ec2ee41dd70ba8c66de2920220ed8",
+      "afterSha256": "4ba4da3eaf72eb7e8fdf64eea6a8798a596225ed012e4988da02e536111f65ef"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/notices/NoticeController.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "0d46919c7232168ef85ce3863474b66d2f0ab5bd4b9f33ebbf414a2dfbe38a11",
+      "afterSha256": "3cc02dd21a7e2d154b3984f249c2a7cfa8523c2f2d1bfe6cb05c7b54d9164883"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/notices/NoticeRepository.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "2ff9893b8198f95296c6899593a433d82d8ac1ede7840e1de38dc9a96c7ac802",
+      "afterSha256": "45d7bccc85c4e22803dbde06583848bbf070bbe279eab9b7a8552d5d93691b53"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/notices/NoticeEntity.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "b170430d6de2085d2b4a929f37b4e77a6852a1326e09675526fd4e44acf0034f",
+      "afterSha256": "fd940fefdda04873f1ca7ec5845325dd6617d31bf63ecc102eb4ab05e83234c3"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/notices/NoticeService.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "21eef12c09e2c88684b451f8dba2d910f9e8de7fd3dff7cf9b15a14a92a9020b",
+      "afterSha256": "feaac313fe6db44925bb6d731c8f99d6d161797f8bbd9a7b78bd5ec9d2bfc881"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/audit/AuditController.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "5d95aed1e8ccea0f2953a4d6925e69636b06b3f8d81b2229b212a72a02b0ba91",
+      "afterSha256": "4ed31a593f43334e7c1e4445fc9b1e9fee1e4b9b2eb06ef08e302f6b3b6a6097"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/kanban/KanbanAccessService.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "a8cfd6b79bc77084eed6177d1a2fb4eaf90dc21b4ca2b1da5bc5e51c314b9bcc",
+      "afterSha256": "c5eefc62966d831b4a1c48938608cbe1afc03ba281f17233754cf8826fe71afc"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/kanban/KanbanBoardRepository.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "5218073c54ab89a1d1dfc78e5124065fe3373d3a4c7aebcd4c3bb6e0c42b9002",
+      "afterSha256": "79fe9d3c544386039ed616c3c973ac68f953d20e9c877185fd0a57865c468128"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/kanban/KanbanReadMapper.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "44c35557f86329ba8b55cec749c62aa555ab2250d590605bb57b3883ee534700",
+      "afterSha256": "d5654bf55f79e123b4b6aba0fa48f384fb74dc056c10c3528d3a96533598976b"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/kanban/KanbanController.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "6aada929a2a7ba36d5e0bd3a3fd89ee7dd3c04821ae63cb17fc7e01e3d27b9cb",
+      "afterSha256": "447e95b010fb0e995a1e9093a3d19931cd9e7c6480fef7c001dfa19601553aba"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/kanban/KanbanMemberRepository.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "0ef7bffc82c9e9840959e4176cd446fd3b8d7505e003dd138b5799b38b7509a1",
+      "afterSha256": "61ffb066790455cc831c3d7476775aad2b3a9127cfa1057439b0bc9c8a2e18f6"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/kanban/KanbanTaskEntity.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "a1c9c9c1851be0a6d023af65968eed856153c862ae655de3348c5475fde287f2",
+      "afterSha256": "dc1d6902fd6cb266d35cf1981b6882952dc408f7aa00932aee92df167f77971f"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/kanban/KanbanDtos.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "e63e542005fda7e52f5259766a8a3d434402f8de14277b828e4eb1f0d3727f27",
+      "afterSha256": "d5a531ce8762735e0010e41345bc8575f3c284c0fe61dc37138af7fc5bde82c4"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/kanban/KanbanBoardEntity.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "80ac416870826d3bc2367a3e64f0d504981dff7e085185d2bd262e1235e3c01f",
+      "afterSha256": "57735b0261021a841e4bf3b1ccd768c20b52824d4b93fc37839da3e6ce20c733"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/kanban/KanbanMemberEntity.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "8a50f92c5a96d3ec2de3039b66966e247e0b05ba55c4744779bffefa077b75d3",
+      "afterSha256": "96e2c5426f1b7e55dcbb1218ce0ff0fa102cb8ed65f86fce8361b181618aaec1"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/kanban/KanbanService.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "23203be891500bd75a1b5532a34d2c29d8c641c6503fce37124acece669efbe6",
+      "afterSha256": "d9ca41cf7a657ab5f5bc880deb7e054130a78ea646ce57be6dc4fd0cb56dfd5f"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/kanban/KanbanTaskRepository.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "662bdc2c90b30e8f6a19c5ef18855c8ca6f3ff95055acae8e0b078f7ce5dabcc",
+      "afterSha256": "934f78b229651518fee881bfbfcce2e585db9c751434aeb834b30e45d0cbd2e9"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/menu/MenuService.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "4c0b5760f5702c51f65006ed0a3c877069bbcbf0482894e9c524f645824b771e",
+      "afterSha256": "d265bc4b8308d865f58e2808e2342160c4e9b92a9050d3b6b7ff3ea483962151"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/menu/MenuEntity.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "f8812d77be2acbd0771028e4b015d7c3e04d1000c825980b47996923cf564f9a",
+      "afterSha256": "53ac3369be5b6821ad27d285b1879232f4a7d821d6be62d6d8fe7bf62b05c991"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/menu/MenuController.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "1523d7f00199654822d187665eb95abfcdd1d24f7c1dd7974bfd763f7aede446",
+      "afterSha256": "8e6ea17b8316dc6d941d9ed62a4d3eab676009336295809d0edc7f07d151818a"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/menu/MenuRepository.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "77ffff0bf8bccfce950e5d46c7d8c7305544cf493ca85600a5f6ff71322d96bf",
+      "afterSha256": "97d44fad970098bc53a931b3a007faa7e80c05582807d99b094ee5b5fb7d1730"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/menu/MenuDtos.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "bfe3f80218769ff1e0e51248a51f55b556a19372040cf5cd19248f2cea658a9c",
+      "afterSha256": "a57086f5aabcf5867b903cf6cab1cca66dda64b0c5f5d27069594a6c6011c48a"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/documents/DocumentGrammar.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "944fe1e21ff058b1433b21ee8853b86a1198c4202f1f21147834d79a6461ef13",
+      "afterSha256": "70f2cc5b700b8a0c7d27e6a365ff3e36d05b6809a281955e787bc16e76850efe"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/documents/DocumentRepository.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "4ad5161f569ef431edb6ddff831dd9c5378575ffcb869266708ccea0973e0336",
+      "afterSha256": "7fb419875c4e3d32680b4929f7d1f1270ec756207183f2ae2b3af9129f19fca0"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/documents/DocumentDtos.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "c5b0949ef286f2272d4c814a7bbf8457833df08943708bc7d26b91c6668d33db",
+      "afterSha256": "47d449f158e195f26dbb7cc61bcf0a5d591b5b9b6e9ff03b0a292682ea8c5d2b"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/documents/DocumentController.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "2d117cb453a20c0516fbad3669c45ca8576429dc265cde9601699607cd055385",
+      "afterSha256": "90b426efdb1fb9027cd6e375e527dcb19fc419dd50b99a29e99d54984e53dba2"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/documents/DocumentService.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "2ed4bf85b0a59ca398ae60f5dc1c773f025c2c0e584d518c5ed0a52576e97001",
+      "afterSha256": "817fdbe787baad5c3d00bad832dab313227e0496bf223220e6ecd7a09e4ceb33"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/documents/DocumentEntity.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "8bc9565a84e1e03f2d922a8a21cc28f4bde6ef0db3421513de6d716ec862e6e4",
+      "afterSha256": "d84b90b43d35419925d968dedf0ca7d3d2ff7efa20927c7d857818c9672c6928"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/reports/RequirementReportController.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "889c0fef7f599b72b6427b8eed0f60147c229272a9986d18c4c13aa02c8d9ede",
+      "afterSha256": "c461aa4b003e99dbb5f8ff2d55101b929cf8592efcf4af6f2f06216f95f9f0b1"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/reports/RequirementReportOpenApiConfiguration.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "387d913293c36e8b4df1b1f5c3cee5f5a788dee46b9868ca00660cef24d53351",
+      "afterSha256": "30043b9b2d024f812bc300e49435560dc5a9bbb50cc08a3987c54207616663fb"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/reports/RequirementReportRows.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "e3daa10ca81fe4aefe83420a1ef930ec4c481bce9b72d12d4552e9ae0f7c6973",
+      "afterSha256": "89c1267b53b588add32aa0ba2ed74988f2dce30559b3b0164bc064eed1efbdc2"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/reports/RequirementReportService.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "21664bd1538de41acd7033c94243891b5e3910ebbc557fa55eaf30d9b1d3a08e",
+      "afterSha256": "3a1d2a979b0068f02315b5f449efcbcca62c0430e4fbe09cd1d7ce2737fa8859"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/reports/RequirementReportDtos.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "99f4b889fb97036a6905203cc7c1a51a8847ba0954ff453076cdedd227207a09",
+      "afterSha256": "34e2f19642d70619600f754b1f2b502c5e565721b92545551ae1ee170019bfc1"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/reports/RequirementReportSqlMapper.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "568c40a781e03271d362fd5728024cb92dc10d74e9ade73037874159b0768284",
+      "afterSha256": "554339039fa0c9d4c9f3bd167c25ce05aadde2505041fd9a1b5cdf8a371ed551"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/media/StoredFileEntity.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "e96488c8723a643e6484e49031d12da658932b9a998f33009982ebe3a69f91e5",
+      "afterSha256": "5a9edc1dc515a02a2d7c50ce98d86459910b0d2af2dd23522b00a12fdc00cc4d"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/media/ScreenVersionEntity.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "7d45465773f07edf84280ec1d8dfaaa7fbf8c53746dfbdaed8e5e5b8ba71d709",
+      "afterSha256": "5a3fb6887bb93b9e4c0cb7bfc07f1553d63e3aba43f9b820d3d4f2bc530ea43e"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/media/MediaDtos.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "405fbed5c5e3cffc2c82141b1e86b5c63d786dfcf69e7f4055a7072fe0a237f3",
+      "afterSha256": "30cf80f3fae08fbecf1957c757a399399b74929c8f2a8269ecf012ab7f4f3aca"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/media/AttachmentRepository.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "cbabe8cdda00ea8125b45668c46268eac473e148c1a9b51c8b12bd0781e85c28",
+      "afterSha256": "beb46b6aeadfdd154ea2e10c4faef57438f214cce587e279fc511918dbdcd328"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/media/ImageOrientation.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "56115c50f692702efb9ced2ddf5a6f9fe8bc68442e9bbe9b4a6c0c8a02345400",
+      "afterSha256": "23a618b6bdf99e39c07b4f038860f63edabd8d1eb30681fb1b6bbdb5626fd216"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/media/StoredFileRepository.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "244d4143c04ba69bb29a4bec6587e351368fc32233eb0c905f41b03476e35c76",
+      "afterSha256": "8652eba62853b67643bf1935aaa6ca50904f00fee89a12fec6bc31ca0728b8af"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/media/MediaController.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "9e6686ac222a400c88f4c2a3ff0e130fa65427c52e72abf434bd3017a753a7ed",
+      "afterSha256": "37f236d528f322eb6b687dde69cd935b0b57d72ce4aafd0feb78d237878bab62"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/media/MediaService.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "f6947572bbd7a6bda5a46b0b16367b310e3855649607d87b3e4bf84e797c2799",
+      "afterSha256": "5256652659b8f7cb555283eef54ae3de25c0c65a8f0ec04fde01db47e78525f9"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/media/ScreenVersionRepository.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "01737a9462460aa3a1fe23c5b3e89c1413f66f60054dbd3162fe3a97de0a1e1f",
+      "afterSha256": "66d1c0c2aa7f95c291ec91252be58e1bc67b7dca7f96dc1a14b840533dea6ad0"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/media/ScreenEntity.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "c00884cd3eb39422e98ff11008f0ed401e97a26b9304265079841a38c2b0f841",
+      "afterSha256": "2b55ce154da9682f46c9e27413cc2c697e598ca946fbfd0a31fb29a6541de187"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/media/ScreenRepository.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "42e7b2b914d4c5e0ad546e367547950d9e1d308254649419c8e9f05232a4236b",
+      "afterSha256": "b94b5e6157ad98efb69d88349fbb4e587c4d0bf078f64295cf70f0cf29d11a56"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/media/AttachmentEntity.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "8d608c6dee0e9bc212d93e1cce1a0571bc3013eda225505e81ee427b47073b71",
+      "afterSha256": "a4c4ba4c3afe631aabe02da831960779ea9fc111f6c294ecfb648dfe9b92ac16"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/media/AnnotationRepository.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "8e2e90e567c2eccd429f53d8030723aaaf8365f92c2fc0f9367a06efae239595",
+      "afterSha256": "4c1294eee21aaf2412a384b9aecef3b7754f7346547262cfad4fd8b1ceddc4a7"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/media/AdoRepository.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "04ec75eba4c42abd121969c45cfea5db91f6b5a931fd06a2f1e6be6b0536a7cd",
+      "afterSha256": "e953aa8b83a2a980995e1f79226eca3c1683af6787b270a3388c368f3f414a16"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/media/AdoEntity.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "a41bda410317b4859a13232758bd6475e33bd108bb2f2c6f0f81aee83c8320a1",
+      "afterSha256": "cc2263c64f46a904a967e021163b7916fec30cdf20a2c6c9b16e156f775d68af"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/media/AnnotationEntity.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "88d2abc671b4c73ad5d1473f530c908ff27ff930c1b6afe52107d0e385f1ebbe",
+      "afterSha256": "5b18e14d5528713623f0bf98e97c1c4f47fcf2b8d9fc01cf614033e01c068fb0"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/operations/browsererrors/BrowserErrorsController.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "0ba5daeb776977fd4f70e0ae43d72df8e8da04ce6ca0e5fc352a431d8d3d6976",
+      "afterSha256": "b7f17fdf827cd50797ff410bd80057d904add1eb2c91131acded0eab9444d7b0"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/operations/messages/OperationMessageDtos.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "8a0b5d4e204ab6a628470781cfaf31c95bd02682edee668002e665cfe3704f9c",
+      "afterSha256": "ad77477f5eff29ea714b29a978190fc3ad6726992e27eccc4755780ddd38c54b"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/operations/messages/ReferenceMessageAdapters.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "af2ffe4a2baf0fac40b8a1eaec388c95e929857e79ea0075cf0b0bea62f2bc0a",
+      "afterSha256": "1487bbf7e30e3e9533d11083274209bcbfe3e19b004a90155fef06e30350ec5d"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/operations/messages/OperationMessageController.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "dca1575c4a7bf5d4116958cb47fc4e0d61420fc053f82c48ffa875b7cdf2d563",
+      "afterSha256": "76d45c80f61084c49d004f253041405a2a011d53a14afc051dd6ee94d584c5c3"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/operations/scheduling/OperationalScheduleController.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "8c1a861fc9816b3c4d7ac3108a042c60365ac02707b9cdc51f4231cb3fe11921",
+      "afterSha256": "db676dd760abf1bc82c40d3eb7b700a290357faadfa1a1c5e1bf15d3275c0964"
+    },
+    {
+      "file": "backend/reference-app/src/main/java/dev/scframework/reference/operations/scheduling/PulseOperationalTask.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "d333b9a1f6de95fa1698a29c8dd691bf538c5162b3e5f5b4a5c3e8e29726b0a4",
+      "afterSha256": "7e258826daea1abb7df27e4e95ce7bbca377aed993bdbd1a8c5bead9177c1f10"
+    },
+    {
+      "file": "backend/starter-app/src/main/java/dev/scframework/starter/AppAuthentication.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "29d12671582a156e60dadaaa55b0e127e1c43445af0946917e81c17fe51df0df",
+      "afterSha256": "2c22ccf079a9a1f28cdd425980e0228e58ea132aea838406ba431067b41d3770"
+    },
+    {
+      "file": "backend/starter-app/src/main/java/dev/scframework/starter/SpaRoutes.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "53633a99e6ac0dc2d2dde3c98fb32e57f9a971a0c1601412579e05f407063d71",
+      "afterSha256": "affb18bd4f240b4830165147ab66a8fe273205f56dee4de504f94098e5afc88e"
+    },
+    {
+      "file": "backend/starter-app/src/main/java/dev/scframework/starter/StarterApplication.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "d402b2ca8e3b2071d2f29eb1520a4f8398bc90749d4283b5471dd6db3fe8c6c4",
+      "afterSha256": "e0e931305a1eee42739fb43cba306123b92d0de091f41c93c5a24c1317f013a8"
+    },
+    {
+      "file": "backend/starter-app/src/main/java/dev/scframework/starter/operations/OperationMessageDtos.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "a3f00d5d2f7199e5376a3c80868b1e849efa2a1edd7363749eb1aa68269119a8",
+      "afterSha256": "e15a4033c8d6a6d5799c08c5dd2ee4fb2f610f060afd1c3a290eb7f1f5e7e44a"
+    },
+    {
+      "file": "backend/starter-app/src/main/java/dev/scframework/starter/operations/StarterMessageAdapters.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "b4da10619d8c08ec071012fc81dd58e67d005997e13a5f76a779ac1642292458",
+      "afterSha256": "0f888bd45b0b4595a4bd0ceaa7149fba4e72cfafdb8c4e1efbf974d6d2184f85"
+    },
+    {
+      "file": "backend/starter-app/src/main/java/dev/scframework/starter/operations/StarterMessageController.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "6e53309de16932e2868668eed4eeea6f88ffc104a74e626ce59c32b328b2a176",
+      "afterSha256": "01e2ed2d368913723441465ae9f0017b912552712dbdd2dbe136e4fa114755a4"
+    },
+    {
+      "file": "backend/starter-app/src/main/java/dev/scframework/starter/storage/StorageDemoController.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "55d4c7587714714dda8eb8b57f0d716c57326f73429f11240b7a430fa2897aea",
+      "afterSha256": "681d046e5e8aef68adc8d58bc83d2f046fb924744d9a0d184e93321abdd7510a"
+    },
+    {
+      "file": "backend/starter-app/src/main/java/dev/scframework/starter/operations/browsererrors/BrowserErrorsController.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "d3fb569a0dba4ad94a98df1e686a8aa22b6af932313682d796e4eab70f703ffb",
+      "afterSha256": "8255cdd8f4aaee61f24e5273d3b2116d1634ab6ba477d3f81880b09125110f92"
+    },
+    {
+      "file": "backend/starter-app/src/main/java/dev/scframework/starter/operations/scheduling/OperationalScheduleController.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "bcd3fdd2362818b216e94bdfafe2c657ec4c56bb197a1249148ba7942b1bf7f6",
+      "afterSha256": "0a26df6f48efec4b1cadfbbbc9a9ba56a8cc99c06ffc52e2325c90a548158ac4"
+    },
+    {
+      "file": "backend/starter-app/src/main/java/dev/scframework/starter/operations/scheduling/PulseOperationalTask.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "496025c9004f6944545534f8d21a51f0a8bd14349c2fdc0612421e6053b9ee35",
+      "afterSha256": "965e3ae44c973ad495a2b6c2e7c3ad6d9574e3b6bf9b2b3a76eb0d4f827b8a9b"
+    },
+    {
+      "file": "backend/starter-app/src/main/java/dev/scframework/starter/operations/scheduling/StarterOperationalActor.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "2888316e7c6c310ca4ba9a10a0c53cf6764e80d34764fe396f2eb98e47abc644",
+      "afterSha256": "12e76d52a192b25b5a373356f06355a1d262afc9ee514b5ede2b06081eae1312"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/ScObservabilityAutoConfiguration.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "da73126dc812c705b927c127d340ea9b8c917e85381e5e365bab724413816d7d",
+      "afterSha256": "81af5355a3cfabfb54d359f74d21dee9b59892a46f8c265b1c4a1b69e2be7bed"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/ScSchedulerAutoConfiguration.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "123b79a3f5c59203df22b0a973b8fbe05be39af0761f59816f71ebc634af4e41",
+      "afterSha256": "c51b18c5fe6ec4a8b0a8c260e3fe82a34897150f89588dfb183e17984c2cf8c1"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/ScOptionalInfrastructureFilter.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "5039b202d69a8ff3133a469c2453aed570e8bab8ca3dce4c0c867e6821cb7a16",
+      "afterSha256": "20b0839ab40a9d42aab9c87a8eda963f26eb005c46e0c8bd2b1804a997fd929a"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/ScWebAutoConfiguration.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "5d7005643c51740e0fc69523d26c1f51b2bddcf4c478c5dd936371f0abe9caa0",
+      "afterSha256": "efd927bbba4c4a3ee08ae1df258b54895742e750d43ca0c20e1f62a8359eb49f"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/ScMessagingAutoConfiguration.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "c99e3b2946c1de1e90bcf0d0fe0e218129df426e0a1d4f1cbfb149c809409ada",
+      "afterSha256": "5c63da8010dfcac3effd65366902703e4d4ac26ff50aaeb34cb19fb0300e5d7c"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/ScFileStorageAutoConfiguration.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "5296c4d5097b464a12c252b7ae0cfec187ea80072e0b9acba111e21c80fa8aac",
+      "afterSha256": "5029f8c2bc89cf376faef1ae4858d8d6d1457312b5970e74c9ce40669b4f3c97"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/ScOperationsAutoConfiguration.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "9191efa670c698a34f71609c19f33ef1b4956194c76bef5c6a85a18e8de58418",
+      "afterSha256": "c69c5400095c4e317f7f8809b454be5eaca1743215307a8e47c3435900c001ec"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/ScFrameworkProperties.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "b1e34d3dca75ddd0fa882141c0c1d41b3d985e78a7dbe51c4d3530feb71428d2",
+      "afterSha256": "a4e875bdbb60cc244111427a4e5c8b85860d8afae1985269e7d40785d5475b2c"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/ScAuditAutoConfiguration.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "7fbd306b652476392ff612313e51e7f2219a75b5325221fb0e14a60303c71c7d",
+      "afterSha256": "634224d6726076f8c6697fd1532e1a34aa0444299899ec1bbbb989badf584dbb"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/ScOpenApiAutoConfiguration.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "1ce5fd7259c629812b515485953c039a4340e662661d5c5f6b8d90e457679177",
+      "afterSha256": "209a5372bcd0d6e74a74169f1025176b219644797541d9dff4b224e99d51749e"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/ScBrowserErrorsAutoConfiguration.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "c43be916a1606271d036c7cf6e3d0de9d3ae013b6c4e9c9925caf4e3513a278f",
+      "afterSha256": "c486c82ca2d511eda845adc78fff903503752a98c1b0b11cf29bff7282bd3249"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/ScQuerydslAutoConfiguration.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "5b2c12900c54062b17618497b8f1122c95fb9beaee97c7553469db35f3f50be6",
+      "afterSha256": "48c3f052c00cf5b68a8dc2f451eb3c8b5e01b6cf0e136b37ea28b0bfff5ea1f5"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/ScSecurityAutoConfiguration.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "bb769841d69682bc9049071b3e836c52c9d684cee92489dd1d4366cad6c7d404",
+      "afterSha256": "956c51d2bb67442bdb88e07655ee1c3f69417d67b838178cbb086a67bb5431b4"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/ScFeignAutoConfiguration.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "a46749485e47fdff2934628790263edb79ad715fd919f25344a673f36e068e25",
+      "afterSha256": "5531ec5e2965be3349baa672bce4fa91a7181c98de560001a4a1637f35ef4f7e"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/browsererrors/BrowserErrorService.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "e2efe32abcbde2c364882bb5a02a5ae798cde68b9cd78a4683747e0eeb6f8575",
+      "afterSha256": "e4203ce123cbf0c9ed0df17ea21234bc04e6bd6033212eaa05835bac7875d3a3"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/browsererrors/BrowserErrorRateLimiter.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "f43fc94d7be9dba348ea8bf1ce78f1fa8f5d199f143c813094971b2314024350",
+      "afterSha256": "91ee441c98ae68b857fce99a4925e4cd9d8abfc33d7f62621baf2b8174b408f3"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/browsererrors/ScBrowserErrorsProperties.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "9dfcd3b831297966ab8e55af09b992cbb7cc1de76c65b0b0be6c174f862a804c",
+      "afterSha256": "b4ef4fd41f60f5ee531206ea829c452afd0c4cf477a307af8073e682ba05ec45"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/browsererrors/BrowserErrorBodyFilter.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "84ae704f64126be312b7e476baed05aae0c5371851a6d5b40e74b13a24a76c50",
+      "afterSha256": "3a08d68b1d9f6fdab989610b9974999ee0acbf9bd1ff524fccf9dd75b55673b0"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/browsererrors/BrowserErrorContracts.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "c79ffe9a02a00a0cbe23736092736fa71a534d8e31f1cbaf215cb31070fa0b9f",
+      "afterSha256": "8256df616f2983ba25e540b857ef93f02df8f79974bd283bd9b5b269ce8bac0d"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/scheduling/OperationalScheduleContracts.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "d0b590a8df044769b493da4bed820695914061f08116c95682efdbd985aed481",
+      "afterSha256": "df3c6b39196ae98fbdc8cd511ae52261463fa2c3828fc34085c2212fb6f1e4e1"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/scheduling/RegisteredTaskDispatcherJob.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "61ff0b7ef0502b2775e579d1b0aad46188fd2762ad35c90fd141e60bd9932c8f",
+      "afterSha256": "12d7c36d5811ee34beb42b5c1161d35cdd247a0396293f55f5bec2bae85d79d6"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/scheduling/OperationalSchedulerService.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "83ab71617d05c4662316e65984e7fe50f2c5add8ddbb3fc2c7be862236e5453e",
+      "afterSha256": "83db0c3b94609b7b33746fe6d7aa369c1a1ae61daf14e511bfe7a3976b62b398"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/scheduling/ScSchedulerProperties.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "79ef83b92e490363843814c016be1e2bb1699fda7bcea76237ee34570092a4da",
+      "afterSha256": "1cc68a2934078301e92bd20508b7040349549ef4c882ad2510fee408fd5f2a9c"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/scheduling/RegisteredTaskRegistry.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "aa144681b999b4a95c24372369d9dd175c16663cef5870de7bbefbb323ffbb61",
+      "afterSha256": "d93e77dd682c0a2ecc0aa3dca454b9e98a0faa04859111331ae6f6736e12147a"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/security/SecretFileUsers.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "f19412c11a575ed98b214097e7d1815afdb304abbef01034a7ecc5bede6295d1",
+      "afterSha256": "5a29058f055179754ed5f04e8c175dd9ff7f87e536a8e7158321ee91e642f03a"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/web/FrameworkCapabilities.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "a484865a9dbf9891ade15cd2317359672cb200fb2dfe01da618c4c3eaccb244d",
+      "afterSha256": "8d770f7181466c2612376b20d683241ed876577c59cef205db03a34c66b64d41"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/web/DefaultSessionEndpoints.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "79afc33854117589a327e6fe174d803860c01954da03500687cb9b022de89a23",
+      "afterSha256": "e39d2b65c182c4858df46784e13ef7f98796110348f77a622fe8a2b377add819"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/web/JsonCsrfSwaggerTransformer.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "44acbb3e9959f3c4a63997b78c2ce2eb2bb266498e4fbf1c5857415414202db2",
+      "afterSha256": "3559d7e599099a3d2ff276bc692fe5399ab440b8739359ec3aa1ec6b6208e026"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/web/RequestIdFilter.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "01525603e0d436ea6222a6c4e313e184e6aca87a037897b580d7793c80d9612b",
+      "afterSha256": "76a1bd7a1e5f1352c8c89afaa43893e83f54104971861f0aeaffcc72a74d8915"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/web/FrameworkCapabilityEndpoints.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "0df80a24a26b1d9f1ca102f4a9da5e9aa179d14ee803964fdda146ec47e1606f",
+      "afterSha256": "e56e77a0ba07da1c683363b45d459f1b7f9a9086c47357fbd9a25a5ca33aa0c8"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/web/ApiExceptionHandler.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "c4dd1b4e3e4e390b0fb2688d0071052aa8b015a8296dce7567408fec72d08181",
+      "afterSha256": "0d627476493da925d343000b622958655bb349a52b9ce7729cd0f466d7564e59"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/web/CommonEndpoints.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "ce446fc1631d4d72dabbdf66edf2827b4b51b6ef5c2faad4ea9494ffe569446c",
+      "afterSha256": "e1bf21165fdc11f650ff78eb794d3f449cd5df178fb0a9f1b2666aee17e136ff"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/integration/FeignCallBoundary.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "2df57d2254c2744317d6fa8d4a9de464c7507a85043809491a3092bfc8a62a69",
+      "afterSha256": "7b5bdab4630b769b6a652aee4aa58c0f49181cc13ddd2058f2a642e4db64f3f0"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/observability/SafeOperationalEventSink.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "4e9735a6a384a7c7a053151bdb34c4566d395e2d0f4e1ce6e6fab3288f357a44",
+      "afterSha256": "0bf0df05684363ad94b6ad56a7a1e36a1960b01d7d9766d4c889af15907d8bda"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/observability/OperationalSecurityFilterChain.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "4ba6dd47609a94dec6aac58cd966d2278d439c3bd90b7ea2e852645edc5de932",
+      "afterSha256": "e78659cd5cb8f680beeb717587b066f4e7240ee97bf2e9609ea164ea9dd85f61"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/observability/ScObservabilityProperties.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "15af73bceef09cd7fd0e2ce3aa0134d61530f648ab07e12892488ccfc778b235",
+      "afterSha256": "5193d828a6b466bb3b14e95e9f977e0fbaa8e8e727f3543d3b8c8e0421712e26"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/observability/SafeSpanExporter.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "4e2d9af560c484997ca54cc7118f3527f23af148dbd2a6d8329786569fc69248",
+      "afterSha256": "4c3fd7d45a525414ed63b5051ed962a79bf468aa3dbd134d2c7743ed3e192783"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/observability/SafeHttpEventFilter.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "d07304179b1e70968a720198fa048792baf79807d3fac63d4408c43d7e027d32",
+      "afterSha256": "37a2c222b80d00628ba3b8d90077f5ef7d1e266f7a85a701c221af066ad0001d"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/operations/RuntimeMaintenanceLock.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "3e2aecc62d60df1e98da40b7231e875aad40440e174eacb46cab3af6ab5f6ec5",
+      "afterSha256": "999e5fc80c8ce271b6b939d4838898462b96781efa189473ea655ec9cfb6e2bd"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/operations/ScOperationsProperties.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "e3344e95ada5ac0251ba249de9dd54b130745d81dcddac69731ca2c0c5fbb41e",
+      "afterSha256": "833c14d099c9d663345ab6bf80c3c0fde856287dc7119fce9ae78778f2f0c527"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/storage/FileStorageTransactions.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "53b58f0c6634980e219a3f7fbd5091fda3396d45cbcc2c3c5114f9e63eb36899",
+      "afterSha256": "bd4f6968428b0906bb346a2703044e1b09a40f97032ad032581205339b7b7bc2"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/storage/FileRecoveryService.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "b6ea4678cc080651402b0b18d2fb69089b4664590c102580667faf5bb8880600",
+      "afterSha256": "8a472273e7ab70d92c7e7a125a31840f2341d3cf2afd90b348fdaae55eebe8e6"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/storage/ScFileStorageProperties.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "7d7993ab3f8ea18b88e758297c5f0517585274349b1113ccd4b39d712c134b5b",
+      "afterSha256": "c1c71db8d2f0be4edd8cef20606b7dedd2cc98bb87241283a2a8b848bd0a0005"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/storage/ScDurableStorageProperties.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "81b7f489dc4f99d7edd2eceb4c96efe44da9da0df9b5674b20cabc6915f8fd76",
+      "afterSha256": "47d8c2cf065c53db99cf553126ca9dedbd0278e4fd23d42571ad35b68f4a63f4"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/storage/FileDeleteMessageHandler.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "03538fdd3a81e3e037c93eb6c37ae6de8c81db4b06d99e261aed512fb4adf949",
+      "afterSha256": "ad97ff5f36fe9dd24668bb2e3818994b46ca36a700356592127d90c3b441c946"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/storage/LocalFileStorage.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "5833fa631bdbcc2684b1af7bebf19da9686b36d794e88356cd410381a6146177",
+      "afterSha256": "4466e49c6a1537b36ce80d988b6be941d03b9018279c0fe0223fc939b3dc14d5"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/audit/JdbcSecurityAuditSink.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "63e3da608fb974c35dd83c0c0c6736bd013c31aefc0453299eccd95826b61e8e",
+      "afterSha256": "6b48768035c611f93a8f69e3b77f36803a067869bbb1a828b6e5deea660de6fd"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/audit/SecurityAuditMessageHandler.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "eb72a86d7630e2168057231abbca8f37f3b9757aeeebfca8bcbc217b34901b83",
+      "afterSha256": "2ac7b001d8d4fcc7cf60e0dfe6f045636c7b28c3eec475a22b1252f7793f182d"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/audit/AuditWriteDiagnostics.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "3e4bb3a8183cc4ae7391154c2c7b1b0fea05fc5b9feb8dab6c812f5c09ad79ce",
+      "afterSha256": "67da883d13ddc422b5039d5e2801ac8f20f1e475f344625e8b1368ec3c008ec2"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/audit/TransactionalSecurityAuditPublisher.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "f31abb688948cfb115446c999e26a132df98d47b11c0e804ddfe6e71501ce45b",
+      "afterSha256": "1ae1c596d8d90b9fa5a53f5962e4dfa09bbf31a8ab859a062ecca3f2b41d5d6f"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/audit/DurableSecurityAuditPublisher.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "e1fb03147d5121b50f829a765ae57522defb78332663d7458be1efea8f6d7140",
+      "afterSha256": "429520a7c5aca0c9a0928d38c68598f0cc5d155ee01fc1e60cc84584753908ee"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/audit/ScDurableAuditProperties.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "6c5ec3aab67824feeca0ea5750ea15d069fc0cfe07b66cd42dc1d9f41aec4cd0",
+      "afterSha256": "452cc6feadd16e811ed19ccfb4341a41a7324251883ca3d099fe07382dbc5fd3"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/audit/RequestAuditRecorder.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "0a8ab7d7dfbdaeabfb8bf58624cd969135b9e8537836e27de4a15ed90c6971a5",
+      "afterSha256": "fc0243d641419160052c8648d51b37a328878de3d0126e3bb3871f7d4e2705a9"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/messaging/MessageConsumer.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "c505d0bc7eddd4ea3468cad48e96e1701bd60fb7d41ce3332afde7bb686abc68",
+      "afterSha256": "bb8608c74cf5817068968b575583c4fab70a8390a55bc6a268dc7c0616427d91"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/messaging/JdbcMessageStore.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "921df1154ff846a8be6b2f1af041dc4347c2f730c732df63c5fbb4a6145937d8",
+      "afterSha256": "73caa26e6dc0b8d21d5ce788059ce2ca023ba3e6cd7d0a7732c53ab5a7c6d46e"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/messaging/MessageCodec.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "d903f0c4b5a7843128a041031351300109d08367eceedf17afda30aa830d596e",
+      "afterSha256": "fe22d7791cc181e55d064446a1acfd06741a697906bac3025ccba294e56338d2"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/messaging/MessageDispatcher.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "3b6d7151f61633cc70f53bd1fa64f9d23e4c864d8d72b58a43396b3fefa52242",
+      "afterSha256": "339f6092569bdec9fe044f557ebaa39ea9d4dc2bf0e562a57ced7e6b525d6ff2"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/messaging/MessageRegistry.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "c9a034a2bb19b2e4a423c937c3d760a867a5f3e9b04685837edaa250050d3404",
+      "afterSha256": "2dae07bee0bea1a8342423b76d3cbee4026d74a28ed08cd4eec643c9eaf06df8"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/messaging/ScMessagingProperties.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "6fe2c0084ae1a9636d81535e66d442d1d10732d3b55ced7e66630a2280cfd15b",
+      "afterSha256": "42a8ab1c7e7ae1a7f48804a3386376da57b7e1fe0d6552b5de2ac017626a61cd"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/messaging/JdbcDurableMessagePublisher.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "5d7a39e9a28bb76d049bbbfbf84b8765858e9ef9fe5b052509a222e314f8fef2",
+      "afterSha256": "cdab77db28b15c455ed6067171af5bc042bca0916956e3f623e97474062dfa3b"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/messaging/MessageWorker.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "5564fc95dfed7271bb81e6c66abf57e860796b79ca87719ce5c64a8223fb8b12",
+      "afterSha256": "9aa0364d2ad2f691fcb27b93ac0df6050972338075e7521ea03ad9e581925533"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/messaging/MessageDiagnostics.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "369cec3de25f34268aced626fe8600752e038327f60304f70df05d442c1ba809",
+      "afterSha256": "f0f33ea0480cc29720f5c3dc8741164f4cadec9650c77150253df78e05371b10"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/messaging/MessageEvents.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "571ee812e382f860a648e0f7d6b227ce2ba42fc6b6f7ceb663ccfa80ecadeda5",
+      "afterSha256": "7e68a4a0984c93d4c62811ca3df45004324b075a6a086df78188018930065e2f"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/messaging/MessageOperationalTasks.java",
+      "language": "Java",
+      "changed": true,
+      "beforeSha256": "9973c8a80a5a8ce99328006711e0e39d9ccf8c05ff3951ddd2f6785623215070",
+      "afterSha256": "a3236edde039d98d99f71deb98038ccc0a3bf9a103806cf507e09d589587736f"
+    }
+  ]
+}

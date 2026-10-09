@@ -244,6 +244,18 @@
 </template>
 
 <script setup lang="ts" generic="T extends object">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 가상 스크롤과 일반 페이지 표를 전환할 수 있다. 일반 표에서는 같은 props/events/slots를 ScDataTable에 이어 준다.
+ * 가상 모드는 segments의 빈 높이 spacer와 보이는 행만 렌더하지만 caption·thead·tbody 구조는 실제 table로 유지한다.
+ * 키보드용 첫/이전/다음/마지막 행 버튼과 전체 결과 기준의 행 번호를 함께 제공한다.
+ */
+
+/*
+ * 업무 rows/정렬/선택은 부모 소유이고 paginated/fallbackPageIndex는 사용자가 고른 화면 표현의 로컬 상태다.
+ *  generic T는 표 행과 slot 타입을 일치시킨다. ref는 viewport/thead 등의 DOM과 표시 상태, computed는 props에서 계산한 파생값에 쓴다.
+ *  가상 행의 높이/포커스 수명은 useVirtualRows에 맡기고 이 SFC는 표의 의미 구조와 일반 표 전환을 담당한다.
+ */
 import { computed, nextTick, onBeforeUnmount, ref, useAttrs, useId, watch } from "vue";
 import { pickScHtmlAttrs } from "../contracts";
 import ScDataTable from "./ScDataTable.vue";
@@ -300,9 +312,11 @@ const {
   focusOut,
   moveRow,
 } = useVirtualRows(displayRows, viewport, props, headerHeight);
+// 부모가 component ref로 호출할 명령은 key 기반 이동/포커스 두 개만 공개한다. vendor 가상화 인스턴스는 공개하지 않는다.
 defineExpose<ScVirtualHandle>({ scrollToKey, focusRow });
 const paginated = ref(false);
 const fallbackPageIndex = ref(0);
+// server 모드는 부모 pagination을 그대로 사용한다. client 일반 보기에서만 로컬 페이지 index를 사용한다.
 const fallbackPagination = computed<ScTablePagination>(() =>
   props.dataMode === "server" && props.pagination
     ? props.pagination
@@ -317,6 +331,7 @@ function fallbackRow(key: string) {
     fallbackTable.value?.$el.querySelectorAll<HTMLElement>("[data-row-key]") ?? [],
   ).find((row) => row.dataset.rowKey === key);
 }
+// 어느 보기이든 같은 key로 이동한다. 일반 client 표에서는 그 행이 들어 있는 페이지를 계산한다.
 function scrollToKey(key: string): boolean {
   if (!paginated.value) return scrollVirtualToKey(key);
   const index = displayRows.value.findIndex((entry) => entry.key === key);
@@ -326,6 +341,7 @@ function scrollToKey(key: string): boolean {
     fallbackPageIndex.value = Math.floor(index / fallbackPagination.value.pageSize);
   return true;
 }
+// 보기 전환/페이지 갱신 뒤 nextTick을 기다려 실제 생성된 입력/버튼에 포커스한다.
 async function focusRow(key: string): Promise<boolean> {
   if (!paginated.value) return focusVirtualRow(key);
   if (!scrollToKey(key)) return false;
@@ -342,6 +358,7 @@ const total = computed(() =>
 const pageCount = computed(() =>
   Math.max(1, Math.ceil(total.value / (props.pagination?.pageSize ?? 20))),
 );
+// server의 현재 페이지 시작 위치를 더해 화면에 없는 이전 페이지까지 포함한 전체 행 번호를 만든다.
 const rowOffset = computed(() =>
   props.dataMode === "server" && props.pagination
     ? props.pagination.pageIndex * props.pagination.pageSize
@@ -383,6 +400,7 @@ function sortLabel(id: string, label: string) {
 function sortColumn(id: string) {
   if (!props.loading) emit("change-sort", nextSort(props.sorting, id));
 }
+// 선택 가능 여부는 앱의 isRowSelectable 콜백으로 결정한다. 일반 표와 같은 새 key 배열 이벤트를 사용한다.
 function selectRow(key: string, event: Event) {
   const row = displayRows.value.find((entry) => entry.key === key);
   if (props.loading || !row || !canSelect(row.original)) return;
@@ -418,6 +436,7 @@ function changeFallbackPage(page: ScTablePagination) {
   if (props.dataMode === "server") emit("change-pagination", page);
   else fallbackPageIndex.value = page.pageIndex;
 }
+// 선택·포커스 행의 key를 먼저 기억한 뒤 보기만 바꾼다. DOM은 달라져도 가능한 한 같은 업무 행에서 조작을 이어 간다.
 async function toggleView() {
   const key = focusedKey.value ?? currentKey.value ?? props.selectedKeys[0];
   paginated.value = !paginated.value;
@@ -448,6 +467,7 @@ watch(
       );
   },
 );
+// 줄바꿈/폰트/열 변경으로 caption+thead 높이가 바뀌면 스크롤 시작 여백도 달라진다. 이전 Observer를 해제하고 현재 DOM만 측정한다.
 let headerObserver: ResizeObserver | undefined;
 watch(
   [tableCaption, tableHead],
@@ -467,6 +487,7 @@ watch(
   },
   { flush: "post" },
 );
+// 브라우저 자원은 컴포넌트 수명에 맞춰 정리한다. 화면을 떠난 뒤 높이 갱신 콜백이 남지 않게 한다.
 onBeforeUnmount(() => headerObserver?.disconnect());
 </script>
 

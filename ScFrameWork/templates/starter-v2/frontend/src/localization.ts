@@ -1,3 +1,7 @@
+/**
+ * 공통 번역 사전과 이 앱의 app namespace를 연결한다. Java ResourceBundle처럼 키로 문구를 찾되 locale 변경 시 화면도 반응형으로 갱신된다.
+ * UI 문구만 번역한다. API 경로·상태 코드·업무 ID를 표시 언어에 맞춰 바꾸지 않는다.
+ */
 import { createScI18n } from "@sc/i18n";
 export const i18n = createScI18n({
   messages: {

@@ -58,6 +58,17 @@
   </section>
 </template>
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 공통 디자인 변형과 기능별 SFC를 조립한다. 실제 신규 기능은 이 구조에서 앱 소유 API/폼/Service를 추가한다.
+ */
+
+/**
+ * 공개 @sc UI/날짜/표/차트/편집/Excel/보드/이미지 패키지를 소비하는 Starter 예제 모음이다.
+ * 하위 SFC별로 상태/이벤트를 소유한다. 디자인 버튼 횟수·입력은 로컬 ref이고 서버에 저장하는 업무 기능은 아니다.
+ * 버튼 intent/size와 입력 density는 공개 prop으로 조절한다. 공통 내부 CSS를 앱으로 복사하지 않는다.
+ */
+
 import { computed, ref } from "vue";
 import { useI18n } from "vue-i18n";
 import { mdiRefresh } from "@mdi/js";

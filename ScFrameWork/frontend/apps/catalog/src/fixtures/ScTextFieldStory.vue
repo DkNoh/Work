@@ -11,6 +11,16 @@
 </template>
 
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 공개 입력의 model 변경과 native change를 나누어 받아 입력 미리보기를 표시한다.
+ */
+
+/*
+ * title ref가 부모 폼의 초안 역할을 한다. 사용자 입력은 즉시 로컬 반영하고 update:modelValue 이벤트도 전달한다.
+ *  commit:modelValue는 입력 확정 시 Storybook Controls에 전달하는 fixture 이벤트로 공통 입력의 새 public prop이 아니다.
+ *  watch는 Controls에서 변경한 외부 값만 반영하며 타이핑과 manager의 비동기 echo를 섞지 않는 예제다.
+ */
 import { ref, watch } from "vue";
 import { ScTextField, type ScTextFieldProps } from "@sc/ui";
 

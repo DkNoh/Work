@@ -20,6 +20,17 @@
 </template>
 
 <script setup lang="ts" generic="T extends object">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 서버 total과 20개 페이지 크기를 공통 표에 전달한다. 행 action은 이름 있는 slot을 통해 각 패널이 정의한다.
+ */
+
+/**
+ * 운영 패널의 서버 페이지 표 wrapper다. generic T는 rows/columns/getRowKey/slot의 행 타입을 동일하게 연결한다.
+ * readonly props는 부모 소유이고 페이지 변경·재시도는 emit한다. data-mode server이므로 전달받은 페이지를 다시 자르지 않는다.
+ * defineSlots는 row-actions의 타입 계약이다. 자식 표가 제공한 row를 부모의 action slot에 전달한다.
+ */
+
 import { computed, type VNode } from "vue";
 import { useI18n } from "vue-i18n";
 import {

@@ -1,0 +1,426 @@
+{
+  "checkedAt": "2026-10-08T15:21:39.243Z",
+  "userAccepted": false,
+  "results": [
+    {
+      "width": 1440,
+      "locale": "ko",
+      "geometry": {
+        "overflow": false,
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 68
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 68,
+          "width": 240,
+          "height": 932
+        },
+        "search": {
+          "x": 288,
+          "y": 16,
+          "width": 320,
+          "height": 36
+        },
+        "main": {
+          "x": 252,
+          "y": 150.6875,
+          "width": 876,
+          "height": 1436.65625
+        },
+        "widgets": {
+          "x": 1152,
+          "y": 150.6875,
+          "width": 276,
+          "height": 1436.65625
+        },
+        "kpi": {
+          "x": 252,
+          "y": 150.6875,
+          "width": 201,
+          "height": 148
+        },
+        "chart": {
+          "x": 252,
+          "y": 322.6875,
+          "width": 576,
+          "height": 443.65625
+        },
+        "device": {
+          "x": 852,
+          "y": 322.6875,
+          "width": 276,
+          "height": 443.65625
+        },
+        "font": "\"Plus Jakarta Sans\", \"Apple SD Gothic Neo\", system-ui, sans-serif",
+        "fontLoaded": true
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 43
+        }
+      ],
+      "pageErrors": [],
+      "externalRequests": []
+    },
+    {
+      "width": 1440,
+      "locale": "en",
+      "geometry": {
+        "overflow": false,
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 68
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 68,
+          "width": 240,
+          "height": 932
+        },
+        "search": {
+          "x": 288,
+          "y": 16,
+          "width": 320,
+          "height": 36
+        },
+        "main": {
+          "x": 252,
+          "y": 150.6875,
+          "width": 876,
+          "height": 1475.15625
+        },
+        "widgets": {
+          "x": 1152,
+          "y": 150.6875,
+          "width": 276,
+          "height": 1475.15625
+        },
+        "kpi": {
+          "x": 252,
+          "y": 150.6875,
+          "width": 201,
+          "height": 150.5
+        },
+        "chart": {
+          "x": 252,
+          "y": 325.1875,
+          "width": 576,
+          "height": 443.65625
+        },
+        "device": {
+          "x": 852,
+          "y": 325.1875,
+          "width": 276,
+          "height": 443.65625
+        },
+        "font": "\"Plus Jakarta Sans\", \"Apple SD Gothic Neo\", system-ui, sans-serif",
+        "fontLoaded": true
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 43
+        }
+      ],
+      "pageErrors": [],
+      "externalRequests": []
+    },
+    {
+      "width": 1920,
+      "locale": "ko",
+      "geometry": {
+        "overflow": false,
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 68
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 68,
+          "width": 240,
+          "height": 932
+        },
+        "search": {
+          "x": 288,
+          "y": 16,
+          "width": 320,
+          "height": 36
+        },
+        "main": {
+          "x": 252,
+          "y": 150.6875,
+          "width": 1236,
+          "height": 1469.40625
+        },
+        "widgets": {
+          "x": 1512,
+          "y": 150.6875,
+          "width": 396,
+          "height": 1469.40625
+        },
+        "kpi": {
+          "x": 252,
+          "y": 150.6875,
+          "width": 291,
+          "height": 148
+        },
+        "chart": {
+          "x": 252,
+          "y": 322.6875,
+          "width": 816,
+          "height": 482.90625
+        },
+        "device": {
+          "x": 1092,
+          "y": 322.6875,
+          "width": 396,
+          "height": 482.90625
+        },
+        "font": "\"Plus Jakarta Sans\", \"Apple SD Gothic Neo\", system-ui, sans-serif",
+        "fontLoaded": true
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 54
+        }
+      ],
+      "pageErrors": [],
+      "externalRequests": []
+    },
+    {
+      "width": 1366,
+      "locale": "ko",
+      "geometry": {
+        "overflow": false,
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1366,
+          "height": 68
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 68,
+          "width": 240,
+          "height": 932
+        },
+        "search": {
+          "x": 288,
+          "y": 16,
+          "width": 320,
+          "height": 36
+        },
+        "main": {
+          "x": 252,
+          "y": 150.6875,
+          "width": 820.5,
+          "height": 1557.484375
+        },
+        "widgets": {
+          "x": 1096.5,
+          "y": 150.6875,
+          "width": 257.5,
+          "height": 1557.484375
+        },
+        "kpi": {
+          "x": 252,
+          "y": 150.6875,
+          "width": 398.25,
+          "height": 128
+        },
+        "chart": {
+          "x": 252,
+          "y": 454.6875,
+          "width": 539,
+          "height": 432.484375
+        },
+        "device": {
+          "x": 815,
+          "y": 454.6875,
+          "width": 257.5,
+          "height": 432.484375
+        },
+        "font": "\"Plus Jakarta Sans\", \"Apple SD Gothic Neo\", system-ui, sans-serif",
+        "fontLoaded": true
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 39
+        }
+      ],
+      "pageErrors": [],
+      "externalRequests": []
+    },
+    {
+      "width": 390,
+      "locale": "ko",
+      "geometry": {
+        "overflow": false,
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 68
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "search": {
+          "x": 112,
+          "y": 16,
+          "width": 81,
+          "height": 36
+        },
+        "main": {
+          "x": 12,
+          "y": 199.984375,
+          "width": 366,
+          "height": 3083.90625
+        },
+        "widgets": {
+          "x": 12,
+          "y": 3307.890625,
+          "width": 366,
+          "height": 1307.25
+        },
+        "kpi": {
+          "x": 12,
+          "y": 199.984375,
+          "width": 366,
+          "height": 128
+        },
+        "chart": {
+          "x": 12,
+          "y": 807.984375,
+          "width": 366,
+          "height": 432
+        },
+        "device": {
+          "x": 12,
+          "y": 1263.984375,
+          "width": 366,
+          "height": 450.90625
+        },
+        "font": "\"Plus Jakarta Sans\", \"Apple SD Gothic Neo\", system-ui, sans-serif",
+        "fontLoaded": true
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 2
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 33
+        }
+      ],
+      "pageErrors": [],
+      "externalRequests": []
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "geometry": {
+        "overflow": false,
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 68
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "search": {
+          "x": 112,
+          "y": 16,
+          "width": 81,
+          "height": 36
+        },
+        "main": {
+          "x": 12,
+          "y": 245.96875,
+          "width": 366,
+          "height": 3173.90625
+        },
+        "widgets": {
+          "x": 12,
+          "y": 3443.875,
+          "width": 366,
+          "height": 1307.25
+        },
+        "kpi": {
+          "x": 12,
+          "y": 245.96875,
+          "width": 366,
+          "height": 128
+        },
+        "chart": {
+          "x": 12,
+          "y": 853.96875,
+          "width": 366,
+          "height": 432
+        },
+        "device": {
+          "x": 12,
+          "y": 1309.96875,
+          "width": 366,
+          "height": 450.90625
+        },
+        "font": "\"Plus Jakarta Sans\", \"Apple SD Gothic Neo\", system-ui, sans-serif",
+        "fontLoaded": true
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 2
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 33
+        }
+      ],
+      "pageErrors": [],
+      "externalRequests": []
+    }
+  ]
+}

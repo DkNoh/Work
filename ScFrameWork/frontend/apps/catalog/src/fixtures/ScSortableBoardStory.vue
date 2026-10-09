@@ -24,6 +24,15 @@
   </section>
 </template>
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 합성 보드의 item slot에 문구/링크를 넣고 저장 충돌·표시 전환 버튼과 마지막 이동 의도를 보여 준다.
+ */
+
+/*
+ * 보드는 이동을 직접 저장하지 않으므로 이 fixture가 서버 승인 역할을 모의한다. columns ref는 부모 자료이고 reject면 기존 순서를 유지한다.
+ *  Partial<ScSortableBoardProps<BoardStoryItem>>는 Story에서 일부 props만 지정하게 하며 generic item 타입은 key/label 콜백과 slot까지 연결된다.
+ */
 import { ref, watch } from "vue";
 import { ScActionButton } from "@sc/ui";
 import {
@@ -61,6 +70,7 @@ watch(
     columns.value = value ?? initial;
   },
 );
+// 공통 move의 beforeKey 계약을 새 열 배열에 적용한다. 이 동기 변환은 합성 성공 응답이며 실제 앱에서는 서버 저장/재조회 뒤 자료를 반영해야 한다.
 function acceptMove(move: ScBoardMove) {
   lastMove.value = JSON.stringify(move);
   if (reject.value) {
@@ -71,6 +81,7 @@ function acceptMove(move: ScBoardMove) {
     .flatMap((column) => column.items)
     .find((item) => item.id === move.itemKey);
   if (!item) return;
+  // 모든 열에서 이동 항목을 제외한 새 배열을 만들고 목적 열에만 삽입한다. 공통 부품에 넘긴 이전 배열은 제자리 수정하지 않는다.
   columns.value = columns.value.map((column) => {
     const items = column.items.filter((row) => row.id !== move.itemKey);
     if (column.id === move.toColumnId) {

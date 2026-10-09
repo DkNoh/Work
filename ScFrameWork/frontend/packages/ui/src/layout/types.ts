@@ -1,3 +1,8 @@
+/*
+ * 공통 셸의 메뉴/문구/slot/탐색 이벤트 계약이다. 메뉴는 readonly 배열이며 앱이 route·권한·locale를 기준으로 준비한다.
+ *  navigate는 선택 항목을 전달하는 이벤트이고 Router 인스턴스를 받지 않는다. 공통 UI가 앱 구현을 참조하지 않게 하는 경계다.
+ *  VNode[] slot은 header/main/sidebar에 부모 콘텐츠를 삽입하는 Vue 구조다. JSP include처럼 재사용하되 부모의 반응형 상태와 이벤트를 유지한다.
+ */
 import type { VNode } from "vue";
 
 export interface ScAppShellNavItem {

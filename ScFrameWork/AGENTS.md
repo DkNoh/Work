@@ -7,7 +7,8 @@ ScFramework는 `/Users/dk/Work/WorkboardVue`의 업무·API·UI 계약을 참고
 - 사용자 요청에 따라 Redis·JWT·SSO는 제외한다. 서버 세션·CSRF를 유지한다.
 - 조건부 기술도 모두 구현 대상이다. docs/질의/조건부기술-전체구현.md의 단계별 목록을 따른다. 소비 앱 활성은 선택 가능하나 실제 구현·예제·기능 테스트는 필수다.
 - 공통 UI/runtime/서버 Starter는 업무 레퍼런스 앱을 import하지 않는다. 레퍼런스 앱과 최소 Starter 앱이 공통 모듈을 소비한다.
-- UI는 SFC `<template>` → `<script setup lang="ts">` → `<style>` 순서로 작성한다. render/h/JSX/TSX 화면을 만들지 않는다.
+- 모든 신규·수정 화면과 기능의 프런트·Java 서버에 JSP·Java 개발자를 위한 상세 한국어 주석을 유지한다. 파일 역할·입출력·상태 소유자, Vue/TypeScript 핵심 문법, UI→API→Service→DB 흐름, 권한·revision·트랜잭션·오류·비동기 정리 이유를 설명한다. 생성 코드와 비밀값은 주석 대상으로 편집하지 않는다. `docs/developer-reading-guide.md`의 기준을 따른다.
+- UI는 SFC `<template>` → `<script setup lang="ts">` → `<style>` 순서로 작성한다. render/h/JSX/TSX 화면을 만들지 않는다. template 최상위 형제 HTML 주석은 개발 모드의 단일 루트를 바꿀 수 있으므로 화면 개요는 script 주석에 두고 영역 HTML 주석은 기존 루트 안에 둔다.
 - 자체 공통 UI는 파일/import `ScActionButton`, 템플릿 `<sc-action-button>`, CSS `.sc-*`를 사용한다. 업무/API/DTO/composable에는 Sc를 자동 적용하지 않는다.
 - URL은 Router, 서버 자료는 Vue Query, 저장 전 입력은 해당 폼, 계산은 computed, 실제 공유 상태는 Pinia가 원본이다.
 - 모든 업무 HTTP는 공통 runtime의 단일 client를 사용한다. 쿠키 세션·CSRF JSON `headerName/token`·30초 timeout·필드 오류·이전 세션 응답 폐기를 보존한다.

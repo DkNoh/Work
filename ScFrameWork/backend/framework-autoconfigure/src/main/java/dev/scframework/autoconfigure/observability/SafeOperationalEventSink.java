@@ -14,6 +14,12 @@ import java.nio.file.StandardOpenOption;
 import java.nio.file.attribute.PosixFilePermissions;
 import java.time.Instant;
 
+/*
+ * 등록 이벤트를 고정 label counter, trace 연결 NDJSON, 선택 OTLP 로그로 기록한다.
+ * private 파일 경로/symlink와 최대 크기를 검사하고 동기화한 record/rotate로 파일 쓰기 충돌을 막는다.
+ * 최대 3개 이전 파일로 회전하며 관측 실패는 실패 counter로만 남겨 원문을 재로깅하지 않는다.
+ */
+
 /** 별도 bounded NDJSON만 수집한다. application.log와 요청·Throwable는 수집 대상이 아니다. */
 public final class SafeOperationalEventSink implements OperationalEventSink {
     private final Path file;
@@ -39,6 +45,7 @@ public final class SafeOperationalEventSink implements OperationalEventSink {
             privateFile(this.file);
         } catch (IOException error) { throw new IllegalStateException("Could not prepare observability event log"); }
     }
+    // 고정 metric label만 사용하고 event/trace ID는 정제 로그 필드에 둔다. 파일 크기 초과 전 rotate 후 append한다.
     @Override public synchronized void record(OperationalEvent event) {
         try {
             meters.counter("sc.operations.events", "kind", event.kind().name(), "outcome", event.outcome().name()).increment();
@@ -61,6 +68,7 @@ public final class SafeOperationalEventSink implements OperationalEventSink {
             meters.counter("sc.operations.observability.failures").increment();
         }
     }
+    // 오래된 세 파일을 뒤에서부터 이동해 덮어쓰기 순서를 지킨다. 이동 대상도 symlink/일반 파일 검사를 반복한다.
     private void rotate() throws IOException {
         for (int i = 3; i >= 1; i--) {
             Path previous = i == 1 ? file : file.resolveSibling(file.getFileName() + "." + (i - 1));

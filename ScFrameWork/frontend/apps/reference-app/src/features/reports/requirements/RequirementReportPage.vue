@@ -90,6 +90,17 @@
 </template>
 
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 필터는 적용 이벤트, 표는 정렬/페이지/선택 이벤트를 부모에 전달한다. 부모가 URL을 바꾸면 Query가 해당 조건의 서버 자료를 조회한다.
+ */
+
+/**
+ * 보고서 화면의 조립자. URL 조건 → parseReportQuery → useRequirementReport → 필터/표/차트 props 순서로 데이터를 전달한다.
+ * 검색 조건·페이지·정렬·보기 방식은 Router에 보관하여 새로고침/뒤로가기로 복원된다. 서버 결과를 별도 ref에 복사하지 않는다.
+ * 선택 행 키만 화면 ref로 관리한다. 현재 서버 페이지를 바꾸어도 다른 페이지에서 선택한 ID는 유지하고 사용자 변경 시 초기화한다.
+ */
+
 import { computed, ref, watch } from "vue";
 import { useRoute } from "vue-router";
 import { useI18n } from "vue-i18n";
@@ -157,6 +168,9 @@ const summary = computed(() => {
 const operationError = computed(() =>
   query.isError.value ? (query.error.value?.message ?? t("request.operationError")) : "",
 );
+/**
+ * 잘못된 URL의 검증 오류와 서버의 필드 오류를 같은 필터 UI로 전달한다. invalid URL로 임의 대체 조회를 수행하지 않는다.
+ */
 const fieldErrors = computed<Readonly<Record<string, string>>>(() => {
   if (!valid.value)
     return Object.fromEntries(
@@ -167,6 +181,9 @@ const fieldErrors = computed<Readonly<Record<string, string>>>(() => {
     );
   return query.error.value instanceof ApiError ? query.error.value.fields : {};
 });
+/**
+ * 새 검색 조건은 page 0부터 시작한다. 폼이 입력 중인 값과 실제 조회에 적용된 URL 조건을 분리한다.
+ */
 async function applyFilters(input: ReportFilterInput) {
   await runtime.router.push({
     path: "/reports/requirements",
@@ -183,6 +200,9 @@ async function changePage(page: number) {
     query: reportRouteQuery({ ...filters.value, page }, parsed.value.view),
   });
 }
+/**
+ * 허용한 정렬 필드만 URL에 반영한다. null은 서버 기본 정렬이며 오름/내림/기본의 세 상태를 유지한다.
+ */
 async function changeSort(next: ScTableSort | null) {
   if (query.isFetching.value || (next !== null && !isReportSortField(next.columnId))) return;
   const sort = next !== null && isReportSortField(next.columnId) ? next.columnId : null;

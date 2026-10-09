@@ -109,6 +109,17 @@
   </figure>
 </template>
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 이미지/기존 주석/현재 박스를 canvas에 그리고 확대·좌표 입력·주석 목록을 native HTML로 함께 제공한다.
+ * canvas 포인터와 좌표 적용 버튼은 같은 modelValue 변경 emit으로 연결된다. Escape는 그리기 또는 이동/크기 조절을 취소한다.
+ */
+
+/*
+ * 부모가 decode한 HTMLImageElement와 정규화된 0~1 박스를 받는 주석 UI다. 파일 다운로드·Object URL·서버 저장·권한은 소비 앱 책임이다.
+ *  ref는 canvas/DOM 참조·zoom·그리는 preview를, reactive draft는 사용자가 아직 적용하지 않은 좌표 문자열을 소유한다.
+ *  computed는 표시 픽셀·편집 가능 상태·주석 검증을 계산한다. 공개 modelValue는 부모가 원본이며 드래그 도중 값은 preview에만 둔다.
+ */
 import {
   computed,
   nextTick,
@@ -172,6 +183,7 @@ const defaults: ScImageLabels = {
   annotations: "기존 주석",
 };
 const text = computed(() => ({ ...defaults, ...props.labels }));
+// as const로 key를 일반 string이 아닌 x/y/width/height의 리터럴 union으로 유지해 draft[key]를 타입 안전하게 읽는다.
 const coordinateFields = computed(
   () =>
     [
@@ -194,6 +206,7 @@ const draft = reactive({ x: "", y: "", width: "", height: "" });
 const editable = computed(
   () => !!props.image && !props.readonly && !props.disabled && !props.loading,
 );
+// 원본 이미지 비율을 유지한 화면 크기를 계산한다. zoom/컨테이너 폭이 달라져도 저장 좌표는 0~1이므로 의미가 변하지 않는다.
 const stageConfig = computed(() => {
   const width =
     Math.max(1, Math.min(hostWidth.value, props.image?.naturalWidth || 480)) * zoom.value;
@@ -202,6 +215,7 @@ const stageConfig = computed(() => {
     height: width * ((props.image?.naturalHeight || 320) / (props.image?.naturalWidth || 480)),
   };
 });
+// 기존 주석의 ID/이름/박스를 먼저 확인한다. 잘못된 좌표가 canvas의 잘못된 위치나 key 충돌로 이어지지 않게 한다.
 const checkedAnnotations = computed(() => {
   const ids = new Set<string>();
   return (props.annotations ?? []).map((annotation) => {
@@ -221,6 +235,7 @@ const visibleBox = computed(() => {
     throw new TypeError("박스 좌표가 올바르지 않습니다.");
   return preview.value ?? props.modelValue;
 });
+// 공통 정규화 좌표를 현재 stage 픽셀로 바꾸는 단방향 표시 변환이다. API나 DB에 픽셀값을 저장하지 않는다.
 function pixels(box: ScNormalizedBox) {
   return {
     x: box.x * stageConfig.value.width,
@@ -248,6 +263,7 @@ function annotationConfig(annotation: ScImageAnnotation) {
     fill: "rgba(118,118,118,0.08)",
   };
 }
+// vendor Transformer의 회전/반전을 끄고 이미지 안의 양수 크기만 허용한다. 편집 불가이면 resize anchor도 제거한다.
 const transformerConfig = computed(() => ({
   rotateEnabled: false,
   flipEnabled: false,
@@ -264,6 +280,7 @@ const transformerConfig = computed(() => ({
       ? newBox
       : oldBox,
 }));
+// 부모 모델이 확정되면 좌표 폼 문자열을 동기화한다. 입력 중 빈 문자열을 표현해야 하므로 draft는 number가 아닌 string이다.
 function copyCoordinates(box: ScNormalizedBox | null) {
   for (const key of ["x", "y", "width", "height"] as const)
     draft[key] = box ? String(box[key]) : "";
@@ -277,6 +294,7 @@ watch(
   },
   { immediate: true },
 );
+// 박스 DOM node 생성은 Vue 렌더 뒤에 완료된다. nextTick을 기다려 Transformer에 현재 rect node를 연결/해제한다.
 watch(
   [visibleBox, editable],
   async () => {
@@ -300,6 +318,7 @@ let origin: { x: number; y: number } | null = null;
 let gestureBox: ScNormalizedBox | null = null;
 let gestureCancelled = false;
 let captured: { element: Element; pointerId: number } | null = null;
+// stage의 포인터 픽셀을 0~1 범위로 되돌려 캔버스 크기와 무관한 그리기 좌표를 얻는다.
 function point() {
   const position = stage.value?.getNode().getPointerPosition();
   return position
@@ -309,6 +328,7 @@ function point() {
       }
     : null;
 }
+// 배경 Stage/Image에서 시작한 편집만 새 박스로 처리한다. pointer capture는 이미지 밖으로 움직여도 동일 제스처의 종료를 받게 한다.
 function startDrawing(event: Konva.KonvaEventObject<PointerEvent>) {
   if (!editable.value || !["Stage", "Image"].includes(event.target.getClassName())) return;
   origin = point();
@@ -323,6 +343,7 @@ function continueDrawing() {
   const end = point();
   if (origin && end) preview.value = drawBox(origin, end);
 }
+// 완료/취소/unmount에서 capture를 해제한다. 다음 화면의 포인터 동작이 이전 canvas에 묶이지 않게 하는 수명 정리다.
 function releaseCapture() {
   if (
     captured &&
@@ -341,6 +362,7 @@ function finishDrawing() {
   if (value && editable.value) commit(value);
   preview.value = null;
 }
+// 취소는 미리보기 제거뿐 아니라 vendor가 제자리 변경한 rect 위치/scale도 시작 전 값으로 복구한다. 이어 오는 종료 이벤트의 재저장은 플래그로 막는다.
 function cancelDrawing() {
   if (origin || gestureBox) announcement.value = text.value.cancelled;
   if (gestureBox) {
@@ -361,6 +383,7 @@ function startBoxGesture() {
   gestureCancelled = false;
   gestureBox = props.modelValue ? { ...props.modelValue } : null;
 }
+// 포인터·이동·resize·숫자 입력의 최종 공통 출구다. 검증된 새 박스만 부모에 요청하며 서버 저장을 직접 하지 않는다.
 function commit(box: ScNormalizedBox) {
   if (!editable.value || !isNormalizedBox(box)) return;
   coordinateError.value = false;
@@ -383,6 +406,7 @@ function finishMove(event: Konva.KonvaEventObject<DragEvent>) {
   node.position({ x: box.x * stageConfig.value.width, y: box.y * stageConfig.value.height });
   commit(box);
 }
+// Konva resize는 width 자체 대신 scale을 바꿀 수 있다. 실제 크기로 환산한 뒤 scale을 1로 정리해 다음 편집에서 중복 확대를 막는다.
 function finishTransform() {
   if (gestureCancelled) {
     gestureCancelled = false;
@@ -401,6 +425,7 @@ function finishTransform() {
   gestureBox = null;
   commit(box);
 }
+// Number(빈 문자열)가 0이 되는 JS 특성이 있으므로 빈 입력을 별도로 검사한다. 유효하지 않으면 모델은 그대로 두고 오류만 표시한다.
 function applyCoordinates() {
   if (!editable.value) return;
   const box = {
@@ -415,6 +440,7 @@ function applyCoordinates() {
   }
   commit(box);
 }
+// keyof typeof draft는 이미 선언된 좌표 필드 이름만 허용한다. instanceof로 실제 input을 확인한 뒤 원문 문자열을 보관한다.
 function setCoordinate(key: keyof typeof draft, event: Event) {
   if (!editable.value) return;
   const input = event.target;
@@ -430,6 +456,7 @@ function selectAnnotation(id: string) {
   if (!props.disabled && !props.loading) emit("select-annotation", id);
 }
 let observer: ResizeObserver | null = null;
+// ResizeObserver는 실제 DOM이 생긴 후 연결한다. 화면 폭 변화는 stage 크기 계산의 입력만 갱신한다.
 onMounted(() => {
   if (host.value) {
     hostWidth.value = host.value.clientWidth || 480;
@@ -439,6 +466,7 @@ onMounted(() => {
     observer.observe(host.value);
   }
 });
+// 직접 등록한 Observer/capture와 Transformer node 연결을 화면 수명에 맞춰 해제한다.
 onBeforeUnmount(() => {
   releaseCapture();
   observer?.disconnect();

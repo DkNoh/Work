@@ -20,6 +20,18 @@
 </template>
 
 <script setup lang="ts" generic="T extends object">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * data-mode="server"로 받은 20개 행을 다시 클라이언트 페이지로 자르지 않는다. 행 action slot은 부모에게 그대로 전달한다.
+ */
+
+/**
+ * 운영 화면의 서버 페이지 표에 동일한 번역/열 너비/페이지 이벤트 규칙을 적용하는 앱 전용 wrapper다.
+ * generic T extends object는 Java 제네릭처럼 rows·columns·getRowKey·row-actions가 같은 행 타입을 사용하도록 묶는다.
+ * readonly 배열 props는 부모 소유 자료다. 이 wrapper는 직접 정렬/삭제하거나 API를 호출하지 않고 change-page/retry 이벤트로 요청한다.
+ * defineSlots는 row-actions slot에 전달할 타입을 선언한다. VNode 타입 참조는 화면을 render/h/JSX로 구현한다는 뜻이 아니다.
+ */
+
 import { computed, type VNode } from "vue";
 import { useI18n } from "vue-i18n";
 import {

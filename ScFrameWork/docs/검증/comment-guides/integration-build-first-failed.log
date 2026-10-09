@@ -1,0 +1,340 @@
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated lodash.isequal@4.5.0: This package is deprecated. Use require('node:util').isDeepStrictEqual instead.
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated fstream@1.0.12: This package is no longer supported.
+npm warn deprecated vue-i18n@11.1.12: This version is NOT deprecated. Previous deprecation was a mistake.
+npm warn deprecated vue-i18n@11.1.12: This version is NOT deprecated. Previous deprecation was a mistake.
+npm warn deprecated vue-i18n@11.1.12: This version is NOT deprecated. Previous deprecation was a mistake.
+npm warn deprecated vue-i18n@11.1.12: This version is NOT deprecated. Previous deprecation was a mistake.
+
+added 709 packages in 5s
+
+> sc-framework@0.3.0 verify
+> npm run format:check && npm run lint && npm run api:check && npm run ui:contracts:check && npm run ui:boundaries:check && npm run visual:manifest:check && npm run typecheck && npm run test:unit && npm run build
+
+
+> sc-framework@0.3.0 format:check
+> prettier --check .
+
+Checking formatting...
+All matched files use Prettier code style!
+
+> sc-framework@0.3.0 lint
+> eslint frontend scripts --max-warnings 0
+
+
+> sc-framework@0.3.0 api:check
+> node scripts/openapi-types.mjs --check
+
+neutral compatibility: OpenAPI 명세와 생성 타입 일치
+reference: OpenAPI 명세와 생성 타입 일치
+starter: OpenAPI 명세와 생성 타입 일치
+
+> sc-framework@0.3.0 ui:contracts:check
+> node scripts/ui-contracts.mjs --check
+
+공개 UI 25개: imported props/events/slots/default 계약 일치
+
+> sc-framework@0.3.0 ui:boundaries:check
+> node scripts/check-ui-boundaries.mjs
+
+공개 UI/소비 앱 경계: import 1425개 확인
+
+> sc-framework@0.3.0 visual:manifest:check
+> node scripts/verify-visual-baselines.mjs --profile darwin-chromium
+
+{"result":"verified","profile":"darwin-chromium","images":16,"platform":"darwin","browserVersion":"153.0.8010.12"}
+
+> sc-framework@0.3.0 typecheck
+> npm run typecheck --workspace @sc/date && npm run typecheck --workspace @sc/i18n && npm run typecheck --workspace @sc/excel && npm run typecheck --workspace @sc/ui && npm run typecheck --workspace @sc/runtime && npm run typecheck --workspace @sc/reference-app && npm run typecheck --workspace @sc/starter-app && npm run typecheck --workspace @sc/catalog && npm run typecheck:e2e
+
+
+> @sc/date@0.3.0 typecheck
+> tsc --noEmit -p tsconfig.json
+
+
+> @sc/i18n@0.3.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/excel@0.3.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/ui@0.3.0 typecheck
+> npm run tokens:check && vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/ui@0.3.0 tokens:check
+> node scripts/generate-tokens.mjs --check
+
+Design token CSS matches tokens.ts.
+
+> @sc/runtime@0.3.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/reference-app@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/starter-app@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/catalog@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> sc-framework@0.3.0 typecheck:e2e
+> tsc --noEmit -p frontend/tsconfig.e2e.json
+
+
+> sc-framework@0.3.0 test:unit
+> vitest run --config vitest.config.ts
+
+
+ RUN  v4.1.11 /Users/dk/Work/ScFramework
+
+ ❯ frontend/packages/ui/src/charts/ScSeriesChart.spec.ts (3 tests | 1 failed) 25ms
+     × 허용 DOM 속성만 전달하고 빈 자료 전환 때 기존 차트·표를 제거한다 4ms
+ ❯ frontend/packages/ui/src/patterns/ScStatusBadge.spec.ts (2 tests | 1 failed) 9ms
+     × 상태 문구를 안전한 텍스트로 제공하며 자동 알림 영역을 만들지 않는다 8ms
+ ❯ frontend/packages/ui/src/patterns/ScKpiCard.spec.ts (2 tests | 2 failed) 13ms
+     × 지표 이름·값·방향 문구를 텍스트로 제공하고 두 아이콘은 읽기 순서에서 제외한다 11ms
+     × 기본 밀도를 유지하고 compact 전환에도 지표의 의미와 제목 참조를 보존한다 1ms
+ ❯ frontend/packages/ui/src/patterns/ScSectionCard.spec.ts (1 test | 1 failed) 13ms
+     × 기본 표현과 제목 참조를 유지하며 슬롯과 HTML 속성을 전달한다 12ms
+ ❯ frontend/packages/ui/src/forms/ScFormActions.spec.ts (4 tests | 2 failed) 43ms
+     × busy에서 기본 제출·취소를 막고 내부 옵션 attrs를 차단한다 8ms
+     × disabled에서 기본 제출·취소를 막고 내부 옵션 attrs를 차단한다 4ms
+ ❯ frontend/packages/ui/src/ScTextField.spec.ts (7 tests | 3 failed) 83ms
+     × native 입력 props·ARIA는 입력에, class/data는 wrapper에 전달하고 private Vuetify 속성은 차단한다 7ms
+     × compact 선택은 이름·오류·native 입력 계약을 유지하고 기본 comfortable로 복원할 수 있다 6ms
+     × focus/blur·키보드·입력 이벤트를 한 번씩 전달하고 ARIA/data만 바꿔도 반영한다 20ms
+ ❯ frontend/packages/ui/src/inputs/ScInputs.spec.ts (11 tests | 1 failed) 169ms
+     × toolbar clearable 선택은 null을 전달하고 compact TextArea도 입력·오류 계약을 유지한다 9ms
+ ❯ frontend/packages/ui/src/table/ScDataTable.spec.ts (7 tests | 2 failed) 120ms
+     × compact·숨긴 caption·최소 폭을 제공하면서 기본 화면과 표의 이름을 보존한다 19ms
+     × native caption/header・typed cell slot・状態とattrs境界を保つ 8ms
+
+⎯⎯⎯⎯⎯⎯ Failed Tests 13 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  frontend/packages/ui/src/ScTextField.spec.ts > ScTextField 공개 계약 > native 입력 props·ARIA는 입력에, class/data는 wrapper에 전달하고 private Vuetify 속성은 차단한다
+AssertionError: expected undefined to be 'password' // Object.is equality
+
+- Expected:
+"password"
+
++ Received:
+undefined
+
+ ❯ frontend/packages/ui/src/ScTextField.spec.ts:125:48
+    123|       expect(input.attributes("data-field")).toBeUndefined();
+    124|       expect(wrapper.find("[role=searchbox]").exists()).toBe(false);
+    125|       expect(wrapper.attributes("data-field")).toBe("password");
+       |                                                ^
+    126|       expect(wrapper.classes()).toContain("host-field");
+    127|       expect(wrapper.classes()).toContain("v-input--density-comfortabl…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/13]⎯
+
+ FAIL  frontend/packages/ui/src/ScTextField.spec.ts > ScTextField 공개 계약 > compact 선택은 이름·오류·native 입력 계약을 유지하고 기본 comfortable로 복원할 수 있다
+AssertionError: expected [] to include 'v-input--density-compact'
+ ❯ frontend/packages/ui/src/ScTextField.spec.ts:149:33
+    147|     });
+    148|     try {
+    149|       expect(wrapper.classes()).toContain("v-input--density-compact");
+       |                                 ^
+    150|       expect(wrapper.get("input").attributes("name")).toBe("title");
+    151|       expect(wrapper.get("input").attributes("aria-invalid")).toBe("tr…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/13]⎯
+
+ FAIL  frontend/packages/ui/src/ScTextField.spec.ts > ScTextField 공개 계약 > focus/blur·키보드·입력 이벤트를 한 번씩 전달하고 ARIA/data만 바꿔도 반영한다
+AssertionError: expected undefined to be 'updated' // Object.is equality
+
+- Expected:
+"updated"
+
++ Received:
+undefined
+
+ ❯ frontend/packages/ui/src/ScTextField.spec.ts:216:45
+    214|       await nextTick();
+    215|       expect(input.attributes("aria-describedby")).toBe("next-help");
+    216|       expect(field.attributes("data-view")).toBe("updated");
+       |                                             ^
+    217|     } finally {
+    218|       wrapper.unmount();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/13]⎯
+
+ FAIL  frontend/packages/ui/src/charts/ScSeriesChart.spec.ts > ScSeriesChart의 공개 자료와 접근성 대안 > 허용 DOM 속성만 전달하고 빈 자료 전환 때 기존 차트·표를 제거한다
+AssertionError: expected undefined to be 'throughput' // Object.is equality
+
+- Expected:
+"throughput"
+
++ Received:
+undefined
+
+ ❯ frontend/packages/ui/src/charts/ScSeriesChart.spec.ts:124:47
+    122|       global,
+    123|     });
+    124|     expect(wrapper.attributes("data-metric")).toBe("throughput");
+       |                                               ^
+    125|     expect(wrapper.attributes("aria-describedby")).toBe("metric-help");
+    126|     expect(wrapper.attributes("theme")).toBeUndefined();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/13]⎯
+
+ FAIL  frontend/packages/ui/src/forms/ScFormActions.spec.ts > ScFormActions > busy에서 기본 제출·취소를 막고 내부 옵션 attrs를 차단한다
+ FAIL  frontend/packages/ui/src/forms/ScFormActions.spec.ts > ScFormActions > disabled에서 기본 제출·취소를 막고 내부 옵션 attrs를 차단한다
+AssertionError: expected undefined to be 'example' // Object.is equality
+
+- Expected:
+"example"
+
++ Received:
+undefined
+
+ ❯ frontend/packages/ui/src/forms/ScFormActions.spec.ts:82:52
+     80|         expect(wrapper.emitted("cancel")).toBeUndefined();
+     81|         expect(wrapper.element.tagName).toBe("DIV");
+     82|         expect(wrapper.attributes("data-actions")).toBe("example");
+       |                                                    ^
+     83|         expect(wrapper.attributes("loading")).toBeUndefined();
+     84|         expect(wrapper.attributes("theme")).toBeUndefined();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/13]⎯
+
+ FAIL  frontend/packages/ui/src/inputs/ScInputs.spec.ts > 005 입력 공개 계약 > toolbar clearable 선택은 null을 전달하고 compact TextArea도 입력·오류 계약을 유지한다
+AssertionError: expected [] to include 'v-input--density-compact'
+ ❯ frontend/packages/ui/src/inputs/ScInputs.spec.ts:301:30
+    299|       expect(wrapper.getComponent(ScSelect).emitted("update:modelValue…
+    300|       const area = wrapper.getComponent(ScTextArea);
+    301|       expect(area.classes()).toContain("v-input--density-compact");
+       |                              ^
+    302|       expect(area.get("textarea").attributes("aria-invalid")).toBe("tr…
+    303|       await area.get("textarea").setValue("첫 줄\n둘째 줄");
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/13]⎯
+
+ FAIL  frontend/packages/ui/src/patterns/ScKpiCard.spec.ts > ScKpiCard의 지표와 장식 경계 > 지표 이름·값·방향 문구를 텍스트로 제공하고 두 아이콘은 읽기 순서에서 제외한다
+AssertionError: expected undefined to be 'sc-kpi-v-0' // Object.is equality
+
+- Expected:
+"sc-kpi-v-0"
+
++ Received:
+undefined
+
+ ❯ frontend/packages/ui/src/patterns/ScKpiCard.spec.ts:20:51
+     18|     const heading = wrapper.get("h2");
+     19|     expect(heading.text()).toBe("처리한 요청");
+     20|     expect(wrapper.attributes("aria-labelledby")).toBe(heading.attribu…
+       |                                                   ^
+     21|     expect(wrapper.get(".sc-kpi-card__value").text()).toBe("1,248건");
+     22|     expect(wrapper.get(".sc-kpi-card__trend").text()).toBe("전월보다 2.5% …
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/13]⎯
+
+ FAIL  frontend/packages/ui/src/patterns/ScKpiCard.spec.ts > ScKpiCard의 지표와 장식 경계 > 기본 밀도를 유지하고 compact 전환에도 지표의 의미와 제목 참조를 보존한다
+AssertionError: expected undefined to be 'comfortable' // Object.is equality
+
+- Expected:
+"comfortable"
+
++ Received:
+undefined
+
+ ❯ frontend/packages/ui/src/patterns/ScKpiCard.spec.ts:40:48
+     38|     });
+     39|     const titleId = wrapper.get("h2").attributes("id");
+     40|     expect(wrapper.attributes("data-density")).toBe("comfortable");
+       |                                                ^
+     41|     await wrapper.setProps({ density: "compact" });
+     42|     expect(wrapper.attributes("data-density")).toBe("compact");
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/13]⎯
+
+ FAIL  frontend/packages/ui/src/patterns/ScSectionCard.spec.ts > ScSectionCard의 공개 표현과 의미 > 기본 표현과 제목 참조를 유지하며 슬롯과 HTML 속성을 전달한다
+AssertionError: expected undefined to be 'comfortable' // Object.is equality
+
+- Expected:
+"comfortable"
+
++ Received:
+undefined
+
+ ❯ frontend/packages/ui/src/patterns/ScSectionCard.spec.ts:12:48
+     10|       slots: { default: "업무 내용", actions: '<button type="button">전체 보기…
+     11|     });
+     12|     expect(wrapper.attributes("data-density")).toBe("comfortable");
+       |                                                ^
+     13|     expect(wrapper.attributes("data-surface")).toBe("bordered");
+     14|     expect(wrapper.attributes("aria-labelledby")).toBe(wrapper.get("h2…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/13]⎯
+
+ FAIL  frontend/packages/ui/src/patterns/ScStatusBadge.spec.ts > ScStatusBadge의 상태 텍스트와 대비 > 상태 문구를 안전한 텍스트로 제공하며 자동 알림 영역을 만들지 않는다
+AssertionError: expected 'DIV' to be 'SPAN' // Object.is equality
+
+Expected: "SPAN"
+Received: "DIV"
+
+ ❯ frontend/packages/ui/src/patterns/ScStatusBadge.spec.ts:32:37
+     30|       },
+     31|     });
+     32|     expect(wrapper.element.tagName).toBe("SPAN");
+       |                                     ^
+     33|     expect(wrapper.text()).toBe('<img src="invalid"> 검토 대기');
+     34|     expect(wrapper.find("img").exists()).toBe(false);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/13]⎯
+
+ FAIL  frontend/packages/ui/src/table/ScDataTable.spec.ts > ScDataTable 실제 자료와 공개 계약 > compact·숨긴 caption·최소 폭을 제공하면서 기본 화면과 표의 이름을 보존한다
+AssertionError: expected [] to include 'sc-table-presentation--compact'
+ ❯ frontend/packages/ui/src/table/ScDataTable.spec.ts:47:33
+     45|     });
+     46|     try {
+     47|       expect(wrapper.classes()).toContain("sc-table-presentation--comp…
+       |                                 ^
+     48|       expect(wrapper.get("caption").text()).toBe("최근 주문");
+     49|       expect(wrapper.get("caption").classes()).toContain("sc-table__ca…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[11/13]⎯
+
+ FAIL  frontend/packages/ui/src/table/ScDataTable.spec.ts > ScDataTable 실제 자료와 공개 계약 > native caption/header・typed cell slot・状態とattrs境界を保つ
+AssertionError: expected { 'data-v-app': '' } to match object { id: 'public-table', …(1) }
+(1 matching property omitted from actual)
+
+- Expected
++ Received
+
+  {
+-   "data-owner": "app",
+-   "id": "public-table",
++   "data-v-app": "",
+  }
+
+ ❯ frontend/packages/ui/src/table/ScDataTable.spec.ts:193:36
+    191|       );
+    192|       expect(wrapper.text()).toContain("セル title: 두 번째");
+    193|       expect(wrapper.attributes()).toMatchObject({ id: "public-table",…
+       |                                    ^
+    194|       expect(wrapper.classes()).toContain("consumer");
+    195|       expect(wrapper.attributes("role")).toBeUndefined();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[12/13]⎯
+
+
+ Test Files  8 failed | 32 passed (40)
+      Tests  13 failed | 154 passed (167)
+   Start at  01:08:53
+   Duration  3.14s (transform 21.62s, setup 0ms, import 32.46s, tests 1.82s, environment 6.16s)
+

@@ -9,6 +9,15 @@
   </header>
 </template>
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 페이지의 h1 제목과 선택적인 eyebrow/subtitle, 우측 actions slot을 표시한다. 문구는 텍스트 보간으로 출력된다.
+ */
+
+/*
+ * 제목과 화면 행동의 실제 내용은 부모 화면에서 전달한다. JSP include와 비슷한 배치 재사용이지만 slot 내용은 Vue의 반응형 화면 조각이다.
+ *  defineProps/defineSlots는 입력 형태를 설명하고 useAttrs는 class/data 등 나머지 허용 DOM 속성을 받는다. 자체 공유 상태나 API 호출은 없다.
+ */
 import { useAttrs } from "vue";
 import { pickScHtmlAttrs } from "../contracts";
 import type { ScPageHeaderProps, ScPageHeaderSlots } from "./contracts";

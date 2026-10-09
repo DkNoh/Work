@@ -28,6 +28,17 @@
   </sc-app-shell>
 </template>
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * #header-actions는 언어/로그아웃 도구, #sidebar-footer는 설명 영역이다. @navigate를 Router 이동에 연결한다.
+ */
+
+/**
+ * 생성 앱의 공통 shell 조립자다. Notes와 선택 패턴/운영 메뉴를 현재 세션/capability에서 계산한다.
+ * props/slot으로 공통 ScAppShell을 소비하며 실제 업무 화면은 router-view가 교체한다. 언어 변경은 Vuetify와 HTML lang에도 반영한다.
+ * 로그아웃은 공통 auth로 서버 세션과 브라우저 캐시를 정리한 뒤 로그인 URL로 이동한다.
+ */
+
 import { computed, watch } from "vue";
 import { useRoute } from "vue-router";
 import { useI18n } from "vue-i18n";

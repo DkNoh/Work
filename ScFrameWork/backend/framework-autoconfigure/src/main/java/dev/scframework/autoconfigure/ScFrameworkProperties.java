@@ -2,6 +2,11 @@ package dev.scframework.autoconfigure;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
+/*
+ * sc.framework 설정을 바인딩하는 bean이다. 중첩 SessionEndpoint/Audit는 각각의 하위 설정 묶음이다.
+ * 기본 me endpoint는 ON, 감사는 OFF이며 getter/setter는 Spring 설정 바인딩을 위한 접근자다.
+ */
+
 @ConfigurationProperties("sc.framework")
 public class ScFrameworkProperties {
     private String applicationName = "sc-application";

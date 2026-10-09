@@ -1,4 +1,8 @@
 /** 앱별 인스턴스가 공유해 읽는 기본 문구. locale 선택 상태는 포함하지 않는다. */
+// ko/en 아래 같은 common.* 키를 유지하면 화면은 문구 자체 대신 common.actions.save 등으로 찾는다.
+// 업무 도메인의 문구는 소비 앱이 options.messages로 추가하고, 이 파일은 중립 UI 문구를 제공한다.
+// 마지막 as const는 문자열을 리터럴 타입으로, 속성을 readonly로 추론한다. 런타임 동결은 아니며
+// 실제 앱 생성 시 mergeMessages가 별도 트리로 복사한다.
 export const commonMessages = {
   ko: {
     common: {

@@ -19,6 +19,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * 감사 기능이 켜졌을 때만 생성되는 ADMIN 전용 읽기 API다.
+ * 현재 DB actor를 확인하고 고정 필터 SQL+바인딩 인수로 메타데이터만 반환한다. 원문 본문/암호/토큰 조회를 제공하지 않는다.
+ */
+
 /** 신규 ADMIN 확장 API. 과거 session authority 대신 현재 DB 역할을 확인한다. */
 @RestController
 @ConditionalOnProperty(prefix = "sc.framework.audit", name = "enabled", havingValue = "true")
@@ -33,6 +38,7 @@ public class AuditController {
 
     @GetMapping("/api/audit/events")
     @Operation(summary = "보안 감사 조회", description = "현재 DB ADMIN만 접근하는 신규 감사 API. 최신 시각/ID순이며 본문·암호·토큰을 반환하지 않습니다.")
+    // 인증/현재 ADMIN 확인을 먼저 하고 검색 범위를 검증한다. 조회 조건은 고정 SQL 조각과 ? 바인딩으로 분리해 사용자 값을 SQL 문장에 삽입하지 않는다.
     public AuditPage events(@Parameter(hidden = true) Authentication authentication,
             @RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "20") int size,
             @RequestParam(required = false) String action, @RequestParam(required = false) String outcome,
@@ -51,6 +57,7 @@ public class AuditController {
         if (actorSubject != null) { filter.append(" AND actor_subject = ?"); values.add(actorSubject); }
         if (from != null) { filter.append(" AND occurred_at >= ?"); values.add(from.atOffset(java.time.ZoneOffset.UTC)); }
         if (to != null) { filter.append(" AND occurred_at <= ?"); values.add(to.atOffset(java.time.ZoneOffset.UTC)); }
+        // 건수와 페이지는 같은 filter/인수를 사용한다. 이 메서드는 별도 스냅샷 트랜잭션을 선언하지 않으므로 reports의 SERIALIZABLE 보장과 혼동하지 않는다.
         Long count = jdbc.queryForObject("SELECT COUNT(*) FROM security_audit_event" + filter, Long.class, values.toArray());
         List<Object> pageValues = new ArrayList<>(values);
         pageValues.add(size);
@@ -60,6 +67,7 @@ public class AuditController {
         return new AuditPage(List.copyOf(items), count == null ? 0 : count, page, size);
     }
 
+    // 공개 record의 제한된 메타데이터 열만 읽는다. SELECT 결과의 모든 열을 동적 Map으로 직렬화하지 않는다.
     private static AuditItem item(ResultSet row, int index) throws SQLException {
         return new AuditItem(row.getLong("id"), row.getString("actor_subject"),
                 row.getObject("actor_id", Long.class), row.getObject("occurred_at", OffsetDateTime.class).toInstant(),

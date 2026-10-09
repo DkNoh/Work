@@ -49,6 +49,17 @@
 </template>
 
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 그룹 표의 action 버튼으로 선택을 URL에 반영하면 이력 표가 나타난다. 원문 오류 내용이 아닌 허용된 코드/식별 정보만 표시한다.
+ */
+
+/**
+ * 브라우저 오류 그룹과 선택 그룹 발생 이력의 읽기 전용 패널이다. 페이지/그룹/이력 페이지 원본은 Router query다.
+ * 두 Query의 key를 분리하고 선택 그룹 ID를 이력 key에 포함한다. 잘못된 URL은 valid=false로 네트워크 조회를 막는다.
+ * GroupPage["items"][number]는 배열 요소 타입을 꺼내는 TypeScript indexed access다. DTO 구조를 다시 선언하지 않고 표에 연결한다.
+ */
+
 import { computed } from "vue";
 import { useRoute } from "vue-router";
 import { useQuery } from "@tanstack/vue-query";
@@ -121,6 +132,9 @@ const occurrenceKey = (row: Occurrence) => String(row.id);
 async function changePage(page: number) {
   await runtime.router.push({ query: { page: String(page) } });
 }
+/**
+ * 새 그룹 선택 시 이력 페이지를 0으로 시작한다. 현재 그룹 페이지는 유지하여 뒤로가기로 탐색 맥락을 복원할 수 있다.
+ */
 async function selectGroup(id: number) {
   await runtime.router.push({ query: { ...route.query, group: String(id), historyPage: "0" } });
 }

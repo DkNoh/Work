@@ -3,6 +3,12 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.*;
 import java.time.Instant;
 import java.util.List;
+
+/*
+ * 생성 앱 Notes의 쓰기 입력/조회 응답 계약이다. 공통 runtime DTO가 아니라 이 앱이 소유한다.
+ * Bean Validation은 실제 입력 검사, @Schema는 생성 OpenAPI 설명이다. Update의 revision은 기존 읽은 버전을 보내는 충돌 검사 값이다.
+ * Command는 저장 결과 item과 같은 TX에서 확인한 stats를 반환하며 전역 success/data 봉투가 아니다.
+ */
 public final class NoteDtos {
     private NoteDtos() {}
     @Schema(name="StarterNoteCreateInput")

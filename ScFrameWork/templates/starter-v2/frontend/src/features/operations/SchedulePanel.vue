@@ -128,6 +128,18 @@
 </template>
 
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 목록 선택과 이력 페이지는 Router에, 입력은 VeeValidate 필드에 연결한다. 미저장 입력의 이동은 확인 dialog를 기다린다.
+ */
+
+/**
+ * Starter의 예약 목록·편집·실행 이력 예제다. URL/Query/form이 각각 탐색/서버 자료/미저장 입력의 원본이다.
+ * basisRevision은 입력을 시작한 서버 수정 번호다. 자동 재조회 결과로 초안과 revision을 바꾸지 않고 초기 선택·명시적 reload·저장 성공 시에만 채택한다.
+ * epoch는 선택 변경, client generation은 세션 변경을 구분한다. Promise 결과를 현재 입력에 반영해도 되는지 판단하는 기준이다.
+ * cron 기본 형식과 timezone은 폼에서 안내하고 최종 해석/권한/동시성은 서버가 검사한다. 409가 발생해도 초안을 자동으로 덮지 않는다.
+ */
+
 import { computed, onBeforeUnmount, ref, watch } from "vue";
 import { onBeforeRouteLeave, onBeforeRouteUpdate, useRoute } from "vue-router";
 import { useEventListener } from "@vueuse/core";
@@ -260,6 +272,9 @@ const schema = computed(() =>
     enabled: z.boolean(),
   }),
 );
+/**
+ * 명시적으로 채택한 서버 행을 폼에 복사하고 기준 revision을 함께 갱신한다. 서버 캐시와 폼 초안을 분리하는 경계다.
+ */
 function initialize(row: Schedule | null) {
   form.resetForm({
     values: row
@@ -301,6 +316,9 @@ watch(
 );
 const confirmOpen = ref(false);
 let resolveConfirmation: ((value: boolean) => void) | undefined;
+/**
+ * Promise<boolean>의 resolve를 대화상자에 연결하여 Router 가드가 사용자 결정을 기다리게 한다. 중복 확인은 허용하지 않는다.
+ */
 function confirmDiscard() {
   if (!runtime.session.identity || !dirty.value) return Promise.resolve(true);
   if (resolveConfirmation) return Promise.resolve(false);
@@ -382,6 +400,9 @@ function showFailure(cause: unknown) {
     if (cause.status === 409) conflict.value = true;
   }
 }
+/**
+ * 미저장 입력 확인 후 조회하고 선택 epoch가 같을 때만 초기화한다. 재조회 실패는 기존 입력을 보존하면서 안내한다.
+ */
 async function reload() {
   if (busy.value || !(await confirmDiscard())) return;
   const selectionEpoch = epoch;
@@ -397,6 +418,9 @@ async function reload() {
   }
   initialize(selected.value ?? null);
 }
+/**
+ * safeParse 결과만 API 입력으로 사용한다. 수정은 basisRevision이 있어야 하며 신규와 수정의 DTO를 구분한다.
+ */
 async function save() {
   if (busy.value || jobs.isError.value || jobs.isPending.value) return;
   form.setErrors({
@@ -426,6 +450,9 @@ async function changeEnabled() {
   if (row && !dirty.value)
     await command(() => api.changeSchedule(row.id, row.enabled ? "pause" : "resume", row.revision));
 }
+/**
+ * 성공한 단건/목록 캐시를 갱신하고 관련 조회를 무효화한다. 같은 세션인지 확인한 뒤 현재 선택인 경우에만 폼을 다시 초기화한다.
+ */
 async function command(action: () => Promise<Schedule>) {
   if (busy.value) return;
   const selectionEpoch = epoch;

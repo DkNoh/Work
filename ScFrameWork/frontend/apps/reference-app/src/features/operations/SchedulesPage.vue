@@ -102,6 +102,18 @@
 </template>
 
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 서버 목록에서 예약을 선택하면 ScheduleForm에 기준 자료를 전달한다. save/dirty-change 이벤트를 받아 API 저장과 이탈 확인을 조정한다.
+ */
+
+/**
+ * 예약 목록·단건 편집·실행 이력을 조립한다. URL은 선택/페이지, Query는 서버 응답, 자식 폼은 미저장 입력을 소유한다.
+ * formInitial은 별도 서버 저장소가 아니라 명시적으로 채택한 편집 기준이다. resetKey를 올릴 때만 자식 입력과 기준 revision이 교체된다.
+ * epoch는 선택 변경, client generation은 세션 변경을 식별한다. 늦게 도착한 저장/재조회 결과를 다른 선택이나 사용자 입력에 적용하지 않는다.
+ * 409 충돌은 자동 덮어쓰기 대신 입력 보존과 오류 안내로 처리한다. reload 시 사용자 확인을 받은 뒤 서버 최신 기준을 채택한다.
+ */
+
 import { computed, ref, shallowRef, watch } from "vue";
 import { useRoute } from "vue-router";
 import { useQuery } from "@tanstack/vue-query";
@@ -160,6 +172,9 @@ const runs = useQuery({
   queryFn: ({ queryKey, signal }) => api.runs(queryKey[2]!, signal),
   enabled: computed(() => access.scheduler.value && valid.value),
 });
+/**
+ * 단건 Query를 목록과 분리한다. 현재 페이지에 해당 행이 없어도 URL ID로 편집 대상을 안정적으로 조회한다.
+ */
 const detail = useQuery({
   queryKey: computed(() => [...operationKeys.scheduleDetails, selectedId.value] as const),
   queryFn: ({ queryKey, signal }) => api.schedule(queryKey[2]!, signal),
@@ -181,6 +196,9 @@ const guard = useDraftGuard(
   computed(() => dirty.value),
   (to, from) => to.query.id === from.query.id && to.query.page === from.query.page,
 );
+/**
+ * 선택 또는 목록 페이지가 바뀌면 새 편집 수명을 시작한다. 기존 요청 결과가 새 폼을 초기화하지 못하도록 epoch를 증가시킨다.
+ */
 watch(
   [selectedId, page],
   () => {
@@ -271,6 +289,9 @@ async function changePage(page: number) {
 async function changeRunPage(page: number) {
   await runtime.router.push({ query: { ...route.query, runPage: String(page) } });
 }
+/**
+ * unknown 오류를 instanceof로 좁힌다. ApiError.fields는 폼에 연결하고 409일 때만 별도 충돌 안내를 활성화한다.
+ */
 function showFailure(cause: unknown) {
   commandError.value = cause instanceof Error ? cause.message : t("validation");
   if (cause instanceof ApiError) {
@@ -278,6 +299,9 @@ function showFailure(cause: unknown) {
     if (cause.status === 409) conflict.value = true;
   }
 }
+/**
+ * 미저장 입력이 있으면 guard 확인 후 재조회한다. 응답 대기 중 선택이 바뀌면 결과를 새 폼에 적용하지 않는다.
+ */
 async function reloadSchedule() {
   if (busy.value || !access.scheduler.value || (dirty.value && !(await guard.confirm("reload"))))
     return;
@@ -313,6 +337,9 @@ async function changeEnabled(action: "pause" | "resume") {
   if (!row || dirty.value) return;
   await runCommand(() => api.changeSchedule(row.id, action, row.revision));
 }
+/**
+ * 저장 결과를 해당 단건/목록 캐시에 반영하고 관련 Query를 무효화한다. 현재 선택이 요청 시작 선택과 같을 때만 폼의 기준 revision을 바꾼다.
+ */
 async function runCommand(action: () => Promise<Schedule>) {
   if (busy.value || !access.scheduler.value) return;
   const selectionEpoch = epoch;

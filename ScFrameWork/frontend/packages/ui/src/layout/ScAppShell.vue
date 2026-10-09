@@ -100,6 +100,17 @@
 </template>
 
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 상단 header·데스크톱 sidebar·단일 main·모바일 navigation dialog를 조립한다. header/footer/notice/default slot은 소비 앱의 화면 조각이다.
+ * 본문 바로가기 링크는 main에 포커스를 옮긴다. 메뉴 버튼은 넓은 화면에서 접기, 좁은 화면에서 modal 열기로 동작한다.
+ */
+
+/*
+ * 업무 앱의 공통 바깥 틀이다. 메뉴 항목/현재 route/번역 문구는 부모 props이고 Router·세션·권한 자체는 import하지 않는다.
+ *  로컬 ref는 DOM 참조와 메뉴 열림/접힘/viewport 상태다. computed는 현재 상태에 맞는 버튼의 접근성 문구를 만든다.
+ *  watch와 lifecycle hook은 native dialog·미디어 질의·ResizeObserver처럼 Vue template만으로 끝나지 않는 브라우저 효과를 관리한다.
+ */
 import { computed, onMounted, onBeforeUnmount, ref, useAttrs, useId, watch } from "vue";
 import { VApp } from "vuetify/components";
 import ScShellNavigation from "./ScShellNavigation.vue";
@@ -115,6 +126,7 @@ const props = withDefaults(defineProps<ScAppShellProps>(), {
   labels: () => ({}),
 });
 
+// 기본 한국어에 앱 문구를 합친다. locale 원본을 여기 저장하지 않아 부모 언어 변경이 모든 메뉴 문구에 바로 반영된다.
 const shellLabels = computed(() => ({
   skipContent: "본문으로 이동",
   openNavigation: "탐색 메뉴 열기",
@@ -161,6 +173,7 @@ function shellAttrs() {
   });
 }
 
+// 같은 문서에 여러 앱/Story가 있어도 본문·sidebar·dialog의 ID가 겹치지 않게 인스턴스 ID를 공유 접두사로 사용한다.
 const instanceId = useId();
 const contentId = `sc-content-${instanceId}`;
 const dialogId = `sc-navigation-${instanceId}`;
@@ -201,6 +214,7 @@ watch(
 );
 let headerObserver: ResizeObserver | undefined;
 
+// 실제 header 높이를 CSS 변수로 보낸다. 긴 제목/계정 영역으로 높이가 커져도 고정 sidebar가 header와 겹치지 않는다.
 function measureHeader() {
   headerHeight.value = Math.max(
     uiTokens.layout.headerHeight,
@@ -228,6 +242,7 @@ function closeNavigation() {
   navigationDialog.value?.close();
 }
 
+// 현재 보이는 활성 메뉴 컨트롤만 모아 Tab 양끝을 순환시킨다. modal을 닫기 전까지 배경 화면으로 포커스가 새지 않게 한다.
 function keepFocusInNavigation(event: KeyboardEvent) {
   const dialog = navigationDialog.value;
   if (!dialog?.open) return;
@@ -264,6 +279,7 @@ function closeOnBackdrop(event: MouseEvent) {
     closeNavigation();
 }
 
+// 선택 의도만 부모에게 전달한다. 실제 router.push와 미저장 입력 guard는 소비 앱이 결정해야 공통 셸이 업무 로직에 결합되지 않는다.
 function selectNavigation(item: ScAppShellNavItem) {
   closeNavigation();
   emit("navigate", item);
@@ -274,6 +290,7 @@ function rememberFocus(event: FocusEvent) {
     event.target instanceof Node && !!desktopNavigation.value?.contains(event.target);
 }
 
+// 화면 폭이 바뀌며 기존 탐색 DOM이 숨겨질 때 사용자가 포커스를 잃지 않게 새로 보이는 메뉴/트리거로 이동한다.
 function adjustNavigationForViewport(event: MediaQueryListEvent) {
   desktopViewport.value = event.matches;
   if (!event.matches) {
@@ -289,6 +306,7 @@ function adjustNavigationForViewport(event: MediaQueryListEvent) {
   (currentLink ?? content.value)?.focus();
 }
 
+// browser DOM이 준비된 뒤 폭/높이 관찰을 시작한다. 반응형 CSS 기준도 uiTokens.breakpoint와 같은 원본을 사용한다.
 onMounted(() => {
   desktopMedia = window.matchMedia(`(min-width: ${uiTokens.breakpoint.sm}px)`);
   desktopViewport.value = desktopMedia.matches;
@@ -301,6 +319,7 @@ onMounted(() => {
   }
 });
 
+// 등록한 media listener와 ResizeObserver를 해제하고 열린 modal도 닫는다. 다른 앱/화면으로 이동한 뒤 콜백이 남지 않게 한다.
 onBeforeUnmount(() => {
   desktopMedia?.removeEventListener("change", adjustNavigationForViewport);
   headerObserver?.disconnect();
@@ -399,14 +418,14 @@ onBeforeUnmount(() => {
 .sc-app-shell__toolbar {
   display: flex;
   align-items: center;
-  gap: var(--sc-space-3);
+  gap: var(--sc-space-1);
   min-width: 0;
   min-height: var(--sc-header-height);
-  padding-inline: var(--sc-space-3) var(--sc-space-4);
+  padding-inline: 0 var(--sc-space-3);
 }
 
 .sc-app-shell__header-leading {
-  flex: 0 1 420px;
+  flex: 0 1 320px;
   min-width: 0;
 }
 
@@ -424,7 +443,7 @@ onBeforeUnmount(() => {
 }
 
 .sc-app-shell__sidebar {
-  --sc-shell-nav-text: var(--sc-color-nav-text);
+  --sc-shell-nav-text: var(--sc-color-nav-muted);
   --sc-shell-nav-muted: var(--sc-color-nav-muted);
   --sc-shell-nav-hover: var(--sc-color-nav-hover);
   --sc-shell-nav-active: var(--sc-color-nav-active);
@@ -440,13 +459,13 @@ onBeforeUnmount(() => {
   min-height: calc(100vh - var(--sc-shell-header-height));
   max-height: calc(100vh - var(--sc-shell-header-height));
   overflow: auto;
-  padding: var(--sc-space-5) var(--sc-space-3);
+  padding: var(--sc-space-5) var(--sc-space-3) var(--sc-space-5) 0;
   background: var(--sc-color-nav-background);
 }
 
 .sc-app-shell__sidebar-footer {
   margin-top: auto;
-  padding-inline: var(--sc-space-3);
+  padding-inline: 28px var(--sc-space-3);
   color: var(--sc-color-nav-muted);
   font-size: var(--sc-font-size-small);
   line-height: var(--sc-line-height-body);
@@ -491,7 +510,7 @@ onBeforeUnmount(() => {
 }
 
 .sc-app-shell__dialog {
-  --sc-shell-nav-text: var(--sc-color-nav-text);
+  --sc-shell-nav-text: var(--sc-color-nav-muted);
   --sc-shell-nav-muted: var(--sc-color-nav-muted);
   --sc-shell-nav-hover: var(--sc-color-nav-hover);
   --sc-shell-nav-active: var(--sc-color-nav-active);
@@ -504,7 +523,7 @@ onBeforeUnmount(() => {
   height: 100dvh;
   max-height: none;
   margin: 0;
-  padding: var(--sc-space-4) var(--sc-space-3);
+  padding: var(--sc-space-4) var(--sc-space-3) var(--sc-space-4) 0;
   border: 0;
   color: var(--sc-color-nav-text);
   background: var(--sc-color-nav-background);
@@ -520,6 +539,7 @@ onBeforeUnmount(() => {
   justify-content: space-between;
   gap: var(--sc-space-3);
   margin-bottom: var(--sc-space-6);
+  padding-left: var(--sc-space-4);
 }
 
 .sc-app-shell__dialog-header strong {
@@ -567,6 +587,10 @@ onBeforeUnmount(() => {
 
   .sc-app-shell--collapsed .sc-app-shell__sidebar-footer {
     display: none;
+  }
+
+  .sc-app-shell--collapsed .sc-app-shell__sidebar {
+    padding-inline: var(--sc-space-3);
   }
 }
 

@@ -1,3 +1,9 @@
+/**
+ * 보고서 URL 문자열과 폼 초안을 검증된 조회 조건으로 변환한다. Java의 요청 파라미터 바인딩/검증을 브라우저 화면에 맞게 수행하는 경계다.
+ * as const는 상태 배열을 문자열[] 대신 정확한 리터럴 tuple로 고정하고, satisfies는 원래 추론을 유지하면서 서버 상태 타입과 맞는지 검사한다.
+ * (typeof 배열)[number]는 배열 요소의 union 타입을 만든다. readonly는 코드에서의 대입을 제한하며 Java 불변 객체를 생성하는 기능은 아니다.
+ * 잘못된 URL은 errors와 함께 반환하여 조회 자체를 막는다. 반환된 기본값을 조용히 정상 검색 조건으로 취급하면 안 된다.
+ */
 import { z } from "zod";
 import type { RequirementReportItem } from "./api";
 
@@ -40,6 +46,9 @@ export function isReportSortField(value: unknown): value is ReportSortField {
 }
 
 /** 적용 조건은 URL 하나에서 읽는다. 잘못된 URL을 다른 검색어로 잘라서 조회하지 않는다. */
+/**
+ * 배열/중복 값·허용하지 않은 상태/정렬·범위 밖 정수를 모두 오류로 분리한다. number의 안전한 정수 범위는 Java long 전체 범위와 다르다.
+ */
 export function parseReportQuery(query: Readonly<Record<string, unknown>>): ParsedReportQuery {
   const errors: Record<string, string> = {};
   function text(name: string, fallback = "") {
@@ -96,6 +105,9 @@ export function parseReportQuery(query: Readonly<Record<string, unknown>>): Pars
   return { filters, view: rawView === "virtual" ? "virtual" : "table", errors };
 }
 
+/**
+ * 빈 선택은 null, 유효한 숫자 문자열은 number로 변환한다. superRefine은 여러 조건을 검사하는 Zod 실행 코드다.
+ */
 const optionalId = z
   .union([z.string(), z.null()])
   .superRefine((value, context) => {
@@ -137,6 +149,9 @@ export interface ReportFilterDraft {
 }
 export type ReportFilterInput = z.output<typeof reportFilterSchema>;
 
+/**
+ * 검증된 조건을 다시 URL용 문자열로 직렬화한다. 생략 가능한 기본값을 줄이되 검색어와 명시 정렬 의미는 보존한다.
+ */
 export function reportRouteQuery(filters: RequirementReportFilters, view: ReportView) {
   const query: Record<string, string> = { page: String(filters.page), size: String(filters.size) };
   if (filters.q) query.q = filters.q;

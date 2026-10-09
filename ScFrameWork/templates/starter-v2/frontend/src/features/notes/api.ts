@@ -1,3 +1,8 @@
+/**
+ * 생성 앱 소유 Notes HTTP 계약이다. OpenAPI components의 DTO를 선택해 TypeScript 타입으로 사용하고 Zod로 실제 응답 모양도 검증한다.
+ * TypeScript 타입은 실행 시 사라진다. request<unknown>으로 받은 JSON을 safeParse한 뒤에만 Note/NotePage/NoteCommand로 돌려준다.
+ * query key는 목록 검색어/단건 ID/전체 통계를 분리한다. 저장 응답에는 item과 같은 트랜잭션의 stats를 함께 받아 즉시 표시할 수 있다.
+ */
 import { z } from "zod";
 import { ApiError, type FrameworkRuntime } from "@sc/runtime";
 import type { components } from "../../generated/api";
@@ -24,12 +29,18 @@ const pageSchema: z.ZodType<NotePage> = z.object({
   size: z.number().int().positive(),
 });
 const commandSchema: z.ZodType<NoteCommand> = z.object({ item: noteSchema, stats: statsSchema });
+/**
+ * Java 제네릭처럼 schema의 출력 타입 T를 결과에 연결한다. 응답 검증 실패는 공통 ApiError로 바꾸어 화면이 일관되게 처리한다.
+ */
 function decode<T>(schema: z.ZodType<T>, value: unknown): T {
   const result = schema.safeParse(value);
   if (!result.success)
     throw new ApiError("응답 형식을 확인할 수 없습니다.", 502, "INVALID_RESPONSE");
   return result.data;
 }
+/**
+ * 생성 앱 runtime을 주입받아 단일 client로 요청한다. 수정 DTO의 revision으로 서버의 낙관적 동시성 검사를 요청한다.
+ */
 export function createNotesApi(runtime: FrameworkRuntime) {
   return {
     async list(q: string, signal?: AbortSignal): Promise<NotePage> {

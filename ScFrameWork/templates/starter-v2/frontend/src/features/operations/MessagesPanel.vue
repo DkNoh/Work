@@ -55,6 +55,17 @@
 </template>
 
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 재시도 버튼은 DEAD 행에서 확인 dialog를 열고 승인 후 API를 호출한다. 실제 상태 전이는 서버가 검사한다.
+ */
+
+/**
+ * outbox 목록을 URL 조건으로 조회하고 DEAD 재시도/데모 메시지 명령을 수행하는 운영 패널이다.
+ * 적용 필터는 Router, 서버 자료는 Query, 작성 중 필터는 useForm, 확인 대상 ID는 ref가 소유한다.
+ * 조회는 검증된 URL에서만 실행한다. 부모 OperationsPage가 capability를 확인한 뒤 이 패널을 마운트한다.
+ */
+
 import { computed, ref, watch } from "vue";
 import { useRoute } from "vue-router";
 import { useQuery } from "@tanstack/vue-query";
@@ -133,6 +144,9 @@ const rowKey = (row: MessageItem) => row.eventId;
 const busy = ref(false);
 const target = ref<string | null>(null);
 const error = ref("");
+/**
+ * 폼을 safeParse한 다음 URL 조건/첫 페이지를 반영한다. URL 변경이 Query key를 바꾸어 서버 재조회를 유발한다.
+ */
 async function applyFilters() {
   const result = schema.safeParse(form.values);
   if (!result.success) return;
@@ -150,6 +164,9 @@ async function changePage(page: number) {
 function closeDialog(open: boolean) {
   if (!open && !busy.value) target.value = null;
 }
+/**
+ * 중복 명령을 막고 세션 generation을 확인한다. 같은 세션의 성공만 메시지 캐시를 무효화하고 dialog를 닫는다.
+ */
 async function command(action: () => Promise<unknown>) {
   if (busy.value) return;
   const generation = runtime.client.getGeneration();

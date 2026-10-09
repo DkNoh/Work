@@ -27,6 +27,12 @@ import org.springframework.web.multipart.MaxUploadSizeExceededException;
 import org.springframework.web.multipart.MultipartException;
 import org.springframework.web.multipart.support.MissingServletRequestPartException;
 
+/*
+ * Controller/Service 예외를 공통 code/message/errors JSON과 HTTP 상태로 바꾸는 @RestControllerAdvice다.
+ * DTO Bean Validation의 필드명/메시지는 FieldViolation으로 전달하고 optimistic 충돌은 409로 통일한다.
+ * 예상하지 못한 오류/SQL/원문 입력을 응답에 복사하지 않으며 고정 코드로 감사 recorder를 호출한다.
+ */
+
 @RestControllerAdvice
 public class ApiExceptionHandler {
     private final RequestAuditRecorder audit;
@@ -41,6 +47,7 @@ public class ApiExceptionHandler {
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
+    // @Valid DTO의 BindingResult에서 field와 공개 검증 메시지만 추출한다. rejectedValue 원문은 응답에 복사하지 않는다.
     public ResponseEntity<ApiError> validation(MethodArgumentNotValidException exception, HttpServletRequest request) {
         List<FieldViolation> errors = exception.getBindingResult().getFieldErrors().stream()
                 .map(error -> new FieldViolation(error.getField(), error.getDefaultMessage())).toList();
@@ -78,6 +85,7 @@ public class ApiExceptionHandler {
     }
 
     @ExceptionHandler({OptimisticLockingFailureException.class, OptimisticLockException.class})
+    // JPA/Spring의 낙관적 잠금 예외를 같은 409 계약으로 바꿔 프런트가 입력을 보존한 채 재조회할 수 있게 한다.
     public ResponseEntity<ApiError> optimistic(HttpServletRequest request) {
         return error(409, "REVISION_CONFLICT", "다른 변경을 확인하고 다시 저장해 주세요.", request);
     }
@@ -108,6 +116,7 @@ public class ApiExceptionHandler {
     }
 
     @ExceptionHandler(Exception.class)
+    // 예상하지 못한 예외도 원래 message/stack 대신 고정 500 메시지만 반환한다.
     public ResponseEntity<ApiError> unexpected(HttpServletRequest request) {
         return error(500, "INTERNAL_ERROR", "요청 처리 중 오류가 발생했습니다.", request);
     }
@@ -137,6 +146,7 @@ public class ApiExceptionHandler {
         return ResponseEntity.status(status).body(ApiError.of(code, message));
     }
 
+    // 선택 감사가 있을 때 현재 인증 주체와 고정 오류 코드만 전달한다. RequestAuditRecorder가 요청당 중복을 방지한다.
     private void record(HttpServletRequest request, int status, String code) {
         if (audit != null) audit.record(request, SecurityContextHolder.getContext().getAuthentication(),
                 null, "HTTP_ERROR", status == 401 || status == 403 ? "DENIED" : "FAILURE", code);

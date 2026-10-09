@@ -1,5 +1,16 @@
 # ScFramework 구조와 책임
 
+JSP·Java 개발자를 위한 [Vue 3·TypeScript·서버 코드 읽기 안내](developer-reading-guide.md)를 추가했다. 수작업 프런트·Java 기능 코드와 현재 v2 생성 템플릿에 한국어 역할·흐름 주석을 유지한다. 범위와 실제 검증은 [상세 주석 적용 기록](질의/상세주석-개발자학습가이드.md)을 따른다.
+
+## 시안 재정렬: 공통 글꼴·표현 토큰
+
+- `frontend/packages/ui/src/tokens.ts`: 강조색/파스텔·텍스트·`cardTitle` 크기의 원본. `tokens.scss`는 생성 산출물이다.
+- `frontend/packages/ui/src/_fonts.scss`, `fonts/`: 자체 제공 Plus Jakarta Sans 가변 글꼴과 OFL 원문. `styles.scss`의 공통 진입점이 로드한다.
+- `scripts/build-library.mjs`: UI CSS에 글꼴을 포함하고 `dist/fonts/OFL.txt`를 배포한다.
+- `frontend/apps/reference-app/src/features/dashboard/DashboardPage.vue`: 업무별 그리드·샘플/실제 자료 선택·표/차트 CSV. 공통 카드의 색·타이포 규격은 UI가 소유한다.
+
+현재 후보의 실제 검증은 [디자인시안 재정렬](질의/디자인시안-재정렬.md)에 기록한다.
+
 ## 013 공통 디자인 규격 수정 위치
 
 [013 공통 디자인 프레임워크](질의/013-공통디자인프레임워크.md)의 공통 규격·Reference/Starter·Storybook·별도 후보 로컬 검증은 완료했다. 독립 소비 앱의 실제 브라우저도 확인했으며 사용자 수락은 미확인이다. 현재18082 서버는 보존했고 새 후보는TCP18083·Storybook HTTPS6007이다. 아래 대시보드 교정 기록은 이전 단계의 근거이며 013 성적으로 합산하지 않는다.

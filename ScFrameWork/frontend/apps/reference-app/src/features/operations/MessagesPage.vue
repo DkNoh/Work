@@ -83,6 +83,17 @@
 </template>
 
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * DEAD 행에서만 재시도 버튼과 확인 대화상자를 표시한다. 서버는 별도로 현재 상태와 권한을 검증한다.
+ */
+
+/**
+ * outbox 운영 목록의 조건 조회·DEAD 재시도·중립 데모 이벤트 생성을 제공한다. 메시지 본문은 화면에서 편집하지 않는다.
+ * 필터 초안과 URL 적용값을 구분하고 Query가 서버 상태의 원본을 보관한다. type/state의 as const 배열은 허용 문자열 union과 Zod enum에 함께 사용한다.
+ * 재시도 대상 ID/busy/오류만 ref로 관리한다. API 성공 후 operationKeys.messages를 무효화하여 서버가 결정한 다음 상태를 다시 읽는다.
+ */
+
 import { computed, ref, watch } from "vue";
 import { useRoute } from "vue-router";
 import { useQuery } from "@tanstack/vue-query";
@@ -181,6 +192,9 @@ const rowKey = (row: MessageItem) => row.eventId;
 const busy = ref(false);
 const commandError = ref("");
 const retryTarget = ref<string | null>(null);
+/**
+ * 폼의 허용 코드만 URL에 적용한다. URL 페이지와 조건이 queryKey에 포함되어 조건별 자료가 분리된다.
+ */
 async function applyFilters() {
   const result = schema.safeParse(form.values);
   if (!result.success) {
@@ -201,6 +215,9 @@ async function changePage(page: number) {
 function closeRetry(open: boolean) {
   if (!open && !busy.value) retryTarget.value = null;
 }
+/**
+ * 중복 클릭을 막고 요청 당시 client generation을 보관한다. 도중 로그아웃/다른 로그인으로 세대가 바뀌면 이전 작업의 UI 반영을 버린다.
+ */
 async function command(action: () => Promise<unknown>) {
   if (busy.value || !access.messaging.value) return;
   busy.value = true;
@@ -218,6 +235,9 @@ async function command(action: () => Promise<unknown>) {
     busy.value = false;
   }
 }
+/**
+ * 확인한 대상 ID를 지역 변수로 고정하고 공통 command 경로로 재시도한다. Promise 오류는 command 내부에서 화면 오류로 변환한다.
+ */
 function retryMessage() {
   const id = retryTarget.value;
   if (id) void command(() => api.retryMessage(id));

@@ -51,6 +51,17 @@
 </template>
 
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * v-model은 VeeValidate 필드 ref에 연결한다. dirty-change 이벤트로 부모에게 미저장 입력 여부를 알려 이탈 확인에 사용한다.
+ */
+
+/**
+ * 예약 입력만 소유하는 폼이다. 서버 호출은 부모 SchedulesPage가 맡고 이 폼은 검증한 입력과 기준 revision을 save 이벤트로 전달한다.
+ * props.initial은 읽기 전용 서버 자료다. resetKey가 변할 때만 form.resetForm으로 복사하여 자동 재조회가 작성 중 초안을 덮지 않게 한다.
+ * computed schema는 번역과 등록 job 목록에 반응한다. Zod safeParse 결과를 VeeValidate 필드 오류에 직접 연결하며 별도 Zod 어댑터를 사용하지 않는다.
+ */
+
 import { computed, ref, watch } from "vue";
 import { useForm } from "vee-validate";
 import { useI18n } from "vue-i18n";
@@ -154,6 +165,9 @@ watch(
   (dirty) => emit("dirty-change", dirty),
   { immediate: true },
 );
+/**
+ * busy/readonly를 확인하고 이전 필드 오류를 비운 뒤 실제 입력을 검증한다. cron 최종 해석과 권한/revision 검사는 서버가 다시 수행한다.
+ */
 function saveSchedule() {
   if (props.busy || props.readonly) return;
   form.setErrors({

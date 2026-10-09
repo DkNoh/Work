@@ -18,6 +18,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.core.Ordered;
 import org.springframework.core.env.Environment;
 
+/*
+ * Servlet 앱에 상태/CSRF/선택 기능 endpoint, 공통 오류 Advice, request ID 필터를 등록한다.
+ * DefaultSessionEndpoints는 설정으로 끌 수 있으며 앱별 사용자 DTO를 대신 구현할 수 있다.
+ * 조건부 bean으로 소비 앱의 구현을 존중하며 업무 Controller나 앱 클래스를 import하지 않는다.
+ */
+
 @AutoConfiguration
 @ConditionalOnWebApplication(type = ConditionalOnWebApplication.Type.SERVLET)
 @EnableConfigurationProperties(ScFrameworkProperties.class)

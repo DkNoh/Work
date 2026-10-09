@@ -1,3 +1,8 @@
+/*
+ * 폼 행동 막대와 확인 대화상자의 공개 입력/이벤트/slot 타입이다. readonly props는 부모가 상태 원본임을 표현한다.
+ *  VNode를 쓰는 slot은 부모가 제공하는 화면 조각이고, emit 튜플은 이벤트별 인자의 형태를 제한한다.
+ *  확인 버튼과 취소 버튼의 의미를 나누어 서버 저장·성공 시 닫기 정책을 공통 UI 안에 고정하지 않는다.
+ */
 import type { VNode } from "vue";
 
 /** 버튼 배치만 소유한다. native form과 submit 처리·검증은 부모의 책임이다. */
@@ -21,6 +26,7 @@ export interface ScFormActionsSlots {
   secondary?: () => VNode[];
 }
 
+// 문자열 union은 허용된 위험도와 취소 원인만 사용하게 한다. 런타임 enum 객체를 추가하지 않는다.
 export type ScConfirmDialogIntent = "default" | "danger";
 export type ScConfirmDialogCancelReason = "button" | "escape" | "backdrop";
 export interface ScConfirmDialogProps {

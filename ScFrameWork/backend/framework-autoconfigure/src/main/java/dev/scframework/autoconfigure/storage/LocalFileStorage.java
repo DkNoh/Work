@@ -12,6 +12,12 @@ import java.time.Instant;
 import java.util.List;
 import java.util.ArrayList;
 
+/*
+ * UUID 키를 실제 root 아래 일반 파일에 대응시키는 로컬 바이너리 저장소다. 파일명/경로를 외부 입력으로 받지 않는다.
+ * 실제 스트림 바이트를 제한하며 recoverable 모드에서는 journal→part 쓰기→force→atomic move로 진행한다.
+ * pending journal은 재시작 복구의 근거이고 storage lock은 같은 root의 동시 사용을 막는다. 앱 metadata 소유권은 별도다.
+ */
+
 /** UUID와 실제 root 안의 일반 파일만 다룬다. root 생성은 첫 쓰기까지 지연한다. */
 public final class LocalFileStorage implements RecoverableFileStorage, AutoCloseable {
     private final Path root;
@@ -27,6 +33,7 @@ public final class LocalFileStorage implements RecoverableFileStorage, AutoClose
         this.root = root.toAbsolutePath().normalize(); this.maxBytes = maxBytes;
         this.recoverable=recoverable;
     }
+    // 설정 root의 실제 경로를 기준점으로 삼는다. 생성은 write에서만 요청하며 읽기에서 없는 폴더를 새로 만들지 않는다.
     private Path root(boolean create) throws IOException {
         if (Files.isSymbolicLink(root)) throw new IOException("Storage root must not be a symbolic link");
         if (create) Files.createDirectories(root);
@@ -48,6 +55,7 @@ public final class LocalFileStorage implements RecoverableFileStorage, AutoClose
         try{Files.setPosixFilePermissions(directory,PosixFilePermissions.fromString("rwx------"));}catch(UnsupportedOperationException ignored){}
         return directory;
     }
+    // 새 쓰기 키/runId/시각을 private marker로 먼저 남긴다. 내용 force 뒤 실제 blob 쓰기를 시작한다.
     private void journal(Path anchor,String key)throws IOException{
         Path directory=childDirectory(anchor,".pending");Path marker=directory.resolve(key);
         String content="1\n"+runId+"\n"+Instant.now()+"\n";
@@ -56,12 +64,14 @@ public final class LocalFileStorage implements RecoverableFileStorage, AutoClose
         }
         try{Files.setPosixFilePermissions(marker,PosixFilePermissions.fromString("rw-------"));}catch(UnsupportedOperationException ignored){}
     }
+    // 정규 UUID 키와 실제 root의 바로 아래 경로만 허용한다. symlink/경로 탈출 입력을 저장 키로 쓰지 않는다.
     private Path path(String key) throws IOException {
         if (key == null || !key.matches("[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}")) throw new IOException("Invalid storage key");
         Path anchor = root(false); Path result = anchor.resolve(key).normalize();
         if (!result.getParent().equals(anchor) || Files.isSymbolicLink(result)) throw new IOException("Invalid storage entry");
         return result;
     }
+    // 소비 앱 상한과 저장소 상한 중 작은 값으로 스트림을 제한한다. 중간 실패 시 part/marker/blob을 정리하고 원 실패를 전달한다.
     @Override public StoredBlob write(InputStream source, long requestedMaxBytes) throws IOException {
         if (source == null || requestedMaxBytes < 1) throw new IllegalArgumentException("Positive byte limit and source are required");
         long limit = Math.min(maxBytes, requestedMaxBytes); String key = UUID.randomUUID().toString();
@@ -91,6 +101,7 @@ public final class LocalFileStorage implements RecoverableFileStorage, AutoClose
         if (!Files.exists(root, LinkOption.NOFOLLOW_LINKS)) return false;
         return Files.isRegularFile(path(key), LinkOption.NOFOLLOW_LINKS);
     }
+    // 없는 파일 삭제는 성공으로 처리한다. 재전달에도 안전하지만 일반 파일 이외의 경로를 지우지는 않는다.
     @Override public void delete(String key) throws IOException {
         if (!Files.exists(root, LinkOption.NOFOLLOW_LINKS)) return;
         Path entry = path(key);
@@ -103,6 +114,7 @@ public final class LocalFileStorage implements RecoverableFileStorage, AutoClose
         Path file=child.resolve(key);if(Files.isSymbolicLink(file)||Files.exists(file,LinkOption.NOFOLLOW_LINKS)&&!Files.isRegularFile(file,LinkOption.NOFOLLOW_LINKS))throw new IOException("SC_STORAGE_JOURNAL_INVALID");Files.deleteIfExists(file);
     }
     @Override public void markRetained(String key)throws IOException{if(!recoverable||!Files.exists(root,LinkOption.NOFOLLOW_LINKS))return;Path entry=path(key);safeChildDelete(entry.getParent(),".pending",key);}
+    // journal 이름/크기/버전/UUID/시각을 검사한다. 현재 run인지 표시만 하며 실제 보존/삭제 판단은 복구 서비스가 한다.
     @Override public List<PendingWrite> pendingWrites()throws IOException{
         if(!recoverable||!Files.exists(root,LinkOption.NOFOLLOW_LINKS))return List.of();
         Path anchor=root(false),directory=anchor.resolve(".pending");if(!Files.exists(directory,LinkOption.NOFOLLOW_LINKS))return List.of();

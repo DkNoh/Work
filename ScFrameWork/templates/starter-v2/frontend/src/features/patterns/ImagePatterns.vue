@@ -15,6 +15,17 @@
   </sc-section-card>
 </template>
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * v-model로 편집 영역과 선택 주석 ID를 연결하고, annotations는 읽기 전용 참조 영역으로 전달한다.
+ */
+
+/**
+ * 공통 이미지 영역 편집기의 입력/이벤트 계약을 보여주는 로컬 예제다. 네트워크 대신 canvas로 만든 중립 이미지를 사용한다.
+ * HTMLImageElement는 shallowRef로 보관해 DOM 객체 내부를 반응형 Proxy로 감싸지 않는다. box는 0~1 정규화 상대 좌표다.
+ * onMounted에서 브라우저 이미지를 만들고 decode 완료 후 전달한다. 화면 종료 뒤 완료된 Promise는 active 검사로 버린다.
+ */
+
 import { computed, onBeforeUnmount, onMounted, shallowRef, ref } from "vue";
 import { useI18n } from "vue-i18n";
 import { ScSectionCard } from "@sc/ui";
@@ -33,6 +44,9 @@ const annotations = computed(() => [
     box: { x: 0.6, y: 0.5, width: 0.2, height: 0.2 },
   },
 ]);
+/**
+ * DOM을 사용할 수 있는 mount 이후에 canvas와 Image를 생성한다. decode Promise가 완료되어야 이미지 치수/렌더링 자료가 준비된다.
+ */
 onMounted(async () => {
   const canvas = document.createElement("canvas");
   canvas.width = 600;

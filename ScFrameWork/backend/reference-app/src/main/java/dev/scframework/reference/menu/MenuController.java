@@ -7,6 +7,10 @@ import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 import static dev.scframework.reference.menu.MenuDtos.*;
 
+/**
+ * 메뉴 lookup과 관리자 생성/수정 요청을 Service로 연결한다. 메뉴 선택지 읽기와 변경 권한은 같은 정책이 아니다.
+ */
+
 @RestController
 @RequestMapping("/api/menus")
 public class MenuController {

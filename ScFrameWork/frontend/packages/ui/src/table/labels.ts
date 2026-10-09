@@ -1,3 +1,8 @@
+/*
+ * 표/가상 목록이 사용하는 한국어 기본 문구와 부분 override 병합 함수다. 언어 선택의 원본은 앱이며 이 모듈은 locale 상태를 별도로 저장하지 않는다.
+ *  ScTableLabels의 함수 필드는 행 이름·전체 건수처럼 실행 시 달라지는 값을 문장에 넣는다.
+ *  Partial<ScTableLabels>는 Java의 선택 설정 객체처럼 일부 필드만 덮어쓰게 한다. undefined는 걸러 기본 문구가 사라지지 않게 한다.
+ */
 import type { ScTableLabels } from "./contracts";
 
 export const defaultTableLabels: Readonly<ScTableLabels> = {

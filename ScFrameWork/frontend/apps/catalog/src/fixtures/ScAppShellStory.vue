@@ -60,6 +60,15 @@
 </template>
 
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 공개 셸의 header-actions/sidebar-footer/notice/default slot을 모두 소비한다. 도구 펼치기는 header 높이를 실제로 바꾸고 입력 초안은 본문에 유지한다.
+ */
+
+/*
+ * 앱 Router 대신 selectedItem ref로 선택을 보여 주는 카탈로그 fixture다. navigationItems/activeItem Controls는 공개 셸 props로 연결된다.
+ *  selectedLabel computed는 현재 항목 이름을 유도한다. title/refreshCount/showHeaderTools는 서로 다른 화면 상태라 선택 변화가 입력을 지우지 않는다.
+ */
 import { computed, ref, useId, watch } from "vue";
 import { VCard, VCardTitle, VCardText } from "vuetify/components";
 import { ScAppShell, ScActionButton, ScTextField, type ScAppShellNavItem } from "@sc/ui";
@@ -97,12 +106,14 @@ const title = ref("긴 한국어 제목도 입력과 조작 이름을 유지합�
 const refreshCount = ref(0);
 const showHeaderTools = ref(false);
 const headerToolsId = `sc-story-header-tools-${useId()}`;
+// Controls에서 activeItem을 바꾸는 외부 입력을 로컬 예제 상태에 반영한다. 실제 업무 앱에서는 Router가 원본이 되어야 한다.
 watch(
   () => props.activeItem,
   (value) => {
     selectedItem.value = value;
   },
 );
+// 셸의 navigate를 받아 fixture 선택을 갱신하고 상위 Story에도 전달해 이벤트를 검증할 수 있게 한다.
 function selectScreen(item: ScAppShellNavItem) {
   selectedItem.value = item.id;
   emit("navigate", item);

@@ -1,3 +1,8 @@
+/**
+ * 생성 앱 v2의 운영 API 경계다. 운영 DTO는 공개 @sc/runtime ApiComponents를 소비하고 Notes 전용 generated 타입과 분리한다.
+ * 모든 HTTP는 이 앱의 runtime.client 한 개를 경유한다. Query/세션 수명과 서버 기능 활성 여부를 기준으로 기능을 연결한다.
+ * 공통 패키지 또는 다른 업무 앱의 내부 src를 import하지 않는다. API 타입은 컴파일 계약이고 실제 권한/유효성은 서버가 검사한다.
+ */
 import type { ApiComponents } from "@sc/runtime";
 import type { FrameworkRuntime } from "@sc/runtime";
 
@@ -13,6 +18,9 @@ export type RunPage = ApiComponents["schemas"]["OperationalRunPage"];
 export type BrowserGroupPage = ApiComponents["schemas"]["BrowserErrorGroupPage"];
 export type BrowserOccurrencePage = ApiComponents["schemas"]["BrowserErrorOccurrencePage"];
 
+/**
+ * 캐시 prefix를 기능별로 구분하여 예약 저장이 관련 목록/단건/실행 이력만 갱신하도록 한다.
+ */
 export const operationKeys = {
   capabilities: ["framework", "capabilities"] as const,
   messages: ["operations", "messages"] as const,

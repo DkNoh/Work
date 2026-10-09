@@ -25,6 +25,15 @@
 </template>
 
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 합성 행으로 XLSX 생성/재읽기 결과를 표로 표시하고 잘못된 바이트의 오류 처리도 확인한다.
+ */
+
+/*
+ * 공개 @sc/excel 변환기를 브라우저에서 실제 왕복 호출한다. 파일 다운로드나 업무 DB 저장은 하지 않는다.
+ *  columns의 as const satisfies는 key/type 리터럴을 보존하면서 공개 열 계약도 검사한다. busy/message/rows는 이 예제의 실행 상태다.
+ */
 import { ref } from "vue";
 import { ScActionButton } from "@sc/ui";
 import { readWorkbook, writeWorkbook, type ScExcelCell, type ScWorkbookColumn } from "@sc/excel";
@@ -35,6 +44,7 @@ const columns = [
 const rows = ref<Record<"title" | "amount", ScExcelCell>[]>([]);
 const message = ref("변환 대기");
 const busy = ref(false);
+// await로 생성 완료 후 재읽는다. 결과 오류가 있으면 기존 rows를 유지하고 finally에서 busy를 반드시 해제한다.
 async function roundTrip() {
   busy.value = true;
   try {
@@ -58,6 +68,7 @@ async function roundTrip() {
     busy.value = false;
   }
 }
+// 임의 세 바이트로 invalid-file 경계를 재현한다. 실패한 입력은 현재 미리보기 행을 대체하지 않는 소비 정책이다.
 async function readInvalidFile() {
   const result = await readWorkbook(new Uint8Array([1, 2, 3]), { columns });
   message.value = result.errors.map((error) => `${error.code}: ${error.message}`).join(" ");

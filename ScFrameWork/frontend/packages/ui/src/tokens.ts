@@ -1,16 +1,31 @@
+/*
+ * 색·간격·타이포·높이 등 공통 디자인 값의 단일 TypeScript 원본이다. Java 상수 설정처럼 소비하지만 CSS 생성과 Vue theme도 이 값을 공유한다.
+ *  as const는 값의 리터럴 타입과 읽기 전용 구조를 보존한다. typeof uiTokens로 만든 타입은 실제 설정 모양과 어긋나지 않는다.
+ *  값 변경 시 tokens.scss를 직접 고치지 않고 생성 명령으로 맞춘다. 컴포넌트에서 토큰을 쓰면 여러 앱의 표현이 함께 바뀐다.
+ */
 /** 공통 디자인 값의 단일 원본. CSS 산출물은 tokens:generate로 갱신한다. */
 export const uiTokens = {
   color: {
     primary: "#077d47",
     onPrimary: "#ffffff",
+    // Vivid accents belong to artwork/charts; small text uses the semantic colors below.
+    accentGreen: "#03b562",
+    onAccentGreen: "#073923",
+    accentViolet: "#7f67ff",
+    accentPink: "#fd4963",
+    accentAmber: "#ffb51b",
+    accentGreenSoft: "#7ddcb1",
+    accentVioletSoft: "#c1b1ff",
+    accentPinkSoft: "#ffa1b3",
+    accentAmberSoft: "#ffd682",
     secondary: "#7f67ff",
     onSecondary: "#11121d",
     background: "#f2f4f9",
     surface: "#ffffff",
     surfaceMuted: "#eef1f8",
-    text: "#1f2431",
-    textMuted: "#5c6580",
-    border: "#e8edf4",
+    text: "#111827",
+    textMuted: "#59677c",
+    border: "#eeedf3",
     controlBorder: "#7d89a0",
     focus: "#6750db",
     selected: "#eef0ff",
@@ -19,7 +34,7 @@ export const uiTokens = {
     onSuccess: "#ffffff",
     warning: "#98610f",
     onWarning: "#ffffff",
-    error: "#b64545",
+    error: "#c42f4d",
     onError: "#ffffff",
     info: "#6750db",
     onInfo: "#ffffff",
@@ -37,8 +52,16 @@ export const uiTokens = {
     card: "0 2px 2px rgb(0 0 0 / 5%)",
     overlay: "0 8px 24px rgb(31 36 49 / 14%)",
   },
-  fontFamily: '"Malgun Gothic", "Apple SD Gothic Neo", system-ui, sans-serif',
-  fontSize: { small: 12, body: 14, label: 14, section: 18, title: 22, display: 32 },
+  fontFamily: '"Plus Jakarta Sans", "Apple SD Gothic Neo", system-ui, sans-serif',
+  fontSize: {
+    small: 12,
+    body: 14,
+    label: 14,
+    cardTitle: 15.2,
+    section: 18,
+    title: 22,
+    display: 32,
+  },
   fontWeight: { regular: 400, medium: 500, semibold: 600, bold: 700 },
   lineHeight: { body: 1.5, title: 1.3 },
   breakpoint: { xs: 0, sm: 768, md: 1200, lg: 1600, xl: 1920, xxl: 2560 },

@@ -7,6 +7,10 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * Vue 보고서/실제 대시보드의 읽기 전용 HTTP 경계다. 기존 요구사항 CRUD와 별도로 집계/정렬/서버 페이징 계약을 제공한다.
+ */
+
 @RestController
 @RequestMapping("/api/reports/requirements")
 public class RequirementReportController {
@@ -18,6 +22,7 @@ public class RequirementReportController {
 
     @GetMapping
     @Operation(operationId = "requirementReport", summary = "요구사항 집계 보고서 조회")
+    // q의 앞뒤 공백도 검색 의미로 보존한다. 정렬 문자열은 Service allowlist 검증 후 Mapper로 들어가며 임의 SQL 조각으로 쓰지 않는다.
     public RequirementReportDtos.RequirementReportPage report(
             @Parameter(description = "제목의 literal 부분 문자열, 앞뒤 공백 보존", schema = @Schema(maxLength = 200))
             @RequestParam(defaultValue = "") String q, @RequestParam(required = false) Long menuId,

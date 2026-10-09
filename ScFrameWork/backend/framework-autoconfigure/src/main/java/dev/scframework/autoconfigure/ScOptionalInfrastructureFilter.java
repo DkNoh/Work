@@ -6,6 +6,12 @@ import org.springframework.boot.autoconfigure.AutoConfigurationMetadata;
 import org.springframework.context.EnvironmentAware;
 import org.springframework.core.env.Environment;
 
+/*
+ * 자동설정 import 단계에서 Rabbit/Quartz/관측 인프라의 활성 조건을 먼저 검사한다.
+ * 라이브러리를 설치했다는 이유만으로 외부 연결이 시작되지 않도록 OFF 기능의 자동설정을 제외한다.
+ * 기본 OTLP exporter는 항상 제외하고 별도 allowlist exporter를 사용한다.
+ */
+
 /** Starter를 설치해도 선택 기능이 켜지기 전에는 외부 연결이나 worker를 만들지 않는다. */
 public final class ScOptionalInfrastructureFilter implements AutoConfigurationImportFilter, EnvironmentAware {
     private Environment environment;

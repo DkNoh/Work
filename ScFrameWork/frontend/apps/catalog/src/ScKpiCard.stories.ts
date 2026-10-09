@@ -59,14 +59,20 @@ export const Amber: Story = {
   },
 };
 export const FourMetrics: Story = {
+  args: { density: "compact" },
+  parameters: { controls: { include: ["density"] } },
   render: (args) => ({
     components: { ScKpiCardStory },
     setup: () => ({ args }),
     template: '<ScKpiCardStory :card="args" gallery />',
   }),
-  play: async ({ canvasElement }) => {
+  play: async ({ canvasElement, args }) => {
     const canvas = within(canvasElement);
-    await expect(canvas.getAllByRole("region")).toHaveLength(4);
+    const cards = canvas.getAllByRole("region");
+    await expect(cards).toHaveLength(4);
+    for (const card of cards) {
+      await expect(card).toHaveAttribute("data-density", args.density);
+    }
     await expect(canvas.getByRole("region", { name: "보완이 필요한 요청" })).toHaveTextContent(
       "3.4% 감소",
     );

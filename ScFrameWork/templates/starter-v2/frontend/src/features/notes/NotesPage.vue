@@ -56,6 +56,18 @@
   </section>
 </template>
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 검색과 편집은 별도 form이다. 목록 RouterLink는 선택 ID를 URL에 넣고 상세 Query 결과를 폼 초기 기준으로 사용한다.
+ */
+
+/**
+ * Notes 목록/검색/생성/수정의 전체 흐름을 보여주는 생성 앱 업무 예제다. Controller→NoteService→JPA/Querydsl/MyBatis 경계를 따라 읽을 수 있다.
+ * URL의 id/q는 탐색 상태, Vue Query는 서버 자료, VeeValidate는 저장 전 입력, basisRevision은 편집을 시작한 서버 수정 번호다.
+ * useMutation은 저장 요청 수명/isPending을 제공한다. retry:false로 쓰기 요청을 자동 반복하지 않고 사용자의 제출을 한 번씩 처리한다.
+ * satisfies는 작성한 DTO가 서버 입력 타입과 맞는지 컴파일 검사한다. 실제 빈 제목/길이는 safeParse와 서버 검증이 확인한다.
+ */
+
 import { computed, ref, watch } from "vue";
 import { useRoute, onBeforeRouteLeave, onBeforeRouteUpdate } from "vue-router";
 import { useI18n } from "vue-i18n";
@@ -170,6 +182,9 @@ watch(selectedId, () => {
   basisRevision.value = null;
   message.value = "";
 });
+/**
+ * 사용자가 작성 중이지 않을 때만 현재 선택의 응답으로 입력을 채운다. 자동 재조회가 dirty 초안을 덮어쓰지 않게 한다.
+ */
 watch(
   detail.data,
   (item) => {
@@ -180,6 +195,9 @@ watch(
   },
   { immediate: true },
 );
+/**
+ * 저장 중에는 이동을 막고 미저장 입력은 사용자 확인 후 버린다. 로그아웃 후에는 업무 폼 이탈 확인이 세션 종료를 막지 않는다.
+ */
 function allowLeave() {
   if (!runtime.session.identity) return true;
   if (save.isPending.value) return false;
@@ -199,6 +217,9 @@ async function applySearch() {
 async function createNew() {
   await runtime.router.push({ name: "notes", params: {}, query: route.query });
 }
+/**
+ * 사용자가 초기화를 선택했을 때 현재 서버 값/revision을 채택한다. 조회 결과가 없는 신규 화면은 빈 제목으로 돌아간다.
+ */
 function resetInput() {
   if (form.meta.value.dirty && !window.confirm(t("leave"))) return;
   const item = detail.data.value;
@@ -208,6 +229,9 @@ function resetInput() {
   basisRevision.value = item?.id === selectedId.value ? item.revision : null;
   message.value = "";
 }
+/**
+ * 입력 검증 → 생성/수정 mutation → 응답 item/stats 캐시 반영 → 관련 Query 무효화 → 저장 ID URL 이동 순서다. 실패 시 초안을 유지하고 ApiError.fields를 필드에 연결한다.
+ */
 async function saveNote() {
   if (save.isPending.value || (selectedId.value !== null && basisRevision.value === null)) return;
   message.value = "";

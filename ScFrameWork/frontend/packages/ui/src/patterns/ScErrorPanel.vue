@@ -8,6 +8,15 @@
   </div>
 </template>
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 실패 제목과 message를 alert 영역에 표시한다. showRetry일 때만 다시 조회 버튼이 나타나고 클릭은 retry 이벤트가 된다.
+ */
+
+/*
+ * 실제 HTTP 오류를 사용자 문구로 바꾸고 재조회하는 책임은 부모에 있다. 이 컴포넌트는 전달된 안전한 message만 표시한다.
+ *  withDefaults는 생략 가능한 표시 props의 기본값을 지정한다. emit retry에는 인자가 없으며 원래 요청을 자동 재실행하지 않는다.
+ */
 import { useAttrs } from "vue";
 import ScActionButton from "../ScActionButton.vue";
 import { pickScHtmlAttrs } from "../contracts";

@@ -17,6 +17,15 @@
   </section>
 </template>
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 카드를 제목/설명/actions 헤더와 기본 slot 본문으로 나눈다. 본문의 폼·표·차트는 이 카드가 알 필요 없는 부모 콘텐츠다.
+ */
+
+/*
+ * title/description과 density/surface를 받아 공통 카드의 의미와 표현만 제공한다. 업무 데이터와 이벤트 처리는 slot을 작성한 부모가 소유한다.
+ *  useId는 여러 카드를 써도 제목 ID가 겹치지 않게 한다. aria-labelledby가 실제 h2를 가리키도록 외부 값으로 덮어쓰는 것을 막는다.
+ */
 import { useAttrs, useId } from "vue";
 import { pickScHtmlAttrs } from "../contracts";
 import type { ScSectionCardProps, ScSectionCardSlots } from "./contracts";
@@ -79,12 +88,12 @@ p {
 }
 .sc-section-card[data-density="compact"] {
   .sc-section-card__header {
-    padding: var(--sc-space-4) var(--sc-space-4) var(--sc-space-3);
+    padding: var(--sc-space-4);
     gap: var(--sc-space-2);
   }
 
   h2 {
-    font-size: var(--sc-font-size-body);
+    font-size: var(--sc-font-size-card-title);
     font-weight: var(--sc-font-weight-semibold);
   }
 

@@ -11,6 +11,15 @@
   </div>
 </template>
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 자료 조회 중이라는 텍스트와 회전 표시를 함께 배치한다. 회전 아이콘은 장식이어서 aria-hidden으로 중복 읽기를 막는다.
+ */
+
+/*
+ * 조회 Promise나 타이머를 소유하지 않는 상태 표시 부품이다. 부모가 로딩 여부에 따라 이 컴포넌트를 표시/제거한다.
+ *  role=status·aria-live=polite·aria-busy는 고정된 접근성 계약이며 attrs가 덮어쓰지 못하게 제외한다.
+ */
 import { useAttrs } from "vue";
 import { VProgressCircular } from "vuetify/components";
 import { pickScHtmlAttrs } from "../contracts";

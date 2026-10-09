@@ -13,6 +13,12 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.TransactionDefinition;
 import org.springframework.transaction.support.TransactionTemplate;
 
+/*
+ * 이전 프로세스의 pending write journal을 확인해 참조 없는 파일을 영속 삭제 메시지로 연결한다.
+ * 현재 run의 쓰기는 건드리지 않고 한 회차 최대 100개를 처리한다. DB enqueue 커밋 후 marker를 지운다.
+ * 중간 crash로 같은 삭제가 다시 만들어져도 참조 재검사와 멱등 삭제가 원본을 보호한다.
+ */
+
 public final class FileRecoveryService {
     private final RecoverableFileStorage storage;private final ObjectProvider<FileReferenceLookup> references;private final DurableMessagePublisher publisher;private final Clock clock;
     private final TransactionTemplate fresh,outside;private final ObjectProvider<OperationalEventSink> sinks;

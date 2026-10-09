@@ -45,6 +45,16 @@
   </section>
 </template>
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 이름·값·증감·보조 설명을 하나의 지표로 표시한다. v-if로 생략한 항목의 공간을 만들지 않으며 두 아이콘은 장식이다.
+ */
+
+/*
+ * 숫자 포맷과 집계는 소비 앱이 끝낸 문자열 value를 전달한다. 카드가 통화/권한/서버 조회를 추측하지 않는다.
+ *  tone은 장식 팔레트이고 trendDirection은 화살표 방향이다. 업무상 증가가 좋은지는 카드가 판단하지 않는다.
+ *  useId로 접근성 제목 참조를 고정하고 density만 CSS가 읽어 값의 크기를 선택한다. 별도 ref/computed가 필요 없는 표시 전용 부품이다.
+ */
 import { useAttrs, useId } from "vue";
 import { pickScHtmlAttrs } from "../contracts";
 import type { ScKpiCardProps, ScKpiCardSlots } from "./contracts";
@@ -64,6 +74,7 @@ const labelId = `sc-kpi-${useId()}`;
 <style scoped lang="scss">
 .sc-kpi-card {
   --sc-kpi-tone: var(--sc-color-primary);
+  --sc-kpi-icon-background: var(--sc-color-accent-green-soft);
   position: relative;
   display: flex;
   align-items: flex-start;
@@ -79,23 +90,26 @@ const labelId = `sc-kpi-${useId()}`;
 
   &[data-tone="violet"] {
     --sc-kpi-tone: var(--sc-color-info);
+    --sc-kpi-icon-background: var(--sc-color-accent-violet-soft);
   }
   &[data-tone="pink"] {
     --sc-kpi-tone: var(--sc-color-error);
+    --sc-kpi-icon-background: var(--sc-color-accent-pink-soft);
   }
   &[data-tone="amber"] {
     --sc-kpi-tone: var(--sc-color-warning);
+    --sc-kpi-icon-background: var(--sc-color-accent-amber-soft);
   }
 }
 .sc-kpi-card__icon {
   display: grid;
   flex: 0 0 36px;
   width: 36px;
-  height: 36px;
+  height: 40px;
   place-items: center;
-  border-radius: var(--sc-radius-sm);
-  color: var(--sc-kpi-tone);
-  background: color-mix(in srgb, var(--sc-kpi-tone) 18%, var(--sc-color-surface));
+  border-radius: var(--sc-space-1);
+  color: var(--sc-color-text);
+  background: var(--sc-kpi-icon-background);
 
   svg {
     width: 22px;
@@ -118,8 +132,8 @@ const labelId = `sc-kpi-${useId()}`;
 .sc-kpi-card__value {
   margin: var(--sc-space-1) 0;
   font-size: 24px;
-  font-weight: var(--sc-font-weight-medium);
-  line-height: 1.4;
+  font-weight: var(--sc-font-weight-semibold);
+  line-height: var(--sc-line-height-body);
   overflow-wrap: anywhere;
 }
 .sc-kpi-card__context {
@@ -128,6 +142,7 @@ const labelId = `sc-kpi-${useId()}`;
   align-items: center;
   gap: var(--sc-space-1);
   font-size: var(--sc-font-size-small);
+  line-height: var(--sc-line-height-body);
 }
 .sc-kpi-card__trend {
   display: inline-flex;
@@ -166,8 +181,6 @@ const labelId = `sc-kpi-${useId()}`;
   pointer-events: none;
 }
 .sc-kpi-card[data-density="compact"] {
-  gap: var(--sc-space-3);
-
   .sc-kpi-card__value {
     font-size: var(--sc-font-size-title);
   }

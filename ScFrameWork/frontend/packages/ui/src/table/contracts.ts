@@ -1,3 +1,8 @@
+/*
+ * 행 타입 T를 호출하는 앱이 정하는 generic 표/목록 계약이다. Java의 List<T>처럼 rows의 T가 column.value와 cell/row slot까지 이어진다.
+ *  readonly 배열은 표가 원본 업무 행을 직접 변경하지 않는다는 계약이다. 선택은 key 배열, 정렬/페이지는 별도 props와 emit으로 부모가 관리한다.
+ *  server 모드에서는 현재 페이지 rows와 전체 total을 구분한다. 공통 표는 SQL이나 HTTP 조회를 실행하지 않는다.
+ */
 import type { VNode } from "vue";
 
 export interface ScTableColumn<T> {
@@ -85,6 +90,7 @@ export interface ScTableRowSlot<T> {
   rowKey: string;
   rowIndex: number;
 }
+// scoped slot에는 현재 행·키·열·표시값을 전달한다. 부모 template에서 업무별 셀을 그리되 표 내부에 render 함수나 업무 import를 넣지 않는다.
 export interface ScDataTableSlots<T> {
   cell?: (props: ScTableCellSlot<T>) => VNode[];
   "row-actions"?: (props: ScTableRowSlot<T>) => VNode[];
@@ -92,6 +98,7 @@ export interface ScDataTableSlots<T> {
   empty?: () => VNode[];
   error?: (props: { message: string; retry: () => void }) => VNode[];
 }
+// 가상화는 현재 보이는 DOM 수를 제한한다. 전체 자료 자체를 서버에서 나누어 조회하는 pagination과 다른 책임이다.
 export interface ScVirtualOptions {
   /** 실제 스크롤 viewport 높이. 기본 480px, 양수만 허용한다. */
   height?: number;
@@ -121,6 +128,7 @@ export interface ScVirtualListSlots<T> {
   empty?: () => VNode[];
   error?: (props: { message: string; retry: () => void }) => VNode[];
 }
+// defineExpose로 외부에 공개할 명령이다. 변경되는 DOM index 대신 지속적인 업무 key로 이동해야 정렬 후에도 같은 행을 찾을 수 있다.
 export interface ScVirtualHandle {
   /** 존재하는 키만 이동한다. DOM 위치 index는 공개하지 않는다. */
   scrollToKey: (key: string) => boolean;

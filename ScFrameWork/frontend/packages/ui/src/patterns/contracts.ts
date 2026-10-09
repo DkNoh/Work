@@ -1,8 +1,14 @@
+/*
+ * 카드·페이지 헤더·검색·조회 상태·목록/상세 배치의 공개 화면 패턴 계약이다. 공통 패턴이 소유하지 않을 업무 상태를 props/events로 경계 짓는다.
+ *  string union은 density/tone처럼 허용된 표현을 제한하고, optional slot은 부모가 제공할 수 있는 화면 영역을 뜻한다.
+ *  VNode[] 반환 함수는 Vue slot 타입이다. API 응답 DTO와 달리 이 계약에는 조회/저장 메서드나 업무 권한 규칙이 없다.
+ */
 import type { VNode } from "vue";
 export type ScCardDensity = "comfortable" | "compact";
 export type ScSectionCardSurface = "bordered" | "plain";
 export type ScKpiCardTone = "green" | "violet" | "pink" | "amber";
 export type ScKpiTrendDirection = "up" | "down" | "neutral";
+// KPI는 숫자가 아닌 표시 문자열을 받아 앱의 단위·통화·locale 결정을 보존한다.
 export interface ScKpiCardProps {
   /** 지표의 이름. 카드의 접근성 이름으로도 사용한다. */
   label: string;
@@ -53,6 +59,7 @@ export interface ScSearchPanelProps {
   resetLabel?: string;
   disabled?: boolean;
 }
+// 이름별 튜플 타입으로 이벤트의 인자를 정의한다. submit/reset은 DOM 이벤트, retry/show-list는 의도만 전달한다.
 export interface ScSearchPanelEmits {
   submit: [event: SubmitEvent];
   reset: [event: Event];
@@ -89,6 +96,7 @@ export interface ScListDetailLayoutProps {
 export interface ScListDetailLayoutEmits {
   "show-list": [];
 }
+// slot의 이름이 화면 구역의 계약이다. 부모가 list/detail 내부를 자유롭게 조립해도 공통 부품이 업무 구현을 import하지 않는다.
 export interface ScListDetailLayoutSlots {
   header?: () => VNode[];
   search?: () => VNode[];

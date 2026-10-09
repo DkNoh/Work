@@ -40,6 +40,17 @@
 </template>
 
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 공통 입력·버튼·카드를 조립하고 health의 로딩/오류/결과를 표시한다. 버튼은 health Query를 명시적으로 다시 조회한다.
+ */
+
+/**
+ * 공통 패키지만 사용하는 최소 시작 화면이다. projectTitle은 브라우저 입력 예제이며 API에 저장되지 않는다.
+ * 서버 상태는 useQuery가 /health 응답을 보관한다. queryFn의 AbortSignal을 runtime.client에 전달하여 조회 취소를 연결한다.
+ * script의 ref는 .value로 읽지만 template의 최상위 ref는 자동 해제된다. computed가 필요한 파생값은 별도 복사 상태로 만들지 않는다.
+ */
+
 import { ref } from "vue";
 import { useQuery } from "@tanstack/vue-query";
 import { mdiRefresh } from "@mdi/js";

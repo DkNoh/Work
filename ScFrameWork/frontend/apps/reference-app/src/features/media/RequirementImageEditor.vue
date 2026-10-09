@@ -44,6 +44,18 @@
   </sc-section-card>
 </template>
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 공통 이미지 편집기에 box와 읽기 전용 주석을 전달하고, 저장/삭제는 revision을 포함한 이벤트로 부모에게 알린다.
+ */
+
+/**
+ * 기존 요구사항의 이미지 영역 수정/삭제 입력부. 조회는 Query, 편집 중 좌표는 box, 최초 비교 기준은 basis가 소유한다.
+ * ScNormalizedBox는 픽셀 대신 0~1 상대 좌표의 타입이다. 화면 배율이 바뀌어도 같은 영역을 가리킨다.
+ * props.initial을 직접 수정하지 않고 좌표 복사본을 편집한다. resetKey가 바뀔 때만 새 revision과 원본을 받아 초안을 교체한다.
+ * 다른 요구사항의 주석은 읽기 전용 참고 목록으로 보여준다. 이미지 실제 크기가 서버 메타데이터와 다르면 저장을 막는다.
+ */
+
 import { computed, ref, watch } from "vue";
 import { useQuery } from "@tanstack/vue-query";
 import { useI18n } from "vue-i18n";
@@ -124,10 +136,16 @@ watch(
   () => emit("dirty-change", JSON.stringify(box.value) !== JSON.stringify(basis.value)),
   { immediate: true },
 );
+/**
+ * 편집 가능·중복 저장 없음·좌표 존재·이미지 크기 일치를 확인한 뒤 부모에게 알린다. 이 함수가 DB를 직접 저장하는 것은 아니다.
+ */
 function saveBox() {
   if (!props.readonly && !props.busy && box.value && !mismatch.value)
     emit("save", { box: box.value, revision: revision.value });
 }
+/**
+ * 확인 대화상자를 닫고 현재 편집 기준 revision으로 삭제를 요청한다. 실제 성공 후 초기값 갱신은 부모가 처리한다.
+ */
 function deleteBox() {
   if (!props.readonly && !props.busy && props.initial?.annotation) {
     deleteOpen.value = false;

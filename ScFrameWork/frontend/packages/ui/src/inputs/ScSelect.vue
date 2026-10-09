@@ -109,6 +109,18 @@
 </template>
 
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * presentation에 따라 toolbar의 native select 또는 일반 폼의 Vuetify select를 표시한다.
+ * v-for는 부모 options를 반복하고 :key에는 안정적인 value를 쓴다. 빈 선택은 clearable일 때만 사용자가 고를 수 있다.
+ * readonly인 native select는 편집을 막되 hidden input으로 폼 제출값을 유지한다.
+ */
+
+/*
+ * 선택값 원본은 부모의 string|null 모델이다. null은 선택 없음이며 서버 조회/옵션 로딩은 소비 앱 책임이다.
+ *  computed는 공통 옵션을 Vuetify의 title/value/props 형식으로 변환하므로 공급업체 자료형을 공용 API에 노출하지 않는다.
+ *  toolbar와 field는 표현만 다르고 selectValue를 통해 같은 변경 규칙을 사용한다.
+ */
 import { computed, ref, useAttrs, useId } from "vue";
 import { VSelect } from "vuetify/components";
 import { inputErrors, inputHtmlAttrs } from "./input-accessibility";
@@ -137,6 +149,7 @@ const instanceId = useId();
 const focused = ref(false);
 const fieldId = computed(() => props.id?.trim() || `sc-select-${instanceId}`);
 const fieldErrors = computed(() => inputErrors(props.errorMessages));
+// map은 새 표시 배열을 만든다. readonly options를 수정하지 않으며 옵션별 disabled도 접근성 상태와 함께 변환한다.
 const selectItems = computed(() =>
   props.options.map((option) => ({
     title: option.label,
@@ -155,6 +168,7 @@ function fieldAttrs() {
     reserved: ["aria-controls", "aria-expanded", "aria-haspopup", "aria-autocomplete"],
   });
 }
+// toolbar는 바깥 div와 실제 select가 분리돼 있다. class/style/data는 컨테이너에, 의미 있는 입력 ARIA는 select에 전달한다.
 function toolbarContainerAttrs() {
   return Object.fromEntries(
     Object.entries(attrs).filter(
@@ -162,6 +176,7 @@ function toolbarContainerAttrs() {
     ),
   );
 }
+// native select의 명시 label과 메시지를 연결한다. 외부 ARIA가 필수 내부 상태나 label을 제거하지 못하도록 병합한다.
 function toolbarFieldAttrs() {
   const forwarded = pickScHtmlAttrs(attrs, {
     omit: [
@@ -196,6 +211,8 @@ function toolbarFieldAttrs() {
   }
   return forwarded;
 }
+// 브라우저 select는 문자열만 반환하므로 빈 문자열을 공통 null 계약으로 해석한다.
+// as HTMLSelectElement는 이 이벤트를 발생시킨 DOM 요소의 타입을 알려 주는 단언이며 값을 변환하지 않는다.
 function selectToolbarValue(event: Event) {
   const target = event.target as HTMLSelectElement;
   const value =
@@ -210,6 +227,7 @@ function selectToolbarValue(event: Event) {
   // 프로그램 이벤트로 readonly/알 수 없는 값을 넣어도 화면을 부모의 값으로 복원한다.
   target.value = props.modelValue ?? "";
 }
+// 옵션에 없는 값·disabled 옵션·중복 값은 거절한다. emit은 부모에게 변경을 요청하며 부모 prop을 직접 갱신하지 않는다.
 function selectValue(value: unknown) {
   if (props.disabled || props.readonly || (value !== null && typeof value !== "string")) return;
   if (value === props.modelValue) return;

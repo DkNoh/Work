@@ -1,3 +1,8 @@
+/*
+ * 표/가상 목록 Story가 재사용하는 합성 행·컬럼·key/label 콜백이다. 운영 DB나 Reference 자료를 읽지 않는다.
+ *  ScTableColumn<TableExampleRow> generic 덕분에 value 콜백에서 실제 행 필드만 사용할 수 있다.
+ *  createTableExampleRows는 지정 수만큼 안정적인 문자열 ID를 만들고 long일 때 일부 행을 여러 줄로 만들어 가변 높이 측정을 확인한다.
+ */
 import type { ScTableColumn } from "@sc/ui/table";
 
 export interface TableExampleRow {

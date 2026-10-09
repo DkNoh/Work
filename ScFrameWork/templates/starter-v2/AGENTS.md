@@ -2,7 +2,8 @@
 
 이 앱은 공개 배포된 @sc/ui/runtime/date/excel/i18n 및 서버 Starter를 소비합니다. 프레임워크의 src, 다른 앱, 원본 업무, DB·secret·runtime을 복사하거나 상대 import하지 않습니다.
 
-- 화면은 Vue SFC template → script setup lang="ts" → style 순서입니다. JSX/render/h 화면은 사용하지 않습니다.
+- 모든 신규·수정 화면과 기능의 프런트·Java 서버에 JSP·Java 개발자를 위한 상세 한국어 주석을 유지한다. 역할·입출력·상태 소유자, props/emit·ref/computed/watch·타입과 실행 검증, UI→API→Service→DB 흐름, 권한·revision·트랜잭션·오류·정리 이유를 설명한다. 구현 변경 때 주석도 갱신하며 생성 코드와 비밀값은 주석 대상으로 편집하지 않는다.
+- 화면은 Vue SFC template → script setup lang="ts" → style 순서입니다. JSX/render/h 화면은 사용하지 않습니다. template 최상위 형제 HTML 주석은 개발 모드의 단일 루트에 영향을 주므로 화면 개요는 script 주석에 두고 영역 HTML 주석은 기존 루트 안에 둡니다.
 - 직접 만든 공통 UI만 Sc PascalCase 파일/import와 sc-kebab-case 태그를 사용합니다. 업무 DTO/API/composable에는 Sc를 붙이지 않습니다.
 - URL은 Router, 서버 자료는 Vue Query, 작성 입력은 VeeValidate/ref, 세션 공유는 runtime이 원본입니다.
 - 업무 HTTP는 runtime.client 하나만 사용합니다. 인증 쿠키·CSRF·세션 응답 폐기 계약을 보존합니다.

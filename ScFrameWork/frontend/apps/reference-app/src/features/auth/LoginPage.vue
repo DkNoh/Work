@@ -109,6 +109,7 @@
         <p class="login-form-eyebrow">WELCOME BACK</p>
         <h1 id="login-title">로그인</h1>
         <p class="login-form-description">아이디와 비밀번호로 업무 공간에 접속하세요.</p>
+        <!-- v-model이 username/password ref를 갱신한다. @submit.prevent는 form 기본 페이지 전송을 막고 loginUser를 한 번 호출한다. -->
         <form class="login-form" aria-label="로그인" @submit.prevent="loginUser">
           <sc-text-field v-model="username" label="아이디" autocomplete="username" required />
           <sc-text-field
@@ -129,17 +130,27 @@
 </template>
 
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 로그인 전에는 App.vue가 일반 업무 셸 없이 이 main을 표시한다. 왼쪽 SVG는 장식이고 오른쪽 form이 실제 인증 입력이다.
+ */
+
+// 로그인 화면은 공통 runtime.auth를 호출하는 진입점이다. 사용자 입력 ref는 이 브라우저 화면에만 존재하며 서버 세션 그 자체가 아니다.
 import { ref, useId } from "vue";
 import { ScActionButton, ScTextField } from "@sc/ui";
 import { useFrameworkRuntime } from "@sc/runtime";
 
 const runtime = useFrameworkRuntime();
+// ref("")는 변경을 추적하는 값 상자다. script에서 .value를 쓰고 template의 최상위 ref는 Vue가 자동으로 풀어 준다.
 const username = ref("");
 const password = ref("");
 const busy = ref(false);
 const error = ref("");
+// useId는 같은 컴포넌트가 여러 번 생겨도 SVG gradient 참조 ID가 겹치지 않게 한다.
 const illustrationGradientId = `login-illustration-${useId()}`;
 
+// 제출 → busy로 중복 방지 → 공통 auth.login → 비밀번호 입력 비우기 → dashboard replace 순서다.
+// 인증 HTTP·세션 갱신·CSRF 처리는 runtime이 맡으며 여기서 쿠키/토큰을 직접 생성하지 않는다.
 async function loginUser() {
   if (busy.value) return;
   busy.value = true;
@@ -148,6 +159,7 @@ async function loginUser() {
     await runtime.auth.login(username.value, password.value);
     password.value = "";
     await runtime.router.replace("/dashboard");
+    // 실패하면 메시지를 표시하고 finally에서 버튼을 다시 활성화한다. cause가 Error인지 확인한 뒤 message를 읽는다.
   } catch (cause) {
     error.value = cause instanceof Error ? cause.message : "로그인하지 못했습니다.";
   } finally {

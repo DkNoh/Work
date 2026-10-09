@@ -13,6 +13,15 @@
 </template>
 
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * Controls props를 공개 textarea에 연결하고 사용자 입력을 미리보기로 즉시 표시한다.
+ */
+
+/*
+ * description ref는 타이핑 중 draft다. update:modelValue에서는 draft만 갱신하고 native change 때 commit:modelValue를 상위 Story로 보낸다.
+ *  Controls의 외부 modelValue 변경은 watch로 적용해 Storybook의 비동기 args 반영과 실제 타이핑을 구분한다.
+ */
 import { ref, watch } from "vue";
 import { ScTextArea, type ScTextAreaProps } from "@sc/ui";
 

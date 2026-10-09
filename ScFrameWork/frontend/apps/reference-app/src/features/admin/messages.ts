@@ -1,3 +1,5 @@
+// 관리의 한국어/영어 표시 문구다. 서버 상태 코드나 API 필드명을 번역하지 않고 같은 키의 문장만 바꾼다.
+// useI18n의 local messages로 전달하며, 언어 선택 자체는 앱의 locale을 따른다.
 export const adminMessages = {
   ko: {
     title: "관리",

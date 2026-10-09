@@ -1,3 +1,7 @@
+/**
+ * 보드/이미지 공통 UI에 주입하는 영어 label 계약이다. 업무 앱의 locale에 맞춰 전달하며 공통 컴포넌트가 특정 앱 번역 사전을 import하지 않는다.
+ * ScBoardLabels/ScImageLabels 타입으로 키 누락을 컴파일에서 확인한다. 이동·그리기 지침과 상태 알림은 키보드/스크린리더 사용자에게도 전달된다.
+ */
 import type { ScBoardLabels } from "@sc/ui/board";
 import type { ScImageLabels } from "@sc/ui/image";
 export const englishBoardLabels: ScBoardLabels = {

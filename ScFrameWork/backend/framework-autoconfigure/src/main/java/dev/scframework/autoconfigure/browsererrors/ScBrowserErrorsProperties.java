@@ -3,6 +3,12 @@ package dev.scframework.autoconfigure.browsererrors;
 import java.util.List;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
+/*
+ * 현재 앱 release와 허용 route/component 코드, 본문/빈도/보존 제한을 바인딩한다.
+ * validate는 SemVer와 코드 형식 및 수치 범위를 검사한다. route는 URL 원문 대신 앱이 등록한 이름이다.
+ * 설정 리스트는 copyOf로 복사해 호출자가 원본 리스트를 바꿔 허용 목록을 우회하지 않게 한다.
+ */
+
 @ConfigurationProperties("sc.framework.browser-errors")
 public class ScBrowserErrorsProperties {
     private boolean enabled;

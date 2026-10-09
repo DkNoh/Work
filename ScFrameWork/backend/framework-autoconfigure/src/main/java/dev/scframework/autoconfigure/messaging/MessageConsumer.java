@@ -12,6 +12,12 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.TransactionDefinition;
 import org.springframework.transaction.support.TransactionTemplate;
 
+/*
+ * Rabbit 수신 봉투를 검사하고 handler 효과·inbox·완료 상태를 DB 트랜잭션으로 확정하는 수동 ACK 소비기다.
+ * 완료 inbox는 handler 재실행 없이 ACK한다. handler 실패는 rollback 후 재전달하고 시도 횟수는 별도 TX로 남긴다.
+ * deadObserver는 DEAD 상태를 기록하는 용도이며 dead 큐 메시지로 업무 handler를 자동 재실행하지 않는다.
+ */
+
 /** inbox와 handler effect가 한 TX다. 완료 inbox를 먼저 검사해 중복이 재시도 한도를 소모하지 않는다. */
 public final class MessageConsumer implements ChannelAwareMessageListener {
     private final JdbcMessageStore store;private final MessageCodec codec;private final MessageRegistry registry;
@@ -22,6 +28,8 @@ public final class MessageConsumer implements ChannelAwareMessageListener {
         this.store=store;this.codec=codec;this.registry=registry;this.consumer=props.getApplicationId();this.clock=clock;this.deadObserver=deadObserver;this.diagnostics=diagnostics;this.events=events;
         fresh=new TransactionTemplate(manager);fresh.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRES_NEW);
     }
+    // decode/발행 근거 확인→중복 확인→시도 확보→inbox+handler+완료 TX→ACK 순서다.
+    // ACK 전에 프로세스가 종료돼 재전달돼도 커밋된 inbox가 중복 효과를 막는다.
     @Override public void onMessage(Message raw,Channel channel){
         long tag=raw.getMessageProperties().getDeliveryTag();ScMessage message;
         try{message=codec.decode(raw.getBody());}catch(RuntimeException invalid){reject(channel,tag,false);diagnostics.failed();return;}
@@ -50,6 +58,7 @@ public final class MessageConsumer implements ChannelAwareMessageListener {
         }
     }
     private static final class HandlerFailure extends RuntimeException { HandlerFailure(){super("SC_MESSAGE_HANDLER_FAILURE",null,false,false);} }
+    // ACK/reject 송신 자체가 실패하면 channel을 닫아 broker가 미확정 전달을 회수할 수 있게 한다.
     private static void ack(Channel channel,long tag){try{channel.basicAck(tag,false);}catch(IOException failure){abort(channel);}}
     private static void reject(Channel channel,long tag,boolean retry){try{channel.basicReject(tag,retry);}catch(IOException failure){abort(channel);}}
     private static void abort(Channel channel){try{channel.abort();}catch(IOException|RuntimeException ignored){}}

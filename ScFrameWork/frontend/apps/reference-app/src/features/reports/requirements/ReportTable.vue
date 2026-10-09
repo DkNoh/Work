@@ -63,6 +63,18 @@
 </template>
 
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 보기 방식에 따라 ScDataTable 또는 ScVirtualTable을 사용한다. 공통 열/행 키/서버 pagination을 공유하고 이벤트는 부모의 Router 상태로 전달한다.
+ */
+
+/**
+ * 일반 표와 가상 표가 같은 서버 페이지를 표시하도록 공통 props를 조립한다. 이 컴포넌트는 별도 API 호출이나 재정렬을 수행하지 않는다.
+ * ScTableColumn<RequirementReportItem>의 제네릭은 value(row)의 행 타입을 검사한다. keyof/indexed access와 함께 DTO 필드 오타를 컴파일에서 잡는다.
+ * dataMode server의 rows는 서버가 이미 잘라 준 현재 페이지다. 클라이언트에서 다시 정렬/페이지 분할하지 않으며 total은 전체 조건 건수다.
+ * defineEmits는 부모에게 요청하는 이벤트 계약이다. props는 읽기 전용이므로 선택 키 변경도 update:selectedKeys 이벤트로 전달한다.
+ */
+
 import { computed } from "vue";
 import { useI18n } from "vue-i18n";
 import { createDateFormatter } from "@sc/date";
@@ -96,6 +108,9 @@ const emit = defineEmits<{
   retry: [];
 }>();
 const { t, locale } = useI18n({ useScope: "global" });
+/**
+ * 서버 timestamp 원문은 보존하고 현재 언어/서울 시간대의 표시 형식만 계산한다. 컴퓨터 시간대로 원본을 다시 저장하지 않는다.
+ */
 const formatter = computed(() =>
   createDateFormatter({
     locale: locale.value === "en" ? "en" : "ko",
@@ -176,6 +191,9 @@ const viewOptions = computed(() => [
 ]);
 const rowKey = (row: RequirementReportItem) => String(row.id);
 const rowLabel = (row: RequirementReportItem) => row.title;
+/**
+ * computed 객체는 원본 props/번역이 바뀔 때 다시 계산된다. 화면에서 v-bind로 여러 prop을 한 번에 전달하는 입력 묶음이다.
+ */
 const tableProps = computed<ScDataTableProps<RequirementReportItem>>(() => ({
   rows: props.rows,
   columns: columns.value,

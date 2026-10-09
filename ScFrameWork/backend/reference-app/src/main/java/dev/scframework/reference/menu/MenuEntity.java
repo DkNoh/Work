@@ -2,6 +2,11 @@ package dev.scframework.reference.menu;
 
 import jakarta.persistence.*;
 
+/**
+ * 업무 대상 메뉴의 영속 모델이다. parentId는 숫자 참조이며 active는 기존 DB/API 계약의 0/1이다.
+ * 현재 메뉴 편집에는 요구사항처럼 revision 계약을 추가하지 않는다.
+ */
+
 @Entity
 @Table(name = "menu_entry")
 public class MenuEntity {

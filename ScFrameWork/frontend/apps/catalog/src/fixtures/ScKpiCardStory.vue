@@ -1,12 +1,26 @@
 <template>
   <div class="sc-kpi-story" :class="{ 'sc-kpi-story--gallery': gallery }">
     <template v-if="gallery">
-      <sc-kpi-card v-for="sample in samples" :key="sample.label" v-bind="sample" />
+      <sc-kpi-card
+        v-for="sample in samples"
+        :key="sample.label"
+        v-bind="sample"
+        :density="card.density"
+      />
     </template>
     <sc-kpi-card v-else v-bind="card" />
   </div>
 </template>
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * 단일 Controls 카드 또는 4색 gallery를 표시한다. gallery에서는 개별 예제 tone을 유지하고 card.density만 네 카드에 함께 적용한다.
+ */
+
+/*
+ * 업무 집계 없이 고정 합성 문구/값을 공개 ScKpiCardProps로 전달하는 예제다. readonly samples는 fixture가 원본 배열을 편집하지 않겠다는 타입 계약이다.
+ *  card/gallery는 Story에서 내려온 입력이며 공통 KPI 내부 상태를 직접 건드리지 않는다.
+ */
 import { ScKpiCard, type ScKpiCardProps } from "@sc/ui";
 
 withDefaults(defineProps<{ card: ScKpiCardProps; gallery?: boolean }>(), { gallery: false });

@@ -7,6 +7,12 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
+/*
+ * 소비 앱/공통이 bean으로 등록한 작업을 코드별 불변 Map으로 정리한다.
+ * 코드 형식/실행 모드/중복을 시작 때 검사하고 require는 없는 코드를 400으로 거절한다.
+ * all은 화면과 API가 안정된 순서로 작업 목록을 보여 주도록 코드순으로 반환한다.
+ */
+
 public final class RegisteredTaskRegistry {
     private final Map<String, RegisteredOperationalTask> tasks;
     public RegisteredTaskRegistry(Collection<RegisteredOperationalTask> values) {

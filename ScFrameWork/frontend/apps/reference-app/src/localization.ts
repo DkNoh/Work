@@ -1,3 +1,8 @@
+/**
+ * 앱 전용 번역 사전을 공통 i18n factory에 전달한다. Java ResourceBundle의 키 기반 문구 선택과 비슷하다.
+ * request/report는 각 기능이 소유한 사전을 합치고 app은 메뉴와 중립 예제 문구를 정의한다.
+ * 화면의 t("app.title") 계열 호출은 현재 locale에 맞는 키를 읽는다. 권한·업무 상태 코드 자체를 번역 문자열로 저장하지 않는다.
+ */
 import { createScI18n } from "@sc/i18n";
 import { requirementMessages } from "./features/requirements/messages";
 import { requirementReportMessages } from "./features/reports/requirements/messages";

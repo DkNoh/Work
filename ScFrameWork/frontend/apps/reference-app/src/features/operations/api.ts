@@ -1,3 +1,9 @@
+/**
+ * 운영 capability·outbox 메시지·예약/실행 이력·브라우저 오류의 HTTP 경계다. 서버 DTO는 이 앱의 OpenAPI 생성 타입을 선택해 사용한다.
+ * operationKeys는 Vue Query 캐시 식별자의 공통 prefix다. 메시지 재시도/예약 저장 뒤 관련 prefix만 무효화하여 재조회한다.
+ * 조회 함수의 AbortSignal은 공통 client까지 전달하고 모든 변경 요청은 같은 client의 쿠키 세션/CSRF/timeout/오류 변환을 거친다.
+ * 스케줄 revision은 낙관적 동시성 값이다. 재시도/실행 권한과 상태 전이의 최종 결정은 서버 서비스가 맡는다.
+ */
 import type { components } from "../../generated/api";
 import type { ReferenceIdentity } from "../../auth/identity";
 import type { FrameworkRuntime } from "@sc/runtime";

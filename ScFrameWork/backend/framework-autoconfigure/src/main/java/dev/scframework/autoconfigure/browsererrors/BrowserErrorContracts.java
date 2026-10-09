@@ -4,6 +4,12 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import java.time.Instant;
 import java.util.List;
 
+/*
+ * 브라우저 수집 입력과 운영 조회 응답의 공개 DTO 모음이다. 원문 오류/URL/stack 필드는 없다.
+ * @Schema는 OpenAPI 설명이며 실제 입력 허용 여부는 body filter와 BrowserErrorService가 검사한다.
+ * Group은 고정 코드 조합별 집계, Occurrence는 실제 수집 이력, 각 Page는 페이지 메타데이터를 포함한다.
+ */
+
 /** 원문 오류·주소·스택 필드가 없는 중립 수집 계약이다. */
 public final class BrowserErrorContracts {
     private BrowserErrorContracts(){}

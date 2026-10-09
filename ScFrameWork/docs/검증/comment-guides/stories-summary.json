@@ -1,0 +1,18 @@
+{
+  "command": "npm run test:stories",
+  "exitCode": 0,
+  "testFiles": {
+    "passed": 32,
+    "total": 32
+  },
+  "stories": {
+    "passed": 119,
+    "total": 119
+  },
+  "durationSeconds": 8.22,
+  "sourceOrTestEdits": false,
+  "log": ".runtime/comment-guides/stories.log",
+  "warnings": [
+    "Vue compiler decodeEntities option ignored in non-browser builds; tests still passed."
+  ]
+}

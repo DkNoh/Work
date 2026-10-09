@@ -17,6 +17,11 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import static dev.scframework.autoconfigure.scheduling.OperationalScheduleContracts.*;
 
+/**
+ * 등록된 운영 작업의 예약/변경/정지/재개를 현재 ADMIN만 수행한다.
+ * 공통 스케줄러가 cron·시간대·동시성 규칙을 소유하고 앱은 현재 actor와 감사 기록을 같은 변경 트랜잭션에 연결한다.
+ */
+
 @RestController
 @RequestMapping("/api/operations/jobs")
 @ConditionalOnProperty(prefix="sc.framework.scheduler",name="enabled",havingValue="true")
@@ -24,24 +29,31 @@ public class OperationalScheduleController {
     private final ActorResolver actors;private final OperationalSchedulerService service;private final SecurityAuditPublisher audit;private final Clock clock;
     public OperationalScheduleController(ActorResolver actors,OperationalSchedulerService service,SecurityAuditPublisher audit,Clock clock){this.actors=actors;this.service=service;this.audit=audit;this.clock=clock;}
     @GetMapping("/registered") @Operation(operationId="registeredOperationalJobs",summary="등록 운영 작업 조회")
+    // 호출자가 임의 Java 클래스/명령을 예약하지 못하도록 서버에 등록된 작업 코드/실행 모드만 반환한다.
     public RegisteredJobs registered(@Parameter(hidden=true) Authentication authentication){admin(authentication);return new RegisteredJobs(service.registered().stream().map(task->new RegisteredJob(task.jobCode(),task.executionMode().name())).toList());}
     @GetMapping("/schedules") @Operation(operationId="listOperationalSchedules",summary="운영 예약 조회")
     public SchedulePage schedules(@Parameter(hidden=true) Authentication authentication,@RequestParam(defaultValue="0") int page,@RequestParam(defaultValue="20") int size){admin(authentication);return OperationalScheduleContracts.response(service.schedules(page,size));}
     @GetMapping("/schedules/{id}") @Operation(operationId="getOperationalSchedule",summary="운영 예약 단건 조회")
     public Schedule detail(@Parameter(hidden=true) Authentication authentication,@PathVariable long id){admin(authentication);return OperationalScheduleContracts.response(service.detail(id));}
     @PostMapping("/schedules") @Transactional @Operation(operationId="createOperationalSchedule",summary="등록 작업 예약")
+    // 현재 ADMIN actor로 공통 Service 입력을 만들고 예약 저장과 감사 발행을 같은 트랜잭션으로 연결한다. cron/시간대 상세 검증은 공통 Service가 맡는다.
     public Schedule create(@Parameter(hidden=true) Authentication authentication,@RequestBody Input input){var actor=admin(authentication);var result=service.create(input(input),actor.getUsername());record(actor,"SCHEDULE_CREATE",result.id());return OperationalScheduleContracts.response(result);}
     @PutMapping("/schedules/{id}") @Transactional @Operation(operationId="updateOperationalSchedule",summary="운영 예약 변경")
+    // 양의 revision이 필수다. 공통 Service의 조건부 갱신에 편집 시작 버전을 전달하고 성공한 변경만 감사로 발행한다.
     public Schedule update(@Parameter(hidden=true) Authentication authentication,@PathVariable long id,@RequestBody UpdateInput input){var actor=admin(authentication);if(input==null)throw invalid();var result=service.update(id,input(new Input(input.jobCode(),input.cron(),input.timeZone(),input.misfirePolicy(),input.enabled())),revision(input.revision()));record(actor,"SCHEDULE_UPDATE",id);return OperationalScheduleContracts.response(result);}
     @PostMapping("/schedules/{id}/pause") @Transactional @Operation(operationId="pauseOperationalSchedule",summary="운영 예약 일시정지")
+    // 삭제가 아니라 enabled=false로 갱신하는 명령이다. revision 경쟁 검사를 유지해 오래된 화면이 새 설정을 덮지 않게 한다.
     public Schedule pause(@Parameter(hidden=true) Authentication authentication,@PathVariable long id,@RequestBody RevisionInput input){var actor=admin(authentication);if(input==null)throw invalid();var result=service.enabled(id,false,revision(input.revision()));record(actor,"SCHEDULE_PAUSE",id);return OperationalScheduleContracts.response(result);}
     @PostMapping("/schedules/{id}/resume") @Transactional @Operation(operationId="resumeOperationalSchedule",summary="운영 예약 재개")
+    // 같은 revision 계약으로 enabled=true를 복원한다. 즉시 실행을 요청하는 API가 아니라 이후 예약 실행을 재개한다.
     public Schedule resume(@Parameter(hidden=true) Authentication authentication,@PathVariable long id,@RequestBody RevisionInput input){var actor=admin(authentication);if(input==null)throw invalid();var result=service.enabled(id,true,revision(input.revision()));record(actor,"SCHEDULE_RESUME",id);return OperationalScheduleContracts.response(result);}
     @GetMapping("/runs") @Operation(operationId="listOperationalRuns",summary="운영 실행 이력 조회")
     public RunPage runs(@Parameter(hidden=true) Authentication authentication,@RequestParam(defaultValue="0") int page,@RequestParam(defaultValue="20") int size,@RequestParam(required=false) Long scheduleId){admin(authentication);return OperationalScheduleContracts.runs(service.runs(page,size,scheduleId));}
     private UserEntity admin(Authentication authentication){var actor=actors.require(authentication);actors.requireAdmin(actor);return actor;}
+    // nullable HTTP 입력의 enabled를 먼저 확인하고 공통 Service의 명시적 입력 record로 변환한다.
     private static OperationalSchedulerService.Input input(Input input){if(input==null||input.enabled()==null)throw invalid();return new OperationalSchedulerService.Input(input.jobCode(),input.cron(),input.timeZone(),input.misfirePolicy(),input.enabled());}
     private static int revision(Integer value){if(value==null||value<1)throw invalid();return value;}
     private static ApiException invalid(){return new ApiException(400,"INVALID_INPUT","예약 작업 입력을 확인해 주세요.");}
+    // 감사에는 actor/예약 ID/행동/requestId만 담는다. 예약 입력 전체나 실행 중 발생한 예외 원문을 전달하지 않는다.
     private void record(UserEntity actor,String action,long id){audit.publish(new SecurityAuditEvent(actor.getUsername(),actor.getId(),clock.instant(),action,"SUCCESS","SCHEDULE",Long.toString(id),MDC.get("requestId"),null));}
 }

@@ -21,6 +21,17 @@
   </form>
 </template>
 <script setup lang="ts">
+/*
+ * 화면(template) 조립 안내. 개발 모드의 단일 루트 구조를 유지하도록 설명은 script 주석에 둔다.
+ * ScSelect/ScTextField를 VeeValidate 필드에 연결하며 submit 이벤트는 createScreen으로 처리한다.
+ */
+
+/**
+ * 메뉴에 연결할 새 화면 메타데이터 생성 폼. 이미지 파일 업로드는 별도의 VersionUpload 컴포넌트가 맡는다.
+ * 선택 UI 값은 문자열이므로 Zod transform(Number)로 ID를 변환하고 안전한 정수인지 검증한 뒤 API에 보낸다.
+ * created 이벤트는 생성 결과를 부모 작업실에 전달한다. 부모는 목록 캐시를 갱신하고 새 화면의 URL을 선택한다.
+ */
+
 import { computed, onBeforeUnmount, ref } from "vue";
 import { useI18n } from "vue-i18n";
 import { useForm } from "vee-validate";
@@ -51,6 +62,9 @@ let disposed = false;
 onBeforeUnmount(() => {
   disposed = true;
 });
+/**
+ * 중복 제출 방지 → 이전 오류 제거 → safeParse → 서버 생성 → 폼 초기화/created 순서다. 서버 필드 오류는 ApiError.fields에서 복원한다.
+ */
 async function createScreen() {
   if (busy.value) return;
   error.value = "";

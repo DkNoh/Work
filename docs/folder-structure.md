@@ -1,5 +1,7 @@
 # ScFramework 구조와 책임
 
+`Work.git`의 `ScFramework` 브랜치는 저장소 루트가 곧 프로젝트 루트다. `frontend/`, `backend/`, `package.json`을 별도 `ScFrameWork/` 폴더로 감싸지 않는다. 로컬에서는 `/Users/dk/Work/ScFramework`를 VS Code로 열고 개발 명령을 실행한다. Git 이력은 기존 `8d2e9c7` 다음의 일반 폴더 이동 커밋으로 이어진다.
+
 ## DB별 구성 위치
 
 공통 `backend/framework-core/.../database/DatabaseDialect.java`는 JDBC 차이의 공개 계약이며
@@ -9,7 +11,6 @@ Reference/Starter/생성 v2의 `src/main/resources/database/<vendor>.yml`과 `db
 JDBC 드라이버·Flyway 확장은 각 소비 앱 POM의 `db-*` profile이 선택한다.
 `scripts/verify-database-config.mjs`는 연결된 설정/DDL 파일의 정적 검사를 수행한다.
 [상세 경로·실행 계약](database-support.md), [리뷰와 검증 한계](리뷰정리.md)를 함께 확인한다.
-
 
 Windows 개발 진입점은 `scripts/dev.mjs` → `scripts/dev.ps1`이다. 루트 `npm run dev`가
 운영체제를 선택하며 Windows 실행기는 개발 빌드·비공개 secret 준비·Java/Vite 시작·포트 준비·

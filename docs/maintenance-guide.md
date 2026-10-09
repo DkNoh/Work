@@ -1,5 +1,11 @@
 # ScFramework 수정 위치
 
+## 저장소를 열고 Pull/Push할 때
+
+`Work.git`의 `ScFramework` 브랜치에서는 저장소 루트와 npm·Maven 프로젝트 루트가 같다. VS Code로 `/Users/dk/Work/ScFramework`를 열면 바로 `frontend/`, `backend/`, `package.json`이 보인다. 상위/하위에 별도 저장소를 만들지 않는다. `ScFramework` 브랜치는 `origin/ScFramework`를 추적하며 GitLens에서 변경 검토·커밋·Pull/Push를 수행한다.
+
+2026-10-09 `8d2e9c7`의 `ScFrameWork/` 내용을 저장소 루트로 이동했다. 원래 프레임워크 README를 루트 README로 사용하고 원격 이력을 이어가는 일반 커밋으로 반영한다. 기존 중첩 구조를 사용하는 다른 checkout은 변경사항을 먼저 커밋하거나 stash한 뒤 Pull하고 저장소 루트를 다시 연다. Git이 관리하지 않는 `.runtime`·DB·secret·`node_modules`·빌드 결과는 Pull로 이동되지 않으므로, 다른 환경의 자료 경로는 해당 환경에서 별도로 확인한다. 현재 Mac의 기존 `.runtime`은 이동·복사하지 않는다.
+
 ## DB별 변경을 유지하는 기준
 
 H2는 기본 개발 DB다. Oracle·Db2 LUW·SQL Server·PostgreSQL은 소비 앱의 Maven `db-*` profile과
@@ -8,7 +14,6 @@ H2는 기본 개발 DB다. Oracle·Db2 LUW·SQL Server·PostgreSQL은 소비 앱
 기존 H2 migration을 편집해 checksum을 바꾸지 않는다. 신규 DDL 변경은 해당 DB 실기동 테스트,
 JPA/MyBatis rollback·중복 충돌·시간/UUID·Quartz와 생성 앱의 회귀를 함께 확인한다.
 정적 설정 검사 통과를 실제 외부 DB 인증으로 표시하지 않는다.
-
 
 Windows 개발 실행은 `scripts/dev.mjs`와 `scripts/dev.ps1`에서 수정한다. Java 선택·포트 충돌·
 현재 사용자 전용 secret ACL·기존 secret 보존·별도 실행 자료·API proxy·자식 프로세스 종료를

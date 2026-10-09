@@ -1,0 +1,10 @@
+COMMAND --check scripts/verify-package-artifacts.mjs
+EXIT 0
+COMMAND --check scripts/verify-package-gates.mjs
+EXIT 0
+COMMAND node_modules/prettier/bin/prettier.cjs --check scripts/verify-package-artifacts.mjs scripts/verify-package-gates.mjs docs/질의/011-패키지계약검증.md
+Checking formatting...
+All matched files use Prettier code style!
+EXIT 0
+COMMAND node_modules/eslint/bin/eslint.js scripts/verify-package-artifacts.mjs scripts/verify-package-gates.mjs
+EXIT 0

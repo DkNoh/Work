@@ -1,0 +1,13 @@
+
+> @sc/reference-app@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+src/features/admin/MenuForm.vue(124,11): error TS2322: Type 'number | null' is not assignable to type 'number | undefined'.
+  Type 'null' is not assignable to type 'number | undefined'.
+npm error Lifecycle script `typecheck` failed with error:
+npm error code 2
+npm error path /Users/dk/Work/ScFramework/frontend/apps/reference-app
+npm error workspace @sc/reference-app@0.1.0
+npm error location /Users/dk/Work/ScFramework/frontend/apps/reference-app
+npm error command failed
+npm error command sh -c vue-tsc --noEmit -p tsconfig.json

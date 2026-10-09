@@ -1,0 +1,1 @@
+frontend/packages/ui/src/board/ScSortableBoard.vue(152,25): error TS7006: Parameter 'event' implicitly has an 'any' type.

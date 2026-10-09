@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "freshSets": {
+    "operations": {
+      "fullDocumentRuns": 11,
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 29,
+      "incompleteNodes": 143,
+      "manualReviewComplete": false,
+      "evidence": "docs/검증/012-operations-e2e-fifth-results"
+    },
+    "reports": {
+      "fullDocumentRuns": 9,
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 18,
+      "incompleteNodes": 245,
+      "manualReviewComplete": false,
+      "evidence": "docs/검증/012-reports-e2e-first-results"
+    }
+  },
+  "mainBaseline": "012-baseline-e2e-first.log",
+  "mainOutputRetained": false,
+  "mainAxeRunsNotReusedFromPreviousStages": true
+}

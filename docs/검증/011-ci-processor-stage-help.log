@@ -1,0 +1,7 @@
+usage: verify-java-processors.py [-h] [--stage STAGE]
+
+격리 Maven fixture로 부모 POM의 Java annotation processor 성공·실패 계약을 검증한다.
+
+optional arguments:
+  -h, --help     show this help message and exit
+  --stage STAGE  증거 파일의 세 자리 단계 번호 (기본: 008)

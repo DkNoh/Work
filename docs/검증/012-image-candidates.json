@@ -1,0 +1,330 @@
+{
+  "format": 1,
+  "stage": "012",
+  "status": "read-only-preparation",
+  "checkedAt": "2026-10-06T21:05:16.344613+00:00",
+  "sourceMethod": "Public official-namespace Docker Hub tag JSON over HTTPS; no docker pull, image execution or container change.",
+  "candidateCount": 6,
+  "candidates": [
+    {
+      "product": "RabbitMQ",
+      "candidateImage": "rabbitmq:4.3.6-management",
+      "tag": "4.3.6-management",
+      "manifestListDigest": "sha256:8dd6e3570ddaa2ef82a6c3a8950e79c1f73893adfbdddbc374fc1f1ac8a0f5dd",
+      "pinnedCandidate": "rabbitmq:4.3.6-management@sha256:8dd6e3570ddaa2ef82a6c3a8950e79c1f73893adfbdddbc374fc1f1ac8a0f5dd",
+      "license": "MPL-2.0",
+      "licenseSource": "https://raw.githubusercontent.com/rabbitmq/rabbitmq-server/v4.3.6/LICENSE",
+      "releaseSource": "https://www.rabbitmq.com/release-information",
+      "registryMetadataSource": "https://hub.docker.com/v2/repositories/library/rabbitmq/tags/4.3.6-management",
+      "checkedAt": "2026-10-06T21:05:15.028763+00:00",
+      "registryTagLastUpdated": "2026-10-05T17:53:13.809658Z",
+      "linuxArm64Available": true,
+      "linuxImages": [
+        {
+          "os": "linux",
+          "architecture": "amd64",
+          "variant": null,
+          "digest": "sha256:1d306c8f8c55cd3ed50271198f4094220e4caed9a8d04a14aca869339d3d3ca9"
+        },
+        {
+          "os": "linux",
+          "architecture": "ppc64le",
+          "variant": null,
+          "digest": "sha256:2052e0f855bd336ebd98628da9a5cd322e2c6761ae9b9525b072b46fe479ca77"
+        },
+        {
+          "os": "linux",
+          "architecture": "s390x",
+          "variant": null,
+          "digest": "sha256:d191adcf6fb2fb20beddbabffe2d760b75545c6ff6746bca15f11900dce2cfbc"
+        },
+        {
+          "os": "linux",
+          "architecture": "arm",
+          "variant": "v7",
+          "digest": "sha256:28ea063ce0c1ed70d9485b0a21781718977c257b6e322a79ad4f65132ff46a2d"
+        },
+        {
+          "os": "linux",
+          "architecture": "arm64",
+          "variant": "v8",
+          "digest": "sha256:b848a0a78f27ab2a4528921baeade53a30b82eac9b129e80249e50fb421d2cd5"
+        },
+        {
+          "os": "linux",
+          "architecture": "riscv64",
+          "variant": null,
+          "digest": "sha256:6a2b9acef318cbf89aa0f38b8de6ac41e84481807089213f5fa224669d3cbdf7"
+        }
+      ],
+      "pulled": false,
+      "installedFor012": false,
+      "runtimeCompatibilityVerified": false,
+      "licenseSourceRead": true,
+      "licenseSourceSha256": "02a4e44df118d5ff8cd873463f4e4828833261e5e2678b87871515286a8de0f0",
+      "licenseSourceBytes": 364,
+      "licenseTextSource": "https://raw.githubusercontent.com/rabbitmq/rabbitmq-server/v4.3.6/LICENSE-MPL-RabbitMQ",
+      "licenseTextSourceSha256": "fab3dd6bdab226f1c08630b1dd917e11fcb4ec5e1e020e2c16f83a0a13863e85",
+      "licenseTextSourceBytes": 16726,
+      "licensingIndexBoundary": "Core/tier-1 plugins MPL 2.0; index also identifies Apache 2.0 OCF files. This is not a full image license inventory."
+    },
+    {
+      "product": "Prometheus",
+      "candidateImage": "prom/prometheus:v3.13.4",
+      "tag": "v3.13.4",
+      "manifestListDigest": "sha256:87861b8cf91579109319ebc300f3f1060e6da9c05d6ae8ad15a20c879e84e32e",
+      "pinnedCandidate": "prom/prometheus:v3.13.4@sha256:87861b8cf91579109319ebc300f3f1060e6da9c05d6ae8ad15a20c879e84e32e",
+      "license": "Apache-2.0",
+      "licenseSource": "https://raw.githubusercontent.com/prometheus/prometheus/v3.13.4/LICENSE",
+      "releaseSource": "https://prometheus.io/download/",
+      "registryMetadataSource": "https://hub.docker.com/v2/repositories/prom/prometheus/tags/v3.13.4",
+      "checkedAt": "2026-10-06T21:05:15.289409+00:00",
+      "registryTagLastUpdated": "2026-09-29T14:08:02.399353Z",
+      "linuxArm64Available": true,
+      "linuxImages": [
+        {
+          "os": "linux",
+          "architecture": "amd64",
+          "variant": null,
+          "digest": "sha256:2b23972d85f7f1350cde18fb61239d6fc8669a5b8fe162ab569373d3ad3463d2"
+        },
+        {
+          "os": "linux",
+          "architecture": "ppc64le",
+          "variant": null,
+          "digest": "sha256:c1d70d12da210c929d015097e68800e88f7e346c6cdccc7fb5bd82be83b8e0b2"
+        },
+        {
+          "os": "linux",
+          "architecture": "arm64",
+          "variant": null,
+          "digest": "sha256:765261de302accc2aa2fa1c74aed31ce51c0acd92a0a55406903dbacc18ea39c"
+        },
+        {
+          "os": "linux",
+          "architecture": "s390x",
+          "variant": null,
+          "digest": "sha256:76aa6bb43d98f30aa9fd74c95a8974174866571b5b30e9177088fb325ad2e6d7"
+        },
+        {
+          "os": "linux",
+          "architecture": "arm",
+          "variant": "v7",
+          "digest": "sha256:e0356aecab18619eac3d06b539fd5114d64133e8e62533b83749eb800c6b856d"
+        },
+        {
+          "os": "linux",
+          "architecture": "riscv64",
+          "variant": null,
+          "digest": "sha256:4daee9c67062e192121e468cd9bf9c00bc9f25a7a29070e4ab26c8881a885a62"
+        }
+      ],
+      "pulled": false,
+      "installedFor012": false,
+      "runtimeCompatibilityVerified": false,
+      "licenseSourceRead": true,
+      "licenseSourceSha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "licenseSourceBytes": 11357
+    },
+    {
+      "product": "Grafana OSS",
+      "candidateImage": "grafana/grafana:13.2.3",
+      "tag": "13.2.3",
+      "manifestListDigest": "sha256:b28bae15e219c998fb0e0424ed724930cc61b1f61fb404d47c862f9a23f9e572",
+      "pinnedCandidate": "grafana/grafana:13.2.3@sha256:b28bae15e219c998fb0e0424ed724930cc61b1f61fb404d47c862f9a23f9e572",
+      "license": "AGPL-3.0-only",
+      "licenseSource": "https://raw.githubusercontent.com/grafana/grafana/v13.2.3/LICENSE",
+      "releaseSource": "https://grafana.com/grafana/download?edition=oss",
+      "registryMetadataSource": "https://hub.docker.com/v2/repositories/grafana/grafana/tags/13.2.3",
+      "checkedAt": "2026-10-06T21:05:15.559743+00:00",
+      "registryTagLastUpdated": "2026-09-29T07:33:07.31557Z",
+      "linuxArm64Available": true,
+      "linuxImages": [
+        {
+          "os": "linux",
+          "architecture": "amd64",
+          "variant": null,
+          "digest": "sha256:d84563330dc9d2fd2bc096d0fb96021b5319c75bf6ed555566709998e823dec4"
+        },
+        {
+          "os": "linux",
+          "architecture": "arm64",
+          "variant": null,
+          "digest": "sha256:c474a2845f8cd51bf09c3f24e036225912fdb21cd0c87ac89527c395585bfa22"
+        },
+        {
+          "os": "linux",
+          "architecture": "arm",
+          "variant": "v7",
+          "digest": "sha256:52c1e59c9f738ea3095557c7ec025b9de8e5efa3515bdcf4a42bdcd58d737dd2"
+        }
+      ],
+      "pulled": false,
+      "installedFor012": false,
+      "runtimeCompatibilityVerified": false,
+      "licenseSourceRead": true,
+      "licenseSourceSha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0",
+      "licenseSourceBytes": 34523
+    },
+    {
+      "product": "OpenTelemetry Collector Contrib",
+      "candidateImage": "otel/opentelemetry-collector-contrib:0.162.0",
+      "tag": "0.162.0",
+      "manifestListDigest": "sha256:39923a8e431bd1f57be82411999d389fcfe40857492e4365456d97a4c1f74be6",
+      "pinnedCandidate": "otel/opentelemetry-collector-contrib:0.162.0@sha256:39923a8e431bd1f57be82411999d389fcfe40857492e4365456d97a4c1f74be6",
+      "license": "Apache-2.0",
+      "licenseSource": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-collector-contrib/v0.162.0/LICENSE",
+      "releaseSource": "https://github.com/open-telemetry/opentelemetry-collector-releases/releases/tag/v0.162.0",
+      "registryMetadataSource": "https://hub.docker.com/v2/repositories/otel/opentelemetry-collector-contrib/tags/0.162.0",
+      "checkedAt": "2026-10-06T21:05:15.822304+00:00",
+      "registryTagLastUpdated": "2026-10-05T17:11:34.470732Z",
+      "linuxArm64Available": true,
+      "linuxImages": [
+        {
+          "os": "linux",
+          "architecture": "amd64",
+          "variant": null,
+          "digest": "sha256:340885ab6f46822374f00c58c067396b53b8d612559842e8821585567579d9e3"
+        },
+        {
+          "os": "linux",
+          "architecture": "ppc64le",
+          "variant": null,
+          "digest": "sha256:d81cb27bf3f507d1f2c8b764cfdbec695583538408eef12fd6176732f1424f8c"
+        },
+        {
+          "os": "linux",
+          "architecture": "arm64",
+          "variant": null,
+          "digest": "sha256:254638b0878b0ef56088f3d580bac163aa7131213c5f7eb6e0cc9d169805503f"
+        },
+        {
+          "os": "linux",
+          "architecture": "386",
+          "variant": null,
+          "digest": "sha256:8b9211dbe1b3642eca91b237f39ede8baae9abaf97d6dcc88116f77f29545359"
+        },
+        {
+          "os": "linux",
+          "architecture": "s390x",
+          "variant": null,
+          "digest": "sha256:822f69068938bb4c00559cec46bb33455b15ce3016d5d403e78939b65afc9697"
+        },
+        {
+          "os": "linux",
+          "architecture": "arm",
+          "variant": "v7",
+          "digest": "sha256:aedb2e660faac07e7e4dafa1f4073359cec1cee176e6ba366a221f3352ef3997"
+        },
+        {
+          "os": "linux",
+          "architecture": "riscv64",
+          "variant": null,
+          "digest": "sha256:efe5d17e8a562af6ed64b72401b141d0476b538e5831812394fa1b93d51efa8b"
+        }
+      ],
+      "pulled": false,
+      "installedFor012": false,
+      "runtimeCompatibilityVerified": false,
+      "licenseSourceRead": true,
+      "licenseSourceSha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "licenseSourceBytes": 11357
+    },
+    {
+      "product": "Tempo OSS",
+      "candidateImage": "grafana/tempo:3.1.0",
+      "tag": "3.1.0",
+      "manifestListDigest": "sha256:3076b8dcdfb32fd6bc5ccef85e7b7313e6199b9cb84366257fc17ecb696db5fd",
+      "pinnedCandidate": "grafana/tempo:3.1.0@sha256:3076b8dcdfb32fd6bc5ccef85e7b7313e6199b9cb84366257fc17ecb696db5fd",
+      "license": "AGPL-3.0-only",
+      "licenseSource": "https://raw.githubusercontent.com/grafana/tempo/v3.1.0/LICENSE",
+      "releaseSource": "https://github.com/grafana/tempo/releases/tag/v3.1.0",
+      "registryMetadataSource": "https://hub.docker.com/v2/repositories/grafana/tempo/tags/3.1.0",
+      "checkedAt": "2026-10-06T21:05:16.090027+00:00",
+      "registryTagLastUpdated": "2026-09-29T16:46:37.986643Z",
+      "linuxArm64Available": true,
+      "linuxImages": [
+        {
+          "os": "linux",
+          "architecture": "amd64",
+          "variant": null,
+          "digest": "sha256:19dca9c0b1801209424a757cd5970d6ffd7cfc9a7f4966c2a6795fbe29b495a8"
+        },
+        {
+          "os": "linux",
+          "architecture": "arm64",
+          "variant": null,
+          "digest": "sha256:56df098fdfe4dabc012615e970c8500b2be8f51933fb59351c8849a2cb807fb7"
+        }
+      ],
+      "pulled": false,
+      "installedFor012": false,
+      "runtimeCompatibilityVerified": false,
+      "licenseSourceRead": true,
+      "licenseSourceSha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0",
+      "licenseSourceBytes": 34523
+    },
+    {
+      "product": "Loki OSS",
+      "candidateImage": "grafana/loki:3.7.8",
+      "tag": "3.7.8",
+      "manifestListDigest": "sha256:1107dd5274e0ada47e42472b7a7e71f3b2a2fe878878108f3e2f9e51528f0193",
+      "pinnedCandidate": "grafana/loki:3.7.8@sha256:1107dd5274e0ada47e42472b7a7e71f3b2a2fe878878108f3e2f9e51528f0193",
+      "license": "AGPL-3.0-only",
+      "licenseSource": "https://raw.githubusercontent.com/grafana/loki/v3.7.8/LICENSE",
+      "releaseSource": "https://github.com/grafana/loki/releases/tag/v3.7.8",
+      "registryMetadataSource": "https://hub.docker.com/v2/repositories/grafana/loki/tags/3.7.8",
+      "checkedAt": "2026-10-06T21:05:16.344601+00:00",
+      "registryTagLastUpdated": "2026-09-17T15:45:46.597217Z",
+      "linuxArm64Available": true,
+      "linuxImages": [
+        {
+          "os": "linux",
+          "architecture": "amd64",
+          "variant": null,
+          "digest": "sha256:81a6802ec4bd1b88c564494f06376889ed022998a188826190d26d2754ac2aae"
+        },
+        {
+          "os": "linux",
+          "architecture": "arm64",
+          "variant": null,
+          "digest": "sha256:a2753977b07471e0bb271f421677036fb1c84a2fd409e14fa19dfc7cc3b789b5"
+        },
+        {
+          "os": "linux",
+          "architecture": "arm",
+          "variant": "v7",
+          "digest": "sha256:6f043292552634eaf5285dcaa14b9a72096a8e8f6ae828909afafc0ca722db7b"
+        }
+      ],
+      "pulled": false,
+      "installedFor012": false,
+      "runtimeCompatibilityVerified": false,
+      "licenseSourceRead": true,
+      "licenseSourceSha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0",
+      "licenseSourceBytes": 34523
+    }
+  ],
+  "sourceBoundary": {
+    "backendModified": false,
+    "dependencyInstallExecuted": false,
+    "dockerPullExecuted": false,
+    "containersChanged": false,
+    "originalRuntimeAccessed": false
+  },
+  "limitations": [
+    "Registry tag/digest/architecture metadata does not prove Spring/broker/OTLP runtime compatibility.",
+    "Manifest-list digest must be checked against actual selected platform RepoDigests when Root performs the later pull.",
+    "Licenses refer to the named OSS product; this is not an exhaustive image/transitive third-party license inventory.",
+    "Candidates are not recorded as installed dependencies or completed operational modules."
+  ],
+  "verificationHistory": [
+    {
+      "check": "license-family-text assertion",
+      "initialExitCode": 1,
+      "failure": "The RabbitMQ LICENSE file is a licensing index using MPL 2.0 shorthand rather than the full Mozilla Public License text.",
+      "repair": "Followed the licensing index to LICENSE-MPL-RabbitMQ and verified the full license; all six product license sources now read.",
+      "policyRelaxed": false
+    }
+  ]
+}

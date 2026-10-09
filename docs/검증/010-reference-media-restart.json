@@ -1,0 +1,40 @@
+{
+  "stage": "010",
+  "passed": true,
+  "checks": [
+    {
+      "name": "session/CSRF creation of independent H2 author/menu/screen",
+      "passed": true
+    },
+    {
+      "name": "actual PNG/normalized box/PDF metadata and original bytes persisted",
+      "passed": true,
+      "revision": 2,
+      "blobs": 2
+    },
+    {
+      "name": "same isolated H2/uploads clean restart preserved identity/detail/revision/version/bytes",
+      "passed": true,
+      "starts": 2,
+      "revision": 2
+    },
+    {
+      "name": "author-only committed deletion/file404/PDF cleanup with unchanged image",
+      "passed": true,
+      "revision": 3,
+      "remainingBlobs": 1
+    },
+    {
+      "name": "normal final shutdown keeps durable image and prints no synthetic credential",
+      "passed": true
+    }
+  ],
+  "groups": 5,
+  "temporaryDirectoryRemoved": true,
+  "originalRuntimeUsed": false,
+  "syntheticFixturesOnly": true,
+  "syntheticCredentialsPrinted": false,
+  "imageFixtureSha256": "8fe3ba8071ed7ddeffc44fb1a45b537742be0adb0db7ccc0781590db509bd7a6",
+  "pdfFixtureSha256": "fa498885fdb47cee85c8298fbf737f782e1d7d9a881001a9216189d6a96b4b37",
+  "verificationScope": "clean stop/start in the same isolated H2/uploads; crash and backup/restore not verified"
+}

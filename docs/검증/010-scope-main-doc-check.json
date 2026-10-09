@@ -1,0 +1,17 @@
+{
+  "stage": "010",
+  "scope": "one owned stage document; preliminary finalization while affected and normal visual comparison remain pending",
+  "file": "docs/질의/010-업무확장과파일작업실.md",
+  "sha256": "ba76ef36f72c91d3388dce66e8a59c0a53cf0c3056930e73f63ce0105155f315",
+  "localLinks": 61,
+  "missingLocalLinks": [],
+  "fenceMarkers": 2,
+  "tables": 3,
+  "tableRows": 34,
+  "linkedJsonParsed": 13,
+  "dependencyInventoryPassed": true,
+  "stageMarkedComplete": false,
+  "visualNormalCompare": "pending",
+  "sourceOrDependencyMutation": false,
+  "passed": true
+}

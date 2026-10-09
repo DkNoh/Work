@@ -1,0 +1,11 @@
+{
+  "stage": "009",
+  "expectedFailure": true,
+  "exitCode": 1,
+  "detectedVisualMismatch": true,
+  "differentPixels": 1436,
+  "baselineFiles": 17,
+  "baselineUnchanged": true,
+  "changedFiles": [],
+  "log": "009-visual-negative-probe.log"
+}

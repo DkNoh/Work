@@ -1,0 +1,29 @@
+{
+  "seedMs" : 153.388042,
+  "measurements" : [ {
+    "elapsedMs" : 53.3555,
+    "page" : 0,
+    "size" : 100,
+    "mybatisPreparedStatements" : 2,
+    "total" : 10000
+  }, {
+    "elapsedMs" : 33.470584,
+    "page" : 49,
+    "size" : 100,
+    "mybatisPreparedStatements" : 2,
+    "total" : 10000
+  }, {
+    "elapsedMs" : 30.361542,
+    "page" : 99,
+    "size" : 100,
+    "mybatisPreparedStatements" : 2,
+    "total" : 10000
+  } ],
+  "timingPolicy" : "observations, no hardcoded latency SLA",
+  "isolation" : "SERIALIZABLE for independent report reads",
+  "jdk" : "21.0.11",
+  "indexes" : [ "CONSTRAINT_INDEX_4", "CONSTRAINT_INDEX_C", "CONSTRAINT_INDEX_C4", "CONSTRAINT_INDEX_C46", "CONSTRAINT_INDEX_D", "CONSTRAINT_INDEX_E", "CONSTRAINT_INDEX_F", "CONSTRAINT_INDEX_FE", "CONSTRAINT_INDEX_FE8", "CONSTRAINT_INDEX_FF", "IDX_SECURITY_AUDIT_FILTER", "IDX_SECURITY_AUDIT_LATEST", "PRIMARY_KEY_4", "PRIMARY_KEY_4D", "PRIMARY_KEY_6", "PRIMARY_KEY_7", "PRIMARY_KEY_C", "PRIMARY_KEY_D", "PRIMARY_KEY_E", "PRIMARY_KEY_F", "PRIMARY_KEY_FE", "REQUIREMENT_COMMENT_ORDER", "REQUIREMENT_HISTORY_ORDER", "REQUIREMENT_MENU", "REQUIREMENT_UPDATED", "REQUIREMENT_VISIBILITY", "flyway_schema_history_s_idx" ],
+  "source" : "isolated synthetic H2 only",
+  "rows" : 10000,
+  "h2" : "2.3.232 (2024-08-11)"
+}

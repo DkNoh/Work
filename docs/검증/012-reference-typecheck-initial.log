@@ -1,0 +1,44 @@
+
+> @sc/reference-app@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+src/features/operations/api.ts(5,59): error TS2339: Property 'FrameworkCapabilities' does not exist on type '{ AdoInput: { revision: number; ticket: string; url: string; }; AnnotationInput: { box: { height: number; width: number; x: number; y: number; }; revision: number; }; ApiError: { code?: string | undefined; errors?: { ...; }[] | undefined; message?: string | undefined; }; ... 60 more ...; VersionAnnotationResponse: {...'.
+src/features/operations/api.ts(6,49): error TS2339: Property 'OperationMessageItem' does not exist on type '{ AdoInput: { revision: number; ticket: string; url: string; }; AnnotationInput: { box: { height: number; width: number; x: number; y: number; }; revision: number; }; ApiError: { code?: string | undefined; errors?: { ...; }[] | undefined; message?: string | undefined; }; ... 60 more ...; VersionAnnotationResponse: {...'.
+src/features/operations/api.ts(7,49): error TS2339: Property 'OperationMessagePage' does not exist on type '{ AdoInput: { revision: number; ticket: string; url: string; }; AnnotationInput: { box: { height: number; width: number; x: number; y: number; }; revision: number; }; ApiError: { code?: string | undefined; errors?: { ...; }[] | undefined; message?: string | undefined; }; ... 60 more ...; VersionAnnotationResponse: {...'.
+src/features/operations/api.ts(8,46): error TS2339: Property 'OperationalScheduleResponse' does not exist on type '{ AdoInput: { revision: number; ticket: string; url: string; }; AnnotationInput: { box: { height: number; width: number; x: number; y: number; }; revision: number; }; ApiError: { code?: string | undefined; errors?: { ...; }[] | undefined; message?: string | undefined; }; ... 60 more ...; VersionAnnotationResponse: {...'.
+src/features/operations/api.ts(9,51): error TS2339: Property 'OperationalScheduleInput' does not exist on type '{ AdoInput: { revision: number; ticket: string; url: string; }; AnnotationInput: { box: { height: number; width: number; x: number; y: number; }; revision: number; }; ApiError: { code?: string | undefined; errors?: { ...; }[] | undefined; message?: string | undefined; }; ... 60 more ...; VersionAnnotationResponse: {...'.
+src/features/operations/api.ts(10,52): error TS2339: Property 'OperationalScheduleUpdateInput' does not exist on type '{ AdoInput: { revision: number; ticket: string; url: string; }; AnnotationInput: { box: { height: number; width: number; x: number; y: number; }; revision: number; }; ApiError: { code?: string | undefined; errors?: { ...; }[] | undefined; message?: string | undefined; }; ... 60 more ...; VersionAnnotationResponse: {...'.
+src/features/operations/api.ts(11,50): error TS2339: Property 'OperationalSchedulePage' does not exist on type '{ AdoInput: { revision: number; ticket: string; url: string; }; AnnotationInput: { box: { height: number; width: number; x: number; y: number; }; revision: number; }; ApiError: { code?: string | undefined; errors?: { ...; }[] | undefined; message?: string | undefined; }; ... 60 more ...; VersionAnnotationResponse: {...'.
+src/features/operations/api.ts(12,52): error TS2339: Property 'OperationalRegisteredJobsResponse' does not exist on type '{ AdoInput: { revision: number; ticket: string; url: string; }; AnnotationInput: { box: { height: number; width: number; x: number; y: number; }; revision: number; }; ApiError: { code?: string | undefined; errors?: { ...; }[] | undefined; message?: string | undefined; }; ... 60 more ...; VersionAnnotationResponse: {...'.
+src/features/operations/api.ts(13,45): error TS2339: Property 'OperationalRunPage' does not exist on type '{ AdoInput: { revision: number; ticket: string; url: string; }; AnnotationInput: { box: { height: number; width: number; x: number; y: number; }; revision: number; }; ApiError: { code?: string | undefined; errors?: { ...; }[] | undefined; message?: string | undefined; }; ... 60 more ...; VersionAnnotationResponse: {...'.
+src/features/operations/api.ts(14,54): error TS2339: Property 'BrowserErrorGroupPage' does not exist on type '{ AdoInput: { revision: number; ticket: string; url: string; }; AnnotationInput: { box: { height: number; width: number; x: number; y: number; }; revision: number; }; ApiError: { code?: string | undefined; errors?: { ...; }[] | undefined; message?: string | undefined; }; ... 60 more ...; VersionAnnotationResponse: {...'.
+src/features/operations/api.ts(15,59): error TS2339: Property 'BrowserErrorOccurrencePage' does not exist on type '{ AdoInput: { revision: number; ticket: string; url: string; }; AnnotationInput: { box: { height: number; width: number; x: number; y: number; }; revision: number; }; ApiError: { code?: string | undefined; errors?: { ...; }[] | undefined; message?: string | undefined; }; ... 60 more ...; VersionAnnotationResponse: {...'.
+src/features/operations/BrowserErrorsPage.vue(40,53): error TS2339: Property 'id' does not exist on type 'object'.
+src/features/operations/BrowserErrorsPage.vue(41,37): error TS2339: Property 'id' does not exist on type 'object'.
+src/features/operations/MessagesPage.vue(45,23): error TS2339: Property 'state' does not exist on type 'object'.
+src/features/operations/MessagesPage.vue(48,52): error TS2339: Property 'eventId' does not exist on type 'object'.
+src/features/operations/MessagesPage.vue(49,39): error TS2339: Property 'eventId' does not exist on type 'object'.
+src/features/operations/OperationsTable.vue(4,6): error TS2322: Type 'readonly T[]' is not assignable to type 'readonly object[]'.
+  Type 'T' is not assignable to type 'object'.
+src/features/operations/OperationsTable.vue(5,6): error TS2322: Type 'readonly ScTableColumn<T>[]' is not assignable to type 'readonly ScTableColumn<object>[]'.
+  Type 'ScTableColumn<T>' is not assignable to type 'ScTableColumn<object>'.
+    Type 'object' is not assignable to type 'T'.
+      'T' could be instantiated with an arbitrary type which could be unrelated to 'object'.
+src/features/operations/OperationsTable.vue(7,6): error TS2322: Type '(row: T) => string' is not assignable to type '(row: object) => string'.
+  Types of parameters 'row' and 'row' are incompatible.
+    Type 'object' is not assignable to type 'T'.
+      'T' could be instantiated with an arbitrary type which could be unrelated to 'object'.
+src/features/operations/ScheduleForm.vue(88,19): error TS7006: Parameter 'job' implicitly has an 'any' type.
+src/features/operations/ScheduleForm.vue(98,43): error TS7006: Parameter 'job' implicitly has an 'any' type.
+src/features/operations/SchedulesPage.vue(34,56): error TS2339: Property 'id' does not exist on type 'object'.
+src/features/operations/SchedulesPage.vue(35,40): error TS2339: Property 'id' does not exist on type 'object'.
+src/features/operations/SchedulesPage.vue(154,33): error TS7006: Parameter 'row' implicitly has an 'any' type.
+src/features/operations/SchedulesPage.vue(313,8): error TS7006: Parameter 'current' implicitly has an 'any' type.
+src/features/operations/SchedulesPage.vue(315,53): error TS7006: Parameter 'row' implicitly has an 'any' type.
+npm error Lifecycle script `typecheck` failed with error:
+npm error code 2
+npm error path /Users/dk/Work/ScFramework/frontend/apps/reference-app
+npm error workspace @sc/reference-app@0.1.0
+npm error location /Users/dk/Work/ScFramework/frontend/apps/reference-app
+npm error command failed
+npm error command sh -c vue-tsc --noEmit -p tsconfig.json

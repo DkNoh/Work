@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "evidence": "012-integration-build-final.log",
+  "modules": [
+    {
+      "module": "framework-core",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "framework-autoconfigure",
+      "tests": 55,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 3
+    },
+    {
+      "module": "reference-app",
+      "tests": 125,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "starter-app",
+      "tests": 13,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "total": {
+    "tests": 196,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 3
+  },
+  "executed": 193,
+  "reasonForThreeSkips": "normal build profile does not connect to RabbitMQ; separate native fifth verify ran all196 with real broker and skipped0"
+}

@@ -1,0 +1,20 @@
+{
+  "stage": "012",
+  "passed": false,
+  "groups": [
+    {
+      "name": "separate-observer-authentication-and-business-csrf",
+      "passed": true,
+      "rejectedCredentialBoundaries": 5
+    },
+    {
+      "name": "actual-feign-success-failure-timeout-and-trace-propagation",
+      "passed": true,
+      "attempts": 3,
+      "timeoutSeconds": 5.005
+    }
+  ],
+  "manualReviewComplete": false,
+  "failureType": "AssertionError",
+  "failureCode": "OBS_TEMPO_PARENT_CHILD"
+}

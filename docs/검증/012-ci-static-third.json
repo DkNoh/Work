@@ -1,0 +1,13 @@
+{
+  "stage": "012",
+  "passed": true,
+  "jobs": 3,
+  "runScripts": 52,
+  "embeddedPythonScripts": 5,
+  "usesSteps": 12,
+  "yamlParser": "installed js-yaml 4.3.2",
+  "actualRemoteExecution": false,
+  "installExecuted": false,
+  "mavenExecuted": false,
+  "browserExecuted": false
+}

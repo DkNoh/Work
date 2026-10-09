@@ -1,0 +1,26 @@
+{
+  "stage": "011",
+  "passed": true,
+  "parser": "installed js-yaml",
+  "workflow": ".github/workflows/verify.yml",
+  "jobs": [
+    "verify",
+    "package-consumer"
+  ],
+  "remoteExecution": false,
+  "linuxConsumerExecuted": false,
+  "packageConsumerCliStepsValidated": true,
+  "existing001To010UploadRetained": true,
+  "rootAndConsumerMavenRepositoriesSeparated": true,
+  "metadataOnlyBuildDoesNotClaimTests": true,
+  "noInstallDuringValidation": true,
+  "embeddedPythonSyntaxBlocks": 3,
+  "processorThreeDigitStage011AcceptedBySource": true,
+  "bashSyntaxBlocks": 35,
+  "temporarySyntaxFilesRemoved": true,
+  "shellBlocksExecuted": false,
+  "processorStage011ActualArgparseHelpExit": 0,
+  "processorMavenExecutedByThisCheck": false,
+  "finalYamlReparsed": true,
+  "workflowSha256": "00f3271c3317df3aa45b7f2b9749927f8c1d02862b8e11d3f4598b8100a18ab4"
+}

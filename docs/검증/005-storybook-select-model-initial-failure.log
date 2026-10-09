@@ -1,0 +1,50 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+ExpectError: expect(locator).toHaveValue(expected) failed
+
+Locator:  getByRole('table').first().getByRole('row').filter({ has: getByText('modelValue', { exact: true }) }).getByPlaceholder('Edit JSON string...')
+Expected: "\"review\""
+Received: "\"general\""
+Timeout:  5000ms
+
+Call log:
+  - Expect "toHaveValue" getByRole('table').first().getByRole('row').filter({ has: getByText('modelValue', { exact: true }) }).getByPlaceholder('Edit JSON string...') with timeout 5000ms
+  - waiting for getByRole('table').first().getByRole('row').filter({ has: getByText('modelValue', { exact: true }) }).getByPlaceholder('Edit JSON string...')
+    14 × locator resolved to <textarea name="modelValue" class="css-10jolq7" id="control-modelValue" placeholder="Edit JSON string...">"general"</textarea>
+       - unexpected value ""general""
+
+    at captureRawStack (/Users/dk/Work/ScFramework/node_modules/playwright-core/lib/coreBundle.js:8588:17)
+    at callMatcherAsStep (/Users/dk/Work/ScFramework/node_modules/playwright/lib/matchers/expect.js:13310:57)
+    at Object.toHaveValue (/Users/dk/Work/ScFramework/node_modules/playwright/lib/matchers/expect.js:13302:23)
+    at /Users/dk/Work/ScFramework/scripts/verify-storybook.mjs:361:31 {
+  matcherResult: {
+    name: 'toHaveValue',
+    expected: '"review"',
+    message: 'expect(locator).toHaveValue(expected) failed\n' +
+      '\n' +
+      "Locator:  getByRole('table').first().getByRole('row').filter({ has: getByText('modelValue', { exact: true }) }).getByPlaceholder('Edit JSON string...')\n" +
+      'Expected: "\\"review\\""\n' +
+      'Received: "\\"general\\""\n' +
+      'Timeout:  5000ms\n' +
+      '\n' +
+      'Call log:\n' +
+      `  - Expect "toHaveValue" getByRole('table').first().getByRole('row').filter({ has: getByText('modelValue', { exact: true }) }).getByPlaceholder('Edit JSON string...') with timeout 5000ms\n` +
+      "  - waiting for getByRole('table').first().getByRole('row').filter({ has: getByText('modelValue', { exact: true }) }).getByPlaceholder('Edit JSON string...')\n" +
+      '    14 × locator resolved to <textarea name="modelValue" class="css-10jolq7" id="control-modelValue" placeholder="Edit JSON string...">"general"</textarea>\n' +
+      '       - unexpected value ""general""\n',
+    pass: false,
+    actual: '"general"',
+    log: [
+      `  - Expect "toHaveValue" getByRole('table').first().getByRole('row').filter({ has: getByText('modelValue', { exact: true }) }).getByPlaceholder('Edit JSON string...') with timeout 5000ms`,
+      "  - waiting for getByRole('table').first().getByRole('row').filter({ has: getByText('modelValue', { exact: true }) }).getByPlaceholder('Edit JSON string...')",
+      '    14 × locator resolved to <textarea name="modelValue" class="css-10jolq7" id="control-modelValue" placeholder="Edit JSON string...">"general"</textarea>',
+      '       - unexpected value ""general""'
+    ],
+    timeout: 5000,
+    ariaSnapshot: '- textbox "Edit JSON string...": "\\"general\\""'
+  }
+}
+
+Node.js v24.16.0

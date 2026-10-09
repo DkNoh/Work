@@ -1,0 +1,63 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+locator.setChecked: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('table').first().getByRole('row').filter({ has: getByText('modelValue', { exact: true }) }).getByRole('switch', { name: 'modelValue', exact: true })[22m
+[2m    - locator resolved to <input role="switch" type="checkbox" name="modelValue" id="control-modelValue"/>[22m
+[2m  - attempting click action[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is visible, enabled and stable[22m
+[2m      - scrolling into view if needed[22m
+[2m      - done scrolling[22m
+[2m      - <td>…</td> intercepts pointer events[22m
+[2m    - retrying click action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is visible, enabled and stable[22m
+[2m      - scrolling into view if needed[22m
+[2m      - done scrolling[22m
+[2m      - <td>…</td> intercepts pointer events[22m
+[2m    - retrying click action[22m
+[2m      - waiting 100ms[22m
+[2m    44 × waiting for element to be visible, enabled and stable[22m
+[2m       - element is visible, enabled and stable[22m
+[2m       - scrolling into view if needed[22m
+[2m       - done scrolling[22m
+[2m       - <td>…</td> intercepts pointer events[22m
+[2m     - retrying click action[22m
+[2m       - waiting 500ms[22m
+
+    at booleanControl (/Users/dk/Work/ScFramework/scripts/verify-storybook.mjs:315:42)
+    at async file:///Users/dk/Work/ScFramework/scripts/verify-storybook.mjs:396:19 {
+  log: [
+    "  - waiting for getByRole('table').first().getByRole('row').filter({ has: getByText('modelValue', { exact: true }) }).getByRole('switch', { name: 'modelValue', exact: true })",
+    '    - locator resolved to <input role="switch" type="checkbox" name="modelValue" id="control-modelValue"/>',
+    '  - attempting click action',
+    '    2 × waiting for element to be visible, enabled and stable',
+    '      - element is visible, enabled and stable',
+    '      - scrolling into view if needed',
+    '      - done scrolling',
+    '      - <td>…</td> intercepts pointer events',
+    '    - retrying click action',
+    '    - waiting 20ms',
+    '    2 × waiting for element to be visible, enabled and stable',
+    '      - element is visible, enabled and stable',
+    '      - scrolling into view if needed',
+    '      - done scrolling',
+    '      - <td>…</td> intercepts pointer events',
+    '    - retrying click action',
+    '      - waiting 100ms',
+    '    44 × waiting for element to be visible, enabled and stable',
+    '       - element is visible, enabled and stable',
+    '       - scrolling into view if needed',
+    '       - done scrolling',
+    '       - <td>…</td> intercepts pointer events',
+    '     - retrying click action',
+    '       - waiting 500ms'
+  ],
+  name: 'TimeoutError'
+}
+
+Node.js v24.16.0

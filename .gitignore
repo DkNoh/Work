@@ -1,0 +1,27 @@
+node_modules/
+dist/
+target/
+storybook-static/
+.runtime/
+*.mv.db
+*.trace.db
+*.log
+*.secret
+.env
+.env.*
+!*.example
+playwright-report/
+test-results/
+test-results-reports/
+test-results-operations/
+coverage/
+.DS_Store
+__pycache__/
+*.pyc
+
+# 검증 기록에는 실제 계정·토큰을 저장하지 않는다.
+!docs/검증/*.log
+
+# 반복 실행 원시 첨부 결과는 로컬/CI artifact로 보존한다.
+# 단계별 요약·로그·주요 스크린샷·승인 시각 기준은 Git에 포함한다.
+docs/검증/*-results/

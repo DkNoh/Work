@@ -1,0 +1,51 @@
+{
+  "stage": "011",
+  "passed": true,
+  "groups": [
+    {
+      "name": "packed login, native form and CSS tokens",
+      "passed": true
+    },
+    {
+      "name": "typed Notes API, Zod, Query invalidation and 409 draft preservation",
+      "passed": true
+    },
+    {
+      "name": "disabled optional route and optional chunk requests",
+      "passed": true
+    },
+    {
+      "name": "logout clears the shared session",
+      "passed": true
+    }
+  ],
+  "axe": [
+    {
+      "name": "notes-1366-ko",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 1,
+      "manualReviewComplete": false
+    },
+    {
+      "name": "notes-conflict-1366-ko",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incomplete": 1,
+      "manualReviewComplete": false
+    }
+  ],
+  "errors": [],
+  "failedAssets": [],
+  "screenshots": [
+    "notes-1366-ko.png",
+    "notes-conflict-1366-ko.png"
+  ],
+  "css": {
+    "primary": "#21647a",
+    "spacing": "16px",
+    "buttonRadius": "6px"
+  },
+  "noteId": 2,
+  "optionalChunkRequests": 0
+}

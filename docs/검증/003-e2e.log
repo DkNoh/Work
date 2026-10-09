@@ -1,0 +1,18 @@
+
+> sc-framework@0.1.0 test:e2e
+> playwright test --config frontend/playwright.config.ts
+
+
+Running 7 tests using 1 worker
+
+(node:25333) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 frontend/e2e/framework.spec.ts:39:1 › 공통 UI로 등록·수정하고 409에서도 작성 중인 입력을 보존한다 (2.4s)
+  ✓  2 frontend/e2e/layout.spec.ts:88:3 › 레퍼런스 390px: 한국어·본문·현재 메뉴·모바일 키보드 탐색 (1.4s)
+  ✓  3 frontend/e2e/layout.spec.ts:88:3 › 레퍼런스 1366px: 한국어·본문·현재 메뉴·모바일 키보드 탐색 (705ms)
+  ✓  4 frontend/e2e/layout.spec.ts:88:3 › 레퍼런스 1920px: 한국어·본문·현재 메뉴·모바일 키보드 탐색 (892ms)
+  ✓  5 frontend/e2e/layout.spec.ts:146:5 › 최소 Starter의 독립적인 공통 셸 소비 › Starter 390px: 동일 UI·Router·본문 탐색 (1.9s)
+  ✓  6 frontend/e2e/layout.spec.ts:146:5 › 최소 Starter의 독립적인 공통 셸 소비 › Starter 1366px: 동일 UI·Router·본문 탐색 (1.0s)
+  ✓  7 frontend/e2e/layout.spec.ts:146:5 › 최소 Starter의 독립적인 공통 셸 소비 › Starter 1920px: 동일 UI·Router·본문 탐색 (1.1s)
+
+  7 passed (17.0s)

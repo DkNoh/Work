@@ -1,0 +1,89 @@
+{
+  "stage": "009",
+  "suite": "10k actual H2 report browser tests",
+  "passed": 5,
+  "axeReports": 9,
+  "violations": 0,
+  "duplicateIds": 0,
+  "incompleteRuleInstances": 18,
+  "images": [
+    "docs/검증/009-report-e2e-final-results/requirements-report-10k-보고-4fcdc-focus·일반표·URL·한영·전체-DOM-접근성/report-1366-ko-virtual.png",
+    "docs/검증/009-report-e2e-final-results/requirements-report-10k-보고-4fcdc-focus·일반표·URL·한영·전체-DOM-접근성/report-1366-en-virtual.png",
+    "docs/검증/009-report-e2e-final-results/requirements-report-10k-보고-4fcdc-focus·일반표·URL·한영·전체-DOM-접근성/report-1366-ko-standard.png",
+    "docs/검증/009-report-e2e-final-results/requirements-report-10k-보고-4fcdc-focus·일반표·URL·한영·전체-DOM-접근성/attachments/report-1366-en-virtual-b749ed401a61d640bb666f37d262ae0112535bcb.png",
+    "docs/검증/009-report-e2e-final-results/requirements-report-10k-보고-4fcdc-focus·일반표·URL·한영·전체-DOM-접근성/attachments/report-1366-ko-standard-f1693c325e24370d8cf26abc5aa07300b924f44f.png",
+    "docs/검증/009-report-e2e-final-results/requirements-report-10k-보고-4fcdc-focus·일반표·URL·한영·전체-DOM-접근성/attachments/report-1366-ko-virtual-77384a31a4ef31c0c7730eefbd0f5776d55f2533.png",
+    "docs/검증/009-report-e2e-final-results/requirements-report-10k-보고-c6239-focus·일반표·URL·한영·전체-DOM-접근성/report-390-ko-virtual.png",
+    "docs/검증/009-report-e2e-final-results/requirements-report-10k-보고-c6239-focus·일반표·URL·한영·전체-DOM-접근성/report-390-en-virtual.png",
+    "docs/검증/009-report-e2e-final-results/requirements-report-10k-보고-c6239-focus·일반표·URL·한영·전체-DOM-접근성/report-390-ko-standard.png",
+    "docs/검증/009-report-e2e-final-results/requirements-report-10k-보고-c6239-focus·일반표·URL·한영·전체-DOM-접근성/attachments/report-390-ko-virtual-31bbad0223907eae507c0680a551fbed0324fd6e.png",
+    "docs/검증/009-report-e2e-final-results/requirements-report-10k-보고-c6239-focus·일반표·URL·한영·전체-DOM-접근성/attachments/report-390-ko-standard-5a62aedb9379581194ba2f2f0c330c976061d785.png",
+    "docs/검증/009-report-e2e-final-results/requirements-report-10k-보고-c6239-focus·일반표·URL·한영·전체-DOM-접근성/attachments/report-390-en-virtual-aadf86eb9530c486bfc66bd4c7b0df8de6322dae.png"
+  ],
+  "reports": [
+    {
+      "file": "docs/검증/009-report-e2e-final-results/requirements-report-10k-보고-4fcdc-focus·일반표·URL·한영·전체-DOM-접근성/report-1366-en-virtual-axe.json",
+      "state": "report-1366-en-virtual",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRuleInstances": 2
+    },
+    {
+      "file": "docs/검증/009-report-e2e-final-results/requirements-report-10k-보고-4fcdc-focus·일반표·URL·한영·전체-DOM-접근성/report-1366-ko-standard-axe.json",
+      "state": "report-1366-ko-standard",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRuleInstances": 2
+    },
+    {
+      "file": "docs/검증/009-report-e2e-final-results/requirements-report-10k-보고-4fcdc-focus·일반표·URL·한영·전체-DOM-접근성/report-1366-en-standard-alternative-axe.json",
+      "state": "report-1366-en-standard-alternative",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRuleInstances": 2
+    },
+    {
+      "file": "docs/검증/009-report-e2e-final-results/requirements-report-10k-보고-4fcdc-focus·일반표·URL·한영·전체-DOM-접근성/report-1366-ko-virtual-axe.json",
+      "state": "report-1366-ko-virtual",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRuleInstances": 2
+    },
+    {
+      "file": "docs/검증/009-report-e2e-final-results/requirements-report-10k-보고-c6239-focus·일반표·URL·한영·전체-DOM-접근성/report-390-en-virtual-axe.json",
+      "state": "report-390-en-virtual",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRuleInstances": 2
+    },
+    {
+      "file": "docs/검증/009-report-e2e-final-results/requirements-report-10k-보고-c6239-focus·일반표·URL·한영·전체-DOM-접근성/report-390-en-standard-alternative-axe.json",
+      "state": "report-390-en-standard-alternative",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRuleInstances": 2
+    },
+    {
+      "file": "docs/검증/009-report-e2e-final-results/requirements-report-10k-보고-c6239-focus·일반표·URL·한영·전체-DOM-접근성/report-390-ko-standard-axe.json",
+      "state": "report-390-ko-standard",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRuleInstances": 2
+    },
+    {
+      "file": "docs/검증/009-report-e2e-final-results/requirements-report-10k-보고-c6239-focus·일반표·URL·한영·전체-DOM-접근성/report-390-ko-virtual-axe.json",
+      "state": "report-390-ko-virtual",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRuleInstances": 2
+    },
+    {
+      "file": "docs/검증/009-report-e2e-final-results/requirements-report-보고서-50-b8d19-RL을-보존하고-이전-조건의-늦은-응답을-폐기한다/report-refresh-failed-axe.json",
+      "state": "report-refresh-failed",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRuleInstances": 2
+    }
+  ],
+  "scope": "Full current DOM, no disabled rules or DOM exclusions; incomplete remains manual review candidates."
+}

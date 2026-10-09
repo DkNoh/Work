@@ -1,0 +1,5 @@
+PASS packed login, native form and CSS tokens
+PASS typed Notes API, Zod, Query invalidation and 409 draft preservation
+PASS disabled optional route and optional chunk requests
+PASS logout clears the shared session
+PASS standalone JAR, real H2 restart, security/API and installed-library browser

@@ -1,0 +1,6 @@
+
+/Users/dk/Work/ScFramework/frontend/apps/reference-app/src/features/kanban/KanbanFilters.vue
+  49:7  error  Duplicate key 'order'. May cause name collision in script or template tag  vue/no-dupe-keys
+
+✖ 1 problem (1 error, 0 warnings)
+

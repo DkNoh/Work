@@ -1,0 +1,7 @@
+node_modules
+frontend/dist
+backend/target
+.runtime
+vendor
+docs/openapi.json
+frontend/src/generated

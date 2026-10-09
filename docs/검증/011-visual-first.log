@@ -1,0 +1,15 @@
+
+> sc-framework@0.2.0 test:visual
+> SC_VISUAL=1 SC_VISUAL_UPDATE=0 playwright test --config frontend/playwright.config.ts visual.spec.ts --update-snapshots=none
+
+
+Running 4 tests using 1 worker
+
+(node:36659) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 frontend/e2e/visual.spec.ts:201:7 › reference 1366px 시각 기준 › 셸·입력·표·차트·서식의 승인 이미지와 비교 (2.4s)
+  ✓  2 frontend/e2e/visual.spec.ts:201:7 › reference 390px 시각 기준 › 셸·입력·표·차트·서식의 승인 이미지와 비교 (2.4s)
+  ✓  3 frontend/e2e/visual.spec.ts:201:7 › starter 1366px 시각 기준 › 셸·입력·표·차트·서식의 승인 이미지와 비교 (2.5s)
+  ✓  4 frontend/e2e/visual.spec.ts:201:7 › starter 390px 시각 기준 › 셸·입력·표·차트·서식의 승인 이미지와 비교 (3.1s)
+
+  4 passed (17.7s)

@@ -1,0 +1,37 @@
+@mixin field {
+  --sc-field-height: var(--sc-control-field-height-comfortable);
+  --sc-field-padding: var(--sc-control-field-padding-comfortable);
+  width: 100%;
+  font-size: var(--sc-font-size-body);
+
+  &[data-density="compact"] {
+    --sc-field-height: var(--sc-control-field-height-compact);
+    --sc-field-padding: var(--sc-control-field-padding-compact);
+  }
+
+  :deep(input::placeholder),
+  :deep(textarea::placeholder) {
+    color: var(--sc-color-text-muted);
+    opacity: 1;
+  }
+
+  :deep(.v-field__outline) {
+    --v-field-border-opacity: 1;
+  }
+
+  :deep(.v-field:not(.v-field--error):not(.v-field--focused) .v-field__outline) {
+    color: var(--sc-color-control-border);
+  }
+
+  :deep(.v-field:not(.v-field--error):not(.v-field--focused) .v-field-label) {
+    color: var(--sc-color-text);
+  }
+
+  :deep(.v-field) {
+    --v-input-control-height: var(--sc-field-height);
+    --v-field-padding-bottom: var(--sc-field-padding);
+    border-radius: var(--sc-radius-sm);
+    transition-duration: var(--sc-motion-duration);
+    transition-timing-function: var(--sc-motion-easing);
+  }
+}

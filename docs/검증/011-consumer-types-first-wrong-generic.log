@@ -1,0 +1,1 @@
+.sc-type-probe-6XKzec/wrong-generic/probe.ts(17,89): error TS2339: Property 'missing' does not exist on type 'Row'.

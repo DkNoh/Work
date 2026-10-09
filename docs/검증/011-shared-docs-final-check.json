@@ -1,0 +1,27 @@
+{
+  "stage": "011",
+  "scope": "nine owned shared documents only",
+  "files": [
+    "docs/folder-structure.md",
+    "docs/maintenance-guide.md",
+    "docs/operations.md",
+    "docs/api.md",
+    "docs/질의/기술스택-적용현황.md",
+    "docs/질의/조건부기술-전체구현.md",
+    "docs/질의/README.md",
+    "docs/질의/개발단계.md",
+    "docs/질의/011-배포와생성기-준비검토.md"
+  ],
+  "formatWriteExit": 0,
+  "formatCheckExit": 0,
+  "relativeLinks": 552,
+  "missing": [],
+  "unclosedFences": [],
+  "staleCurrentPendingStatements": [],
+  "local011Complete": true,
+  "history010Preserved": true,
+  "initial011FailuresPreserved": true,
+  "buildOrInstallExecutedByThisDocumentCheck": false,
+  "remoteCiExecuted": false,
+  "stage012": "preparation only; implementation and runtime tests pending"
+}

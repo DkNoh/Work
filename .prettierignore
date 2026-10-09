@@ -1,0 +1,17 @@
+node_modules/
+dist/
+target/
+storybook-static/
+.runtime/
+frontend/test-results-reports/
+frontend/test-results-operations/
+docs/검증/
+frontend/packages/runtime/src/generated/
+frontend/apps/*/src/generated/
+package-lock.json
+backend/
+infra/operations/third-party/**/LICENSE*
+infra/operations/third-party/**/NOTICE*
+frontend/apps/catalog/public/mockServiceWorker.js
+# 승인 이미지의 생성 메타데이터는 전용 검증기로 검사하고 바이트를 보존한다.
+frontend/e2e/visual.spec.ts-snapshots/*/manifest.json

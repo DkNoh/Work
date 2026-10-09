@@ -1,0 +1,2527 @@
+{
+  "format": 2,
+  "components": [
+    {
+      "component": "ScActionButton",
+      "props": [
+        {
+          "name": "busy",
+          "required": false,
+          "type": "boolean | undefined",
+          "defaultSpecified": true,
+          "default": false,
+          "description": "처리 중에는 클릭과 native form 기본 동작을 제한한다."
+        },
+        {
+          "name": "busyLabel",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "처리 중…",
+          "description": "처리 중 표시와 progressbar의 접근성 이름."
+        },
+        {
+          "name": "disabled",
+          "required": false,
+          "type": "boolean | undefined",
+          "defaultSpecified": true,
+          "default": false,
+          "description": ""
+        },
+        {
+          "name": "type",
+          "required": false,
+          "type": "ScActionButtonType | undefined",
+          "defaultSpecified": true,
+          "default": "button",
+          "description": "폼 제출은 submit을 명시한다. 기본값은 button이다."
+        },
+        {
+          "name": "color",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "variant",
+          "required": false,
+          "type": "ScActionButtonVariant | undefined",
+          "defaultSpecified": true,
+          "default": "flat",
+          "description": ""
+        },
+        {
+          "name": "size",
+          "required": false,
+          "type": "ScActionButtonSize | undefined",
+          "defaultSpecified": true,
+          "default": "md",
+          "description": "32/38/44px 높이와 아이콘·글자·여백을 함께 선택한다."
+        },
+        {
+          "name": "intent",
+          "required": false,
+          "type": "ScActionButtonIntent | undefined",
+          "defaultSpecified": true,
+          "default": "primary",
+          "description": "의미 색상. 기존 color를 명시하면 그 값이 우선한다."
+        },
+        {
+          "name": "iconPath",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": "장식 SVG path. 접근성 이름은 버튼의 콘텐츠 또는 aria-label/title이 맡는다."
+        },
+        {
+          "name": "iconOnly",
+          "required": false,
+          "type": "boolean | undefined",
+          "defaultSpecified": true,
+          "default": false,
+          "description": "iconPath와 비어 있지 않은 aria-label 또는 title을 함께 제공해야 한다."
+        }
+      ],
+      "events": [
+        {
+          "name": "click",
+          "type": "[event: MouseEvent]",
+          "description": ""
+        }
+      ],
+      "slots": [
+        {
+          "name": "default",
+          "type": "any",
+          "description": "동작 이름 또는 접근성 이름이 있는 사용자 콘텐츠."
+        }
+      ]
+    },
+    {
+      "component": "ScTextField",
+      "props": [
+        {
+          "name": "modelValue",
+          "required": true,
+          "type": "string",
+          "defaultSpecified": false,
+          "default": null,
+          "description": "부모가 소유하는 입력값. 읽기 전용 상태에서도 부모의 새 값을 표시한다."
+        },
+        {
+          "name": "label",
+          "required": true,
+          "type": "string",
+          "defaultSpecified": false,
+          "default": null,
+          "description": "placeholder와 별도로 유지하는 필드 이름."
+        },
+        {
+          "name": "id",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "undefined",
+          "description": "생략하면 인스턴스별 ID를 생성하고 label과 오류 설명에 연결한다."
+        },
+        {
+          "name": "errorMessages",
+          "required": false,
+          "type": "string | readonly string[] | undefined",
+          "defaultSpecified": true,
+          "default": "",
+          "description": ""
+        },
+        {
+          "name": "hint",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "",
+          "description": ""
+        },
+        {
+          "name": "required",
+          "required": false,
+          "type": "boolean | undefined",
+          "defaultSpecified": true,
+          "default": false,
+          "description": ""
+        },
+        {
+          "name": "disabled",
+          "required": false,
+          "type": "boolean | undefined",
+          "defaultSpecified": true,
+          "default": false,
+          "description": ""
+        },
+        {
+          "name": "readonly",
+          "required": false,
+          "type": "boolean | undefined",
+          "defaultSpecified": true,
+          "default": false,
+          "description": ""
+        },
+        {
+          "name": "type",
+          "required": false,
+          "type": "ScTextFieldType | undefined",
+          "defaultSpecified": true,
+          "default": "text",
+          "description": ""
+        },
+        {
+          "name": "name",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "undefined",
+          "description": ""
+        },
+        {
+          "name": "autocomplete",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "undefined",
+          "description": ""
+        },
+        {
+          "name": "form",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "undefined",
+          "description": ""
+        },
+        {
+          "name": "placeholder",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "undefined",
+          "description": ""
+        },
+        {
+          "name": "maxLength",
+          "required": false,
+          "type": "number | undefined",
+          "defaultSpecified": true,
+          "default": "undefined",
+          "description": ""
+        },
+        {
+          "name": "minLength",
+          "required": false,
+          "type": "number | undefined",
+          "defaultSpecified": true,
+          "default": "undefined",
+          "description": ""
+        },
+        {
+          "name": "pattern",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "undefined",
+          "description": ""
+        },
+        {
+          "name": "inputMode",
+          "required": false,
+          "type": "ScTextFieldInputMode | undefined",
+          "defaultSpecified": true,
+          "default": "undefined",
+          "description": ""
+        },
+        {
+          "name": "autofocus",
+          "required": false,
+          "type": "boolean | undefined",
+          "defaultSpecified": true,
+          "default": false,
+          "description": ""
+        },
+        {
+          "name": "density",
+          "required": false,
+          "type": "ScControlDensity | undefined",
+          "defaultSpecified": true,
+          "default": "comfortable",
+          "description": "기본 comfortable을 보존하고 좁은 조회 폼에서 compact를 선택한다."
+        }
+      ],
+      "events": [
+        {
+          "name": "update:modelValue",
+          "type": "[value: string]",
+          "description": ""
+        },
+        {
+          "name": "focus",
+          "type": "[event: FocusEvent]",
+          "description": ""
+        },
+        {
+          "name": "blur",
+          "type": "[event: FocusEvent]",
+          "description": ""
+        },
+        {
+          "name": "keydown",
+          "type": "[event: KeyboardEvent]",
+          "description": ""
+        },
+        {
+          "name": "keyup",
+          "type": "[event: KeyboardEvent]",
+          "description": ""
+        },
+        {
+          "name": "input",
+          "type": "[event: Event]",
+          "description": ""
+        },
+        {
+          "name": "change",
+          "type": "[event: Event]",
+          "description": ""
+        }
+      ],
+      "slots": []
+    },
+    {
+      "component": "ScSelect",
+      "props": [
+        {
+          "name": "modelValue",
+          "required": true,
+          "type": "string | null",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "options",
+          "required": true,
+          "type": "readonly ScSelectOption[]",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "placeholder",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "clearable",
+          "required": false,
+          "type": "boolean | undefined",
+          "defaultSpecified": true,
+          "default": false,
+          "description": ""
+        },
+        {
+          "name": "loading",
+          "required": false,
+          "type": "boolean | undefined",
+          "defaultSpecified": true,
+          "default": false,
+          "description": "옵션 조회 상태만 표시한다. 조회 요청은 소비 앱이 실행한다."
+        },
+        {
+          "name": "emptyLabel",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "선택할 항목이 없습니다.",
+          "description": ""
+        },
+        {
+          "name": "density",
+          "required": false,
+          "type": "ScControlDensity | undefined",
+          "defaultSpecified": true,
+          "default": "comfortable",
+          "description": ""
+        },
+        {
+          "name": "presentation",
+          "required": false,
+          "type": "\"field\" | \"toolbar\" | undefined",
+          "defaultSpecified": true,
+          "default": "field",
+          "description": "field는 업무 입력, toolbar는 같은 계약의 native 단일 선택이다."
+        },
+        {
+          "name": "tone",
+          "required": false,
+          "type": "\"primary\" | \"secondary\" | \"surface\" | undefined",
+          "defaultSpecified": true,
+          "default": "surface",
+          "description": ""
+        },
+        {
+          "name": "label",
+          "required": true,
+          "type": "string",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "id",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "errorMessages",
+          "required": false,
+          "type": "string | readonly string[] | undefined",
+          "defaultSpecified": true,
+          "default": "",
+          "description": ""
+        },
+        {
+          "name": "hint",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "",
+          "description": ""
+        },
+        {
+          "name": "required",
+          "required": false,
+          "type": "boolean | undefined",
+          "defaultSpecified": true,
+          "default": false,
+          "description": ""
+        },
+        {
+          "name": "disabled",
+          "required": false,
+          "type": "boolean | undefined",
+          "defaultSpecified": true,
+          "default": false,
+          "description": ""
+        },
+        {
+          "name": "readonly",
+          "required": false,
+          "type": "boolean | undefined",
+          "defaultSpecified": true,
+          "default": false,
+          "description": ""
+        },
+        {
+          "name": "name",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "form",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "autofocus",
+          "required": false,
+          "type": "boolean | undefined",
+          "defaultSpecified": true,
+          "default": false,
+          "description": ""
+        }
+      ],
+      "events": [
+        {
+          "name": "update:modelValue",
+          "type": "[value: string | null]",
+          "description": ""
+        },
+        {
+          "name": "focus",
+          "type": "[event: FocusEvent]",
+          "description": ""
+        },
+        {
+          "name": "blur",
+          "type": "[event: FocusEvent]",
+          "description": ""
+        },
+        {
+          "name": "keydown",
+          "type": "[event: KeyboardEvent]",
+          "description": ""
+        },
+        {
+          "name": "keyup",
+          "type": "[event: KeyboardEvent]",
+          "description": ""
+        },
+        {
+          "name": "change",
+          "type": "[value: string | null]",
+          "description": ""
+        }
+      ],
+      "slots": []
+    },
+    {
+      "component": "ScCheckbox",
+      "props": [
+        {
+          "name": "modelValue",
+          "required": true,
+          "type": "boolean",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "label",
+          "required": true,
+          "type": "string",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "id",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "errorMessages",
+          "required": false,
+          "type": "string | readonly string[] | undefined",
+          "defaultSpecified": true,
+          "default": "",
+          "description": ""
+        },
+        {
+          "name": "hint",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "",
+          "description": ""
+        },
+        {
+          "name": "required",
+          "required": false,
+          "type": "boolean | undefined",
+          "defaultSpecified": true,
+          "default": false,
+          "description": ""
+        },
+        {
+          "name": "disabled",
+          "required": false,
+          "type": "boolean | undefined",
+          "defaultSpecified": true,
+          "default": false,
+          "description": ""
+        },
+        {
+          "name": "readonly",
+          "required": false,
+          "type": "boolean | undefined",
+          "defaultSpecified": true,
+          "default": false,
+          "description": ""
+        },
+        {
+          "name": "name",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "form",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "autofocus",
+          "required": false,
+          "type": "boolean | undefined",
+          "defaultSpecified": true,
+          "default": false,
+          "description": ""
+        }
+      ],
+      "events": [
+        {
+          "name": "update:modelValue",
+          "type": "[value: boolean]",
+          "description": ""
+        },
+        {
+          "name": "focus",
+          "type": "[event: FocusEvent]",
+          "description": ""
+        },
+        {
+          "name": "blur",
+          "type": "[event: FocusEvent]",
+          "description": ""
+        },
+        {
+          "name": "keydown",
+          "type": "[event: KeyboardEvent]",
+          "description": ""
+        },
+        {
+          "name": "keyup",
+          "type": "[event: KeyboardEvent]",
+          "description": ""
+        },
+        {
+          "name": "input",
+          "type": "[event: Event]",
+          "description": ""
+        },
+        {
+          "name": "change",
+          "type": "[event: Event]",
+          "description": ""
+        }
+      ],
+      "slots": []
+    },
+    {
+      "component": "ScTextArea",
+      "props": [
+        {
+          "name": "modelValue",
+          "required": true,
+          "type": "string",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "placeholder",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "autocomplete",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "maxLength",
+          "required": false,
+          "type": "number | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "minLength",
+          "required": false,
+          "type": "number | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "inputMode",
+          "required": false,
+          "type": "ScTextFieldInputMode | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "rows",
+          "required": false,
+          "type": "number | undefined",
+          "defaultSpecified": true,
+          "default": 4,
+          "description": "줄 수는 표시 기준이며 업무 글자 수 규칙을 대신하지 않는다."
+        },
+        {
+          "name": "autoGrow",
+          "required": false,
+          "type": "boolean | undefined",
+          "defaultSpecified": true,
+          "default": false,
+          "description": ""
+        },
+        {
+          "name": "maxRows",
+          "required": false,
+          "type": "number | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "density",
+          "required": false,
+          "type": "ScControlDensity | undefined",
+          "defaultSpecified": true,
+          "default": "comfortable",
+          "description": ""
+        },
+        {
+          "name": "label",
+          "required": true,
+          "type": "string",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "id",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "errorMessages",
+          "required": false,
+          "type": "string | readonly string[] | undefined",
+          "defaultSpecified": true,
+          "default": "",
+          "description": ""
+        },
+        {
+          "name": "hint",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "",
+          "description": ""
+        },
+        {
+          "name": "required",
+          "required": false,
+          "type": "boolean | undefined",
+          "defaultSpecified": true,
+          "default": false,
+          "description": ""
+        },
+        {
+          "name": "disabled",
+          "required": false,
+          "type": "boolean | undefined",
+          "defaultSpecified": true,
+          "default": false,
+          "description": ""
+        },
+        {
+          "name": "readonly",
+          "required": false,
+          "type": "boolean | undefined",
+          "defaultSpecified": true,
+          "default": false,
+          "description": ""
+        },
+        {
+          "name": "name",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "form",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "autofocus",
+          "required": false,
+          "type": "boolean | undefined",
+          "defaultSpecified": true,
+          "default": false,
+          "description": ""
+        }
+      ],
+      "events": [
+        {
+          "name": "update:modelValue",
+          "type": "[value: string]",
+          "description": ""
+        },
+        {
+          "name": "focus",
+          "type": "[event: FocusEvent]",
+          "description": ""
+        },
+        {
+          "name": "blur",
+          "type": "[event: FocusEvent]",
+          "description": ""
+        },
+        {
+          "name": "keydown",
+          "type": "[event: KeyboardEvent]",
+          "description": ""
+        },
+        {
+          "name": "keyup",
+          "type": "[event: KeyboardEvent]",
+          "description": ""
+        },
+        {
+          "name": "input",
+          "type": "[event: Event]",
+          "description": ""
+        },
+        {
+          "name": "change",
+          "type": "[event: Event]",
+          "description": ""
+        }
+      ],
+      "slots": []
+    },
+    {
+      "component": "ScFormActions",
+      "props": [
+        {
+          "name": "busy",
+          "required": false,
+          "type": "boolean | undefined",
+          "defaultSpecified": true,
+          "default": false,
+          "description": ""
+        },
+        {
+          "name": "disabled",
+          "required": false,
+          "type": "boolean | undefined",
+          "defaultSpecified": true,
+          "default": false,
+          "description": ""
+        },
+        {
+          "name": "submitLabel",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "저장",
+          "description": ""
+        },
+        {
+          "name": "cancelLabel",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "취소",
+          "description": ""
+        },
+        {
+          "name": "busyLabel",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "저장 중…",
+          "description": ""
+        },
+        {
+          "name": "showCancel",
+          "required": false,
+          "type": "boolean | undefined",
+          "defaultSpecified": true,
+          "default": true,
+          "description": ""
+        },
+        {
+          "name": "form",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": "form 밖에 배치할 때 연결할 native form ID."
+        }
+      ],
+      "events": [
+        {
+          "name": "cancel",
+          "type": "[event: MouseEvent]",
+          "description": ""
+        }
+      ],
+      "slots": [
+        {
+          "name": "notice",
+          "type": "any",
+          "description": "설명·저장 상태처럼 버튼과 함께 보여 줄 콘텐츠."
+        },
+        {
+          "name": "secondary",
+          "type": "any",
+          "description": "소비 폼이 소유하는 추가 행동. 기본 제출·취소 버튼을 대체하지 않는다."
+        }
+      ]
+    },
+    {
+      "component": "ScConfirmDialog",
+      "props": [
+        {
+          "name": "modelValue",
+          "required": true,
+          "type": "boolean",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "title",
+          "required": true,
+          "type": "string",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "message",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "",
+          "description": ""
+        },
+        {
+          "name": "confirmLabel",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "확인",
+          "description": ""
+        },
+        {
+          "name": "cancelLabel",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "취소",
+          "description": ""
+        },
+        {
+          "name": "busyLabel",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "처리 중…",
+          "description": ""
+        },
+        {
+          "name": "busy",
+          "required": false,
+          "type": "boolean | undefined",
+          "defaultSpecified": true,
+          "default": false,
+          "description": "사용자 확인·취소·Escape·배경 닫기를 제한한다. 부모의 명시적인 model 교체는 허용한다."
+        },
+        {
+          "name": "intent",
+          "required": false,
+          "type": "ScConfirmDialogIntent | undefined",
+          "defaultSpecified": true,
+          "default": "default",
+          "description": ""
+        },
+        {
+          "name": "id",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        }
+      ],
+      "events": [
+        {
+          "name": "update:modelValue",
+          "type": "[value: boolean]",
+          "description": ""
+        },
+        {
+          "name": "cancel",
+          "type": "[reason: ScConfirmDialogCancelReason]",
+          "description": ""
+        },
+        {
+          "name": "confirm",
+          "type": "[]",
+          "description": ""
+        }
+      ],
+      "slots": [
+        {
+          "name": "default",
+          "type": "any",
+          "description": "message 뒤의 추가 안내. 복잡한 본문은 스스로 의미 구조를 유지한다."
+        }
+      ]
+    },
+    {
+      "component": "ScKpiCard",
+      "props": [
+        {
+          "name": "label",
+          "required": true,
+          "type": "string",
+          "defaultSpecified": false,
+          "default": null,
+          "description": "지표의 이름. 카드의 접근성 이름으로도 사용한다."
+        },
+        {
+          "name": "value",
+          "required": true,
+          "type": "string",
+          "defaultSpecified": false,
+          "default": null,
+          "description": "숫자·단위·통화 형식은 소비 앱에서 결정한다."
+        },
+        {
+          "name": "note",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "",
+          "description": ""
+        },
+        {
+          "name": "trend",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "",
+          "description": "증가·감소의 의미를 포함하는 완결된 표시 문구를 전달한다."
+        },
+        {
+          "name": "trendDirection",
+          "required": false,
+          "type": "ScKpiTrendDirection | undefined",
+          "defaultSpecified": true,
+          "default": "neutral",
+          "description": "방향은 장식이며 업무상 좋은 변화인지 판단하지 않는다."
+        },
+        {
+          "name": "tone",
+          "required": false,
+          "type": "ScKpiCardTone | undefined",
+          "defaultSpecified": true,
+          "default": "green",
+          "description": ""
+        },
+        {
+          "name": "density",
+          "required": false,
+          "type": "ScCardDensity | undefined",
+          "defaultSpecified": true,
+          "default": "comfortable",
+          "description": "compact는 좁은 대시보드 열에서도 같은 지표 구성을 유지한다."
+        },
+        {
+          "name": "iconPath",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": "SVG path 데이터. 작은 아이콘과 큰 배경 장식은 읽기 순서에서 제외한다."
+        }
+      ],
+      "events": [],
+      "slots": []
+    },
+    {
+      "component": "ScStatusBadge",
+      "props": [
+        {
+          "name": "label",
+          "required": true,
+          "type": "string",
+          "defaultSpecified": false,
+          "default": null,
+          "description": "상태는 색상 외에도 실제 텍스트로 전달한다."
+        },
+        {
+          "name": "tone",
+          "required": false,
+          "type": "ScStatusBadgeTone | undefined",
+          "defaultSpecified": true,
+          "default": "neutral",
+          "description": ""
+        }
+      ],
+      "events": [],
+      "slots": []
+    },
+    {
+      "component": "ScPageHeader",
+      "props": [
+        {
+          "name": "title",
+          "required": true,
+          "type": "string",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "subtitle",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "",
+          "description": ""
+        },
+        {
+          "name": "eyebrow",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "",
+          "description": ""
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "actions",
+          "type": "any",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "component": "ScSearchPanel",
+      "props": [
+        {
+          "name": "label",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "검색",
+          "description": ""
+        },
+        {
+          "name": "submitLabel",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "검색",
+          "description": ""
+        },
+        {
+          "name": "resetLabel",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "초기화",
+          "description": ""
+        },
+        {
+          "name": "disabled",
+          "required": false,
+          "type": "boolean | undefined",
+          "defaultSpecified": true,
+          "default": false,
+          "description": ""
+        }
+      ],
+      "events": [
+        {
+          "name": "submit",
+          "type": "[event: SubmitEvent]",
+          "description": ""
+        },
+        {
+          "name": "reset",
+          "type": "[event: Event]",
+          "description": ""
+        }
+      ],
+      "slots": [
+        {
+          "name": "default",
+          "type": "any",
+          "description": ""
+        },
+        {
+          "name": "actions",
+          "type": "any",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "component": "ScSectionCard",
+      "props": [
+        {
+          "name": "title",
+          "required": true,
+          "type": "string",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "description",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "",
+          "description": ""
+        },
+        {
+          "name": "density",
+          "required": false,
+          "type": "ScCardDensity | undefined",
+          "defaultSpecified": true,
+          "default": "comfortable",
+          "description": ""
+        },
+        {
+          "name": "surface",
+          "required": false,
+          "type": "ScSectionCardSurface | undefined",
+          "defaultSpecified": true,
+          "default": "bordered",
+          "description": "plain도 배경·그림자는 유지하며 카드와 헤더의 구분선을 생략한다."
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "default",
+          "type": "any",
+          "description": ""
+        },
+        {
+          "name": "actions",
+          "type": "any",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "component": "ScErrorPanel",
+      "props": [
+        {
+          "name": "message",
+          "required": true,
+          "type": "string",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "title",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "조회하지 못했습니다",
+          "description": ""
+        },
+        {
+          "name": "retryLabel",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "다시 조회",
+          "description": ""
+        },
+        {
+          "name": "showRetry",
+          "required": false,
+          "type": "boolean | undefined",
+          "defaultSpecified": true,
+          "default": true,
+          "description": ""
+        }
+      ],
+      "events": [
+        {
+          "name": "retry",
+          "type": "[]",
+          "description": ""
+        }
+      ],
+      "slots": []
+    },
+    {
+      "component": "ScEmptyState",
+      "props": [
+        {
+          "name": "title",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "표시할 자료가 없습니다",
+          "description": ""
+        },
+        {
+          "name": "message",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "",
+          "description": ""
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "actions",
+          "type": "any",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "component": "ScLoadingState",
+      "props": [
+        {
+          "name": "label",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "자료 불러오는 중…",
+          "description": ""
+        }
+      ],
+      "events": [],
+      "slots": []
+    },
+    {
+      "component": "ScListDetailLayout",
+      "props": [
+        {
+          "name": "detailVisible",
+          "required": false,
+          "type": "boolean | undefined",
+          "defaultSpecified": true,
+          "default": false,
+          "description": ""
+        },
+        {
+          "name": "listLabel",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "목록 영역",
+          "description": ""
+        },
+        {
+          "name": "detailLabel",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "상세 영역",
+          "description": ""
+        },
+        {
+          "name": "backLabel",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "목록으로",
+          "description": ""
+        }
+      ],
+      "events": [
+        {
+          "name": "show-list",
+          "type": "[]",
+          "description": ""
+        }
+      ],
+      "slots": [
+        {
+          "name": "header",
+          "type": "any",
+          "description": ""
+        },
+        {
+          "name": "search",
+          "type": "any",
+          "description": ""
+        },
+        {
+          "name": "toolbar",
+          "type": "any",
+          "description": ""
+        },
+        {
+          "name": "list",
+          "type": "any",
+          "description": ""
+        },
+        {
+          "name": "detail",
+          "type": "any",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "component": "ScAppShell",
+      "props": [
+        {
+          "name": "applicationTitle",
+          "required": true,
+          "type": "string",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "applicationLabel",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "",
+          "description": ""
+        },
+        {
+          "name": "navigationLabel",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "화면 탐색",
+          "description": ""
+        },
+        {
+          "name": "navigationItems",
+          "required": true,
+          "type": "readonly ScAppShellNavItem[]",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "activeItem",
+          "required": true,
+          "type": "string",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "labels",
+          "required": false,
+          "type": "Partial<ScAppShellLabels> | undefined",
+          "defaultSpecified": true,
+          "default": {},
+          "description": "locale 번역은 소비 앱이 소유한다. 생략한 문구는 한국어다."
+        }
+      ],
+      "events": [
+        {
+          "name": "navigate",
+          "type": "[item: ScAppShellNavItem]",
+          "description": ""
+        }
+      ],
+      "slots": [
+        {
+          "name": "default",
+          "type": "any",
+          "description": ""
+        },
+        {
+          "name": "header-actions",
+          "type": "any",
+          "description": ""
+        },
+        {
+          "name": "header-leading",
+          "type": "any",
+          "description": ""
+        },
+        {
+          "name": "sidebar-footer",
+          "type": "any",
+          "description": ""
+        },
+        {
+          "name": "notice",
+          "type": "any",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "component": "ScDataTable",
+      "props": [
+        {
+          "name": "rows",
+          "required": true,
+          "type": "readonly object[]",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "columns",
+          "required": true,
+          "type": "readonly ScTableColumn<object>[]",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "caption",
+          "required": true,
+          "type": "string",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "density",
+          "required": false,
+          "type": "\"comfortable\" | \"compact\" | undefined",
+          "defaultSpecified": true,
+          "default": "comfortable",
+          "description": "업무 표와 대시보드 표가 같은 디자인의 간격 규격을 사용한다."
+        },
+        {
+          "name": "captionVisibility",
+          "required": false,
+          "type": "\"visible\" | \"sr-only\" | undefined",
+          "defaultSpecified": true,
+          "default": "visible",
+          "description": "숨긴 caption도 표의 접근성 이름으로 유지한다."
+        },
+        {
+          "name": "minTableWidth",
+          "required": false,
+          "type": "number | undefined",
+          "defaultSpecified": true,
+          "default": 0,
+          "description": "작은 화면에서는 공통 표 내부에서 가로 스크롤한다. 단위는 px."
+        },
+        {
+          "name": "getRowKey",
+          "required": true,
+          "type": "(row: object) => string",
+          "defaultSpecified": false,
+          "default": null,
+          "description": "빈 문자열·중복·배열 index를 사용하지 않는 지속적인 업무 ID."
+        },
+        {
+          "name": "getRowLabel",
+          "required": false,
+          "type": "((row: object) => string) | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "dataMode",
+          "required": false,
+          "type": "\"client\" | \"server\" | undefined",
+          "defaultSpecified": true,
+          "default": "client",
+          "description": ""
+        },
+        {
+          "name": "sorting",
+          "required": false,
+          "type": "ScTableSort | null | undefined",
+          "defaultSpecified": true,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "pagination",
+          "required": false,
+          "type": "ScTablePagination | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "selectionMode",
+          "required": false,
+          "type": "ScTableSelectionMode | undefined",
+          "defaultSpecified": true,
+          "default": "none",
+          "description": ""
+        },
+        {
+          "name": "selectedKeys",
+          "required": false,
+          "type": "readonly string[] | undefined",
+          "defaultSpecified": true,
+          "default": [],
+          "description": ""
+        },
+        {
+          "name": "isRowSelectable",
+          "required": false,
+          "type": "((row: object) => boolean) | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "loading",
+          "required": false,
+          "type": "boolean | undefined",
+          "defaultSpecified": true,
+          "default": false,
+          "description": ""
+        },
+        {
+          "name": "error",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "labels",
+          "required": false,
+          "type": "Partial<ScTableLabels> | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": "locale의 원본은 앱이다. 공통 UI는 한국어 기본 메시지를 제공한다."
+        }
+      ],
+      "events": [
+        {
+          "name": "retry",
+          "type": "[]",
+          "description": ""
+        },
+        {
+          "name": "change-sort",
+          "type": "[sorting: ScTableSort | null]",
+          "description": ""
+        },
+        {
+          "name": "change-pagination",
+          "type": "[pagination: ScTablePagination]",
+          "description": ""
+        },
+        {
+          "name": "update:selectedKeys",
+          "type": "[keys: string[]]",
+          "description": ""
+        }
+      ],
+      "slots": [
+        {
+          "name": "cell",
+          "type": "ScTableCellSlot<object>",
+          "description": ""
+        },
+        {
+          "name": "row-actions",
+          "type": "ScTableRowSlot<object>",
+          "description": ""
+        },
+        {
+          "name": "loading",
+          "type": "any",
+          "description": ""
+        },
+        {
+          "name": "empty",
+          "type": "any",
+          "description": ""
+        },
+        {
+          "name": "error",
+          "type": "{ message: string; retry: () => void; }",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "component": "ScVirtualList",
+      "props": [
+        {
+          "name": "items",
+          "required": true,
+          "type": "readonly unknown[]",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "label",
+          "required": true,
+          "type": "string",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "getItemKey",
+          "required": true,
+          "type": "(item: unknown) => string",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "getItemLabel",
+          "required": false,
+          "type": "((item: unknown) => string) | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "loading",
+          "required": false,
+          "type": "boolean | undefined",
+          "defaultSpecified": true,
+          "default": false,
+          "description": ""
+        },
+        {
+          "name": "error",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "labels",
+          "required": false,
+          "type": "Partial<ScTableLabels> | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "height",
+          "required": false,
+          "type": "number | undefined",
+          "defaultSpecified": true,
+          "default": 480,
+          "description": "실제 스크롤 viewport 높이. 기본 480px, 양수만 허용한다."
+        },
+        {
+          "name": "estimateRowHeight",
+          "required": false,
+          "type": "number | undefined",
+          "defaultSpecified": true,
+          "default": 48,
+          "description": "최소 행 높이이자 초기 추정치. 실제 가변 높이는 ResizeObserver로 측정한다."
+        },
+        {
+          "name": "overscan",
+          "required": false,
+          "type": "number | undefined",
+          "defaultSpecified": true,
+          "default": 8,
+          "description": "양쪽 추가 렌더 개수. 기본 8, 0~20 정수만 허용한다."
+        }
+      ],
+      "events": [
+        {
+          "name": "retry",
+          "type": "[]",
+          "description": ""
+        }
+      ],
+      "slots": [
+        {
+          "name": "item",
+          "type": "{ item: unknown; itemKey: string; index: number; }",
+          "description": ""
+        },
+        {
+          "name": "loading",
+          "type": "any",
+          "description": ""
+        },
+        {
+          "name": "empty",
+          "type": "any",
+          "description": ""
+        },
+        {
+          "name": "error",
+          "type": "{ message: string; retry: () => void; }",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "component": "ScVirtualTable",
+      "props": [
+        {
+          "name": "rows",
+          "required": true,
+          "type": "readonly object[]",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "columns",
+          "required": true,
+          "type": "readonly ScTableColumn<object>[]",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "caption",
+          "required": true,
+          "type": "string",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "density",
+          "required": false,
+          "type": "\"comfortable\" | \"compact\" | undefined",
+          "defaultSpecified": true,
+          "default": "comfortable",
+          "description": "업무 표와 대시보드 표가 같은 디자인의 간격 규격을 사용한다."
+        },
+        {
+          "name": "captionVisibility",
+          "required": false,
+          "type": "\"visible\" | \"sr-only\" | undefined",
+          "defaultSpecified": true,
+          "default": "visible",
+          "description": "숨긴 caption도 표의 접근성 이름으로 유지한다."
+        },
+        {
+          "name": "minTableWidth",
+          "required": false,
+          "type": "number | undefined",
+          "defaultSpecified": true,
+          "default": 0,
+          "description": "작은 화면에서는 공통 표 내부에서 가로 스크롤한다. 단위는 px."
+        },
+        {
+          "name": "getRowKey",
+          "required": true,
+          "type": "(row: object) => string",
+          "defaultSpecified": false,
+          "default": null,
+          "description": "빈 문자열·중복·배열 index를 사용하지 않는 지속적인 업무 ID."
+        },
+        {
+          "name": "getRowLabel",
+          "required": false,
+          "type": "((row: object) => string) | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "dataMode",
+          "required": false,
+          "type": "\"client\" | \"server\" | undefined",
+          "defaultSpecified": true,
+          "default": "client",
+          "description": ""
+        },
+        {
+          "name": "sorting",
+          "required": false,
+          "type": "ScTableSort | null | undefined",
+          "defaultSpecified": true,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "pagination",
+          "required": false,
+          "type": "ScTablePagination | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "selectionMode",
+          "required": false,
+          "type": "ScTableSelectionMode | undefined",
+          "defaultSpecified": true,
+          "default": "none",
+          "description": ""
+        },
+        {
+          "name": "selectedKeys",
+          "required": false,
+          "type": "readonly string[] | undefined",
+          "defaultSpecified": true,
+          "default": [],
+          "description": ""
+        },
+        {
+          "name": "isRowSelectable",
+          "required": false,
+          "type": "((row: object) => boolean) | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "loading",
+          "required": false,
+          "type": "boolean | undefined",
+          "defaultSpecified": true,
+          "default": false,
+          "description": ""
+        },
+        {
+          "name": "error",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "labels",
+          "required": false,
+          "type": "Partial<ScTableLabels> | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": "locale의 원본은 앱이다. 공통 UI는 한국어 기본 메시지를 제공한다."
+        },
+        {
+          "name": "height",
+          "required": false,
+          "type": "number | undefined",
+          "defaultSpecified": true,
+          "default": 480,
+          "description": "실제 스크롤 viewport 높이. 기본 480px, 양수만 허용한다."
+        },
+        {
+          "name": "estimateRowHeight",
+          "required": false,
+          "type": "number | undefined",
+          "defaultSpecified": true,
+          "default": 48,
+          "description": "최소 행 높이이자 초기 추정치. 실제 가변 높이는 ResizeObserver로 측정한다."
+        },
+        {
+          "name": "overscan",
+          "required": false,
+          "type": "number | undefined",
+          "defaultSpecified": true,
+          "default": 8,
+          "description": "양쪽 추가 렌더 개수. 기본 8, 0~20 정수만 허용한다."
+        }
+      ],
+      "events": [
+        {
+          "name": "retry",
+          "type": "[]",
+          "description": ""
+        },
+        {
+          "name": "change-sort",
+          "type": "[sorting: ScTableSort | null]",
+          "description": ""
+        },
+        {
+          "name": "change-pagination",
+          "type": "[pagination: ScTablePagination]",
+          "description": ""
+        },
+        {
+          "name": "update:selectedKeys",
+          "type": "[keys: string[]]",
+          "description": ""
+        }
+      ],
+      "slots": [
+        {
+          "name": "cell",
+          "type": "ScTableCellSlot<object>",
+          "description": ""
+        },
+        {
+          "name": "row-actions",
+          "type": "ScTableRowSlot<object>",
+          "description": ""
+        },
+        {
+          "name": "loading",
+          "type": "any",
+          "description": ""
+        },
+        {
+          "name": "empty",
+          "type": "any",
+          "description": ""
+        },
+        {
+          "name": "error",
+          "type": "{ message: string; retry: () => void; }",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "component": "ScChart",
+      "props": [
+        {
+          "name": "data",
+          "required": true,
+          "type": "readonly ScChartDatum[]",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "label",
+          "required": true,
+          "type": "string",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "type",
+          "required": false,
+          "type": "ScChartType | undefined",
+          "defaultSpecified": true,
+          "default": "bar",
+          "description": ""
+        },
+        {
+          "name": "summary",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "",
+          "description": ""
+        },
+        {
+          "name": "height",
+          "required": false,
+          "type": "number | undefined",
+          "defaultSpecified": true,
+          "default": 320,
+          "description": ""
+        },
+        {
+          "name": "loading",
+          "required": false,
+          "type": "boolean | undefined",
+          "defaultSpecified": true,
+          "default": false,
+          "description": ""
+        },
+        {
+          "name": "error",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "",
+          "description": ""
+        },
+        {
+          "name": "emptyLabel",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "표시할 데이터가 없습니다.",
+          "description": ""
+        },
+        {
+          "name": "dataTitle",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "차트 데이터",
+          "description": ""
+        },
+        {
+          "name": "categoryLabel",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "항목",
+          "description": ""
+        },
+        {
+          "name": "valueLabel",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "값",
+          "description": ""
+        },
+        {
+          "name": "loadingLabel",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "불러오는 중",
+          "description": ""
+        },
+        {
+          "name": "retryLabel",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "다시 시도",
+          "description": ""
+        },
+        {
+          "name": "invalidDataLabel",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "차트 자료의 형식이 올바르지 않습니다.",
+          "description": ""
+        },
+        {
+          "name": "selectable",
+          "required": false,
+          "type": "boolean | undefined",
+          "defaultSpecified": true,
+          "default": false,
+          "description": ""
+        },
+        {
+          "name": "selectLabel",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "선택",
+          "description": ""
+        }
+      ],
+      "events": [
+        {
+          "name": "retry",
+          "type": "[]",
+          "description": ""
+        },
+        {
+          "name": "select",
+          "type": "[item: ScChartClick]",
+          "description": ""
+        }
+      ],
+      "slots": []
+    },
+    {
+      "component": "ScSeriesChart",
+      "props": [
+        {
+          "name": "label",
+          "required": true,
+          "type": "string",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "series",
+          "required": true,
+          "type": "readonly ScChartSeries[]",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "height",
+          "required": false,
+          "type": "number | undefined",
+          "defaultSpecified": true,
+          "default": 320,
+          "description": ""
+        },
+        {
+          "name": "dataLabel",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "차트 데이터 보기",
+          "description": ""
+        },
+        {
+          "name": "categoryLabel",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "기간",
+          "description": ""
+        },
+        {
+          "name": "emptyLabel",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "표시할 데이터가 없습니다.",
+          "description": ""
+        },
+        {
+          "name": "invalidLabel",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "차트 자료의 형식이 올바르지 않습니다.",
+          "description": ""
+        }
+      ],
+      "events": [],
+      "slots": []
+    },
+    {
+      "component": "ScRichTextEditor",
+      "props": [
+        {
+          "name": "modelValue",
+          "required": true,
+          "type": "ScRichTextDocument",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "label",
+          "required": true,
+          "type": "string",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "id",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "undefined",
+          "description": ""
+        },
+        {
+          "name": "disabled",
+          "required": false,
+          "type": "boolean | undefined",
+          "defaultSpecified": true,
+          "default": false,
+          "description": ""
+        },
+        {
+          "name": "readonly",
+          "required": false,
+          "type": "boolean | undefined",
+          "defaultSpecified": true,
+          "default": false,
+          "description": ""
+        },
+        {
+          "name": "errorMessages",
+          "required": false,
+          "type": "string | readonly string[] | undefined",
+          "defaultSpecified": true,
+          "default": "",
+          "description": ""
+        },
+        {
+          "name": "hint",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "",
+          "description": ""
+        },
+        {
+          "name": "placeholder",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": true,
+          "default": "",
+          "description": ""
+        },
+        {
+          "name": "toolbarLabels",
+          "required": false,
+          "type": "ScEditorToolbarLabels | undefined",
+          "defaultSpecified": true,
+          "default": {},
+          "description": ""
+        },
+        {
+          "name": "minHeight",
+          "required": false,
+          "type": "number | undefined",
+          "defaultSpecified": true,
+          "default": 180,
+          "description": ""
+        }
+      ],
+      "events": [
+        {
+          "name": "update:modelValue",
+          "type": "[document: ScRichTextDocument]",
+          "description": ""
+        },
+        {
+          "name": "focus",
+          "type": "[event: FocusEvent]",
+          "description": ""
+        },
+        {
+          "name": "blur",
+          "type": "[event: FocusEvent]",
+          "description": ""
+        },
+        {
+          "name": "invalid-document",
+          "type": "[error: { message: string; }]",
+          "description": ""
+        }
+      ],
+      "slots": []
+    },
+    {
+      "component": "ScSortableBoard",
+      "props": [
+        {
+          "name": "label",
+          "required": true,
+          "type": "string",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "columns",
+          "required": true,
+          "type": "readonly ScBoardColumn<unknown>[]",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "getItemKey",
+          "required": true,
+          "type": "(item: unknown) => string",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "getItemLabel",
+          "required": true,
+          "type": "(item: unknown) => string",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "isItemMovable",
+          "required": false,
+          "type": "((item: unknown) => boolean) | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "disabled",
+          "required": false,
+          "type": "boolean | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "loading",
+          "required": false,
+          "type": "boolean | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "error",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "labels",
+          "required": false,
+          "type": "Partial<ScBoardLabels> | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        }
+      ],
+      "events": [
+        {
+          "name": "retry",
+          "type": "[]",
+          "description": ""
+        },
+        {
+          "name": "move",
+          "type": "[move: ScBoardMove]",
+          "description": ""
+        }
+      ],
+      "slots": [
+        {
+          "name": "item",
+          "type": "{ item: unknown; column: ScBoardColumn<unknown>; index: number; }",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "component": "ScImageAnnotator",
+      "props": [
+        {
+          "name": "image",
+          "required": true,
+          "type": "HTMLImageElement | null",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "imageDescription",
+          "required": true,
+          "type": "string",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "modelValue",
+          "required": true,
+          "type": "ScNormalizedBox | null",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "annotations",
+          "required": false,
+          "type": "readonly ScImageAnnotation[] | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "selectedAnnotationId",
+          "required": false,
+          "type": "string | null | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "readonly",
+          "required": false,
+          "type": "boolean | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "disabled",
+          "required": false,
+          "type": "boolean | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "loading",
+          "required": false,
+          "type": "boolean | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "error",
+          "required": false,
+          "type": "string | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        },
+        {
+          "name": "labels",
+          "required": false,
+          "type": "Partial<ScImageLabels> | undefined",
+          "defaultSpecified": false,
+          "default": null,
+          "description": ""
+        }
+      ],
+      "events": [
+        {
+          "name": "update:modelValue",
+          "type": "[box: ScNormalizedBox | null]",
+          "description": ""
+        },
+        {
+          "name": "retry",
+          "type": "[]",
+          "description": ""
+        },
+        {
+          "name": "select-annotation",
+          "type": "[id: string]",
+          "description": ""
+        }
+      ],
+      "slots": []
+    }
+  ]
+}

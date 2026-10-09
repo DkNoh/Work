@@ -1,0 +1,121 @@
+{
+  "stage": "008",
+  "startedAt": "2026-10-06T16:23:35.601183+00:00",
+  "passed": true,
+  "parentPom": "backend/pom.xml",
+  "parentResolution": "fixture relativePath resolves to the actual parent; processor configuration is not copied",
+  "javaEnvironmentScript": "scripts/java-env.sh",
+  "mavenWrapper": "backend/mvnw",
+  "fixtureSource": "synthetic-only; no manually written Q type or Mapper implementation",
+  "positive": {
+    "exitCode": 0,
+    "durationSeconds": 2.615,
+    "timedOut": false,
+    "interrupted": false,
+    "command": [
+      "bash",
+      "-c",
+      "set -e; source \"$1\"; shift; exec \"$@\"",
+      "sc-java-processors",
+      "/Users/dk/Work/ScFramework/scripts/java-env.sh",
+      "/Users/dk/Work/ScFramework/backend/mvnw",
+      "-B",
+      "-ntp",
+      "-V",
+      "-Dstyle.color=never",
+      "-DskipTests=false",
+      "-Dmaven.test.skip=false",
+      "-f",
+      "/var/folders/8k/rv4bxj0115g929lrxwybv_r80000gn/T/sc-java-processors-008-493vgxwj/positive/pom.xml",
+      "clean",
+      "verify"
+    ],
+    "log": "docs/검증/008-processor-positive.log",
+    "checks": {
+      "tests": {
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "testNames": [
+        "generatedConstructorAndMapperNullContractAreUsable",
+        "generatedQueryTypeAndLombokGettersAreMappedAtRuntime"
+      ],
+      "javaVersion": "21.0.11",
+      "javaVmName": "OpenJDK 64-Bit Server VM",
+      "generatedFiles": [
+        {
+          "path": "target/generated-sources/annotations/dev/scframework/processorfixture/QProcessorEntity.java",
+          "sha256": "04dfbf6499ccbdef29060671b0d61524f75dd5203520b284caceb1d6cdf7724b"
+        },
+        {
+          "path": "target/generated-sources/annotations/dev/scframework/processorfixture/ProcessorMapperImpl.java",
+          "sha256": "4a00d12213ebe232fe5557e9482390c1f47bf858b2a73ada1a7e3ee159ada5a3"
+        },
+        {
+          "path": "target/classes/META-INF/spring-configuration-metadata.json",
+          "sha256": "a258aff845bb3755aa0eeaf352ba683b8bf7a732e45ad242146a34f7acc09318"
+        }
+      ],
+      "compiledGeneratedTypes": [
+        "QProcessorEntity.class",
+        "ProcessorMapperImpl.class"
+      ],
+      "lombokGettersMapped": true,
+      "protectedNoArgsConstructorVerified": true,
+      "bootConfigurationMetadataPreserved": true
+    }
+  },
+  "negative": {
+    "exitCode": 1,
+    "durationSeconds": 1.491,
+    "timedOut": false,
+    "interrupted": false,
+    "command": [
+      "bash",
+      "-c",
+      "set -e; source \"$1\"; shift; exec \"$@\"",
+      "sc-java-processors",
+      "/Users/dk/Work/ScFramework/scripts/java-env.sh",
+      "/Users/dk/Work/ScFramework/backend/mvnw",
+      "-B",
+      "-ntp",
+      "-V",
+      "-Dstyle.color=never",
+      "-DskipTests=false",
+      "-Dmaven.test.skip=false",
+      "-f",
+      "/var/folders/8k/rv4bxj0115g929lrxwybv_r80000gn/T/sc-java-processors-008-493vgxwj/negative/pom.xml",
+      "clean",
+      "verify"
+    ],
+    "log": "docs/검증/008-processor-negative.log",
+    "checks": {
+      "expectedExitCode": 1,
+      "unmappedProperty": "requiredField",
+      "diagnostic": "ProcessorMapper.java:[11,18] Unmapped target property: \"requiredField\".",
+      "diagnosticStreams": [
+        "stdout"
+      ],
+      "compileBlocked": true,
+      "testsNeverStarted": true
+    }
+  },
+  "temporaryDirectoryCleaned": true,
+  "errors": [],
+  "parentSha256": "a3efd4b4afb71f030071198ccca9e937884f381c4517074476196eb55e685fb7",
+  "parentCoordinates": {
+    "groupId": "dev.scframework",
+    "artifactId": "sc-framework-parent",
+    "version": "0.1.0-SNAPSHOT"
+  },
+  "declaredVersions": {
+    "java.version": "21",
+    "sc-querydsl.version": "6.12",
+    "mapstruct.version": "1.6.3",
+    "lombok.version": "1.18.46",
+    "lombok-mapstruct-binding.version": "0.2.0"
+  },
+  "finishedAt": "2026-10-06T16:23:39.717381+00:00"
+}

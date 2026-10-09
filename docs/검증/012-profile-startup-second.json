@@ -1,0 +1,33 @@
+{
+  "stage": "012",
+  "kind": "metadata-only server startup",
+  "passed": true,
+  "frontendNotRebuilt": true,
+  "capabilities": {
+    "messaging": true,
+    "scheduler": true,
+    "browserErrors": true,
+    "observability": true
+  },
+  "messages": 2,
+  "registeredJobs": {
+    "items": [
+      {
+        "jobCode": "FILE_RECOVERY",
+        "executionMode": "NON_TRANSACTIONAL"
+      },
+      {
+        "jobCode": "OUTBOX_DISPATCH",
+        "executionMode": "NON_TRANSACTIONAL"
+      },
+      {
+        "jobCode": "PULSE",
+        "executionMode": "TRANSACTIONAL"
+      },
+      {
+        "jobCode": "SAFE_RETENTION",
+        "executionMode": "TRANSACTIONAL"
+      }
+    ]
+  }
+}

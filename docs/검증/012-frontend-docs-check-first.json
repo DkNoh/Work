@@ -1,0 +1,21 @@
+{
+  "stage": "012",
+  "checkedFiles": [
+    "README.md",
+    "docs/folder-structure.md",
+    "docs/maintenance-guide.md",
+    "docs/operations.md",
+    "docs/api.md",
+    "docs/질의/README.md",
+    "docs/질의/기술스택-적용현황.md",
+    "docs/질의/개발가이드.md",
+    "docs/질의/개발단계.md"
+  ],
+  "relativeLinks": 634,
+  "missing": [],
+  "formatWriteExit": 0,
+  "formatCheckExit": 0,
+  "sourceScope": "9 assigned documents only",
+  "executionBoundary": "source documentation and local relative file links; no Maven, browser, central build or deployment executed by this check",
+  "stageComplete": false
+}

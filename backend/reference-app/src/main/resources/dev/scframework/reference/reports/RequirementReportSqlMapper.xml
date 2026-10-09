@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dev.scframework.reference.reports.RequirementReportSqlMapper">
+  <resultMap id="item" type="dev.scframework.reference.reports.RequirementReportRows$ItemRow">
+    <constructor>
+      <idArg column="id" javaType="_long" />
+      <arg column="menu_id" javaType="_long" />
+      <arg column="menu_name" javaType="java.lang.String" />
+      <arg column="title" javaType="java.lang.String" />
+      <arg column="status" javaType="java.lang.String" />
+      <arg column="revision" javaType="_int" />
+      <arg column="author_id" javaType="_long" />
+      <arg column="author_name" javaType="java.lang.String" />
+      <arg column="assigned_reviewer_id" javaType="java.lang.Long" />
+      <arg column="assigned_reviewer_name" javaType="java.lang.String" />
+      <arg column="created_at" javaType="java.time.Instant" />
+      <arg column="updated_at" javaType="java.time.Instant" />
+      <arg column="review_decision" javaType="java.lang.String" />
+      <arg column="comment_count" javaType="_long" />
+      <arg column="history_count" javaType="_long" />
+      <arg column="last_comment_at" javaType="java.time.Instant" />
+    </constructor>
+  </resultMap>
+  <resultMap id="stats" type="dev.scframework.reference.reports.RequirementReportRows$StatsRow">
+    <constructor>
+      <arg column="total" javaType="_long" />
+      <arg column="draft" javaType="_long" />
+      <arg column="requested" javaType="_long" />
+      <arg column="needs_info" javaType="_long" />
+      <arg column="reviewing" javaType="_long" />
+      <arg column="agreed" javaType="_long" />
+      <arg column="ado_linked" javaType="_long" />
+      <arg column="unassigned" javaType="_long" />
+    </constructor>
+  </resultMap>
+  <!-- 페이지와 통계가 같은 literal 검색·읽기 권한 predicate를 사용한다. -->
+  <sql id="visibleRequirements">
+    SELECT r.id, r.menu_id, r.title, r.status, r.revision, r.author_id,
+      r.assigned_reviewer_id, r.created_at, r.updated_at FROM requirement_entry r
+    <where>
+      <if test="!admin">(r.status &lt;&gt; 'DRAFT' OR r.author_id = #{actorId})</if>
+      <if test="pattern != null">AND r.title LIKE #{pattern} ESCAPE '\'</if>
+      <if test="menuId != null">AND r.menu_id = #{menuId}</if>
+      <if test="status != null and status != ''">AND r.status = #{status}</if>
+      <if test="authorId != null">AND r.author_id = #{authorId}</if>
+      <if test="screenVersionId != null">AND r.screen_version_id = #{screenVersionId}</if>
+    </where>
+  </sql>
+  <select id="selectStats" resultMap="stats" useCache="false">
+    WITH visible AS (<include refid="visibleRequirements" />)
+    SELECT COUNT(*) AS total,
+      COALESCE(SUM(CASE WHEN status = 'DRAFT' THEN 1 ELSE 0 END), 0) AS draft,
+      COALESCE(SUM(CASE WHEN status = 'REQUESTED' THEN 1 ELSE 0 END), 0) AS requested,
+      COALESCE(SUM(CASE WHEN status = 'NEEDS_INFO' THEN 1 ELSE 0 END), 0) AS needs_info,
+      COALESCE(SUM(CASE WHEN status = 'REVIEWING' THEN 1 ELSE 0 END), 0) AS reviewing,
+      COALESCE(SUM(CASE WHEN status = 'AGREED' THEN 1 ELSE 0 END), 0) AS agreed,
+      COALESCE(SUM(CASE WHEN status = 'ADO_LINKED' THEN 1 ELSE 0 END), 0) AS ado_linked,
+      COALESCE(SUM(CASE WHEN assigned_reviewer_id IS NULL THEN 1 ELSE 0 END), 0) AS unassigned
+    FROM visible
+  </select>
+  <select id="selectPage" resultMap="item" useCache="false">
+    WITH visible AS (<include refid="visibleRequirements" />),
+    comment_totals AS (
+      SELECT c.requirement_id, COUNT(*) AS comment_count, MAX(c.created_at) AS last_comment_at
+      FROM requirement_comment c INNER JOIN visible v ON v.id = c.requirement_id GROUP BY c.requirement_id
+    ),
+    history_totals AS (
+      SELECT h.requirement_id, COUNT(*) AS history_count
+      FROM requirement_history h INNER JOIN visible v ON v.id = h.requirement_id GROUP BY h.requirement_id
+    )
+    SELECT r.id, r.menu_id, m.name AS menu_name, r.title, r.status, r.revision,
+      r.author_id, a.display_name AS author_name, r.assigned_reviewer_id,
+      assigned.display_name AS assigned_reviewer_name, r.created_at, r.updated_at,
+      review.decision AS review_decision, COALESCE(c.comment_count, 0) AS comment_count,
+      COALESCE(h.history_count, 0) AS history_count, c.last_comment_at
+    FROM visible r
+    INNER JOIN menu_entry m ON m.id = r.menu_id
+    INNER JOIN reference_user a ON a.id = r.author_id
+    LEFT JOIN reference_user assigned ON assigned.id = r.assigned_reviewer_id
+    LEFT JOIN requirement_review review ON review.requirement_id = r.id
+    LEFT JOIN comment_totals c ON c.requirement_id = r.id
+    LEFT JOIN history_totals h ON h.requirement_id = r.id
+    <!-- CASE로 NULL을 뒤에 두면 SQL Server의 NULLS LAST 미지원에도 같은 정렬을 보존한다. -->
+    ORDER BY
+    <if test="sort == 'lastCommentAt'">CASE WHEN c.last_comment_at IS NULL THEN 1 ELSE 0 END ASC,</if>
+    <choose>
+      <when test="sort == 'title'">r.title</when>
+      <when test="sort == 'commentCount'">COALESCE(c.comment_count, 0)</when>
+      <when test="sort == 'historyCount'">COALESCE(h.history_count, 0)</when>
+      <when test="sort == 'lastCommentAt'">c.last_comment_at</when>
+      <otherwise>r.updated_at</otherwise>
+    </choose>
+    <choose><when test="direction == 'asc'">ASC</when><otherwise>DESC</otherwise></choose>
+    , r.id DESC
+    <!-- H2·PostgreSQL·Oracle 12c+·DB2 LUW·SQL Server의 공통 ANSI 페이지 구문이다. -->
+    OFFSET #{offset} ROWS FETCH NEXT #{size} ROWS ONLY
+  </select>
+</mapper>

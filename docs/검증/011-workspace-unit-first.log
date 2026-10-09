@@ -1,0 +1,13 @@
+
+> sc-framework@0.1.0 test:unit
+> vitest run --config vitest.config.ts
+
+
+ RUN  v4.1.11 /Users/dk/Work/ScFramework
+
+
+ Test Files  34 passed (34)
+      Tests  139 passed (139)
+   Start at  05:38:30
+   Duration  2.70s (transform 18.76s, setup 0ms, import 26.03s, tests 1.08s, environment 5.54s)
+

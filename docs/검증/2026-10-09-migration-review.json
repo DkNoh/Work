@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-09",
+  "timezone": "Asia/Seoul",
+  "platform": "Windows 11",
+  "node": "24.18.0",
+  "scope": "Current working tree; selected tests and source review, not a full release certification or a live legacy migration",
+  "frontend": {
+    "command": "npm run test:unit -- frontend/packages/runtime/src/http.spec.ts frontend/packages/runtime/src/runtime.spec.ts frontend/apps/reference-app/src/features/requirements/permissions.spec.ts frontend/apps/reference-app/src/features/requirements/RequirementForm.spec.ts",
+    "files": 4,
+    "passed": 23,
+    "failed": 0,
+    "exitCode": 0
+  },
+  "backend": {
+    "maven": "3.9.16",
+    "command": "mvn -o -Dmaven.repo.local=C:/work/.cache/sc-maven/repository -pl framework-autoconfigure -am -Dtest=SecurityOverrideTest,QuerydslAutoConfigurationTest -Dsurefire.failIfNoSpecifiedTests=false test",
+    "classes": 2,
+    "passed": 6,
+    "failed": 0,
+    "skipped": 0,
+    "exitCode": 0,
+    "log": "2026-10-09-migration-maven.log"
+  },
+  "boundary": {
+    "expectedValidPassed": 1,
+    "expectedInvalidIncorrectlyPassed": 3,
+    "log": "2026-10-09-migration-boundaries.json"
+  },
+  "generatedTestSetup": {
+    "method": "Files.setPosixFilePermissions",
+    "fixture": "Empty credential-free standalone file, not the full generated application",
+    "posixView": false,
+    "result": "UnsupportedOperationException",
+    "fullGeneratedAppExecuted": false
+  },
+  "sourceHashes": [
+    {
+      "file": "scripts/check-ui-boundaries.mjs",
+      "sha256": "9b0f233046f9eca1ce7b3317fe8398fef1c4c64818c5a2758f4329fcd8dd9b2b"
+    },
+    {
+      "file": "frontend/packages/runtime/src/http.ts",
+      "sha256": "241d1fbd9663e56719d1344912841da6c939c7cdc0b457e59a3f1aef05b2b984"
+    },
+    {
+      "file": "frontend/packages/runtime/src/runtime.ts",
+      "sha256": "4fcba553199c8970564051ead4ab08310a79b4c105d4981174bd5fb1e15f42ba"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/ScSecurityAutoConfiguration.java",
+      "sha256": "6baab9103b5ee3b662951074572c74503bdc04ecba21a9e25ec8bd39e78d0284"
+    },
+    {
+      "file": "backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/browsererrors/BrowserErrorService.java",
+      "sha256": "7c2bc93c886105178dcd24a33e793429074c91f888390efa0f73bc8a949edc00"
+    },
+    {
+      "file": "templates/starter-v2/backend/src/test/java/__JAVA_PATH__/GeneratedAppIntegrationTest.java",
+      "sha256": "cefbcf72ca1fcb3cdefa036090d5a4916a9881cee3718197d9eb1ddcd10e6bec"
+    },
+    {
+      "file": "templates/starter-v2/backend/src/test/java/__JAVA_PATH__/GeneratedOperationsIntegrationTest.java",
+      "sha256": "4f5b2579d94576dad7046231b8b77d0f8ae7446463a5c6d978fb4285ba391de1"
+    }
+  ],
+  "limitations": [
+    "No real JSP/EJB legacy application provided",
+    "Target production DB not specified or exercised",
+    "Full generated consumer build and browser E2E not run in this review",
+    "Concurrent pre-existing workspace edits preserved"
+  ]
+}

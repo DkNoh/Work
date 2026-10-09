@@ -1,0 +1,1042 @@
+{
+  "stage": "011",
+  "passed": true,
+  "format": 1,
+  "frameworkVersion": "0.2.0",
+  "manifestSha256": "a5c2d1f9f93007686a250f833cc4379ae42c4423d075c01dea722bb8f2c610ab",
+  "frontend": [
+    {
+      "name": "@sc/ui",
+      "version": "0.2.0",
+      "file": "sc-ui-0.2.0.tgz",
+      "sha256": "1030949d95907cd999314e4c8b54151c80834ee42188d1e7f7e6819d9da6e5cf",
+      "buildStamp": {
+        "format": 1,
+        "name": "@sc/ui",
+        "version": "0.2.0",
+        "inputsDigest": "3d5a16ab75e1cb0392ec8068c9deddd15e8c08d612833d842167cb634cd3ba8d"
+      },
+      "currentSourceDigestCompared": false,
+      "files": [
+        {
+          "file": "THIRD_PARTY_NOTICES",
+          "bytes": 30837,
+          "sha256": "6faaf6e785526271cd9a353c66f73871572b99968a27950fcfca69767ccb0178"
+        },
+        {
+          "file": "UNLICENSED",
+          "bytes": 232,
+          "sha256": "c2b0837ba76c28ca224fba94bc04aea6a81a2742a37a8f702905ec456e9279ea"
+        },
+        {
+          "file": "dist/sc-ui.css",
+          "bytes": 33235,
+          "sha256": "5a8d746a1b4f7af37d210fadb1322f0acdc20a68cc405f922260d77be2f95776"
+        },
+        {
+          "file": "dist/chunks/_plugin-vue_export-helper-Pzq_nHDg.js",
+          "bytes": 980,
+          "sha256": "c4241d0cc3db1da6b462084c3fd30e4762334c9470361d58043b7077d2def68b"
+        },
+        {
+          "file": "dist/board.js",
+          "bytes": 17713,
+          "sha256": "c35069bd0e87f38b8b60103e9171061791a897ff676ad45787da393cb4ff0087"
+        },
+        {
+          "file": "dist/charts.js",
+          "bytes": 9280,
+          "sha256": "e08dd5f1fe3c8a89bd8be241a936638f9eba6ac9dce699bc98e4fc743c6d6c24"
+        },
+        {
+          "file": "dist/editor.js",
+          "bytes": 16879,
+          "sha256": "c78a95b29601ca4904c3b592d0524206ff1794027687f7945a6d542cadd1c78a"
+        },
+        {
+          "file": "dist/image.js",
+          "bytes": 18166,
+          "sha256": "3738fb70e450eafe1839d2904134fdc8b00af3b4f82ababb22c5ecebe38498db"
+        },
+        {
+          "file": "dist/index.js",
+          "bytes": 50729,
+          "sha256": "5399771402c97cbf4fd2a401d91ad67c4288213e8358c86529702d4a14ab2234"
+        },
+        {
+          "file": "dist/chunks/ScActionButton-DKPA-6Pm.js",
+          "bytes": 2709,
+          "sha256": "10a513ec1b9a241fb00582aa847c082af207137d6294a4864ae866b14534b526"
+        },
+        {
+          "file": "dist/table.js",
+          "bytes": 49028,
+          "sha256": "fffb168aa3d741c3b569bdcbffd69ba7137a7b72777774c263f1f841e63539e6"
+        },
+        {
+          "file": "dist/chunks/tokens-Gi1pjZK9.js",
+          "bytes": 1673,
+          "sha256": "ecc5f736d1b6718ab8b95ed4a72e71d856a4872f4ba270b56c5f7a8a12805d77"
+        },
+        {
+          "file": "dist/build-manifest.json",
+          "bytes": 146,
+          "sha256": "a538c47a8a7244fc0ac9f96ab39242022bd60e8a60379a82e2457eec30b1a77b"
+        },
+        {
+          "file": "dist/CONTRACTS.json",
+          "bytes": 57960,
+          "sha256": "0dc5aae1667d1e4adb0817eea6e8097c9bb71d775281aad8a910fa0c0744b825"
+        },
+        {
+          "file": "package.json",
+          "bytes": 2355,
+          "sha256": "e609dd2aab4aa01511dda99a76dd11013356963b5872c1cd8166d6bcc821a527"
+        },
+        {
+          "file": "README.md",
+          "bytes": 8391,
+          "sha256": "b7e44792260b3ce1e172d3cd4e2abb641fde1d724f8c76e575ef69e8f4e29e4f"
+        },
+        {
+          "file": "dist/tokens.scss",
+          "bytes": 2624,
+          "sha256": "b5a7d1459021321f394b5b58e4e5083a91b039b3c227ab6d511638fba14866eb"
+        },
+        {
+          "file": "dist/types/charts/chart-model.d.ts",
+          "bytes": 477,
+          "sha256": "27e8891c20d0b28cba29bd3ac1ba945a29e885234cfa1e81f21d591b680ff573"
+        },
+        {
+          "file": "dist/types/board/contracts.d.ts",
+          "bytes": 1278,
+          "sha256": "249786ae4feaad3fe5de87c2a6ee5a883dec8ea788a767bc0877a32ebab8f62e"
+        },
+        {
+          "file": "dist/types/charts/contracts.d.ts",
+          "bytes": 810,
+          "sha256": "a4eb73d049535e2f6b9f66d8117b71478194621818963d59a76b574b56f7ad17"
+        },
+        {
+          "file": "dist/types/contracts.d.ts",
+          "bytes": 3516,
+          "sha256": "5c46524e5c4b88f466fbbb9c28d334c76883c80adecfb86ec116e8ffc3cf731c"
+        },
+        {
+          "file": "dist/types/editor/contracts.d.ts",
+          "bytes": 1656,
+          "sha256": "7758bc0a15ed631f4ef184b54fb99bd5d6886560e2e95152e6308feea0ea2fc6"
+        },
+        {
+          "file": "dist/types/image/contracts.d.ts",
+          "bytes": 1243,
+          "sha256": "b774c54cfafae3a94a305d380cfd4ca9f98ba5e92d3307504a468a3316e75483"
+        },
+        {
+          "file": "dist/types/patterns/contracts.d.ts",
+          "bytes": 1552,
+          "sha256": "24c7cdc01d639c2ef1707a3e7720bf804a5d12e6f789e2c4fb326ced6aeddf29"
+        },
+        {
+          "file": "dist/types/table/contracts.d.ts",
+          "bytes": 4675,
+          "sha256": "92cfdd12a23ec56f2f3c99db10deac6d9faa23867fcd93e78b4dc2f7a7d7bf5f"
+        },
+        {
+          "file": "dist/types/image/coordinates.d.ts",
+          "bytes": 350,
+          "sha256": "e512ad9fbedcffcb6aa3f9a9f07384032f513f3f534c2f6924cdb90ed4327b5e"
+        },
+        {
+          "file": "dist/types/editor/document.d.ts",
+          "bytes": 698,
+          "sha256": "19421c03882179881fe276132feade5f8d08d9509cb9c8055df1275a5a5bb4a4"
+        },
+        {
+          "file": "dist/types/forms/form-contracts.d.ts",
+          "bytes": 2026,
+          "sha256": "7174a04a3a0cd148f5059ecf8f19e5b0c4337e3aaa664d549bb14b2c5baa1421"
+        },
+        {
+          "file": "dist/types/board/helpers.d.ts",
+          "bytes": 415,
+          "sha256": "ef6adc6da4e80ce9febec1dfe3b53d5712a6ff06e9c554624d3e17ecdc2ce824"
+        },
+        {
+          "file": "dist/types/board/index.d.ts",
+          "bytes": 219,
+          "sha256": "3141b9e21c1d56d476ddaf61152916c1b8c35b15d8c7834471433c7fc1774149"
+        },
+        {
+          "file": "dist/types/charts/index.d.ts",
+          "bytes": 177,
+          "sha256": "34b1870936bc885f483fb2475fd3fe2e9eaae18e37515a889f90aa93c5bed911"
+        },
+        {
+          "file": "dist/types/editor/index.d.ts",
+          "bytes": 352,
+          "sha256": "4af0e7ca801a3697039f5d8f9667509d2ee064750d9bcb66bc4ad644829d4a1a"
+        },
+        {
+          "file": "dist/types/forms/index.d.ts",
+          "bytes": 360,
+          "sha256": "cb690e9970949d7ca4a84cf9cf69eb385f4a8642211f56dd5fda414332a56e1e"
+        },
+        {
+          "file": "dist/types/image/index.d.ts",
+          "bytes": 284,
+          "sha256": "37bf1f68dab6d4da63e97ff989fbc414a26ccdf1a3da98e5fae54f694e488045"
+        },
+        {
+          "file": "dist/types/index.d.ts",
+          "bytes": 852,
+          "sha256": "2e3ddfb16628406a32b2d1ae850192959eae3b921d8e5c6866934cc3fcb25c94"
+        },
+        {
+          "file": "dist/types/inputs/index.d.ts",
+          "bytes": 432,
+          "sha256": "cbf40a5f3ee9a4a54f64c0493bf2f126fe40a9581645b6cf14deac17b65fc0a4"
+        },
+        {
+          "file": "dist/types/layout/index.d.ts",
+          "bytes": 184,
+          "sha256": "b9d34be4e9c11c867f941d3404ad7a6db40e87284736b94b9bedec0ba39fb121"
+        },
+        {
+          "file": "dist/types/patterns/index.d.ts",
+          "bytes": 512,
+          "sha256": "9a1eb788a111774283da68d4b3bab051b0d3edb53943031e465bcb723f5704e1"
+        },
+        {
+          "file": "dist/types/table/index.d.ts",
+          "bytes": 567,
+          "sha256": "48412c96e85b000ed04d3e9dde315c819febf75a838a8801312c60e36fbce93b"
+        },
+        {
+          "file": "dist/types/inputs/input-accessibility.d.ts",
+          "bytes": 477,
+          "sha256": "dce89ef7f015eb72e2451b761bbfdf48f3654e90454e5f1f91ff44e90f655b98"
+        },
+        {
+          "file": "dist/types/inputs/input-contracts.d.ts",
+          "bytes": 2785,
+          "sha256": "a61238bb84a9432d24c7d4eb882e135695221362daee74669f7579d1c06f0c96"
+        },
+        {
+          "file": "dist/types/table/labels.d.ts",
+          "bytes": 211,
+          "sha256": "d6d810a2b1b2f15d17d835e760ae5ef5ad6b158941e1ccdddd34a8fab33d0786"
+        },
+        {
+          "file": "dist/types/table/model.d.ts",
+          "bytes": 1760,
+          "sha256": "e45a949b9458fdc60d7e2174cc913a8f1aaa5a790190ae4e6f10dd43c99ad8f1"
+        },
+        {
+          "file": "dist/types/ScActionButton.vue.d.ts",
+          "bytes": 980,
+          "sha256": "55bf4e9cfcb73685dd93c2c58b7789ea317b6a1c53d990719dcb0f945f6d4547"
+        },
+        {
+          "file": "dist/types/layout/ScAppShell.vue.d.ts",
+          "bytes": 907,
+          "sha256": "9bb3fe4dda4b3d2101fc5d9653804ec8a5ad0578650805c8df906d670db0d905"
+        },
+        {
+          "file": "dist/types/board/ScBoardColumn.vue.d.ts",
+          "bytes": 796,
+          "sha256": "74a15700c6100327ec0c4316b6b5a2b67c25713f4e9a418fa5923ad8b0a28092"
+        },
+        {
+          "file": "dist/types/board/ScBoardItem.vue.d.ts",
+          "bytes": 1181,
+          "sha256": "8e2ff75385c31808e6277dce7bfb2efd298800363b5b64c78dc425d8e98ff6cf"
+        },
+        {
+          "file": "dist/types/charts/ScChart.vue.d.ts",
+          "bytes": 1213,
+          "sha256": "b3715514c359e5fb1c530b44f8bb12c8659148c4b450524c9a0aa23690b4a9ea"
+        },
+        {
+          "file": "dist/types/inputs/ScCheckbox.vue.d.ts",
+          "bytes": 1507,
+          "sha256": "4ba145b15d5b720533629399a674fd7d62f9116f1511d1d5463ebfc1f85556a3"
+        },
+        {
+          "file": "dist/types/forms/ScConfirmDialog.vue.d.ts",
+          "bytes": 1213,
+          "sha256": "0a3fc5c60a5ec216ab535abc9816b05e0c0cc376bf0ed226a81362ca8cf4c5ad"
+        },
+        {
+          "file": "dist/types/table/ScDataTable.vue.d.ts",
+          "bytes": 1530,
+          "sha256": "7a8ea4934b8faa4737f23fbe0ee48fdc43694c2568f1f5fb53cb097a57165eb9"
+        },
+        {
+          "file": "dist/types/patterns/ScEmptyState.vue.d.ts",
+          "bytes": 708,
+          "sha256": "4e57096d52dccb93bf4c7aaa295e4a571e2ad213f3e3945ba781f231c6ad5158"
+        },
+        {
+          "file": "dist/types/patterns/ScErrorPanel.vue.d.ts",
+          "bytes": 588,
+          "sha256": "bbd216fa1a6c96af41ba4278dcfec125b10669c89fc524806084e48e94eb6fa2"
+        },
+        {
+          "file": "dist/types/forms/ScFormActions.vue.d.ts",
+          "bytes": 917,
+          "sha256": "8354d142b62aacc5a6f30ab0e441cdf71f09a27ec5c0cc81ffad33cb57cc5e5a"
+        },
+        {
+          "file": "dist/types/image/ScImageAnnotator.vue.d.ts",
+          "bytes": 1019,
+          "sha256": "60b4007a3f4ab8299ea0b35d958cd546e81c169c60125a6af3616f55519ec353"
+        },
+        {
+          "file": "dist/types/patterns/ScListDetailLayout.vue.d.ts",
+          "bytes": 872,
+          "sha256": "501509f290d7dd258214093c74b5198a41bf014f8cdfdc6b4d413a3021fbe8e7"
+        },
+        {
+          "file": "dist/types/patterns/ScLoadingState.vue.d.ts",
+          "bytes": 483,
+          "sha256": "991b286236d65d2d33ed5f733429e9a12080dc53b8d803f28834ef58492311b1"
+        },
+        {
+          "file": "dist/types/patterns/ScPageHeader.vue.d.ts",
+          "bytes": 711,
+          "sha256": "b9934d59643cf0002dbe92c969c8bbbdfad84344c963deac34b87c143d227fd9"
+        },
+        {
+          "file": "dist/types/editor/ScRichTextEditor.vue.d.ts",
+          "bytes": 1450,
+          "sha256": "80db9e534d342712dce16cd7c88752c447ce628f515d3a6cb7069166f814ed8d"
+        },
+        {
+          "file": "dist/types/patterns/ScSearchPanel.vue.d.ts",
+          "bytes": 950,
+          "sha256": "37be800983f58b0998e710df0887a11ae880a814fe7174ce66765f08bb43bccc"
+        },
+        {
+          "file": "dist/types/patterns/ScSectionCard.vue.d.ts",
+          "bytes": 698,
+          "sha256": "4303d1c92e68622f8d3602cec73ebc60a55f2cdb6c4b6edfb1dd6ecf119dc642"
+        },
+        {
+          "file": "dist/types/inputs/ScSelect.vue.d.ts",
+          "bytes": 1510,
+          "sha256": "777dc9e205e0b520458ec4e32da0a1d76c5326431fbe444ef30b65ec5eb94a10"
+        },
+        {
+          "file": "dist/types/layout/ScShellNavigation.vue.d.ts",
+          "bytes": 664,
+          "sha256": "c80da7edfbeb552ed4c294e41045b417d73258e4c588c8204f8fdc1102775671"
+        },
+        {
+          "file": "dist/types/board/ScSortableBoard.vue.d.ts",
+          "bytes": 1122,
+          "sha256": "37790729075f4c0179ea3ec04cd77b5d3a0fa6d5d0f07ddd1da6c5a2536a76f8"
+        },
+        {
+          "file": "dist/types/inputs/ScTextArea.vue.d.ts",
+          "bytes": 1546,
+          "sha256": "9e302dfdd5a0ea4547335d944ddddbaf343eeef73e68c90f116d2cb518a1dc84"
+        },
+        {
+          "file": "dist/types/ScTextField.vue.d.ts",
+          "bytes": 1793,
+          "sha256": "2e85668c908af85ba4c862df8feddad1b377576667a02535434a6bcaf9cb8e9d"
+        },
+        {
+          "file": "dist/types/table/ScVirtualList.vue.d.ts",
+          "bytes": 1057,
+          "sha256": "c1247803e92eb9ef14d00b1c62d1e12332bd4b516028361b55ce5f0703a1b8c5"
+        },
+        {
+          "file": "dist/types/table/ScVirtualTable.vue.d.ts",
+          "bytes": 1573,
+          "sha256": "322a9d7508691da21df3d1c1efe7eca968e28b7e5bcdf20b10883e254b2df68f"
+        },
+        {
+          "file": "dist/types/styles.d.ts",
+          "bytes": 58,
+          "sha256": "c151e19200e7f22b343bb55fabbd204a0e8d2fe4b73411878fdbbdc22f5e80e7"
+        },
+        {
+          "file": "dist/types/theme.d.ts",
+          "bytes": 4627,
+          "sha256": "f669056a124f5a9c98dce597fef445c58d00962963744c127e129497f6d11654"
+        },
+        {
+          "file": "dist/types/tokens.d.ts",
+          "bytes": 2894,
+          "sha256": "1855f00add4937f263a3c4ea287e85d282de9eed32b7f769726e2833af6dd498"
+        },
+        {
+          "file": "dist/types/layout/types.d.ts",
+          "bytes": 933,
+          "sha256": "a456e5bbccc50ef12f8d567e1de897f922799ae0ea93bcc2e204a0a1d501e9e8"
+        },
+        {
+          "file": "dist/types/table/useVirtualRows.d.ts",
+          "bytes": 1488,
+          "sha256": "f49a4bc027499dd8428396061b511c69a127a8c081dfa3a52119fdb867f35ca7"
+        }
+      ],
+      "exports": [
+        {
+          "key": ".",
+          "targets": [
+            "./dist/types/index.d.ts",
+            "./dist/index.js",
+            "./dist/index.js"
+          ]
+        },
+        {
+          "key": "./styles",
+          "targets": [
+            "./dist/types/styles.d.ts",
+            "./dist/sc-ui.css"
+          ]
+        },
+        {
+          "key": "./tokens",
+          "targets": [
+            "./dist/tokens.scss",
+            "./dist/tokens.scss"
+          ]
+        },
+        {
+          "key": "./table",
+          "targets": [
+            "./dist/types/table/index.d.ts",
+            "./dist/table.js",
+            "./dist/table.js"
+          ]
+        },
+        {
+          "key": "./charts",
+          "targets": [
+            "./dist/types/charts/index.d.ts",
+            "./dist/charts.js",
+            "./dist/charts.js"
+          ]
+        },
+        {
+          "key": "./editor",
+          "targets": [
+            "./dist/types/editor/index.d.ts",
+            "./dist/editor.js",
+            "./dist/editor.js"
+          ]
+        },
+        {
+          "key": "./board",
+          "targets": [
+            "./dist/types/board/index.d.ts",
+            "./dist/board.js",
+            "./dist/board.js"
+          ]
+        },
+        {
+          "key": "./image",
+          "targets": [
+            "./dist/types/image/index.d.ts",
+            "./dist/image.js",
+            "./dist/image.js"
+          ]
+        }
+      ],
+      "modules": 9,
+      "declarations": 56,
+      "moduleReferences": 152,
+      "vendors": [
+        {
+          "name": "@dnd-kit/dom",
+          "version": "0.5.0",
+          "license": "MIT",
+          "metadataPath": "node_modules/@dnd-kit/dom/package.json",
+          "licenseFiles": [
+            "LICENSE"
+          ]
+        },
+        {
+          "name": "@dnd-kit/vue",
+          "version": "0.5.0",
+          "license": "MIT",
+          "metadataPath": "node_modules/@dnd-kit/vue/package.json",
+          "licenseFiles": [
+            "LICENSE"
+          ]
+        },
+        {
+          "name": "@floating-ui/dom",
+          "version": "1.7.6",
+          "license": "MIT",
+          "metadataPath": "frontend/packages/ui/node_modules/@floating-ui/dom/package.json",
+          "licenseFiles": [
+            "LICENSE"
+          ]
+        },
+        {
+          "name": "@tanstack/table-core",
+          "version": "9.2.6",
+          "license": "MIT",
+          "metadataPath": "node_modules/@tanstack/table-core/package.json",
+          "licenseFiles": [
+            "LICENSE"
+          ]
+        },
+        {
+          "name": "@tanstack/virtual-core",
+          "version": "3.17.11",
+          "license": "MIT",
+          "metadataPath": "node_modules/@tanstack/virtual-core/package.json",
+          "licenseFiles": [
+            "LICENSE"
+          ]
+        },
+        {
+          "name": "@tanstack/vue-table",
+          "version": "9.2.6",
+          "license": "MIT",
+          "metadataPath": "node_modules/@tanstack/vue-table/package.json",
+          "licenseFiles": [
+            "LICENSE"
+          ]
+        },
+        {
+          "name": "@tanstack/vue-virtual",
+          "version": "3.13.39",
+          "license": "MIT",
+          "metadataPath": "node_modules/@tanstack/vue-virtual/package.json",
+          "licenseFiles": [
+            "LICENSE"
+          ]
+        },
+        {
+          "name": "@tiptap/core",
+          "version": "3.31.4",
+          "license": "MIT",
+          "metadataPath": "node_modules/@tiptap/core/package.json",
+          "licenseFiles": [
+            "LICENSE.md"
+          ]
+        },
+        {
+          "name": "@tiptap/pm",
+          "version": "3.31.4",
+          "license": "MIT",
+          "metadataPath": "node_modules/@tiptap/pm/package.json",
+          "licenseFiles": [
+            "LICENSE"
+          ]
+        },
+        {
+          "name": "@tiptap/starter-kit",
+          "version": "3.31.4",
+          "license": "MIT",
+          "metadataPath": "node_modules/@tiptap/starter-kit/package.json",
+          "licenseFiles": [
+            "LICENSE.md"
+          ]
+        },
+        {
+          "name": "@tiptap/vue-3",
+          "version": "3.31.4",
+          "license": "MIT",
+          "metadataPath": "node_modules/@tiptap/vue-3/package.json",
+          "licenseFiles": [
+            "LICENSE.md"
+          ]
+        },
+        {
+          "name": "echarts",
+          "version": "6.1.0",
+          "license": "Apache-2.0",
+          "metadataPath": "node_modules/echarts/package.json",
+          "licenseFiles": [
+            "LICENSE",
+            "NOTICE"
+          ]
+        },
+        {
+          "name": "konva",
+          "version": "10.7.1",
+          "license": "MIT",
+          "metadataPath": "node_modules/konva/package.json",
+          "licenseFiles": [
+            "LICENSE"
+          ]
+        },
+        {
+          "name": "vue-echarts",
+          "version": "8.3.1",
+          "license": "MIT",
+          "metadataPath": "node_modules/vue-echarts/package.json",
+          "licenseFiles": [
+            "LICENSE"
+          ]
+        },
+        {
+          "name": "vue-konva",
+          "version": "4.0.1",
+          "license": "MIT",
+          "metadataPath": "node_modules/vue-konva/package.json",
+          "licenseFiles": [
+            "LICENSE"
+          ]
+        },
+        {
+          "name": "vue",
+          "version": "3.5.43",
+          "license": "MIT",
+          "metadataPath": "node_modules/vue/package.json",
+          "licenseFiles": [
+            "LICENSE"
+          ]
+        },
+        {
+          "name": "vuetify",
+          "version": "4.2.4",
+          "license": "MIT",
+          "metadataPath": "node_modules/vuetify/package.json",
+          "licenseFiles": [
+            "LICENSE.md"
+          ]
+        }
+      ],
+      "license": "UNLICENSED",
+      "private": true,
+      "sourceMaps": 0,
+      "referenceBusinessFiles": 0
+    },
+    {
+      "name": "@sc/runtime",
+      "version": "0.2.0",
+      "file": "sc-runtime-0.2.0.tgz",
+      "sha256": "af01322c9093fb877fc44cdcdb0fcddd1255f861b711d0d08a2bf6116ecca284",
+      "buildStamp": {
+        "format": 1,
+        "name": "@sc/runtime",
+        "version": "0.2.0",
+        "inputsDigest": "8a17582a83f6b5622d30203d8b15a42aedde73d9ddfe5527ceb820395440b18d"
+      },
+      "currentSourceDigestCompared": false,
+      "files": [
+        {
+          "file": "THIRD_PARTY_NOTICES",
+          "bytes": 6071,
+          "sha256": "85a16f601e9ab40a0e5d92d09bf894684e82ff8c6da07a8c176f2eec2b630433"
+        },
+        {
+          "file": "UNLICENSED",
+          "bytes": 232,
+          "sha256": "c2b0837ba76c28ca224fba94bc04aea6a81a2742a37a8f702905ec456e9279ea"
+        },
+        {
+          "file": "dist/index.js",
+          "bytes": 8996,
+          "sha256": "c483be81d023d6d4a597f5d078f0bdf709f9ac478fe7b748aaa5f22b72fab1bb"
+        },
+        {
+          "file": "dist/build-manifest.json",
+          "bytes": 151,
+          "sha256": "864e1757a91f81784ae775aec838d03499a2d4cc94f85900ae7b8b49b3de8715"
+        },
+        {
+          "file": "package.json",
+          "bytes": 811,
+          "sha256": "4ff0f2d659e1f5120510c3a4382e888346e7cfd496c7d48b23220e9b64ba0ce4"
+        },
+        {
+          "file": "README.md",
+          "bytes": 3727,
+          "sha256": "23a917f983d8b491de6e658a22e0f63a1a4e47b162467ad2304efa300e078bbc"
+        },
+        {
+          "file": "dist/types/generated/api.d.ts",
+          "bytes": 12902,
+          "sha256": "2989e59d05eb3b92d5c5d25f5bba727e254f894e6c57d36bd7ae8df4de2c43a4"
+        },
+        {
+          "file": "dist/types/http.d.ts",
+          "bytes": 995,
+          "sha256": "03076a0de3863d19b1a50c0abf4a0e7394c42adacae017d410e0469a1dadd9ae"
+        },
+        {
+          "file": "dist/types/index.d.ts",
+          "bytes": 440,
+          "sha256": "634832d9430e007d7405eb6ba0bb1e1d97fab125a06e8e48e5211c621aa809d2"
+        },
+        {
+          "file": "dist/types/runtime.d.ts",
+          "bytes": 2226,
+          "sha256": "f58cdcae94fb45dee7a9a266ae13cd2de914e2d1494e5dab0c42f7e86c1c6c32"
+        }
+      ],
+      "exports": [
+        {
+          "key": ".",
+          "targets": [
+            "./dist/types/index.d.ts",
+            "./dist/index.js",
+            "./dist/index.js"
+          ]
+        }
+      ],
+      "modules": 1,
+      "declarations": 4,
+      "moduleReferences": 14,
+      "vendors": [
+        {
+          "name": "axios",
+          "version": "1.20.0",
+          "license": "MIT",
+          "metadataPath": "node_modules/axios/package.json",
+          "licenseFiles": [
+            "LICENSE"
+          ]
+        },
+        {
+          "name": "vue",
+          "version": "3.5.43",
+          "license": "MIT",
+          "metadataPath": "node_modules/vue/package.json",
+          "licenseFiles": [
+            "LICENSE"
+          ]
+        },
+        {
+          "name": "vue-router",
+          "version": "5.3.1",
+          "license": "MIT",
+          "metadataPath": "node_modules/vue-router/package.json",
+          "licenseFiles": [
+            "LICENSE"
+          ]
+        },
+        {
+          "name": "pinia",
+          "version": "4.0.3",
+          "license": "MIT",
+          "metadataPath": "node_modules/pinia/package.json",
+          "licenseFiles": [
+            "LICENSE"
+          ]
+        },
+        {
+          "name": "@tanstack/vue-query",
+          "version": "5.104.1",
+          "license": "MIT",
+          "metadataPath": "node_modules/@tanstack/vue-query/package.json",
+          "licenseFiles": [
+            "LICENSE"
+          ]
+        }
+      ],
+      "license": "UNLICENSED",
+      "private": true,
+      "sourceMaps": 0,
+      "referenceBusinessFiles": 0
+    },
+    {
+      "name": "@sc/date",
+      "version": "0.2.0",
+      "file": "sc-date-0.2.0.tgz",
+      "sha256": "b29132ae9621e3f820f1e5d9dbac0df7e0dcbbb3ffa090ba7fc4d63e26598f03",
+      "buildStamp": {
+        "format": 1,
+        "name": "@sc/date",
+        "version": "0.2.0",
+        "inputsDigest": "62f4ff9ae769a85d2363b3b933dc0611a2eb5cee75c9b2ddc41fd08c83d5b5bc"
+      },
+      "currentSourceDigestCompared": false,
+      "files": [
+        {
+          "file": "THIRD_PARTY_NOTICES",
+          "bytes": 1475,
+          "sha256": "54a8b2df01f15b85f104f7b5ad7731ee069efc0ad551ba1df69bf6eed47e9fe5"
+        },
+        {
+          "file": "UNLICENSED",
+          "bytes": 232,
+          "sha256": "c2b0837ba76c28ca224fba94bc04aea6a81a2742a37a8f702905ec456e9279ea"
+        },
+        {
+          "file": "dist/index.js",
+          "bytes": 5162,
+          "sha256": "5afc9a8a7cc9209019239644e6f10985cc77991d065926f0decae06078857457"
+        },
+        {
+          "file": "dist/build-manifest.json",
+          "bytes": 148,
+          "sha256": "fc4e6f6f83aa2eae323ed317658ce04c553d2031d755c93ba07fc46ed4a1c56f"
+        },
+        {
+          "file": "package.json",
+          "bytes": 666,
+          "sha256": "0d105b06db969a7b48ffa1f78502f95403b40c7eae083324e48440782ccf3e3d"
+        },
+        {
+          "file": "README.md",
+          "bytes": 2511,
+          "sha256": "b865368d74172e85a78bd8ca96cf8087b44c91cd0502907419dcd7c317ac4b3a"
+        },
+        {
+          "file": "dist/types/index.d.ts",
+          "bytes": 1137,
+          "sha256": "9347aaf8df09c25b9e6ac35ba6fb5e77801f88f7d75d4ab450c6dd60cd56e21b"
+        }
+      ],
+      "exports": [
+        {
+          "key": ".",
+          "targets": [
+            "./dist/types/index.d.ts",
+            "./dist/index.js",
+            "./dist/index.js"
+          ]
+        }
+      ],
+      "modules": 1,
+      "declarations": 1,
+      "moduleReferences": 7,
+      "vendors": [
+        {
+          "name": "dayjs",
+          "version": "1.11.23",
+          "license": "MIT",
+          "metadataPath": "node_modules/dayjs/package.json",
+          "licenseFiles": [
+            "LICENSE"
+          ]
+        }
+      ],
+      "license": "UNLICENSED",
+      "private": true,
+      "sourceMaps": 0,
+      "referenceBusinessFiles": 0
+    },
+    {
+      "name": "@sc/excel",
+      "version": "0.2.0",
+      "file": "sc-excel-0.2.0.tgz",
+      "sha256": "64161c0ca820bc9f32ab68f80bf6b9d2c1c7e3b3dc5c5dba817005f53c022220",
+      "buildStamp": {
+        "format": 1,
+        "name": "@sc/excel",
+        "version": "0.2.0",
+        "inputsDigest": "0fdcaadb6ff8f3b330b6bd768efb99f4442cf87aa2432be669051eb6ba863126"
+      },
+      "currentSourceDigestCompared": false,
+      "files": [
+        {
+          "file": "THIRD_PARTY_NOTICES",
+          "bytes": 1488,
+          "sha256": "03849f3a0ff897944161971049fa6e731f0e07c0473cfb2e42e8c72132a62fb1"
+        },
+        {
+          "file": "UNLICENSED",
+          "bytes": 232,
+          "sha256": "c2b0837ba76c28ca224fba94bc04aea6a81a2742a37a8f702905ec456e9279ea"
+        },
+        {
+          "file": "dist/index.js",
+          "bytes": 5770,
+          "sha256": "35b4d8e89a0439a02ce33734b8794e1e53bdb0a7afe1ae69a6b02a618d3f8acc"
+        },
+        {
+          "file": "dist/build-manifest.json",
+          "bytes": 149,
+          "sha256": "77640ff4860b1a42b5349f798e66eb03c1f4ce04f1c03c66c71354f85d5af719"
+        },
+        {
+          "file": "package.json",
+          "bytes": 674,
+          "sha256": "df4c58602a89397c3f21146c4d829da2bd71e24b2d4be8e468dbe22ce598a28e"
+        },
+        {
+          "file": "README.md",
+          "bytes": 3455,
+          "sha256": "a766b34204e07d20387a93a76c9eefe006b51bad286b8b99d4aaf6b83aff6718"
+        },
+        {
+          "file": "dist/types/index.d.ts",
+          "bytes": 1673,
+          "sha256": "6bd8b3b08277fecc3a6114109fc8750b9c5e67723b2c7945933ea747283ef876"
+        }
+      ],
+      "exports": [
+        {
+          "key": ".",
+          "targets": [
+            "./dist/types/index.d.ts",
+            "./dist/index.js",
+            "./dist/index.js"
+          ]
+        }
+      ],
+      "modules": 1,
+      "declarations": 1,
+      "moduleReferences": 1,
+      "vendors": [
+        {
+          "name": "exceljs",
+          "version": "4.4.0",
+          "license": "MIT",
+          "metadataPath": "node_modules/exceljs/package.json",
+          "licenseFiles": [
+            "LICENSE"
+          ]
+        }
+      ],
+      "license": "UNLICENSED",
+      "private": true,
+      "sourceMaps": 0,
+      "referenceBusinessFiles": 0
+    },
+    {
+      "name": "@sc/i18n",
+      "version": "0.2.0",
+      "file": "sc-i18n-0.2.0.tgz",
+      "sha256": "fa151d125c239ad0fc5deab95da21fe1780c3418a182ded983a0d4593a218d76",
+      "buildStamp": {
+        "format": 1,
+        "name": "@sc/i18n",
+        "version": "0.2.0",
+        "inputsDigest": "a1c89c2cfaf9ce9e518541fe0470f24a94f51431cb2b37856f25ef4421d26d9b"
+      },
+      "currentSourceDigestCompared": false,
+      "files": [
+        {
+          "file": "THIRD_PARTY_NOTICES",
+          "bytes": 3778,
+          "sha256": "65f00e8c0b696be239d7f8306d67a8155d88463665aa123b0dabd12a0a43aecb"
+        },
+        {
+          "file": "UNLICENSED",
+          "bytes": 232,
+          "sha256": "c2b0837ba76c28ca224fba94bc04aea6a81a2742a37a8f702905ec456e9279ea"
+        },
+        {
+          "file": "dist/index.js",
+          "bytes": 3304,
+          "sha256": "28b1f6652adf9543b8c19ddd31a0036c3f29555acc66d40f894830260a3448f6"
+        },
+        {
+          "file": "dist/build-manifest.json",
+          "bytes": 148,
+          "sha256": "e68b9a27fafa0f81bbefee94932277ff0fcbfa1db85f01f432ddfa65475b1adf"
+        },
+        {
+          "file": "package.json",
+          "bytes": 767,
+          "sha256": "0120ccffdc9daeb1faf5f76b13303ebdd96be26b9578571936239aa162f8c928"
+        },
+        {
+          "file": "README.md",
+          "bytes": 2842,
+          "sha256": "0d68c21a24bb1e8dc10389778e61f096d4715505a8760512a7c609b1ff5031c7"
+        },
+        {
+          "file": "dist/types/index.d.ts",
+          "bytes": 724,
+          "sha256": "cfd601a094c82edb5d68b6a6a71e6f508c159fead31c6b3e70b8df2ed2c2a02c"
+        },
+        {
+          "file": "dist/types/messages.d.ts",
+          "bytes": 2969,
+          "sha256": "74283f465c8aff80b4450cf40b8c6a9d83ac3d15e4fd58af7c357fa38e367b19"
+        }
+      ],
+      "exports": [
+        {
+          "key": ".",
+          "targets": [
+            "./dist/types/index.d.ts",
+            "./dist/index.js",
+            "./dist/index.js"
+          ]
+        }
+      ],
+      "modules": 1,
+      "declarations": 2,
+      "moduleReferences": 3,
+      "vendors": [
+        {
+          "name": "@intlify/devtools-types",
+          "version": "11.1.12",
+          "license": "MIT",
+          "metadataPath": "node_modules/@intlify/devtools-types/package.json",
+          "licenseFiles": [
+            "LICENSE"
+          ]
+        },
+        {
+          "name": "vue-i18n",
+          "version": "11.1.12",
+          "license": "MIT",
+          "metadataPath": "frontend/packages/i18n/node_modules/vue-i18n/package.json",
+          "licenseFiles": [
+            "LICENSE"
+          ]
+        },
+        {
+          "name": "vue",
+          "version": "3.5.43",
+          "license": "MIT",
+          "metadataPath": "node_modules/vue/package.json",
+          "licenseFiles": [
+            "LICENSE"
+          ]
+        }
+      ],
+      "license": "UNLICENSED",
+      "private": true,
+      "sourceMaps": 0,
+      "referenceBusinessFiles": 0
+    }
+  ],
+  "backend": [
+    {
+      "file": "maven/dev/scframework/sc-framework-parent/0.2.0-SNAPSHOT/sc-framework-parent-0.2.0-SNAPSHOT.pom",
+      "bytes": 4379,
+      "sha256": "d020a8ab2e88fbaa7b98ae8abeed95721bc14696d1348b2f83640b412b7b3bbe"
+    },
+    {
+      "file": "maven/dev/scframework/framework-core/0.2.0-SNAPSHOT/framework-core-0.2.0-SNAPSHOT.pom",
+      "bytes": 652,
+      "sha256": "5b9f50bf88718b32432e2d5a1e6361adaa085307c38d820005c2f7bd842bca15"
+    },
+    {
+      "file": "maven/dev/scframework/framework-core/0.2.0-SNAPSHOT/framework-core-0.2.0-SNAPSHOT.jar",
+      "bytes": 9849,
+      "sha256": "6dcf8618cfa1f88868f026ea6dbed57ddc5688dfe94c9f1377aba1b0047cb569"
+    },
+    {
+      "file": "maven/dev/scframework/framework-autoconfigure/0.2.0-SNAPSHOT/framework-autoconfigure-0.2.0-SNAPSHOT.pom",
+      "bytes": 2340,
+      "sha256": "278d22724f1d282717bae323eb83593caa7381e16cce5f4a8050f49b18d3ae4b"
+    },
+    {
+      "file": "maven/dev/scframework/framework-autoconfigure/0.2.0-SNAPSHOT/framework-autoconfigure-0.2.0-SNAPSHOT.jar",
+      "bytes": 50794,
+      "sha256": "eef41931221c03043a6659435552f476d75e42ecef88df5a8f1c6e3f67b16959"
+    },
+    {
+      "file": "maven/dev/scframework/framework-spring-boot-starter/0.2.0-SNAPSHOT/framework-spring-boot-starter-0.2.0-SNAPSHOT.pom",
+      "bytes": 1619,
+      "sha256": "668a4fdd820547694e2c805c7c546864b5b5986077ed263c1ac72dac03faf58e"
+    },
+    {
+      "file": "maven/dev/scframework/framework-spring-boot-starter/0.2.0-SNAPSHOT/framework-spring-boot-starter-0.2.0-SNAPSHOT.jar",
+      "bytes": 1830,
+      "sha256": "bed1e67b2f96c6c24459d983e0efd6254dca910f23c9ad1e675daf18202864b3"
+    }
+  ],
+  "packageCodeExecuted": false,
+  "consumerOrSsrVerified": false,
+  "temporaryDirectoryRemoved": true
+}

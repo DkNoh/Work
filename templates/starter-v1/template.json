@@ -1,0 +1,374 @@
+{
+  "format": 1,
+  "templateVersion": 1,
+  "compatibleFrameworkVersions": ["0.1.0", "0.2.0"],
+  "sourcePolicy": "explicit reviewed own neutral Starter sources only; no Reference, original, runtime, DB, secret or existing lock",
+  "files": [
+    {
+      "source": ".editorconfig",
+      "target": ".editorconfig",
+      "mode": 420,
+      "sha256": "2f61518b157620eace4e4a5857d04599239d10cf8762b06c3dafe4077403dbc0"
+    },
+    {
+      "source": ".gitignore",
+      "target": ".gitignore",
+      "mode": 420,
+      "sha256": "4ec270338a8bf69ea41e3fd5b341189632970894371a15727222df4197c581bc"
+    },
+    {
+      "source": ".prettierignore",
+      "target": ".prettierignore",
+      "mode": 420,
+      "sha256": "004abe7c935bfdfa41c333dc7add3ec226b471060eb11774aeb279d9b2ec6b89"
+    },
+    {
+      "source": ".prettierrc.json",
+      "target": ".prettierrc.json",
+      "mode": 420,
+      "sha256": "0aa6335bbba781ac7a4d9baeed1c21c4c4749b56a0365fd287ddbfd26d30059a"
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "AGENTS.md",
+      "mode": 420,
+      "sha256": "0783bc7e4c0df93dc94f045984d68a446ce07fae24eb83510d8f0385aa09e33b"
+    },
+    {
+      "source": "README.md",
+      "target": "README.md",
+      "mode": 420,
+      "sha256": "75f97e6bf609bfb7ab2701a8f6d78ac998ab5203a21f42d111dbe78f1cf5b863"
+    },
+    {
+      "source": "backend/.mvn/sc-vendor-settings.xml",
+      "target": "backend/.mvn/sc-vendor-settings.xml",
+      "mode": 420,
+      "sha256": "bdd3e757aafbbcba2de758c4d1b4a19f98cb33866d211e422c0c8dcfa32ab014"
+    },
+    {
+      "source": "backend/.mvn/wrapper/maven-wrapper.properties",
+      "target": "backend/.mvn/wrapper/maven-wrapper.properties",
+      "mode": 420,
+      "sha256": "488e1b3f2e641779d4636abf9390845f901e64607261bc3c0b0bfe4fe96e6706"
+    },
+    {
+      "source": "backend/mvnw",
+      "target": "backend/mvnw",
+      "mode": 493,
+      "sha256": "cf99fc1783d4f3b2963ce9324f4cf358992109bb93aba0281cecec851961ae5e"
+    },
+    {
+      "source": "backend/mvnw.cmd",
+      "target": "backend/mvnw.cmd",
+      "mode": 420,
+      "sha256": "b46871d3ef86d838e41a3c9f61dc544f956804396a0a1f8a9cf428de02a933d4"
+    },
+    {
+      "source": "backend/pom.xml",
+      "target": "backend/pom.xml",
+      "mode": 420,
+      "sha256": "b943d24e50685ad42d0be1c5f60636341d34d675927f4c879eeeb86bd2b7b138"
+    },
+    {
+      "source": "backend/src/main/java/__JAVA_PATH__/AppAuthentication.java",
+      "target": "backend/src/main/java/__JAVA_PATH__/AppAuthentication.java",
+      "mode": 420,
+      "sha256": "6ce3cfdbad2a3b84d1980ea50a676323c458f2efe85dd637687fac2c23ab03a3"
+    },
+    {
+      "source": "backend/src/main/java/__JAVA_PATH__/GeneratedApplication.java",
+      "target": "backend/src/main/java/__JAVA_PATH__/GeneratedApplication.java",
+      "mode": 420,
+      "sha256": "49a52df714ed1dc3b1bc42b20f11ce26e3ab996028d291040bed82cf3c59a05a"
+    },
+    {
+      "source": "backend/src/main/java/__JAVA_PATH__/SpaRoutes.java",
+      "target": "backend/src/main/java/__JAVA_PATH__/SpaRoutes.java",
+      "mode": 420,
+      "sha256": "3508ee308efd7cd9d24096eca2a114f63204d7a4a7aad66a6c15a43242852489"
+    },
+    {
+      "source": "backend/src/main/java/__JAVA_PATH__/integration/SampleClient.java",
+      "target": "backend/src/main/java/__JAVA_PATH__/integration/SampleClient.java",
+      "mode": 420,
+      "sha256": "919b0497b2314fc29103a27571a8a0104894e4b863d7d22da3204b83b3aed769"
+    },
+    {
+      "source": "backend/src/main/java/__JAVA_PATH__/integration/SampleController.java",
+      "target": "backend/src/main/java/__JAVA_PATH__/integration/SampleController.java",
+      "mode": 420,
+      "sha256": "a63fe38d07efe3313ded8393ecc78edd3fb6cad6661130bb36ed7512804d0f8f"
+    },
+    {
+      "source": "backend/src/main/java/__JAVA_PATH__/notes/NoteController.java",
+      "target": "backend/src/main/java/__JAVA_PATH__/notes/NoteController.java",
+      "mode": 420,
+      "sha256": "4b897276b5423faafd79616a7613761db1f5f98a97196522b662f85f51f191f2"
+    },
+    {
+      "source": "backend/src/main/java/__JAVA_PATH__/notes/NoteDtos.java",
+      "target": "backend/src/main/java/__JAVA_PATH__/notes/NoteDtos.java",
+      "mode": 420,
+      "sha256": "55dba5b43e64a538f2e23a449ce8f1c7f30c385f9baa6d5232ae8e2729a9777a"
+    },
+    {
+      "source": "backend/src/main/java/__JAVA_PATH__/notes/NoteEntity.java",
+      "target": "backend/src/main/java/__JAVA_PATH__/notes/NoteEntity.java",
+      "mode": 420,
+      "sha256": "4258a630708e50ee686d7be86df0496280b3864bf6865b0fcea794e04edee314"
+    },
+    {
+      "source": "backend/src/main/java/__JAVA_PATH__/notes/NoteReadMapper.java",
+      "target": "backend/src/main/java/__JAVA_PATH__/notes/NoteReadMapper.java",
+      "mode": 420,
+      "sha256": "81a6981d18f46773d5e7696ebf2836ee3ec604e40e37c613591dde4fa1482e7e"
+    },
+    {
+      "source": "backend/src/main/java/__JAVA_PATH__/notes/NoteRepository.java",
+      "target": "backend/src/main/java/__JAVA_PATH__/notes/NoteRepository.java",
+      "mode": 420,
+      "sha256": "b575905f94ace6cd2d754bb263607953fcebc2d9c5a26811a413cc3bb74685c4"
+    },
+    {
+      "source": "backend/src/main/java/__JAVA_PATH__/notes/NoteService.java",
+      "target": "backend/src/main/java/__JAVA_PATH__/notes/NoteService.java",
+      "mode": 420,
+      "sha256": "c26f67fdb08505372bb547175af0cc86d5d3a7fc87d13ec57c87f335102309af"
+    },
+    {
+      "source": "backend/src/main/java/__JAVA_PATH__/notes/NoteSqlMapper.java",
+      "target": "backend/src/main/java/__JAVA_PATH__/notes/NoteSqlMapper.java",
+      "mode": 420,
+      "sha256": "2785e48cee38e2b5ab0620ebe2f37370d81e1ec496daf463a580dc8f82650cd7"
+    },
+    {
+      "source": "backend/src/main/java/__JAVA_PATH__/storage/StorageDemoController.java",
+      "target": "backend/src/main/java/__JAVA_PATH__/storage/StorageDemoController.java",
+      "mode": 420,
+      "sha256": "4067aa35e30a43b4dd74190b0082d1c32d071f16c17c18ec7c0dd88df56b0a7a"
+    },
+    {
+      "source": "backend/src/main/resources/application-audit.yml",
+      "target": "backend/src/main/resources/application-audit.yml",
+      "mode": 420,
+      "sha256": "2e5d65f3a1eb1e994c3428fb3ecc631eb5db714ba938154a36e170e28d34456a"
+    },
+    {
+      "source": "backend/src/main/resources/application-dev.yml",
+      "target": "backend/src/main/resources/application-dev.yml",
+      "mode": 420,
+      "sha256": "f8f8e5b7bbe5b966cb42a671376a0bd262dbaa5063dec0029562fb793c15125a"
+    },
+    {
+      "source": "backend/src/main/resources/application-file-storage.yml",
+      "target": "backend/src/main/resources/application-file-storage.yml",
+      "mode": 420,
+      "sha256": "6abab874368dfea6b5c79327fd151be84d3ab703fa7a252829c1dc664de55399"
+    },
+    {
+      "source": "backend/src/main/resources/application.yml",
+      "target": "backend/src/main/resources/application.yml",
+      "mode": 420,
+      "sha256": "01a96ea10a000f776a9c897a5f422e7725e5d0eb4f81e1570ef9b565a38f3fa6"
+    },
+    {
+      "source": "backend/src/main/resources/db/audit-migration/V2__security_audit.sql",
+      "target": "backend/src/main/resources/db/audit-migration/V2__security_audit.sql",
+      "mode": 420,
+      "sha256": "585aa80832fa8aea6a18babf9f2bbb0f5b90d97b3be842e1ae40804e87d88b82"
+    },
+    {
+      "source": "backend/src/main/resources/db/migration/V1__starter_notes.sql",
+      "target": "backend/src/main/resources/db/migration/V1__starter_notes.sql",
+      "mode": 420,
+      "sha256": "6672b2cf06088904f58e93d2f35e4f55096725c403d65f98b301f0d0a004d487"
+    },
+    {
+      "source": "backend/src/main/resources/mappers/NoteSqlMapper.xml",
+      "target": "backend/src/main/resources/mappers/NoteSqlMapper.xml",
+      "mode": 420,
+      "sha256": "1ed410265364d1c68106f6d75de3f4850c356e0483ed10fc834ae3ec0d186d0f"
+    },
+    {
+      "source": "backend/src/test/java/__JAVA_PATH__/GeneratedAppIntegrationTest.java",
+      "target": "backend/src/test/java/__JAVA_PATH__/GeneratedAppIntegrationTest.java",
+      "mode": 420,
+      "sha256": "caa734f52cf692f29172c9412bed186252a2da69d3adabffc0c72256f616a86c"
+    },
+    {
+      "source": "eslint.config.mjs",
+      "target": "eslint.config.mjs",
+      "mode": 420,
+      "sha256": "a8342d860a717be0163649536610dace634bb5cb62af1778033cb49b2314f76e"
+    },
+    {
+      "source": "frontend/index.html",
+      "target": "frontend/index.html",
+      "mode": 420,
+      "sha256": "afd72931d87854a3a21e7d739ac00c064adffc4133ab61903e9268faac542a1d"
+    },
+    {
+      "source": "frontend/src/App.vue",
+      "target": "frontend/src/App.vue",
+      "mode": 420,
+      "sha256": "834c803077f2a4dd324b1074089e222e53097ecb3099b359c1091031f3d0c4d0"
+    },
+    {
+      "source": "frontend/src/config.ts",
+      "target": "frontend/src/config.ts",
+      "mode": 420,
+      "sha256": "b610c87ab21cc0b0a27c04b33f8697d1c1a839cb16eb183f6ae7fc2d2d612916"
+    },
+    {
+      "source": "frontend/src/features/auth/LoginPage.vue",
+      "target": "frontend/src/features/auth/LoginPage.vue",
+      "mode": 420,
+      "sha256": "ac7696d810e843dc10eba4efda662827ec534d2be80ba5cd4305f8731adb966d"
+    },
+    {
+      "source": "frontend/src/features/notes/NotesPage.vue",
+      "target": "frontend/src/features/notes/NotesPage.vue",
+      "mode": 420,
+      "sha256": "47df5673a2dae8a097cb63acacad0bfed057e720d520a444361553361fcc2123"
+    },
+    {
+      "source": "frontend/src/features/notes/api.ts",
+      "target": "frontend/src/features/notes/api.ts",
+      "mode": 420,
+      "sha256": "655694de34b5ae1d019b2e89352501379f1fd36a3dddbc2c6f1c6b2e9ab0b545"
+    },
+    {
+      "source": "frontend/src/features/patterns/BoardPatterns.vue",
+      "target": "frontend/src/features/patterns/BoardPatterns.vue",
+      "mode": 420,
+      "sha256": "54eeb4967a0452499cdb0521c026482a8aef6283ad6d68cb87b4e7f3e8221c5f"
+    },
+    {
+      "source": "frontend/src/features/patterns/DatePatterns.vue",
+      "target": "frontend/src/features/patterns/DatePatterns.vue",
+      "mode": 420,
+      "sha256": "fe0d45041f9fd0b31a4aa6bd962b8c5b4c1e29f7ad06535ce323adaec365b4f0"
+    },
+    {
+      "source": "frontend/src/features/patterns/ExtensionPatterns.vue",
+      "target": "frontend/src/features/patterns/ExtensionPatterns.vue",
+      "mode": 420,
+      "sha256": "72b3fb416a540c407f6bac8a5e8b99ae009af4cecfe7bc5b6e1db0b4d9ce528c"
+    },
+    {
+      "source": "frontend/src/features/patterns/ImagePatterns.vue",
+      "target": "frontend/src/features/patterns/ImagePatterns.vue",
+      "mode": 420,
+      "sha256": "5f80093eb8f689da8c81634fba0f373b1cd6bf28887f34229c845e4b0d39ad44"
+    },
+    {
+      "source": "frontend/src/features/patterns/PatternForm.vue",
+      "target": "frontend/src/features/patterns/PatternForm.vue",
+      "mode": 420,
+      "sha256": "5da2a6d2ee26bd8eba1590831afb525f90173c128598b57f82fc419f860e4758"
+    },
+    {
+      "source": "frontend/src/features/patterns/PatternsPage.vue",
+      "target": "frontend/src/features/patterns/PatternsPage.vue",
+      "mode": 420,
+      "sha256": "66b7d7e5bd2b315c92f9057a9516a0f1b8b6937f44792fe5a14f9d458b45824c"
+    },
+    {
+      "source": "frontend/src/features/patterns/TablePatterns.vue",
+      "target": "frontend/src/features/patterns/TablePatterns.vue",
+      "mode": 420,
+      "sha256": "fa6acc9bde18d203f45d9b08718677a27433917f45efe4312edbb8480d32304d"
+    },
+    {
+      "source": "frontend/src/features/patterns/board-image-labels.ts",
+      "target": "frontend/src/features/patterns/board-image-labels.ts",
+      "mode": 420,
+      "sha256": "e9571fbbaf47fb4787090e9e2f92aab83c29a3e96b6317a90b4a8685d28a8804"
+    },
+    {
+      "source": "frontend/src/localization.ts",
+      "target": "frontend/src/localization.ts",
+      "mode": 420,
+      "sha256": "d26b6f8ab0095d07c114cf10d5cc5ff7b98b4d31b406820a273099aa41b9299c"
+    },
+    {
+      "source": "frontend/src/main.ts",
+      "target": "frontend/src/main.ts",
+      "mode": 420,
+      "sha256": "0f8a136ff6cf34fc63b9c3c43592e7515fdf6c71d252b6f3f1995b8e2c5e9d56"
+    },
+    {
+      "source": "frontend/tsconfig.json",
+      "target": "frontend/tsconfig.json",
+      "mode": 420,
+      "sha256": "5fcb8340dba3db8e269d48f69e12fa5b0b0ea44d9d0d6c19a1ae91f56b774422"
+    },
+    {
+      "source": "frontend/vite.config.ts",
+      "target": "frontend/vite.config.ts",
+      "mode": 420,
+      "sha256": "732269470d418848fa39693239a7330d643d9f953dc8588c767297ef45f2ab42"
+    },
+    {
+      "source": "package.json",
+      "target": "package.json",
+      "mode": 420,
+      "sha256": "1bb9eaabe5b7796cc2252798f62bda8815e7eefb53bf785088919d333b71c704"
+    },
+    {
+      "source": "scripts/bootstrap-api.mjs",
+      "target": "scripts/bootstrap-api.mjs",
+      "mode": 420,
+      "sha256": "2a5c96821afd1251c55324129acaf944884069a1a1c35d9e7849d2c7bbacefcf"
+    },
+    {
+      "source": "scripts/build.sh",
+      "target": "scripts/build.sh",
+      "mode": 493,
+      "sha256": "3de1dd3b2762a5a4142314ecf42b015cd06b0154e05864285e41bcccf89715ce"
+    },
+    {
+      "source": "scripts/create-secret.mjs",
+      "target": "scripts/create-secret.mjs",
+      "mode": 420,
+      "sha256": "1afb55d3838394c27776d839c8efa367f5b0737d3627286d314a7a8cc626f5ce"
+    },
+    {
+      "source": "scripts/dev.sh",
+      "target": "scripts/dev.sh",
+      "mode": 493,
+      "sha256": "022bd0096cf77860334fcf4032cb05589fbed77c390534fd7a0ecbbc28126743"
+    },
+    {
+      "source": "scripts/java-env.sh",
+      "target": "scripts/java-env.sh",
+      "mode": 493,
+      "sha256": "84b1961375344001e632abe5fbf4fa03a22dc3d8d0d4d764a0403489e6b7b812"
+    },
+    {
+      "source": "scripts/openapi-types.mjs",
+      "target": "scripts/openapi-types.mjs",
+      "mode": 420,
+      "sha256": "da107609024ddbc65904d930082e764e2d440e84050f55c1e151ced361ca10bf"
+    },
+    {
+      "source": "scripts/run.sh",
+      "target": "scripts/run.sh",
+      "mode": 493,
+      "sha256": "63efb7d39460a4dafe11790491262643a597107fd0ad8f4aea857b2bbe97ff83"
+    },
+    {
+      "source": "scripts/stop.sh",
+      "target": "scripts/stop.sh",
+      "mode": 493,
+      "sha256": "9eb77d85df08fe72a04f033fd7254c154ac7b818ccbf74a2e6e016cefde1b574"
+    },
+    {
+      "source": "scripts/vendor-uri.mjs",
+      "target": "scripts/vendor-uri.mjs",
+      "mode": 420,
+      "sha256": "1a120c0456c3c3af7760aceb49b977916df234f0a33e96addb463491b57ae632"
+    }
+  ]
+}

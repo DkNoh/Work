@@ -1,0 +1,1 @@
+.sc-type-probe-N5MUMS/wrong-emit/probe.ts(15,23): error TS2345: Argument of type 'string' is not assignable to parameter of type 'MouseEvent'.

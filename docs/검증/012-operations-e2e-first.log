@@ -1,0 +1,275 @@
+
+> sc-framework@0.3.0 test:operations
+> playwright test --config frontend/playwright.operations.config.ts
+
+
+Running 10 tests using 1 worker
+
+(node:55554) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 frontend/e2e/012-operations.spec.ts:101:1 › 메시지 DEAD 재시도는 실제 broker 완료 후 같은 이벤트를 다시 처리하지 않는다 (1.9s)
+  ✓   2 frontend/e2e/012-operations.spec.ts:140:1 › 등록된 예제 메시지는 실제 저장하고 URL 필터와 새로고침에서 조회한다 (1.6s)
+  ✘   3 frontend/e2e/012-operations.spec.ts:165:1 › 예약 409와 최신 GET 500은 기준 revision·입력을 유지하고 명시 reload만 초기화한다 (1.9s)
+(node:55587) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   4 frontend/e2e/012-operations.spec.ts:225:1 › 예약 선택·이동 확인은 미저장 입력을 지키고 pause/resume은 revision을 갱신한다 (220ms)
+(node:55595) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   5 frontend/e2e/012-operations.spec.ts:252:1 › A 예약 저장이 B 선택 뒤 완료돼도 B 입력·revision을 교체하지 않는다 (237ms)
+(node:55602) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   6 frontend/e2e/012-operations.spec.ts:310:1 › 실제 window/rejection 수집은 로그인 후 코드만 보내고 동일 Error를 중복하지 않는다 (1.4s)
+  ✓   7 frontend/e2e/012-operations.spec.ts:395:1 › 수집 HTTP 실패는 재시도·재수집하지 않고 일반 사용자는 운영 조회가 금지된다 (626ms)
+  ✘   8 frontend/e2e/012-operations.spec.ts:449:3 › 운영 390px: KO/EN 예약·오류·메시지 전체 DOM 접근성과 키보드 가로 스크롤 (176ms)
+(node:55619) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   9 frontend/e2e/012-operations.spec.ts:449:3 › 운영 1366px: KO/EN 예약·오류·메시지 전체 DOM 접근성과 키보드 가로 스크롤 (160ms)
+(node:55624) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  10 frontend/e2e/012-operations.spec.ts:497:3 › Starter 중립 운영 소비 › Starter는 독립 예약·메시지 API와 실제 오류 수집을 공통 runtime/UI로 소비한다 (2.9s)
+
+
+  1) frontend/e2e/012-operations.spec.ts:165:1 › 예약 409와 최신 GET 500은 기준 revision·입력을 유지하고 명시 reload만 초기화한다 
+
+    Error: operations-schedule-conflict-latest500: document 전체 접근성
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  -  1
+    + Received  + 37
+
+      Object {
+        "duplicateIds": Array [],
+    -   "violations": Array [],
+    +   "violations": Array [
+    +     Object {
+    +       "help": "Elements must have their visible text as part of their accessible name",
+    +       "id": "label-content-name-mismatch",
+    +       "impact": "serious",
+    +       "nodes": Array [
+    +         Object {
+    +           "failureSummary": "Fix any of the following:
+    +   Text inside the element is not included in the accessible name",
+    +           "target": Array [
+    +             "button[aria-label=\"예약 100 편집\"]",
+    +           ],
+    +         },
+    +         Object {
+    +           "failureSummary": "Fix any of the following:
+    +   Text inside the element is not included in the accessible name",
+    +           "target": Array [
+    +             "button[aria-label=\"예약 3 편집\"]",
+    +           ],
+    +         },
+    +         Object {
+    +           "failureSummary": "Fix any of the following:
+    +   Text inside the element is not included in the accessible name",
+    +           "target": Array [
+    +             "button[aria-label=\"예약 2 편집\"]",
+    +           ],
+    +         },
+    +         Object {
+    +           "failureSummary": "Fix any of the following:
+    +   Text inside the element is not included in the accessible name",
+    +           "target": Array [
+    +             "button[aria-label=\"예약 1 편집\"]",
+    +           ],
+    +         },
+    +       ],
+    +     },
+    +   ],
+      }
+
+       at support/accessibility.ts:95
+
+      93 |     },
+      94 |     `${state}: document 전체 접근성`,
+    > 95 |   ).toEqual({ violations: [], duplicateIds: [] });
+         |     ^
+      96 | }
+      97 |
+        at assertAccessible (/Users/dk/Work/ScFramework/frontend/e2e/support/accessibility.ts:95:5)
+        at /Users/dk/Work/ScFramework/frontend/e2e/012-operations.spec.ts:216:3
+
+    attachment #1: operations-schedule-conflict-latest500-axe.json (application/json) ──────────────
+    frontend/test-results-operations/012-operations-예약-409와-최신--a3351-n·입력을-유지하고-명시-reload만-초기화한다/attachments/operations-schedule-conflict-latest500-axe-json-f8793cf453ab316d5c88af7a8e1d190c4be4f8b4.json
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results-operations/012-operations-예약-409와-최신--a3351-n·입력을-유지하고-명시-reload만-초기화한다/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results-operations/012-operations-예약-409와-최신--a3351-n·입력을-유지하고-명시-reload만-초기화한다/error-context.md
+
+  2) frontend/e2e/012-operations.spec.ts:225:1 › 예약 선택·이동 확인은 미저장 입력을 지키고 pause/resume은 revision을 갱신한다 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 200
+    Received: 409
+
+      49 |     headers: { [token.headerName]: token.token },
+      50 |   });
+    > 51 |   expect(response.status()).toBe(status);
+         |                             ^
+      52 |   return response.json();
+      53 | }
+      54 | async function read<T>(page: Page, path: string): Promise<T> {
+        at write (/Users/dk/Work/ScFramework/frontend/e2e/012-operations.spec.ts:51:29)
+        at /Users/dk/Work/ScFramework/frontend/e2e/012-operations.spec.ts:230:17
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results-operations/012-operations-예약-선택·이동-확인-d7f77-ause-resume은-revision을-갱신한다/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results-operations/012-operations-예약-선택·이동-확인-d7f77-ause-resume은-revision을-갱신한다/error-context.md
+
+  3) frontend/e2e/012-operations.spec.ts:252:1 › A 예약 저장이 B 선택 뒤 완료돼도 B 입력·revision을 교체하지 않는다 ──────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 200
+    Received: 409
+
+      49 |     headers: { [token.headerName]: token.token },
+      50 |   });
+    > 51 |   expect(response.status()).toBe(status);
+         |                             ^
+      52 |   return response.json();
+      53 | }
+      54 | async function read<T>(page: Page, path: string): Promise<T> {
+        at write (/Users/dk/Work/ScFramework/frontend/e2e/012-operations.spec.ts:51:29)
+        at /Users/dk/Work/ScFramework/frontend/e2e/012-operations.spec.ts:255:13
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results-operations/012-operations-A-예약-저장이-B-선택-뒤-완료돼도-B-입력·revision을-교체하지-않는다/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results-operations/012-operations-A-예약-저장이-B-선택-뒤-완료돼도-B-입력·revision을-교체하지-않는다/error-context.md
+
+  4) frontend/e2e/012-operations.spec.ts:449:3 › 운영 390px: KO/EN 예약·오류·메시지 전체 DOM 접근성과 키보드 가로 스크롤 ──
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 200
+    Received: 409
+
+      49 |     headers: { [token.headerName]: token.token },
+      50 |   });
+    > 51 |   expect(response.status()).toBe(status);
+         |                             ^
+      52 |   return response.json();
+      53 | }
+      54 | async function read<T>(page: Page, path: string): Promise<T> {
+        at write (/Users/dk/Work/ScFramework/frontend/e2e/012-operations.spec.ts:51:29)
+        at /Users/dk/Work/ScFramework/frontend/e2e/012-operations.spec.ts:455:24
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results-operations/012-operations-운영-390px-KO-30098-·메시지-전체-DOM-접근성과-키보드-가로-스크롤/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results-operations/012-operations-운영-390px-KO-30098-·메시지-전체-DOM-접근성과-키보드-가로-스크롤/error-context.md
+
+  5) frontend/e2e/012-operations.spec.ts:449:3 › 운영 1366px: KO/EN 예약·오류·메시지 전체 DOM 접근성과 키보드 가로 스크롤 ─
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 200
+    Received: 409
+
+      49 |     headers: { [token.headerName]: token.token },
+      50 |   });
+    > 51 |   expect(response.status()).toBe(status);
+         |                             ^
+      52 |   return response.json();
+      53 | }
+      54 | async function read<T>(page: Page, path: string): Promise<T> {
+        at write (/Users/dk/Work/ScFramework/frontend/e2e/012-operations.spec.ts:51:29)
+        at /Users/dk/Work/ScFramework/frontend/e2e/012-operations.spec.ts:455:24
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results-operations/012-operations-운영-1366px-K-47e3a-·메시지-전체-DOM-접근성과-키보드-가로-스크롤/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results-operations/012-operations-운영-1366px-K-47e3a-·메시지-전체-DOM-접근성과-키보드-가로-스크롤/error-context.md
+
+  6) frontend/e2e/012-operations.spec.ts:497:3 › Starter 중립 운영 소비 › Starter는 독립 예약·메시지 API와 실제 오류 수집을 공통 runtime/UI로 소비한다 
+
+    Error: operations-starter-schedules-390: document 전체 접근성
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  -  1
+    + Received  + 37
+
+      Object {
+        "duplicateIds": Array [],
+    -   "violations": Array [],
+    +   "violations": Array [
+    +     Object {
+    +       "help": "Elements must have their visible text as part of their accessible name",
+    +       "id": "label-content-name-mismatch",
+    +       "impact": "serious",
+    +       "nodes": Array [
+    +         Object {
+    +           "failureSummary": "Fix any of the following:
+    +   Text inside the element is not included in the accessible name",
+    +           "target": Array [
+    +             "button[aria-label=\"예약 100 편집\"]",
+    +           ],
+    +         },
+    +         Object {
+    +           "failureSummary": "Fix any of the following:
+    +   Text inside the element is not included in the accessible name",
+    +           "target": Array [
+    +             "button[aria-label=\"예약 3 편집\"]",
+    +           ],
+    +         },
+    +         Object {
+    +           "failureSummary": "Fix any of the following:
+    +   Text inside the element is not included in the accessible name",
+    +           "target": Array [
+    +             "button[aria-label=\"예약 2 편집\"]",
+    +           ],
+    +         },
+    +         Object {
+    +           "failureSummary": "Fix any of the following:
+    +   Text inside the element is not included in the accessible name",
+    +           "target": Array [
+    +             "button[aria-label=\"예약 1 편집\"]",
+    +           ],
+    +         },
+    +       ],
+    +     },
+    +   ],
+      }
+
+       at support/accessibility.ts:95
+
+      93 |     },
+      94 |     `${state}: document 전체 접근성`,
+    > 95 |   ).toEqual({ violations: [], duplicateIds: [] });
+         |     ^
+      96 | }
+      97 |
+        at assertAccessible (/Users/dk/Work/ScFramework/frontend/e2e/support/accessibility.ts:95:5)
+        at /Users/dk/Work/ScFramework/frontend/e2e/012-operations.spec.ts:521:5
+
+    attachment #1: operations-starter-schedules-390-axe.json (application/json) ────────────────────
+    frontend/test-results-operations/012-operations-Starter-중립--b8019--오류-수집을-공통-runtime-UI로-소비한다/attachments/operations-starter-schedules-390-axe-json-7590741fff99b7ed9970b775117f51c6f900ffc2.json
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results-operations/012-operations-Starter-중립--b8019--오류-수집을-공통-runtime-UI로-소비한다/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results-operations/012-operations-Starter-중립--b8019--오류-수집을-공통-runtime-UI로-소비한다/error-context.md
+
+  6 failed
+    frontend/e2e/012-operations.spec.ts:165:1 › 예약 409와 최신 GET 500은 기준 revision·입력을 유지하고 명시 reload만 초기화한다 
+    frontend/e2e/012-operations.spec.ts:225:1 › 예약 선택·이동 확인은 미저장 입력을 지키고 pause/resume은 revision을 갱신한다 
+    frontend/e2e/012-operations.spec.ts:252:1 › A 예약 저장이 B 선택 뒤 완료돼도 B 입력·revision을 교체하지 않는다 ───────
+    frontend/e2e/012-operations.spec.ts:449:3 › 운영 390px: KO/EN 예약·오류·메시지 전체 DOM 접근성과 키보드 가로 스크롤 ───
+    frontend/e2e/012-operations.spec.ts:449:3 › 운영 1366px: KO/EN 예약·오류·메시지 전체 DOM 접근성과 키보드 가로 스크롤 ──
+    frontend/e2e/012-operations.spec.ts:497:3 › Starter 중립 운영 소비 › Starter는 독립 예약·메시지 API와 실제 오류 수집을 공통 runtime/UI로 소비한다 
+  4 passed (35.1s)

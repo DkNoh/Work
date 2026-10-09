@@ -1,0 +1,64 @@
+{
+  "stage": "011",
+  "initialRepositoryEmpty": true,
+  "defaultMavenRepositoryUsedForScArtifacts": false,
+  "artifactCoordinates": 4,
+  "files": [
+    {
+      "artifact": "sc-framework-parent",
+      "file": "dev/scframework/sc-framework-parent/0.1.0-SNAPSHOT/sc-framework-parent-0.1.0-SNAPSHOT.pom",
+      "sha256": "70c95f4ef15b82137859776dbea23c4cc94806a17199a6f4fd0b8d645846a1ec"
+    },
+    {
+      "artifact": "framework-core",
+      "file": "dev/scframework/framework-core/0.1.0-SNAPSHOT/framework-core-0.1.0-SNAPSHOT.pom",
+      "sha256": "82e3057738677580d5838d1f4a41330d268f1e322926a7bc6b70ecda68ab1cb0"
+    },
+    {
+      "artifact": "framework-core",
+      "file": "dev/scframework/framework-core/0.1.0-SNAPSHOT/framework-core-0.1.0-SNAPSHOT.jar",
+      "sha256": "94b5b2545c56bec4128d5fd6da6208cfef4410f66a59383f9ce4d4fe1b10ad0f",
+      "entries": 21,
+      "forbidden": []
+    },
+    {
+      "artifact": "framework-autoconfigure",
+      "file": "dev/scframework/framework-autoconfigure/0.1.0-SNAPSHOT/framework-autoconfigure-0.1.0-SNAPSHOT.pom",
+      "sha256": "287390befd6b77fc92943aed5c55cbac3fb4077f2b4e741ca1d3c69588166cbc"
+    },
+    {
+      "artifact": "framework-autoconfigure",
+      "file": "dev/scframework/framework-autoconfigure/0.1.0-SNAPSHOT/framework-autoconfigure-0.1.0-SNAPSHOT.jar",
+      "sha256": "471b7588ce7c611576401b59a57994d46747b30d87747d5afea271ce0f2aae02",
+      "entries": 48,
+      "forbidden": []
+    },
+    {
+      "artifact": "framework-spring-boot-starter",
+      "file": "dev/scframework/framework-spring-boot-starter/0.1.0-SNAPSHOT/framework-spring-boot-starter-0.1.0-SNAPSHOT.pom",
+      "sha256": "da3502cab9e43af95d9d8b455e11af5d5232f5a4071c26c2303422277bc67e1a"
+    },
+    {
+      "artifact": "framework-spring-boot-starter",
+      "file": "dev/scframework/framework-spring-boot-starter/0.1.0-SNAPSHOT/framework-spring-boot-starter-0.1.0-SNAPSHOT.jar",
+      "sha256": "4ab0bce92d8be3b37d56adf3c19ff390a2a186b9478f045efc12969a55005df7",
+      "entries": 7,
+      "forbidden": []
+    }
+  ],
+  "tests": {
+    "framework-core": {
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "framework-autoconfigure": {
+      "tests": 27,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "applicationVersionIsolation": "parent pins sc-framework.version; generated app1.0.0 runtime not yet tested"
+}

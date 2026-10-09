@@ -1,0 +1,164 @@
+
+> sc-framework@0.1.0 verify
+> npm run format:check && npm run lint && npm run api:check && npm run ui:contracts:check && npm run ui:boundaries:check && npm run typecheck && npm run test:unit && npm run build
+
+
+> sc-framework@0.1.0 format:check
+> prettier --check .
+
+Checking formatting...
+All matched files use Prettier code style!
+
+> sc-framework@0.1.0 lint
+> eslint frontend scripts --max-warnings 0
+
+
+> sc-framework@0.1.0 api:check
+> node scripts/openapi-types.mjs --check
+
+OpenAPI 명세와 생성 타입 일치
+
+> sc-framework@0.1.0 ui:contracts:check
+> node scripts/ui-contracts.mjs --check
+
+공개 UI 20개: imported props/events/slots/default 계약 일치
+
+> sc-framework@0.1.0 ui:boundaries:check
+> node scripts/check-ui-boundaries.mjs
+
+공개 UI/소비 앱 경계: import 567개 확인
+
+> sc-framework@0.1.0 typecheck
+> npm run typecheck --workspace @sc/i18n && npm run typecheck --workspace @sc/excel && npm run typecheck --workspace @sc/ui && npm run typecheck --workspace @sc/runtime && npm run typecheck --workspace @sc/reference-app && npm run typecheck --workspace @sc/starter-app && npm run typecheck --workspace @sc/catalog
+
+
+> @sc/i18n@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/excel@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/ui@0.1.0 typecheck
+> npm run tokens:check && vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/ui@0.1.0 tokens:check
+> node scripts/generate-tokens.mjs --check
+
+Design token CSS matches tokens.ts.
+
+> @sc/runtime@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/reference-app@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/starter-app@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/catalog@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> sc-framework@0.1.0 test:unit
+> vitest run --config vitest.config.ts
+
+
+ RUN  v4.1.11 /Users/dk/Work/ScFramework
+
+
+ Test Files  17 passed (17)
+      Tests  84 passed (84)
+   Start at  21:54:48
+   Duration  2.27s (transform 11.20s, setup 0ms, import 15.86s, tests 634ms, environment 4.15s)
+
+
+> sc-framework@0.1.0 build
+> npm run build --workspace @sc/i18n && npm run build --workspace @sc/excel && npm run build --workspace @sc/ui && npm run build --workspace @sc/runtime && npm run build --workspace @sc/reference-app && npm run build --workspace @sc/starter-app
+
+
+> @sc/i18n@0.1.0 build
+> npm run typecheck
+
+
+> @sc/i18n@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/excel@0.1.0 build
+> npm run typecheck
+
+
+> @sc/excel@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/ui@0.1.0 build
+> npm run typecheck
+
+
+> @sc/ui@0.1.0 typecheck
+> npm run tokens:check && vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/ui@0.1.0 tokens:check
+> node scripts/generate-tokens.mjs --check
+
+Design token CSS matches tokens.ts.
+
+> @sc/runtime@0.1.0 build
+> npm run typecheck
+
+
+> @sc/runtime@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/reference-app@0.1.0 build
+> vue-tsc --noEmit -p tsconfig.json && vite build
+
+vite v8.3.1 building client environment for production...
+transforming...
+✓ 1773 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                               0.49 kB │ gzip:   0.32 kB
+dist/assets/PatternsPage-DMX7y6HW.css        48.26 kB │ gzip:   7.16 kB
+dist/assets/index-Ofvs0oM9.css              275.50 kB │ gzip:  40.52 kB
+dist/assets/rolldown-runtime-Dd_uD5pT.js      1.10 kB │ gzip:   0.62 kB
+dist/assets/index-D_Qa6vd4.js               614.89 kB │ gzip: 209.89 kB
+dist/assets/PatternsPage-BjEZy5wX.js      2,072.82 kB │ gzip: 633.31 kB
+
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 616ms
+
+> @sc/starter-app@0.1.0 build
+> vue-tsc --noEmit -p tsconfig.json && vite build
+
+vite v8.3.1 building client environment for production...
+transforming...
+✓ 1769 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                               0.49 kB │ gzip:   0.30 kB
+dist/assets/PatternsPage-Bh8mj2o_.css        53.27 kB │ gzip:   7.72 kB
+dist/assets/index-CjCGQF0z.css              269.22 kB │ gzip:  39.47 kB
+dist/assets/rolldown-runtime-Dd_uD5pT.js      1.10 kB │ gzip:   0.62 kB
+dist/assets/index-BEszvgJz.js               454.98 kB │ gzip: 162.43 kB
+dist/assets/PatternsPage-B2McszkY.js      2,239.21 kB │ gzip: 681.89 kB
+
+✓ built in 478ms
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.

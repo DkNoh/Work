@@ -1,0 +1,38 @@
+-- 앱 소유 sqlserver 새 스키마 DDL. 기존 H2 migration은 별도 경로에서 checksum을 보존한다.
+ALTER TABLE requirement_entry DROP CONSTRAINT requirement_screen_unbound;
+CREATE TABLE stored_file (
+ id BIGINT IDENTITY(1,1) PRIMARY KEY,
+ storage_key NVARCHAR(36) NOT NULL UNIQUE, original_name NVARCHAR(180) NOT NULL,
+ mime NVARCHAR(100) NOT NULL, size BIGINT NOT NULL CHECK(size>0),
+ created_by BIGINT NOT NULL REFERENCES reference_user(id), created_at DATETIMEOFFSET(6) NOT NULL
+);
+CREATE TABLE screen_entry (
+ id BIGINT IDENTITY(1,1) PRIMARY KEY,
+ menu_id BIGINT NOT NULL REFERENCES menu_entry(id), name NVARCHAR(200) NOT NULL,
+ next_version INTEGER NOT NULL DEFAULT 1 CHECK(next_version>0)
+);
+CREATE TABLE screen_version (
+ id BIGINT IDENTITY(1,1) PRIMARY KEY,
+ screen_id BIGINT NOT NULL REFERENCES screen_entry(id), version INTEGER NOT NULL CHECK(version>0),
+ file_id BIGINT NOT NULL UNIQUE REFERENCES stored_file(id), width INTEGER NOT NULL CHECK(width>0), height INTEGER NOT NULL CHECK(height>0),
+ created_by BIGINT NOT NULL REFERENCES reference_user(id), created_at DATETIMEOFFSET(6) NOT NULL,
+ archived INTEGER NOT NULL DEFAULT 0 CHECK(archived IN(0,1)),
+ next_annotation INTEGER NOT NULL DEFAULT 1 CHECK(next_annotation>0), UNIQUE(screen_id,version)
+);
+ALTER TABLE requirement_entry ADD CONSTRAINT requirement_screen_version_fk FOREIGN KEY(screen_version_id) REFERENCES screen_version(id);
+CREATE TABLE requirement_annotation (
+ id BIGINT IDENTITY(1,1) PRIMARY KEY,
+ requirement_id BIGINT NOT NULL UNIQUE REFERENCES requirement_entry(id), screen_version_id BIGINT NOT NULL REFERENCES screen_version(id),
+ number INTEGER NOT NULL CHECK(number>0), x FLOAT(53) NOT NULL CHECK(x>=0 AND x<=1), y FLOAT(53) NOT NULL CHECK(y>=0 AND y<=1),
+ width FLOAT(53) NOT NULL CHECK(width>0 AND width<=1), height FLOAT(53) NOT NULL CHECK(height>0 AND height<=1),
+ CHECK(x+width<=1.000000001 AND y+height<=1.000000001), UNIQUE(screen_version_id,number)
+);
+CREATE TABLE requirement_attachment (
+ id BIGINT IDENTITY(1,1) PRIMARY KEY,
+ requirement_id BIGINT NOT NULL REFERENCES requirement_entry(id), file_id BIGINT NOT NULL UNIQUE REFERENCES stored_file(id),
+ created_at DATETIMEOFFSET(6) NOT NULL
+);
+CREATE TABLE requirement_ado (
+ requirement_id BIGINT PRIMARY KEY REFERENCES requirement_entry(id), ticket NVARCHAR(80) NOT NULL, url NVARCHAR(2000) NOT NULL,
+ linked_by BIGINT NOT NULL REFERENCES reference_user(id), linked_at DATETIMEOFFSET(6) NOT NULL
+);

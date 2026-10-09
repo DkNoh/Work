@@ -1,0 +1,99 @@
+
+Running 17 tests using 1 worker
+
+(node:15729) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 frontend/e2e/010-kanban.spec.ts:73:1 › 칸반 실제 작성·수정은 줄바꿈·단일 쉼표 태그·0000과0099 달력 날짜를 보존한다 (3.5s)
+  ✓   2 frontend/e2e/010-kanban.spec.ts:112:1 › 칸반 멤버 접근과 타인 작업 변경 거절은 ADMIN·담당자에도 서버에서 적용한다 (961ms)
+  ✘   3 frontend/e2e/010-kanban.spec.ts:145:1 › 실제 보드 포인터·키보드 센서와 대체 이동은 저장한 작업만 이동하고 필터 정렬에서는 차단한다 (12.5s)
+(node:15844) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   4 frontend/e2e/010-kanban.spec.ts:195:1 › 작업409 뒤 최신GET500도 편집 입력과 이전revision을 보존하고 명시적재조회로만 교체한다 (1.7s)
+  ✓   5 frontend/e2e/010-kanban.spec.ts:235:1 › XLSX 미리보기는 원본행을 보여주고 승인 전 저장하지 않으며 잘못된 담당자의 원자실패와 날짜 왕복을 검사한다 (2.2s)
+  ✓   6 frontend/e2e/010-kanban.spec.ts:318:5 › 칸반 390px ko은 전체DOM 접근성과 보드가로스크롤을 검사한다 (1.8s)
+  ✓   7 frontend/e2e/010-kanban.spec.ts:318:5 › 칸반 390px en은 전체DOM 접근성과 보드가로스크롤을 검사한다 (1.7s)
+  ✓   8 frontend/e2e/010-kanban.spec.ts:318:5 › 칸반 1366px ko은 전체DOM 접근성과 보드가로스크롤을 검사한다 (1.6s)
+  ✓   9 frontend/e2e/010-kanban.spec.ts:318:5 › 칸반 1366px en은 전체DOM 접근성과 보드가로스크롤을 검사한다 (1.5s)
+  ✓  10 frontend/e2e/010-media.spec.ts:190:3 › image UI upload, trusted pointer, body preservation, PDF privacy and real box conflict at 390 (15.5s)
+  ✓  11 frontend/e2e/010-media.spec.ts:385:3 › English image workspace has native coordinates and no overflow at 390 (1.9s)
+  ✓  12 frontend/e2e/010-media.spec.ts:190:3 › image UI upload, trusted pointer, body preservation, PDF privacy and real box conflict at 1366 (15.8s)
+  ✓  13 frontend/e2e/010-media.spec.ts:385:3 › English image workspace has native coordinates and no overflow at 1366 (2.0s)
+  ✓  14 frontend/e2e/010-media.spec.ts:405:1 › JPEG EXIF 6 uses browser-oriented original dimensions and preserves uploaded bytes (1.6s)
+  ✓  15 frontend/e2e/010-media.spec.ts:439:1 › agreed author links ADO through the UI and exports stored plain text without an external call (1.9s)
+  ✘  16 frontend/e2e/010-starter-patterns.spec.ts:34:1 › Starter 390px 보드의 native 이동·순서 변경은 로컬 자료만 바꾸고 전체 DOM 접근성을 유지한다 (10.3s)
+(node:16290) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  17 frontend/e2e/010-starter-patterns.spec.ts:88:1 › Starter 1366px 이미지의 영어 좌표 입력·키보드 확대는 정규화된 로컬 박스를 보존하고 전체 DOM 접근성을 유지한다 (1.1s)
+
+
+  1) frontend/e2e/010-kanban.spec.ts:145:1 › 실제 보드 포인터·키보드 센서와 대체 이동은 저장한 작업만 이동하고 필터 정렬에서는 차단한다 ───
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  getByRole('listbox').locator('[role=\'option\']:focus')
+    Expected: 1
+    Received: 0
+    Timeout:  10000ms
+
+    Call log:
+      - Expect "toHaveCount" getByRole('listbox').locator('[role=\'option\']:focus') with timeout 10000ms
+      - waiting for getByRole('listbox').locator('[role=\'option\']:focus')
+        24 × locator resolved to 0 elements
+           - unexpected value "0"
+
+
+       at support/requirements.ts:115
+
+      113 |   const focused = list.locator("[role='option']:focus");
+      114 |   await target.press("Home");
+    > 115 |   await expect(focused).toHaveCount(1);
+          |                         ^
+      116 |   const count = Number(await focused.getAttribute("aria-setsize"));
+      117 |   expect(Number.isSafeInteger(count) && count > 0).toBe(true);
+      118 |   for (let index = 0; index < count; index++) {
+        at choose (/Users/dk/Work/ScFramework/frontend/e2e/support/requirements.ts:115:25)
+        at /Users/dk/Work/ScFramework/frontend/e2e/010-kanban.spec.ts:188:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    docs/검증/010-e2e-final-related-results/010-kanban-실제-보드-포인터·키보드-센-870ac--저장한-작업만-이동하고-필터-정렬에서는-차단한다/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: docs/검증/010-e2e-final-related-results/010-kanban-실제-보드-포인터·키보드-센-870ac--저장한-작업만-이동하고-필터-정렬에서는-차단한다/error-context.md
+
+  2) frontend/e2e/010-starter-patterns.spec.ts:34:1 › Starter 390px 보드의 native 이동·순서 변경은 로컬 자료만 바꾸고 전체 DOM 접근성을 유지한다 
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  getByRole('region', { name: '중립 작업 항목', exact: true }).locator('[data-sc-board-key="a"]:not([aria-hidden="true"])').getByRole('button', { name: '이동: Alpha', exact: true })
+    Expected: focused
+    Received: inactive
+    Timeout:  10000ms
+
+    Call log:
+      - Expect "toBeFocused" getByRole('region', { name: '중립 작업 항목', exact: true }).locator('[data-sc-board-key="a"]:not([aria-hidden="true"])').getByRole('button', { name: '이동: Alpha', exact: true }) with timeout 10000ms
+      - waiting for getByRole('region', { name: '중립 작업 항목', exact: true }).locator('[data-sc-board-key="a"]:not([aria-hidden="true"])').getByRole('button', { name: '이동: Alpha', exact: true })
+        3 × locator resolved to <button type="button" data-v-f22aac39="" aria-label="이동: Alpha" class="sc-board-handle">이동: Alpha</button>
+          - unexpected value "inactive"
+        21 × locator resolved to <button type="button" data-v-f22aac39="" aria-pressed="false" aria-grabbed="false" aria-disabled="false" aria-label="이동: Alpha" class="sc-board-handle" aria-roledescription="draggable" aria-describedby="sc-board-sc-1-68-instructions-1">이동: Alpha</button>
+           - unexpected value "inactive"
+
+
+      68 |   await expect(finished.locator("[data-sc-board-key]")).toHaveAttribute("data-sc-board-key", "a");
+      69 |   await expect(board.getByRole("region", { name: "준비 (1)", exact: true })).toContainText("Beta");
+    > 70 |   await expect(alpha.getByRole("button", { name: "이동: Alpha", exact: true })).toBeFocused();
+         |                                                                               ^
+      71 |   await alpha.getByRole("combobox", { name: "목적 열", exact: true }).selectOption("ready");
+      72 |   await alpha.getByRole("button", { name: "Alpha: 이동", exact: true }).focus();
+      73 |   await page.keyboard.press("Enter");
+        at /Users/dk/Work/ScFramework/frontend/e2e/010-starter-patterns.spec.ts:70:79
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    docs/검증/010-e2e-final-related-results/010-starter-patterns-Start-0c462-로컬-자료만-바꾸고-전체-DOM-접근성을-유지한다/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: docs/검증/010-e2e-final-related-results/010-starter-patterns-Start-0c462-로컬-자료만-바꾸고-전체-DOM-접근성을-유지한다/error-context.md
+
+  2 failed
+    frontend/e2e/010-kanban.spec.ts:145:1 › 실제 보드 포인터·키보드 센서와 대체 이동은 저장한 작업만 이동하고 필터 정렬에서는 차단한다 ────
+    frontend/e2e/010-starter-patterns.spec.ts:34:1 › Starter 390px 보드의 native 이동·순서 변경은 로컬 자료만 바꾸고 전체 DOM 접근성을 유지한다 
+  15 passed (1.4m)

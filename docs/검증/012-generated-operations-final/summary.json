@@ -1,0 +1,183 @@
+{
+  "stage": "012",
+  "passed": true,
+  "groups": [
+    {
+      "name": "installed-consumer-final-ui-and-safe-collector",
+      "passed": true,
+      "browserGroups": 8,
+      "axeScans": 15
+    },
+    {
+      "name": "private-process-and-event-logs-no-secret-or-raw-canary",
+      "passed": true,
+      "secretMatches": 0
+    }
+  ],
+  "frameworkVersion": "0.3.0",
+  "appVersion": "1.0.0",
+  "originalRuntimeUsed": false,
+  "manualReviewComplete": false,
+  "browserExecuted": true,
+  "jarSha256": "c5b74cc05bd4be5a1af38f16cf22949fb3b801eb292f6e87670f13ff02d3730a",
+  "scope": "browser-only final repair verification; prior API evidence is separate",
+  "browser": {
+    "stage": "012",
+    "passed": true,
+    "groups": [
+      {
+        "name": "installed-cohort-and-native-notes-login",
+        "passed": true
+      },
+      {
+        "name": "notes-validation-save-revision-conflict-and-locale-draft",
+        "passed": true
+      },
+      {
+        "name": "actual-window-and-rejection-collector-own-version-and-notes-route",
+        "passed": true
+      },
+      {
+        "name": "operations-three-pages-1366-ko",
+        "passed": true
+      },
+      {
+        "name": "operations-three-pages-1366-en",
+        "passed": true
+      },
+      {
+        "name": "operations-three-pages-390-ko",
+        "passed": true
+      },
+      {
+        "name": "operations-three-pages-390-en",
+        "passed": true
+      },
+      {
+        "name": "no-debug-global-unexpected-errors-or-private-evidence",
+        "passed": true
+      }
+    ],
+    "axe": [
+      {
+        "name": "login-1366-ko",
+        "violations": 0,
+        "duplicateIds": 0,
+        "incomplete": 1
+      },
+      {
+        "name": "notes-1366-ko",
+        "violations": 0,
+        "duplicateIds": 0,
+        "incomplete": 1
+      },
+      {
+        "name": "notes-conflict-1366-en",
+        "violations": 0,
+        "duplicateIds": 0,
+        "incomplete": 1
+      },
+      {
+        "name": "messages-1366-ko",
+        "violations": 0,
+        "duplicateIds": 0,
+        "incomplete": 2
+      },
+      {
+        "name": "schedules-1366-ko",
+        "violations": 0,
+        "duplicateIds": 0,
+        "incomplete": 3
+      },
+      {
+        "name": "browser-errors-1366-ko",
+        "violations": 0,
+        "duplicateIds": 0,
+        "incomplete": 1
+      },
+      {
+        "name": "messages-1366-en",
+        "violations": 0,
+        "duplicateIds": 0,
+        "incomplete": 2
+      },
+      {
+        "name": "schedules-1366-en",
+        "violations": 0,
+        "duplicateIds": 0,
+        "incomplete": 3
+      },
+      {
+        "name": "browser-errors-1366-en",
+        "violations": 0,
+        "duplicateIds": 0,
+        "incomplete": 1
+      },
+      {
+        "name": "messages-390-ko",
+        "violations": 0,
+        "duplicateIds": 0,
+        "incomplete": 2
+      },
+      {
+        "name": "schedules-390-ko",
+        "violations": 0,
+        "duplicateIds": 0,
+        "incomplete": 3
+      },
+      {
+        "name": "browser-errors-390-ko",
+        "violations": 0,
+        "duplicateIds": 0,
+        "incomplete": 2
+      },
+      {
+        "name": "messages-390-en",
+        "violations": 0,
+        "duplicateIds": 0,
+        "incomplete": 2
+      },
+      {
+        "name": "schedules-390-en",
+        "violations": 0,
+        "duplicateIds": 0,
+        "incomplete": 3
+      },
+      {
+        "name": "browser-errors-390-en",
+        "violations": 0,
+        "duplicateIds": 0,
+        "incomplete": 2
+      }
+    ],
+    "screenshots": [
+      "login-1366-ko.png",
+      "notes-1366-ko.png",
+      "notes-conflict-1366-en.png",
+      "messages-1366-ko.png",
+      "schedules-1366-ko.png",
+      "browser-errors-1366-ko.png",
+      "messages-1366-en.png",
+      "schedules-1366-en.png",
+      "browser-errors-1366-en.png",
+      "messages-390-ko.png",
+      "schedules-390-ko.png",
+      "browser-errors-390-ko.png",
+      "messages-390-en.png",
+      "schedules-390-en.png",
+      "browser-errors-390-en.png"
+    ],
+    "unexpectedErrors": [],
+    "failedAssets": [],
+    "manualReviewComplete": false,
+    "traceEnabled": false,
+    "collector": {
+      "events": 2,
+      "appVersion": "1.0.0",
+      "routeCode": "notes",
+      "rawFields": 0,
+      "expectedRuntimeErrors": 2
+    }
+  },
+  "temporaryRuntimeRemoved": true
+}

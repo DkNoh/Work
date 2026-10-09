@@ -1,0 +1,22 @@
+
+Running 15 tests using 1 worker
+
+(node:11901) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 frontend/e2e/010-kanban.spec.ts:73:1 › 칸반 실제 작성·수정은 줄바꿈·단일 쉼표 태그·0000과0099 달력 날짜를 보존한다 (2.9s)
+  ✓   2 frontend/e2e/010-kanban.spec.ts:112:1 › 칸반 멤버 접근과 타인 작업 변경 거절은 ADMIN·담당자에도 서버에서 적용한다 (960ms)
+  ✓   3 frontend/e2e/010-kanban.spec.ts:145:1 › 실제 보드 포인터·키보드 센서와 대체 이동은 저장한 작업만 이동하고 필터 정렬에서는 차단한다 (4.6s)
+  ✓   4 frontend/e2e/010-kanban.spec.ts:195:1 › 작업409 뒤 최신GET500도 편집 입력과 이전revision을 보존하고 명시적재조회로만 교체한다 (1.7s)
+  ✓   5 frontend/e2e/010-kanban.spec.ts:235:1 › XLSX 미리보기는 원본행을 보여주고 승인 전 저장하지 않으며 잘못된 담당자의 원자실패와 날짜 왕복을 검사한다 (2.1s)
+  ✓   6 frontend/e2e/010-kanban.spec.ts:318:5 › 칸반 390px ko은 전체DOM 접근성과 보드가로스크롤을 검사한다 (1.5s)
+  ✓   7 frontend/e2e/010-kanban.spec.ts:318:5 › 칸반 390px en은 전체DOM 접근성과 보드가로스크롤을 검사한다 (1.5s)
+  ✓   8 frontend/e2e/010-kanban.spec.ts:318:5 › 칸반 1366px ko은 전체DOM 접근성과 보드가로스크롤을 검사한다 (1.3s)
+  ✓   9 frontend/e2e/010-kanban.spec.ts:318:5 › 칸반 1366px en은 전체DOM 접근성과 보드가로스크롤을 검사한다 (1.2s)
+  ✓  10 frontend/e2e/010-media.spec.ts:122:3 › image UI upload, trusted pointer, body preservation, PDF privacy and real box conflict at 390 (13.2s)
+  ✓  11 frontend/e2e/010-media.spec.ts:315:3 › English image workspace has native coordinates and no overflow at 390 (2.0s)
+  ✓  12 frontend/e2e/010-media.spec.ts:122:3 › image UI upload, trusted pointer, body preservation, PDF privacy and real box conflict at 1366 (13.2s)
+  ✓  13 frontend/e2e/010-media.spec.ts:315:3 › English image workspace has native coordinates and no overflow at 1366 (1.5s)
+  ✓  14 frontend/e2e/010-media.spec.ts:335:1 › JPEG EXIF 6 uses browser-oriented original dimensions and preserves uploaded bytes (1.4s)
+  ✓  15 frontend/e2e/010-media.spec.ts:369:1 › agreed author links ADO through the UI and exports stored plain text without an external call (1.9s)
+
+  15 passed (58.8s)

@@ -1,0 +1,16 @@
+
+ RUN  v4.1.11 /Users/dk/Work/ScFramework/frontend/apps/catalog
+
+9:27:45 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:27:45 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:27:45 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:27:45 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:27:45 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:27:46 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:27:46 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+
+ Test Files  4 passed (4)
+      Tests  13 passed (13)
+   Start at  21:27:42
+   Duration  4.12s (transform 0ms, setup 5.16s, import 733ms, tests 2.02s, environment 0ms)
+

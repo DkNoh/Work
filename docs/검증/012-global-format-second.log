@@ -1,0 +1,7 @@
+
+> sc-framework@0.3.0 format:check
+> prettier --check .
+
+Checking formatting...
+[warn] docs/질의/012-관측과컨테이너.md
+[warn] Code style issues found in the above file. Run Prettier with --write to fix.

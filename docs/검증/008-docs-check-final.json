@@ -1,0 +1,80 @@
+{
+  "stage": "008",
+  "status": "locally-complete",
+  "documents": 12,
+  "localLinksChecked": 290,
+  "codeBlocks": 12,
+  "evidenceJsonParsed": 8,
+  "assertions": {
+    "stage008_locally_complete": true,
+    "initial_76_preserved": true,
+    "server_xml_actual_77": true,
+    "new_success_payload_test_passed": true,
+    "generated_8": true,
+    "jar_compiler_excluded_0": true,
+    "starter_reference_classes_0": true,
+    "fresh_assets_byte_equal_16_6": true,
+    "processor_positive_2": true,
+    "processor_negative_real_compile": true,
+    "initial_fixture_failures_preserved": true,
+    "jar_e2e_41_visual_4_skipped": true,
+    "full_dom_52_violations_ids_0_incomplete_99": true,
+    "original_170_source_unchanged": true,
+    "ci_remote_unexecuted": true,
+    "stage009_waiting": true,
+    "historical_006_detail_loss_preserved": true,
+    "completion_checklist_real_all_checked": true
+  },
+  "errors": [],
+  "passed": true,
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "26e9e3856fc5afe6f68ec44cf568a79b069dfd321fe9049db0984b716c653a32"
+    },
+    {
+      "path": "docs/api.md",
+      "sha256": "38a08f293ae5a963168066f3a4e87a381c42e3651ea860bc62eb82ee1bd1c721"
+    },
+    {
+      "path": "docs/operations.md",
+      "sha256": "26fcb7aac6e87450d4cfdf38ed33af883f0506ab26f14410071ce74f3b92c890"
+    },
+    {
+      "path": "docs/folder-structure.md",
+      "sha256": "4e8c875bfeb0b6c405ebd847eef7ca3150f80cfb370815cfd9fc800d682a935c"
+    },
+    {
+      "path": "docs/maintenance-guide.md",
+      "sha256": "013e553207a1be33fc2ebbd2221bfb168cd42ae75c7aac6d4330456f50720836"
+    },
+    {
+      "path": "docs/질의/README.md",
+      "sha256": "e95ad3bfd3921a4a480eea897475fb5b929c09944a0b21aa5920d7b0c256fa55"
+    },
+    {
+      "path": "docs/질의/개발단계.md",
+      "sha256": "cc69df88af91af212a5756fe17c2894b682a93b1296dbb5450894019f63c7054"
+    },
+    {
+      "path": "docs/질의/개발가이드.md",
+      "sha256": "23e4d212494d55ee04341c5af4878ee5be644211103df8ae6cf6871fe6c1d465"
+    },
+    {
+      "path": "docs/질의/프레임워크.md",
+      "sha256": "082eaab97bcc8f12d2f61f843fdafe2c5350631c578289d8709db24d881671ee"
+    },
+    {
+      "path": "docs/질의/기술스택-적용현황.md",
+      "sha256": "d31e0662993050780617e9ae513fa9343d754fce64aaa5b8e3eab3d7dc543646"
+    },
+    {
+      "path": "docs/질의/조건부기술-전체구현.md",
+      "sha256": "7dcbd772915efc32d13e28d8210ba8482b8ec5844cbad017192becb2715ab811"
+    },
+    {
+      "path": "docs/질의/008-조회매핑과외부연동.md",
+      "sha256": "9384c0f756ea754c41e05eb8f9a0ec662c1ff960db7bfd1bdd3d2330da403178"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+
+> @sc/catalog@0.1.0 test:stories
+> vitest run --config vitest.config.ts src/ValidatedForm.stories.ts
+
+
+ RUN  v4.1.11 /Users/dk/Work/ScFramework/frontend/apps/catalog
+
+9:42:04 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:42:04 PM [vite] (client) [Unhandled error] Error: ResizeObserver loop completed with undelivered notifications.
+ > ../../../../../../../@vite/client:305:50
+
+9:42:04 PM [vite] (client) [console.error] Error: ResizeObserver loop completed with undelivered notifications.
+    at throwUnhandlerError (http://localhost:63315/@fs/Users/dk/Work/ScFramework/node_modules/@vitest/browser/dist/client/error-catcher.js:38:33)
+
+ Test Files  1 passed (1)
+      Tests  8 passed (8)
+   Start at  21:42:02
+   Duration  4.74s (transform 0ms, setup 880ms, import 97ms, tests 3.24s, environment 0ms)
+

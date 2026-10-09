@@ -1,0 +1,108 @@
+===== default-prod / launcher-1.log =====
+Bootstrap secret file is ready (value omitted).
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.16)
+
+2026-10-07T05:52:33.539+09:00  INFO [requestId:] 31623 --- [sc-notes] [           main] d.s.notesapp.GeneratedApplication        : Starting GeneratedApplication v1.0.0 using Java 21.0.11 with PID 31623 (<generated-app>/backend/target/sc-notes.jar started by dk in <generated-app>)
+2026-10-07T05:52:33.540+09:00  INFO [requestId:] 31623 --- [sc-notes] [           main] d.s.notesapp.GeneratedApplication        : The following 1 profile is active: "prod"
+2026-10-07T05:52:34.017+09:00  INFO [requestId:] 31623 --- [sc-notes] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-07T05:52:34.068+09:00  INFO [requestId:] 31623 --- [sc-notes] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 1 JPA repository interface.
+2026-10-07T05:52:34.131+09:00  INFO [requestId:] 31623 --- [sc-notes] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d9f566fd-9f01-3d1c-8ed7-218817618368
+2026-10-07T05:52:34.302+09:00  INFO [requestId:] 31623 --- [sc-notes] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2026-10-07T05:52:34.308+09:00  INFO [requestId:] 31623 --- [sc-notes] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-07T05:52:34.308+09:00  INFO [requestId:] 31623 --- [sc-notes] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.55]
+2026-10-07T05:52:34.319+09:00  INFO [requestId:] 31623 --- [sc-notes] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-10-07T05:52:34.320+09:00  INFO [requestId:] 31623 --- [sc-notes] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 759 ms
+2026-10-07T05:52:34.460+09:00  INFO [requestId:] 31623 --- [sc-notes] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-07T05:52:34.539+09:00  INFO [requestId:] 31623 --- [sc-notes] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:<isolated-fixture>/data/app user=SA
+2026-10-07T05:52:34.539+09:00  INFO [requestId:] 31623 --- [sc-notes] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-07T05:52:34.560+09:00  INFO [requestId:] 31623 --- [sc-notes] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:file:<isolated-fixture>/data/app (H2 2.3)
+2026-10-07T05:52:34.570+09:00  INFO [requestId:] 31623 --- [sc-notes] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2026-10-07T05:52:34.571+09:00  INFO [requestId:] 31623 --- [sc-notes] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.004s)
+2026-10-07T05:52:34.573+09:00  INFO [requestId:] 31623 --- [sc-notes] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-10-07T05:52:34.587+09:00  INFO [requestId:] 31623 --- [sc-notes] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2026-10-07T05:52:34.589+09:00  INFO [requestId:] 31623 --- [sc-notes] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - starter notes"
+2026-10-07T05:52:34.595+09:00  INFO [requestId:] 31623 --- [sc-notes] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "PUBLIC", now at version v1 (execution time 00:00.002s)
+2026-10-07T05:52:34.624+09:00  INFO [requestId:] 31623 --- [sc-notes] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-10-07T05:52:34.643+09:00  INFO [requestId:] 31623 --- [sc-notes] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.53.Final
+2026-10-07T05:52:34.656+09:00  INFO [requestId:] 31623 --- [sc-notes] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-10-07T05:52:34.766+09:00  INFO [requestId:] 31623 --- [sc-notes] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-07T05:52:34.791+09:00  INFO [requestId:] 31623 --- [sc-notes] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-07T05:52:35.069+09:00  INFO [requestId:] 31623 --- [sc-notes] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-07T05:52:35.076+09:00  INFO [requestId:] 31623 --- [sc-notes] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-07T05:52:35.394+09:00  INFO [requestId:] 31623 --- [sc-notes] [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-10-07T05:52:35.505+09:00  INFO [requestId:] 31623 --- [sc-notes] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name users
+2026-10-07T05:52:35.567+09:00  INFO [requestId:] 31623 --- [sc-notes] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-07T05:52:35.680+09:00  INFO [requestId:] 31623 --- [sc-notes] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 57103 (http) with context path '/'
+2026-10-07T05:52:35.690+09:00  INFO [requestId:] 31623 --- [sc-notes] [           main] d.s.notesapp.GeneratedApplication        : Started GeneratedApplication in 2.407 seconds (process running for 2.624)
+2026-10-07T05:52:35.728+09:00  INFO [requestId:] 31623 --- [sc-notes] [1-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-07T05:52:35.728+09:00  INFO [requestId:] 31623 --- [sc-notes] [1-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-07T05:52:35.728+09:00  INFO [requestId:] 31623 --- [sc-notes] [1-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-10-07T05:52:35.766+09:00  INFO [requestId:] 31623 --- [sc-notes] [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-07T05:52:35.768+09:00  INFO [requestId:] 31623 --- [sc-notes] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-10-07T05:52:35.771+09:00  INFO [requestId:] 31623 --- [sc-notes] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-07T05:52:35.772+09:00  INFO [requestId:] 31623 --- [sc-notes] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-07T05:52:35.781+09:00  INFO [requestId:] 31623 --- [sc-notes] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+===== default-prod / app.log =====
+2026-10-07T05:52:33.539+09:00  INFO [requestId:] 31623 --- [sc-notes] [main] d.s.notesapp.GeneratedApplication        : Starting GeneratedApplication v1.0.0 using Java 21.0.11 with PID 31623 (<generated-app>/backend/target/sc-notes.jar started by dk in <generated-app>)
+2026-10-07T05:52:33.540+09:00  INFO [requestId:] 31623 --- [sc-notes] [main] d.s.notesapp.GeneratedApplication        : The following 1 profile is active: "prod"
+2026-10-07T05:52:34.017+09:00  INFO [requestId:] 31623 --- [sc-notes] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-07T05:52:34.068+09:00  INFO [requestId:] 31623 --- [sc-notes] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 1 JPA repository interface.
+2026-10-07T05:52:34.131+09:00  INFO [requestId:] 31623 --- [sc-notes] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d9f566fd-9f01-3d1c-8ed7-218817618368
+2026-10-07T05:52:34.302+09:00  INFO [requestId:] 31623 --- [sc-notes] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2026-10-07T05:52:34.308+09:00  INFO [requestId:] 31623 --- [sc-notes] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-07T05:52:34.308+09:00  INFO [requestId:] 31623 --- [sc-notes] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.55]
+2026-10-07T05:52:34.319+09:00  INFO [requestId:] 31623 --- [sc-notes] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-10-07T05:52:34.320+09:00  INFO [requestId:] 31623 --- [sc-notes] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 759 ms
+2026-10-07T05:52:34.460+09:00  INFO [requestId:] 31623 --- [sc-notes] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-07T05:52:34.539+09:00  INFO [requestId:] 31623 --- [sc-notes] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:<isolated-fixture>/data/app user=SA
+2026-10-07T05:52:34.539+09:00  INFO [requestId:] 31623 --- [sc-notes] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-07T05:52:34.560+09:00  INFO [requestId:] 31623 --- [sc-notes] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:file:<isolated-fixture>/data/app (H2 2.3)
+2026-10-07T05:52:34.570+09:00  INFO [requestId:] 31623 --- [sc-notes] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2026-10-07T05:52:34.571+09:00  INFO [requestId:] 31623 --- [sc-notes] [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.004s)
+2026-10-07T05:52:34.573+09:00  INFO [requestId:] 31623 --- [sc-notes] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-10-07T05:52:34.587+09:00  INFO [requestId:] 31623 --- [sc-notes] [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2026-10-07T05:52:34.589+09:00  INFO [requestId:] 31623 --- [sc-notes] [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - starter notes"
+2026-10-07T05:52:34.595+09:00  INFO [requestId:] 31623 --- [sc-notes] [main] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "PUBLIC", now at version v1 (execution time 00:00.002s)
+2026-10-07T05:52:34.624+09:00  INFO [requestId:] 31623 --- [sc-notes] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-10-07T05:52:34.643+09:00  INFO [requestId:] 31623 --- [sc-notes] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.53.Final
+2026-10-07T05:52:34.656+09:00  INFO [requestId:] 31623 --- [sc-notes] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-10-07T05:52:34.766+09:00  INFO [requestId:] 31623 --- [sc-notes] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-07T05:52:34.791+09:00  INFO [requestId:] 31623 --- [sc-notes] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-07T05:52:35.069+09:00  INFO [requestId:] 31623 --- [sc-notes] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-07T05:52:35.076+09:00  INFO [requestId:] 31623 --- [sc-notes] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-07T05:52:35.394+09:00  INFO [requestId:] 31623 --- [sc-notes] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-10-07T05:52:35.505+09:00  INFO [requestId:] 31623 --- [sc-notes] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name users
+2026-10-07T05:52:35.567+09:00  INFO [requestId:] 31623 --- [sc-notes] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-07T05:52:35.680+09:00  INFO [requestId:] 31623 --- [sc-notes] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 57103 (http) with context path '/'
+2026-10-07T05:52:35.690+09:00  INFO [requestId:] 31623 --- [sc-notes] [main] d.s.notesapp.GeneratedApplication        : Started GeneratedApplication in 2.407 seconds (process running for 2.624)
+2026-10-07T05:52:35.728+09:00  INFO [requestId:] 31623 --- [sc-notes] [http-nio-127.0.0.1-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-07T05:52:35.728+09:00  INFO [requestId:] 31623 --- [sc-notes] [http-nio-127.0.0.1-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-07T05:52:35.728+09:00  INFO [requestId:] 31623 --- [sc-notes] [http-nio-127.0.0.1-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-10-07T05:52:35.766+09:00  INFO [requestId:] 31623 --- [sc-notes] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-07T05:52:35.768+09:00  INFO [requestId:] 31623 --- [sc-notes] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-10-07T05:52:35.771+09:00  INFO [requestId:] 31623 --- [sc-notes] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-07T05:52:35.772+09:00  INFO [requestId:] 31623 --- [sc-notes] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-07T05:52:35.781+09:00  INFO [requestId:] 31623 --- [sc-notes] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

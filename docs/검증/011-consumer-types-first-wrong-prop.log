@@ -1,0 +1,1 @@
+.sc-type-probe-6XKzec/wrong-prop/probe.ts(12,35): error TS2322: Type 'number' is not assignable to type 'string'.

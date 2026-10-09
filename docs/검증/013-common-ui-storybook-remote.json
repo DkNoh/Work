@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "origin": "https://macstudio.tailf9bcc5.ts.net:6007",
+  "checks": [
+    "HTTPS manager and public prop docs",
+    "Default story render and play completion",
+    "Secure context with active MSW worker"
+  ],
+  "errors": [],
+  "failedApiResponses": [],
+  "stories": 119,
+  "secureContext": true,
+  "serviceWorker": {
+    "scope": "https://macstudio.tailf9bcc5.ts.net:6007/",
+    "active": "activated"
+  }
+}

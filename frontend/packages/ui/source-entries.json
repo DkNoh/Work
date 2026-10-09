@@ -1,0 +1,13 @@
+{
+  "format": 1,
+  "entries": {
+    ".": "./src/index.ts",
+    "./styles": "./src/styles.scss",
+    "./tokens": "./src/tokens.scss",
+    "./table": "./src/table/index.ts",
+    "./charts": "./src/charts/index.ts",
+    "./editor": "./src/editor/index.ts",
+    "./board": "./src/board/index.ts",
+    "./image": "./src/image/index.ts"
+  }
+}

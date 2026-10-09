@@ -1,0 +1,37 @@
+
+> sc-framework@0.1.0 typecheck
+> npm run typecheck --workspace @sc/i18n && npm run typecheck --workspace @sc/excel && npm run typecheck --workspace @sc/ui && npm run typecheck --workspace @sc/runtime && npm run typecheck --workspace @sc/reference-app && npm run typecheck --workspace @sc/starter-app && npm run typecheck --workspace @sc/catalog
+
+
+> @sc/i18n@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/excel@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/ui@0.1.0 typecheck
+> npm run tokens:check && vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/ui@0.1.0 tokens:check
+> node scripts/generate-tokens.mjs --check
+
+Design token CSS matches tokens.ts.
+
+> @sc/runtime@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/reference-app@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/starter-app@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/catalog@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+

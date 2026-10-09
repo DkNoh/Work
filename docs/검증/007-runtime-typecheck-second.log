@@ -1,0 +1,17 @@
+
+> @sc/runtime@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+src/runtime.ts(48,11): error TS2322: Type 'ShallowRef<Identity | null, Identity | null>' is not assignable to type 'ShallowRef<TIdentity | null>'.
+  Type 'ShallowRef<Identity | null, Identity | null>' is not assignable to type 'Ref<TIdentity | null, TIdentity | null>'.
+    Types of property 'value' are incompatible.
+      Type 'Identity | null' is not assignable to type 'TIdentity | null'.
+        Type 'Identity' is not assignable to type 'TIdentity'.
+          'Identity' is assignable to the constraint of type 'TIdentity', but 'TIdentity' could be instantiated with a different subtype of constraint 'Identity'.
+npm error Lifecycle script `typecheck` failed with error:
+npm error code 2
+npm error path /Users/dk/Work/ScFramework/frontend/packages/runtime
+npm error workspace @sc/runtime@0.1.0
+npm error location /Users/dk/Work/ScFramework/frontend/packages/runtime
+npm error command failed
+npm error command sh -c vue-tsc --noEmit -p tsconfig.json

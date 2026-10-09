@@ -1,0 +1,214 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] ScFramework backend                                                [pom]
+[INFO] ScFramework core contracts                                         [jar]
+[INFO] ScFramework auto configuration                                     [jar]
+[INFO] ScFramework Spring Boot Starter                                    [jar]
+[INFO] ScFramework neutral reference app                                  [jar]
+[INFO] ScFramework minimal consumer app                                   [jar]
+[INFO] 
+[INFO] ----------------< dev.scframework:sc-framework-parent >-----------------
+[INFO] Building ScFramework backend 0.1.0-SNAPSHOT                        [1/6]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ sc-framework-parent ---
+[INFO] 
+[INFO] -------------------< dev.scframework:framework-core >-------------------
+[INFO] Building ScFramework core contracts 0.1.0-SNAPSHOT                 [2/6]
+[INFO]   from framework-core/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ framework-core ---
+[INFO] Deleting /Users/dk/Work/ScFramework/backend/framework-core/target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ framework-core ---
+[INFO] skip non existing resourceDirectory /Users/dk/Work/ScFramework/backend/framework-core/src/main/resources
+[INFO] skip non existing resourceDirectory /Users/dk/Work/ScFramework/backend/framework-core/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ framework-core ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 6 source files with javac [debug parameters release 21] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ framework-core ---
+[INFO] skip non existing resourceDirectory /Users/dk/Work/ScFramework/backend/framework-core/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ framework-core ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 2 source files with javac [debug parameters release 21] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ framework-core ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running dev.scframework.core.ApiErrorTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s -- in dev.scframework.core.ApiErrorTest
+[INFO] Running dev.scframework.core.audit.SecurityAuditEventTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in dev.scframework.core.audit.SecurityAuditEventTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ framework-core ---
+[INFO] Building jar: /Users/dk/Work/ScFramework/backend/framework-core/target/framework-core-0.1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --------------< dev.scframework:framework-autoconfigure >---------------
+[INFO] Building ScFramework auto configuration 0.1.0-SNAPSHOT             [3/6]
+[INFO]   from framework-autoconfigure/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ framework-autoconfigure ---
+[INFO] Deleting /Users/dk/Work/ScFramework/backend/framework-autoconfigure/target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ framework-autoconfigure ---
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ framework-autoconfigure ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 18 source files with javac [debug parameters release 21] to target/classes
+[INFO] /Users/dk/Work/ScFramework/backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/ScOpenApiAutoConfiguration.java: /Users/dk/Work/ScFramework/backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/ScOpenApiAutoConfiguration.java uses unchecked or unsafe operations.
+[INFO] /Users/dk/Work/ScFramework/backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/ScOpenApiAutoConfiguration.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ framework-autoconfigure ---
+[INFO] skip non existing resourceDirectory /Users/dk/Work/ScFramework/backend/framework-autoconfigure/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ framework-autoconfigure ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 8 source files with javac [debug parameters release 21] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ framework-autoconfigure ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running dev.scframework.autoconfigure.RequestIdFilterTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.062 s -- in dev.scframework.autoconfigure.RequestIdFilterTest
+[INFO] Running dev.scframework.autoconfigure.SecurityAuditTransactionTest
+02:02:20.700 [main] WARN dev.scframework.autoconfigure.audit.AuditWriteDiagnostics -- Security audit write failed; reasonCode=AUDIT_SINK_FAILURE
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.110 s -- in dev.scframework.autoconfigure.SecurityAuditTransactionTest
+[INFO] Running dev.scframework.autoconfigure.FeignConsumerConfigurationTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.081 s -- in dev.scframework.autoconfigure.FeignConsumerConfigurationTest
+[INFO] Running dev.scframework.autoconfigure.SecurityOverrideTest
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+WARNING: A Java agent has been loaded dynamically (/Users/dk/.m2/repository/net/bytebuddy/byte-buddy-agent/1.17.8/byte-buddy-agent-1.17.8.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+02:02:21.337 [main] WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebApplicationContext -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'scRequiredUserDetailsService' defined in dev.scframework.autoconfigure.ScSecurityAutoConfiguration: Failed to instantiate [org.springframework.security.core.userdetails.UserDetailsService]: Factory method 'scRequiredUserDetailsService' threw exception with message: Supply a UserDetailsService; generated/default passwords are disabled
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.515 s -- in dev.scframework.autoconfigure.SecurityOverrideTest
+[INFO] Running dev.scframework.autoconfigure.AuditAutoConfigurationTest
+02:02:21.429 [main] WARN org.springframework.context.annotation.AnnotationConfigApplicationContext -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'scSecurityAuditPublisher' defined in dev.scframework.autoconfigure.ScAuditAutoConfiguration: Unsatisfied dependency expressed through method 'scSecurityAuditPublisher' parameter 0: No qualifying bean of type 'dev.scframework.core.audit.SecurityAuditSink' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.137 s -- in dev.scframework.autoconfigure.AuditAutoConfigurationTest
+[INFO] Running dev.scframework.autoconfigure.HealthReadinessTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.028 s -- in dev.scframework.autoconfigure.HealthReadinessTest
+[INFO] Running dev.scframework.autoconfigure.QuerydslAutoConfigurationTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.077 s -- in dev.scframework.autoconfigure.QuerydslAutoConfigurationTest
+[INFO] Running dev.scframework.autoconfigure.SecretFileUsersTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.130 s -- in dev.scframework.autoconfigure.SecretFileUsersTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 20, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ framework-autoconfigure ---
+[INFO] Building jar: /Users/dk/Work/ScFramework/backend/framework-autoconfigure/target/framework-autoconfigure-0.1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] -----------< dev.scframework:framework-spring-boot-starter >------------
+[INFO] Building ScFramework Spring Boot Starter 0.1.0-SNAPSHOT            [4/6]
+[INFO]   from framework-spring-boot-starter/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ framework-spring-boot-starter ---
+[INFO] Deleting /Users/dk/Work/ScFramework/backend/framework-spring-boot-starter/target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ framework-spring-boot-starter ---
+[INFO] skip non existing resourceDirectory /Users/dk/Work/ScFramework/backend/framework-spring-boot-starter/src/main/resources
+[INFO] skip non existing resourceDirectory /Users/dk/Work/ScFramework/backend/framework-spring-boot-starter/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ framework-spring-boot-starter ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ framework-spring-boot-starter ---
+[INFO] skip non existing resourceDirectory /Users/dk/Work/ScFramework/backend/framework-spring-boot-starter/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ framework-spring-boot-starter ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ framework-spring-boot-starter ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ framework-spring-boot-starter ---
+[WARNING] JAR will be empty - no content was marked for inclusion!
+[INFO] Building jar: /Users/dk/Work/ScFramework/backend/framework-spring-boot-starter/target/framework-spring-boot-starter-0.1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] ------------------< dev.scframework:sc-reference-app >------------------
+[INFO] Building ScFramework neutral reference app 0.1.0-SNAPSHOT          [5/6]
+[INFO]   from reference-app/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ sc-reference-app ---
+[INFO] Deleting /Users/dk/Work/ScFramework/backend/reference-app/target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ sc-reference-app ---
+[INFO] Copying 6 resources from src/main/resources to target/classes
+[INFO] Copying 16 resources from ../../frontend/apps/reference-app/dist to target/classes/static
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ sc-reference-app ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 44 source files with javac [debug parameters release 21] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ sc-reference-app ---
+[INFO] skip non existing resourceDirectory /Users/dk/Work/ScFramework/backend/reference-app/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ sc-reference-app ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 9 source files with javac [debug parameters release 21] to target/test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/dk/Work/ScFramework/backend/reference-app/src/test/java/dev/scframework/reference/reports/RequirementReportIntegrationTest.java:[188,95] method nullsLast in interface java.util.Comparator<T> cannot be applied to given types;
+  required: java.util.Comparator<? super T>
+  found:    direction.[...]der()
+  reason: inference variable T has incompatible upper bounds T,T,java.lang.Comparable<? super T>,java.lang.Comparable<? super T>,java.lang.Object
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for ScFramework backend 0.1.0-SNAPSHOT:
+[INFO] 
+[INFO] ScFramework backend ................................ SUCCESS [  0.038 s]
+[INFO] ScFramework core contracts ......................... SUCCESS [  0.968 s]
+[INFO] ScFramework auto configuration ..................... SUCCESS [  2.160 s]
+[INFO] ScFramework Spring Boot Starter .................... SUCCESS [  0.040 s]
+[INFO] ScFramework neutral reference app .................. FAILURE [  1.288 s]
+[INFO] ScFramework minimal consumer app ................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.631 s
+[INFO] Finished at: 2026-10-07T02:02:23+09:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.14.1:testCompile (default-testCompile) on project sc-reference-app: Compilation failure
+[ERROR] /Users/dk/Work/ScFramework/backend/reference-app/src/test/java/dev/scframework/reference/reports/RequirementReportIntegrationTest.java:[188,95] method nullsLast in interface java.util.Comparator<T> cannot be applied to given types;
+[ERROR]   required: java.util.Comparator<? super T>
+[ERROR]   found:    direction.[...]der()
+[ERROR]   reason: inference variable T has incompatible upper bounds T,T,java.lang.Comparable<? super T>,java.lang.Comparable<? super T>,java.lang.Object
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :sc-reference-app

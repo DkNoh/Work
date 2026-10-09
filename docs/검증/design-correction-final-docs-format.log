@@ -1,0 +1,31 @@
+README.md 34ms (unchanged)
+docs/질의/README.md 26ms (unchanged)
+docs/질의/디자인.md 16ms (unchanged)
+docs/질의/디자인교정.md 20ms
+docs/질의/프레임워크.md 12ms (unchanged)
+docs/질의/개발단계.md 21ms (unchanged)
+docs/질의/012-운영모듈완료.md 7ms (unchanged)
+docs/folder-structure.md 41ms (unchanged)
+docs/maintenance-guide.md 64ms (unchanged)
+docs/api.md 29ms (unchanged)
+docs/operations.md 29ms (unchanged)
+docs/질의/007-서버설계.md 31ms (unchanged)
+docs/검증/design-correction-final-summary.json 10ms (unchanged)
+
+exitCode=0
+
+SCOPED_FINAL_CHECK
+Checking formatting...
+[warn] docs/검증/design-correction-final-docs-check.json
+[warn] Code style issues found in the above file. Run Prettier with --write to fix.
+
+exitCode=1
+
+REPORT_JSON_FORMAT_CORRECTION
+docs/검증/design-correction-final-docs-check.json 9ms
+
+SCOPED_FINAL_CHECK
+Checking formatting...
+All matched files use Prettier code style!
+
+exitCode=0

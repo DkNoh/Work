@@ -1,0 +1,146 @@
+name: Compare approved Linux visual baseline
+
+on:
+  workflow_dispatch:
+    inputs:
+      baseline_run_id:
+        description: "Same-repository run ID containing the reviewed Linux baseline artifact"
+        required: true
+        type: string
+      artifact_name:
+        description: "Exact immutable artifact name from that run"
+        required: true
+        type: string
+      manifest_sha256:
+        description: "Reviewed manifest.json SHA-256 (64 hexadecimal characters)"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  visual:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      SC_VISUAL: "1"
+      SC_VISUAL_PROFILE: linux-chromium
+      SC_VISUAL_RUN_ID: ci-${{ github.run_id }}
+      SC_BASELINE_RUN_ID: ${{ inputs.baseline_run_id }}
+      SC_BASELINE_ARTIFACT_NAME: ${{ inputs.artifact_name }}
+      SC_BASELINE_MANIFEST_SHA256: ${{ inputs.manifest_sha256 }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.16.0
+          cache: npm
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+          cache: maven
+          cache-dependency-path: backend/**/pom.xml
+      - name: Validate explicit baseline inputs
+        shell: bash
+        run: |
+          node --input-type=module <<'NODE'
+          const { SC_BASELINE_RUN_ID: runId, SC_BASELINE_ARTIFACT_NAME: name, SC_BASELINE_MANIFEST_SHA256: digest } = process.env;
+          if (!/^[1-9][0-9]{0,19}$/.test(runId ?? "") || !Number.isSafeInteger(Number(runId))) throw new Error("baseline_run_id must be a positive safe numeric run ID.");
+          if (!/^[A-Za-z0-9][A-Za-z0-9._-]{0,99}$/.test(name ?? "")) throw new Error("artifact_name must be one safe artifact name without path separators.");
+          if (!/^[a-fA-F0-9]{64}$/.test(digest ?? "")) throw new Error("manifest_sha256 must contain exactly 64 hexadecimal characters.");
+          console.log("Explicit same-repository baseline inputs validated.");
+          NODE
+      - name: Use the pinned npm version
+        run: npm install --global npm@11.13.0
+      - name: Build and verify both fresh application JARs
+        run: ./scripts/build.sh -ntp
+      - name: Install the repository-pinned Chromium and system dependencies
+        run: npx --no-install playwright install --with-deps chromium
+      - name: Prepare an empty fixed Linux baseline destination
+        shell: bash
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from "node:fs/promises";
+          const directory = "frontend/e2e/visual.spec.ts-snapshots/linux-chromium";
+          await fs.rm(directory, { recursive: true, force: true });
+          await fs.mkdir(directory, { recursive: true });
+          NODE
+      - name: Download the reviewed artifact from the explicit same-repository run
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ inputs.artifact_name }}
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: ${{ inputs.baseline_run_id }}
+          path: frontend/e2e/visual.spec.ts-snapshots/linux-chromium
+      - name: Verify reviewed manifest digest and Linux execution environment
+        shell: bash
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from "node:fs/promises";
+          import crypto from "node:crypto";
+          import os from "node:os";
+          const filename = "frontend/e2e/visual.spec.ts-snapshots/linux-chromium/manifest.json";
+          const bytes = await fs.readFile(filename);
+          const digest = crypto.createHash("sha256").update(bytes).digest("hex");
+          if (digest !== process.env.SC_BASELINE_MANIFEST_SHA256.toLowerCase()) throw new Error("Reviewed manifest SHA-256 does not match the downloaded file.");
+          const manifest = JSON.parse(bytes.toString("utf8"));
+          const environment = manifest.environment;
+          if (manifest.schemaVersion !== 1 || environment?.profile !== "linux-chromium" || environment.platform !== "linux" || environment.browser !== "chromium") throw new Error("The approved baseline must be a Linux Chromium profile; macOS baselines cannot be reused.");
+          if (process.platform !== "linux" || environment.architecture !== process.arch || environment.os?.release !== os.release() || environment.os?.version !== os.version()) throw new Error("Approved OS/kernel/architecture differs from this runner. Review a baseline in the same environment; do not auto-update it.");
+          const installed = JSON.parse(await fs.readFile("node_modules/@playwright/test/package.json", "utf8"));
+          if (installed.version !== "1.63.0" || environment.playwrightVersion !== installed.version) throw new Error("The installed and approved Playwright versions must both be 1.63.0.");
+          console.log("Reviewed manifest digest and Linux/OS/Playwright profile verified.");
+          NODE
+      - name: Verify the exact 16 approved PNGs and their hashes
+        run: node scripts/verify-visual-baselines.mjs --profile linux-chromium
+      - name: Compare both fresh JAR applications without updating snapshots
+        run: npm run test:e2e -- visual.spec.ts --update-snapshots=none
+      - name: Keep only public UI environment metadata
+        if: always()
+        shell: bash
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from "node:fs/promises";
+          import os from "node:os";
+          import path from "node:path";
+          const runId = process.env.SC_VISUAL_RUN_ID;
+          if (!/^ci-[0-9]+$/.test(runId ?? "")) throw new Error("Unexpected visual CI evidence run ID.");
+          const destination = "frontend/test-results/visual-environment";
+          await fs.mkdir(destination, { recursive: true });
+          let playwrightVersion = null;
+          try { playwrightVersion = JSON.parse(await fs.readFile("node_modules/@playwright/test/package.json", "utf8")).version; }
+          catch (error) { if (error.code !== "ENOENT") throw error; }
+          await fs.writeFile(`${destination}/runner.json`, JSON.stringify({ profile: "linux-chromium", platform: process.platform, architecture: process.arch, os: { release: os.release(), version: os.version() }, nodeVersion: process.version, playwrightVersion }, null, 2) + "\n");
+          for (const application of ["reference", "starter"]) {
+            for (const width of [1366, 390]) {
+              const name = `${application}-${width}.json`;
+              const filename = path.join(".runtime/visual/linux-chromium", runId, name);
+              let evidence;
+              try { evidence = JSON.parse(await fs.readFile(filename, "utf8")); }
+              catch (error) { if (error.code === "ENOENT") continue; throw error; }
+              const e = evidence.environment;
+              const font = e.font;
+              const metadata = { application, width, environment: { profile: e.profile, platform: e.platform, architecture: e.architecture, os: { release: e.os.release, version: e.os.version }, browser: e.browser, browserVersion: e.browserVersion, playwrightVersion: e.playwrightVersion, settings: { locale: e.settings.locale, timezoneId: e.settings.timezoneId, deviceScaleFactor: e.settings.deviceScaleFactor, colorScheme: e.settings.colorScheme, reducedMotion: e.settings.reducedMotion }, font: { family: font.family, size: font.size, weight: font.weight, latinWidth: font.latinWidth, koreanWidth: font.koreanWidth, devicePixelRatio: font.devicePixelRatio, userAgent: font.userAgent } } };
+              await fs.writeFile(path.join(destination, name), JSON.stringify(metadata, null, 2) + "\n");
+            }
+          }
+          NODE
+      - name: Retain comparison evidence only, never publish a baseline
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-evidence-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            frontend/test-results/**/*-actual.png
+            frontend/test-results/**/*-diff.png
+            frontend/test-results/visual-environment/*.json
+          if-no-files-found: ignore
+          include-hidden-files: false
+          overwrite: false
+          retention-days: 7

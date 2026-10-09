@@ -1,0 +1,1030 @@
+
+> sc-framework@0.1.0 test:stories
+> npm run test:stories --workspace @sc/catalog
+
+
+> @sc/catalog@0.1.0 test:stories
+> vitest run --config vitest.config.ts
+
+│
+●  Storybook collects completely anonymous usage telemetry. We use it to
+│  shape Storybook's roadmap and prioritize features. You can learn more,
+│  including how to opt out, at ]8;;https://storybook.js.org/telemetryhttps://storybook.js.org/telemetry]8;;
+
+ RUN  v4.1.11 /Users/dk/Work/ScFramework/frontend/apps/catalog
+
+4:13:23 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:23 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:23 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:23 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:23 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:23 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:23 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:23 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:23 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:23 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:23 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:23 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:23 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:23 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:23 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:23 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:23 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:23 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:23 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:23 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:23 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:23 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:23 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:23 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:23 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:24 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:24 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:24 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:24 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:24 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:24 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:24 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:24 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:25 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:25 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:25 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:25 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:25 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:25 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:25 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:25 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+ ❯ |storybook (chromium)| src/ScSortableBoard.stories.ts (5 tests | 1 failed) 1578ms
+   × Pointer Sensor Move 1052ms
+4:13:25 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:25 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:25 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+ ❯ |storybook (chromium)| src/ScImageAnnotator.stories.ts (7 tests | 1 failed) 2152ms
+   × Move Resize And Zoom 1032ms
+4:13:25 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:25 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:25 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:26 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:26 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:26 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:26 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:26 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:26 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:26 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:13:26 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |storybook (chromium)| src/ScImageAnnotator.stories.ts > Move Resize And Zoom
+Error: 
+[34mClick to debug the error directly in Storybook: http://localhost:6006/?path=/story/확장-ui-scimageannotator--move-resize-and-zoom&addonPanel=storybook/interactions/panel[39m
+
+expect(element).toHaveValue(1.25)
+
+Expected the element to have value:
+  1.25
+Received:
+  1
+
+Ignored nodes: comments, script, style
+<html
+  lang="en"
+>
+  <head>
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+    <meta
+      charset="UTF-8"
+    />
+    
+    
+    <link
+      href="/__vitest__/favicon.svg"
+      rel="icon"
+      type="image/svg+xml"
+    />
+    
+    
+    <meta
+      content="width=device-width, initial-scale=1.0"
+      name="viewport"
+    />
+    
+    
+    <title>
+      Vitest Browser Tester
+    </title>
+    
+    
+    
+    
+    <link
+      crossorigin=""
+      href="/__vitest_browser__/utils-BsFW67Gk.js"
+      rel="modulepreload"
+    />
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    <base
+      target="_parent"
+    />
+    
+
+
+    
+
+
+    
+
+  </head>
+  
+  
+  <body>
+    <div
+      class="sb-preparing-story sb-wrapper"
+    >
+      
+  
+      <div
+        class="sb-loader"
+      />
+      
+
+    </div>
+    
+
+
+    <div
+      class="sb-preparing-docs sb-wrapper"
+    >
+      
+  
+      <div
+        class="sb-previewBlock"
+      >
+        
+    
+        <div
+          class="sb-previewBlock_header"
+        >
+          
+      
+          <div
+            class="sb-previewBlock_icon"
+          />
+          
+      
+          <div
+            class="sb-previewBlock_icon"
+          />
+          
+      
+          <div
+            class="sb-previewBlock_icon"
+          />
+          
+      
+          <div
+            class="sb-previewBlock_icon"
+          />
+          
+    
+        </div>
+        
+    
+        <div
+          class="sb-previewBlock_body"
+        >
+          
+      
+          <div
+            class="sb-loader"
+          />
+          
+    
+        </div>
+        
+  
+      </div>
+      
+  
+      <table
+        aria-hidden="true"
+        class="sb-argstableBlock"
+      >
+        
+    
+        <thead
+          class="sb-argstableBlock-head"
+        >
+          
+      
+          <tr>
+            
+        
+            <th>
+              <span>
+                Name
+              </span>
+            </th>
+            
+        
+            <th>
+              <span>
+                Description
+              </span>
+            </th>
+            
+        
+            <th>
+              <span>
+                Default
+              </span>
+            </th>
+            
+        
+            <th>
+              <span>
+                Control 
+              </span>
+            </th>
+            
+      
+          </tr>
+          
+    
+        </thead>
+        
+    
+        <tbody
+          class="sb-argstableBlock-body"
+        >
+          
+      
+          <tr>
+            
+        
+            <td>
+              <span>
+                propertyName
+              </span>
+              <span
+                title="Required"
+              >
+                *
+              </span>
+            </td>
+            
+        
+            <td>
+              
+          
+              <div>
+                <span>
+                  This is a short description
+                </span>
+              </div>
+              
+          
+              <div
+                class="sb-argstableBlock-summary"
+              >
+                
+            
+                <div>
+                  <span
+                    class="sb-argstableBlock-code"
+                  >
+                    summary
+                  </span>
+                </div>
+                
+          
+              </div>
+              
+        
+            </td>
+            
+        
+            <td>
+              
+          
+              <div>
+                <span
+                  class="sb-argstableBlock-code"
+                >
+                  defaultValue
+                </span>
+              </div>
+              
+        
+            </td>
+            
+        
+            <td>
+              <button>
+                Set string
+              </button>
+            </td>
+            
+      
+          </tr>
+          
+      
+          <tr>
+            
+        
+            <td>
+              <span>
+                propertyName
+              </span>
+              <span>
+                *
+              </span>
+            </td>
+            
+        
+            <td>
+              
+          
+              <div>
+                <span>
+                  This is a short description
+                </span>
+              </div>
+              
+          
+              <div
+                class="sb-argstableBlock-summary"
+              >
+                
+            
+                <div>
+                  <span
+                    class="sb-argstableBlock-code"
+                  >
+                    summary
+                  </span>
+                </div>
+                
+          
+              </div>
+              
+        
+            </td>
+            
+        
+            <td>
+              
+          
+              <div>
+                <span
+                  class="sb-argstableBlock-code"
+                >
+                  defaultValue
+                </span>
+              </div>
+              
+        
+            </td>
+            
+        
+            <td>
+              <button>
+                Set string
+              </button>
+            </td>
+            
+      
+          </tr>
+          
+      
+          <tr>
+            
+        
+            <td>
+              <span>
+                propertyName
+              </span>
+              <span>
+                *
+              </span>
+            </td>
+            
+        
+            <td>
+              
+          
+              <div>
+                <span>
+                  This is a short description
+                </span>
+              </div>
+              
+          
+              <div
+                class="sb-argstableBlock-summary"
+              >
+                
+            
+                <div>
+                  <span
+                    class="sb-argstableBlock-code"
+                  >
+                    summary
+                  </span>
+                </div>
+                
+          
+              </div>
+              
+        
+            </td>
+            
+        
+            <td>
+              
+          
+              <div>
+                <span
+                  class="sb-argstableBlock-code"
+                >
+                  defaultValue
+                </span>
+              </div>
+              
+        
+            </td>
+            
+        
+            <td>
+              <button>
+                Set string
+              </button>
+            </td>
+            
+      
+          </tr>
+          
+    
+        </tbody>
+        
+  
+      </table>
+      
+
+    </div>
+    
+
+
+    <div
+      class="sb-nopreview sb-wrapper"
+    >
+      
+  
+      <div
+        class="sb-nopreview_main"
+      >
+        
+    
+        <h1
+          class="sb-nopreview_heading sb-heading"
+        >
+          No Preview
+        </h1>
+        
+    
+        <p>
+          Sorry, but you either have no stories or none are selected somehow.
+        </p>
+        
+    
+        <ul>
+          
+      
+          <li>
+            Please check the Storybook config.
+          </li>
+          
+      
+          <li>
+ ...
+ ❯ Proxy.expectWrapper ../../../node_modules/storybook/dist/test/index.js:15100:16
+ ❯ Proxy.<anonymous> ../../../node_modules/storybook/dist/test/index.js:14620:17
+ ❯ Proxy.methodWrapper ../../../node_modules/storybook/dist/test/index.js:9105:24
+ ❯ Instrumenter.invoke ../../../node_modules/storybook/dist/instrumenter/index.js:322:22
+ ❯ Instrumenter.intercept ../../../node_modules/storybook/dist/instrumenter/index.js:243:139
+ ❯ Instrumenter.track ../../../node_modules/storybook/dist/instrumenter/index.js:238:378
+ ❯ Proxy.toHaveValue ../../../node_modules/storybook/dist/instrumenter/index.js:224:263
+ ❯ toHaveValue src/ScImageAnnotator.stories.ts:114:37
+    112|     zoom.focus();
+    113|     await userEvent.keyboard("{ArrowRight}");
+    114|     await waitFor(() => expect(zoom).toHaveValue("1.25"));
+       |                                     ^
+    115|     await waitFor(() => expect(node.getBoundingClientRect().width).toB…
+    116|     await expect(readBox()).toEqual({ x: 0.1, y: 0.1, width: 0.25, hei…
+ ❯ ../../../node_modules/storybook/dist/instrumenter/index.js:317:20
+ ❯ runWithExpensiveErrorDiagnosticsDisabled ../../../node_modules/storybook/dist/test/index.js:16206:59
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  |storybook (chromium)| src/ScSortableBoard.stories.ts > Pointer Sensor Move
+Error: 
+[34mClick to debug the error directly in Storybook: http://localhost:6006/?path=/story/확장-ui-scsortableboard--pointer-sensor-move&addonPanel=storybook/interactions/panel[39m
+
+expect(element).toHaveTextContent()
+
+Expected element to have text content:
+  "toColumnId":"second"
+Received:
+
+
+Ignored nodes: comments, script, style
+<html
+  lang="en"
+>
+  <head>
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+    <meta
+      charset="UTF-8"
+    />
+    
+    
+    <link
+      href="/__vitest__/favicon.svg"
+      rel="icon"
+      type="image/svg+xml"
+    />
+    
+    
+    <meta
+      content="width=device-width, initial-scale=1.0"
+      name="viewport"
+    />
+    
+    
+    <title>
+      Vitest Browser Tester
+    </title>
+    
+    
+    
+    
+    <link
+      crossorigin=""
+      href="/__vitest_browser__/utils-BsFW67Gk.js"
+      rel="modulepreload"
+    />
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    <base
+      target="_parent"
+    />
+    
+
+
+    
+
+
+    
+
+  </head>
+  
+  
+  <body>
+    <div
+      class="sb-preparing-story sb-wrapper"
+    >
+      
+  
+      <div
+        class="sb-loader"
+      />
+      
+
+    </div>
+    
+
+
+    <div
+      class="sb-preparing-docs sb-wrapper"
+    >
+      
+  
+      <div
+        class="sb-previewBlock"
+      >
+        
+    
+        <div
+          class="sb-previewBlock_header"
+        >
+          
+      
+          <div
+            class="sb-previewBlock_icon"
+          />
+          
+      
+          <div
+            class="sb-previewBlock_icon"
+          />
+          
+      
+          <div
+            class="sb-previewBlock_icon"
+          />
+          
+      
+          <div
+            class="sb-previewBlock_icon"
+          />
+          
+    
+        </div>
+        
+    
+        <div
+          class="sb-previewBlock_body"
+        >
+          
+      
+          <div
+            class="sb-loader"
+          />
+          
+    
+        </div>
+        
+  
+      </div>
+      
+  
+      <table
+        aria-hidden="true"
+        class="sb-argstableBlock"
+      >
+        
+    
+        <thead
+          class="sb-argstableBlock-head"
+        >
+          
+      
+          <tr>
+            
+        
+            <th>
+              <span>
+                Name
+              </span>
+            </th>
+            
+        
+            <th>
+              <span>
+                Description
+              </span>
+            </th>
+            
+        
+            <th>
+              <span>
+                Default
+              </span>
+            </th>
+            
+        
+            <th>
+              <span>
+                Control 
+              </span>
+            </th>
+            
+      
+          </tr>
+          
+    
+        </thead>
+        
+    
+        <tbody
+          class="sb-argstableBlock-body"
+        >
+          
+      
+          <tr>
+            
+        
+            <td>
+              <span>
+                propertyName
+              </span>
+              <span
+                title="Required"
+              >
+                *
+              </span>
+            </td>
+            
+        
+            <td>
+              
+          
+              <div>
+                <span>
+                  This is a short description
+                </span>
+              </div>
+              
+          
+              <div
+                class="sb-argstableBlock-summary"
+              >
+                
+            
+                <div>
+                  <span
+                    class="sb-argstableBlock-code"
+                  >
+                    summary
+                  </span>
+                </div>
+                
+          
+              </div>
+              
+        
+            </td>
+            
+        
+            <td>
+              
+          
+              <div>
+                <span
+                  class="sb-argstableBlock-code"
+                >
+                  defaultValue
+                </span>
+              </div>
+              
+        
+            </td>
+            
+        
+            <td>
+              <button>
+                Set string
+              </button>
+            </td>
+            
+      
+          </tr>
+          
+      
+          <tr>
+            
+        
+            <td>
+              <span>
+                propertyName
+              </span>
+              <span>
+                *
+              </span>
+            </td>
+            
+        
+            <td>
+              
+          
+              <div>
+                <span>
+                  This is a short description
+                </span>
+              </div>
+              
+          
+              <div
+                class="sb-argstableBlock-summary"
+              >
+                
+            
+                <div>
+                  <span
+                    class="sb-argstableBlock-code"
+                  >
+                    summary
+                  </span>
+                </div>
+                
+          
+              </div>
+              
+        
+            </td>
+            
+        
+            <td>
+              
+          
+              <div>
+                <span
+                  class="sb-argstableBlock-code"
+                >
+                  defaultValue
+                </span>
+              </div>
+              
+        
+            </td>
+            
+        
+            <td>
+              <button>
+                Set string
+              </button>
+            </td>
+            
+      
+          </tr>
+          
+      
+          <tr>
+            
+        
+            <td>
+              <span>
+                propertyName
+              </span>
+              <span>
+                *
+              </span>
+            </td>
+            
+        
+            <td>
+              
+          
+              <div>
+                <span>
+                  This is a short description
+                </span>
+              </div>
+              
+          
+              <div
+                class="sb-argstableBlock-summary"
+              >
+                
+            
+                <div>
+                  <span
+                    class="sb-argstableBlock-code"
+                  >
+                    summary
+                  </span>
+                </div>
+                
+          
+              </div>
+              
+        
+            </td>
+            
+        
+            <td>
+              
+          
+              <div>
+                <span
+                  class="sb-argstableBlock-code"
+                >
+                  defaultValue
+                </span>
+              </div>
+              
+        
+            </td>
+            
+        
+            <td>
+              <button>
+                Set string
+              </button>
+            </td>
+            
+      
+          </tr>
+          
+    
+        </tbody>
+        
+  
+      </table>
+      
+
+    </div>
+    
+
+
+    <div
+      class="sb-nopreview sb-wrapper"
+    >
+      
+  
+      <div
+        class="sb-nopreview_main"
+      >
+        
+    
+        <h1
+          class="sb-nopreview_heading sb-heading"
+        >
+          No Preview
+        </h1>
+        
+    
+        <p>
+          Sorry, but you either have no stories or none are selected somehow.
+        </p>
+        
+    
+        <ul>
+          
+      
+          <li>
+            Please check the Storybook config.
+          </li>
+          
+      
+          <li>
+ ...
+ ❯ Proxy.expectWrapper ../../../node_modules/storybook/dist/test/index.js:15100:16
+ ❯ Proxy.<anonymous> ../../../node_modules/storybook/dist/test/index.js:14620:17
+ ❯ Proxy.methodWrapper ../../../node_modules/storybook/dist/test/index.js:9105:24
+ ❯ Instrumenter.invoke ../../../node_modules/storybook/dist/instrumenter/index.js:322:22
+ ❯ Instrumenter.intercept ../../../node_modules/storybook/dist/instrumenter/index.js:243:139
+ ❯ Instrumenter.track ../../../node_modules/storybook/dist/instrumenter/index.js:238:378
+ ❯ Proxy.toHaveTextContent ../../../node_modules/storybook/dist/instrumenter/index.js:224:263
+ ❯ toHaveTextContent src/ScSortableBoard.stories.ts:72:60
+     70|     ]);
+     71|     await waitFor(() =>
+     72|       expect(canvas.getByRole("status", { name: "이동 의도" })).toHaveText…
+       |                                                            ^
+     73|         '"toColumnId":"second"',
+     74|       ),
+ ❯ ../../../node_modules/storybook/dist/instrumenter/index.js:317:20
+ ❯ runWithExpensiveErrorDiagnosticsDisabled ../../../node_modules/storybook/dist/test/index.js:16206:59
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  2 failed | 26 passed (28)
+      Tests  2 failed | 93 passed (95)
+   Start at  04:13:20
+   Duration  6.19s (transform 0ms, setup 31.62s, import 4.67s, tests 19.22s, environment 0ms)
+
+npm error Lifecycle script `test:stories` failed with error:
+npm error code 1
+npm error path /Users/dk/Work/ScFramework/frontend/apps/catalog
+npm error workspace @sc/catalog@0.1.0
+npm error location /Users/dk/Work/ScFramework/frontend/apps/catalog
+npm error command failed
+npm error command sh -c vitest run --config vitest.config.ts

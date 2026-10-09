@@ -1,0 +1,8 @@
+PASS invalid and Reference profiles rejected before runtime creation
+PASS default Starter endpoint/root absent and launcher clean shutdown
+PASS actual launcher/session/CSRF/storage/Swagger profile file-storage
+PASS actual launcher/session/CSRF/storage/Swagger profile dev,file-storage
+PASS actual launcher/session/CSRF/storage/Swagger profile prod,file-storage
+PASS actual launcher/session/CSRF/storage/Swagger profile audit,file-storage
+PASS actual launcher/session/CSRF/storage/Swagger profile dev,audit,file-storage
+PASS actual launcher/session/CSRF/storage/Swagger profile prod,audit,file-storage

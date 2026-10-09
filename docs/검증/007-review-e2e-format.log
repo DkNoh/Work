@@ -1,0 +1,4 @@
+frontend/apps/reference-app/src/features/requirements/RequirementWorkspace.vue 104ms
+frontend/e2e/support/requirements.ts 8ms (unchanged)
+frontend/e2e/requirements.spec.ts 23ms (unchanged)
+frontend/e2e/requirements-review.spec.ts 10ms

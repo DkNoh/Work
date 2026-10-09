@@ -1,0 +1,373 @@
+{
+  "format": 1,
+  "result": "passed",
+  "cases": [
+    {
+      "name": "public-consumer-imports",
+      "command": [
+        "node",
+        "scripts/check-ui-boundaries.mjs",
+        "--root",
+        "<temporary-fixture>"
+      ],
+      "expectedExit": 0,
+      "actualExit": 0,
+      "expectedMessage": "공개 UI/소비 앱 경계:",
+      "passed": true,
+      "signal": null,
+      "output": "공개 UI/소비 앱 경계: import 9개 확인"
+    },
+    {
+      "name": "shared-same-owner-private-and-other-public",
+      "command": [
+        "node",
+        "scripts/check-ui-boundaries.mjs",
+        "--root",
+        "<temporary-fixture>"
+      ],
+      "expectedExit": 0,
+      "actualExit": 0,
+      "expectedMessage": "공개 UI/소비 앱 경계:",
+      "passed": true,
+      "signal": null,
+      "output": "공개 UI/소비 앱 경계: import 11개 확인"
+    },
+    {
+      "name": "consumer-private-alias-static",
+      "command": [
+        "node",
+        "scripts/check-ui-boundaries.mjs",
+        "--root",
+        "<temporary-fixture>"
+      ],
+      "expectedExit": "nonzero",
+      "actualExit": 1,
+      "expectedMessage": "@fixture/ui의 공개 export를 사용하세요:",
+      "passed": true,
+      "signal": null,
+      "output": "file:///Users/dk/Work/ScFramework/scripts/check-ui-boundaries.mjs:134\nif (violations.length) throw new Error(violations.join(\"\\n\"));\n                             ^\n\nError: frontend/apps/alpha/src/probe.ts: @fixture/ui의 공개 export를 사용하세요: @fixture/ui/src/private/Button\n    at file:///Users/dk/Work/ScFramework/scripts/check-ui-boundaries.mjs:134:30\n\nNode.js v24.16.0"
+    },
+    {
+      "name": "consumer-runtime-private-export",
+      "command": [
+        "node",
+        "scripts/check-ui-boundaries.mjs",
+        "--root",
+        "<temporary-fixture>"
+      ],
+      "expectedExit": "nonzero",
+      "actualExit": 1,
+      "expectedMessage": "@fixture/runtime의 공개 export를 사용하세요:",
+      "passed": true,
+      "signal": null,
+      "output": "file:///Users/dk/Work/ScFramework/scripts/check-ui-boundaries.mjs:134\nif (violations.length) throw new Error(violations.join(\"\\n\"));\n                             ^\n\nError: frontend/apps/alpha/src/probe.ts: @fixture/runtime의 공개 export를 사용하세요: @fixture/runtime/src/index\n    at file:///Users/dk/Work/ScFramework/scripts/check-ui-boundaries.mjs:134:30\n\nNode.js v24.16.0"
+    },
+    {
+      "name": "consumer-private-relative-dynamic",
+      "command": [
+        "node",
+        "scripts/check-ui-boundaries.mjs",
+        "--root",
+        "<temporary-fixture>"
+      ],
+      "expectedExit": "nonzero",
+      "actualExit": 1,
+      "expectedMessage": "@fixture/ui의 공개 export를 사용하세요:",
+      "passed": true,
+      "signal": null,
+      "output": "file:///Users/dk/Work/ScFramework/scripts/check-ui-boundaries.mjs:134\nif (violations.length) throw new Error(violations.join(\"\\n\"));\n                             ^\n\nError: frontend/apps/alpha/src/probe.ts: @fixture/ui의 공개 export를 사용하세요: ../../../packages/ui/src/private/Button\n    at file:///Users/dk/Work/ScFramework/scripts/check-ui-boundaries.mjs:134:30\n\nNode.js v24.16.0"
+    },
+    {
+      "name": "consumer-private-relative-directory",
+      "command": [
+        "node",
+        "scripts/check-ui-boundaries.mjs",
+        "--root",
+        "<temporary-fixture>"
+      ],
+      "expectedExit": "nonzero",
+      "actualExit": 1,
+      "expectedMessage": "@fixture/ui의 공개 export를 사용하세요:",
+      "passed": true,
+      "signal": null,
+      "output": "file:///Users/dk/Work/ScFramework/scripts/check-ui-boundaries.mjs:134\nif (violations.length) throw new Error(violations.join(\"\\n\"));\n                             ^\n\nError: frontend/apps/alpha/src/probe.ts: @fixture/ui의 공개 export를 사용하세요: ../../../packages/ui\n    at file:///Users/dk/Work/ScFramework/scripts/check-ui-boundaries.mjs:134:30\n\nNode.js v24.16.0"
+    },
+    {
+      "name": "consumer-private-alias-scss-use",
+      "command": [
+        "node",
+        "scripts/check-ui-boundaries.mjs",
+        "--root",
+        "<temporary-fixture>"
+      ],
+      "expectedExit": "nonzero",
+      "actualExit": 1,
+      "expectedMessage": "@fixture/ui의 공개 export를 사용하세요:",
+      "passed": true,
+      "signal": null,
+      "output": "file:///Users/dk/Work/ScFramework/scripts/check-ui-boundaries.mjs:134\nif (violations.length) throw new Error(violations.join(\"\\n\"));\n                             ^\n\nError: frontend/apps/alpha/src/probe.scss: @fixture/ui의 공개 export를 사용하세요: @fixture/ui/src/styles.scss\n    at file:///Users/dk/Work/ScFramework/scripts/check-ui-boundaries.mjs:134:30\n\nNode.js v24.16.0"
+    },
+    {
+      "name": "consumer-private-relative-scss-forward",
+      "command": [
+        "node",
+        "scripts/check-ui-boundaries.mjs",
+        "--root",
+        "<temporary-fixture>"
+      ],
+      "expectedExit": "nonzero",
+      "actualExit": 1,
+      "expectedMessage": "@fixture/ui의 공개 export를 사용하세요:",
+      "passed": true,
+      "signal": null,
+      "output": "file:///Users/dk/Work/ScFramework/scripts/check-ui-boundaries.mjs:134\nif (violations.length) throw new Error(violations.join(\"\\n\"));\n                             ^\n\nError: frontend/apps/alpha/src/probe.scss: @fixture/ui의 공개 export를 사용하세요: ../../../packages/ui/src/tokens.scss\n    at file:///Users/dk/Work/ScFramework/scripts/check-ui-boundaries.mjs:134:30\n\nNode.js v24.16.0"
+    },
+    {
+      "name": "consumer-private-vue-script",
+      "command": [
+        "node",
+        "scripts/check-ui-boundaries.mjs",
+        "--root",
+        "<temporary-fixture>"
+      ],
+      "expectedExit": "nonzero",
+      "actualExit": 1,
+      "expectedMessage": "@fixture/ui의 공개 export를 사용하세요:",
+      "passed": true,
+      "signal": null,
+      "output": "file:///Users/dk/Work/ScFramework/scripts/check-ui-boundaries.mjs:134\nif (violations.length) throw new Error(violations.join(\"\\n\"));\n                             ^\n\nError: frontend/apps/alpha/src/Probe.vue: @fixture/ui의 공개 export를 사용하세요: @fixture/ui/src/private/Button\n    at file:///Users/dk/Work/ScFramework/scripts/check-ui-boundaries.mjs:134:30\n\nNode.js v24.16.0"
+    },
+    {
+      "name": "shared-app-static",
+      "command": [
+        "node",
+        "scripts/check-ui-boundaries.mjs",
+        "--root",
+        "<temporary-fixture>"
+      ],
+      "expectedExit": "nonzero",
+      "actualExit": 1,
+      "expectedMessage": "공통 패키지가 소비 앱을 참조합니다:",
+      "passed": true,
+      "signal": null,
+      "output": "file:///Users/dk/Work/ScFramework/scripts/check-ui-boundaries.mjs:134\nif (violations.length) throw new Error(violations.join(\"\\n\"));\n                             ^\n\nError: frontend/packages/ui/src/probe.ts: 공통 패키지가 소비 앱을 참조합니다: @fixture/alpha\n    at file:///Users/dk/Work/ScFramework/scripts/check-ui-boundaries.mjs:134:30\n\nNode.js v24.16.0"
+    },
+    {
+      "name": "shared-app-export",
+      "command": [
+        "node",
+        "scripts/check-ui-boundaries.mjs",
+        "--root",
+        "<temporary-fixture>"
+      ],
+      "expectedExit": "nonzero",
+      "actualExit": 1,
+      "expectedMessage": "공통 패키지가 소비 앱을 참조합니다:",
+      "passed": true,
+      "signal": null,
+      "output": "file:///Users/dk/Work/ScFramework/scripts/check-ui-boundaries.mjs:134\nif (violations.length) throw new Error(violations.join(\"\\n\"));\n                             ^\n\nError: frontend/packages/ui/src/probe.ts: 공통 패키지가 소비 앱을 참조합니다: @fixture/beta/src/index\n    at file:///Users/dk/Work/ScFramework/scripts/check-ui-boundaries.mjs:134:30\n\nNode.js v24.16.0"
+    },
+    {
+      "name": "shared-app-relative-dynamic",
+      "command": [
+        "node",
+        "scripts/check-ui-boundaries.mjs",
+        "--root",
+        "<temporary-fixture>"
+      ],
+      "expectedExit": "nonzero",
+      "actualExit": 1,
+      "expectedMessage": "공통 패키지가 소비 앱을 참조합니다:",
+      "passed": true,
+      "signal": null,
+      "output": "file:///Users/dk/Work/ScFramework/scripts/check-ui-boundaries.mjs:134\nif (violations.length) throw new Error(violations.join(\"\\n\"));\n                             ^\n\nError: frontend/packages/ui/src/probe.ts: 공통 패키지가 소비 앱을 참조합니다: ../../../apps/alpha/src/index\n    at file:///Users/dk/Work/ScFramework/scripts/check-ui-boundaries.mjs:134:30\n\nNode.js v24.16.0"
+    },
+    {
+      "name": "shared-app-relative-scss",
+      "command": [
+        "node",
+        "scripts/check-ui-boundaries.mjs",
+        "--root",
+        "<temporary-fixture>"
+      ],
+      "expectedExit": "nonzero",
+      "actualExit": 1,
+      "expectedMessage": "공통 패키지가 소비 앱을 참조합니다:",
+      "passed": true,
+      "signal": null,
+      "output": "file:///Users/dk/Work/ScFramework/scripts/check-ui-boundaries.mjs:134\nif (violations.length) throw new Error(violations.join(\"\\n\"));\n                             ^\n\nError: frontend/packages/ui/src/probe.scss: 공통 패키지가 소비 앱을 참조합니다: ../../../apps/beta/src/theme.scss\n    at file:///Users/dk/Work/ScFramework/scripts/check-ui-boundaries.mjs:134:30\n\nNode.js v24.16.0"
+    },
+    {
+      "name": "app-app-declared-static",
+      "command": [
+        "node",
+        "scripts/check-ui-boundaries.mjs",
+        "--root",
+        "<temporary-fixture>"
+      ],
+      "expectedExit": "nonzero",
+      "actualExit": 1,
+      "expectedMessage": "소비 앱끼리 구현을 참조하지 마세요:",
+      "passed": true,
+      "signal": null,
+      "output": "file:///Users/dk/Work/ScFramework/scripts/check-ui-boundaries.mjs:134\nif (violations.length) throw new Error(violations.join(\"\\n\"));\n                             ^\n\nError: frontend/apps/alpha/src/probe.ts: 소비 앱끼리 구현을 참조하지 마세요: @fixture/beta\n    at file:///Users/dk/Work/ScFramework/scripts/check-ui-boundaries.mjs:134:30\n\nNode.js v24.16.0"
+    },
+    {
+      "name": "app-app-export",
+      "command": [
+        "node",
+        "scripts/check-ui-boundaries.mjs",
+        "--root",
+        "<temporary-fixture>"
+      ],
+      "expectedExit": "nonzero",
+      "actualExit": 1,
+      "expectedMessage": "소비 앱끼리 구현을 참조하지 마세요:",
+      "passed": true,
+      "signal": null,
+      "output": "file:///Users/dk/Work/ScFramework/scripts/check-ui-boundaries.mjs:134\nif (violations.length) throw new Error(violations.join(\"\\n\"));\n                             ^\n\nError: frontend/apps/alpha/src/probe.ts: 소비 앱끼리 구현을 참조하지 마세요: @fixture/beta/src/index\n    at file:///Users/dk/Work/ScFramework/scripts/check-ui-boundaries.mjs:134:30\n\nNode.js v24.16.0"
+    },
+    {
+      "name": "app-app-relative-dynamic",
+      "command": [
+        "node",
+        "scripts/check-ui-boundaries.mjs",
+        "--root",
+        "<temporary-fixture>"
+      ],
+      "expectedExit": "nonzero",
+      "actualExit": 1,
+      "expectedMessage": "소비 앱끼리 구현을 참조하지 마세요:",
+      "passed": true,
+      "signal": null,
+      "output": "file:///Users/dk/Work/ScFramework/scripts/check-ui-boundaries.mjs:134\nif (violations.length) throw new Error(violations.join(\"\\n\"));\n                             ^\n\nError: frontend/apps/alpha/src/probe.ts: 소비 앱끼리 구현을 참조하지 마세요: ../../beta/src/index\n    at file:///Users/dk/Work/ScFramework/scripts/check-ui-boundaries.mjs:134:30\n\nNode.js v24.16.0"
+    },
+    {
+      "name": "app-app-relative-directory",
+      "command": [
+        "node",
+        "scripts/check-ui-boundaries.mjs",
+        "--root",
+        "<temporary-fixture>"
+      ],
+      "expectedExit": "nonzero",
+      "actualExit": 1,
+      "expectedMessage": "소비 앱끼리 구현을 참조하지 마세요:",
+      "passed": true,
+      "signal": null,
+      "output": "file:///Users/dk/Work/ScFramework/scripts/check-ui-boundaries.mjs:134\nif (violations.length) throw new Error(violations.join(\"\\n\"));\n                             ^\n\nError: frontend/apps/alpha/src/probe.ts: 소비 앱끼리 구현을 참조하지 마세요: ../../beta\n    at file:///Users/dk/Work/ScFramework/scripts/check-ui-boundaries.mjs:134:30\n\nNode.js v24.16.0"
+    },
+    {
+      "name": "app-app-relative-scss",
+      "command": [
+        "node",
+        "scripts/check-ui-boundaries.mjs",
+        "--root",
+        "<temporary-fixture>"
+      ],
+      "expectedExit": "nonzero",
+      "actualExit": 1,
+      "expectedMessage": "소비 앱끼리 구현을 참조하지 마세요:",
+      "passed": true,
+      "signal": null,
+      "output": "file:///Users/dk/Work/ScFramework/scripts/check-ui-boundaries.mjs:134\nif (violations.length) throw new Error(violations.join(\"\\n\"));\n                             ^\n\nError: frontend/apps/alpha/src/probe.scss: 소비 앱끼리 구현을 참조하지 마세요: ../../beta/src/theme.scss\n    at file:///Users/dk/Work/ScFramework/scripts/check-ui-boundaries.mjs:134:30\n\nNode.js v24.16.0"
+    },
+    {
+      "name": "shared-other-private-alias",
+      "command": [
+        "node",
+        "scripts/check-ui-boundaries.mjs",
+        "--root",
+        "<temporary-fixture>"
+      ],
+      "expectedExit": "nonzero",
+      "actualExit": 1,
+      "expectedMessage": "@fixture/runtime의 공개 export를 사용하세요:",
+      "passed": true,
+      "signal": null,
+      "output": "file:///Users/dk/Work/ScFramework/scripts/check-ui-boundaries.mjs:134\nif (violations.length) throw new Error(violations.join(\"\\n\"));\n                             ^\n\nError: frontend/packages/ui/src/probe.ts: @fixture/runtime의 공개 export를 사용하세요: @fixture/runtime/src/index\n    at file:///Users/dk/Work/ScFramework/scripts/check-ui-boundaries.mjs:134:30\n\nNode.js v24.16.0"
+    },
+    {
+      "name": "shared-other-private-relative",
+      "command": [
+        "node",
+        "scripts/check-ui-boundaries.mjs",
+        "--root",
+        "<temporary-fixture>"
+      ],
+      "expectedExit": "nonzero",
+      "actualExit": 1,
+      "expectedMessage": "@fixture/runtime의 공개 export를 사용하세요:",
+      "passed": true,
+      "signal": null,
+      "output": "file:///Users/dk/Work/ScFramework/scripts/check-ui-boundaries.mjs:134\nif (violations.length) throw new Error(violations.join(\"\\n\"));\n                             ^\n\nError: frontend/packages/ui/src/probe.ts: @fixture/runtime의 공개 export를 사용하세요: ../../runtime/src/index\n    at file:///Users/dk/Work/ScFramework/scripts/check-ui-boundaries.mjs:134:30\n\nNode.js v24.16.0"
+    },
+    {
+      "name": "shared-other-private-dynamic",
+      "command": [
+        "node",
+        "scripts/check-ui-boundaries.mjs",
+        "--root",
+        "<temporary-fixture>"
+      ],
+      "expectedExit": "nonzero",
+      "actualExit": 1,
+      "expectedMessage": "@fixture/runtime의 공개 export를 사용하세요:",
+      "passed": true,
+      "signal": null,
+      "output": "file:///Users/dk/Work/ScFramework/scripts/check-ui-boundaries.mjs:134\nif (violations.length) throw new Error(violations.join(\"\\n\"));\n                             ^\n\nError: frontend/packages/ui/src/probe.ts: @fixture/runtime의 공개 export를 사용하세요: @fixture/runtime/src/index\n    at file:///Users/dk/Work/ScFramework/scripts/check-ui-boundaries.mjs:134:30\n\nNode.js v24.16.0"
+    },
+    {
+      "name": "shared-other-private-scss",
+      "command": [
+        "node",
+        "scripts/check-ui-boundaries.mjs",
+        "--root",
+        "<temporary-fixture>"
+      ],
+      "expectedExit": "nonzero",
+      "actualExit": 1,
+      "expectedMessage": "@fixture/runtime의 공개 export를 사용하세요:",
+      "passed": true,
+      "signal": null,
+      "output": "file:///Users/dk/Work/ScFramework/scripts/check-ui-boundaries.mjs:134\nif (violations.length) throw new Error(violations.join(\"\\n\"));\n                             ^\n\nError: frontend/packages/ui/src/probe.scss: @fixture/runtime의 공개 export를 사용하세요: ../../runtime/src/private.scss\n    at file:///Users/dk/Work/ScFramework/scripts/check-ui-boundaries.mjs:134:30\n\nNode.js v24.16.0"
+    },
+    {
+      "name": "contracts-valid-snapshot",
+      "command": [
+        "node",
+        "scripts/ui-contracts.mjs",
+        "--check",
+        "--snapshot",
+        "<temporary-fixture>/ui-contracts-valid.json"
+      ],
+      "expectedExit": 0,
+      "actualExit": 0,
+      "expectedMessage": "imported props/events/slots/default 계약 일치",
+      "passed": true,
+      "signal": null,
+      "output": "공개 UI 20개: imported props/events/slots/default 계약 일치"
+    },
+    {
+      "name": "contracts-default-drift",
+      "command": [
+        "node",
+        "scripts/ui-contracts.mjs",
+        "--check",
+        "--snapshot",
+        "<temporary-fixture>/ui-contracts-drift.json"
+      ],
+      "expectedExit": "nonzero",
+      "actualExit": 1,
+      "expectedMessage": "공개 UI 계약이 변경되었습니다.",
+      "passed": true,
+      "signal": null,
+      "output": "file:///Users/dk/Work/ScFramework/scripts/ui-contracts.mjs:89\n    throw new Error(\n          ^\n\nError: 공개 UI 계약이 변경되었습니다. 문서와 호환성을 검토한 뒤 npm run ui:contracts:generate를 실행하세요.\n    at file:///Users/dk/Work/ScFramework/scripts/ui-contracts.mjs:89:11\n\nNode.js v24.16.0"
+    }
+  ],
+  "immutableInputs": {
+    "checked": 200,
+    "changed": []
+  },
+  "cleanup": true
+}

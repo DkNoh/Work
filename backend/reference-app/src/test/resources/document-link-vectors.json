@@ -1,0 +1,226 @@
+[
+  {
+    "href": "https://example.com/a",
+    "allowed": true
+  },
+  {
+    "href": "https://한글.example/a%zz",
+    "allowed": true
+  },
+  {
+    "href": "https://☃.net/",
+    "allowed": true
+  },
+  {
+    "href": "https://😀.example",
+    "allowed": true
+  },
+  {
+    "href": "https://example.com/a%",
+    "allowed": true
+  },
+  {
+    "href": "https://%65xample.com/x",
+    "allowed": true
+  },
+  {
+    "href": "https://example.com:",
+    "allowed": true
+  },
+  {
+    "href": "HTTPS:example.com",
+    "allowed": true
+  },
+  {
+    "href": "http://user:pass@example.com/a",
+    "allowed": true
+  },
+  {
+    "href": "https://a@b@example.com",
+    "allowed": true
+  },
+  {
+    "href": "https://[::1]:8443/a",
+    "allowed": true
+  },
+  {
+    "href": "https://127.1",
+    "allowed": true
+  },
+  {
+    "href": "https://0x7f.1",
+    "allowed": true
+  },
+  {
+    "href": "https://4294967295",
+    "allowed": true
+  },
+  {
+    "href": "https://a_b.test",
+    "allowed": true
+  },
+  {
+    "href": "https://a..b",
+    "allowed": true
+  },
+  {
+    "href": "https://.",
+    "allowed": true
+  },
+  {
+    "href": "mailto:user@example.com",
+    "allowed": true
+  },
+  {
+    "href": "mailto:a%xx",
+    "allowed": true
+  },
+  {
+    "href": "mailto://a",
+    "allowed": false
+  },
+  {
+    "href": "/local%zz",
+    "allowed": true
+  },
+  {
+    "href": "../guide",
+    "allowed": true
+  },
+  {
+    "href": "guide",
+    "allowed": true
+  },
+  {
+    "href": "#part",
+    "allowed": true
+  },
+  {
+    "href": "?page=2",
+    "allowed": true
+  },
+  {
+    "href": "//user@host/path",
+    "allowed": true
+  },
+  {
+    "href": "//host:443/path",
+    "allowed": false
+  },
+  {
+    "href": "javascript:alert(1)",
+    "allowed": false
+  },
+  {
+    "href": "data:text/html,x",
+    "allowed": false
+  },
+  {
+    "href": "file:///tmp/a",
+    "allowed": false
+  },
+  {
+    "href": "a:b",
+    "allowed": false
+  },
+  {
+    "href": "mailto:",
+    "allowed": false
+  },
+  {
+    "href": "mailto:?x",
+    "allowed": false
+  },
+  {
+    "href": "mailto:#x",
+    "allowed": false
+  },
+  {
+    "href": "https://",
+    "allowed": false
+  },
+  {
+    "href": "https://example.com:99999",
+    "allowed": false
+  },
+  {
+    "href": "https://example.com:-1",
+    "allowed": false
+  },
+  {
+    "href": "https://example.com:port",
+    "allowed": false
+  },
+  {
+    "href": "https://256.1",
+    "allowed": false
+  },
+  {
+    "href": "https://1.2.3.4.5",
+    "allowed": false
+  },
+  {
+    "href": "https://4294967296",
+    "allowed": false
+  },
+  {
+    "href": "https://09",
+    "allowed": false
+  },
+  {
+    "href": "https://[::1%25zone]/",
+    "allowed": false
+  },
+  {
+    "href": "https://[broken",
+    "allowed": false
+  },
+  {
+    "href": "https://exa%mple.com",
+    "allowed": false
+  },
+  {
+    "href": "https://%ff.example",
+    "allowed": false
+  },
+  {
+    "href": "https://example.com\\evil",
+    "allowed": false
+  },
+  {
+    "href": "relative\\evil",
+    "allowed": false
+  },
+  {
+    "href": " https://example.com",
+    "allowed": false
+  },
+  {
+    "href": "https://example.com﻿",
+    "allowed": false
+  },
+  {
+    "href": "https://example.com\n",
+    "allowed": false
+  },
+  {
+    "href": "https://exa mple.com",
+    "allowed": false
+  },
+  {
+    "href": "https://a|b.test",
+    "allowed": false
+  },
+  {
+    "href": "https://a^b.test",
+    "allowed": false
+  },
+  {
+    "href": "https://example.com:65536",
+    "allowed": false
+  },
+  {
+    "href": "https://example.com:65535",
+    "allowed": true
+  }
+]

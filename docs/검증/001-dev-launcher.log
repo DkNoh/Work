@@ -1,0 +1,18 @@
+PASS reference JAR overrides external app/JAR settings
+PASS Vite serves the reference Vue app on an isolated port
+PASS Vite blocks synthetic .runtime secret access with HTTP 403 (observed 403)
+PASS Vite blocks synthetic H2/trace and all .runtime files with HTTP 403
+PASS Vite proxy uses the isolated Spring address
+PASS dev profile overrides inherited production profile
+PASS new bootstrap secret has mode 600
+PASS H2 uses only the new SC_HOME data file
+PASS launcher owns its runtime lock
+PASS Java and Vite belong to the new launcher process group
+PASS runtime metadata points to the new reference JAR
+PASS bootstrap password is absent from launcher output
+PASS launcher handles TERM and exits with signal status
+PASS owned Java/Vite processes are stopped
+PASS Spring and Vite ports are released
+PASS runtime lock and PID/JAR metadata are removed
+PASS external synthetic paths were not used
+PASS temporary synthetic data and secret cleanup

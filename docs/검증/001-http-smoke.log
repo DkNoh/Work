@@ -1,0 +1,12 @@
+PASS public health
+PASS Vue SPA is packaged in reference JAR
+PASS session login
+PASS JPA save advances revision
+PASS stale revision is rejected
+PASS list returns the saved row
+PASS H2 persistent file exists
+PASS title and revision survive JAR restart
+PASS logout clears the session
+PASS independent Starter JAR starts
+PASS minimal Vue consumer is packaged in Starter JAR
+11 isolated HTTP checks passed.

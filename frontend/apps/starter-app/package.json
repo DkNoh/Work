@@ -1,0 +1,36 @@
+{
+  "name": "@sc/starter-app",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5176",
+    "build": "vue-tsc --noEmit -p tsconfig.json && vite build",
+    "typecheck": "vue-tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@sc/date": "0.3.0",
+    "@sc/ui": "0.3.0",
+    "@sc/runtime": "0.3.0",
+    "vue": "3.5.43",
+    "vuetify": "4.2.4",
+    "vue-router": "5.3.1",
+    "pinia": "4.0.3",
+    "@tanstack/vue-query": "5.104.1",
+    "@mdi/js": "7.4.47",
+    "@sc/i18n": "0.3.0",
+    "@sc/excel": "0.3.0",
+    "vee-validate": "4.15.1",
+    "zod": "4.6.5",
+    "vue-i18n": "11.1.12",
+    "@vueuse/core": "15.0.0"
+  },
+  "devDependencies": {
+    "vite": "8.3.1",
+    "@vitejs/plugin-vue": "6.0.9",
+    "vite-plugin-vuetify": "2.1.3",
+    "typescript": "5.9.3",
+    "vue-tsc": "3.3.12",
+    "sass-embedded": "1.105.1"
+  }
+}

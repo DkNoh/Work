@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: dev.scframework.reference.documents.DocumentIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.502 s -- in dev.scframework.reference.documents.DocumentIntegrationTest

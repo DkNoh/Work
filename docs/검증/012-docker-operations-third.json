@@ -1,0 +1,59 @@
+{
+  "stage": "012",
+  "passed": false,
+  "groups": 5,
+  "checks": [
+    {
+      "name": "private Compose project/named runtime volume/read-only secret configuration",
+      "passed": true,
+      "infraServices": 6
+    },
+    {
+      "name": "actual prod operations/loopback/UID10001/umask077/private600/700/Flyway7",
+      "passed": true,
+      "port": 19082,
+      "uid": 10001,
+      "umask": "0077",
+      "migrations": 7,
+      "uploads": "/app/runtime/uploads"
+    },
+    {
+      "name": "database ADMIN/session/CSRF/four capabilities/MESSAGE_DEMO completed/four registered tasks",
+      "passed": true,
+      "capabilities": 4,
+      "registeredTasks": 4,
+      "messageState": "COMPLETED"
+    },
+    {
+      "name": "registered PULSE create/pause and stale revision409",
+      "passed": true,
+      "revision": 6
+    },
+    {
+      "name": "synthetic requirement revision2/PDF originals use durable application volume",
+      "passed": true,
+      "revision": 2,
+      "pdfSha256": "fa498885fdb47cee85c8298fbf737f782e1d7d9a881001a9216189d6a96b4b37"
+    },
+    {
+      "name": "only Reference container restarts and H2/metadata/bytes/schedules persist",
+      "passed": false,
+      "code": "SC_DOCKER_VALIDATION_FAILED",
+      "exceptionType": "AssertionError"
+    }
+  ],
+  "elapsedSeconds": 8.441,
+  "project": "scframework-012-20261007",
+  "applicationService": "reference-app",
+  "originalRuntimeUsed": false,
+  "syntheticFixturesOnly": true,
+  "mutatedServices": [
+    "reference-app"
+  ],
+  "applicationKeptRunning": true,
+  "taskVolumeKeptForParent": true,
+  "secretValuesPrinted": false,
+  "rawDockerConfigOrLogsSaved": false,
+  "remoteExecution": false,
+  "scope": "local Docker image/production operations/private runtime/clean restart; no power-loss guarantee"
+}

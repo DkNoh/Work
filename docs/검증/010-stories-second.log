@@ -1,0 +1,117 @@
+
+> sc-framework@0.1.0 test:stories
+> npm run test:stories --workspace @sc/catalog
+
+
+> @sc/catalog@0.1.0 test:stories
+> vitest run --config vitest.config.ts
+
+│
+●  Storybook collects completely anonymous usage telemetry. We use it to
+│  shape Storybook's roadmap and prioritize features. You can learn more,
+│  including how to opt out, at ]8;;https://storybook.js.org/telemetryhttps://storybook.js.org/telemetry]8;;
+
+ RUN  v4.1.11 /Users/dk/Work/ScFramework/frontend/apps/catalog
+
+4:20:31 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:31 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:31 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:31 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:31 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:31 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:31 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:31 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:31 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:31 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:31 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:31 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:31 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:31 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:31 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:31 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:31 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:31 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:31 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:31 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:31 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:31 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:31 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:31 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:31 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+ ❯ |storybook (chromium)| src/ScSortableBoard.stories.ts (5 tests | 1 failed) 833ms
+   × Synthetic Pointer Cancel And Native Move 302ms
+4:20:32 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:32 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:32 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:32 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:32 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:32 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:32 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:32 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:32 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:32 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:32 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:32 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:32 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:32 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:33 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:33 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:33 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:33 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:33 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:33 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:33 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:33 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:33 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:33 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:33 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:33 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:33 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:33 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:33 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+4:20:33 AM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |storybook (chromium)| src/ScSortableBoard.stories.ts > Synthetic Pointer Cancel And Native Move
+Error: 
+[34mClick to debug the error directly in Storybook: http://localhost:6006/?path=/story/확장-ui-scsortableboard--synthetic-pointer-cancel-and-native-move&addonPanel=storybook/interactions/panel[39m
+
+expect(element).toHaveTextContent()
+
+Checking with empty string will always match, use .toBeEmptyDOMElement() instead:
+
+Received:
+  {"itemKey":"alpha","fromColumnId":"first","toColumnId":"second","beforeKey":null}
+ ❯ Proxy.expectWrapper ../../../node_modules/storybook/dist/test/index.js:15100:16
+ ❯ Proxy.<anonymous> ../../../node_modules/storybook/dist/test/index.js:14620:17
+ ❯ Proxy.methodWrapper ../../../node_modules/storybook/dist/test/index.js:9105:24
+ ❯ Instrumenter.invoke ../../../node_modules/storybook/dist/instrumenter/index.js:322:22
+ ❯ Instrumenter.intercept ../../../node_modules/storybook/dist/instrumenter/index.js:243:139
+ ❯ Instrumenter.track ../../../node_modules/storybook/dist/instrumenter/index.js:238:378
+ ❯ Proxy.toHaveTextContent ../../../node_modules/storybook/dist/instrumenter/index.js:224:263
+ ❯ toHaveTextContent src/ScSortableBoard.stories.ts:109:64
+    107|       ).not.toHaveClass("sc-board-item--dragging"),
+    108|     );
+    109|     await expect(canvas.getByRole("status", { name: "이동 의도" })).toHave…
+       |                                                                ^
+    110|     const first = canvas.getByRole("region", { name: "첫 열 (2)" });
+    111|     await expect(
+ ❯ runStory ../../../node_modules/storybook/dist/_browser-chunks/chunk-SZQXB3JV.js:1325:6
+ ❯ ../../../node_modules/@storybook/addon-vitest/dist/vitest-plugin/test-utils.js:108:184
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 27 passed (28)
+      Tests  1 failed | 94 passed (95)
+   Start at  04:20:27
+   Duration  6.16s (transform 0ms, setup 31.49s, import 4.84s, tests 17.46s, environment 0ms)
+
+npm error Lifecycle script `test:stories` failed with error:
+npm error code 1
+npm error path /Users/dk/Work/ScFramework/frontend/apps/catalog
+npm error workspace @sc/catalog@0.1.0
+npm error location /Users/dk/Work/ScFramework/frontend/apps/catalog
+npm error command failed
+npm error command sh -c vitest run --config vitest.config.ts

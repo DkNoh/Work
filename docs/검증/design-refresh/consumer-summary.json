@@ -1,0 +1,352 @@
+{
+  "startedAt": "2026-10-08T15:19:31.921Z",
+  "status": "PASS",
+  "scope": "Real independent frontend-only tarball consumer; no backend or source aliases.",
+  "runs": [
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "status": "PASS",
+      "metrics": {
+        "cards": [
+          {
+            "density": "compact",
+            "tone": "green",
+            "gap": "16px",
+            "padding": "16px",
+            "minHeight": "128px",
+            "height": 128,
+            "icon": {
+              "width": 36,
+              "height": 40,
+              "background": "rgb(125, 220, 177)",
+              "color": "rgb(17, 24, 39)"
+            },
+            "value": {
+              "fontSize": "22px",
+              "fontWeight": "600",
+              "fontFamily": "\"Plus Jakarta Sans\", \"Apple SD Gothic Neo\", system-ui, sans-serif"
+            },
+            "labelFontSize": "13px",
+            "headingReference": true,
+            "decorativeIconsHidden": true
+          },
+          {
+            "density": "compact",
+            "tone": "violet",
+            "gap": "16px",
+            "padding": "16px",
+            "minHeight": "128px",
+            "height": 128,
+            "icon": {
+              "width": 36,
+              "height": 40,
+              "background": "rgb(193, 177, 255)",
+              "color": "rgb(17, 24, 39)"
+            },
+            "value": {
+              "fontSize": "22px",
+              "fontWeight": "600",
+              "fontFamily": "\"Plus Jakarta Sans\", \"Apple SD Gothic Neo\", system-ui, sans-serif"
+            },
+            "labelFontSize": "13px",
+            "headingReference": true,
+            "decorativeIconsHidden": true
+          },
+          {
+            "density": "compact",
+            "tone": "pink",
+            "gap": "16px",
+            "padding": "16px",
+            "minHeight": "128px",
+            "height": 128,
+            "icon": {
+              "width": 36,
+              "height": 40,
+              "background": "rgb(255, 161, 179)",
+              "color": "rgb(17, 24, 39)"
+            },
+            "value": {
+              "fontSize": "22px",
+              "fontWeight": "600",
+              "fontFamily": "\"Plus Jakarta Sans\", \"Apple SD Gothic Neo\", system-ui, sans-serif"
+            },
+            "labelFontSize": "13px",
+            "headingReference": true,
+            "decorativeIconsHidden": true
+          },
+          {
+            "density": "compact",
+            "tone": "amber",
+            "gap": "16px",
+            "padding": "16px",
+            "minHeight": "128px",
+            "height": 128,
+            "icon": {
+              "width": 36,
+              "height": 40,
+              "background": "rgb(255, 214, 130)",
+              "color": "rgb(17, 24, 39)"
+            },
+            "value": {
+              "fontSize": "22px",
+              "fontWeight": "600",
+              "fontFamily": "\"Plus Jakarta Sans\", \"Apple SD Gothic Neo\", system-ui, sans-serif"
+            },
+            "labelFontSize": "13px",
+            "headingReference": true,
+            "decorativeIconsHidden": true
+          },
+          {
+            "density": "comfortable",
+            "tone": "green",
+            "gap": "16px",
+            "padding": "16px",
+            "minHeight": "128px",
+            "height": 128,
+            "icon": {
+              "width": 36,
+              "height": 40,
+              "background": "rgb(125, 220, 177)",
+              "color": "rgb(17, 24, 39)"
+            },
+            "value": {
+              "fontSize": "24px",
+              "fontWeight": "600",
+              "fontFamily": "\"Plus Jakarta Sans\", \"Apple SD Gothic Neo\", system-ui, sans-serif"
+            },
+            "labelFontSize": "13px",
+            "headingReference": true,
+            "decorativeIconsHidden": true
+          }
+        ],
+        "fontFaces": [
+          {
+            "family": "Plus Jakarta Sans",
+            "status": "loaded",
+            "weight": "200 800"
+          }
+        ],
+        "fontAvailable": true,
+        "section": {
+          "titleFontSize": "15.2px",
+          "titleFontWeight": "600",
+          "headerPadding": "16px",
+          "borderWidth": "0px"
+        },
+        "horizontalOverflow": false
+      },
+      "requestCount": 3,
+      "externalRequests": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "keyboardAction": true,
+      "screenshot": ".runtime/design-refresh/ui-consumer-1280.png"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "status": "PASS",
+      "metrics": {
+        "cards": [
+          {
+            "density": "compact",
+            "tone": "green",
+            "gap": "16px",
+            "padding": "16px",
+            "minHeight": "128px",
+            "height": 128,
+            "icon": {
+              "width": 36,
+              "height": 40,
+              "background": "rgb(125, 220, 177)",
+              "color": "rgb(17, 24, 39)"
+            },
+            "value": {
+              "fontSize": "22px",
+              "fontWeight": "600",
+              "fontFamily": "\"Plus Jakarta Sans\", \"Apple SD Gothic Neo\", system-ui, sans-serif"
+            },
+            "labelFontSize": "13px",
+            "headingReference": true,
+            "decorativeIconsHidden": true
+          },
+          {
+            "density": "compact",
+            "tone": "violet",
+            "gap": "16px",
+            "padding": "16px",
+            "minHeight": "128px",
+            "height": 128,
+            "icon": {
+              "width": 36,
+              "height": 40,
+              "background": "rgb(193, 177, 255)",
+              "color": "rgb(17, 24, 39)"
+            },
+            "value": {
+              "fontSize": "22px",
+              "fontWeight": "600",
+              "fontFamily": "\"Plus Jakarta Sans\", \"Apple SD Gothic Neo\", system-ui, sans-serif"
+            },
+            "labelFontSize": "13px",
+            "headingReference": true,
+            "decorativeIconsHidden": true
+          },
+          {
+            "density": "compact",
+            "tone": "pink",
+            "gap": "16px",
+            "padding": "16px",
+            "minHeight": "128px",
+            "height": 128,
+            "icon": {
+              "width": 36,
+              "height": 40,
+              "background": "rgb(255, 161, 179)",
+              "color": "rgb(17, 24, 39)"
+            },
+            "value": {
+              "fontSize": "22px",
+              "fontWeight": "600",
+              "fontFamily": "\"Plus Jakarta Sans\", \"Apple SD Gothic Neo\", system-ui, sans-serif"
+            },
+            "labelFontSize": "13px",
+            "headingReference": true,
+            "decorativeIconsHidden": true
+          },
+          {
+            "density": "compact",
+            "tone": "amber",
+            "gap": "16px",
+            "padding": "16px",
+            "minHeight": "128px",
+            "height": 128,
+            "icon": {
+              "width": 36,
+              "height": 40,
+              "background": "rgb(255, 214, 130)",
+              "color": "rgb(17, 24, 39)"
+            },
+            "value": {
+              "fontSize": "22px",
+              "fontWeight": "600",
+              "fontFamily": "\"Plus Jakarta Sans\", \"Apple SD Gothic Neo\", system-ui, sans-serif"
+            },
+            "labelFontSize": "13px",
+            "headingReference": true,
+            "decorativeIconsHidden": true
+          },
+          {
+            "density": "comfortable",
+            "tone": "green",
+            "gap": "16px",
+            "padding": "16px",
+            "minHeight": "128px",
+            "height": 128,
+            "icon": {
+              "width": 36,
+              "height": 40,
+              "background": "rgb(125, 220, 177)",
+              "color": "rgb(17, 24, 39)"
+            },
+            "value": {
+              "fontSize": "24px",
+              "fontWeight": "600",
+              "fontFamily": "\"Plus Jakarta Sans\", \"Apple SD Gothic Neo\", system-ui, sans-serif"
+            },
+            "labelFontSize": "13px",
+            "headingReference": true,
+            "decorativeIconsHidden": true
+          }
+        ],
+        "fontFaces": [
+          {
+            "family": "Plus Jakarta Sans",
+            "status": "loaded",
+            "weight": "200 800"
+          }
+        ],
+        "fontAvailable": true,
+        "section": {
+          "titleFontSize": "15.2px",
+          "titleFontWeight": "600",
+          "headerPadding": "16px",
+          "borderWidth": "0px"
+        },
+        "horizontalOverflow": false
+      },
+      "requestCount": 3,
+      "externalRequests": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "keyboardAction": true,
+      "screenshot": ".runtime/design-refresh/ui-consumer-390.png"
+    }
+  ],
+  "failures": [],
+  "cleanup": {
+    "browserClosed": true,
+    "previewClosed": true,
+    "scratchRetained": true,
+    "previewPortReleased": true
+  },
+  "pack": {
+    "name": "@sc/ui",
+    "version": "0.3.0",
+    "filename": "sc-ui-0.3.0.tgz",
+    "entryCount": 77,
+    "size": 111250,
+    "sha256": "5e41a29d9ff71e44518ca6bda74cca5aa454ce1214495cac2f756e02de130840",
+    "inputsDigest": "2a128846669fabdd918355b093b71f9e2583df068c2b3d2ca3d26b15fccb1e3c",
+    "packedAt": "2026-10-08T15:16:07.849Z"
+  },
+  "install": {
+    "lockfileVersion": 3,
+    "lockSha256": "8cb808d3c6cead2683e5389497f3ead23a65159e53e7bb3dc0d9e343dc88c274",
+    "resolved": ".runtime/design-refresh/ui-consumer/node_modules/@sc/ui/dist/index.js",
+    "linked": false,
+    "uiVersion": "0.3.0",
+    "vueVersion": "3.5.43",
+    "vuetifyVersion": "4.2.4"
+  },
+  "preview": {
+    "host": "127.0.0.1",
+    "port": 57741,
+    "productionBuild": true
+  },
+  "commands": {
+    "pack": "PASS",
+    "npmInstall": "PASS",
+    "npmCi": "PASS",
+    "typecheck": "PASS",
+    "viteBuild": "PASS"
+  },
+  "initialFailure": {
+    "command": "npm install",
+    "reason": "Scratch shell did not inherit npm PATH; no install executed. Retried with pinned Node/npm absolute path.",
+    "log": ".runtime/design-refresh/ui-consumer/install-first-path-failure.log"
+  },
+  "finishedAt": "2026-10-08T15:19:33.411Z",
+  "typecheck": {
+    "strict": true,
+    "skipLibCheck": true,
+    "note": "Consumer source/type usage checked; dependency declaration internals skipped per supported contract."
+  },
+  "visualReview": {
+    "desktop": true,
+    "mobile": true,
+    "observations": "Both screenshots inspected: readable labels and values, four pastel tones, matching green icons across densities, no clipped or overlapping content."
+  },
+  "logs": [
+    ".runtime/design-refresh/ui-consumer/pack-receipt.json",
+    ".runtime/design-refresh/ui-consumer/install.log",
+    ".runtime/design-refresh/ui-consumer/ci.log",
+    ".runtime/design-refresh/ui-consumer/typecheck.log",
+    ".runtime/design-refresh/ui-consumer/build.log"
+  ]
+}

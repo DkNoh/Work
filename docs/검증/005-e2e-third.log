@@ -1,0 +1,29 @@
+
+> sc-framework@0.1.0 test:e2e
+> playwright test --config frontend/playwright.config.ts framework.spec.ts layout.spec.ts patterns.spec.ts
+
+
+Running 18 tests using 1 worker
+
+(node:44860) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 frontend/e2e/framework.spec.ts:49:1 › 공통 UI로 등록·수정하고 409에서도 작성 중인 입력을 보존한다 (2.4s)
+  ✓   2 frontend/e2e/framework.spec.ts:109:1 › 서버 400 필드 오류에도 등록 입력과 필드 연결을 보존한다 (594ms)
+  ✓   3 frontend/e2e/framework.spec.ts:138:1 › 409 후 최신 조회가 500으로 실패하면 입력과 revision을 보존하고 다시 조회할 수 있다 (1.3s)
+  ✓   4 frontend/e2e/framework.spec.ts:181:3 › 저장 중 선택 변경: 이전 항목의 success 응답이 새 폼을 바꾸지 않는다 (839ms)
+  ✓   5 frontend/e2e/framework.spec.ts:181:3 › 저장 중 선택 변경: 이전 항목의 conflict 응답이 새 폼을 바꾸지 않는다 (982ms)
+  ✓   6 frontend/e2e/layout.spec.ts:94:3 › 레퍼런스 390px: 한국어·본문·현재 메뉴·모바일 키보드 탐색 (1.4s)
+  ✓   7 frontend/e2e/layout.spec.ts:94:3 › 레퍼런스 1366px: 한국어·본문·현재 메뉴·모바일 키보드 탐색 (889ms)
+  ✓   8 frontend/e2e/layout.spec.ts:94:3 › 레퍼런스 1920px: 한국어·본문·현재 메뉴·모바일 키보드 탐색 (881ms)
+  ✓   9 frontend/e2e/layout.spec.ts:159:5 › 최소 Starter의 독립적인 공통 셸 소비 › Starter 390px: 동일 UI·Router·본문 탐색 (1.8s)
+  ✓  10 frontend/e2e/layout.spec.ts:159:5 › 최소 Starter의 독립적인 공통 셸 소비 › Starter 1366px: 동일 UI·Router·본문 탐색 (1.2s)
+  ✓  11 frontend/e2e/layout.spec.ts:159:5 › 최소 Starter의 독립적인 공통 셸 소비 › Starter 1920px: 동일 UI·Router·본문 탐색 (943ms)
+  ✓  12 frontend/e2e/patterns.spec.ts:338:5 › reference 실제 JAR 공통 기능 소비 › 한영 입력 보존·Zod 검증·초기화·dirty 이동 확인 (3.2s)
+  ✓  13 frontend/e2e/patterns.spec.ts:344:5 › reference 실제 JAR 공통 기능 소비 › 정렬·페이지·선택과 10,000행 실제 스크롤·focus·일반 보기 (2.2s)
+  ✓  14 frontend/e2e/patterns.spec.ts:350:5 › reference 실제 JAR 공통 기능 소비 › SVG 차트·키보드 선택·JSON 서식과 XLSX 다운로드·검토·반영 (2.2s)
+  ✓  15 frontend/e2e/patterns.spec.ts:338:5 › starter 실제 JAR 공통 기능 소비 › 한영 입력 보존·Zod 검증·초기화·dirty 이동 확인 (2.0s)
+  ✓  16 frontend/e2e/patterns.spec.ts:344:5 › starter 실제 JAR 공통 기능 소비 › 정렬·페이지·선택과 10,000행 실제 스크롤·focus·일반 보기 (1.8s)
+  ✓  17 frontend/e2e/patterns.spec.ts:350:5 › starter 실제 JAR 공통 기능 소비 › SVG 차트·키보드 선택·JSON 서식과 XLSX 다운로드·검토·반영 (1.9s)
+  ✓  18 frontend/e2e/patterns.spec.ts:359:1 › Reference dirty 폼에서 로그아웃하면 확인 Promise에 갇히지 않고 로그인 화면에 도착한다 (584ms)
+
+  18 passed (33.6s)

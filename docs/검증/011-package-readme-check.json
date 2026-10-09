@@ -1,0 +1,56 @@
+{
+  "stage": "011",
+  "passed": true,
+  "scope": [
+    "frontend/packages/ui/README.md",
+    "frontend/packages/runtime/README.md",
+    "frontend/packages/date/README.md",
+    "frontend/packages/i18n/README.md",
+    "frontend/packages/excel/README.md",
+    "docs/질의/011-공통패키지-배포설계.md"
+  ],
+  "files": [
+    {
+      "file": "frontend/packages/ui/README.md",
+      "sha256": "b7e44792260b3ce1e172d3cd4e2abb641fde1d724f8c76e575ef69e8f4e29e4f",
+      "balancedFences": true
+    },
+    {
+      "file": "frontend/packages/runtime/README.md",
+      "sha256": "23a917f983d8b491de6e658a22e0f63a1a4e47b162467ad2304efa300e078bbc",
+      "balancedFences": true
+    },
+    {
+      "file": "frontend/packages/date/README.md",
+      "sha256": "b865368d74172e85a78bd8ca96cf8087b44c91cd0502907419dcd7c317ac4b3a",
+      "balancedFences": true
+    },
+    {
+      "file": "frontend/packages/i18n/README.md",
+      "sha256": "0d68c21a24bb1e8dc10389778e61f096d4715505a8760512a7c609b1ff5031c7",
+      "balancedFences": true
+    },
+    {
+      "file": "frontend/packages/excel/README.md",
+      "sha256": "a766b34204e07d20387a93a76c9eefe006b51bad286b8b99d4aaf6b83aff6718",
+      "balancedFences": true
+    },
+    {
+      "file": "docs/질의/011-공통패키지-배포설계.md",
+      "sha256": "559642cf0ff452311890f9f2112ccda59aa0458630f3e06c4301aa122b9f206f",
+      "balancedFences": true
+    }
+  ],
+  "relativeLinks": 31,
+  "missingLinks": [],
+  "formatWriteExit": 0,
+  "formatCheckExit": 0,
+  "sourceManifestDistTemplateChanged": false,
+  "buildInstallBrowserExecuted": false,
+  "publicVersion": "0.2.0",
+  "backendVersion": "0.2.0-SNAPSHOT",
+  "cohortUpgradeRollbackClaimedComplete": false,
+  "typesEvidence": "011-consumer-types-second.json",
+  "browserCandidate4Evidence": "011-generated-fourth/summary.json",
+  "storybookDocsControlsCurrent": "failure retained, fix and recheck pending"
+}

@@ -1,0 +1,6 @@
+frontend/apps/reference-app/src/main.ts 25ms
+frontend/apps/reference-app/src/App.vue 41ms
+frontend/apps/reference-app/src/localization.ts 3ms (unchanged)
+frontend/apps/reference-app/src/features/requirements/RequirementWorkspace.vue 67ms
+frontend/apps/reference-app/src/features/media/MediaWorkspacePage.vue 27ms
+frontend/apps/reference-app/src/features/media/useImageFile.ts 2ms (unchanged)

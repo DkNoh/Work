@@ -1,0 +1,34 @@
+{
+  "stage": "012",
+  "checkedFiles": [
+    "README.md",
+    "docs/folder-structure.md",
+    "docs/maintenance-guide.md",
+    "docs/operations.md",
+    "docs/api.md",
+    "docs/질의/README.md",
+    "docs/질의/기술스택-적용현황.md",
+    "docs/질의/개발가이드.md",
+    "docs/질의/개발단계.md"
+  ],
+  "relativeLinks": 706,
+  "missing": [],
+  "formatWriteExit": 0,
+  "formatCheckExit": 0,
+  "sourceScope": "9 assigned documents only",
+  "executionBoundary": "source documentation and relative file paths; no new server/browser/build executions by this check",
+  "stageComplete": false,
+  "latestEvidence": {
+    "serverTests": 196,
+    "frontendUnits": 149,
+    "operationalBoundaryGroups": 18,
+    "recoveryGroups": 7,
+    "observabilityGroups": 8,
+    "grafanaPopulatedMetrics": 5,
+    "grafanaFrames": 11,
+    "dockerGroups": 7,
+    "operationsBrowserPassed": 7,
+    "operationsBrowserFailed": 3,
+    "operationsBrowserRerun": "pending"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "stage": "012",
+  "passed": false,
+  "failureType": "ModuleNotFoundError",
+  "failureCode": "PYTHON_YAML_NOT_INSTALLED",
+  "scope": "local validator dependency; YAML file not evaluated yet",
+  "actualRemoteExecution": false
+}

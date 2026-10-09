@@ -1,0 +1,63 @@
+
+> sc-framework@0.1.0 test:e2e
+> playwright test --config frontend/playwright.config.ts visual.spec.ts --update-snapshots=none --max-failures=1
+
+
+Running 4 tests using 1 worker
+
+(node:54655) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 frontend/e2e/visual.spec.ts:201:7 › reference 1366px 시각 기준 › 셸·입력·표·차트·서식의 승인 이미지와 비교 (1.4s)
+Testing stopped early after 1 maximum allowed failures.
+
+
+  1) frontend/e2e/visual.spec.ts:201:7 › reference 1366px 시각 기준 › 셸·입력·표·차트·서식의 승인 이미지와 비교 ─────────
+
+    Error: expect(page).toHaveScreenshot(expected) failed
+
+      1436 pixels (ratio 0.01 of all image pixels) are different.
+
+      Snapshot: darwin-chromium/reference-1366-shell-inputs.png
+
+    Call log:
+      - Expect "toHaveScreenshot(darwin-chromium/reference-1366-shell-inputs.png)" with timeout 10000ms
+        - verifying given screenshot expectation
+      - taking page screenshot
+        - disabled all CSS animations
+      - waiting for fonts to load...
+      - fonts loaded
+      - 1436 pixels (ratio 0.01 of all image pixels) are different.
+      - waiting 100ms before taking screenshot
+      - taking page screenshot
+        - disabled all CSS animations
+      - waiting for fonts to load...
+      - fonts loaded
+      - captured a stable screenshot
+      - 1436 pixels (ratio 0.01 of all image pixels) are different.
+
+
+      280 |             await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
+      281 |             await neutralFocus(page);
+    > 282 |             await expect(page).toHaveScreenshot([profile, name], { ...options, fullPage: false });
+          |                                ^
+      283 |           } else {
+      284 |             const card = capture === "table" ? table : capture === "chart" ? chart : editor;
+      285 |             const clip = await cardClip(page, card);
+        at /Users/dk/Work/ScFramework/frontend/e2e/visual.spec.ts:282:32
+
+    attachment #1: darwin-chromium/reference-1366-shell-inputs (image/png) ─────────────────────────
+    Expected: frontend/e2e/visual.spec.ts-snapshots/darwin-chromium/reference-1366-shell-inputs-darwin.png
+    Received: frontend/test-results/visual-reference-1366px-시각-기준-셸·입력·표·차트·서식의-승인-이미지와-비교/darwin-chromium/reference-1366-shell-inputs-actual.png
+    Diff:     frontend/test-results/visual-reference-1366px-시각-기준-셸·입력·표·차트·서식의-승인-이미지와-비교/darwin-chromium/reference-1366-shell-inputs-diff.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results/visual-reference-1366px-시각-기준-셸·입력·표·차트·서식의-승인-이미지와-비교/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results/visual-reference-1366px-시각-기준-셸·입력·표·차트·서식의-승인-이미지와-비교/error-context.md
+
+  1 failed
+    frontend/e2e/visual.spec.ts:201:7 › reference 1366px 시각 기준 › 셸·입력·표·차트·서식의 승인 이미지와 비교 ──────────
+  3 did not run
+  1 error was not a part of any test, see above for details

@@ -1,0 +1,35 @@
+{
+  "stage": "011",
+  "passed": true,
+  "scope": [
+    "docs/질의/011-패키지계약검증.md"
+  ],
+  "localLinks": 24,
+  "missingLinks": [],
+  "tables": 4,
+  "tableRows": [
+    7,
+    7,
+    19,
+    7
+  ],
+  "balancedFences": true,
+  "validLinkedJson": [
+    "../검증/011-package-artifacts-first.json",
+    "../검증/011-package-artifacts-second.json",
+    "../검증/011-package-artifacts-third.json",
+    "../검증/011-package-gates-first.json",
+    "../검증/011-package-artifacts-final.json",
+    "../검증/011-package-gates-final.json",
+    "../검증/011-ci-yaml.json"
+  ],
+  "actualPositive5Frontend7Backend": true,
+  "actualNegative25": true,
+  "actualProtected128Unchanged": true,
+  "ciYamlLocalSyntaxOnly": true,
+  "remoteCiExecuted": false,
+  "packageCodeExecutedByArtifactChecker": false,
+  "consumerOrUpgradeClaimedComplete": false,
+  "errors": [],
+  "documentSha256": "76fe1d2cff4bd70cae833559362315878fc73e5a23cbfed9efda5e2bd1e66c37"
+}

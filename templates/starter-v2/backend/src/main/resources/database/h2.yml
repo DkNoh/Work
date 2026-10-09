@@ -1,0 +1,4 @@
+# 기존 H2 URL·계정·Flyway 경로를 보존하는 개발 기본값이다.
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver

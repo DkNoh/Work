@@ -1,0 +1,109 @@
+{
+  "scope": "001 basic reference UI only; not full design acceptance",
+  "browser": "Playwright bundled Chromium",
+  "isolatedSyntheticAccount": true,
+  "syntheticExampleCount": 1,
+  "pageErrorCount": 0,
+  "results": [
+    {
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "screenshot": "001-reference-desktop.png",
+      "fullPage": false,
+      "metrics": {
+        "innerWidth": 1366,
+        "innerHeight": 768,
+        "documentWidth": 1366,
+        "documentHeight": 768,
+        "noHorizontalOverflow": true,
+        "compact": false,
+        "gridTemplateColumns": "592.344px 455.656px",
+        "main": {
+          "x": 123,
+          "y": 64,
+          "width": 1120,
+          "height": 578.765625
+        },
+        "list": {
+          "x": 147,
+          "y": 246.78125,
+          "width": 592.34375,
+          "height": 371.984375
+        },
+        "create": {
+          "x": 780.34375,
+          "y": 295.78125,
+          "width": 421.65625,
+          "height": 100
+        },
+        "edit": {
+          "x": 780.34375,
+          "y": 501.765625,
+          "width": 421.65625,
+          "height": 100
+        }
+      },
+      "formInsideWidth": true,
+      "screenshotPixels": {
+        "width": 1366,
+        "height": 768
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "001-reference-mobile.png",
+      "fullPage": true,
+      "metrics": {
+        "innerWidth": 390,
+        "innerHeight": 844,
+        "documentWidth": 390,
+        "documentHeight": 872,
+        "noHorizontalOverflow": true,
+        "compact": true,
+        "gridTemplateColumns": "358px",
+        "main": {
+          "x": 0,
+          "y": 64,
+          "width": 390,
+          "height": 808.40625
+        },
+        "list": {
+          "x": 16,
+          "y": 238.78125,
+          "width": 358,
+          "height": 221.640625
+        },
+        "create": {
+          "x": 33,
+          "y": 533.421875,
+          "width": 324,
+          "height": 100
+        },
+        "edit": {
+          "x": 33,
+          "y": 739.40625,
+          "width": 324,
+          "height": 100
+        }
+      },
+      "formInsideWidth": true,
+      "screenshotPixels": {
+        "width": 390,
+        "height": 872
+      }
+    }
+  ],
+  "visualReview": {
+    "status": "passed for 001 basic layout",
+    "desktop": "Two columns; list and both Sc input forms are readable; labels, cards and buttons have no visible clipping.",
+    "mobile": "Single column; list, create and edit forms fit the 390px width without horizontal overflow; normal vertical scrolling is needed.",
+    "captureNote": "Mobile viewport is 390x844. Full-page capture is 390x872 so the complete edit card is visible.",
+    "limitations": "This confirms the 001 basic example only; it does not approve the full design system or later business screens."
+  },
+  "runtimeCleanupConfirmed": true
+}

@@ -1,0 +1,1584 @@
+
+> sc-framework@0.1.0 test:stories
+> npm run test:stories --workspace @sc/catalog
+
+
+> @sc/catalog@0.1.0 test:stories
+> vitest run --config vitest.config.ts
+
+
+ RUN  v4.1.11 /Users/dk/Work/ScFramework/frontend/apps/catalog
+
+9:31:52 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:52 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:52 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:52 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:52 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:52 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:52 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:52 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:52 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:52 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:52 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:52 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:52 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:52 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:52 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:52 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:52 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:52 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:52 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:52 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:52 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:52 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:52 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:52 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:52 PM [vite] (client) dependencies optimized: vee-validate, zod
+9:31:52 PM [vite] (client) optimized dependencies changed. reloading
+
+[vitest] Vite unexpectedly reloaded a test. This may cause tests to fail, lead to flaky behaviour or duplicated test runs.
+For a stable experience, please add mentioned dependencies to your config's `optimizeDeps.include` field manually.
+
+
+9:31:53 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+stderr | src/ScChart.stories.ts > Bar And Line
+[@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+stderr | src/ScChart.stories.ts > Bar And Line
+[@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+stdout | src/ScChart.stories.ts > Bar And Line
+[ECharts] Specified `grid.containLabel` but no `use(LegacyGridContainLabel)`;use `grid.outerBounds` instead.
+stderr | src/ValidatedForm.stories.ts > Client Validation
+[@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+stderr | src/ScVirtualTable.stories.ts > Ten Thousand Scroll Selection And Fallback
+[@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+stderr | src/ScVirtualTable.stories.ts > Ten Thousand Scroll Selection And Fallback
+[@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+ ❯ |storybook (chromium)| src/ScVirtualTable.stories.ts (2 tests | 2 failed) 735ms
+   × Ten Thousand Scroll Selection And Fallback 590ms
+   × Variable Height Resize And Replacement 144ms
+9:31:53 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+stderr | src/ScChart.stories.ts > Multiple Instances
+[@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+ ❯ |storybook (chromium)| src/ScChart.stories.ts (6 tests | 6 failed) 722ms
+   × Bar And Line 521ms
+   × Loading 25ms
+   × Empty 14ms
+   × Request Error 24ms
+   × Keyboard Selection 35ms
+   × Multiple Instances 101ms
+stdout | src/ValidatedForm.stories.ts > Success
+Request {
+  "body": "",
+  "headers": {
+    "accept": "application/json",
+  },
+  "method": "GET",
+  "url": "http://localhost:63315/api/auth/csrf",
+}
+stdout | src/ValidatedForm.stories.ts > Success
+Handler: HttpHandler {
+  "info": {
+    "callFrame": "    at http://localhost:63315/Users/dk/Work/ScFramework/frontend/apps/catalog/src/ValidatedForm.stories.ts?import&browserv=1791289911903:6:19",
+    "header": "GET /api/auth/csrf",
+    "method": "GET",
+    "path": "/api/auth/csrf",
+  },
+  "isUsed": true,
+  "kind": "request",
+  "options": {},
+  "resolver": [Function anonymous],
+  "resolverIterator": undefined,
+  "resolverIteratorResult": undefined,
+}
+stdout | src/ValidatedForm.stories.ts > Success
+Response {
+  "body": "{"headerName":"X-CSRF-TOKEN","token":"storybook-synthetic-csrf"}",
+  "headers": {
+    "content-length": "64",
+    "content-type": "application/json",
+  },
+  "status": 200,
+  "statusText": "OK",
+}
+stdout | src/ValidatedForm.stories.ts > Success
+Request {
+  "body": "{"title":"저장된 한국어"}",
+  "headers": {
+    "accept": "application/json",
+    "content-type": "application/json",
+    "x-csrf-token": "storybook-synthetic-csrf",
+  },
+  "method": "POST",
+  "url": "http://localhost:63315/api/story-form",
+}
+stdout | src/ValidatedForm.stories.ts > Success
+Handler: HttpHandler {
+  "info": {
+    "callFrame": "    at http://localhost:63315/Users/dk/Work/ScFramework/frontend/apps/catalog/src/ValidatedForm.stories.ts?import&browserv=1791289911903:10:22",
+    "header": "POST /api/story-form",
+    "method": "POST",
+    "path": "/api/story-form",
+  },
+  "isUsed": true,
+  "kind": "request",
+  "options": {},
+  "resolver": [Function anonymous],
+  "resolverIterator": undefined,
+  "resolverIteratorResult": undefined,
+}
+stdout | src/ValidatedForm.stories.ts > Success
+Response {
+  "body": "{"title":"저장된 한국어"}",
+  "headers": {
+    "content-length": "31",
+    "content-type": "application/json",
+  },
+  "status": 201,
+  "statusText": "Created",
+}
+stdout | src/ValidatedForm.stories.ts > Field Error 400
+Request {
+  "body": "",
+  "headers": {
+    "accept": "application/json",
+  },
+  "method": "GET",
+  "url": "http://localhost:63315/api/auth/csrf",
+}
+stdout | src/ValidatedForm.stories.ts > Field Error 400
+Handler: HttpHandler {
+  "info": {
+    "callFrame": "    at http://localhost:63315/Users/dk/Work/ScFramework/frontend/apps/catalog/src/ValidatedForm.stories.ts?import&browserv=1791289911903:6:19",
+    "header": "GET /api/auth/csrf",
+    "method": "GET",
+    "path": "/api/auth/csrf",
+  },
+  "isUsed": true,
+  "kind": "request",
+  "options": {},
+  "resolver": [Function anonymous],
+  "resolverIterator": undefined,
+  "resolverIteratorResult": undefined,
+}
+stdout | src/ValidatedForm.stories.ts > Field Error 400
+Response {
+  "body": "{"headerName":"X-CSRF-TOKEN","token":"storybook-synthetic-csrf"}",
+  "headers": {
+    "content-length": "64",
+    "content-type": "application/json",
+  },
+  "status": 200,
+  "statusText": "OK",
+}
+stdout | src/ValidatedForm.stories.ts > Field Error 400
+Request {
+  "body": "{"title":"실패해도 남는 입력"}",
+  "headers": {
+    "accept": "application/json",
+    "content-type": "application/json",
+    "x-csrf-token": "storybook-synthetic-csrf",
+  },
+  "method": "POST",
+  "url": "http://localhost:63315/api/story-form",
+}
+stdout | src/ValidatedForm.stories.ts > Field Error 400
+Handler: HttpHandler {
+  "info": {
+    "callFrame": "http://localhost:63315/Users/dk/Work/ScFramework/frontend/apps/catalog/src/ValidatedForm.stories.ts?import&browserv=1791289911903:70:31",
+    "header": "POST /api/story-form",
+    "method": "POST",
+    "path": "/api/story-form",
+  },
+  "isUsed": true,
+  "kind": "request",
+  "options": {},
+  "resolver": [Function anonymous],
+  "resolverIterator": undefined,
+  "resolverIteratorResult": undefined,
+}
+stdout | src/ValidatedForm.stories.ts > Field Error 400
+Response {
+  "body": "{"code":"MOCK_400","message":"모의 입력 오류","errors":[{"field":"title","message":"서버 제목 검증 오류"}]}",
+  "headers": {
+    "content-length": "121",
+    "content-type": "application/json",
+  },
+  "status": 400,
+  "statusText": "Bad Request",
+}
+stdout | src/ValidatedForm.stories.ts > Session 401
+Request {
+  "body": "",
+  "headers": {
+    "accept": "application/json",
+  },
+  "method": "GET",
+  "url": "http://localhost:63315/api/auth/csrf",
+}
+stdout | src/ValidatedForm.stories.ts > Session 401
+Handler: HttpHandler {
+  "info": {
+    "callFrame": "    at http://localhost:63315/Users/dk/Work/ScFramework/frontend/apps/catalog/src/ValidatedForm.stories.ts?import&browserv=1791289911903:6:19",
+    "header": "GET /api/auth/csrf",
+    "method": "GET",
+    "path": "/api/auth/csrf",
+  },
+  "isUsed": true,
+  "kind": "request",
+  "options": {},
+  "resolver": [Function anonymous],
+  "resolverIterator": undefined,
+  "resolverIteratorResult": undefined,
+}
+stdout | src/ValidatedForm.stories.ts > Session 401
+Response {
+  "body": "{"headerName":"X-CSRF-TOKEN","token":"storybook-synthetic-csrf"}",
+  "headers": {
+    "content-length": "64",
+    "content-type": "application/json",
+  },
+  "status": 200,
+  "statusText": "OK",
+}
+stdout | src/ValidatedForm.stories.ts > Session 401
+Request {
+  "body": "{"title":"실패해도 남는 입력"}",
+  "headers": {
+    "accept": "application/json",
+    "content-type": "application/json",
+    "x-csrf-token": "storybook-synthetic-csrf",
+  },
+  "method": "POST",
+  "url": "http://localhost:63315/api/story-form",
+}
+stdout | src/ValidatedForm.stories.ts > Session 401
+Handler: HttpHandler {
+  "info": {
+    "callFrame": "http://localhost:63315/Users/dk/Work/ScFramework/frontend/apps/catalog/src/ValidatedForm.stories.ts?import&browserv=1791289911903:70:31",
+    "header": "POST /api/story-form",
+    "method": "POST",
+    "path": "/api/story-form",
+  },
+  "isUsed": true,
+  "kind": "request",
+  "options": {},
+  "resolver": [Function anonymous],
+  "resolverIterator": undefined,
+  "resolverIteratorResult": undefined,
+}
+stdout | src/ValidatedForm.stories.ts > Session 401
+Response {
+  "body": "{"code":"MOCK_401","message":"모의 로그인 만료","errors":[]}",
+  "headers": {
+    "content-length": "67",
+    "content-type": "application/json",
+  },
+  "status": 401,
+  "statusText": "Unauthorized",
+}
+stdout | src/ValidatedForm.stories.ts > Permission 403
+Request {
+  "body": "",
+  "headers": {
+    "accept": "application/json",
+  },
+  "method": "GET",
+  "url": "http://localhost:63315/api/auth/csrf",
+}
+stdout | src/ValidatedForm.stories.ts > Permission 403
+Handler: HttpHandler {
+  "info": {
+    "callFrame": "    at http://localhost:63315/Users/dk/Work/ScFramework/frontend/apps/catalog/src/ValidatedForm.stories.ts?import&browserv=1791289911903:6:19",
+    "header": "GET /api/auth/csrf",
+    "method": "GET",
+    "path": "/api/auth/csrf",
+  },
+  "isUsed": true,
+  "kind": "request",
+  "options": {},
+  "resolver": [Function anonymous],
+  "resolverIterator": undefined,
+  "resolverIteratorResult": undefined,
+}
+stdout | src/ValidatedForm.stories.ts > Permission 403
+Response {
+  "body": "{"headerName":"X-CSRF-TOKEN","token":"storybook-synthetic-csrf"}",
+  "headers": {
+    "content-length": "64",
+    "content-type": "application/json",
+  },
+  "status": 200,
+  "statusText": "OK",
+}
+stdout | src/ValidatedForm.stories.ts > Permission 403
+Request {
+  "body": "{"title":"실패해도 남는 입력"}",
+  "headers": {
+    "accept": "application/json",
+    "content-type": "application/json",
+    "x-csrf-token": "storybook-synthetic-csrf",
+  },
+  "method": "POST",
+  "url": "http://localhost:63315/api/story-form",
+}
+stdout | src/ValidatedForm.stories.ts > Permission 403
+Handler: HttpHandler {
+  "info": {
+    "callFrame": "http://localhost:63315/Users/dk/Work/ScFramework/frontend/apps/catalog/src/ValidatedForm.stories.ts?import&browserv=1791289911903:70:31",
+    "header": "POST /api/story-form",
+    "method": "POST",
+    "path": "/api/story-form",
+  },
+  "isUsed": true,
+  "kind": "request",
+  "options": {},
+  "resolver": [Function anonymous],
+  "resolverIterator": undefined,
+  "resolverIteratorResult": undefined,
+}
+stdout | src/ValidatedForm.stories.ts > Permission 403
+Response {
+  "body": "{"code":"MOCK_403","message":"모의 저장 권한 없음","errors":[]}",
+  "headers": {
+    "content-length": "71",
+    "content-type": "application/json",
+  },
+  "status": 403,
+  "statusText": "Forbidden",
+}
+9:31:55 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:55 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:55 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:55 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:55 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:55 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:55 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:55 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:55 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:55 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:55 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:55 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:55 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:55 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+stdout | src/ValidatedForm.stories.ts > Conflict 409
+Request {
+  "body": "",
+  "headers": {
+    "accept": "application/json",
+  },
+  "method": "GET",
+  "url": "http://localhost:63315/api/auth/csrf",
+}
+stdout | src/ValidatedForm.stories.ts > Conflict 409
+Handler: HttpHandler {
+  "info": {
+    "callFrame": "    at http://localhost:63315/Users/dk/Work/ScFramework/frontend/apps/catalog/src/ValidatedForm.stories.ts?import&browserv=1791289911903:6:19",
+    "header": "GET /api/auth/csrf",
+    "method": "GET",
+    "path": "/api/auth/csrf",
+  },
+  "isUsed": true,
+  "kind": "request",
+  "options": {},
+  "resolver": [Function anonymous],
+  "resolverIterator": undefined,
+  "resolverIteratorResult": undefined,
+}
+stdout | src/ValidatedForm.stories.ts > Conflict 409
+Response {
+  "body": "{"headerName":"X-CSRF-TOKEN","token":"storybook-synthetic-csrf"}",
+  "headers": {
+    "content-length": "64",
+    "content-type": "application/json",
+  },
+  "status": 200,
+  "statusText": "OK",
+}
+9:31:55 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:55 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:55 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:55 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+stderr | src/ScListDetailLayout.stories.ts > Desktop
+[@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+stderr | src/ScListDetailLayout.stories.ts > Desktop
+[@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+ ❯ |storybook (chromium)| src/ScListDetailLayout.stories.ts (2 tests | 2 failed) 255ms
+   × Desktop 240ms
+   × Mobile Draft 14ms
+stdout | src/ValidatedForm.stories.ts > Server Error 500
+Request {
+  "body": "{"title":"실패해도 남는 입력"}",
+  "headers": {
+    "accept": "application/json",
+    "content-type": "application/json",
+    "x-csrf-token": "storybook-synthetic-csrf",
+  },
+  "method": "POST",
+  "url": "http://localhost:63315/api/story-form",
+}
+stdout | src/ValidatedForm.stories.ts > Server Error 500
+Handler: HttpHandler {
+  "info": {
+    "callFrame": "http://localhost:63315/Users/dk/Work/ScFramework/frontend/apps/catalog/src/ValidatedForm.stories.ts?import&browserv=1791289911903:70:31",
+    "header": "POST /api/story-form",
+    "method": "POST",
+    "path": "/api/story-form",
+  },
+  "isUsed": true,
+  "kind": "request",
+  "options": {},
+  "resolver": [Function anonymous],
+  "resolverIterator": undefined,
+  "resolverIteratorResult": undefined,
+}
+stdout | src/ValidatedForm.stories.ts > Server Error 500
+Response {
+  "body": "{"code":"MOCK_409","message":"모의 revision 충돌","errors":[]}",
+  "headers": {
+    "content-length": "66",
+    "content-type": "application/json",
+  },
+  "status": 409,
+  "statusText": "Conflict",
+}
+stdout | src/ValidatedForm.stories.ts > Server Error 500
+Request {
+  "body": "",
+  "headers": {
+    "accept": "application/json",
+  },
+  "method": "GET",
+  "url": "http://localhost:63315/api/auth/csrf",
+}
+stdout | src/ValidatedForm.stories.ts > Server Error 500
+Handler: HttpHandler {
+  "info": {
+    "callFrame": "    at http://localhost:63315/Users/dk/Work/ScFramework/frontend/apps/catalog/src/ValidatedForm.stories.ts?import&browserv=1791289911903:6:19",
+    "header": "GET /api/auth/csrf",
+    "method": "GET",
+    "path": "/api/auth/csrf",
+  },
+  "isUsed": true,
+  "kind": "request",
+  "options": {},
+  "resolver": [Function anonymous],
+  "resolverIterator": undefined,
+  "resolverIteratorResult": undefined,
+}
+stdout | src/ValidatedForm.stories.ts > Server Error 500
+Response {
+  "body": "{"headerName":"X-CSRF-TOKEN","token":"storybook-synthetic-csrf"}",
+  "headers": {
+    "content-length": "64",
+    "content-type": "application/json",
+  },
+  "status": 200,
+  "statusText": "OK",
+}
+stdout | src/ValidatedForm.stories.ts > Server Error 500
+Request {
+  "body": "{"title":"실패해도 남는 입력"}",
+  "headers": {
+    "accept": "application/json",
+    "content-type": "application/json",
+    "x-csrf-token": "storybook-synthetic-csrf",
+  },
+  "method": "POST",
+  "url": "http://localhost:63315/api/story-form",
+}
+stdout | src/ValidatedForm.stories.ts > Server Error 500
+Handler: HttpHandler {
+  "info": {
+    "callFrame": "http://localhost:63315/Users/dk/Work/ScFramework/frontend/apps/catalog/src/ValidatedForm.stories.ts?import&browserv=1791289911903:70:31",
+    "header": "POST /api/story-form",
+    "method": "POST",
+    "path": "/api/story-form",
+  },
+  "isUsed": true,
+  "kind": "request",
+  "options": {},
+  "resolver": [Function anonymous],
+  "resolverIterator": undefined,
+  "resolverIteratorResult": undefined,
+}
+stdout | src/ValidatedForm.stories.ts > Server Error 500
+Response {
+  "body": "{"code":"MOCK_500","message":"모의 서버 오류","errors":[]}",
+  "headers": {
+    "content-length": "64",
+    "content-type": "application/json",
+  },
+  "status": 500,
+  "statusText": "Internal Server Error",
+}
+9:31:55 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:55 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:55 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:31:55 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+stdout | src/ValidatedForm.stories.ts > Slow Submit
+Request {
+  "body": "",
+  "headers": {
+    "accept": "application/json",
+  },
+  "method": "GET",
+  "url": "http://localhost:63315/api/auth/csrf",
+}
+stdout | src/ValidatedForm.stories.ts > Slow Submit
+Handler: HttpHandler {
+  "info": {
+    "callFrame": "    at http://localhost:63315/Users/dk/Work/ScFramework/frontend/apps/catalog/src/ValidatedForm.stories.ts?import&browserv=1791289911903:6:19",
+    "header": "GET /api/auth/csrf",
+    "method": "GET",
+    "path": "/api/auth/csrf",
+  },
+  "isUsed": true,
+  "kind": "request",
+  "options": {},
+  "resolver": [Function anonymous],
+  "resolverIterator": undefined,
+  "resolverIteratorResult": undefined,
+}
+stdout | src/ValidatedForm.stories.ts > Slow Submit
+Response {
+  "body": "{"headerName":"X-CSRF-TOKEN","token":"storybook-synthetic-csrf"}",
+  "headers": {
+    "content-length": "64",
+    "content-type": "application/json",
+  },
+  "status": 200,
+  "statusText": "OK",
+}
+stdout | src/ValidatedForm.stories.ts > Slow Submit
+Request {
+  "body": "{"title":"한 번만 저장"}",
+  "headers": {
+    "accept": "application/json",
+    "content-type": "application/json",
+    "x-csrf-token": "storybook-synthetic-csrf",
+  },
+  "method": "POST",
+  "url": "http://localhost:63315/api/story-form",
+}
+stdout | src/ValidatedForm.stories.ts > Slow Submit
+Handler: HttpHandler {
+  "info": {
+    "callFrame": "    at http://localhost:63315/Users/dk/Work/ScFramework/frontend/apps/catalog/src/ValidatedForm.stories.ts?import&browserv=1791289911903:112:29",
+    "header": "POST /api/story-form",
+    "method": "POST",
+    "path": "/api/story-form",
+  },
+  "isUsed": true,
+  "kind": "request",
+  "options": {},
+  "resolver": [Function anonymous],
+  "resolverIterator": undefined,
+  "resolverIteratorResult": undefined,
+}
+stdout | src/ValidatedForm.stories.ts > Slow Submit
+Response {
+  "body": "{"title":"한 번만 저장"}",
+  "headers": {
+    "content-length": "29",
+    "content-type": "application/json",
+  },
+  "status": 201,
+  "statusText": "Created",
+}
+ ❯ |storybook (chromium)| src/ValidatedForm.stories.ts (8 tests | 8 failed) 2892ms
+   × Client Validation 72ms
+   × Success 318ms
+   × Field Error 400 1215ms
+   × Session 401 236ms
+   × Permission 403 242ms
+   × Conflict 409 201ms
+   × Server Error 500 163ms
+   × Slow Submit 445ms
+
+⎯⎯⎯⎯⎯⎯ Failed Tests 18 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |storybook (chromium)| src/ScChart.stories.ts > Bar And Line
+ FAIL  |storybook (chromium)| src/ScChart.stories.ts > Loading
+ FAIL  |storybook (chromium)| src/ScChart.stories.ts > Empty
+ FAIL  |storybook (chromium)| src/ScChart.stories.ts > Request Error
+ FAIL  |storybook (chromium)| src/ScChart.stories.ts > Keyboard Selection
+ FAIL  |storybook (chromium)| src/ScChart.stories.ts > Multiple Instances
+ FAIL  |storybook (chromium)| src/ScVirtualTable.stories.ts > Ten Thousand Scroll Selection And Fallback
+ FAIL  |storybook (chromium)| src/ScVirtualTable.stories.ts > Variable Height Resize And Replacement
+ FAIL  |storybook (chromium)| src/ValidatedForm.stories.ts > Success
+ FAIL  |storybook (chromium)| src/ValidatedForm.stories.ts > Session 401
+ FAIL  |storybook (chromium)| src/ValidatedForm.stories.ts > Permission 403
+ FAIL  |storybook (chromium)| src/ValidatedForm.stories.ts > Conflict 409
+ FAIL  |storybook (chromium)| src/ValidatedForm.stories.ts > Server Error 500
+ FAIL  |storybook (chromium)| src/ValidatedForm.stories.ts > Slow Submit
+TypeError: 
+[34mClick to debug the error directly in Storybook: http://localhost:6006/?path=/story/확장-ui-scchart--bar-and-line&addonPanel=storybook/interactions/panel[39m
+
+Failed to fetch dynamically imported module: http://localhost:63315/node_modules/.cache/storybook/10.4.1/af489ecb696950ba7363f3b7b6d5837c9e8ef11a75b8a308316953288b12095b/sb-vitest/deps/axe-core.js?v=f302708a
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/18]⎯
+
+ FAIL  |storybook (chromium)| src/ScListDetailLayout.stories.ts > Desktop
+Error: 
+[34mClick to debug the error directly in Storybook: http://localhost:6006/?path=/story/화면-패턴-sclistdetaillayout--desktop&addonPanel=storybook/interactions/panel[39m
+
+[2mexpect([22m[31mreceived[39m[2m).toHaveNoViolations([22m[32mexpected[39m[2m)[22m
+
+Expected the HTML found at $('.sc-list-detail-layout__list') to have no violations:
+
+[90m<section data-v-c93b1189="" class="sc-list-detail-layout__list" aria-label="목록">[39m
+
+Received:
+
+[31m"Landmarks should have a unique role or role/label/title (i.e. accessible name) combination (landmark-unique)"[39m
+
+[33mFix any of the following:[39m
+[33m  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable[39m
+
+You can find more information on this issue here: 
+[34mhttps://dequeuniversity.com/rules/axe/4.14/landmark-unique?application=axeAPI[39m
+ ❯ Proxy.expectWrapper ../../../node_modules/storybook/dist/test/index.js:15100:16
+ ❯ Proxy.<anonymous> ../../../node_modules/storybook/dist/test/index.js:14620:17
+ ❯ Proxy.methodWrapper ../../../node_modules/storybook/dist/test/index.js:9105:24
+ ❯ Instrumenter.invoke ../../../node_modules/storybook/dist/instrumenter/index.js:322:22
+ ❯ Instrumenter.intercept ../../../node_modules/storybook/dist/instrumenter/index.js:243:139
+ ❯ Instrumenter.track ../../../node_modules/storybook/dist/instrumenter/index.js:238:378
+ ❯ Proxy.toHaveNoViolations ../../../node_modules/storybook/dist/instrumenter/index.js:224:263
+ ❯ afterEach ../../../node_modules/@storybook/addon-a11y/dist/_browser-chunks/chunk-2FVV6YOY.js:155:25
+    153|             expect.extend({ toHaveNoViolations }), vitestMatchersExten…
+    154|           }
+    155|           expect(result).toHaveNoViolations();
+       |                         ^
+    156|         }
+    157|       }
+ ❯ Object.applyAfterEach ../../../node_modules/storybook/dist/_browser-chunks/chunk-SZQXB3JV.js:780:6
+ ❯ runStory ../../../node_modules/storybook/dist/_browser-chunks/chunk-SZQXB3JV.js:1327:100
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/18]⎯
+
+ FAIL  |storybook (chromium)| src/ScListDetailLayout.stories.ts > Mobile Draft
+TestingLibraryElementError: 
+[34mClick to debug the error directly in Storybook: http://localhost:6006/?path=/story/화면-패턴-sclistdetaillayout--mobile-draft&addonPanel=storybook/interactions/panel[39m
+
+Unable to find an accessible element with the role "textbox" and name "작성 중인 상세"
+
+Here are the accessible roles:
+
+  main:
+
+  Name "":
+  <main
+    class="v-main"
+    data-v-000bc527=""
+    style="--v-layout-left: 0px; --v-layout-right: 0px; --v-layout-top: 0px; --v-layout-bottom: 0px; transition: none !important;"
+  />
+
+  --------------------------------------------------
+  region:
+
+  Name "목록":
+  <section
+    aria-label="목록"
+    class="sc-list-detail-layout__list"
+    data-v-c93b1189=""
+  />
+
+  Name "목록":
+  <section
+    aria-labelledby="sc-section-sc-2-0"
+    class="sc-section-card"
+    data-v-6dfae4da=""
+  />
+
+  --------------------------------------------------
+  banner:
+
+  Name "":
+  <header
+    class="sc-section-card__header"
+    data-v-6dfae4da=""
+  />
+
+  --------------------------------------------------
+  heading:
+
+  Name "목록":
+  <h2
+    data-v-6dfae4da=""
+    id="sc-section-sc-2-0"
+  />
+
+  --------------------------------------------------
+  button:
+
+  Name "예제 선택":
+  <button
+    aria-busy="false"
+    class="v-btn v-theme--sc bg-primary v-btn--density-default elevation-0 v-btn--size-default v-btn--variant-flat sc-action-button"
+    data-v-cb4820b6=""
+    type="button"
+  />
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+<div
+  data-v-app=""
+>
+  <div
+    class="sc-story-locale"
+    lang="ko"
+  >
+    
+    <div
+      class="v-application v-theme--sc v-layout v-layout--full-height v-locale--is-ltr sc-app sc-story-frame"
+      data-v-000bc527=""
+    >
+      <div
+        class="v-application__wrap"
+      >
+        
+        <main
+          class="v-main"
+          data-v-000bc527=""
+          style="--v-layout-left: 0px; --v-layout-right: 0px; --v-layout-top: 0px; --v-layout-bottom: 0px; transition: none !important;"
+        >
+          
+          <div
+            class="sc-content sc-story-frame__content"
+            data-v-000bc527=""
+          >
+            
+            <div
+              class="sc-list-detail-layout"
+              data-v-c93b1189=""
+            >
+              <div
+                class="sc-list-detail-layout__columns"
+                data-v-c93b1189=""
+              >
+                <section
+                  aria-label="목록"
+                  class="sc-list-detail-layout__list"
+                  data-v-c93b1189=""
+                >
+                  
+                  <section
+                    aria-labelledby="sc-section-sc-2-0"
+                    class="sc-section-card"
+                    data-v-6dfae4da=""
+                  >
+                    <header
+                      class="sc-section-card__header"
+                      data-v-6dfae4da=""
+                    >
+                      <div
+                        data-v-6dfae4da=""
+                      >
+                        <h2
+                          data-v-6dfae4da=""
+                          id="sc-section-sc-2-0"
+                        >
+                          목록
+                        </h2>
+                      </div>
+                    </header>
+                    <div
+                      class="sc-section-card__body"
+                      data-v-6dfae4da=""
+                    >
+                      
+                      <button
+                        aria-busy="false"
+                        class="v-btn v-theme--sc bg-primary v-btn--density-default elevation-0 v-btn--size-default v-btn--variant-flat sc-action-button"
+                        data-v-cb4820b6=""
+                        type="button"
+                      >
+                        
+                        <span
+                          class="v-btn__overlay"
+                        />
+                        <span
+                          class="v-btn__underlay"
+                        />
+                        
+                        <span
+                          class="v-btn__content"
+                          data-no-activator=""
+                        >
+                          
+                          
+                          
+                          예제 선택
+                          
+                          
+                          
+                        </span>
+                        <span
+                          class="v-ripple__container"
+                        >
+                          <span
+                            class="v-ripple__animation v-ripple__animation--enter v-ripple__animation--visible"
+                            data-activated="2551.2000000476837"
+                            data-is-hiding="true"
+                            style="width: 91.3893px; height: 91.3893px; transform: translate(-82.6946px, -165.695px) scale3d(0.3, 0.3, 0.3);"
+                          />
+                        </span>
+                      </button>
+                      
+                    </div>
+                  </section>
+                  
+                </section>
+                <section
+                  aria-label="상세"
+                  class="sc-list-detail-layout__detail"
+                  data-v-c93b1189=""
+                >
+                  
+                  <section
+                    aria-labelledby="sc-section-sc-2-2"
+                    class="sc-section-card"
+                    data-v-6dfae4da=""
+                  >
+                    <header
+                      class="sc-section-card__header"
+                      data-v-6dfae4da=""
+                    >
+                      <div
+                        data-v-6dfae4da=""
+                      >
+                        <h2
+                          data-v-6dfae4da=""
+                          id="sc-section-sc-2-2"
+                        >
+                          선택 상세
+                        </h2>
+                      </div>
+                    </header>
+                    <div
+                      class="sc-section-card__body"
+                      data-v-6dfae4da=""
+                    >
+                      
+                      <div
+                        class="v-input v-input--horizontal v-input--center-affix v-input--indent-details v-input--density-comfortable v-theme--sc v-locale--is-ltr v-text-field sc-text-field"
+                        data-v-0058f36a=""
+                      >
+                        <div
+                          class="v-input__control"
+                        >
+                          
+                          <div
+                            class="v-field v-field--center-affix v-field--variant-outlined v-theme--sc v-locale--is-ltr"
+                          >
+                            <div
+                              class="v-field__overlay"
+                            />
+                            <div
+                              class="v-field__loader"
+                            >
+                              <div
+                                aria-hidden="true"
+                                aria-valuemax="100"
+                                aria-valuemin="0"
+                                class="v-progress-linear v-theme--sc v-locale--is-ltr"
+                                role="progressbar"
+                                style="top: 0px; height: 0px; --v-progress-linear-height: 2px; --v-progress-reveal-duration: 900ms; --v-progress-chunk-gap: 4px;"
+                              >
+                                <div
+                                  class="v-progress-linear__background"
+                                />
+                                <div
+                                  class="v-progress-linear__buffer"
+                                  style="width: 0%;"
+                                />
+                                <div
+                                  class="v-progress-linear__indeterminate"
+                                >
+                                  
+                                  <div
+                                    class="v-progress-linear__indeterminate long"
+                                  />
+                                  <div
+                                    class="v-progress-linear__indeterminate short"
+                                  />
+                                  
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class="v-field__field"
+                              data-no-activator=""
+                            >
+                              <label
+                                aria-hidden="false"
+                                class="v-label v-field-label"
+                                for="sc-field-sc-2-3"
+                                id="sc-field-sc-2-3-label"
+                              >
+                                
+                                작성 중인 상세
+                                
+                              </label>
+                              
+                              
+                              <input
+                                aria-labelledby="sc-field-sc-2-3-label"
+                                class="v-field__input"
+                                id="sc-field-sc-2-3"
+                                size="1"
+                                type="text"
+                                value=""
+                              />
+                              
+                              
+                            </div>
+                            <div
+                              class="v-field__outline"
+                            >
+                              
+                              <div
+                                class="v-field__outline__start"
+                              />
+                              <div
+                                class="v-field__outline__notch"
+                              >
+                                <label
+                                  aria-hidden="true"
+                                  class="v-label v-field-label v-field-label--floating"
+                                >
+                                  
+                                  작성 중인 상세
+                                  
+                                </label>
+                              </div>
+                              <div
+                                class="v-field__outline__end"
+                              />
+                              
+                            </div>
+                          </div>
+                          
+                        </div>
+                        <div
+                          aria-live="polite"
+                          class="v-input__details v-input__details--hidden"
+                          role="alert"
+                        >
+                          <div
+                            class="v-messages"
+                          />
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </section>
+                  
+                </section>
+              </div>
+            </div>
+            
+          </div>
+          
+        </main>
+        
+      </div>
+    </div>
+    
+  </div>
+</div>
+ ❯ Object.getElementError ../../../node_modules/storybook/dist/test/index.js:16195:54
+ ❯ ../../../node_modules/storybook/dist/test/index.js:16731:24
+ ❯ ../../../node_modules/storybook/dist/test/index.js:16706:14
+ ❯ ../../../node_modules/storybook/dist/test/index.js:16744:16
+ ❯ Instrumenter.invoke ../../../node_modules/storybook/dist/instrumenter/index.js:322:22
+ ❯ Instrumenter.track ../../../node_modules/storybook/dist/instrumenter/index.js:238:378
+ ❯ Object.getByRole ../../../node_modules/storybook/dist/instrumenter/index.js:224:263
+ ❯ getByRole src/ScListDetailLayout.stories.ts:30:25
+     28|     const canvas = within(canvasElement);
+     29|     await userEvent.click(canvas.getByRole("button", { name: "예제 선택" }…
+     30|     const input = canvas.getByRole("textbox", { name: "작성 중인 상세" });
+       |                         ^
+     31|     await userEvent.type(input, "이동해도 남는 입력");
+     32|     await userEvent.click(canvas.getByRole("button", { name: "목록으로" })…
+ ❯ runStory ../../../node_modules/storybook/dist/_browser-chunks/chunk-SZQXB3JV.js:1325:6
+ ❯ ../../../node_modules/@storybook/addon-vitest/dist/vitest-plugin/test-utils.js:108:184
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/18]⎯
+
+ FAIL  |storybook (chromium)| src/ValidatedForm.stories.ts > Client Validation
+Error: 
+[34mClick to debug the error directly in Storybook: http://localhost:6006/?path=/story/조립-예제-폼-검증과-오류--client-validation&addonPanel=storybook/interactions/panel[39m
+
+expect(element).toHaveAccessibleDescription()
+
+Expected element to have accessible description:
+  제목을 입력해 주세요.
+Received:
+
+ ❯ Proxy.expectWrapper node_modules/.cache/storybook/10.4.1/af489ecb696950ba7363f3b7b6d5837c9e8ef11a75b8a308316953288b12095b/sb-vitest/deps/test-qPTfGWiA.js?v=f302708a:15534:49
+ ❯ Proxy.<anonymous> node_modules/.cache/storybook/10.4.1/af489ecb696950ba7363f3b7b6d5837c9e8ef11a75b8a308316953288b12095b/sb-vitest/deps/test-qPTfGWiA.js?v=f302708a:15076:101
+ ❯ Proxy.methodWrapper node_modules/.cache/storybook/10.4.1/af489ecb696950ba7363f3b7b6d5837c9e8ef11a75b8a308316953288b12095b/sb-vitest/deps/test-qPTfGWiA.js?v=f302708a:10674:23
+ ❯ Instrumenter.invoke node_modules/.cache/storybook/10.4.1/af489ecb696950ba7363f3b7b6d5837c9e8ef11a75b8a308316953288b12095b/sb-vitest/deps/test-qPTfGWiA.js?v=f302708a:2429:20
+ ❯ Instrumenter.intercept node_modules/.cache/storybook/10.4.1/af489ecb696950ba7363f3b7b6d5837c9e8ef11a75b8a308316953288b12095b/sb-vitest/deps/test-qPTfGWiA.js?v=f302708a:2332:138
+ ❯ Instrumenter.track node_modules/.cache/storybook/10.4.1/af489ecb696950ba7363f3b7b6d5837c9e8ef11a75b8a308316953288b12095b/sb-vitest/deps/test-qPTfGWiA.js?v=f302708a:2323:83
+ ❯ Proxy.toHaveAccessibleDescription node_modules/.cache/storybook/10.4.1/af489ecb696950ba7363f3b7b6d5837c9e8ef11a75b8a308316953288b12095b/sb-vitest/deps/test-qPTfGWiA.js?v=f302708a:2301:151
+ ❯ play src/ValidatedForm.stories.ts:44:9
+ ❯ runStory node_modules/.cache/storybook/10.4.1/af489ecb696950ba7363f3b7b6d5837c9e8ef11a75b8a308316953288b12095b/sb-vitest/deps/csf-E4R7Z05z.js?v=f302708a:4965:6
+ ❯ node_modules/.cache/storybook/10.4.1/af489ecb696950ba7363f3b7b6d5837c9e8ef11a75b8a308316953288b12095b/sb-vitest/deps/@storybook_addon-vitest_internal_test-utils.js?v=f302708a:111:184
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/18]⎯
+
+ FAIL  |storybook (chromium)| src/ValidatedForm.stories.ts > Field Error 400
+TestingLibraryElementError: 
+[34mClick to debug the error directly in Storybook: http://localhost:6006/?path=/story/조립-예제-폼-검증과-오류--field-error-400&addonPanel=storybook/interactions/panel[39m
+
+Found multiple elements with the role "alert"
+
+Here are the matching elements:
+
+Ignored nodes: comments, script, style
+<div
+  aria-live="polite"
+  class="v-input__details"
+  id="sc-field-sc-3-0-messages"
+  role="alert"
+>
+  <div
+    class="v-messages"
+  >
+    <div
+      class="v-messages__message"
+    >
+      서버 제목 검증 오류
+    </div>
+  </div>
+</div>
+
+Ignored nodes: comments, script, style
+<p
+  role="alert"
+>
+  모의 입력 오류
+</p>
+
+(If this is intentional, then use the `*AllBy*` variant of the query (like `queryAllByText`, `getAllByText`, or `findAllByText`)).
+
+Ignored nodes: comments, script, style
+<div
+  data-v-app=""
+>
+  <div
+    class="sc-story-locale"
+    lang="ko"
+  >
+    
+    <div
+      class="v-application v-theme--sc v-layout v-layout--full-height v-locale--is-ltr sc-app sc-story-frame"
+      data-v-000bc527=""
+    >
+      <div
+        class="v-application__wrap"
+      >
+        
+        <main
+          class="v-main"
+          data-v-000bc527=""
+          style="--v-layout-left: 0px; --v-layout-right: 0px; --v-layout-top: 0px; --v-layout-bottom: 0px;"
+        >
+          
+          <div
+            class="sc-content sc-story-frame__content"
+            data-v-000bc527=""
+          >
+            
+            <form
+              aria-label="모의 저장 폼"
+              class="sc-stack"
+              novalidate=""
+            >
+              <div
+                class="v-input v-input--horizontal v-input--center-affix v-input--indent-details v-input--density-comfortable v-theme--sc v-locale--is-ltr v-input--error v-input--dirty v-text-field sc-text-field"
+                data-v-0058f36a=""
+              >
+                <div
+                  class="v-input__control"
+                >
+                  
+                  <div
+                    class="v-field v-field--active v-field--center-affix v-field--dirty v-field--error v-field--variant-outlined v-theme--sc v-locale--is-ltr"
+                  >
+                    <div
+                      class="v-field__overlay"
+                    />
+                    <div
+                      class="v-field__loader"
+                    >
+                      <div
+                        aria-hidden="true"
+                        aria-valuemax="100"
+                        aria-valuemin="0"
+                        class="v-progress-linear v-theme--sc v-locale--is-ltr"
+                        role="progressbar"
+                        style="top: 0px; height: 0px; --v-progress-linear-height: 2px; --v-progress-reveal-duration: 900ms; --v-progress-chunk-gap: 4px;"
+                      >
+                        <div
+                          class="v-progress-linear__background bg-error"
+                        />
+                        <div
+                          class="v-progress-linear__buffer bg-error"
+                          style="width: 0%;"
+                        />
+                        <div
+                          class="v-progress-linear__indeterminate"
+                        >
+                          
+                          <div
+                            class="v-progress-linear__indeterminate long bg-error"
+                          />
+                          <div
+                            class="v-progress-linear__indeterminate short bg-error"
+                          />
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="v-field__field"
+                      data-no-activator=""
+                    >
+                      <label
+                        aria-hidden="true"
+                        class="v-label v-field-label"
+                        id="sc-field-sc-3-0-label"
+                        style=""
+                      >
+                        
+                        제목
+                        
+                      </label>
+                      
+                      
+                      <input
+                        aria-describedby="sc-field-sc-3-0-messages"
+                        aria-invalid="true"
+                        aria-labelledby="sc-field-sc-3-0-label"
+                        aria-required="true"
+                        class="v-field__input"
+                        id="sc-field-sc-3-0"
+                        required=""
+                        size="1"
+                        type="text"
+                        value="실패해도 남는 입력"
+                      />
+                      
+                      
+                    </div>
+                    <div
+                      class="v-field__outline"
+                    >
+                      
+                      <div
+                        class="v-field__outline__start"
+                      />
+                      <div
+                        class="v-field__outline__notch"
+                      >
+                        <label
+                          aria-hidden="false"
+                          class="v-label v-field-label v-field-label--floating"
+                          for="sc-field-sc-3-0"
+                          style=""
+                        >
+                          
+                          제목
+                          
+                        </label>
+                      </div>
+                      <div
+                        class="v-field__outline__end"
+                      />
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div
+                  aria-live="polite"
+                  class="v-input__details"
+                  id="sc-field-sc-3-0-messages"
+                  role="alert"
+                >
+                  <div
+                    class="v-messages"
+                  >
+                    <div
+                      class="v-messages__message"
+                    >
+                      서버 제목 검증 오류
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p
+                role="alert"
+              >
+                모의 입력 오류
+              </p>
+              <p
+                aria-label="제출 횟수"
+                role="status"
+              >
+                1
+              </p>
+              <div
+                class="sc-form-actions"
+                data-v-31a28ffe=""
+              >
+                <div
+                  class="sc-form-actions__buttons"
+                  data-v-31a28ffe=""
+                >
+                  
+                  
+                  <button
+                    aria-busy="false"
+                    class="v-btn v-theme--sc text-primary v-btn--density-default elevation-0 v-btn--size-default v-btn--variant-outlined sc-action-button"
+                    data-v-31a28ffe=""
+                    data-v-cb4820b6=""
+                    type="button"
+                  >
+                    
+                    <span
+                      class="v-btn__overlay"
+                    />
+                    <span
+                      class="v-btn__underlay"
+                    />
+                    
+                    <span
+                      class="v-btn__content"
+                      data-no-activator=""
+                    >
+                      
+                      
+                      
+                      취소
+                      
+                      
+                      
+                    </span>
+                  </button>
+                  <button
+                    aria-busy="false"
+                    class="v-btn v-theme--sc bg-primary v-btn--density-default elevation-0 v-btn--size-default v-btn--variant-flat sc-action-button"
+                    data-v-31a28ffe=""
+                    data-v-cb4820b6=""
+                    type="submit"
+                  >
+                    
+                    <span
+                      class="v-btn__overlay"
+                    />
+                    <span
+                      class="v-btn__underlay"
+                    />
+                    
+                    <span
+                      class="v-btn__content"
+                      data-no-activator=""
+                    >
+                      
+                      
+                      
+                      저장
+                      
+                      
+                      
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </form>
+            
+          </div>
+          
+        </main>
+        
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+Ignored nodes: comments, script, style
+<div
+  data-v-app=""
+>
+  <div
+    class="sc-story-locale"
+    lang="ko"
+  >
+    
+    <div
+      class="v-application v-theme--sc v-layout v-layout--full-height v-locale--is-ltr sc-app sc-story-frame"
+      data-v-000bc527=""
+    >
+      <div
+        class="v-application__wrap"
+      >
+        
+        <main
+          class="v-main"
+          data-v-000bc527=""
+          style="--v-layout-left: 0px; --v-layout-right: 0px; --v-layout-top: 0px; --v-layout-bottom: 0px;"
+        >
+          
+          <div
+            class="sc-content sc-story-frame__content"
+            data-v-000bc527=""
+          >
+            
+            <form
+              aria-label="모의 저장 폼"
+              class="sc-stack"
+              novalidate=""
+            >
+              <div
+                class="v-input v-input--horizontal v-input--center-affix v-input--indent-details v-input--density-comfortable v-theme--sc v-locale--is-ltr v-input--error v-input--dirty v-text-field sc-text-field"
+                data-v-0058f36a=""
+              >
+                <div
+                  class="v-input__control"
+                >
+                  
+                  <div
+                    class="v-field v-field--active v-field--center-affix v-field--dirty v-field--error v-field--variant-outlined v-theme--sc v-locale--is-ltr"
+                  >
+                    <div
+                      class="v-field__overlay"
+                    />
+                    <div
+                      class="v-field__loader"
+                    >
+                      <div
+                        aria-hidden="true"
+                        aria-valuemax="100"
+                        aria-valuemin="0"
+                        class="v-progress-linear v-theme--sc v-locale--is-ltr"
+                        role="progressbar"
+                        style="top: 0px; height: 0px; --v-progress-linear-height: 2px; --v-progress-reveal-duration: 900ms; --v-progress-chunk-gap: 4px;"
+                      >
+                        <div
+                          class="v-progress-linear__background bg-error"
+                        />
+                        <div
+                          class="v-progress-linear__buffer bg-error"
+                          style="width: 0%;"
+                        />
+                        <div
+                          class="v-progress-linear__indeterminate"
+                        >
+                          
+                          <div
+                            class="v-progress-linear__indeterminate long bg-error"
+                          />
+                          <div
+                            class="v-progress-linear__indeterminate short bg-error"
+                          />
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="v-field__field"
+                      data-no-activator=""
+                    >
+                      <label
+                        aria-hidden="true"
+                        class="v-label v-field-label"
+                        id="sc-field-sc-3-0-label"
+                        style=""
+                      >
+                        
+                        제목
+                        
+                      </label>
+                      
+                      
+                      <input
+                        aria-describedby="sc-field-sc-3-0-messages"
+                        aria-invalid="true"
+                        aria-labelledby="sc-field-sc-3-0-label"
+                        aria-required="true"
+                        class="v-field__input"
+                        id="sc-field-sc-3-0"
+                        required=""
+                        size="1"
+                        type="text"
+                        value="실패해도 남는 입력"
+                      />
+                      
+                      
+                    </div>
+                    <div
+                      class="v-field__outline"
+                    >
+                      
+                      <div
+                        class="v-field__outline__start"
+                      />
+                      <div
+                        class="v-field__outline__notch"
+                      >
+                        <label
+                          aria-hidden="false"
+                          class="v-label v-field-label v-field-label--floating"
+                          for="sc-field-sc-3-0"
+                          style=""
+                        >
+                          
+                          제목
+                          
+                        </label>
+                      </div>
+                      <div
+                        class="v-field__outline__end"
+                      />
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                <div
+                  aria-live="polite"
+                  class="v-input__details"
+                  id="sc-field-sc-3-0-messages"
+                  role="alert"
+                >
+                  <div
+                    class="v-messages"
+                  >
+                    <div
+                      class="v-messages__message"
+                    >
+                      서버 제목 검증 오류
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p
+                role="alert"
+              >
+                모의 입력 오류
+              </p>
+              <p
+                aria-label="제출 횟수"
+                role="status"
+              >
+                1
+              </p>
+              <div
+                class="sc-form-actions"
+                data-v-31a28ffe=""
+              >
+                <div
+                  class="sc-form-actions__buttons"
+                  data-v-31a28ffe=""
+                >
+                  
+                  
+                  <button
+                    aria-busy="false"
+                    class="v-btn v-theme--sc text-primary v-btn--density-default elevation-0 v-btn--size-default v-btn--variant-outlined sc-action-button"
+                    data-v-31a28ffe=""
+                    data-v-cb4820b6=""
+                    type="button"
+                  >
+                    
+                    <span
+                      class="v-btn__overlay"
+                    />
+                    <span
+                      class="v-btn__underlay"
+                    />
+                    
+                    <span
+                      class="v-btn__content"
+                      data-no-activator=""
+                    >
+                      
+                      
+                      
+                      취소
+                      
+                      
+                      
+                    </span>
+                  </button>
+                  <button
+                    aria-busy="false"
+                    class="v-btn v-theme--sc bg-primary v-btn--density-default elevation-0 v-btn--size-default v-btn--variant-flat sc-action-button"
+                    data-v-31a28ffe=""
+                    data-v-cb4820b6=""
+                    type="submit"
+                  >
+                    
+                    <span
+                      class="v-btn__overlay"
+                    />
+                    <span
+                      class="v-btn__underlay"
+                    />
+                    
+                    <span
+                      class="v-btn__content"
+                      data-no-activator=""
+                    >
+                      
+                      
+                      
+                      저장
+                      
+                      
+                      
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </form>
+            
+          </div>
+          
+        </main>
+        
+      </div>
+    </div>
+    
+  </div>
+</div>
+ ❯ waitForWrapper node_modules/.cache/storybook/10.4.1/af489ecb696950ba7363f3b7b6d5837c9e8ef11a75b8a308316953288b12095b/sb-vitest/deps/test-qPTfGWiA.js?v=f302708a:16947:40
+ ❯ node_modules/.cache/storybook/10.4.1/af489ecb696950ba7363f3b7b6d5837c9e8ef11a75b8a308316953288b12095b/sb-vitest/deps/test-qPTfGWiA.js?v=f302708a:17003:55
+ ❯ Instrumenter.invoke node_modules/.cache/storybook/10.4.1/af489ecb696950ba7363f3b7b6d5837c9e8ef11a75b8a308316953288b12095b/sb-vitest/deps/test-qPTfGWiA.js?v=f302708a:2429:20
+ ❯ Instrumenter.intercept node_modules/.cache/storybook/10.4.1/af489ecb696950ba7363f3b7b6d5837c9e8ef11a75b8a308316953288b12095b/sb-vitest/deps/test-qPTfGWiA.js?v=f302708a:2332:138
+ ❯ Instrumenter.track node_modules/.cache/storybook/10.4.1/af489ecb696950ba7363f3b7b6d5837c9e8ef11a75b8a308316953288b12095b/sb-vitest/deps/test-qPTfGWiA.js?v=f302708a:2323:83
+ ❯ Object.findByRole node_modules/.cache/storybook/10.4.1/af489ecb696950ba7363f3b7b6d5837c9e8ef11a75b8a308316953288b12095b/sb-vitest/deps/test-qPTfGWiA.js?v=f302708a:2301:151
+ ❯ play src/ValidatedForm.stories.ts:94:33
+ ❯ runStory node_modules/.cache/storybook/10.4.1/af489ecb696950ba7363f3b7b6d5837c9e8ef11a75b8a308316953288b12095b/sb-vitest/deps/csf-E4R7Z05z.js?v=f302708a:4965:6
+ ❯ node_modules/.cache/storybook/10.4.1/af489ecb696950ba7363f3b7b6d5837c9e8ef11a75b8a308316953288b12095b/sb-vitest/deps/@storybook_addon-vitest_internal_test-utils.js?v=f302708a:111:184
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/18]⎯
+
+
+ Test Files  4 failed | 21 passed (25)
+      Tests  18 failed | 63 passed (81)
+   Start at  21:31:48
+   Duration  7.69s (transform 0ms, setup 45.55s, import 5.36s, tests 14.67s, environment 0ms)
+
+npm error Lifecycle script `test:stories` failed with error:
+npm error code 1
+npm error path /Users/dk/Work/ScFramework/frontend/apps/catalog
+npm error workspace @sc/catalog@0.1.0
+npm error location /Users/dk/Work/ScFramework/frontend/apps/catalog
+npm error command failed
+npm error command sh -c vitest run --config vitest.config.ts

@@ -1,0 +1,35 @@
+PASS packed login, native form and CSS tokens
+PASS typed Notes API, Zod, Query invalidation and 409 draft preservation
+PASS packed shared form, locale preservation and dialog focus
+PASS packed table, 10000-row virtual view and keyboard focus
+PASS packed SVG chart, rich text and XLSX download/import
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
++ actual - expected
+
++ [
++   'scrollable-region-focusable'
++ ]
+- []
+
+    at accessible (file:///Users/dk/Work/ScFramework/scripts/verify-package-browser.mjs:95:10)
+    at async file:///Users/dk/Work/ScFramework/scripts/verify-package-browser.mjs:281:7
+    at async group (file:///Users/dk/Work/ScFramework/scripts/verify-package-browser.mjs:53:3)
+    at async file:///Users/dk/Work/ScFramework/scripts/verify-package-browser.mjs:253:5 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [ 'scrollable-region-focusable' ],
+  expected: [],
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.16.0
+Traceback (most recent call last):
+  File "/Users/dk/Work/ScFramework/scripts/verify-generated-app.py", line 64, in <module>
+    assert browser.returncode == 0, "External generated-app browser checks failed"
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: External generated-app browser checks failed

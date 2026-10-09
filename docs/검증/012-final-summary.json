@@ -1,0 +1,292 @@
+{
+  "stage": "012",
+  "status": "implementation-and-local-verification-complete",
+  "passed": true,
+  "recordedAt": "2026-10-06T22:54:54.689118+00:00",
+  "project": "/Users/dk/Work/ScFramework",
+  "stages001Through012Complete": true,
+  "completionScope": "001–012 functional implementation and local integration verification; historical unit149/server196 evidence is retained",
+  "designCorrection": {
+    "status": "local-design-correction-verification-complete-awaiting-explicit-user-acceptance",
+    "reference": "https://projects.spruko.com/vue/yzen/preview/dashboard/sales",
+    "previousUiMeetsVisualTarget": false,
+    "accepted": false,
+    "acceptanceRule": "Only an explicit user response may change accepted to true; agent visual QA PASS alone does not",
+    "sourceOrAssetsCopied": false,
+    "evidencePending": false,
+    "document": "docs/질의/디자인교정.md",
+    "browserQaPassed": true,
+    "browserEvidence": "docs/검증/design-correction-browser.json",
+    "browserChecks": 40,
+    "wholeDocumentAxeScans": 14,
+    "violations": 0,
+    "duplicateIds": 0,
+    "incompleteRuleInstances": 30,
+    "incompleteNodeInstances": 391,
+    "manualVoiceOverExecuted": false,
+    "manualIncompleteReviewComplete": false,
+    "integratedBuildPassed": true,
+    "integratedBuildEvidence": ".runtime/design-correction/integrated-build.log",
+    "currentUnitTests": 155,
+    "currentUnitFiles": 38,
+    "currentSelectedServerTests": 10,
+    "currentServerSelection": "ReferenceIntegrationTest only; historical196 is not newly rerun",
+    "newJarsBuilt": true,
+    "newJarUiVerified": true,
+    "newPixelBaselineApproved": true,
+    "sourcePublicUiComponents": 24,
+    "immutable012ArchivePublicUiComponents": 22,
+    "newStoriesPassed": 10,
+    "newStoryFiles": 2,
+    "newStoriesEvidence": ".runtime/design-correction/new-stories-second.log",
+    "currentStaticDocsPassed": 24,
+    "currentStaticControlsPassed": 10,
+    "currentStaticEvidence": "docs/검증/013-storybook-browser.json",
+    "candidateArtifactsVerified": true,
+    "candidateArtifactsEvidence": "docs/검증/design-correction-artifacts.json",
+    "candidateIndependentConsumerVerified": false,
+    "newJarUniqueCasesVerified": 30,
+    "newJarFirstPass": 28,
+    "newJarFirstFail": 2,
+    "newJarLayoutRerunPass": 6,
+    "jarCountsNotAddedTogether": true,
+    "newJarUiEvidence": ".runtime/design-correction/jar-layout-final.log",
+    "newJarStaticEvidence": "docs/검증/design-correction-jar-static.json",
+    "referenceStaticFiles": 46,
+    "starterStaticFiles": 8,
+    "remotePreviewVerified": true,
+    "remotePreviewEvidence": "docs/검증/design-correction-remote-preview.json",
+    "finalCorrectionSummary": "docs/검증/design-correction-final-summary.json",
+    "fullStoryExecutionPending": false,
+    "newPixelBaselineImages": 16,
+    "newPixelBaselineUpdatePassed": 4,
+    "newPixelComparisonPassed": 4,
+    "newPixelComparisonEvidence": ".runtime/design-correction/visual-baseline-compare.log",
+    "fullStoriesPassed": 105,
+    "fullStoryFiles": 30,
+    "fullStoriesEvidence": ".runtime/design-correction/storybook-all-resize-final.log",
+    "allCurrentFinalChecksComplete": true
+  },
+  "excluded": [
+    "Redis",
+    "JWT",
+    "SSO"
+  ],
+  "build": "012-integration-build-final.log",
+  "unit": {
+    "files": 36,
+    "passed": 149
+  },
+  "server": {
+    "actualRabbitMqNative": {
+      "tests": 196,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "normalBuild": {
+      "tests": 196,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 3
+    },
+    "normalExecuted": 193,
+    "skipReason": "Three real-broker tests require explicit fixture; native verify executed all196 with skipped0",
+    "caseCountsNotAddedTogether": true
+  },
+  "browser": {
+    "main": 71,
+    "reports": 5,
+    "passed": 76,
+    "operations": 10,
+    "operationsEvidence": "012-operations-e2e-fifth.log",
+    "mainVisualSkipped": 4,
+    "separateVisualPassed": 4,
+    "mainEvidence": "012-baseline-e2e-first.log",
+    "visualEvidence": "012-visual-first.log"
+  },
+  "axe": {
+    "passed": true,
+    "freshSets": {
+      "operations": {
+        "fullDocumentRuns": 11,
+        "violations": 0,
+        "duplicateIds": 0,
+        "incompleteRules": 29,
+        "incompleteNodes": 143,
+        "manualReviewComplete": false,
+        "evidence": "docs/검증/012-operations-e2e-fifth-results"
+      },
+      "reports": {
+        "fullDocumentRuns": 9,
+        "violations": 0,
+        "duplicateIds": 0,
+        "incompleteRules": 18,
+        "incompleteNodes": 245,
+        "manualReviewComplete": false,
+        "evidence": "docs/검증/012-reports-e2e-first-results"
+      }
+    },
+    "mainBaseline": "012-baseline-e2e-first.log",
+    "mainOutputRetained": false,
+    "mainAxeRunsNotReusedFromPreviousStages": true
+  },
+  "storybook": {
+    "stories": 95,
+    "files": 28,
+    "docs": 22,
+    "controls": 10,
+    "browserErrors": 0,
+    "buildEvidence": "012-storybook-build-first.log",
+    "storyEvidence": "012-storybook-tests-first.log",
+    "docsEvidence": "012-storybook-docs-first.log"
+  },
+  "api": {
+    "liveAppComparisons": 4,
+    "defaultAndOperations": true,
+    "neutralAndGeneratedTypes": true,
+    "evidence": [
+      "012-api-default-final.log",
+      "012-api-operations-final.log",
+      "012-api-neutral-final.log"
+    ]
+  },
+  "operations": {
+    "httpBoundaryGroups": 18,
+    "recoveryGroups": 7,
+    "observabilityGroups": 8,
+    "grafanaPanels": 6,
+    "grafanaPopulatedQueries": 5,
+    "grafanaDataFrames": 11,
+    "dockerGroups": 7,
+    "dockerLatestImageBuild": "012-docker-app-build-final-second.log",
+    "dockerLatestRuntime": "012-docker-operations-final-second.json",
+    "dockerInitialFinalCliFailureRetained": "012-docker-operations-final.json"
+  },
+  "packages": {
+    "frontendVersion": "0.3.0",
+    "backendVersion": "0.3.0-SNAPSHOT",
+    "npmTarballs": 5,
+    "mavenCoordinates": 4,
+    "mavenFiles": 7,
+    "negativeGates": 27,
+    "protectedFiles": 130,
+    "generatorChecks": 56,
+    "templateVersion": 2,
+    "templateFiles": 82,
+    "generatedFiles": 95,
+    "immutableReleaseDirectory": ".runtime/releases/012/v0.3.0",
+    "legacyVerifierStageField": "Some reused package verifier JSON says stage011; actual tested cohort is0.3.0, as recorded in the manifest"
+  },
+  "external": {
+    "consumer": "/private/tmp/sc-framework-consumer-012-20261007",
+    "ownServerTests": 10,
+    "ownServerTestEvidence": "012-consumer-build-first.log",
+    "basicHttpGroups": 2,
+    "basicBrowserGroups": 7,
+    "selectedLauncherGroups": 9,
+    "successfulOperationalApiGroups": 5,
+    "apiAndSafeLogEvidence": "012-generated-operations-second/summary.json",
+    "retainedOverallApiRunBrowserFailure": true,
+    "finalOperationsBrowserGroups": 8,
+    "finalOperationsAxeRuns": 15,
+    "finalOperationsViolations": 0,
+    "finalOperationsDuplicateIds": 0,
+    "finalOperationsIncompleteRules": 29,
+    "finalOperationsScreenshots": 15,
+    "safeCollectorAppVersion": "1.0.0",
+    "secretMatches": 0,
+    "temporaryRuntimeRemoved": true,
+    "finalJarSha256": "35d5cdeb7b7f2bddebdba908f6c9cc1ef8226425678909ef273c28639f6e8348",
+    "finalUiEvidence": "012-generated-operations-visual-final/summary.json",
+    "repairProvenancePreserved": true,
+    "freshGeneratedAppBuiltAgain": false,
+    "freshTemplateSourceComparison": "012-consumer-layout-final-template-bytes.json"
+  },
+  "referenceSourceProtection": {
+    "stage": "012",
+    "baseline": "007-reference-source-baseline.json",
+    "checked": 170,
+    "changed": [],
+    "scope": "Read-only current baseline for subsequent 008–012 checks; excludes docs and runtime/build outputs",
+    "passed": true
+  },
+  "currentJarStaticBytes": {
+    "passed": true,
+    "apps": [
+      {
+        "app": "reference",
+        "distFiles": 43,
+        "exactBytes": true,
+        "jarSha256": "a72873fb269efc5d42c668824d01a9067f888b535db97c7b88ec3f44cc849d4c"
+      },
+      {
+        "app": "starter",
+        "distFiles": 8,
+        "exactBytes": true,
+        "jarSha256": "d6a66af5fc3e953378ed60f9f1a327a58c8c6580d052937a114f05903d6ab687"
+      }
+    ],
+    "build": "012-integration-build-final.log",
+    "cssOnlyRepackage": "012-table-layout-jar-final.log",
+    "serverTestsNotRepeatedForCss": true
+  },
+  "validationJson": [
+    "012-package-artifacts-first.json",
+    "012-package-gates-first.json",
+    "012-starter-generator-layout-final.json",
+    "012-generated-first/summary.json",
+    "012-package-consumer-first.json",
+    "012-generated-features-first.json",
+    "012-operational-boundaries-first.json",
+    "012-runtime-recovery-third.json",
+    "012-observability-fifth.json",
+    "012-generated-operations-visual-final/summary.json",
+    "012-docker-operations-final-second.json",
+    "012-reference-source-preservation-final.json",
+    "012-final-jar-static-bytes.json",
+    "012-consumer-layout-final-template-bytes.json",
+    "012-ci-static-final.json",
+    "012-docker-portable-gates.json"
+  ],
+  "remoteCiExecuted": false,
+  "published": false,
+  "productionDeployed": false,
+  "manualVoiceOverExecuted": false,
+  "manualIncompleteReviewComplete": false,
+  "linuxApprovedVisualBaseline": false,
+  "windowsExecuted": false,
+  "operationalDbInplaceDowngradeSupported": false,
+  "externalExactlyOnceGuarantee": false,
+  "documentationValidation": {
+    "passed": true,
+    "evidence": "012-final-doc-check.json",
+    "frontendNineDocs": "012-frontend-docs-check-final.json",
+    "globalFormat": "012-global-format-final.log",
+    "globalLint": "012-global-lint-final.log"
+  },
+  "cleanup": {
+    "passed": true,
+    "project": "scframework-012-20261007",
+    "remainingTaskContainers": 0,
+    "retainedTaskNamedVolumes": [
+      "scframework-012-20261007_operations-application",
+      "scframework-012-20261007_operations-grafana",
+      "scframework-012-20261007_operations-grafana-secret",
+      "scframework-012-20261007_operations-loki",
+      "scframework-012-20261007_operations-prometheus",
+      "scframework-012-20261007_operations-rabbitmq",
+      "scframework-012-20261007_operations-tempo"
+    ],
+    "volumesDeleted": false,
+    "privateOperationsHomeRetained": true,
+    "userProjectsChanged": false,
+    "cleanupLog": "012-task-compose-cleanup.log"
+  },
+  "visualReview": {
+    "messages390En": "012-generated-operations-visual-final/browser/messages-390-en.png",
+    "longUuidCellOverlapResolved": true,
+    "approvedVisualRegressionCases": 4,
+    "manualVoiceOverReview": false
+  }
+}

@@ -1,0 +1,5 @@
+
+> sc-framework@0.1.0 storybook:verify
+> node scripts/verify-storybook.mjs
+
+정적 Storybook: Docs 22개 공개 계약, Controls 10개, 브라우저 오류 0

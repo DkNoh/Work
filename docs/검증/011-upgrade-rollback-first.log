@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/dk/Work/ScFramework/scripts/verify-package-upgrade.py", line 128, in <module>
+    build("upgrade")
+    ~~~~~^^^^^^^^^^^
+  File "/Users/dk/Work/ScFramework/scripts/verify-package-upgrade.py", line 72, in build
+    assert source_hashes() == initial_sources, "업무 소스/생성 provenance가 변경되었습니다."
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 업무 소스/생성 provenance가 변경되었습니다.

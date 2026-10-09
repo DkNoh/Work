@@ -1,0 +1,19 @@
+{
+  "patternsEnabled": false,
+  "isolatedBuild": true,
+  "defaultBuildUnchanged": true,
+  "assets": [
+    "PatternsPage-CyYFIwJu.js",
+    "PatternsPage-DxdglvMl.css",
+    "index-B-C1K61Y.js",
+    "index-D3sHz9m_.css"
+  ],
+  "optionalChunkRequests": [],
+  "optionalChunksEmitted": [
+    "PatternsPage-CyYFIwJu.js",
+    "PatternsPage-DxdglvMl.css"
+  ],
+  "unknownRouteRedirect": "/",
+  "browserErrors": [],
+  "apiRequests": []
+}

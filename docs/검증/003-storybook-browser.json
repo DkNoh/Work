@@ -1,0 +1,50 @@
+{
+  "stage": "003",
+  "staticBuild": true,
+  "docs": [
+    {
+      "component": "ScActionButton",
+      "props": 6,
+      "events": 1,
+      "slots": 1,
+      "duplicateIds": []
+    },
+    {
+      "component": "ScTextField",
+      "props": 18,
+      "events": 7,
+      "slots": 0,
+      "duplicateIds": []
+    },
+    {
+      "component": "ScAppShell",
+      "props": 5,
+      "events": 1,
+      "slots": 4,
+      "duplicateIds": []
+    }
+  ],
+  "controls": [
+    {
+      "component": "ScTextField",
+      "controlsToCanvas": true,
+      "canvasToArgs": true,
+      "labelReactive": true
+    },
+    {
+      "component": "ScAppShell",
+      "controlsToCanvas": true,
+      "navigateToArgs": true
+    }
+  ],
+  "browserErrors": [],
+  "captures": [
+    "003-ScActionButton-docs.png",
+    "003-ScTextField-docs.png",
+    "003-ScAppShell-docs.png",
+    "003-ScTextField-controls.png"
+  ],
+  "storyCount": 22,
+  "docsCount": 5,
+  "passed": true
+}

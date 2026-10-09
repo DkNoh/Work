@@ -1,0 +1,274 @@
+{
+  "schemaVersion": 1,
+  "environment": {
+    "profile": "darwin-chromium",
+    "platform": "darwin",
+    "architecture": "arm64",
+    "os": {
+      "release": "25.6.0",
+      "version": "Darwin Kernel Version 25.6.0: Fri Jul 31 19:17:26 PDT 2026; root:xnu-12377.161.14~5/RELEASE_ARM64_T6041"
+    },
+    "browser": "chromium",
+    "browserVersion": "153.0.8010.12",
+    "playwrightVersion": "1.63.0",
+    "settings": {
+      "locale": "ko-KR",
+      "timezoneId": "UTC",
+      "deviceScaleFactor": 1,
+      "colorScheme": "light",
+      "reducedMotion": "reduce"
+    },
+    "font": {
+      "family": "\"Malgun Gothic\", \"Apple SD Gothic Neo\", system-ui, sans-serif",
+      "size": "14px",
+      "weight": "400",
+      "latinWidth": 156.477814,
+      "koreanWidth": 147.937805,
+      "devicePixelRatio": 1,
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36"
+    }
+  },
+  "cases": {
+    "applications": [
+      "reference",
+      "starter"
+    ],
+    "widths": [
+      1366,
+      390
+    ],
+    "height": 844,
+    "captures": [
+      "shell-inputs",
+      "table",
+      "chart",
+      "editor"
+    ]
+  },
+  "images": [
+    {
+      "application": "reference",
+      "viewport": {
+        "width": 1366,
+        "height": 844
+      },
+      "capture": "shell-inputs",
+      "name": "reference-1366-shell-inputs.png",
+      "file": "reference-1366-shell-inputs-darwin.png",
+      "width": 1366,
+      "height": 844,
+      "bytes": 59452,
+      "sha256": "1c7ff817aaa195b37ea59a15868a1c7c9f72904137ebca12cff01ee2197054c6"
+    },
+    {
+      "application": "reference",
+      "viewport": {
+        "width": 1366,
+        "height": 844
+      },
+      "capture": "table",
+      "name": "reference-1366-table.png",
+      "file": "reference-1366-table-darwin.png",
+      "width": 1070,
+      "height": 878,
+      "bytes": 38681,
+      "sha256": "22231d94c925f4043bb2b3578c9d1657275d296dac1979884c2556dd6ebf74cd"
+    },
+    {
+      "application": "reference",
+      "viewport": {
+        "width": 1366,
+        "height": 844
+      },
+      "capture": "chart",
+      "name": "reference-1366-chart.png",
+      "file": "reference-1366-chart-darwin.png",
+      "width": 1070,
+      "height": 568,
+      "bytes": 19689,
+      "sha256": "21a9d380b1af3847c722c1210111f1ff332312784d726d62b5761e3b1df7f470"
+    },
+    {
+      "application": "reference",
+      "viewport": {
+        "width": 1366,
+        "height": 844
+      },
+      "capture": "editor",
+      "name": "reference-1366-editor.png",
+      "file": "reference-1366-editor-darwin.png",
+      "width": 1070,
+      "height": 394,
+      "bytes": 12439,
+      "sha256": "9e58ef0de61703e2d51586be92edf2585c58df1c87c06b1da424da08e1ea040d"
+    },
+    {
+      "application": "reference",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capture": "shell-inputs",
+      "name": "reference-390-shell-inputs.png",
+      "file": "reference-390-shell-inputs-darwin.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 38181,
+      "sha256": "abe82328fed388191be21e88f9e4e71267a825335bf3346266ff5e2e76043828"
+    },
+    {
+      "application": "reference",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capture": "table",
+      "name": "reference-390-table.png",
+      "file": "reference-390-table-darwin.png",
+      "width": 358,
+      "height": 878,
+      "bytes": 34749,
+      "sha256": "940ec7a8e1a7bc3f04c05dde974b6f742d1e0d6f1d79e70f21fdec5254626070"
+    },
+    {
+      "application": "reference",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capture": "chart",
+      "name": "reference-390-chart.png",
+      "file": "reference-390-chart-darwin.png",
+      "width": 358,
+      "height": 568,
+      "bytes": 17371,
+      "sha256": "c02e6a959636a65f3fc3ffab0d9367a50cb579796caa312d72ce5838345cbd66"
+    },
+    {
+      "application": "reference",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capture": "editor",
+      "name": "reference-390-editor.png",
+      "file": "reference-390-editor-darwin.png",
+      "width": 358,
+      "height": 434,
+      "bytes": 11172,
+      "sha256": "bbbcc0e766f038d4e02416801012e5f490d756207322711002f31114074bcf05"
+    },
+    {
+      "application": "starter",
+      "viewport": {
+        "width": 1366,
+        "height": 844
+      },
+      "capture": "shell-inputs",
+      "name": "starter-1366-shell-inputs.png",
+      "file": "starter-1366-shell-inputs-darwin.png",
+      "width": 1366,
+      "height": 844,
+      "bytes": 52506,
+      "sha256": "c6cbcf3040cb0e38a8ad80d08376b6253eeff69698d633363dd378ce7f67f833"
+    },
+    {
+      "application": "starter",
+      "viewport": {
+        "width": 1366,
+        "height": 844
+      },
+      "capture": "table",
+      "name": "starter-1366-table.png",
+      "file": "starter-1366-table-darwin.png",
+      "width": 1070,
+      "height": 878,
+      "bytes": 38681,
+      "sha256": "22231d94c925f4043bb2b3578c9d1657275d296dac1979884c2556dd6ebf74cd"
+    },
+    {
+      "application": "starter",
+      "viewport": {
+        "width": 1366,
+        "height": 844
+      },
+      "capture": "chart",
+      "name": "starter-1366-chart.png",
+      "file": "starter-1366-chart-darwin.png",
+      "width": 1070,
+      "height": 568,
+      "bytes": 19689,
+      "sha256": "21a9d380b1af3847c722c1210111f1ff332312784d726d62b5761e3b1df7f470"
+    },
+    {
+      "application": "starter",
+      "viewport": {
+        "width": 1366,
+        "height": 844
+      },
+      "capture": "editor",
+      "name": "starter-1366-editor.png",
+      "file": "starter-1366-editor-darwin.png",
+      "width": 1070,
+      "height": 394,
+      "bytes": 12439,
+      "sha256": "9e58ef0de61703e2d51586be92edf2585c58df1c87c06b1da424da08e1ea040d"
+    },
+    {
+      "application": "starter",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capture": "shell-inputs",
+      "name": "starter-390-shell-inputs.png",
+      "file": "starter-390-shell-inputs-darwin.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 37125,
+      "sha256": "208e49a998f0f1115523b14405a131fd01064e91ed6d1919c9072677300ded0c"
+    },
+    {
+      "application": "starter",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capture": "table",
+      "name": "starter-390-table.png",
+      "file": "starter-390-table-darwin.png",
+      "width": 358,
+      "height": 878,
+      "bytes": 34749,
+      "sha256": "940ec7a8e1a7bc3f04c05dde974b6f742d1e0d6f1d79e70f21fdec5254626070"
+    },
+    {
+      "application": "starter",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capture": "chart",
+      "name": "starter-390-chart.png",
+      "file": "starter-390-chart-darwin.png",
+      "width": 358,
+      "height": 568,
+      "bytes": 17371,
+      "sha256": "c02e6a959636a65f3fc3ffab0d9367a50cb579796caa312d72ce5838345cbd66"
+    },
+    {
+      "application": "starter",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capture": "editor",
+      "name": "starter-390-editor.png",
+      "file": "starter-390-editor-darwin.png",
+      "width": 358,
+      "height": 434,
+      "bytes": 11172,
+      "sha256": "bbbcc0e766f038d4e02416801012e5f490d756207322711002f31114074bcf05"
+    }
+  ]
+}

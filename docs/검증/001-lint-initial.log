@@ -1,0 +1,13 @@
+
+> sc-framework@0.1.0 lint
+> eslint frontend scripts --max-warnings 0
+
+
+/Users/dk/Work/ScFramework/frontend/packages/ui/src/ScTextField.vue
+   4:5  warning  Attribute ":id" should go before "class"    vue/attributes-order
+  25:5  warning  Prop 'id' requires default value to be set  vue/require-default-prop
+
+✖ 2 problems (0 errors, 2 warnings)
+  0 errors and 1 warning potentially fixable with the `--fix` option.
+
+ESLint found too many warnings (maximum: 0).

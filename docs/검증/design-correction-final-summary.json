@@ -1,0 +1,221 @@
+{
+  "format": 1,
+  "stage": "design-correction",
+  "recordedAt": "2026-10-07T00:03:56.079091+00:00",
+  "implementationAndSelectedLocalQaVerified": true,
+  "allCurrentFinalChecksComplete": true,
+  "userAccepted": false,
+  "sourceAndAssetCopyFromYzen": false,
+  "historical012EvidencePreserved": {
+    "unit": {
+      "files": 36,
+      "passed": 149
+    },
+    "server": {
+      "actualRabbitMqNative": {
+        "tests": 196,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "normalBuild": {
+        "tests": 196,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 3
+      },
+      "normalExecuted": 193,
+      "skipReason": "Three real-broker tests require explicit fixture; native verify executed all196 with skipped0",
+      "caseCountsNotAddedTogether": true
+    },
+    "storybook": {
+      "stories": 95,
+      "files": 28,
+      "docs": 22,
+      "controls": 10,
+      "browserErrors": 0,
+      "buildEvidence": "012-storybook-build-first.log",
+      "storyEvidence": "012-storybook-tests-first.log",
+      "docsEvidence": "012-storybook-docs-first.log"
+    },
+    "recordedAt": "2026-10-06T22:54:54.689118+00:00",
+    "archive": ".runtime/releases/012",
+    "notNewlyReexecuted": true
+  },
+  "integration": {
+    "passed": true,
+    "command": "scripts/build.sh -Dtest=ReferenceIntegrationTest -Dsurefire.failIfNoSpecifiedTests=false",
+    "log": ".runtime/design-correction/integrated-build.log",
+    "unitTests": 155,
+    "unitFiles": 38,
+    "selectedServerTests": 10,
+    "selectedServerClass": "ReferenceIntegrationTest",
+    "fullHistorical196ServerTestsReexecuted": false,
+    "newJarsBuilt": true
+  },
+  "liveBrowser": {
+    "passed": true,
+    "checks": 40,
+    "wholeDOMAxeScans": 14,
+    "violations": 0,
+    "duplicateIds": 0,
+    "incompleteRuleInstances": 30,
+    "incompleteNodeInstances": 391,
+    "evidence": "docs/검증/design-correction-browser.json",
+    "sampleSalesDataSynthetic": true,
+    "actualReportGETStatus": 200,
+    "actualReportTotal": 0,
+    "sampleCSVRows": 4,
+    "liveCSVRows": 0,
+    "businessWrites": 0
+  },
+  "jarE2E": {
+    "passed": true,
+    "uniqueCasesVerified": 30,
+    "first": {
+      "passed": 28,
+      "failed": 2,
+      "log": ".runtime/design-correction/jar-e2e.log",
+      "results": ".runtime/design-correction/jar-e2e-first-results"
+    },
+    "layoutRerun": {
+      "passed": 6,
+      "failed": 0,
+      "log": ".runtime/design-correction/jar-layout-final.log",
+      "results": ".runtime/design-correction/jar-layout-final-results"
+    },
+    "countsNotAddedTogether": true,
+    "initialFailure": "getByRole cannot find the background navigation trigger while native modal semantics correctly set aria-hidden; test attribute locator corrected and inert restoration assertions strengthened.",
+    "productSourceChangedForThisRerun": false
+  },
+  "jarStatic": {
+    "evidence": "docs/검증/design-correction-jar-static.json",
+    "passed": true,
+    "applications": [
+      {
+        "app": "reference",
+        "files": 46,
+        "jarMatchesBuiltFrontend": true,
+        "jarSha256": "08a1ae9aa3d208a4faadff914e0e62df26094c96c13d02c1718132e2ab6b8490"
+      },
+      {
+        "app": "starter",
+        "files": 8,
+        "jarMatchesBuiltFrontend": true,
+        "jarSha256": "65d00a427f995df9a4f228c6217ad31b8ceb318c9cfd3c02a2655e868745d6e5"
+      }
+    ]
+  },
+  "remotePreview": {
+    "evidence": "docs/검증/design-correction-remote-preview.json",
+    "checkedAt": "2026-10-07T00:00:23.414Z",
+    "tailnetOnly": true,
+    "passed": true,
+    "targets": [
+      {
+        "origin": "http://100.120.61.117:18082",
+        "httpStatus": 200,
+        "authenticatedDashboard": true,
+        "kpiCount": 4,
+        "realChartSvg": true,
+        "pageErrors": []
+      },
+      {
+        "origin": "https://macstudio.tailf9bcc5.ts.net:5176",
+        "httpStatus": 200,
+        "authenticatedDashboard": true,
+        "kpiCount": 4,
+        "realChartSvg": true,
+        "pageErrors": []
+      }
+    ]
+  },
+  "publicUI": {
+    "sourceComponents": 24,
+    "immutable012ArchiveComponents": 22,
+    "staticDocs": 24,
+    "controls": 10,
+    "staticEvidence": "docs/검증/013-storybook-browser.json",
+    "newStoriesPassed": 10,
+    "newStoryFiles": 2,
+    "newStoriesEvidence": ".runtime/design-correction/new-stories-second.log",
+    "fullStories": {
+      "pending": false,
+      "passed": true,
+      "stories": 105,
+      "files": 30,
+      "log": ".runtime/design-correction/storybook-all-resize-final.log",
+      "staticRebuildLog": ".runtime/design-correction/storybook-static-resize-final-build.log",
+      "initial": {
+        "passed": 104,
+        "failed": 1,
+        "log": ".runtime/design-correction/storybook-all-final.log",
+        "reason": "A prior mobile long-title height assumption did not match compact68; fixtures verify actual observer expansion/return and full modal title instead."
+      }
+    }
+  },
+  "candidateArtifacts": {
+    "passed": true,
+    "frontendPackages": 5,
+    "backendCoordinates": 4,
+    "backendFiles": 7,
+    "evidence": "docs/검증/design-correction-artifacts.json",
+    "directory": ".runtime/releases/design-correction/v0.3.0-candidate1",
+    "independentInstallConsumerVerified": false
+  },
+  "visualBaseline": {
+    "pending": false,
+    "passed": true,
+    "profile": "darwin-chromium",
+    "images": 16,
+    "explicitUpdatePassed": 4,
+    "manifestRecorded": true,
+    "normalComparisonPassed": 4,
+    "normalComparisonSeconds": 18.1,
+    "updateLog": ".runtime/design-correction/visual-baseline-update.log",
+    "manifestLog": ".runtime/design-correction/visual-manifest-record.log",
+    "comparisonLog": ".runtime/design-correction/visual-baseline-compare.log",
+    "beforeDirectory": ".runtime/design-correction/visual-baseline-before",
+    "beforeFiles": 17,
+    "old012AndBeforeCorrectionPreserved": true,
+    "rootActuallyInspectedDashboardAndRepresentativeShellImages": true,
+    "scope": "Shared shell/input/table/chart/editor regression at1366/390; live dashboard screenshot QA remains separate."
+  },
+  "screenshots": [
+    {
+      "source": ".runtime/design-correction/qa-fourth/desktop-dashboard-ko-month.png",
+      "file": "docs/검증/design-correction-desktop.png",
+      "sha256": "eaecf0ffb89ce71d8469e77fe51bff08bee0ca60f259cd532f63f260156fff7c",
+      "bytes": 282876,
+      "width": 1440,
+      "height": 1649
+    },
+    {
+      "source": ".runtime/design-correction/qa-fourth/mobile-dashboard-ko-month.png",
+      "file": "docs/검증/design-correction-mobile.png",
+      "sha256": "e06254d9a28804367b120275568322e715f7984608b641220b7fa905afd591cb",
+      "bytes": 251911,
+      "width": 390,
+      "height": 4445
+    },
+    {
+      "source": ".runtime/design-correction/qa-fourth/desktop-login-empty.png",
+      "file": "docs/검증/design-correction-login.png",
+      "sha256": "600c8c31bfb1ce6775ca4a4375ca44df49fff2c5404b98fad5ffe641a28ab882",
+      "bytes": 248245,
+      "width": 1440,
+      "height": 1000
+    }
+  ],
+  "manualVoiceOverExecuted": false,
+  "manualIncompleteReviewComplete": false,
+  "remoteCIExecuted": false,
+  "linuxVisualBaselineVerified": false,
+  "initialBrowserFailures": {
+    "first": ".runtime/design-correction/qa-first/initial-execution.json",
+    "second": ".runtime/design-correction/qa-second/summary.json",
+    "secondErrata": ".runtime/design-correction/qa-second/execution-errata.json",
+    "third": ".runtime/design-correction/qa-third/summary.json"
+  },
+  "completionScope": "Current automatic local design-correction checks only; independent candidate installation, manual VoiceOver/incomplete review, remote production CI and user design acceptance remain unverified."
+}

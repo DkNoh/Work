@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-10-06T23:37:54.579450+00:00",
+  "purpose": "documentation scope correction; no design implementation or live UI QA claim",
+  "passed": true,
+  "markdownFiles": 7,
+  "localLinks": 307,
+  "externalLinksPresentNotFetched": 1,
+  "tables": 13,
+  "fences": 5,
+  "jsonExamples": 0,
+  "scopeMetadataParsed": true,
+  "historicalUnit149AndServer196Preserved": true,
+  "historicalPassedStatusAndRecordedAtPreserved": true,
+  "userDesignAccepted": false,
+  "liveUiQaExecuted": false,
+  "generatedJsonWholeFileReformatted": false,
+  "initialForcedJsonFormatCheckRetained": "design-correction-docs-format-initial.log",
+  "finalMarkdownFormatCheck": "design-correction-docs-format.log",
+  "errors": []
+}

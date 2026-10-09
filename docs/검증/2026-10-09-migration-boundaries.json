@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-09",
+  "platform": "win32",
+  "node": "v24.18.0",
+  "checker": "C:/work/ScFrameWork/scripts/check-ui-boundaries.mjs",
+  "results": [
+    {
+      "name": "public-import",
+      "file": "apps/alpha",
+      "source": "import X from \"@audit/ui\";",
+      "expectedExit": 0,
+      "actualExit": 0,
+      "output": "공개 UI/소비 앱 경계: import 1개 확인\n",
+      "passed": true
+    },
+    {
+      "name": "consumer-private-import",
+      "file": "apps/alpha",
+      "source": "import X from \"@audit/ui/src/private\";",
+      "expectedExit": "nonzero",
+      "actualExit": 0,
+      "output": "공개 UI/소비 앱 경계: import 1개 확인\n",
+      "passed": false
+    },
+    {
+      "name": "shared-imports-app",
+      "file": "packages/ui",
+      "source": "import X from \"@audit/alpha\";",
+      "expectedExit": "nonzero",
+      "actualExit": 0,
+      "output": "공개 UI/소비 앱 경계: import 1개 확인\n",
+      "passed": false
+    },
+    {
+      "name": "consumer-imports-other-app",
+      "file": "apps/alpha",
+      "source": "import X from \"@audit/beta\";",
+      "expectedExit": "nonzero",
+      "actualExit": 0,
+      "output": "공개 UI/소비 앱 경계: import 1개 확인\n",
+      "passed": false
+    }
+  ]
+}

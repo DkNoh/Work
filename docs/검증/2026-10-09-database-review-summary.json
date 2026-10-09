@@ -1,0 +1,515 @@
+{
+  "date": "2026-10-09",
+  "platform": "Windows",
+  "externalDatabasesExecuted": false,
+  "userRuntimeUsedForTests": false,
+  "referenceProjectsModified": false,
+  "frontend": {
+    "unitPassed": 167,
+    "files": 40,
+    "lint": "passed",
+    "typecheck": "passed",
+    "build": "passed",
+    "bundleSizeWarning": true,
+    "rootFormatCheck": "blocked by EPERM scanning pre-existing .runtime/windows-check/secrets",
+    "changedScriptsAndNewDocsFormat": "passed"
+  },
+  "frameworkGates": {
+    "passed": 24,
+    "importsChecked": 1425,
+    "openapiSchemas": 3,
+    "uiContracts": 25,
+    "snapshotsAndGeneratedTypesEdited": false
+  },
+  "databaseConfig": {
+    "checksPassed": 447,
+    "negativeFixturesDetected": 5,
+    "sqlEngineExecution": false
+  },
+  "backend": {
+    "modules": {
+      "core": {
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "autoconfigure_portable_subset": {
+        "tests": 75,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 3
+      },
+      "reference": {
+        "tests": 125,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "starter_isolated": {
+        "tests": 14,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 1
+      }
+    },
+    "passed": 213,
+    "initialFullVerify": "failed: existing Unix lockf method and 3 Windows symlink permission methods",
+    "excludedMethods": [
+      "RuntimeMaintenanceLockTest#pythonLockfAndJavaFileLockExcludeEachOtherAndRelease",
+      "FileStorageTest#traversalRootSymlinkAndEntrySymlinkCannotExposeExternalFiles",
+      "SafeOperationalEventSinkTest#rejectsSymlinksBeforeWritingAnything",
+      "StorageRecoveryTest#anotherStorageInstanceAndJournalSymlinksAreRejected"
+    ],
+    "testsWeakened": false,
+    "skipReasons": [
+      "RabbitMQ not opted in (3)",
+      "External database not opted in (1)"
+    ],
+    "suites": {
+      "core": [
+        {
+          "tests": "1",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.core.ApiErrorTest"
+        },
+        {
+          "tests": "2",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.core.audit.SecurityAuditEventTest"
+        }
+      ],
+      "autoconfigure_portable_subset": [
+        {
+          "tests": "2",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.autoconfigure.audit.DurableAuditPublisherTest"
+        },
+        {
+          "tests": "4",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.autoconfigure.AuditAutoConfigurationTest"
+        },
+        {
+          "tests": "4",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.autoconfigure.BrowserErrorBoundaryTest"
+        },
+        {
+          "tests": "13",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.autoconfigure.database.DatabasePortabilityTest"
+        },
+        {
+          "tests": "2",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.autoconfigure.database.JdbcDuplicateInsertTest"
+        },
+        {
+          "tests": "9",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.autoconfigure.DatabaseAdaptersTest"
+        },
+        {
+          "tests": "2",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.autoconfigure.FeignConsumerConfigurationTest"
+        },
+        {
+          "tests": "6",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.autoconfigure.FileStorageTest"
+        },
+        {
+          "tests": "1",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.autoconfigure.HealthReadinessTest"
+        },
+        {
+          "tests": "2",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "2",
+          "name": "dev.scframework.autoconfigure.MessageCrashBoundaryTest"
+        },
+        {
+          "tests": "6",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.autoconfigure.messaging.DurableMessagingTest"
+        },
+        {
+          "tests": "1",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "1",
+          "name": "dev.scframework.autoconfigure.messaging.RabbitDurableIntegrationTest"
+        },
+        {
+          "tests": "4",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.autoconfigure.QuerydslAutoConfigurationTest"
+        },
+        {
+          "tests": "2",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.autoconfigure.RegisteredTaskRegistryTest"
+        },
+        {
+          "tests": "2",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.autoconfigure.RequestIdFilterTest"
+        },
+        {
+          "tests": "2",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.autoconfigure.SafeOperationalEventSinkTest"
+        },
+        {
+          "tests": "2",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.autoconfigure.SafeSpanExporterTest"
+        },
+        {
+          "tests": "2",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.autoconfigure.ScOptionalInfrastructureFilterTest"
+        },
+        {
+          "tests": "2",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.autoconfigure.SecretFileUsersTest"
+        },
+        {
+          "tests": "3",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.autoconfigure.SecurityAuditTransactionTest"
+        },
+        {
+          "tests": "2",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.autoconfigure.SecurityOverrideTest"
+        },
+        {
+          "tests": "2",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.autoconfigure.storage.StorageRecoveryTest"
+        }
+      ],
+      "reference": [
+        {
+          "tests": "4",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.reference.audit.AuditControllerTest"
+        },
+        {
+          "tests": "1",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.reference.audit.AuditSinkFailureHttpTest"
+        },
+        {
+          "tests": "6",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.reference.documents.DocumentGrammarTest"
+        },
+        {
+          "tests": "5",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.reference.documents.DocumentIntegrationTest"
+        },
+        {
+          "tests": "1",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.reference.H2PersistenceTest"
+        },
+        {
+          "tests": "3",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.reference.identity.PasswordIntegrationTest"
+        },
+        {
+          "tests": "13",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.reference.kanban.KanbanIntegrationTest"
+        },
+        {
+          "tests": "2",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.reference.media.ImageOrientationTest"
+        },
+        {
+          "tests": "10",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.reference.media.MediaIntegrationTest"
+        },
+        {
+          "tests": "2",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.reference.media.MediaMigrationTest"
+        },
+        {
+          "tests": "5",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.reference.notices.NoticeIntegrationTest"
+        },
+        {
+          "tests": "9",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.reference.operations.BrowserErrorsIntegrationTest"
+        },
+        {
+          "tests": "11",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.reference.operations.OperationalSchedulerIntegrationTest"
+        },
+        {
+          "tests": "10",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.reference.ReferenceIntegrationTest"
+        },
+        {
+          "tests": "10",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.reference.reports.RequirementReportIntegrationTest"
+        },
+        {
+          "tests": "22",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.reference.requirements.RequirementIntegrationTest"
+        },
+        {
+          "tests": "4",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.reference.requirements.RequirementMixedPersistenceTest"
+        },
+        {
+          "tests": "2",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.reference.requirements.RequirementPersistenceTest"
+        },
+        {
+          "tests": "5",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.reference.requirements.RequirementReadMapperTest"
+        }
+      ],
+      "starter_isolated": [
+        {
+          "tests": "1",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "1",
+          "name": "dev.scframework.starter.ExternalDatabaseContractTest"
+        },
+        {
+          "tests": "2",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.starter.StarterAuditConsumerTest"
+        },
+        {
+          "tests": "4",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.starter.StarterConsumerTest"
+        },
+        {
+          "tests": "2",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.starter.StarterFileStorageConsumerTest"
+        },
+        {
+          "tests": "5",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "name": "dev.scframework.starter.StarterOperationsIntegrationTest"
+        }
+      ]
+    }
+  },
+  "ormMetadata": {
+    "passed": 4,
+    "externalDatabaseExecuted": false,
+    "evidence": "2026-10-09-database-orm-mapping.json"
+  },
+  "finalMappingRegression": {
+    "tests": 31,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "existingH2CasesRerun": 27,
+    "newMetadataCases": 4,
+    "referenceJarRepackaged": true,
+    "log": ".runtime/db-final-mapping-regression.log"
+  },
+  "generatedBackend": {
+    "passed": 10,
+    "fullTarballConsumerExecuted": false
+  },
+  "generatedTools": {
+    "groupsPassed": 7,
+    "windowsOwnerAclExecuted": true,
+    "offlineSchemaGenerationExecuted": true
+  },
+  "driverPackaging": {
+    "profilesPassed": 4,
+    "h2ExcludedFromExternalJars": true,
+    "nonSelectedDriversExcluded": true,
+    "databaseStarted": false
+  },
+  "jarHttp": {
+    "passed": 17,
+    "h2WriteDelay": 0,
+    "gracefulWindowsShutdownVerified": false,
+    "defaultWriteDelayCrashLossReproduced": true
+  },
+  "browser": {
+    "uniqueScenariosPassed": 15,
+    "initialBrowserCases": {
+      "passed": 14,
+      "failed": 1
+    },
+    "fixedTest": "Open user menu before Sign out in requirements locale flow",
+    "rerunPassed": 1,
+    "browser": "installed Chrome",
+    "ports": [
+      18185,
+      18186
+    ]
+  },
+  "commands": [
+    {
+      "command": "bash scripts/build.sh -ntp",
+      "result": "failed: npm ci EBUSY on running Sass; restored dependencies using npm install without lock semantic changes",
+      "log": ".runtime/db-matrix-build.log"
+    },
+    {
+      "command": "backend/mvnw.cmd -B -ntp -fae -f backend/pom.xml verify",
+      "result": "failed: 4 existing Windows limitations",
+      "log": ".runtime/db-backend-verify.log"
+    },
+    {
+      "command": "backend/mvnw.cmd -B -ntp -f backend/pom.xml verify -Dtest=*,!<4 listed methods> -Dsurefire.failIfNoSpecifiedTests=false",
+      "result": "core/autoconfigure/reference tests pass; running JAR rename prevented packaging",
+      "log": ".runtime/db-backend-portable-verify.log"
+    },
+    {
+      "command": "backend/mvnw.cmd -B -ntp -f .runtime/database-build/backend/pom.xml -DskipTests install",
+      "result": "reference/common packaged; new external test compile ambiguity fixed before subsequent starter run",
+      "log": ".runtime/db-isolated-package.log"
+    },
+    {
+      "command": "backend/mvnw.cmd -B -ntp -f .runtime/database-build/backend/pom.xml -pl starter-app verify",
+      "result": "passed",
+      "log": ".runtime/db-isolated-starter-verify.log"
+    },
+    {
+      "command": "python scripts/smoke-test.py --jar <isolated-reference-jar> --starter-jar <isolated-starter-jar> --h2-write-through",
+      "result": "17 passed; repeated on final ORM mapping JAR",
+      "log": ".runtime/db-final-jar-smoke.log"
+    },
+    {
+      "command": "playwright test --config frontend/playwright.config.ts framework.spec.ts requirements.spec.ts (CHROME_BIN and isolated jars/ports set)",
+      "result": "14 passed/1 failed; user menu step fixed",
+      "log": ".runtime/db-e2e-chrome-clean.log"
+    },
+    {
+      "command": "playwright test --config frontend/playwright.config.ts requirements.spec.ts --grep search-URL-flow",
+      "result": "1 passed",
+      "log": ".runtime/db-e2e-logout-rerun.log"
+    }
+  ],
+  "unverified": [
+    "Oracle/Db2 LUW/SQL Server/PostgreSQL actual engine DDL and functional execution",
+    "real customer schema/legacy authentication/EJB/XA and dual-write migration",
+    "external DB backup/restore",
+    "full unfiltered Windows integrated build",
+    "complete independent npm tarball consumer install"
+  ]
+}

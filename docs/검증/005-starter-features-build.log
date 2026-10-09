@@ -1,0 +1,18 @@
+vite v8.3.1 building client environment for production...
+transforming...
+✓ 1769 modules transformed.
+rendering chunks...
+computing gzip size...
+../../../../../../../var/folders/8k/rv4bxj0115g929lrxwybv_r80000gn/T/sc-starter-features-39IyKx/dist/index.html                               0.49 kB │ gzip:   0.30 kB
+../../../../../../../var/folders/8k/rv4bxj0115g929lrxwybv_r80000gn/T/sc-starter-features-39IyKx/dist/assets/PatternsPage-Bh8mj2o_.css        53.27 kB │ gzip:   7.72 kB
+../../../../../../../var/folders/8k/rv4bxj0115g929lrxwybv_r80000gn/T/sc-starter-features-39IyKx/dist/assets/index-Bv8SeL7s.css              269.22 kB │ gzip:  39.47 kB
+../../../../../../../var/folders/8k/rv4bxj0115g929lrxwybv_r80000gn/T/sc-starter-features-39IyKx/dist/assets/rolldown-runtime-Dd_uD5pT.js      1.10 kB │ gzip:   0.62 kB
+../../../../../../../var/folders/8k/rv4bxj0115g929lrxwybv_r80000gn/T/sc-starter-features-39IyKx/dist/assets/index-DdiNpk9a.js               453.33 kB │ gzip: 161.68 kB
+../../../../../../../var/folders/8k/rv4bxj0115g929lrxwybv_r80000gn/T/sc-starter-features-39IyKx/dist/assets/PatternsPage-BP4GamWx.js      2,239.21 kB │ gzip: 681.89 kB
+
+✓ built in 466ms
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.

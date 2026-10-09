@@ -1,0 +1,16 @@
+{
+  "stage": "011",
+  "passed": false,
+  "phases": [
+    {
+      "name": "old baseline",
+      "version": "0.1.0",
+      "revision": 1,
+      "passed": true
+    }
+  ],
+  "appSourcePreserved": false,
+  "sameH2Preserved": false,
+  "originalRuntimeAccessed": false,
+  "temporaryRuntimeRemoved": true
+}

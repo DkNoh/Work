@@ -1,0 +1,49 @@
+{
+  "name": "@sc/catalog",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "storybook": "storybook dev -p 6006 --no-open",
+    "build-storybook": "storybook build",
+    "build": "npm run build-storybook",
+    "typecheck": "vue-tsc --noEmit -p tsconfig.json",
+    "test:stories": "vitest run --config vitest.config.ts"
+  },
+  "dependencies": {
+    "@sc/date": "0.3.0",
+    "@mdi/js": "7.4.47",
+    "@sc/runtime": "0.3.0",
+    "@sc/ui": "0.3.0",
+    "@tanstack/vue-query": "5.104.1",
+    "pinia": "4.0.3",
+    "vue": "3.5.43",
+    "vue-router": "5.3.1",
+    "vuetify": "4.2.4",
+    "@sc/i18n": "0.3.0",
+    "@sc/excel": "0.3.0",
+    "vue-i18n": "11.1.12",
+    "vee-validate": "4.15.1",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@storybook/addon-a11y": "10.4.1",
+    "@storybook/addon-docs": "10.4.1",
+    "@storybook/addon-vitest": "10.4.1",
+    "@storybook/vue3-vite": "10.4.1",
+    "@vitejs/plugin-vue": "6.0.9",
+    "@vitest/browser-playwright": "4.1.11",
+    "msw": "2.13.0",
+    "msw-storybook-addon": "2.0.7",
+    "playwright": "1.63.0",
+    "sass-embedded": "1.105.1",
+    "storybook": "10.4.1",
+    "typescript": "5.9.3",
+    "vite": "8.3.1",
+    "vite-plugin-vuetify": "2.1.3",
+    "vitest": "4.1.11",
+    "vue-component-meta": "2.2.12",
+    "vue-tsc": "3.3.12",
+    "esbuild": "0.28.1"
+  }
+}

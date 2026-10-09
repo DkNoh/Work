@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-09",
+  "platform": "Windows",
+  "java": "21",
+  "hibernate": "6.6.53.Final",
+  "command": "backend/mvnw.cmd -B -ntp -f backend/pom.xml -pl reference-app -am -Dtest=DatabaseOrmMappingTest -Dsurefire.failIfNoSpecifiedTests=false test",
+  "databaseConnectionUsed": false,
+  "externalDatabaseExecuted": false,
+  "final": {
+    "tests": 4,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "exitCode": 0,
+    "log": "2026-10-09-database-orm-mapping.log"
+  },
+  "verified": [
+    "Oracle EXTENDED without the app override expects VARCHAR2 for 10000/20000-character annotated fields, reproducing the mismatch with the CLOB DDL",
+    "Oracle app XML selects CLOB in both STANDARD and EXTENDED modes, preserves revision mappings, and aligns optional column nullability with the Oracle DDL",
+    "SQL Server nationalized metadata selects NVARCHAR(200), NVARCHAR(MAX), and DATETIMEOFFSET(6)",
+    "The actual document/history entity mappings select CLOB on H2/Oracle/Db2 and TEXT on PostgreSQL without an OID LOB mapping"
+  ],
+  "previousRuns": [
+    {
+      "tests": 3,
+      "failures": 1,
+      "classification": "product-mapping-mismatch",
+      "detail": "SQL Server document/history JSON with explicit JdbcTypeCode(LONG32VARCHAR) expected varchar(max), bypassing the global nationalized setting. Replaced with Column(length=Integer.MAX_VALUE)."
+    },
+    {
+      "tests": 4,
+      "failures": 1,
+      "classification": "test-expectation-correction",
+      "detail": "The Db2 DDL type descriptor reports clob without a capacity suffix. Corrected the test's clob(2147483647) expectation to clob; no additional production code change."
+    }
+  ],
+  "limitations": [
+    "Uses actual Hibernate entity/XML metadata with explicit dialect instances and JDBC metadata access disabled",
+    "Does not certify real Oracle/Db2/SQL Server/PostgreSQL DDL execution, JDBC binding, SQL constraints, transaction semantics, or customer migrations",
+    "H2 document/history integration regression and final JAR packaging are recorded by the root verification separately"
+  ]
+}

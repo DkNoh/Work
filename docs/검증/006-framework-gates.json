@@ -1,0 +1,20 @@
+{
+  "format": 1,
+  "result": "passed",
+  "cases": [],
+  "caseSummary": {
+    "passed": 24,
+    "cases": 24
+  },
+  "immutableInputs": {
+    "checked": 169,
+    "changed": []
+  },
+  "cleanup": true,
+  "evidence": {
+    "kind": "historical-cli-summary",
+    "source": "006-framework-gates-final.log",
+    "originalDetailedReportAvailable": false,
+    "note": "007 실행에서 결과 파일명이 006으로 고정되어 원본 상세 JSON이 덮어써졌다. 원본 006 CLI 통과 요약만 보존한다. 007 상세 case 출력은 007-framework-gates-initial.json 및 007-framework-gates.json에 있으며 006 실행의 상세 결과로 주장하지 않는다."
+  }
+}

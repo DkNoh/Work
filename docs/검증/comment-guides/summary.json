@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "date": "2026-10-09",
+  "frontendFiles": 233,
+  "javaFiles": 201,
+  "totalCommentedProductionFiles": 434,
+  "semanticDifferences": 0,
+  "integrationBuild": "bash scripts/build.sh PASS",
+  "frontendUnit": {
+    "passed": 167,
+    "files": 40
+  },
+  "backend": {
+    "total": 196,
+    "passed": 193,
+    "skipped": 3,
+    "failures": 0,
+    "skipScope": "external RabbitMQ tests"
+  },
+  "stories": {
+    "passed": 119,
+    "files": 32
+  },
+  "e2e": {
+    "passed": 22
+  },
+  "jarHttp": {
+    "passed": 17
+  },
+  "generator": {
+    "checks": 50,
+    "actualGeneration": false
+  },
+  "initialFailure": {
+    "unitFailures": 13,
+    "reason": "template root comments changed development root to Fragment",
+    "fix": "move root explanation into script comments; keep tests unchanged"
+  },
+  "limits": [
+    "generated/test/legacy-v1 files excluded from annotation scope",
+    "no external RabbitMQ infrastructure rerun",
+    "no generated consumer install or deployment",
+    "no visual baseline update"
+  ]
+}

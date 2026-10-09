@@ -1,0 +1,29 @@
+frontend/packages/runtime/src/browserErrors.ts 32ms
+frontend/packages/runtime/src/browserErrors.spec.ts 13ms (unchanged)
+frontend/packages/runtime/src/index.ts 1ms (unchanged)
+frontend/apps/reference-app/src/features/operations/api.ts 5ms
+frontend/apps/reference-app/src/features/operations/BrowserErrorsPage.vue 47ms
+frontend/apps/reference-app/src/features/operations/capabilities.ts 3ms
+frontend/apps/reference-app/src/features/operations/messages.ts 3ms
+frontend/apps/reference-app/src/features/operations/MessagesPage.vue 21ms
+frontend/apps/reference-app/src/features/operations/OperationsGate.vue 4ms
+frontend/apps/reference-app/src/features/operations/OperationsNavigation.vue 3ms
+frontend/apps/reference-app/src/features/operations/OperationsTable.vue 7ms
+frontend/apps/reference-app/src/features/operations/ScheduleForm.vue 14ms
+frontend/apps/reference-app/src/features/operations/SchedulesPage.vue 25ms
+frontend/apps/reference-app/src/features/operations/url.ts 1ms
+frontend/apps/reference-app/src/main.ts 3ms
+frontend/apps/reference-app/src/App.vue 11ms
+frontend/apps/reference-app/src/localization.ts 2ms (unchanged)
+frontend/apps/starter-app/src/features/operations/api.ts 3ms
+frontend/apps/starter-app/src/features/operations/BrowserPanel.vue 12ms
+frontend/apps/starter-app/src/features/operations/capabilities.ts 2ms
+frontend/apps/starter-app/src/features/operations/messages.ts 2ms
+frontend/apps/starter-app/src/features/operations/MessagesPanel.vue 16ms
+frontend/apps/starter-app/src/features/operations/OperationsPage.vue 9ms
+frontend/apps/starter-app/src/features/operations/OperationsTable.vue 5ms
+frontend/apps/starter-app/src/features/operations/SchedulePanel.vue 24ms
+frontend/apps/starter-app/src/features/operations/url.ts 1ms
+frontend/apps/starter-app/src/main.ts 2ms
+frontend/apps/starter-app/src/App.vue 6ms
+frontend/apps/starter-app/src/localization.ts 2ms (unchanged)

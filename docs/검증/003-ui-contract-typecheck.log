@@ -1,0 +1,9 @@
+
+> @sc/ui@0.1.0 typecheck
+> npm run tokens:check && vue-tsc --noEmit -p tsconfig.json
+
+
+> @sc/ui@0.1.0 tokens:check
+> node scripts/generate-tokens.mjs --check
+
+Design token CSS matches tokens.ts.

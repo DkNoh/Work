@@ -1,0 +1,51 @@
+{
+  "stage": "010",
+  "passed": true,
+  "checks": [
+    {
+      "name": "invalid and Reference profiles rejected before runtime creation",
+      "passed": true,
+      "cases": 3
+    },
+    {
+      "name": "default Starter endpoint/root absent and launcher clean shutdown",
+      "passed": true
+    },
+    {
+      "name": "actual launcher/session/CSRF/storage/Swagger profile file-storage",
+      "passed": true,
+      "restartWhitelist": true
+    },
+    {
+      "name": "actual launcher/session/CSRF/storage/Swagger profile dev,file-storage",
+      "passed": true,
+      "restartWhitelist": false
+    },
+    {
+      "name": "actual launcher/session/CSRF/storage/Swagger profile prod,file-storage",
+      "passed": true,
+      "restartWhitelist": false
+    },
+    {
+      "name": "actual launcher/session/CSRF/storage/Swagger profile audit,file-storage",
+      "passed": true,
+      "restartWhitelist": false
+    },
+    {
+      "name": "actual launcher/session/CSRF/storage/Swagger profile dev,audit,file-storage",
+      "passed": true,
+      "restartWhitelist": false
+    },
+    {
+      "name": "actual launcher/session/CSRF/storage/Swagger profile prod,audit,file-storage",
+      "passed": true,
+      "restartWhitelist": false
+    }
+  ],
+  "groups": 8,
+  "temporaryDirectoriesRemoved": true,
+  "productionRuntimeUsed": false,
+  "referenceBusinessMetadataUsed": false,
+  "syntheticSecretsPrinted": false,
+  "nonAdminRoleHttp": "MockMvc synthetic two-role consumer test; deployed Starter bootstrap exposes ADMIN only"
+}

@@ -1,0 +1,788 @@
+{
+  "stage": "011",
+  "fullDocumentRuns": 111,
+  "violations": 0,
+  "duplicateIds": 0,
+  "incompleteRules": 232,
+  "incompleteNodes": 2117,
+  "manualVoiceOverExecuted": false,
+  "runs": [
+    {
+      "file": "011-e2e-first-results/requirements-\uc2e4\uc81c-\uc791\uc131\uc790\u00b7\ub2f4\ub2f9\uc790-\uc138\uc158\uc5d0\uc11c-\ub4f1\ub85d\u2192\uc9c0\uc815\u2192\uc81c\ucd9c\u2192\uac80\ud1a0\u2192\ud569\uc758\u00b7\ub313\uae00\u00b7\uc774\ub825\uc744-\uc800\uc7a5\ud55c\ub2e4/requirement-agreed-history-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 20
+    },
+    {
+      "file": "011-e2e-first-results/requirements-\uc2e4\uc81c-\uc791\uc131\uc790\u00b7\ub2f4\ub2f9\uc790-\uc138\uc158\uc5d0\uc11c-\ub4f1\ub85d\u2192\uc9c0\uc815\u2192\uc81c\ucd9c\u2192\uac80\ud1a0\u2192\ud569\uc758\u00b7\ub313\uae00\u00b7\uc774\ub825\uc744-\uc800\uc7a5\ud55c\ub2e4/requirement-reviewer-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 23
+    },
+    {
+      "file": "011-e2e-first-results/010-media-image-UI-upload--d381d-d-real-box-conflict-at-1366/image-workspace-1366-ko-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 15
+    },
+    {
+      "file": "011-e2e-first-results/010-media-image-UI-upload--d381d-d-real-box-conflict-at-1366/image-conflict-1366-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 23
+    },
+    {
+      "file": "011-e2e-first-results/010-media-image-UI-upload--d381d-d-real-box-conflict-at-1366/image-detail-1366-ko-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 22
+    },
+    {
+      "file": "011-e2e-first-results/010-kanban-\uce78\ubc18-390px-ko\uc740-\uc804\uccb4DOM-\uc811\uadfc\uc131\uacfc-\ubcf4\ub4dc\uac00\ub85c\uc2a4\ud06c\ub864\uc744-\uac80\uc0ac\ud55c\ub2e4/010-kanban-390-ko-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 4,
+      "incompleteNodes": 40
+    },
+    {
+      "file": "011-e2e-first-results/010-media-English-image-wo-64c48-ates-and-no-overflow-at-390/image-workspace-390-en-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 19
+    },
+    {
+      "file": "011-e2e-first-results/010-kanban-\uce78\ubc18-390px-en\uc740-\uc804\uccb4DOM-\uc811\uadfc\uc131\uacfc-\ubcf4\ub4dc\uac00\ub85c\uc2a4\ud06c\ub864\uc744-\uac80\uc0ac\ud55c\ub2e4/010-kanban-390-en-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 4,
+      "incompleteNodes": 40
+    },
+    {
+      "file": "011-e2e-first-results/010-media-JPEG-EXIF-6-uses-a103f-nd-preserves-uploaded-bytes/image-exif6-browser-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 18
+    },
+    {
+      "file": "011-e2e-first-results/010-notices-documents-docu-36a0e-9-locale-and-privacy-at-390/document-390-en-conflict-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 11
+    },
+    {
+      "file": "011-e2e-first-results/010-notices-documents-docu-36a0e-9-locale-and-privacy-at-390/document-390-ko-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 10
+    },
+    {
+      "file": "011-e2e-first-results/010-notices-documents-noti-d64be-and-explicit-delete-at-1366/notice-1366-ko-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 1,
+      "incompleteNodes": 9
+    },
+    {
+      "file": "011-e2e-first-results/010-notices-documents-noti-d64be-and-explicit-delete-at-1366/notice-1366-en-conflict-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 1,
+      "incompleteNodes": 9
+    },
+    {
+      "file": "011-e2e-first-results/accessibility-starter-\uc2e4\uc81c-J-424a3-390px-\ud55c\uad6d\uc5b4\u00b7\uc601\uc5b4\u00b7\uc624\ub958\u00b7dirty\u00b7\uc5f4\ub9b0-\ubaa8\ub2ec/patterns-ko-select-menu-open-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 4,
+      "incompleteNodes": 47
+    },
+    {
+      "file": "011-e2e-first-results/accessibility-starter-\uc2e4\uc81c-J-424a3-390px-\ud55c\uad6d\uc5b4\u00b7\uc601\uc5b4\u00b7\uc624\ub958\u00b7dirty\u00b7\uc5f4\ub9b0-\ubaa8\ub2ec/patterns-en-dirty-errors-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 3,
+      "incompleteNodes": 35
+    },
+    {
+      "file": "011-e2e-first-results/accessibility-starter-\uc2e4\uc81c-J-424a3-390px-\ud55c\uad6d\uc5b4\u00b7\uc601\uc5b4\u00b7\uc624\ub958\u00b7dirty\u00b7\uc5f4\ub9b0-\ubaa8\ub2ec/patterns-ko-default-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 3,
+      "incompleteNodes": 31
+    },
+    {
+      "file": "011-e2e-first-results/accessibility-starter-\uc2e4\uc81c-J-424a3-390px-\ud55c\uad6d\uc5b4\u00b7\uc601\uc5b4\u00b7\uc624\ub958\u00b7dirty\u00b7\uc5f4\ub9b0-\ubaa8\ub2ec/patterns-en-mobile-navigation-closed-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 3,
+      "incompleteNodes": 35
+    },
+    {
+      "file": "011-e2e-first-results/accessibility-starter-\uc2e4\uc81c-J-424a3-390px-\ud55c\uad6d\uc5b4\u00b7\uc601\uc5b4\u00b7\uc624\ub958\u00b7dirty\u00b7\uc5f4\ub9b0-\ubaa8\ub2ec/patterns-ko-dirty-errors-editor-table-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 3,
+      "incompleteNodes": 35
+    },
+    {
+      "file": "011-e2e-first-results/accessibility-starter-\uc2e4\uc81c-J-424a3-390px-\ud55c\uad6d\uc5b4\u00b7\uc601\uc5b4\u00b7\uc624\ub958\u00b7dirty\u00b7\uc5f4\ub9b0-\ubaa8\ub2ec/patterns-en-confirm-closed-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 3,
+      "incompleteNodes": 35
+    },
+    {
+      "file": "011-e2e-first-results/accessibility-starter-\uc2e4\uc81c-J-424a3-390px-\ud55c\uad6d\uc5b4\u00b7\uc601\uc5b4\u00b7\uc624\ub958\u00b7dirty\u00b7\uc5f4\ub9b0-\ubaa8\ub2ec/patterns-en-confirm-open-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 1,
+      "incompleteNodes": 2
+    },
+    {
+      "file": "011-e2e-first-results/accessibility-starter-\uc2e4\uc81c-J-424a3-390px-\ud55c\uad6d\uc5b4\u00b7\uc601\uc5b4\u00b7\uc624\ub958\u00b7dirty\u00b7\uc5f4\ub9b0-\ubaa8\ub2ec/patterns-en-mobile-navigation-open-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 4,
+      "incompleteNodes": 36
+    },
+    {
+      "file": "011-e2e-first-results/accessibility-\uc811\uadfc\uc131-\ub85c\uadf8\uc778-1366px-\ub2eb\ud78c-\uc178\uacfc-\uc2e4\uc81c-\ub85c\uadf8\uc778-\ud544\ub4dc/login-ko-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 1,
+      "incompleteNodes": 3
+    },
+    {
+      "file": "011-e2e-first-results/accessibility-reference-\uc2e4\uc81c-d8fb3-390px-\ud55c\uad6d\uc5b4\u00b7\uc601\uc5b4\u00b7\uc624\ub958\u00b7dirty\u00b7\uc5f4\ub9b0-\ubaa8\ub2ec/patterns-ko-select-menu-open-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 3,
+      "incompleteNodes": 40
+    },
+    {
+      "file": "011-e2e-first-results/accessibility-reference-\uc2e4\uc81c-d8fb3-390px-\ud55c\uad6d\uc5b4\u00b7\uc601\uc5b4\u00b7\uc624\ub958\u00b7dirty\u00b7\uc5f4\ub9b0-\ubaa8\ub2ec/patterns-en-dirty-errors-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 28
+    },
+    {
+      "file": "011-e2e-first-results/accessibility-reference-\uc2e4\uc81c-d8fb3-390px-\ud55c\uad6d\uc5b4\u00b7\uc601\uc5b4\u00b7\uc624\ub958\u00b7dirty\u00b7\uc5f4\ub9b0-\ubaa8\ub2ec/patterns-ko-default-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 24
+    },
+    {
+      "file": "011-e2e-first-results/accessibility-reference-\uc2e4\uc81c-d8fb3-390px-\ud55c\uad6d\uc5b4\u00b7\uc601\uc5b4\u00b7\uc624\ub958\u00b7dirty\u00b7\uc5f4\ub9b0-\ubaa8\ub2ec/patterns-en-mobile-navigation-closed-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 28
+    },
+    {
+      "file": "011-e2e-first-results/accessibility-reference-\uc2e4\uc81c-d8fb3-390px-\ud55c\uad6d\uc5b4\u00b7\uc601\uc5b4\u00b7\uc624\ub958\u00b7dirty\u00b7\uc5f4\ub9b0-\ubaa8\ub2ec/patterns-ko-dirty-errors-editor-table-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 28
+    },
+    {
+      "file": "011-e2e-first-results/accessibility-reference-\uc2e4\uc81c-d8fb3-390px-\ud55c\uad6d\uc5b4\u00b7\uc601\uc5b4\u00b7\uc624\ub958\u00b7dirty\u00b7\uc5f4\ub9b0-\ubaa8\ub2ec/patterns-en-confirm-closed-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 28
+    },
+    {
+      "file": "011-e2e-first-results/accessibility-reference-\uc2e4\uc81c-d8fb3-390px-\ud55c\uad6d\uc5b4\u00b7\uc601\uc5b4\u00b7\uc624\ub958\u00b7dirty\u00b7\uc5f4\ub9b0-\ubaa8\ub2ec/patterns-en-confirm-open-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 1,
+      "incompleteNodes": 2
+    },
+    {
+      "file": "011-e2e-first-results/accessibility-reference-\uc2e4\uc81c-d8fb3-390px-\ud55c\uad6d\uc5b4\u00b7\uc601\uc5b4\u00b7\uc624\ub958\u00b7dirty\u00b7\uc5f4\ub9b0-\ubaa8\ub2ec/patterns-en-mobile-navigation-open-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 3,
+      "incompleteNodes": 29
+    },
+    {
+      "file": "011-e2e-first-results/accessibility-\uc811\uadfc\uc131-Referenc-4ae3c-6px-\uae30\ubcf8\u00b7400-\ud544\ub4dc\u00b7409\u00b7native-\ud655\uc778/examples-field-error-400-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 1,
+      "incompleteNodes": 6
+    },
+    {
+      "file": "011-e2e-first-results/accessibility-\uc811\uadfc\uc131-Referenc-4ae3c-6px-\uae30\ubcf8\u00b7400-\ud544\ub4dc\u00b7409\u00b7native-\ud655\uc778/examples-confirm-closed-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 1,
+      "incompleteNodes": 10
+    },
+    {
+      "file": "011-e2e-first-results/accessibility-\uc811\uadfc\uc131-Referenc-4ae3c-6px-\uae30\ubcf8\u00b7400-\ud544\ub4dc\u00b7409\u00b7native-\ud655\uc778/examples-default-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 1,
+      "incompleteNodes": 6
+    },
+    {
+      "file": "011-e2e-first-results/accessibility-\uc811\uadfc\uc131-Referenc-4ae3c-6px-\uae30\ubcf8\u00b7400-\ud544\ub4dc\u00b7409\u00b7native-\ud655\uc778/examples-conflict-409-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 1,
+      "incompleteNodes": 10
+    },
+    {
+      "file": "011-e2e-first-results/accessibility-\uc811\uadfc\uc131-Referenc-4ae3c-6px-\uae30\ubcf8\u00b7400-\ud544\ub4dc\u00b7409\u00b7native-\ud655\uc778/examples-confirm-open-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 1,
+      "incompleteNodes": 2
+    },
+    {
+      "file": "011-e2e-first-results/010-media-image-UI-upload--c1a75-nd-real-box-conflict-at-390/image-workspace-390-ko-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 16
+    },
+    {
+      "file": "011-e2e-first-results/010-media-image-UI-upload--c1a75-nd-real-box-conflict-at-390/image-conflict-390-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 24
+    },
+    {
+      "file": "011-e2e-first-results/010-media-image-UI-upload--c1a75-nd-real-box-conflict-at-390/image-detail-390-ko-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 23
+    },
+    {
+      "file": "011-e2e-first-results/date-Starter-\ub0a0\uc9dc-1366px-calendar\u00b7UTC-\uc815\ubc00\ub3c4\u00b7DST\u00b7\uc5b8\uc5b4\ub97c-\ub3c5\ub9bd\uc801\uc73c\ub85c-\ucc98\ub9ac\ud55c\ub2e4/starter-date-dst-1366-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 3,
+      "incompleteNodes": 30
+    },
+    {
+      "file": "011-e2e-first-results/date-Starter-\ub0a0\uc9dc-1366px-calendar\u00b7UTC-\uc815\ubc00\ub3c4\u00b7DST\u00b7\uc5b8\uc5b4\ub97c-\ub3c5\ub9bd\uc801\uc73c\ub85c-\ucc98\ub9ac\ud55c\ub2e4/starter-date-en-1366-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 3,
+      "incompleteNodes": 30
+    },
+    {
+      "file": "011-e2e-first-results/010-admin-account-ADMIN-cr-bbc46-t-and-DB-permissions-at-390/admin-users-390-ko-validation-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 9
+    },
+    {
+      "file": "011-e2e-first-results/010-admin-account-ADMIN-cr-bbc46-t-and-DB-permissions-at-390/admin-390-requester-denied-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 2
+    },
+    {
+      "file": "011-e2e-first-results/010-admin-account-ADMIN-cr-bbc46-t-and-DB-permissions-at-390/admin-menus-390-en-updated-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 6
+    },
+    {
+      "file": "011-e2e-first-results/010-admin-account-ADMIN-cr-bbc46-t-and-DB-permissions-at-390/admin-users-390-en-created-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 9
+    },
+    {
+      "file": "011-e2e-first-results/010-admin-account-ADMIN-cr-bbc46-t-and-DB-permissions-at-390/admin-menus-390-ko-updated-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 6
+    },
+    {
+      "file": "011-e2e-first-results/010-admin-account-ADMIN-cr-bbc46-t-and-DB-permissions-at-390/admin-audit-390-en-filtered-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 8
+    },
+    {
+      "file": "011-e2e-first-results/010-admin-account-ADMIN-cr-bbc46-t-and-DB-permissions-at-390/admin-audit-390-ko-filtered-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 8
+    },
+    {
+      "file": "011-e2e-first-results/010-admin-account-report-c-9ff39-than-the-loaded-page-at-390/report-chart-390-ko-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 25
+    },
+    {
+      "file": "011-e2e-first-results/010-admin-account-report-c-9ff39-than-the-loaded-page-at-390/report-chart-390-en-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 26
+    },
+    {
+      "file": "011-e2e-first-results/requirements-\uc694\uad6c\uc0ac\ud56d-390px-\ubaa9\ub85d\u00b7\ubcf8\ubb38\u00b7\ud544\ub4dc-\uc624\ub958\u00b7\ub313\uae00\u00b7\uc774\ub825\uc740-\uc804\uccb4-DOM-\uc811\uadfc\uc131\uc744-\uac80\uc0ac\ud55c\ub2e4/requirements-list-390-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 13
+    },
+    {
+      "file": "011-e2e-first-results/requirements-\uc694\uad6c\uc0ac\ud56d-390px-\ubaa9\ub85d\u00b7\ubcf8\ubb38\u00b7\ud544\ub4dc-\uc624\ub958\u00b7\ub313\uae00\u00b7\uc774\ub825\uc740-\uc804\uccb4-DOM-\uc811\uadfc\uc131\uc744-\uac80\uc0ac\ud55c\ub2e4/requirement-invalid-390-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 19
+    },
+    {
+      "file": "011-e2e-first-results/requirements-\uc694\uad6c\uc0ac\ud56d-390px-\ubaa9\ub85d\u00b7\ubcf8\ubb38\u00b7\ud544\ub4dc-\uc624\ub958\u00b7\ub313\uae00\u00b7\uc774\ub825\uc740-\uc804\uccb4-DOM-\uc811\uadfc\uc131\uc744-\uac80\uc0ac\ud55c\ub2e4/requirement-detail-390-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 19
+    },
+    {
+      "file": "011-e2e-first-results/accessibility-starter-\uc2e4\uc81c-J-61ee3-366px-\ud55c\uad6d\uc5b4\u00b7\uc601\uc5b4\u00b7\uc624\ub958\u00b7dirty\u00b7\uc5f4\ub9b0-\ubaa8\ub2ec/patterns-ko-select-menu-open-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 4,
+      "incompleteNodes": 49
+    },
+    {
+      "file": "011-e2e-first-results/accessibility-starter-\uc2e4\uc81c-J-61ee3-366px-\ud55c\uad6d\uc5b4\u00b7\uc601\uc5b4\u00b7\uc624\ub958\u00b7dirty\u00b7\uc5f4\ub9b0-\ubaa8\ub2ec/patterns-en-dirty-errors-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 3,
+      "incompleteNodes": 34
+    },
+    {
+      "file": "011-e2e-first-results/accessibility-starter-\uc2e4\uc81c-J-61ee3-366px-\ud55c\uad6d\uc5b4\u00b7\uc601\uc5b4\u00b7\uc624\ub958\u00b7dirty\u00b7\uc5f4\ub9b0-\ubaa8\ub2ec/patterns-ko-default-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 3,
+      "incompleteNodes": 30
+    },
+    {
+      "file": "011-e2e-first-results/accessibility-starter-\uc2e4\uc81c-J-61ee3-366px-\ud55c\uad6d\uc5b4\u00b7\uc601\uc5b4\u00b7\uc624\ub958\u00b7dirty\u00b7\uc5f4\ub9b0-\ubaa8\ub2ec/patterns-ko-dirty-errors-editor-table-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 3,
+      "incompleteNodes": 34
+    },
+    {
+      "file": "011-e2e-first-results/accessibility-starter-\uc2e4\uc81c-J-61ee3-366px-\ud55c\uad6d\uc5b4\u00b7\uc601\uc5b4\u00b7\uc624\ub958\u00b7dirty\u00b7\uc5f4\ub9b0-\ubaa8\ub2ec/patterns-en-confirm-closed-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 3,
+      "incompleteNodes": 34
+    },
+    {
+      "file": "011-e2e-first-results/accessibility-starter-\uc2e4\uc81c-J-61ee3-366px-\ud55c\uad6d\uc5b4\u00b7\uc601\uc5b4\u00b7\uc624\ub958\u00b7dirty\u00b7\uc5f4\ub9b0-\ubaa8\ub2ec/patterns-en-confirm-open-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 1,
+      "incompleteNodes": 2
+    },
+    {
+      "file": "011-e2e-first-results/010-starter-patterns-Start-5425f-\uceec-\ubc15\uc2a4\ub97c-\ubcf4\uc874\ud558\uace0-\uc804\uccb4-DOM-\uc811\uadfc\uc131\uc744-\uc720\uc9c0\ud55c\ub2e4/starter-image-1366-en-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 3,
+      "incompleteNodes": 30
+    },
+    {
+      "file": "011-e2e-first-results/010-notices-documents-noti-323e9-emain-private-even-to-ADMIN/notice-author-readonly-admin-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 1,
+      "incompleteNodes": 7
+    },
+    {
+      "file": "011-e2e-first-results/010-notices-documents-noti-323e9-emain-private-even-to-ADMIN/document-private-admin-denied-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 4
+    },
+    {
+      "file": "011-e2e-first-results/010-admin-account-report-c-9444c-han-the-loaded-page-at-1366/report-chart-1366-en-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 26
+    },
+    {
+      "file": "011-e2e-first-results/010-admin-account-report-c-9444c-han-the-loaded-page-at-1366/report-chart-1366-ko-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 28
+    },
+    {
+      "file": "011-e2e-first-results/010-kanban-\uce78\ubc18-1366px-en\uc740-\uc804\uccb4DOM-\uc811\uadfc\uc131\uacfc-\ubcf4\ub4dc\uac00\ub85c\uc2a4\ud06c\ub864\uc744-\uac80\uc0ac\ud55c\ub2e4/010-kanban-1366-en-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 4,
+      "incompleteNodes": 39
+    },
+    {
+      "file": "011-e2e-first-results/010-media-agreed-author-li-c87e4-xt-without-an-external-call/manual-ado-export-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 22
+    },
+    {
+      "file": "011-e2e-first-results/010-kanban-\uce78\ubc18-1366px-ko\uc740-\uc804\uccb4DOM-\uc811\uadfc\uc131\uacfc-\ubcf4\ub4dc\uac00\ub85c\uc2a4\ud06c\ub864\uc744-\uac80\uc0ac\ud55c\ub2e4/010-kanban-1366-ko-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 4,
+      "incompleteNodes": 39
+    },
+    {
+      "file": "011-e2e-first-results/accessibility-reference-\uc2e4\uc81c-91be3-366px-\ud55c\uad6d\uc5b4\u00b7\uc601\uc5b4\u00b7\uc624\ub958\u00b7dirty\u00b7\uc5f4\ub9b0-\ubaa8\ub2ec/patterns-ko-select-menu-open-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 3,
+      "incompleteNodes": 48
+    },
+    {
+      "file": "011-e2e-first-results/accessibility-reference-\uc2e4\uc81c-91be3-366px-\ud55c\uad6d\uc5b4\u00b7\uc601\uc5b4\u00b7\uc624\ub958\u00b7dirty\u00b7\uc5f4\ub9b0-\ubaa8\ub2ec/patterns-en-dirty-errors-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 27
+    },
+    {
+      "file": "011-e2e-first-results/accessibility-reference-\uc2e4\uc81c-91be3-366px-\ud55c\uad6d\uc5b4\u00b7\uc601\uc5b4\u00b7\uc624\ub958\u00b7dirty\u00b7\uc5f4\ub9b0-\ubaa8\ub2ec/patterns-ko-default-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 23
+    },
+    {
+      "file": "011-e2e-first-results/accessibility-reference-\uc2e4\uc81c-91be3-366px-\ud55c\uad6d\uc5b4\u00b7\uc601\uc5b4\u00b7\uc624\ub958\u00b7dirty\u00b7\uc5f4\ub9b0-\ubaa8\ub2ec/patterns-ko-dirty-errors-editor-table-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 27
+    },
+    {
+      "file": "011-e2e-first-results/accessibility-reference-\uc2e4\uc81c-91be3-366px-\ud55c\uad6d\uc5b4\u00b7\uc601\uc5b4\u00b7\uc624\ub958\u00b7dirty\u00b7\uc5f4\ub9b0-\ubaa8\ub2ec/patterns-en-confirm-closed-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 27
+    },
+    {
+      "file": "011-e2e-first-results/accessibility-reference-\uc2e4\uc81c-91be3-366px-\ud55c\uad6d\uc5b4\u00b7\uc601\uc5b4\u00b7\uc624\ub958\u00b7dirty\u00b7\uc5f4\ub9b0-\ubaa8\ub2ec/patterns-en-confirm-open-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 1,
+      "incompleteNodes": 2
+    },
+    {
+      "file": "011-e2e-first-results/010-notices-documents-docu-41510--locale-and-privacy-at-1366/document-1366-ko-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 1,
+      "incompleteNodes": 9
+    },
+    {
+      "file": "011-e2e-first-results/010-notices-documents-docu-41510--locale-and-privacy-at-1366/document-1366-en-conflict-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 1,
+      "incompleteNodes": 10
+    },
+    {
+      "file": "011-e2e-first-results/accessibility-\uc811\uadfc\uc131-Reference-\uc608\uc81c-390px-\uae30\ubcf8\u00b7400-\ud544\ub4dc\u00b7409\u00b7native-\ud655\uc778/examples-field-error-400-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 6
+    },
+    {
+      "file": "011-e2e-first-results/accessibility-\uc811\uadfc\uc131-Reference-\uc608\uc81c-390px-\uae30\ubcf8\u00b7400-\ud544\ub4dc\u00b7409\u00b7native-\ud655\uc778/examples-confirm-closed-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 10
+    },
+    {
+      "file": "011-e2e-first-results/accessibility-\uc811\uadfc\uc131-Reference-\uc608\uc81c-390px-\uae30\ubcf8\u00b7400-\ud544\ub4dc\u00b7409\u00b7native-\ud655\uc778/examples-default-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 4
+    },
+    {
+      "file": "011-e2e-first-results/accessibility-\uc811\uadfc\uc131-Reference-\uc608\uc81c-390px-\uae30\ubcf8\u00b7400-\ud544\ub4dc\u00b7409\u00b7native-\ud655\uc778/examples-conflict-409-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 10
+    },
+    {
+      "file": "011-e2e-first-results/accessibility-\uc811\uadfc\uc131-Reference-\uc608\uc81c-390px-\uae30\ubcf8\u00b7400-\ud544\ub4dc\u00b7409\u00b7native-\ud655\uc778/examples-confirm-open-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 1,
+      "incompleteNodes": 2
+    },
+    {
+      "file": "011-e2e-first-results/010-notices-documents-noti-c86e4--and-explicit-delete-at-390/notice-390-en-conflict-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 10
+    },
+    {
+      "file": "011-e2e-first-results/010-notices-documents-noti-c86e4--and-explicit-delete-at-390/notice-390-ko-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 10
+    },
+    {
+      "file": "011-e2e-first-results/requirements-\uc694\uad6c\uc0ac\ud56d-1366px-\ubaa9\ub85d\u00b7\ubcf8\ubb38\u00b7\ud544\ub4dc-\uc624\ub958\u00b7\ub313\uae00\u00b7\uc774\ub825\uc740-\uc804\uccb4-DOM-\uc811\uadfc\uc131\uc744-\uac80\uc0ac\ud55c\ub2e4/requirement-invalid-1366-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 18
+    },
+    {
+      "file": "011-e2e-first-results/requirements-\uc694\uad6c\uc0ac\ud56d-1366px-\ubaa9\ub85d\u00b7\ubcf8\ubb38\u00b7\ud544\ub4dc-\uc624\ub958\u00b7\ub313\uae00\u00b7\uc774\ub825\uc740-\uc804\uccb4-DOM-\uc811\uadfc\uc131\uc744-\uac80\uc0ac\ud55c\ub2e4/requirement-detail-1366-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 18
+    },
+    {
+      "file": "011-e2e-first-results/requirements-\uc694\uad6c\uc0ac\ud56d-1366px-\ubaa9\ub85d\u00b7\ubcf8\ubb38\u00b7\ud544\ub4dc-\uc624\ub958\u00b7\ub313\uae00\u00b7\uc774\ub825\uc740-\uc804\uccb4-DOM-\uc811\uadfc\uc131\uc744-\uac80\uc0ac\ud55c\ub2e4/requirements-list-1366-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 12
+    },
+    {
+      "file": "011-e2e-first-results/010-admin-account-ADMIN-cr-802b3--and-DB-permissions-at-1366/admin-1366-requester-denied-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 1,
+      "incompleteNodes": 1
+    },
+    {
+      "file": "011-e2e-first-results/010-admin-account-ADMIN-cr-802b3--and-DB-permissions-at-1366/admin-menus-1366-ko-updated-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 1,
+      "incompleteNodes": 5
+    },
+    {
+      "file": "011-e2e-first-results/010-admin-account-ADMIN-cr-802b3--and-DB-permissions-at-1366/admin-users-1366-en-created-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 8
+    },
+    {
+      "file": "011-e2e-first-results/010-admin-account-ADMIN-cr-802b3--and-DB-permissions-at-1366/admin-users-1366-ko-validation-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 8
+    },
+    {
+      "file": "011-e2e-first-results/010-admin-account-ADMIN-cr-802b3--and-DB-permissions-at-1366/admin-audit-1366-en-filtered-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 7
+    },
+    {
+      "file": "011-e2e-first-results/010-admin-account-ADMIN-cr-802b3--and-DB-permissions-at-1366/admin-audit-1366-ko-filtered-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 7
+    },
+    {
+      "file": "011-e2e-first-results/010-admin-account-ADMIN-cr-802b3--and-DB-permissions-at-1366/admin-menus-1366-en-updated-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 1,
+      "incompleteNodes": 5
+    },
+    {
+      "file": "011-e2e-first-results/010-media-English-image-wo-62961-tes-and-no-overflow-at-1366/image-workspace-1366-en-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 18
+    },
+    {
+      "file": "011-e2e-first-results/date-Starter-\ub0a0\uc9dc-390px-calendar\u00b7UTC-\uc815\ubc00\ub3c4\u00b7DST\u00b7\uc5b8\uc5b4\ub97c-\ub3c5\ub9bd\uc801\uc73c\ub85c-\ucc98\ub9ac\ud55c\ub2e4/starter-date-en-390-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 3,
+      "incompleteNodes": 31
+    },
+    {
+      "file": "011-e2e-first-results/date-Starter-\ub0a0\uc9dc-390px-calendar\u00b7UTC-\uc815\ubc00\ub3c4\u00b7DST\u00b7\uc5b8\uc5b4\ub97c-\ub3c5\ub9bd\uc801\uc73c\ub85c-\ucc98\ub9ac\ud55c\ub2e4/starter-date-dst-390-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 3,
+      "incompleteNodes": 31
+    },
+    {
+      "file": "011-e2e-first-results/010-starter-patterns-Start-0c462-\ub85c\uceec-\uc790\ub8cc\ub9cc-\ubc14\uafb8\uace0-\uc804\uccb4-DOM-\uc811\uadfc\uc131\uc744-\uc720\uc9c0\ud55c\ub2e4/starter-board-390-ko-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 3,
+      "incompleteNodes": 31
+    },
+    {
+      "file": "011-e2e-first-results/accessibility-\uc811\uadfc\uc131-\ub85c\uadf8\uc778-390px-\ub2eb\ud78c-\uc178\uacfc-\uc2e4\uc81c-\ub85c\uadf8\uc778-\ud544\ub4dc/login-ko-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 4
+    },
+    {
+      "file": "011-e2e-first-results/010-admin-account-syntheti-ee68d-acement-credentials-at-1366/account-1366-replacement-session-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 1,
+      "incompleteNodes": 5
+    },
+    {
+      "file": "011-e2e-first-results/010-admin-account-syntheti-ee68d-acement-credentials-at-1366/account-1366-ko-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 1,
+      "incompleteNodes": 5
+    },
+    {
+      "file": "011-e2e-first-results/010-admin-account-syntheti-ee68d-acement-credentials-at-1366/account-1366-en-current-password-error-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 1,
+      "incompleteNodes": 5
+    },
+    {
+      "file": "011-e2e-first-results/010-admin-account-syntheti-7e89f-lacement-credentials-at-390/account-390-replacement-session-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 6
+    },
+    {
+      "file": "011-e2e-first-results/010-admin-account-syntheti-7e89f-lacement-credentials-at-390/account-390-ko-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 6
+    },
+    {
+      "file": "011-e2e-first-results/010-admin-account-syntheti-7e89f-lacement-credentials-at-390/account-390-en-current-password-error-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 6
+    },
+    {
+      "file": "011-reports-first-results/requirements-report-10k-\ubcf4\uace0-4fcdc-focus\u00b7\uc77c\ubc18\ud45c\u00b7URL\u00b7\ud55c\uc601\u00b7\uc804\uccb4-DOM-\uc811\uadfc\uc131/report-1366-en-virtual-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 28
+    },
+    {
+      "file": "011-reports-first-results/requirements-report-10k-\ubcf4\uace0-4fcdc-focus\u00b7\uc77c\ubc18\ud45c\u00b7URL\u00b7\ud55c\uc601\u00b7\uc804\uccb4-DOM-\uc811\uadfc\uc131/report-1366-ko-standard-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 30
+    },
+    {
+      "file": "011-reports-first-results/requirements-report-10k-\ubcf4\uace0-4fcdc-focus\u00b7\uc77c\ubc18\ud45c\u00b7URL\u00b7\ud55c\uc601\u00b7\uc804\uccb4-DOM-\uc811\uadfc\uc131/report-1366-en-standard-alternative-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 28
+    },
+    {
+      "file": "011-reports-first-results/requirements-report-10k-\ubcf4\uace0-4fcdc-focus\u00b7\uc77c\ubc18\ud45c\u00b7URL\u00b7\ud55c\uc601\u00b7\uc804\uccb4-DOM-\uc811\uadfc\uc131/report-1366-ko-virtual-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 31
+    },
+    {
+      "file": "011-reports-first-results/requirements-report-10k-\ubcf4\uace0-c6239-focus\u00b7\uc77c\ubc18\ud45c\u00b7URL\u00b7\ud55c\uc601\u00b7\uc804\uccb4-DOM-\uc811\uadfc\uc131/report-390-en-virtual-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 28
+    },
+    {
+      "file": "011-reports-first-results/requirements-report-10k-\ubcf4\uace0-c6239-focus\u00b7\uc77c\ubc18\ud45c\u00b7URL\u00b7\ud55c\uc601\u00b7\uc804\uccb4-DOM-\uc811\uadfc\uc131/report-390-en-standard-alternative-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 28
+    },
+    {
+      "file": "011-reports-first-results/requirements-report-10k-\ubcf4\uace0-c6239-focus\u00b7\uc77c\ubc18\ud45c\u00b7URL\u00b7\ud55c\uc601\u00b7\uc804\uccb4-DOM-\uc811\uadfc\uc131/report-390-ko-standard-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 27
+    },
+    {
+      "file": "011-reports-first-results/requirements-report-10k-\ubcf4\uace0-c6239-focus\u00b7\uc77c\ubc18\ud45c\u00b7URL\u00b7\ud55c\uc601\u00b7\uc804\uccb4-DOM-\uc811\uadfc\uc131/report-390-ko-virtual-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 28
+    },
+    {
+      "file": "011-reports-first-results/requirements-report-\ubcf4\uace0\uc11c-50-b8d19-RL\uc744-\ubcf4\uc874\ud558\uace0-\uc774\uc804-\uc870\uac74\uc758-\ub2a6\uc740-\uc751\ub2f5\uc744-\ud3d0\uae30\ud55c\ub2e4/report-refresh-failed-axe.json",
+      "violations": 0,
+      "duplicateIds": 0,
+      "incompleteRules": 2,
+      "incompleteNodes": 17
+    }
+  ]
+}

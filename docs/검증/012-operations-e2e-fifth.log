@@ -1,0 +1,21 @@
+
+> sc-framework@0.3.0 test:operations
+> playwright test --config frontend/playwright.operations.config.ts
+
+
+Running 10 tests using 1 worker
+
+(node:65390) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 frontend/e2e/012-operations.spec.ts:147:1 › 메시지 DEAD 재시도는 실제 broker 완료 후 같은 이벤트를 다시 처리하지 않는다 (2.5s)
+  ✓   2 frontend/e2e/012-operations.spec.ts:186:1 › 등록된 예제 메시지는 실제 저장하고 URL 필터와 새로고침에서 조회한다 (2.0s)
+  ✓   3 frontend/e2e/012-operations.spec.ts:211:1 › 예약 409와 최신 GET 500은 기준 revision·입력을 유지하고 명시 reload만 초기화한다 (1.8s)
+  ✓   4 frontend/e2e/012-operations.spec.ts:271:1 › 예약 선택·이동 확인은 미저장 입력을 지키고 pause/resume은 revision을 갱신한다 (1.6s)
+  ✓   5 frontend/e2e/012-operations.spec.ts:308:1 › A 예약 저장이 B 선택 뒤 완료돼도 B 입력·revision을 교체하지 않는다 (1.1s)
+  ✓   6 frontend/e2e/012-operations.spec.ts:368:1 › 실제 window/rejection 수집은 로그인 후 코드만 보내고 동일 Error를 중복하지 않는다 (1.5s)
+  ✓   7 frontend/e2e/012-operations.spec.ts:453:1 › 수집 HTTP 실패는 재시도·재수집하지 않고 일반 사용자는 운영 조회가 금지된다 (765ms)
+  ✓   8 frontend/e2e/012-operations.spec.ts:507:3 › 운영 390px: KO/EN 예약·오류·메시지 전체 DOM 접근성과 키보드 가로 스크롤 (2.7s)
+  ✓   9 frontend/e2e/012-operations.spec.ts:507:3 › 운영 1366px: KO/EN 예약·오류·메시지 전체 DOM 접근성과 키보드 가로 스크롤 (2.4s)
+  ✓  10 frontend/e2e/012-operations.spec.ts:561:3 › Starter 중립 운영 소비 › Starter는 독립 예약·메시지 API와 실제 오류 수집을 공통 runtime/UI로 소비한다 (3.4s)
+
+  10 passed (44.4s)

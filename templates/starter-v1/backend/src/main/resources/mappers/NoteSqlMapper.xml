@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="__JAVA_PACKAGE__.notes.NoteSqlMapper">
+  <resultMap id="stats" type="__JAVA_PACKAGE__.notes.NoteDtos$Stats"><constructor>
+    <arg column="total" javaType="_long"/><arg column="highest_revision" javaType="_int"/>
+  </constructor></resultMap>
+  <select id="stats" resultMap="stats">
+    SELECT COUNT(*) AS total, COALESCE(MAX(revision),0) AS highest_revision
+    FROM starter_note WHERE owner=#{owner}
+  </select>
+</mapper>

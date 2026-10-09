@@ -1,0 +1,58 @@
+docker.io/grafana/loki@sha256:1107dd5274e0ada47e42472b7a7e71f3b2a2fe878878108f3e2f9e51528f0193: Pulling from grafana/loki
+c70bb7faab56: Pulling fs layer
+5b3013706a46: Pulling fs layer
+7e7bfd057be8: Pulling fs layer
+dd64bf2dd177: Pulling fs layer
+bf8083c5c1ec: Pulling fs layer
+b839dfae01f6: Pulling fs layer
+9d2753d762cc: Pulling fs layer
+411e1c946a02: Pulling fs layer
+2780920e5dbf: Pulling fs layer
+799f0e3f433d: Pulling fs layer
+7c12895b777b: Pulling fs layer
+0f4b56a7bfcd: Pulling fs layer
+3214acf345c0: Pulling fs layer
+45e9e1642871: Pulling fs layer
+52630fc75a18: Pulling fs layer
+bc6a2c7624f1: Pulling fs layer
+25a9dec50117: Pulling fs layer
+e6b70794e345: Pulling fs layer
+7e7bfd057be8: Download complete
+5b3013706a46: Download complete
+3214acf345c0: Download complete
+c70bb7faab56: Download complete
+9d2753d762cc: Download complete
+411e1c946a02: Download complete
+bc6a2c7624f1: Download complete
+7c12895b777b: Download complete
+52630fc75a18: Download complete
+25a9dec50117: Download complete
+dd64bf2dd177: Download complete
+bf8083c5c1ec: Download complete
+b839dfae01f6: Download complete
+799f0e3f433d: Download complete
+45e9e1642871: Download complete
+e6b70794e345: Download complete
+2780920e5dbf: Download complete
+5b3013706a46: Pull complete
+25a9dec50117: Pull complete
+7e7bfd057be8: Pull complete
+3214acf345c0: Pull complete
+9d2753d762cc: Pull complete
+411e1c946a02: Pull complete
+7c12895b777b: Pull complete
+52630fc75a18: Pull complete
+dd64bf2dd177: Pull complete
+bf8083c5c1ec: Pull complete
+b839dfae01f6: Pull complete
+799f0e3f433d: Pull complete
+2780920e5dbf: Pull complete
+0f4b56a7bfcd: Download complete
+c70bb7faab56: Pull complete
+bc6a2c7624f1: Pull complete
+45e9e1642871: Pull complete
+e6b70794e345: Pull complete
+0f4b56a7bfcd: Pull complete
+Digest: sha256:1107dd5274e0ada47e42472b7a7e71f3b2a2fe878878108f3e2f9e51528f0193
+Status: Downloaded newer image for grafana/loki@sha256:1107dd5274e0ada47e42472b7a7e71f3b2a2fe878878108f3e2f9e51528f0193
+docker.io/grafana/loki:3.7.8@sha256:1107dd5274e0ada47e42472b7a7e71f3b2a2fe878878108f3e2f9e51528f0193

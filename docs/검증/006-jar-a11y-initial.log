@@ -1,0 +1,357 @@
+
+> sc-framework@0.1.0 test:e2e
+> playwright test --config frontend/playwright.config.ts accessibility.spec.ts
+
+
+Running 8 tests using 1 worker
+
+(node:45931) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 frontend/e2e/accessibility.spec.ts:116:3 › 접근성 로그인 390px: 닫힌 셸과 실제 로그인 필드 (322ms)
+  ✘  2 frontend/e2e/accessibility.spec.ts:131:3 › 접근성 Reference 예제 390px: 기본·400 필드·409·native 확인 (1.3s)
+(node:45937) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  3 frontend/e2e/accessibility.spec.ts:116:3 › 접근성 로그인 1366px: 닫힌 셸과 실제 로그인 필드 (365ms)
+  ✘  4 frontend/e2e/accessibility.spec.ts:131:3 › 접근성 Reference 예제 1366px: 기본·400 필드·409·native 확인 (894ms)
+(node:45944) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  5 frontend/e2e/accessibility.spec.ts:210:7 › reference 실제 JAR 공통 예제 접근성 › 접근성 patterns 390px: 한국어·영어·오류·dirty·열린 모달 (942ms)
+(node:45950) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  6 frontend/e2e/accessibility.spec.ts:210:7 › reference 실제 JAR 공통 예제 접근성 › 접근성 patterns 1366px: 한국어·영어·오류·dirty·열린 모달 (880ms)
+(node:45955) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  7 frontend/e2e/accessibility.spec.ts:210:7 › starter 실제 JAR 공통 예제 접근성 › 접근성 patterns 390px: 한국어·영어·오류·dirty·열린 모달 (1.0s)
+(node:45963) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  8 frontend/e2e/accessibility.spec.ts:210:7 › starter 실제 JAR 공통 예제 접근성 › 접근성 patterns 1366px: 한국어·영어·오류·dirty·열린 모달 (839ms)
+
+
+  1) frontend/e2e/accessibility.spec.ts:131:3 › 접근성 Reference 예제 390px: 기본·400 필드·409·native 확인 ────
+
+    Error: examples-field-error-400: document 전체 접근성
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  -  1
+    + Received  + 16
+
+      Object {
+        "duplicateIds": Array [],
+    -   "violations": Array [],
+    +   "violations": Array [
+    +     Object {
+    +       "help": "Elements must meet minimum color contrast ratio thresholds",
+    +       "id": "color-contrast",
+    +       "impact": "serious",
+    +       "nodes": Array [
+    +         Object {
+    +           "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 3.55 (foreground color: #c66f6f, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +           "target": Array [
+    +             ".v-messages__message",
+    +           ],
+    +         },
+    +       ],
+    +     },
+    +   ],
+      }
+
+      83 |     },
+      84 |     `${state}: document 전체 접근성`,
+    > 85 |   ).toEqual({ violations: [], duplicateIds: [] });
+         |     ^
+      86 | }
+      87 |
+      88 | async function loginReference(page: Page) {
+        at assertAccessible (/Users/dk/Work/ScFramework/frontend/e2e/accessibility.spec.ts:85:5)
+        at /Users/dk/Work/ScFramework/frontend/e2e/accessibility.spec.ts:164:5
+
+    attachment #3: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results/accessibility-접근성-Reference-예제-390px-기본·400-필드·409·native-확인/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results/accessibility-접근성-Reference-예제-390px-기본·400-필드·409·native-확인/error-context.md
+
+  2) frontend/e2e/accessibility.spec.ts:131:3 › 접근성 Reference 예제 1366px: 기본·400 필드·409·native 확인 ───
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator: getByRole('form', { name: '예제 등록', exact: true }).getByRole('alert')
+    Expected: "합성 서버 입력 오류"
+    Error: strict mode violation: getByRole('form', { name: '예제 등록', exact: true }).getByRole('alert') resolved to 2 elements:
+        1) <div role="alert" aria-live="polite" class="v-input__details" id="sc-field-sc-1-6-messages">…</div> aka locator('#sc-field-sc-1-6-messages')
+        2) <div role="alert" data-v-1214860b="" class="v-alert v-theme--sc bg-error v-alert--density-default v-alert--variant-flat">…</div> aka getByRole('alert').filter({ hasText: '합성 서버 입력 오류' })
+
+    Call log:
+      - Expect "toHaveText" getByRole('form', { name: '예제 등록', exact: true }).getByRole('alert') with timeout 10000ms
+      - waiting for getByRole('form', { name: '예제 등록', exact: true }).getByRole('alert')
+
+
+      161 |     await registration.getByRole("button", { name: "등록", exact: true }).click();
+      162 |     await expect(createInput).toHaveAccessibleDescription("제목을 확인해 주세요.");
+    > 163 |     await expect(registration.getByRole("alert")).toHaveText("합성 서버 입력 오류");
+          |                                                   ^
+      164 |     await assertAccessible(page, info, "examples-field-error-400");
+      165 |
+      166 |     if (width < 768) await page.getByRole("button", { name: "목록으로", exact: true }).click();
+        at /Users/dk/Work/ScFramework/frontend/e2e/accessibility.spec.ts:163:51
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results/accessibility-접근성-Referenc-4ae3c-6px-기본·400-필드·409·native-확인/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results/accessibility-접근성-Referenc-4ae3c-6px-기본·400-필드·409·native-확인/error-context.md
+
+  3) frontend/e2e/accessibility.spec.ts:210:7 › reference 실제 JAR 공통 예제 접근성 › 접근성 patterns 390px: 한국어·영어·오류·dirty·열린 모달 
+
+    Error: patterns-ko-default: document 전체 접근성
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  -  1
+    + Received  + 31
+
+      Object {
+        "duplicateIds": Array [],
+    -   "violations": Array [],
+    +   "violations": Array [
+    +     Object {
+    +       "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+    +       "id": "landmark-unique",
+    +       "impact": "moderate",
+    +       "nodes": Array [
+    +         Object {
+    +           "failureSummary": "Fix any of the following:
+    +   The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable",
+    +           "target": Array [
+    +             "section[aria-labelledby=\"sc-section-sc-1-30\"]",
+    +           ],
+    +         },
+    +       ],
+    +     },
+    +     Object {
+    +       "help": "All touch targets must be 24px large, or leave sufficient space",
+    +       "id": "target-size",
+    +       "impact": "serious",
+    +       "nodes": Array [
+    +         Object {
+    +           "failureSummary": "Fix any of the following:
+    +   Target has insufficient size (316px by 21px, should be at least 24px by 24px)
+    +   Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 21px instead of at least 24px.",
+    +           "target": Array [
+    +             ".sc-section-card__body[data-v-96e27418=\"\"] > details > summary",
+    +           ],
+    +         },
+    +       ],
+    +     },
+    +   ],
+      }
+
+      83 |     },
+      84 |     `${state}: document 전체 접근성`,
+    > 85 |   ).toEqual({ violations: [], duplicateIds: [] });
+         |     ^
+      86 | }
+      87 |
+      88 | async function loginReference(page: Page) {
+        at assertAccessible (/Users/dk/Work/ScFramework/frontend/e2e/accessibility.spec.ts:85:5)
+        at /Users/dk/Work/ScFramework/frontend/e2e/accessibility.spec.ts:222:9
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results/accessibility-reference-실제-d8fb3-390px-한국어·영어·오류·dirty·열린-모달/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results/accessibility-reference-실제-d8fb3-390px-한국어·영어·오류·dirty·열린-모달/error-context.md
+
+  4) frontend/e2e/accessibility.spec.ts:210:7 › reference 실제 JAR 공통 예제 접근성 › 접근성 patterns 1366px: 한국어·영어·오류·dirty·열린 모달 
+
+    Error: patterns-ko-default: document 전체 접근성
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  -  1
+    + Received  + 31
+
+      Object {
+        "duplicateIds": Array [],
+    -   "violations": Array [],
+    +   "violations": Array [
+    +     Object {
+    +       "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+    +       "id": "landmark-unique",
+    +       "impact": "moderate",
+    +       "nodes": Array [
+    +         Object {
+    +           "failureSummary": "Fix any of the following:
+    +   The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable",
+    +           "target": Array [
+    +             "section[aria-labelledby=\"sc-section-sc-1-30\"]",
+    +           ],
+    +         },
+    +       ],
+    +     },
+    +     Object {
+    +       "help": "All touch targets must be 24px large, or leave sufficient space",
+    +       "id": "target-size",
+    +       "impact": "serious",
+    +       "nodes": Array [
+    +         Object {
+    +           "failureSummary": "Fix any of the following:
+    +   Target has insufficient size (1028px by 21px, should be at least 24px by 24px)
+    +   Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 21px instead of at least 24px.",
+    +           "target": Array [
+    +             ".sc-section-card__body[data-v-96e27418=\"\"] > details > summary",
+    +           ],
+    +         },
+    +       ],
+    +     },
+    +   ],
+      }
+
+      83 |     },
+      84 |     `${state}: document 전체 접근성`,
+    > 85 |   ).toEqual({ violations: [], duplicateIds: [] });
+         |     ^
+      86 | }
+      87 |
+      88 | async function loginReference(page: Page) {
+        at assertAccessible (/Users/dk/Work/ScFramework/frontend/e2e/accessibility.spec.ts:85:5)
+        at /Users/dk/Work/ScFramework/frontend/e2e/accessibility.spec.ts:222:9
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results/accessibility-reference-실제-91be3-366px-한국어·영어·오류·dirty·열린-모달/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results/accessibility-reference-실제-91be3-366px-한국어·영어·오류·dirty·열린-모달/error-context.md
+
+  5) frontend/e2e/accessibility.spec.ts:210:7 › starter 실제 JAR 공통 예제 접근성 › 접근성 patterns 390px: 한국어·영어·오류·dirty·열린 모달 
+
+    Error: patterns-ko-default: document 전체 접근성
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  -  1
+    + Received  + 31
+
+      Object {
+        "duplicateIds": Array [],
+    -   "violations": Array [],
+    +   "violations": Array [
+    +     Object {
+    +       "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+    +       "id": "landmark-unique",
+    +       "impact": "moderate",
+    +       "nodes": Array [
+    +         Object {
+    +           "failureSummary": "Fix any of the following:
+    +   The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable",
+    +           "target": Array [
+    +             "section[aria-labelledby=\"sc-section-sc-1-29\"]",
+    +           ],
+    +         },
+    +       ],
+    +     },
+    +     Object {
+    +       "help": "All touch targets must be 24px large, or leave sufficient space",
+    +       "id": "target-size",
+    +       "impact": "serious",
+    +       "nodes": Array [
+    +         Object {
+    +           "failureSummary": "Fix any of the following:
+    +   Target has insufficient size (316px by 21px, should be at least 24px by 24px)
+    +   Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 21px instead of at least 24px.",
+    +           "target": Array [
+    +             ".sc-section-card__body[data-v-96e27418=\"\"] > details > summary",
+    +           ],
+    +         },
+    +       ],
+    +     },
+    +   ],
+      }
+
+      83 |     },
+      84 |     `${state}: document 전체 접근성`,
+    > 85 |   ).toEqual({ violations: [], duplicateIds: [] });
+         |     ^
+      86 | }
+      87 |
+      88 | async function loginReference(page: Page) {
+        at assertAccessible (/Users/dk/Work/ScFramework/frontend/e2e/accessibility.spec.ts:85:5)
+        at /Users/dk/Work/ScFramework/frontend/e2e/accessibility.spec.ts:222:9
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results/accessibility-starter-실제-J-424a3-390px-한국어·영어·오류·dirty·열린-모달/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results/accessibility-starter-실제-J-424a3-390px-한국어·영어·오류·dirty·열린-모달/error-context.md
+
+  6) frontend/e2e/accessibility.spec.ts:210:7 › starter 실제 JAR 공통 예제 접근성 › 접근성 patterns 1366px: 한국어·영어·오류·dirty·열린 모달 
+
+    Error: patterns-ko-default: document 전체 접근성
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  -  1
+    + Received  + 31
+
+      Object {
+        "duplicateIds": Array [],
+    -   "violations": Array [],
+    +   "violations": Array [
+    +     Object {
+    +       "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+    +       "id": "landmark-unique",
+    +       "impact": "moderate",
+    +       "nodes": Array [
+    +         Object {
+    +           "failureSummary": "Fix any of the following:
+    +   The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable",
+    +           "target": Array [
+    +             "section[aria-labelledby=\"sc-section-sc-1-29\"]",
+    +           ],
+    +         },
+    +       ],
+    +     },
+    +     Object {
+    +       "help": "All touch targets must be 24px large, or leave sufficient space",
+    +       "id": "target-size",
+    +       "impact": "serious",
+    +       "nodes": Array [
+    +         Object {
+    +           "failureSummary": "Fix any of the following:
+    +   Target has insufficient size (1028px by 21px, should be at least 24px by 24px)
+    +   Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 21px instead of at least 24px.",
+    +           "target": Array [
+    +             ".sc-section-card__body[data-v-96e27418=\"\"] > details > summary",
+    +           ],
+    +         },
+    +       ],
+    +     },
+    +   ],
+      }
+
+      83 |     },
+      84 |     `${state}: document 전체 접근성`,
+    > 85 |   ).toEqual({ violations: [], duplicateIds: [] });
+         |     ^
+      86 | }
+      87 |
+      88 | async function loginReference(page: Page) {
+        at assertAccessible (/Users/dk/Work/ScFramework/frontend/e2e/accessibility.spec.ts:85:5)
+        at /Users/dk/Work/ScFramework/frontend/e2e/accessibility.spec.ts:222:9
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    frontend/test-results/accessibility-starter-실제-J-61ee3-366px-한국어·영어·오류·dirty·열린-모달/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: frontend/test-results/accessibility-starter-실제-J-61ee3-366px-한국어·영어·오류·dirty·열린-모달/error-context.md
+
+  6 failed
+    frontend/e2e/accessibility.spec.ts:131:3 › 접근성 Reference 예제 390px: 기본·400 필드·409·native 확인 ─────
+    frontend/e2e/accessibility.spec.ts:131:3 › 접근성 Reference 예제 1366px: 기본·400 필드·409·native 확인 ────
+    frontend/e2e/accessibility.spec.ts:210:7 › reference 실제 JAR 공통 예제 접근성 › 접근성 patterns 390px: 한국어·영어·오류·dirty·열린 모달 
+    frontend/e2e/accessibility.spec.ts:210:7 › reference 실제 JAR 공통 예제 접근성 › 접근성 patterns 1366px: 한국어·영어·오류·dirty·열린 모달 
+    frontend/e2e/accessibility.spec.ts:210:7 › starter 실제 JAR 공통 예제 접근성 › 접근성 patterns 390px: 한국어·영어·오류·dirty·열린 모달 
+    frontend/e2e/accessibility.spec.ts:210:7 › starter 실제 JAR 공통 예제 접근성 › 접근성 patterns 1366px: 한국어·영어·오류·dirty·열린 모달 
+  2 passed (14.2s)

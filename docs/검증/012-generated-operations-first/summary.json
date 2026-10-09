@@ -1,0 +1,52 @@
+{
+  "stage": "012",
+  "passed": false,
+  "groups": [
+    {
+      "name": "prod-selected-profile-session-and-swagger-boundaries",
+      "passed": true,
+      "referenceClasses": 0,
+      "capabilities": 4
+    },
+    {
+      "name": "own-notes-jpa-querydsl-mybatis-flush-csrf-and-revision",
+      "passed": true,
+      "noteRevision": 2
+    },
+    {
+      "name": "registered-four-default-three-real-message-and-minute-pulse",
+      "passed": true,
+      "defaultSchedules": 3,
+      "pulseSchedules": 1,
+      "completedMessages": 1,
+      "successfulPulseRuns": 1
+    },
+    {
+      "name": "consumer-app-one-version-router-allowlist-receipts-and-auth",
+      "passed": true,
+      "acceptedOccurrences": 2,
+      "rejectedBoundaries": 5
+    },
+    {
+      "name": "same-h2-prod-to-dev-restart-and-actual-thirteen-openapi-paths",
+      "passed": true,
+      "operationalPaths": 13,
+      "numericSchemaVersion": 1,
+      "schedules": 4
+    },
+    {
+      "name": "private-process-and-event-logs-no-secret-or-raw-canary",
+      "passed": true,
+      "secretMatches": 0
+    }
+  ],
+  "frameworkVersion": "0.3.0",
+  "appVersion": "1.0.0",
+  "originalRuntimeUsed": false,
+  "manualReviewComplete": false,
+  "browserExecuted": true,
+  "jarSha256": "70f20c47ce7284ee9f975639570448581b4fad7893e59ae59b645448d06d8648",
+  "failureType": "VerificationFailure",
+  "failureCode": "GENERATED_OPERATIONS_BROWSER",
+  "temporaryRuntimeRemoved": true
+}

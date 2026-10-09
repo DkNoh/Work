@@ -1,0 +1,16 @@
+│
+●  Storybook collects completely anonymous usage telemetry. We use it to
+│  shape Storybook's roadmap and prioritize features. You can learn more,
+│  including how to opt out, at ]8;;https://storybook.js.org/telemetryhttps://storybook.js.org/telemetry]8;;
+
+ RUN  v4.1.11 /Users/dk/Work/ScFramework
+
+No test files found, exiting with code 1
+
+filter: frontend/apps/catalog/src/ScChart.stories.ts, frontend/apps/catalog/src/ScRichTextEditor.stories.ts, frontend/apps/catalog/src/I18n.stories.ts, frontend/apps/catalog/src/Excel.stories.ts
+
+|storybook (chromium)| 
+
+include: frontend/apps/catalog/src/**/*.stories.ts
+exclude:  **/*.mdx
+

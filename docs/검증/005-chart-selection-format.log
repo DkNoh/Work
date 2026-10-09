@@ -1,0 +1,5 @@
+frontend/apps/reference-app/src/features/patterns/ExtensionPatterns.vue 77ms
+frontend/apps/starter-app/src/features/patterns/ExtensionPatterns.vue 27ms
+frontend/apps/reference-app/src/localization.ts 3ms (unchanged)
+frontend/apps/starter-app/src/localization.ts 2ms (unchanged)
+frontend/e2e/layout.spec.ts 16ms (unchanged)

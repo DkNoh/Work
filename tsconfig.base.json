@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@sc/ui": ["frontend/packages/ui/src/index.ts"],
+      "@sc/runtime": ["frontend/packages/runtime/src/index.ts"],
+      "@sc/ui/table": ["frontend/packages/ui/src/table/index.ts"],
+      "@sc/ui/charts": ["frontend/packages/ui/src/charts/index.ts"],
+      "@sc/ui/editor": ["frontend/packages/ui/src/editor/index.ts"],
+      "@sc/ui/board": ["frontend/packages/ui/src/board/index.ts"],
+      "@sc/ui/image": ["frontend/packages/ui/src/image/index.ts"],
+      "@sc/i18n": ["frontend/packages/i18n/src/index.ts"],
+      "@sc/excel": ["frontend/packages/excel/src/index.ts"],
+      "@sc/date": ["frontend/packages/date/src/index.ts"]
+    },
+    "noEmit": true,
+    "types": ["vite/client", "node"]
+  }
+}

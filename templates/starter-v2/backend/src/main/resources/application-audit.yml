@@ -1,0 +1,7 @@
+spring:
+  flyway:
+    locations: ${sc.app.database.migration:classpath:db/migration},${sc.app.database.audit-migration:classpath:db/audit-migration}
+sc:
+  framework:
+    audit:
+      enabled: true

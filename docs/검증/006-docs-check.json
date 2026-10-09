@@ -1,0 +1,20 @@
+{
+  "files": 10,
+  "relativeLinks": 219,
+  "jsonExamples": 0,
+  "evidenceJsonFiles": 9,
+  "evidenceChecks": {
+    "axeScans": true,
+    "axeTests": true,
+    "axeWholeDocument": true,
+    "axeNoExclusions": true,
+    "axeViolations0": true,
+    "visualExpectedFailure": true,
+    "framework24": true,
+    "voiceOverUnverified": true
+  },
+  "errors": [],
+  "formatLog": "docs/검증/006-docs-format.log",
+  "result": "passed",
+  "scope": "documentation only; remote CI/Linux baseline/VoiceOver unverified"
+}

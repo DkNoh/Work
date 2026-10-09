@@ -1,0 +1,174 @@
+frontend/apps/catalog/.storybook/main.ts 22ms (unchanged)
+frontend/apps/catalog/.storybook/preview.ts 10ms
+frontend/apps/catalog/package.json 5ms (unchanged)
+frontend/apps/catalog/src/ConnectedExamples.stories.ts 4ms (unchanged)
+frontend/apps/catalog/src/DesignTokens.stories.ts 3ms (unchanged)
+frontend/apps/catalog/src/Excel.stories.ts 2ms (unchanged)
+frontend/apps/catalog/src/fixtures/ConnectedExamplesStory.vue 18ms (unchanged)
+frontend/apps/catalog/src/fixtures/ScActionButtonStory.vue 3ms (unchanged)
+frontend/apps/catalog/src/fixtures/ScActionFormStory.vue 5ms (unchanged)
+frontend/apps/catalog/src/fixtures/ScAppShellStory.vue 19ms (unchanged)
+frontend/apps/catalog/src/fixtures/ScChartComparisonStory.vue 3ms (unchanged)
+frontend/apps/catalog/src/fixtures/ScChartStory.vue 6ms (unchanged)
+frontend/apps/catalog/src/fixtures/ScCheckboxStory.vue 3ms (unchanged)
+frontend/apps/catalog/src/fixtures/ScConfirmDialogStory.vue 6ms (unchanged)
+frontend/apps/catalog/src/fixtures/ScDataTableStory.vue 11ms (unchanged)
+frontend/apps/catalog/src/fixtures/ScDesignTokensStory.vue 22ms (unchanged)
+frontend/apps/catalog/src/fixtures/ScExcelStory.vue 6ms (unchanged)
+frontend/apps/catalog/src/fixtures/ScFormActionsStory.vue 5ms (unchanged)
+frontend/apps/catalog/src/fixtures/ScI18nStory.vue 3ms (unchanged)
+frontend/apps/catalog/src/fixtures/ScListDetailStory.vue 2ms
+frontend/apps/catalog/src/fixtures/ScRichTextEditorStory.vue 4ms (unchanged)
+frontend/apps/catalog/src/fixtures/ScSearchPanelStory.vue 2ms
+frontend/apps/catalog/src/fixtures/ScSelectStory.vue 2ms (unchanged)
+frontend/apps/catalog/src/fixtures/ScStoryFrame.vue 2ms (unchanged)
+frontend/apps/catalog/src/fixtures/ScStoryLocale.vue 2ms
+frontend/apps/catalog/src/fixtures/ScTableData.ts 2ms (unchanged)
+frontend/apps/catalog/src/fixtures/ScTextAreaStory.vue 3ms (unchanged)
+frontend/apps/catalog/src/fixtures/ScTextFieldStory.vue 2ms (unchanged)
+frontend/apps/catalog/src/fixtures/ScVirtualListStory.vue 3ms (unchanged)
+frontend/apps/catalog/src/fixtures/ScVirtualTableStory.vue 10ms (unchanged)
+frontend/apps/catalog/src/fixtures/ValidatedFormStory.vue 7ms
+frontend/apps/catalog/src/I18n.stories.ts 2ms (unchanged)
+frontend/apps/catalog/src/ScActionButton.stories.ts 5ms (unchanged)
+frontend/apps/catalog/src/ScAppShell.stories.ts 5ms (unchanged)
+frontend/apps/catalog/src/ScChart.stories.ts 5ms (unchanged)
+frontend/apps/catalog/src/ScCheckbox.stories.ts 3ms (unchanged)
+frontend/apps/catalog/src/ScConfirmDialog.stories.ts 4ms (unchanged)
+frontend/apps/catalog/src/ScDataTable.stories.ts 4ms (unchanged)
+frontend/apps/catalog/src/ScEmptyState.stories.ts 1ms
+frontend/apps/catalog/src/ScErrorPanel.stories.ts 2ms
+frontend/apps/catalog/src/ScFormActions.stories.ts 3ms (unchanged)
+frontend/apps/catalog/src/ScListDetailLayout.stories.ts 2ms
+frontend/apps/catalog/src/ScLoadingState.stories.ts 1ms
+frontend/apps/catalog/src/ScPageHeader.stories.ts 1ms
+frontend/apps/catalog/src/ScRichTextEditor.stories.ts 4ms (unchanged)
+frontend/apps/catalog/src/ScSearchPanel.stories.ts 1ms
+frontend/apps/catalog/src/ScSectionCard.stories.ts 1ms
+frontend/apps/catalog/src/ScSelect.stories.ts 3ms
+frontend/apps/catalog/src/ScTextArea.stories.ts 2ms (unchanged)
+frontend/apps/catalog/src/ScTextField.stories.ts 2ms (unchanged)
+frontend/apps/catalog/src/ScVirtualList.stories.ts 2ms
+frontend/apps/catalog/src/ScVirtualTable.stories.ts 5ms
+frontend/apps/catalog/src/ValidatedForm.stories.ts 3ms
+frontend/apps/catalog/tsconfig.docgen.json 1ms (unchanged)
+frontend/apps/catalog/tsconfig.json 0ms (unchanged)
+frontend/apps/catalog/vitest.config.ts 2ms (unchanged)
+frontend/apps/reference-app/index.html 1ms (unchanged)
+frontend/apps/reference-app/package.json 0ms (unchanged)
+frontend/apps/reference-app/src/App.vue 7ms
+frontend/apps/reference-app/src/features/auth/LoginPage.vue 4ms (unchanged)
+frontend/apps/reference-app/src/features/examples/api.ts 1ms (unchanged)
+frontend/apps/reference-app/src/features/examples/ExamplesPage.vue 16ms
+frontend/apps/reference-app/src/features/examples/schema.spec.ts 1ms (unchanged)
+frontend/apps/reference-app/src/features/examples/schema.ts 1ms (unchanged)
+frontend/apps/reference-app/src/features/patterns/ExtensionPatterns.vue 15ms
+frontend/apps/reference-app/src/features/patterns/PatternForm.vue 8ms
+frontend/apps/reference-app/src/features/patterns/PatternsPage.vue 1ms
+frontend/apps/reference-app/src/features/patterns/TablePatterns.vue 8ms
+frontend/apps/reference-app/src/localization.ts 1ms
+frontend/apps/reference-app/src/main.ts 1ms
+frontend/apps/reference-app/tsconfig.json 0ms (unchanged)
+frontend/apps/reference-app/vite.config.ts 1ms (unchanged)
+frontend/apps/starter-app/index.html 1ms (unchanged)
+frontend/apps/starter-app/package.json 0ms (unchanged)
+frontend/apps/starter-app/src/App.vue 4ms
+frontend/apps/starter-app/src/features/patterns/ExtensionPatterns.vue 17ms
+frontend/apps/starter-app/src/features/patterns/PatternForm.vue 8ms
+frontend/apps/starter-app/src/features/patterns/PatternsPage.vue 1ms
+frontend/apps/starter-app/src/features/patterns/TablePatterns.vue 8ms
+frontend/apps/starter-app/src/localization.ts 1ms
+frontend/apps/starter-app/src/main.ts 1ms
+frontend/apps/starter-app/src/StartPage.vue 4ms (unchanged)
+frontend/apps/starter-app/tsconfig.json 0ms (unchanged)
+frontend/apps/starter-app/vite.config.ts 1ms (unchanged)
+frontend/e2e/framework.spec.ts 6ms
+frontend/e2e/layout.spec.ts 7ms (unchanged)
+frontend/packages/excel/package.json 0ms (unchanged)
+frontend/packages/excel/src/index.spec.ts 3ms (unchanged)
+frontend/packages/excel/src/index.ts 6ms (unchanged)
+frontend/packages/excel/tsconfig.json 0ms
+frontend/packages/i18n/package.json 0ms (unchanged)
+frontend/packages/i18n/src/index.spec.ts 1ms (unchanged)
+frontend/packages/i18n/src/index.ts 2ms (unchanged)
+frontend/packages/i18n/src/messages.ts 1ms (unchanged)
+frontend/packages/i18n/tsconfig.json 0ms
+frontend/packages/runtime/package.json 0ms (unchanged)
+frontend/packages/runtime/src/http.spec.ts 4ms (unchanged)
+frontend/packages/runtime/src/http.ts 5ms (unchanged)
+frontend/packages/runtime/src/index.ts 0ms (unchanged)
+frontend/packages/runtime/src/runtime.ts 3ms (unchanged)
+frontend/packages/runtime/tsconfig.json 0ms (unchanged)
+frontend/packages/ui/package.json 0ms (unchanged)
+frontend/packages/ui/scripts/generate-tokens.mjs 3ms (unchanged)
+frontend/packages/ui/src/charts/chart-model.spec.ts 1ms (unchanged)
+frontend/packages/ui/src/charts/chart-model.ts 2ms (unchanged)
+frontend/packages/ui/src/charts/contracts.ts 1ms (unchanged)
+frontend/packages/ui/src/charts/index.ts 0ms (unchanged)
+frontend/packages/ui/src/charts/ScChart.vue 11ms (unchanged)
+frontend/packages/ui/src/contracts.ts 3ms (unchanged)
+frontend/packages/ui/src/editor/contracts.ts 1ms (unchanged)
+frontend/packages/ui/src/editor/document.spec.ts 2ms (unchanged)
+frontend/packages/ui/src/editor/document.ts 6ms (unchanged)
+frontend/packages/ui/src/editor/index.ts 0ms (unchanged)
+frontend/packages/ui/src/editor/ScRichTextEditor.spec.ts 4ms (unchanged)
+frontend/packages/ui/src/editor/ScRichTextEditor.vue 14ms (unchanged)
+frontend/packages/ui/src/forms/form-contracts.ts 1ms (unchanged)
+frontend/packages/ui/src/forms/index.ts 0ms (unchanged)
+frontend/packages/ui/src/forms/ScConfirmDialog.spec.ts 6ms (unchanged)
+frontend/packages/ui/src/forms/ScConfirmDialog.vue 10ms (unchanged)
+frontend/packages/ui/src/forms/ScFormActions.spec.ts 3ms (unchanged)
+frontend/packages/ui/src/forms/ScFormActions.vue 4ms (unchanged)
+frontend/packages/ui/src/index.ts 1ms (unchanged)
+frontend/packages/ui/src/inputs/_input.scss 1ms (unchanged)
+frontend/packages/ui/src/inputs/index.ts 0ms (unchanged)
+frontend/packages/ui/src/inputs/input-accessibility.ts 2ms (unchanged)
+frontend/packages/ui/src/inputs/input-contracts.ts 2ms (unchanged)
+frontend/packages/ui/src/inputs/ScCheckbox.vue 6ms
+frontend/packages/ui/src/inputs/ScInputs.spec.ts 6ms (unchanged)
+frontend/packages/ui/src/inputs/ScSelect.vue 7ms
+frontend/packages/ui/src/inputs/ScTextArea.vue 6ms (unchanged)
+frontend/packages/ui/src/layout/index.ts 0ms
+frontend/packages/ui/src/layout/ScAppShell.spec.ts 3ms (unchanged)
+frontend/packages/ui/src/layout/ScAppShell.vue 17ms
+frontend/packages/ui/src/layout/ScShellNavigation.spec.ts 2ms (unchanged)
+frontend/packages/ui/src/layout/ScShellNavigation.vue 5ms (unchanged)
+frontend/packages/ui/src/layout/types.ts 1ms (unchanged)
+frontend/packages/ui/src/patterns/contracts.ts 1ms
+frontend/packages/ui/src/patterns/index.ts 0ms
+frontend/packages/ui/src/patterns/ScEmptyState.vue 3ms
+frontend/packages/ui/src/patterns/ScErrorPanel.vue 3ms
+frontend/packages/ui/src/patterns/ScListDetailLayout.vue 4ms
+frontend/packages/ui/src/patterns/ScLoadingState.vue 2ms
+frontend/packages/ui/src/patterns/ScPageHeader.vue 3ms
+frontend/packages/ui/src/patterns/ScSearchPanel.vue 4ms
+frontend/packages/ui/src/patterns/ScSectionCard.vue 3ms
+frontend/packages/ui/src/ScActionButton.spec.ts 3ms (unchanged)
+frontend/packages/ui/src/ScActionButton.vue 4ms (unchanged)
+frontend/packages/ui/src/ScTextField.spec.ts 4ms (unchanged)
+frontend/packages/ui/src/ScTextField.vue 8ms (unchanged)
+frontend/packages/ui/src/styles.scss 3ms (unchanged)
+frontend/packages/ui/src/table/contracts.ts 3ms (unchanged)
+frontend/packages/ui/src/table/index.ts 0ms (unchanged)
+frontend/packages/ui/src/table/labels.ts 2ms (unchanged)
+frontend/packages/ui/src/table/model.ts 3ms (unchanged)
+frontend/packages/ui/src/table/ScDataTable.spec.ts 6ms (unchanged)
+frontend/packages/ui/src/table/ScDataTable.vue 16ms (unchanged)
+frontend/packages/ui/src/table/ScVirtualList.vue 11ms (unchanged)
+frontend/packages/ui/src/table/ScVirtualTable.vue 24ms (unchanged)
+frontend/packages/ui/src/table/table.scss 3ms (unchanged)
+frontend/packages/ui/src/table/useVirtualRows.ts 5ms (unchanged)
+frontend/packages/ui/src/theme.spec.ts 2ms (unchanged)
+frontend/packages/ui/src/theme.ts 1ms
+frontend/packages/ui/src/tokens.scss 2ms (unchanged)
+frontend/packages/ui/src/tokens.spec.ts 2ms (unchanged)
+frontend/packages/ui/src/tokens.ts 1ms (unchanged)
+frontend/packages/ui/tsconfig.json 0ms (unchanged)
+frontend/playwright.config.ts 1ms (unchanged)
+scripts/check-ui-boundaries.mjs 4ms
+scripts/openapi-types.mjs 1ms (unchanged)
+scripts/ui-contracts.mjs 3ms
+scripts/verify-storybook.mjs 6ms
+package.json 0ms (unchanged)
+tsconfig.base.json 0ms
+vitest.config.ts 1ms

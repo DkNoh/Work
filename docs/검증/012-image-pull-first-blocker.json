@@ -1,0 +1,6 @@
+{
+  "status": "interrupted",
+  "image": "RabbitMQ",
+  "reason": "Public image pull blocked in docker-credential-desktop get; terminated only this task's pull and helper",
+  "retry": "Private empty Docker client configuration, explicit existing daemon socket; user Docker credentials unchanged"
+}

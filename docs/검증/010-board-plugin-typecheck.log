@@ -1,0 +1,3 @@
+frontend/packages/ui/src/board/ScBoardItem.vue(74,34): error TS2314: Generic type 'SortableInput<T>' requires 1 type argument(s).
+frontend/packages/ui/src/board/ScBoardItem.vue(75,10): error TS7006: Parameter 'defaults' implicitly has an 'any' type.
+frontend/packages/ui/src/board/ScBoardItem.vue(75,40): error TS7006: Parameter 'plugin' implicitly has an 'any' type.

@@ -1,0 +1,18 @@
+{
+  "ok": true,
+  "platform": "win32",
+  "checks": [
+    "SC_API_SCHEMA generates types and snapshot with no backend, JAR, Java, or DB",
+    "explicit schema and saved snapshot both pass --check",
+    "--check rejects drift and --schema regeneration restores types",
+    "environment and CLI both reject simultaneous schema and URL before network access",
+    "external DB bootstrap without schema or URL fails before Java/JAR access",
+    "invalid API schemas and non-loopback URLs are rejected without changing types",
+    "JDK 21 synthetic secret: WINDOWS_OWNER_ACL:CREATE_READ_OVERWRITE_GUARD_PASS"
+  ],
+  "checkGroups": 7,
+  "actualExternalDatabaseExecuted": false,
+  "fullGeneratedApplicationExecuted": false,
+  "fixtureRemoved": true,
+  "secretValuesPrinted": false
+}

@@ -1,0 +1,5 @@
+
+> sc-framework@0.1.0 test:framework-gates
+> node scripts/verify-framework-gates.mjs
+
+{"result":"passed","passed":24,"cases":24,"report":"docs/검증/007-framework-gates.json","immutableInputs":{"checked":200,"changed":[]},"cleanup":true}

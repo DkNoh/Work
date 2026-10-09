@@ -1,0 +1,193 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] ScFramework backend                                                [pom]
+[INFO] ScFramework core contracts                                         [jar]
+[INFO] ScFramework auto configuration                                     [jar]
+[INFO] ScFramework Spring Boot Starter                                    [jar]
+[INFO] ScFramework neutral reference app                                  [jar]
+[INFO] 
+[INFO] ----------------< dev.scframework:sc-framework-parent >-----------------
+[INFO] Building ScFramework backend 0.3.0-SNAPSHOT                        [1/5]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] -------------------< dev.scframework:framework-core >-------------------
+[INFO] Building ScFramework core contracts 0.3.0-SNAPSHOT                 [2/5]
+[INFO]   from framework-core\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ framework-core ---
+[INFO] skip non existing resourceDirectory C:\Work\ScFrameWork\backend\framework-core\src\main\resources
+[INFO] skip non existing resourceDirectory C:\Work\ScFrameWork\backend\framework-core\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ framework-core ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ framework-core ---
+[INFO] skip non existing resourceDirectory C:\Work\ScFrameWork\backend\framework-core\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ framework-core ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ framework-core ---
+[INFO] 
+[INFO] --------------< dev.scframework:framework-autoconfigure >---------------
+[INFO] Building ScFramework auto configuration 0.3.0-SNAPSHOT             [3/5]
+[INFO]   from framework-autoconfigure\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ framework-autoconfigure ---
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] Copying 2 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ framework-autoconfigure ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ framework-autoconfigure ---
+[INFO] skip non existing resourceDirectory C:\Work\ScFrameWork\backend\framework-autoconfigure\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ framework-autoconfigure ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ framework-autoconfigure ---
+[INFO] 
+[INFO] -----------< dev.scframework:framework-spring-boot-starter >------------
+[INFO] Building ScFramework Spring Boot Starter 0.3.0-SNAPSHOT            [4/5]
+[INFO]   from framework-spring-boot-starter\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ framework-spring-boot-starter ---
+[INFO] skip non existing resourceDirectory C:\Work\ScFrameWork\backend\framework-spring-boot-starter\src\main\resources
+[INFO] skip non existing resourceDirectory C:\Work\ScFrameWork\backend\framework-spring-boot-starter\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ framework-spring-boot-starter ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ framework-spring-boot-starter ---
+[INFO] skip non existing resourceDirectory C:\Work\ScFrameWork\backend\framework-spring-boot-starter\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ framework-spring-boot-starter ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ framework-spring-boot-starter ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] ------------------< dev.scframework:sc-reference-app >------------------
+[INFO] Building ScFramework neutral reference app 0.3.0-SNAPSHOT          [5/5]
+[INFO]   from reference-app\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ sc-reference-app ---
+[INFO] Copying 46 resources from src\main\resources to target\classes
+[INFO] Copying 46 resources from ..\..\frontend\apps\reference-app\dist to target\classes\static
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ sc-reference-app ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ sc-reference-app ---
+[INFO] Copying 1 resource from src\test\resources to target\test-classes
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ sc-reference-app ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 22 source files with javac [debug parameters release 21] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ sc-reference-app ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running dev.scframework.reference.database.DatabaseOrmMappingTest
+05:51:39.598 [main] INFO org.hibernate.Version -- HHH000412: Hibernate ORM core version 6.6.53.Final
+05:51:40.288 [main] INFO org.hibernate.cache.internal.RegionFactoryInitiator -- HHH000026: Second-level cache disabled
+05:51:40.428 [main] WARN org.hibernate.orm.deprecation -- HHH90000025: OracleDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+05:51:40.450 [main] INFO org.hibernate.orm.connections.pooling -- HHH10001005: Database info:
+	Database JDBC URL [undefined/unknown]
+	Database driver: undefined/unknown
+	Database version: 19.0
+	Autocommit mode: undefined/unknown
+	Isolation level: <unknown>
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+05:51:40.820 [main] INFO org.hibernate.cache.internal.RegionFactoryInitiator -- HHH000026: Second-level cache disabled
+05:51:40.823 [main] WARN org.hibernate.orm.deprecation -- HHH90000025: OracleDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+05:51:40.823 [main] INFO org.hibernate.orm.connections.pooling -- HHH10001005: Database info:
+	Database JDBC URL [undefined/unknown]
+	Database driver: undefined/unknown
+	Database version: 19.0
+	Autocommit mode: undefined/unknown
+	Isolation level: <unknown>
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+05:51:40.880 [main] INFO org.hibernate.cache.internal.RegionFactoryInitiator -- HHH000026: Second-level cache disabled
+05:51:40.884 [main] WARN org.hibernate.orm.deprecation -- HHH90000025: OracleDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+05:51:40.885 [main] INFO org.hibernate.orm.connections.pooling -- HHH10001005: Database info:
+	Database JDBC URL [undefined/unknown]
+	Database driver: undefined/unknown
+	Database version: 19.0
+	Autocommit mode: undefined/unknown
+	Isolation level: <unknown>
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+05:51:40.923 [main] INFO org.hibernate.cache.internal.RegionFactoryInitiator -- HHH000026: Second-level cache disabled
+05:51:40.926 [main] WARN org.hibernate.orm.deprecation -- HHH90000025: SQLServerDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+05:51:40.927 [main] INFO org.hibernate.orm.connections.pooling -- HHH10001005: Database info:
+	Database JDBC URL [undefined/unknown]
+	Database driver: undefined/unknown
+	Database version: 15.0
+	Autocommit mode: undefined/unknown
+	Isolation level: <unknown>
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+05:51:40.985 [main] INFO org.hibernate.cache.internal.RegionFactoryInitiator -- HHH000026: Second-level cache disabled
+05:51:40.988 [main] WARN org.hibernate.orm.deprecation -- HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+05:51:40.989 [main] INFO org.hibernate.orm.connections.pooling -- HHH10001005: Database info:
+	Database JDBC URL [undefined/unknown]
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: <unknown>
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+05:51:41.021 [main] INFO org.hibernate.cache.internal.RegionFactoryInitiator -- HHH000026: Second-level cache disabled
+05:51:41.024 [main] WARN org.hibernate.orm.deprecation -- HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+05:51:41.026 [main] INFO org.hibernate.orm.connections.pooling -- HHH10001005: Database info:
+	Database JDBC URL [undefined/unknown]
+	Database driver: undefined/unknown
+	Database version: 14.0
+	Autocommit mode: undefined/unknown
+	Isolation level: <unknown>
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+05:51:41.052 [main] INFO org.hibernate.cache.internal.RegionFactoryInitiator -- HHH000026: Second-level cache disabled
+05:51:41.055 [main] WARN org.hibernate.orm.deprecation -- HHH90000025: DB2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+05:51:41.056 [main] INFO org.hibernate.orm.connections.pooling -- HHH10001005: Database info:
+	Database JDBC URL [undefined/unknown]
+	Database driver: undefined/unknown
+	Database version: 11.5
+	Autocommit mode: undefined/unknown
+	Isolation level: <unknown>
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.699 s -- in dev.scframework.reference.database.DatabaseOrmMappingTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for ScFramework backend 0.3.0-SNAPSHOT:
+[INFO] 
+[INFO] ScFramework backend ................................ SUCCESS [  0.002 s]
+[INFO] ScFramework core contracts ......................... SUCCESS [  0.877 s]
+[INFO] ScFramework auto configuration ..................... SUCCESS [  0.938 s]
+[INFO] ScFramework Spring Boot Starter .................... SUCCESS [  0.261 s]
+[INFO] ScFramework neutral reference app .................. SUCCESS [  7.709 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  10.272 s
+[INFO] Finished at: 2026-10-09T05:51:41+09:00
+[INFO] ------------------------------------------------------------------------

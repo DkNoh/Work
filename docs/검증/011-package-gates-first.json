@@ -1,0 +1,269 @@
+{
+  "stage": "011",
+  "passed": true,
+  "rootCreatedArtifactSeed": true,
+  "generatedSyntheticCompiledPackageClaimed": false,
+  "cases": [
+    {
+      "name": "export target missing",
+      "passed": true,
+      "expectedCode": "SC_PACKAGE_EXPORT_MISSING",
+      "exitCode": 1,
+      "code": "SC_PACKAGE_EXPORT_MISSING",
+      "temporaryDirectoryRemoved": true,
+      "stdout": "",
+      "stderr": "SC_PACKAGE_EXPORT_MISSING: A public export target is absent from its tarball"
+    },
+    {
+      "name": "static relative import missing",
+      "passed": true,
+      "expectedCode": "SC_JS_RELATIVE_MISSING",
+      "exitCode": 1,
+      "code": "SC_JS_RELATIVE_MISSING",
+      "temporaryDirectoryRemoved": true,
+      "stdout": "",
+      "stderr": "SC_JS_RELATIVE_MISSING: A relative module reference has no packaged target"
+    },
+    {
+      "name": "relative export missing",
+      "passed": true,
+      "expectedCode": "SC_JS_RELATIVE_MISSING",
+      "exitCode": 1,
+      "code": "SC_JS_RELATIVE_MISSING",
+      "temporaryDirectoryRemoved": true,
+      "stdout": "",
+      "stderr": "SC_JS_RELATIVE_MISSING: A relative module reference has no packaged target"
+    },
+    {
+      "name": "dynamic relative import missing",
+      "passed": true,
+      "expectedCode": "SC_JS_RELATIVE_MISSING",
+      "exitCode": 1,
+      "code": "SC_JS_RELATIVE_MISSING",
+      "temporaryDirectoryRemoved": true,
+      "stdout": "",
+      "stderr": "SC_JS_RELATIVE_MISSING: A relative module reference has no packaged target"
+    },
+    {
+      "name": "undeclared bare dependency",
+      "passed": true,
+      "expectedCode": "SC_JS_UNDECLARED_BARE",
+      "exitCode": 1,
+      "code": "SC_JS_UNDECLARED_BARE",
+      "temporaryDirectoryRemoved": true,
+      "stdout": "",
+      "stderr": "SC_JS_UNDECLARED_BARE: A bare module reference is not declared as dependency or peer"
+    },
+    {
+      "name": "workspace source alias",
+      "passed": true,
+      "expectedCode": "SC_JS_ABSOLUTE_ALIAS",
+      "exitCode": 1,
+      "code": "SC_JS_ABSOLUTE_ALIAS",
+      "temporaryDirectoryRemoved": true,
+      "stdout": "",
+      "stderr": "SC_JS_ABSOLUTE_ALIAS: Module references must not expose absolute paths/workspace source aliases"
+    },
+    {
+      "name": "forbidden raw source file",
+      "passed": true,
+      "expectedCode": "SC_PACKAGE_FORBIDDEN_FILE",
+      "exitCode": 1,
+      "code": "SC_PACKAGE_FORBIDDEN_FILE",
+      "temporaryDirectoryRemoved": true,
+      "stdout": "",
+      "stderr": "SC_PACKAGE_FORBIDDEN_FILE: Source/tests/stories/maps/business/runtime/secret/database files must not be packed"
+    },
+    {
+      "name": "forbidden runtime database file",
+      "passed": true,
+      "expectedCode": "SC_PACKAGE_FORBIDDEN_FILE",
+      "exitCode": 1,
+      "code": "SC_PACKAGE_FORBIDDEN_FILE",
+      "temporaryDirectoryRemoved": true,
+      "stdout": "",
+      "stderr": "SC_PACKAGE_FORBIDDEN_FILE: Source/tests/stories/maps/business/runtime/secret/database files must not be packed"
+    },
+    {
+      "name": "forbidden source map",
+      "passed": true,
+      "expectedCode": "SC_PACKAGE_FORBIDDEN_FILE",
+      "exitCode": 1,
+      "code": "SC_PACKAGE_FORBIDDEN_FILE",
+      "temporaryDirectoryRemoved": true,
+      "stdout": "",
+      "stderr": "SC_PACKAGE_FORBIDDEN_FILE: Source/tests/stories/maps/business/runtime/secret/database files must not be packed"
+    },
+    {
+      "name": "private export",
+      "passed": true,
+      "expectedCode": "SC_PACKAGE_PRIVATE_EXPORT",
+      "exitCode": 1,
+      "code": "SC_PACKAGE_PRIVATE_EXPORT",
+      "temporaryDirectoryRemoved": true,
+      "stdout": "",
+      "stderr": "SC_PACKAGE_PRIVATE_EXPORT: Public export keys are missing or expose private source/dist entry points"
+    },
+    {
+      "name": "type-only component named re-export",
+      "passed": true,
+      "expectedCode": "SC_UI_COMPONENT_EXPORT",
+      "exitCode": 1,
+      "code": "SC_UI_COMPONENT_EXPORT",
+      "temporaryDirectoryRemoved": true,
+      "stdout": "",
+      "stderr": "SC_UI_COMPONENT_EXPORT: A public UI component is missing from its JS or declaration entry"
+    },
+    {
+      "name": "type-only component star re-export",
+      "passed": true,
+      "expectedCode": "SC_UI_COMPONENT_EXPORT",
+      "exitCode": 1,
+      "code": "SC_UI_COMPONENT_EXPORT",
+      "temporaryDirectoryRemoved": true,
+      "stdout": "",
+      "stderr": "SC_UI_COMPONENT_EXPORT: A public UI component is missing from its JS or declaration entry"
+    },
+    {
+      "name": "missing public CSS",
+      "passed": true,
+      "expectedCode": "SC_UI_CSS_MISSING",
+      "exitCode": 1,
+      "code": "SC_UI_CSS_MISSING",
+      "temporaryDirectoryRemoved": true,
+      "stdout": "",
+      "stderr": "SC_UI_CSS_MISSING: A public export target is absent from its tarball"
+    },
+    {
+      "name": "absolute declaration import path",
+      "passed": true,
+      "expectedCode": "SC_DECL_ABSOLUTE_ALIAS",
+      "exitCode": 1,
+      "code": "SC_DECL_ABSOLUTE_ALIAS",
+      "temporaryDirectoryRemoved": true,
+      "stdout": "",
+      "stderr": "SC_DECL_ABSOLUTE_ALIAS: Module references must not expose absolute paths/workspace source aliases"
+    },
+    {
+      "name": "dangling declaration relative type",
+      "passed": true,
+      "expectedCode": "SC_DECL_RELATIVE_MISSING",
+      "exitCode": 1,
+      "code": "SC_DECL_RELATIVE_MISSING",
+      "temporaryDirectoryRemoved": true,
+      "stdout": "",
+      "stderr": "SC_DECL_RELATIVE_MISSING: A relative module reference has no packaged target"
+    },
+    {
+      "name": "empty compiled root exports",
+      "passed": true,
+      "expectedCode": "SC_PACKAGE_EMPTY_MODULE",
+      "exitCode": 1,
+      "code": "SC_PACKAGE_EMPTY_MODULE",
+      "temporaryDirectoryRemoved": true,
+      "stdout": "",
+      "stderr": "SC_PACKAGE_EMPTY_MODULE: Empty JS/declaration exports are not a completed package"
+    },
+    {
+      "name": "missing internal rights file",
+      "passed": true,
+      "expectedCode": "SC_PACKAGE_NOTICE",
+      "exitCode": 1,
+      "code": "SC_PACKAGE_NOTICE",
+      "temporaryDirectoryRemoved": true,
+      "stdout": "",
+      "stderr": "SC_PACKAGE_NOTICE: README/internal license/third-party notices must be included and nonempty"
+    },
+    {
+      "name": "non-exact direct vendor",
+      "passed": true,
+      "expectedCode": "SC_VENDOR_EXACT_VERSION",
+      "exitCode": 1,
+      "code": "SC_VENDOR_EXACT_VERSION",
+      "temporaryDirectoryRemoved": true,
+      "stdout": "",
+      "stderr": "SC_VENDOR_EXACT_VERSION: Direct vendor and peer versions must remain exact"
+    },
+    {
+      "name": "invalid producer stamp digest",
+      "passed": true,
+      "expectedCode": "SC_PACKAGE_BUILD_STAMP",
+      "exitCode": 1,
+      "code": "SC_PACKAGE_BUILD_STAMP",
+      "temporaryDirectoryRemoved": true,
+      "stdout": "",
+      "stderr": "SC_PACKAGE_BUILD_STAMP: The producer stamp identity/version/input digest is invalid"
+    },
+    {
+      "name": "archive traversal",
+      "passed": true,
+      "expectedCode": "SC_TAR_PATH",
+      "exitCode": 1,
+      "code": "SC_TAR_PATH",
+      "temporaryDirectoryRemoved": true,
+      "stdout": "",
+      "stderr": "SC_TAR_PATH: An artifact path escapes its allowed root"
+    },
+    {
+      "name": "archive absolute path",
+      "passed": true,
+      "expectedCode": "SC_TAR_PATH",
+      "exitCode": 1,
+      "code": "SC_TAR_PATH",
+      "temporaryDirectoryRemoved": true,
+      "stdout": "",
+      "stderr": "SC_TAR_PATH: An artifact path is unsafe"
+    },
+    {
+      "name": "archive symlink",
+      "passed": true,
+      "expectedCode": "SC_TAR_LINK",
+      "exitCode": 1,
+      "code": "SC_TAR_LINK",
+      "temporaryDirectoryRemoved": true,
+      "stdout": "",
+      "stderr": "SC_TAR_LINK: Symlinks and hardlinks are forbidden in npm artifacts"
+    },
+    {
+      "name": "archive hardlink",
+      "passed": true,
+      "expectedCode": "SC_TAR_LINK",
+      "exitCode": 1,
+      "code": "SC_TAR_LINK",
+      "temporaryDirectoryRemoved": true,
+      "stdout": "",
+      "stderr": "SC_TAR_LINK: Symlinks and hardlinks are forbidden in npm artifacts"
+    },
+    {
+      "name": "archive duplicate paths",
+      "passed": true,
+      "expectedCode": "SC_TAR_DUPLICATE",
+      "exitCode": 1,
+      "code": "SC_TAR_DUPLICATE",
+      "temporaryDirectoryRemoved": true,
+      "stdout": "",
+      "stderr": "SC_TAR_DUPLICATE: An archive contains duplicate entry paths"
+    },
+    {
+      "name": "zero frontend artifacts",
+      "passed": true,
+      "expectedCode": "SC_ARTIFACT_FRONTEND_COUNT",
+      "exitCode": 1,
+      "code": "SC_ARTIFACT_FRONTEND_COUNT",
+      "temporaryDirectoryRemoved": true,
+      "stdout": "",
+      "stderr": "SC_ARTIFACT_FRONTEND_COUNT: Exactly five named frontend package artifacts are required"
+    }
+  ],
+  "protectedFiles": 128,
+  "protectedChanged": [],
+  "temporaryDirectoryRemoved": true,
+  "packageCodeExecuted": false,
+  "positive": {
+    "exitCode": 0,
+    "code": null,
+    "temporaryDirectoryRemoved": true,
+    "stdout": "PASS compiled artifacts: 5 npm packages, 7 Maven files; temporary extraction removed",
+    "stderr": ""
+  }
+}

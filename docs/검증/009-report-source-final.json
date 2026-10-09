@@ -1,0 +1,27 @@
+{
+  "stage": "009",
+  "sourceValidationOnly": true,
+  "typescriptFiles": [
+    "frontend/playwright.reports.config.ts",
+    "frontend/e2e-reports/requirements-report.spec.ts"
+  ],
+  "pythonASTPassed": [
+    "scripts/seed-report-fixture.py",
+    "scripts/e2e-report-server.py"
+  ],
+  "fixturePlan": {
+    "requirementRows": 10000,
+    "historyRows": 14286,
+    "commentRows": 15000,
+    "reviewRows": 4000,
+    "draftAuthorBCount": 500,
+    "draftAuthorACount": 500
+  },
+  "actualJarSeedAndBrowser": "pending-root-fresh-JAR",
+  "expectedReportTests": 5,
+  "metadata": ".runtime/e2e-reports.json",
+  "port": 18185,
+  "expectedFullDocumentAxeScans": 9,
+  "expectedPNG": 6,
+  "failedRefetchAndLateQueryOwnership": "implemented-unexecuted"
+}

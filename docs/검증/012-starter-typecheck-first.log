@@ -1,0 +1,13 @@
+
+> @sc/starter-app@0.1.0 typecheck
+> vue-tsc --noEmit -p tsconfig.json
+
+src/features/operations/api.ts(5,49): error TS2339: Property 'OperationMessageItem' does not exist on type '{ ApiError: { code: string; errors: { field: string; message: string; }[]; message: string; }; BrowserErrorAccepted: { accepted: boolean; }; BrowserErrorGroupPage: { items: { appVersion: string; componentCode: "ROOT"; ... 7 more ...; source: "VUE" | ... 1 more ... | "REJECTION"; }[]; page: number; size: number; tota...'.
+src/features/operations/api.ts(6,49): error TS2339: Property 'OperationMessagePage' does not exist on type '{ ApiError: { code: string; errors: { field: string; message: string; }[]; message: string; }; BrowserErrorAccepted: { accepted: boolean; }; BrowserErrorGroupPage: { items: { appVersion: string; componentCode: "ROOT"; ... 7 more ...; source: "VUE" | ... 1 more ... | "REJECTION"; }[]; page: number; size: number; tota...'.
+npm error Lifecycle script `typecheck` failed with error:
+npm error code 2
+npm error path /Users/dk/Work/ScFramework/frontend/apps/starter-app
+npm error workspace @sc/starter-app@0.1.0
+npm error location /Users/dk/Work/ScFramework/frontend/apps/starter-app
+npm error command failed
+npm error command sh -c vue-tsc --noEmit -p tsconfig.json

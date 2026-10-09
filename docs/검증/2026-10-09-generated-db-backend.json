@@ -1,0 +1,41 @@
+{
+  "directory": "C:\\Work\\ScFrameWork\\.runtime\\generated-database-backend-0cc4cdd2",
+  "files": 59,
+  "frameworkVersion": "0.3.0-SNAPSHOT",
+  "source": "templates/starter-v2/backend",
+  "localMavenRepositoryConsumption": true,
+  "fullTarballConsumerVerification": false,
+  "command": "backend/mvnw.cmd -B -ntp -f C:\\Work\\ScFrameWork\\.runtime\\generated-database-backend-0cc4cdd2\\pom.xml test",
+  "exitCode": 0,
+  "platform": "Windows",
+  "javaMajor": 21,
+  "tests": 10,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "suites": [
+    {
+      "name": "dev.scdbfixture.app.GeneratedAppIntegrationTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "10.801"
+    },
+    {
+      "name": "dev.scdbfixture.app.GeneratedOperationsIntegrationTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "2.063"
+    }
+  ],
+  "database": "isolated in-memory H2",
+  "mockMvcHttpExecuted": true,
+  "loopbackFeignExecuted": true,
+  "frontendOrBrowserExecuted": false,
+  "externalDatabaseExecuted": false,
+  "realUserRuntimeUsed": false,
+  "secretValuesPrinted": false
+}

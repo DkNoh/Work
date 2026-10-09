@@ -1,0 +1,9 @@
+
+ RUN  v4.1.11 /Users/dk/Work/ScFramework
+
+
+ Test Files  1 passed (1)
+      Tests  4 passed (4)
+   Start at  04:44:36
+   Duration  374ms (transform 138ms, setup 0ms, import 178ms, tests 51ms, environment 85ms)
+

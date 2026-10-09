@@ -1,0 +1,42 @@
+{
+  "stage": "010",
+  "passed": false,
+  "reason": "non-clean package retained obsolete frontend filenames in target/classes/static",
+  "apps": [
+    {
+      "app": "reference",
+      "distFiles": 46,
+      "jarStaticFiles": 66,
+      "extraStaticFiles": [
+        "assets/AccountPage-BHx8fqIb.js",
+        "assets/AdminAuditPage-BZS6VjJQ.js",
+        "assets/AdminMenusPage-DYfLGDwn.js",
+        "assets/AdminUsersPage-JHaYEsW1.js",
+        "assets/DocumentsPage-C9vnUIpL.js",
+        "assets/KanbanPage-q0oZF0sL.js",
+        "assets/MediaWorkspacePage-Ce0koMRv.js",
+        "assets/NoticesPage-BMiPpSvn.js",
+        "assets/PatternsPage-DYRih_UF.js",
+        "assets/RequirementReportPage-BeWvuLmG.js",
+        "assets/RequirementWorkspace-l9Jilxxh.js",
+        "assets/RequirementsPage-D_358w9U.js",
+        "assets/ScChart-Cj5q0VVs.js",
+        "assets/ScCheckbox-CZKSEU4g.js",
+        "assets/ScSelect-CtQTAj1U.js",
+        "assets/ScTextArea-BBPInQZk.js",
+        "assets/index-BXLWsNlM.js",
+        "assets/query-DcB8TMy8.js",
+        "assets/useDraftGuard-CPukgZ_U.js",
+        "assets/useImageFile-BIVtjNYp.js"
+      ],
+      "missingStaticFiles": []
+    },
+    {
+      "app": "starter",
+      "distFiles": 6,
+      "jarStaticFiles": 6,
+      "extraStaticFiles": [],
+      "missingStaticFiles": []
+    }
+  ]
+}

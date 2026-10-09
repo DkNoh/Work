@@ -1,0 +1,23 @@
+
+> @sc/catalog@0.1.0 test:stories
+> vitest run --config vitest.config.ts src/ScDataTable.stories.ts src/ScVirtualTable.stories.ts src/ScVirtualList.stories.ts
+
+│
+●  Storybook collects completely anonymous usage telemetry. We use it to
+│  shape Storybook's roadmap and prioritize features. You can learn more,
+│  including how to opt out, at ]8;;https://storybook.js.org/telemetryhttps://storybook.js.org/telemetry]8;;
+
+ RUN  v4.1.11 /Users/dk/Work/ScFramework/frontend/apps/catalog
+
+9:25:20 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:25:20 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:25:20 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:25:20 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:25:20 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+9:25:20 PM [vite] (client) [console.warn] [@vue/compiler-core] decodeEntities option is passed but will be ignored in non-browser builds.
+
+ Test Files  3 passed (3)
+      Tests  8 passed (8)
+   Start at  21:25:18
+   Duration  2.81s (transform 0ms, setup 3.45s, import 269ms, tests 2.03s, environment 0ms)
+

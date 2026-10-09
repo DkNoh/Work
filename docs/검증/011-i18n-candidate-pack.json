@@ -1,0 +1,280 @@
+[
+  {
+    "id": "vue-i18n@11.2.8",
+    "name": "vue-i18n",
+    "version": "11.2.8",
+    "size": 321204,
+    "unpackedSize": 1567125,
+    "shasum": "f431b583134776dcf59e59250c5231e4eaed8404",
+    "integrity": "sha512-vJ123v/PXCZntd6Qj5Jumy7UBmIuE92VrtdX+AXr+1WzdBHojiBxnAxdfctUFL+/JIN+VQH4BhsfTtiGsvVObg==",
+    "filename": "vue-i18n-11.2.8.tgz",
+    "files": [
+      {
+        "path": "LICENSE",
+        "size": 1083,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 5085,
+        "mode": 420
+      },
+      {
+        "path": "dist/vue-i18n.cjs",
+        "size": 63898,
+        "mode": 420
+      },
+      {
+        "path": "dist/vue-i18n.cjs.js",
+        "size": 48,
+        "mode": 420
+      },
+      {
+        "path": "dist/vue-i18n.cjs.prod.js",
+        "size": 53,
+        "mode": 420
+      },
+      {
+        "path": "dist/vue-i18n.d.ts",
+        "size": 154552,
+        "mode": 420
+      },
+      {
+        "path": "dist/vue-i18n.esm-browser.js",
+        "size": 216485,
+        "mode": 420
+      },
+      {
+        "path": "dist/vue-i18n.esm-browser.prod.js",
+        "size": 62509,
+        "mode": 420
+      },
+      {
+        "path": "dist/vue-i18n.esm-bundler.js",
+        "size": 36,
+        "mode": 420
+      },
+      {
+        "path": "dist/vue-i18n.global.js",
+        "size": 229165,
+        "mode": 420
+      },
+      {
+        "path": "dist/vue-i18n.global.prod.js",
+        "size": 51244,
+        "mode": 420
+      },
+      {
+        "path": "dist/vue-i18n.mjs",
+        "size": 85929,
+        "mode": 420
+      },
+      {
+        "path": "dist/vue-i18n.node.mjs",
+        "size": 64019,
+        "mode": 420
+      },
+      {
+        "path": "dist/vue-i18n.prod.cjs",
+        "size": 63898,
+        "mode": 420
+      },
+      {
+        "path": "dist/vue-i18n.runtime.esm-browser.js",
+        "size": 161991,
+        "mode": 420
+      },
+      {
+        "path": "dist/vue-i18n.runtime.esm-browser.prod.js",
+        "size": 44701,
+        "mode": 420
+      },
+      {
+        "path": "dist/vue-i18n.runtime.esm-bundler.js",
+        "size": 44,
+        "mode": 420
+      },
+      {
+        "path": "dist/vue-i18n.runtime.global.js",
+        "size": 171693,
+        "mode": 420
+      },
+      {
+        "path": "dist/vue-i18n.runtime.global.prod.js",
+        "size": 35310,
+        "mode": 420
+      },
+      {
+        "path": "dist/vue-i18n.runtime.mjs",
+        "size": 85937,
+        "mode": 420
+      },
+      {
+        "path": "dist/vue-i18n.runtime.node.mjs",
+        "size": 64027,
+        "mode": 420
+      },
+      {
+        "path": "index.js",
+        "size": 175,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 2154,
+        "mode": 420
+      },
+      {
+        "path": "vetur/attributes.json",
+        "size": 2241,
+        "mode": 420
+      },
+      {
+        "path": "vetur/tags.json",
+        "size": 848,
+        "mode": 420
+      }
+    ],
+    "entryCount": 25,
+    "bundled": []
+  },
+  {
+    "id": "vue-i18n@11.1.12",
+    "name": "vue-i18n",
+    "version": "11.1.12",
+    "size": 320106,
+    "unpackedSize": 1563806,
+    "shasum": "230b21d65dd89343ebd40d19c9e3cfb13db8c1fd",
+    "integrity": "sha512-BnstPj3KLHLrsqbVU2UOrPmr0+Mv11bsUZG0PyCOzsawCivk8W00GMXHeVUWIDOgNaScCuZah47CZFE+Wnl8mw==",
+    "filename": "vue-i18n-11.1.12.tgz",
+    "files": [
+      {
+        "path": "LICENSE",
+        "size": 1083,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 5085,
+        "mode": 420
+      },
+      {
+        "path": "dist/vue-i18n.cjs",
+        "size": 63362,
+        "mode": 420
+      },
+      {
+        "path": "dist/vue-i18n.cjs.js",
+        "size": 48,
+        "mode": 420
+      },
+      {
+        "path": "dist/vue-i18n.cjs.prod.js",
+        "size": 53,
+        "mode": 420
+      },
+      {
+        "path": "dist/vue-i18n.d.ts",
+        "size": 154471,
+        "mode": 420
+      },
+      {
+        "path": "dist/vue-i18n.esm-browser.js",
+        "size": 216380,
+        "mode": 420
+      },
+      {
+        "path": "dist/vue-i18n.esm-browser.prod.js",
+        "size": 62403,
+        "mode": 420
+      },
+      {
+        "path": "dist/vue-i18n.esm-bundler.js",
+        "size": 36,
+        "mode": 420
+      },
+      {
+        "path": "dist/vue-i18n.global.js",
+        "size": 228767,
+        "mode": 420
+      },
+      {
+        "path": "dist/vue-i18n.global.prod.js",
+        "size": 51116,
+        "mode": 420
+      },
+      {
+        "path": "dist/vue-i18n.mjs",
+        "size": 85867,
+        "mode": 420
+      },
+      {
+        "path": "dist/vue-i18n.node.mjs",
+        "size": 63734,
+        "mode": 420
+      },
+      {
+        "path": "dist/vue-i18n.prod.cjs",
+        "size": 63362,
+        "mode": 420
+      },
+      {
+        "path": "dist/vue-i18n.runtime.esm-browser.js",
+        "size": 161886,
+        "mode": 420
+      },
+      {
+        "path": "dist/vue-i18n.runtime.esm-browser.prod.js",
+        "size": 44595,
+        "mode": 420
+      },
+      {
+        "path": "dist/vue-i18n.runtime.esm-bundler.js",
+        "size": 44,
+        "mode": 420
+      },
+      {
+        "path": "dist/vue-i18n.runtime.global.js",
+        "size": 171295,
+        "mode": 420
+      },
+      {
+        "path": "dist/vue-i18n.runtime.global.prod.js",
+        "size": 35180,
+        "mode": 420
+      },
+      {
+        "path": "dist/vue-i18n.runtime.mjs",
+        "size": 85875,
+        "mode": 420
+      },
+      {
+        "path": "dist/vue-i18n.runtime.node.mjs",
+        "size": 63742,
+        "mode": 420
+      },
+      {
+        "path": "index.js",
+        "size": 175,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 2158,
+        "mode": 420
+      },
+      {
+        "path": "vetur/attributes.json",
+        "size": 2241,
+        "mode": 420
+      },
+      {
+        "path": "vetur/tags.json",
+        "size": 848,
+        "mode": 420
+      }
+    ],
+    "entryCount": 25,
+    "bundled": []
+  }
+]

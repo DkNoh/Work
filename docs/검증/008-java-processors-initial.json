@@ -1,0 +1,57 @@
+{
+  "stage": "008",
+  "startedAt": "2026-10-06T16:22:33.041655+00:00",
+  "passed": false,
+  "parentPom": "backend/pom.xml",
+  "javaEnvironmentScript": "scripts/java-env.sh",
+  "mavenWrapper": "backend/mvnw",
+  "fixtureSource": "synthetic-only; no manually written Q type or Mapper implementation",
+  "positive": {
+    "exitCode": 1,
+    "durationSeconds": 0.795,
+    "timedOut": false,
+    "interrupted": false,
+    "command": [
+      "bash",
+      "-c",
+      "set -e; source \"$1\"; shift; exec \"$@\"",
+      "sc-java-processors",
+      "/Users/dk/Work/ScFramework/scripts/java-env.sh",
+      "/Users/dk/Work/ScFramework/backend/mvnw",
+      "-B",
+      "-ntp",
+      "-V",
+      "-Dstyle.color=never",
+      "-DskipTests=false",
+      "-Dmaven.test.skip=false",
+      "-f",
+      "/var/folders/8k/rv4bxj0115g929lrxwybv_r80000gn/T/sc-java-processors-008-v95w4kio/positive/pom.xml",
+      "clean",
+      "verify"
+    ],
+    "log": "docs/검증/008-processor-positive.log"
+  },
+  "negative": null,
+  "temporaryDirectoryCleaned": true,
+  "errors": [
+    {
+      "phase": "성공 fixture의 실제 Maven 컴파일·runtime 매핑",
+      "message": "성공 fixture Maven 컴파일/테스트가 실패했습니다.",
+      "type": "AssertionError"
+    }
+  ],
+  "parentSha256": "a3efd4b4afb71f030071198ccca9e937884f381c4517074476196eb55e685fb7",
+  "parentCoordinates": {
+    "groupId": "dev.scframework",
+    "artifactId": "sc-framework-parent",
+    "version": "0.1.0-SNAPSHOT"
+  },
+  "declaredVersions": {
+    "java.version": "21",
+    "sc-querydsl.version": "6.12",
+    "mapstruct.version": "1.6.3",
+    "lombok.version": "1.18.46",
+    "lombok-mapstruct-binding.version": "0.2.0"
+  },
+  "finishedAt": "2026-10-06T16:22:33.843034+00:00"
+}

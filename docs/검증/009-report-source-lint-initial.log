@@ -1,0 +1,3 @@
+$ ['/Users/dk/.nvm/versions/node/v24.16.0/bin/node', 'node_modules/eslint/bin/eslint.js', 'frontend/playwright.reports.config.ts', 'frontend/e2e-reports/requirements-report.spec.ts']
+
+exit=0

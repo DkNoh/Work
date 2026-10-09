@@ -1,0 +1,200 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] ScFramework backend                                                [pom]
+[INFO] ScFramework core contracts                                         [jar]
+[INFO] ScFramework auto configuration                                     [jar]
+[INFO] ScFramework Spring Boot Starter                                    [jar]
+[INFO] ScFramework neutral reference app                                  [jar]
+[INFO] ScFramework minimal consumer app                                   [jar]
+[INFO] 
+[INFO] ----------------< dev.scframework:sc-framework-parent >-----------------
+[INFO] Building ScFramework backend 0.3.0-SNAPSHOT                        [1/6]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] -------------------< dev.scframework:framework-core >-------------------
+[INFO] Building ScFramework core contracts 0.3.0-SNAPSHOT                 [2/6]
+[INFO]   from framework-core/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ framework-core ---
+[INFO] skip non existing resourceDirectory /Users/dk/Work/ScFramework/backend/framework-core/src/main/resources
+[INFO] skip non existing resourceDirectory /Users/dk/Work/ScFramework/backend/framework-core/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ framework-core ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ framework-core ---
+[INFO] skip non existing resourceDirectory /Users/dk/Work/ScFramework/backend/framework-core/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ framework-core ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ framework-core ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running dev.scframework.core.ApiErrorTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s -- in dev.scframework.core.ApiErrorTest
+[INFO] Running dev.scframework.core.audit.SecurityAuditEventTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in dev.scframework.core.audit.SecurityAuditEventTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --------------< dev.scframework:framework-autoconfigure >---------------
+[INFO] Building ScFramework auto configuration 0.3.0-SNAPSHOT             [3/6]
+[INFO]   from framework-autoconfigure/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ framework-autoconfigure ---
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ framework-autoconfigure ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 63 source files with javac [debug parameters release 21] to target/classes
+[INFO] /Users/dk/Work/ScFramework/backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/ScOpenApiAutoConfiguration.java: /Users/dk/Work/ScFramework/backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/ScOpenApiAutoConfiguration.java uses unchecked or unsafe operations.
+[INFO] /Users/dk/Work/ScFramework/backend/framework-autoconfigure/src/main/java/dev/scframework/autoconfigure/ScOpenApiAutoConfiguration.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ framework-autoconfigure ---
+[INFO] skip non existing resourceDirectory /Users/dk/Work/ScFramework/backend/framework-autoconfigure/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ framework-autoconfigure ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 19 source files with javac [debug parameters release 21] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ framework-autoconfigure ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running dev.scframework.autoconfigure.RequestIdFilterTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.068 s -- in dev.scframework.autoconfigure.RequestIdFilterTest
+[INFO] Running dev.scframework.autoconfigure.SecurityAuditTransactionTest
+06:59:35.799 [main] WARN dev.scframework.autoconfigure.audit.AuditWriteDiagnostics -- Security audit write failed; reasonCode=AUDIT_SINK_FAILURE
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.108 s -- in dev.scframework.autoconfigure.SecurityAuditTransactionTest
+[INFO] Running dev.scframework.autoconfigure.SafeSpanExporterTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s -- in dev.scframework.autoconfigure.SafeSpanExporterTest
+[INFO] Running dev.scframework.autoconfigure.FeignConsumerConfigurationTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.087 s -- in dev.scframework.autoconfigure.FeignConsumerConfigurationTest
+[INFO] Running dev.scframework.autoconfigure.SecurityOverrideTest
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (/Users/dk/.m2/repository/net/bytebuddy/byte-buddy-agent/1.17.8/byte-buddy-agent-1.17.8.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+06:59:36.629 [main] WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebApplicationContext -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'scRequiredUserDetailsService' defined in dev.scframework.autoconfigure.ScSecurityAutoConfiguration: Failed to instantiate [org.springframework.security.core.userdetails.UserDetailsService]: Factory method 'scRequiredUserDetailsService' threw exception with message: Supply a UserDetailsService; generated/default passwords are disabled
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.689 s -- in dev.scframework.autoconfigure.SecurityOverrideTest
+[INFO] Running dev.scframework.autoconfigure.SafeOperationalEventSinkTest
+[ERROR] Tests run: 3, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.019 s <<< FAILURE! -- in dev.scframework.autoconfigure.SafeOperationalEventSinkTest
+[ERROR] dev.scframework.autoconfigure.SafeOperationalEventSinkTest.ioFailureDoesNotChangeTheCallingBusinessResult -- Time elapsed: 0.011 s <<< ERROR!
+java.lang.IllegalStateException: Observability log symlink is forbidden
+	at dev.scframework.autoconfigure.observability.SafeOperationalEventSink.<init>(SafeOperationalEventSink.java:35)
+	at dev.scframework.autoconfigure.observability.SafeOperationalEventSink.<init>(SafeOperationalEventSink.java:26)
+	at dev.scframework.autoconfigure.SafeOperationalEventSinkTest.ioFailureDoesNotChangeTheCallingBusinessResult(SafeOperationalEventSinkTest.java:42)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+[ERROR] dev.scframework.autoconfigure.SafeOperationalEventSinkTest.boundedPrivateLogsRetainSafeCodesAndMetricsNeverUseEventIds -- Time elapsed: 0.002 s <<< ERROR!
+java.lang.IllegalStateException: Observability log symlink is forbidden
+	at dev.scframework.autoconfigure.observability.SafeOperationalEventSink.<init>(SafeOperationalEventSink.java:35)
+	at dev.scframework.autoconfigure.observability.SafeOperationalEventSink.<init>(SafeOperationalEventSink.java:26)
+	at dev.scframework.autoconfigure.SafeOperationalEventSinkTest.boundedPrivateLogsRetainSafeCodesAndMetricsNeverUseEventIds(SafeOperationalEventSinkTest.java:19)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+[INFO] Running dev.scframework.autoconfigure.operations.RuntimeMaintenanceLockTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.042 s -- in dev.scframework.autoconfigure.operations.RuntimeMaintenanceLockTest
+[INFO] Running dev.scframework.autoconfigure.storage.StorageRecoveryTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.059 s -- in dev.scframework.autoconfigure.storage.StorageRecoveryTest
+[INFO] Running dev.scframework.autoconfigure.audit.DurableAuditPublisherTest
+06:59:36.800 [main] WARN dev.scframework.autoconfigure.audit.AuditWriteDiagnostics -- Security audit write failed; reasonCode=AUDIT_SINK_FAILURE
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.045 s -- in dev.scframework.autoconfigure.audit.DurableAuditPublisherTest
+[INFO] Running dev.scframework.autoconfigure.AuditAutoConfigurationTest
+06:59:36.889 [main] WARN org.springframework.context.annotation.AnnotationConfigApplicationContext -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'scSecurityAuditPublisher' defined in dev.scframework.autoconfigure.ScAuditAutoConfiguration: Unsatisfied dependency expressed through method 'scSecurityAuditPublisher' parameter 0: No qualifying bean of type 'dev.scframework.core.audit.SecurityAuditSink' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.133 s -- in dev.scframework.autoconfigure.AuditAutoConfigurationTest
+[INFO] Running dev.scframework.autoconfigure.HealthReadinessTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 s -- in dev.scframework.autoconfigure.HealthReadinessTest
+[INFO] Running dev.scframework.autoconfigure.ScOptionalInfrastructureFilterTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in dev.scframework.autoconfigure.ScOptionalInfrastructureFilterTest
+[INFO] Running dev.scframework.autoconfigure.QuerydslAutoConfigurationTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.068 s -- in dev.scframework.autoconfigure.QuerydslAutoConfigurationTest
+[INFO] Running dev.scframework.autoconfigure.SecretFileUsersTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.124 s -- in dev.scframework.autoconfigure.SecretFileUsersTest
+[INFO] Running dev.scframework.autoconfigure.messaging.DurableMessagingTest
+06:59:37.250 [main] WARN dev.scframework.autoconfigure.messaging.MessageDiagnostics -- Operational message failure; reasonCode=MESSAGE_OPERATION_FAILURE
+06:59:37.252 [main] WARN dev.scframework.autoconfigure.messaging.MessageDiagnostics -- Operational message failure; reasonCode=MESSAGE_OPERATION_FAILURE
+06:59:37.253 [main] WARN dev.scframework.autoconfigure.messaging.MessageDiagnostics -- Operational message failure; reasonCode=MESSAGE_OPERATION_FAILURE
+06:59:37.255 [main] WARN dev.scframework.autoconfigure.messaging.MessageDiagnostics -- Operational message failure; reasonCode=MESSAGE_OPERATION_FAILURE
+06:59:37.256 [main] WARN dev.scframework.autoconfigure.messaging.MessageDiagnostics -- Operational message failure; reasonCode=MESSAGE_OPERATION_FAILURE
+06:59:37.267 [main] WARN dev.scframework.autoconfigure.messaging.MessageDiagnostics -- Operational message failure; reasonCode=MESSAGE_OPERATION_FAILURE
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.113 s -- in dev.scframework.autoconfigure.messaging.DurableMessagingTest
+[INFO] Running dev.scframework.autoconfigure.messaging.RabbitDurableIntegrationTest
+06:59:37.323 [main] INFO org.springframework.amqp.rabbit.connection.CachingConnectionFactory -- Attempting to connect to: 127.0.0.1:5679
+06:59:37.346 [main] INFO org.springframework.amqp.rabbit.connection.CachingConnectionFactory -- Created new connection: connectionFactory#17ec5e2a:0/SimpleConnection@4fe4503a [delegate=amqp://sc-framework@127.0.0.1:5679/, localPort=62944]
+06:59:37.449 [scWorkMessageContainer-1] WARN dev.scframework.autoconfigure.messaging.MessageDiagnostics -- Operational message failure; reasonCode=MESSAGE_OPERATION_FAILURE
+06:59:37.561 [scWorkMessageContainer-1] WARN dev.scframework.autoconfigure.messaging.MessageDiagnostics -- Operational message failure; reasonCode=MESSAGE_OPERATION_FAILURE
+06:59:37.770 [scWorkMessageContainer-1] WARN dev.scframework.autoconfigure.messaging.MessageDiagnostics -- Operational message failure; reasonCode=MESSAGE_OPERATION_FAILURE
+06:59:38.079 [scWorkMessageContainer-1] WARN dev.scframework.autoconfigure.messaging.MessageDiagnostics -- Operational message failure; reasonCode=MESSAGE_OPERATION_FAILURE
+06:59:38.490 [scWorkMessageContainer-1] WARN dev.scframework.autoconfigure.messaging.MessageDiagnostics -- Operational message failure; reasonCode=MESSAGE_OPERATION_FAILURE
+06:59:38.911 [main] INFO org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer -- Waiting for workers to finish.
+06:59:39.862 [main] INFO org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer -- Successfully waited for workers to finish.
+06:59:39.866 [main] INFO org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer -- Waiting for workers to finish.
+06:59:40.798 [main] INFO org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer -- Successfully waited for workers to finish.
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.574 s -- in dev.scframework.autoconfigure.messaging.RabbitDurableIntegrationTest
+[INFO] Running dev.scframework.autoconfigure.RegisteredTaskRegistryTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in dev.scframework.autoconfigure.RegisteredTaskRegistryTest
+[INFO] Running dev.scframework.autoconfigure.FileStorageTest
+06:59:40.873 [main] WARN dev.scframework.autoconfigure.storage.FileStorageTransactions -- File storage cleanup failed; operational counter incremented
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.043 s -- in dev.scframework.autoconfigure.FileStorageTest
+[INFO] Running dev.scframework.autoconfigure.BrowserErrorBoundaryTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.050 s -- in dev.scframework.autoconfigure.BrowserErrorBoundaryTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   SafeOperationalEventSinkTest.boundedPrivateLogsRetainSafeCodesAndMetricsNeverUseEventIds:19 » IllegalState Observability log symlink is forbidden
+[ERROR]   SafeOperationalEventSinkTest.ioFailureDoesNotChangeTheCallingBusinessResult:42 » IllegalState Observability log symlink is forbidden
+[INFO] 
+[ERROR] Tests run: 52, Failures: 0, Errors: 2, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for ScFramework backend 0.3.0-SNAPSHOT:
+[INFO] 
+[INFO] ScFramework backend ................................ SUCCESS [  0.001 s]
+[INFO] ScFramework core contracts ......................... SUCCESS [  0.435 s]
+[INFO] ScFramework auto configuration ..................... FAILURE [  7.153 s]
+[INFO] ScFramework Spring Boot Starter .................... SKIPPED
+[INFO] ScFramework neutral reference app .................. SKIPPED
+[INFO] ScFramework minimal consumer app ................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.721 s
+[INFO] Finished at: 2026-10-07T06:59:41+09:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.6:test (default-test) on project framework-autoconfigure: 
+[ERROR] 
+[ERROR] See /Users/dk/Work/ScFramework/backend/framework-autoconfigure/target/surefire-reports for the individual test results.
+[ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :framework-autoconfigure

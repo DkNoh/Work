@@ -1,0 +1,16 @@
+
+> sc-framework@0.1.0 build-storybook
+> npm run build-storybook --workspace @sc/catalog
+
+
+> @sc/catalog@0.1.0 build-storybook
+> storybook build
+
+sh: storybook: command not found
+npm error Lifecycle script `build-storybook` failed with error:
+npm error code 127
+npm error path /Users/dk/Work/ScFramework/frontend/apps/catalog
+npm error workspace @sc/catalog@0.1.0
+npm error location /Users/dk/Work/ScFramework/frontend/apps/catalog
+npm error command failed
+npm error command sh -c storybook build

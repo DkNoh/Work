@@ -1,0 +1,35 @@
+package __JAVA_PACKAGE__.notes;
+import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.validation.constraints.*;
+import java.time.Instant;
+import java.util.List;
+
+/*
+ * 생성 앱 Notes의 쓰기 입력/조회 응답 계약이다. 공통 runtime DTO가 아니라 이 앱이 소유한다.
+ * Bean Validation은 실제 입력 검사, @Schema는 생성 OpenAPI 설명이다. Update의 revision은 기존 읽은 버전을 보내는 충돌 검사 값이다.
+ * Command는 저장 결과 item과 같은 TX에서 확인한 stats를 반환하며 전역 success/data 봉투가 아니다.
+ */
+public final class NoteDtos {
+    private NoteDtos() {}
+    @Schema(name="StarterNoteCreateInput")
+    public record Create(@Schema(requiredMode=Schema.RequiredMode.REQUIRED,maxLength=200) @NotBlank @Size(max=200) String title) {}
+    @Schema(name="StarterNoteUpdateInput")
+    public record Update(@Schema(requiredMode=Schema.RequiredMode.REQUIRED,maxLength=200) @NotBlank @Size(max=200) String title,
+        @Schema(requiredMode=Schema.RequiredMode.REQUIRED,minimum="1") @NotNull @Min(1) Integer revision) {}
+    @Schema(name="StarterNoteResponse")
+    public record Response(@Schema(requiredMode=Schema.RequiredMode.REQUIRED) Long id,
+        @Schema(requiredMode=Schema.RequiredMode.REQUIRED) String title,
+        @Schema(requiredMode=Schema.RequiredMode.REQUIRED,minimum="1") int revision,
+        @Schema(requiredMode=Schema.RequiredMode.REQUIRED,type="string",format="date-time") Instant updatedAt) {}
+    @Schema(name="StarterNotePage")
+    public record Page(@Schema(requiredMode=Schema.RequiredMode.REQUIRED) List<Response> items,
+        @Schema(requiredMode=Schema.RequiredMode.REQUIRED,minimum="0") long total,
+        @Schema(requiredMode=Schema.RequiredMode.REQUIRED,minimum="0") int page,
+        @Schema(requiredMode=Schema.RequiredMode.REQUIRED,minimum="1") int size) {}
+    @Schema(name="StarterNoteStats")
+    public record Stats(@Schema(requiredMode=Schema.RequiredMode.REQUIRED,minimum="0") long total,
+        @Schema(requiredMode=Schema.RequiredMode.REQUIRED,minimum="0") int highestRevision) {}
+    @Schema(name="StarterNoteCommand")
+    public record Command(@Schema(requiredMode=Schema.RequiredMode.REQUIRED) Response item,
+        @Schema(requiredMode=Schema.RequiredMode.REQUIRED) Stats stats) {}
+}

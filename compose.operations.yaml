@@ -1,0 +1,157 @@
+services:
+  initialize-volumes:
+    image: prom/prometheus:v3.13.4@sha256:87861b8cf91579109319ebc300f3f1060e6da9c05d6ae8ad15a20c879e84e32e
+    user: "0:0"
+    entrypoint: [sh, -c]
+    command:
+      - >-
+        set -eu;
+        mkdir -p /init/tempo /init/loki /init/grafana /init/grafana-secret;
+        chown 10001:10001 /init/tempo /init/loki;
+        chown 472:0 /init/grafana /init/grafana-secret;
+        chmod 700 /init/tempo /init/loki /init/grafana /init/grafana-secret;
+        cp /run/secrets/grafana_secret /init/grafana-secret/admin.secret;
+        chmod 600 /init/grafana-secret/admin.secret;
+        chown 472:0 /init/grafana-secret/admin.secret
+    secrets: [grafana_secret]
+    volumes:
+      - operations-tempo:/init/tempo
+      - operations-loki:/init/loki
+      - operations-grafana:/init/grafana
+      - operations-grafana-secret:/init/grafana-secret
+  rabbitmq:
+    image: rabbitmq:4.3.6-management@sha256:8dd6e3570ddaa2ef82a6c3a8950e79c1f73893adfbdddbc374fc1f1ac8a0f5dd
+    hostname: sc-rabbitmq
+    entrypoint: [sh, /opt/sc/rabbitmq-entrypoint.sh]
+    ports: ["127.0.0.1:5679:5672", "127.0.0.1:15679:15672"]
+    secrets: [rabbitmq_config]
+    volumes:
+      - ./infra/operations/rabbitmq-entrypoint.sh:/opt/sc/rabbitmq-entrypoint.sh:ro
+      - operations-rabbitmq:/var/lib/rabbitmq
+    healthcheck:
+      test: [CMD, rabbitmq-diagnostics, -q, ping]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    mem_limit: 512m
+    stop_grace_period: 30s
+  prometheus:
+    image: prom/prometheus:v3.13.4@sha256:87861b8cf91579109319ebc300f3f1060e6da9c05d6ae8ad15a20c879e84e32e
+    user: "0:0"
+    entrypoint: [sh, /opt/sc/prometheus-entrypoint.sh]
+    ports: ["127.0.0.1:19090:9090"]
+    extra_hosts: ["host.docker.internal:host-gateway"]
+    secrets: [observer_secret]
+    volumes:
+      - ./infra/operations/prometheus-entrypoint.sh:/opt/sc/prometheus-entrypoint.sh:ro
+      - ./infra/operations/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - operations-prometheus:/prometheus
+    tmpfs: [/run/sc-secret:mode=0700]
+    mem_limit: 256m
+  collector:
+    image: otel/opentelemetry-collector-contrib:0.162.0@sha256:39923a8e431bd1f57be82411999d389fcfe40857492e4365456d97a4c1f74be6
+    command: [--config=/etc/sc/collector.yml]
+    ports: ["127.0.0.1:4319:4318", "127.0.0.1:13133:13133"]
+    volumes: [./infra/operations/collector.yml:/etc/sc/collector.yml:ro]
+    depends_on: [tempo, loki]
+    mem_limit: 256m
+  tempo:
+    image: grafana/tempo:3.1.0@sha256:3076b8dcdfb32fd6bc5ccef85e7b7313e6199b9cb84366257fc17ecb696db5fd
+    command: [-config.file=/etc/sc/tempo.yml]
+    ports: ["127.0.0.1:13200:3200"]
+    volumes:
+      - ./infra/operations/tempo.yml:/etc/sc/tempo.yml:ro
+      - operations-tempo:/var/tempo
+    mem_limit: 512m
+    depends_on:
+      initialize-volumes:
+        condition: service_completed_successfully
+  loki:
+    image: grafana/loki:3.7.8@sha256:1107dd5274e0ada47e42472b7a7e71f3b2a2fe878878108f3e2f9e51528f0193
+    command: [-config.file=/etc/sc/loki.yml]
+    ports: ["127.0.0.1:13100:3100"]
+    volumes:
+      - ./infra/operations/loki.yml:/etc/sc/loki.yml:ro
+      - operations-loki:/tmp/loki
+    mem_limit: 512m
+    depends_on:
+      initialize-volumes:
+        condition: service_completed_successfully
+  grafana:
+    image: grafana/grafana:13.2.3@sha256:b28bae15e219c998fb0e0424ed724930cc61b1f61fb404d47c862f9a23f9e572
+    ports: ["127.0.0.1:13000:3000"]
+    environment:
+      GF_SECURITY_ADMIN_USER: sc-admin
+      GF_SECURITY_ADMIN_PASSWORD__FILE: /run/sc-secret/admin.secret
+      GF_AUTH_ANONYMOUS_ENABLED: "false"
+      GF_ANALYTICS_REPORTING_ENABLED: "false"
+      GF_ANALYTICS_CHECK_FOR_UPDATES: "false"
+    volumes:
+      - ./infra/operations/grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./infra/operations/grafana/dashboards:/etc/grafana/dashboards:ro
+      - operations-grafana:/var/lib/grafana
+      - operations-grafana-secret:/run/sc-secret:ro
+    depends_on:
+      initialize-volumes:
+        condition: service_completed_successfully
+      prometheus:
+        condition: service_started
+      tempo:
+        condition: service_started
+      loki:
+        condition: service_started
+    mem_limit: 384m
+  reference-app:
+    profiles: [app]
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports: ["127.0.0.1:19082:18082"]
+    environment:
+      SC_HOME: /app/runtime
+      SC_PROFILE: prod,operations
+      SC_DB_URL: jdbc:h2:file:/app/runtime/data/sc-reference;DB_CLOSE_ON_EXIT=FALSE
+      SC_UPLOAD_DIR: /app/runtime/uploads
+      SC_LOG_FILE: /app/runtime/logs/application.log
+      SC_ADDRESS: 0.0.0.0
+      SC_MANAGEMENT_ADDRESS: 0.0.0.0
+      SC_MANAGEMENT_PORT: "18482"
+      SC_MQ_HOST: rabbitmq
+      SC_MQ_PORT: "5672"
+      SC_OTLP_ENDPOINT: http://collector:4318/v1/traces
+      SC_OPERATIONS_SECRETS_DIR: /run/sc-operations/
+    secrets: [bootstrap_secret, broker_secret, observer_secret]
+    tmpfs: [/run/sc-secret:mode=0700, /run/sc-operations:mode=0700]
+    volumes: [operations-application:/app/runtime]
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+      collector:
+        condition: service_started
+    stop_grace_period: 45s
+    mem_limit: 768m
+    healthcheck:
+      test: [CMD, curl, --fail, --silent, http://127.0.0.1:18082/api/health]
+      interval: 5s
+      timeout: 5s
+      start_period: 60s
+      retries: 10
+volumes:
+  operations-rabbitmq:
+  operations-prometheus:
+  operations-grafana:
+  operations-grafana-secret:
+  operations-tempo:
+  operations-loki:
+  operations-application:
+secrets:
+  bootstrap_secret:
+    file: ${SC_OPERATIONS_HOME:-./.runtime/operations}/secrets/bootstrap.secret
+  rabbitmq_config:
+    file: ${SC_OPERATIONS_HOME:-./.runtime/operations}/secrets/operations/rabbitmq.conf
+  broker_secret:
+    file: ${SC_OPERATIONS_HOME:-./.runtime/operations}/secrets/operations/spring.rabbitmq.password
+  observer_secret:
+    file: ${SC_OPERATIONS_HOME:-./.runtime/operations}/secrets/operations/observer.secret
+  grafana_secret:
+    file: ${SC_OPERATIONS_HOME:-./.runtime/operations}/secrets/operations/grafana.secret

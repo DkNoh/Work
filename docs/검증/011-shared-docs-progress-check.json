@@ -1,0 +1,98 @@
+{
+  "stage": "011",
+  "passed": true,
+  "scope": [
+    "docs/folder-structure.md",
+    "docs/maintenance-guide.md",
+    "docs/operations.md",
+    "docs/api.md",
+    "docs/질의/기술스택-적용현황.md",
+    "docs/질의/조건부기술-전체구현.md",
+    "docs/질의/README.md",
+    "docs/질의/개발단계.md",
+    "docs/질의/011-배포와생성기-준비검토.md"
+  ],
+  "files": [
+    {
+      "file": "docs/folder-structure.md",
+      "sha256": "e6a250b9f87e1307bb0275cfe1c997780b2fe81eedce393ef106def657ec4a5e",
+      "relativeLinks": 144,
+      "balancedFences": true
+    },
+    {
+      "file": "docs/maintenance-guide.md",
+      "sha256": "6b6291b703352f2e9f15ffd5791578673f463a32e4a6d08d693444939c061fe0",
+      "relativeLinks": 39,
+      "balancedFences": true
+    },
+    {
+      "file": "docs/operations.md",
+      "sha256": "89e9cb6694a583a9c5c711748cc978add8bf5405f945632dbc94cec695258f68",
+      "relativeLinks": 38,
+      "balancedFences": true
+    },
+    {
+      "file": "docs/api.md",
+      "sha256": "1342b9b3b44d5ae0fab9efad3a2639391a053a0bbeb90819b65d7a0d67eb1bcd",
+      "relativeLinks": 29,
+      "balancedFences": true
+    },
+    {
+      "file": "docs/질의/기술스택-적용현황.md",
+      "sha256": "f273edfee69008313c492262604e3739ddcaad5b8f1fa731cb6484dd7df55458",
+      "relativeLinks": 34,
+      "balancedFences": true
+    },
+    {
+      "file": "docs/질의/조건부기술-전체구현.md",
+      "sha256": "17b2045d7477de45029b3cdb55b02e95bee4637c7f01cf59b75ad338662982ef",
+      "relativeLinks": 11,
+      "balancedFences": true
+    },
+    {
+      "file": "docs/질의/README.md",
+      "sha256": "adde62f354dd3195bff0584ba08d12a56643f4a2a9639979a5d3e59e0be29de3",
+      "relativeLinks": 40,
+      "balancedFences": true
+    },
+    {
+      "file": "docs/질의/개발단계.md",
+      "sha256": "3e06716535793d7c934d9df5e76702fe91773cc86b20e9e8a436b8d9264b3b15",
+      "relativeLinks": 33,
+      "balancedFences": true
+    },
+    {
+      "file": "docs/질의/011-배포와생성기-준비검토.md",
+      "sha256": "93ff9317f3a643abaf55626e0a4e3471aba257c77798f010717722e7cf6567e2",
+      "relativeLinks": 21,
+      "balancedFences": true
+    }
+  ],
+  "relativeLinks": 389,
+  "missingLinks": [],
+  "staleCurrentState": [],
+  "formatWriteExit": 0,
+  "formatCheckExit": 0,
+  "sourcePackageOrTemplateChanged": false,
+  "nodeInstallMavenBrowserExecuted": false,
+  "status": "011 in progress: production build/JAR/browser and upgrade/rollback not claimed complete",
+  "historical010CountsPreserved": {
+    "unit": 139,
+    "server": 143,
+    "e2e": 74
+  },
+  "actualCurrentFacts": {
+    "npmPackages": 5,
+    "mavenFiles": 7,
+    "packageNegativeCases": 25,
+    "protectedShaFiles": 128,
+    "generatorCases": 47,
+    "templateFiles": 60,
+    "generatedInitialFiles": 73,
+    "consumerTypeCases": 12,
+    "nativeLibraries": 4,
+    "privateRejections": 3,
+    "uiStrictVendorDiagnostics": 696,
+    "ownSourceDiagnostics": 0
+  }
+}

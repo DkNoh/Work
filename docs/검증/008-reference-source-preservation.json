@@ -1,0 +1,6 @@
+{
+  "baseline": "007-reference-source-baseline.json",
+  "checked": 170,
+  "changed": [],
+  "scope": "Original reference source inputs only; docs/runtime/build excluded. Not a historical 006 comparison."
+}

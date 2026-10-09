@@ -1,0 +1,5 @@
+
+> sc-framework@0.1.0 starter:features:verify
+> node scripts/verify-starter-features.mjs
+
+Starter 선택 모듈 제외: 빌드/메뉴/경로/기본 입력/건강 조회 통과

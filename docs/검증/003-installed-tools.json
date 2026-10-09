@@ -1,0 +1,77 @@
+{
+  "version": "0.1.0",
+  "name": "sc-framework",
+  "dependencies": {
+    "@sc/catalog": {
+      "version": "0.1.0",
+      "resolved": "file:../../frontend/apps/catalog",
+      "overridden": false,
+      "dependencies": {
+        "@storybook/addon-vitest": {
+          "version": "10.4.1",
+          "resolved": "https://registry.npmjs.org/@storybook/addon-vitest/-/addon-vitest-10.4.1.tgz",
+          "overridden": false,
+          "dependencies": {
+            "@vitest/browser-playwright": {
+              "version": "4.1.11"
+            },
+            "vitest": {
+              "version": "4.1.11"
+            }
+          }
+        },
+        "@storybook/vue3-vite": {
+          "version": "10.4.1",
+          "resolved": "https://registry.npmjs.org/@storybook/vue3-vite/-/vue3-vite-10.4.1.tgz",
+          "overridden": false,
+          "dependencies": {
+            "vue-component-meta": {
+              "version": "2.2.12"
+            }
+          }
+        },
+        "@vitest/browser-playwright": {
+          "version": "4.1.11"
+        },
+        "vitest": {
+          "version": "4.1.11"
+        },
+        "vue-component-meta": {
+          "version": "2.2.12",
+          "resolved": "https://registry.npmjs.org/vue-component-meta/-/vue-component-meta-2.2.12.tgz",
+          "overridden": false
+        }
+      }
+    },
+    "@vitest/browser-playwright": {
+      "version": "4.1.11",
+      "resolved": "https://registry.npmjs.org/@vitest/browser-playwright/-/browser-playwright-4.1.11.tgz",
+      "overridden": false,
+      "dependencies": {
+        "@vitest/browser": {
+          "version": "4.1.11",
+          "resolved": "https://registry.npmjs.org/@vitest/browser/-/browser-4.1.11.tgz",
+          "overridden": false,
+          "dependencies": {
+            "vitest": {
+              "version": "4.1.11"
+            }
+          }
+        },
+        "vitest": {
+          "version": "4.1.11"
+        }
+      }
+    },
+    "vitest": {
+      "version": "4.1.11",
+      "resolved": "https://registry.npmjs.org/vitest/-/vitest-4.1.11.tgz",
+      "overridden": false,
+      "dependencies": {
+        "@vitest/browser-playwright": {
+          "version": "4.1.11"
+        }
+      }
+    }
+  }
+}

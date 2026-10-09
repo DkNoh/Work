@@ -1,0 +1,5 @@
+$ ['/Users/dk/.nvm/versions/node/v24.16.0/bin/node', 'node_modules/prettier/bin/prettier.cjs', '--write', 'frontend/playwright.reports.config.ts', 'frontend/e2e-reports/requirements-report.spec.ts']
+frontend/playwright.reports.config.ts 22ms (unchanged)
+frontend/e2e-reports/requirements-report.spec.ts 36ms
+
+exit=0

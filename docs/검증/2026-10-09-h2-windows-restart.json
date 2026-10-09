@@ -1,0 +1,29 @@
+{
+  "format": 1,
+  "scope": "Isolated Windows JAR smoke diagnosis; synthetic temporary H2 only",
+  "originalSourcesChanged": false,
+  "productDatabaseSettingsChanged": false,
+  "jarSha256": {
+    ".runtime\\database-build\\backend\\reference-app\\target\\sc-reference-app.jar": "1aa3498dd687f97650b420cc446b6146cae2fb6ac8be6a1c6a56aef352ec3d9e",
+    ".runtime\\database-build\\backend\\starter-app\\target\\sc-starter-app.jar": "5c3d7f7381cf9270a6c0f48cab579ab29a9c64cdbdcbfd555823a6bc0979d706"
+  },
+  "defaultWriteDelay": {
+    "result": "failed",
+    "exampleRowSurvived": true,
+    "requirementCreateAndAssignmentReturnedSuccess": true,
+    "requirementGetAfterRestartStatus": 404,
+    "observation": "Latest committed requirement missing after Popen.terminate on Windows"
+  },
+  "writeDelayZero": {
+    "result": "passed",
+    "checks": 17,
+    "requirementDifference": {},
+    "modification": "Only temporary JarServer.extra_environment SC_DB_URL appended ;WRITE_DELAY=0"
+  },
+  "interpretation": "Windows terminate is TerminateProcess, not graceful SIGTERM. Default H2 delayed writes were interrupted. Does not establish production crash or power-loss guarantees.",
+  "temporaryFixturesCleaned": true,
+  "sources": [
+    "https://docs.python.org/3/library/subprocess.html#subprocess.Popen.terminate",
+    "https://h2database.com/html/commands.html#set_write_delay"
+  ]
+}

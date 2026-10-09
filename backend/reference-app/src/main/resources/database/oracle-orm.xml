@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="https://jakarta.ee/xml/ns/persistence/orm" version="3.1">
+  <!-- Oracle EXTENDED는 일반 VARCHAR의 자동 CLOB 전환 기준을 32767로 높인다.
+       업무 API의 10000~20000자 필드를 그대로 두면 Hibernate가 VARCHAR2를 기대하지만 앱 DDL은 CLOB이다.
+       Oracle 앱에서만 저장 용량을 LONG32 크기로 지정해 CLOB 매핑을 고정한다. API 길이 검증은 유지한다.
+       빈 문자열을 NULL로 저장할 수 있는 선택 열은 DDL과 같이 nullable로 표시한다.
+       그 값을 읽은 뒤 다른 필드를 수정할 때 Hibernate의 nullable=false 검사가 잘못 거절하지 않게 한다.
+       annotation의 IDENTITY, revision, 나머지 필드는 유지하며 API의 빈 문자열 복원은 getter가 담당한다. -->
+  <entity class="dev.scframework.reference.requirements.RequirementEntity" access="FIELD">
+    <attributes>
+      <basic name="desired"><column nullable="false" length="2147483647" /></basic>
+      <basic name="reason"><column nullable="false" length="2147483647" /></basic>
+      <basic name="referenceText"><column nullable="true" length="2147483647" /></basic>
+      <basic name="followParts"><column nullable="true" length="2147483647" /></basic>
+    </attributes>
+  </entity>
+  <entity class="dev.scframework.reference.requirements.ReviewEntity" access="FIELD">
+    <attributes>
+      <basic name="rationale"><column nullable="false" length="2147483647" /></basic>
+      <basic name="conditions"><column nullable="true" length="2147483647" /></basic>
+      <basic name="scope"><column nullable="true" length="2147483647" /></basic>
+      <basic name="exclusions"><column nullable="true" length="2147483647" /></basic>
+      <basic name="acceptance"><column nullable="true" length="2147483647" /></basic>
+    </attributes>
+  </entity>
+  <entity class="dev.scframework.reference.requirements.CommentEntity" access="FIELD">
+    <attributes>
+      <basic name="body"><column nullable="false" length="2147483647" /></basic>
+    </attributes>
+  </entity>
+  <entity class="dev.scframework.reference.kanban.KanbanTaskEntity" access="FIELD">
+    <attributes>
+      <basic name="description"><column nullable="true" length="2147483647" /></basic>
+    </attributes>
+  </entity>
+</entity-mappings>

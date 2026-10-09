@@ -1,0 +1,59 @@
+{
+  "version": "0.1.0",
+  "name": "sc-framework",
+  "dependencies": {
+    "@sc/catalog": {
+      "version": "0.1.0",
+      "resolved": "file:../../frontend/apps/catalog",
+      "overridden": false,
+      "dependencies": {
+        "vue-i18n": {
+          "version": "11.1.12",
+          "resolved": "https://registry.npmjs.org/vue-i18n/-/vue-i18n-11.1.12.tgz",
+          "overridden": false
+        }
+      }
+    },
+    "@sc/i18n": {
+      "version": "0.1.0",
+      "resolved": "file:../../frontend/packages/i18n",
+      "overridden": false,
+      "dependencies": {
+        "@intlify/devtools-types": {
+          "version": "11.1.12",
+          "resolved": "https://registry.npmjs.org/@intlify/devtools-types/-/devtools-types-11.1.12.tgz",
+          "overridden": false
+        },
+        "vue-i18n": {
+          "version": "11.1.12",
+          "resolved": "https://registry.npmjs.org/vue-i18n/-/vue-i18n-11.1.12.tgz",
+          "overridden": false
+        }
+      }
+    },
+    "@sc/reference-app": {
+      "version": "0.1.0",
+      "resolved": "file:../../frontend/apps/reference-app",
+      "overridden": false,
+      "dependencies": {
+        "vue-i18n": {
+          "version": "11.1.12",
+          "resolved": "https://registry.npmjs.org/vue-i18n/-/vue-i18n-11.1.12.tgz",
+          "overridden": false
+        }
+      }
+    },
+    "@sc/starter-app": {
+      "version": "0.1.0",
+      "resolved": "file:../../frontend/apps/starter-app",
+      "overridden": false,
+      "dependencies": {
+        "vue-i18n": {
+          "version": "11.1.12",
+          "resolved": "https://registry.npmjs.org/vue-i18n/-/vue-i18n-11.1.12.tgz",
+          "overridden": false
+        }
+      }
+    }
+  }
+}

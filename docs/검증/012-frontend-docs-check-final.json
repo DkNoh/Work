@@ -1,0 +1,29 @@
+{
+  "stage": "012",
+  "passed": true,
+  "scope": "9 ScFramework documents and WorkboardVue documentation pointer only",
+  "files": [
+    "README.md",
+    "docs/folder-structure.md",
+    "docs/maintenance-guide.md",
+    "docs/operations.md",
+    "docs/api.md",
+    "docs/질의/README.md",
+    "docs/질의/기술스택-적용현황.md",
+    "docs/질의/개발가이드.md",
+    "docs/질의/개발단계.md",
+    "../WorkboardVue/docs/질의/README.md"
+  ],
+  "relativeLinks": 881,
+  "missingLinks": [],
+  "currentStale012Progress": [],
+  "formatWriteExitCode": 0,
+  "formatCheckExitCode": 0,
+  "sourceChanged": false,
+  "serverOrBrowserExecuted": false,
+  "historicalFailuresPreserved": true,
+  "retry": {
+    "initialLinkCheckerProcessStart": "OS error24 Too many open files; not executed",
+    "singleRetry": "passed"
+  }
+}

@@ -1,0 +1,10 @@
+
+/Users/dk/Work/ScFramework/frontend/packages/runtime/src/browserErrors.spec.ts
+   11:34  warning  There is more than one component in this file                               vue/one-component-per-file
+  121:27  warning  There is more than one component in this file                               vue/one-component-per-file
+  123:7   warning  The "methods" property should be above the "template" property on line 122  vue/order-in-components
+  155:27  warning  There is more than one component in this file                               vue/one-component-per-file
+
+✖ 4 problems (0 errors, 4 warnings)
+  0 errors and 1 warning potentially fixable with the `--fix` option.
+

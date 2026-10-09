@@ -1,0 +1,5 @@
+
+> sc-framework@0.1.0 api:check
+> node scripts/openapi-types.mjs --check
+
+OpenAPI 명세와 생성 타입 일치

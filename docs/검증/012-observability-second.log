@@ -1,0 +1,3 @@
+PASS separate-observer-authentication-and-business-csrf
+PASS actual-feign-success-failure-timeout-and-trace-propagation
+FAIL observability verification (AssertionError)

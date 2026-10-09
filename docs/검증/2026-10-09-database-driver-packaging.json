@@ -1,0 +1,68 @@
+{
+  "ok": true,
+  "platform": "Windows",
+  "javaMajor": 21,
+  "commandPattern": "backend/mvnw.cmd -B -ntp -f .runtime/db-driver-packaging/<vendor>/pom.xml -Pdb-<vendor> -Dmaven.test.skip=true package",
+  "profilesPackaged": 4,
+  "sourceCopiedFrom": "backend/starter-app",
+  "commonArtifactSource": "local Maven repository 0.3.0-SNAPSHOT",
+  "testsExecuted": false,
+  "databaseConnectionExecuted": false,
+  "applicationStarted": false,
+  "frontendIncluded": false,
+  "fullTarballConsumerVerification": false,
+  "results": [
+    {
+      "vendor": "oracle",
+      "mavenProfile": "db-oracle",
+      "exitCode": 0,
+      "jdbcDriver": "ojdbc11-23.7.0.25.01.jar",
+      "flywayModule": "flyway-database-oracle-11.7.2.jar",
+      "h2RuntimeJars": [],
+      "otherJdbcDriverJars": [],
+      "otherFlywayVendorModules": [],
+      "jar": ".runtime\\db-driver-packaging\\oracle\\target\\sc-starter-app.jar",
+      "sha256": "e9c5ca38148ddc3961e397d0f6f7a68ee87c6497b515780918917175efdd14da",
+      "nestedLibraryCount": 147
+    },
+    {
+      "vendor": "db2",
+      "mavenProfile": "db-db2",
+      "exitCode": 0,
+      "jdbcDriver": "jcc-12.1.4.0.jar",
+      "flywayModule": "flyway-database-db2-11.7.2.jar",
+      "h2RuntimeJars": [],
+      "otherJdbcDriverJars": [],
+      "otherFlywayVendorModules": [],
+      "jar": ".runtime\\db-driver-packaging\\db2\\target\\sc-starter-app.jar",
+      "sha256": "ce5fa1529503175991354d3ec2f680255873d699282aa883b5186bd38cbfa513",
+      "nestedLibraryCount": 147
+    },
+    {
+      "vendor": "sqlserver",
+      "mavenProfile": "db-mssql",
+      "exitCode": 0,
+      "jdbcDriver": "mssql-jdbc-12.10.2.jre11.jar",
+      "flywayModule": "flyway-sqlserver-11.7.2.jar",
+      "h2RuntimeJars": [],
+      "otherJdbcDriverJars": [],
+      "otherFlywayVendorModules": [],
+      "jar": ".runtime\\db-driver-packaging\\mssql\\target\\sc-starter-app.jar",
+      "sha256": "bfa4f48b7363cd8c20f4ce89f2e20096f95334a303eded15889be2066cfc45de",
+      "nestedLibraryCount": 147
+    },
+    {
+      "vendor": "postgresql",
+      "mavenProfile": "db-postgresql",
+      "exitCode": 0,
+      "jdbcDriver": "postgresql-42.7.11.jar",
+      "flywayModule": "flyway-database-postgresql-11.7.2.jar",
+      "h2RuntimeJars": [],
+      "otherJdbcDriverJars": [],
+      "otherFlywayVendorModules": [],
+      "jar": ".runtime\\db-driver-packaging\\postgresql\\target\\sc-starter-app.jar",
+      "sha256": "00a1179be6924991642f15ec338fb781bdc01e010b806ffe795d7463b444f9f3",
+      "nestedLibraryCount": 147
+    }
+  ]
+}

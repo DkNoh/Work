@@ -1,0 +1,33 @@
+{
+  "stage": "009",
+  "log": "009-backend-third.log",
+  "modules": {
+    "framework-autoconfigure": {
+      "tests": 20,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "starter-app": {
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "reference-app": {
+      "tests": 59,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "framework-core": {
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "total": 87,
+  "newReportTests": 10,
+  "projectionChangeAfterThisRun": true
+}

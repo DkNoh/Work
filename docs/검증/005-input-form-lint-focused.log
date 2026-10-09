@@ -1,0 +1,4 @@
+005 inputs/forms 및 담당 Catalog 5 stories/5 fixtures scoped ESLint
+ESLint option: --max-warnings 0
+Result: exit code 0; no warnings or errors.
+검증 대상은 docs/질의/005-입력폼계약.md의 공개 파일과 해당 테스트/fixtures 목록을 따른다.

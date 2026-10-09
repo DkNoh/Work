@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "apps": [
+    {
+      "app": "reference",
+      "distFiles": 43,
+      "exactBytes": true,
+      "jarSha256": "a72873fb269efc5d42c668824d01a9067f888b535db97c7b88ec3f44cc849d4c"
+    },
+    {
+      "app": "starter",
+      "distFiles": 8,
+      "exactBytes": true,
+      "jarSha256": "d6a66af5fc3e953378ed60f9f1a327a58c8c6580d052937a114f05903d6ab687"
+    }
+  ],
+  "build": "012-integration-build-final.log",
+  "cssOnlyRepackage": "012-table-layout-jar-final.log",
+  "serverTestsNotRepeatedForCss": true
+}

@@ -1,0 +1,75 @@
+{
+  "stage": "012",
+  "startedAt": "2026-10-06T21:39:28.490002+00:00",
+  "images": [
+    {
+      "image": "rabbitmq:4.3.6-management@sha256:8dd6e3570ddaa2ef82a6c3a8950e79c1f73893adfbdddbc374fc1f1ac8a0f5dd",
+      "exitCode": 0,
+      "architecture": "arm64",
+      "os": "linux",
+      "repoDigests": [
+        "rabbitmq@sha256:8dd6e3570ddaa2ef82a6c3a8950e79c1f73893adfbdddbc374fc1f1ac8a0f5dd"
+      ],
+      "id": "sha256:8dd6e3570ddaa2ef82a6c3a8950e79c1f73893adfbdddbc374fc1f1ac8a0f5dd",
+      "size": 118547752
+    },
+    {
+      "image": "prom/prometheus:v3.13.4@sha256:87861b8cf91579109319ebc300f3f1060e6da9c05d6ae8ad15a20c879e84e32e",
+      "exitCode": 0,
+      "architecture": "arm64",
+      "os": "linux",
+      "repoDigests": [
+        "prom/prometheus@sha256:87861b8cf91579109319ebc300f3f1060e6da9c05d6ae8ad15a20c879e84e32e"
+      ],
+      "id": "sha256:87861b8cf91579109319ebc300f3f1060e6da9c05d6ae8ad15a20c879e84e32e",
+      "size": 98210167
+    },
+    {
+      "image": "grafana/grafana:13.2.3@sha256:b28bae15e219c998fb0e0424ed724930cc61b1f61fb404d47c862f9a23f9e572",
+      "exitCode": 0,
+      "architecture": "arm64",
+      "os": "linux",
+      "repoDigests": [
+        "grafana/grafana@sha256:b28bae15e219c998fb0e0424ed724930cc61b1f61fb404d47c862f9a23f9e572"
+      ],
+      "id": "sha256:b28bae15e219c998fb0e0424ed724930cc61b1f61fb404d47c862f9a23f9e572",
+      "size": 444856824
+    },
+    {
+      "image": "otel/opentelemetry-collector-contrib:0.162.0@sha256:39923a8e431bd1f57be82411999d389fcfe40857492e4365456d97a4c1f74be6",
+      "exitCode": 0,
+      "architecture": "arm64",
+      "os": "linux",
+      "repoDigests": [
+        "otel/opentelemetry-collector-contrib@sha256:39923a8e431bd1f57be82411999d389fcfe40857492e4365456d97a4c1f74be6"
+      ],
+      "id": "sha256:39923a8e431bd1f57be82411999d389fcfe40857492e4365456d97a4c1f74be6",
+      "size": 102597834
+    },
+    {
+      "image": "grafana/tempo:3.1.0@sha256:3076b8dcdfb32fd6bc5ccef85e7b7313e6199b9cb84366257fc17ecb696db5fd",
+      "exitCode": 0,
+      "architecture": "arm64",
+      "os": "linux",
+      "repoDigests": [
+        "grafana/tempo@sha256:3076b8dcdfb32fd6bc5ccef85e7b7313e6199b9cb84366257fc17ecb696db5fd"
+      ],
+      "id": "sha256:3076b8dcdfb32fd6bc5ccef85e7b7313e6199b9cb84366257fc17ecb696db5fd",
+      "size": 35927680
+    },
+    {
+      "image": "grafana/loki:3.7.8@sha256:1107dd5274e0ada47e42472b7a7e71f3b2a2fe878878108f3e2f9e51528f0193",
+      "exitCode": 0,
+      "architecture": "arm64",
+      "os": "linux",
+      "repoDigests": [
+        "grafana/loki@sha256:1107dd5274e0ada47e42472b7a7e71f3b2a2fe878878108f3e2f9e51528f0193"
+      ],
+      "id": "sha256:1107dd5274e0ada47e42472b7a7e71f3b2a2fe878878108f3e2f9e51528f0193",
+      "size": 42747075
+    }
+  ],
+  "passed": true,
+  "clientBoundary": "Task-private empty config; existing daemon; user credentials unchanged",
+  "completedAt": "2026-10-06T21:40:12.343325+00:00"
+}

@@ -1,0 +1,25 @@
+{
+  "format": 1,
+  "passed": true,
+  "markdownFiles": 4,
+  "localLinks": 182,
+  "tables": 8,
+  "fenceMarkers": 4,
+  "jsonChecked": [
+    "design-correction-browser.json",
+    "012-final-summary.json",
+    "ui-contracts.json"
+  ],
+  "copiedImageSHA256AndSourceBytesMatched": 3,
+  "currentSourcePublicUI": 24,
+  "immutable012PublicUI": 22,
+  "historicalUnit149Preserved": true,
+  "historicalServer196NotReexecuted": true,
+  "selectedServer10ActualVerified": true,
+  "newUnit155AndStories10ActualLogMatched": true,
+  "userAccepted": false,
+  "newJarUiVerificationPending": true,
+  "newPixelBaselinePending": true,
+  "sourceMutated": false,
+  "errors": []
+}

@@ -1,0 +1,8 @@
+{
+  "stage": "012",
+  "passed": false,
+  "groups": [],
+  "manualReviewComplete": false,
+  "failureType": "AssertionError",
+  "failureCode": "OBS_METRICS_BUSINESS_PORT"
+}

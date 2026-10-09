@@ -1,0 +1,9 @@
+{
+  "stage": "009",
+  "parser": "js-yaml",
+  "parsed": true,
+  "reportSuiteInRootE2eScript": true,
+  "reportResultsInArtifact": true,
+  "evidenceStage": "009",
+  "remoteExecuted": false
+}

@@ -1,0 +1,7 @@
+{
+  "stage": "008",
+  "baseline": "007-reference-source-baseline.json",
+  "checked": 170,
+  "changed": [],
+  "scope": "Read-only current baseline for subsequent 008–012 checks; excludes docs and runtime/build outputs"
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.2.0 https://maven.apache.org/xsd/settings-1.2.0.xsd">
+  <!-- Settings 환경 변수는 부모 POM을 찾기 전에 해석된다. URI는 Wrapper가 기동 위치에서 계산한다. -->
+  <profiles>
+    <profile>
+      <id>sc-generated-vendor</id>
+      <repositories>
+        <repository>
+          <id>sc-generated-vendor</id>
+          <url>${env.SC_GENERATED_VENDOR_URI}</url>
+          <releases><enabled>true</enabled></releases>
+          <snapshots><enabled>true</enabled><updatePolicy>never</updatePolicy></snapshots>
+        </repository>
+      </repositories>
+    </profile>
+  </profiles>
+  <activeProfiles><activeProfile>sc-generated-vendor</activeProfile></activeProfiles>
+</settings>

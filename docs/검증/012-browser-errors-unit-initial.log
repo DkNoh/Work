@@ -1,0 +1,26 @@
+
+ RUN  v4.1.11 /Users/dk/Work/ScFramework
+
+ ❯ frontend/packages/runtime/src/browserErrors.spec.ts (5 tests | 1 failed) 216ms
+     × Vue/window/rejection은 원문 property를 읽지 않고 동일 Error를 한 번만 전송한다 58ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  frontend/packages/runtime/src/browserErrors.spec.ts > 브라우저 오류 수집의 실제 hook 계약 > Vue/window/rejection은 원문 property를 읽지 않고 동일 Error를 한 번만 전송한다
+Error: Raw property must not be inspected
+ ❯ Error.<anonymous> frontend/packages/runtime/src/browserErrors.spec.ts:69:13
+     67|     const cause = new Error();
+     68|     const read = vi.fn(() => {
+     69|       throw new Error("Raw property must not be inspected");
+       |             ^
+     70|     });
+     71|     Object.defineProperties(cause, {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 4 passed (5)
+   Start at  06:43:19
+   Duration  525ms (transform 22ms, setup 0ms, import 77ms, tests 216ms, environment 160ms)
+

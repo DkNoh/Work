@@ -1,0 +1,1325 @@
+{
+  "stage": "010",
+  "fullE2ePassed": 67,
+  "reportsPassed": 5,
+  "totalFunctionalE2ePassed": 72,
+  "separateVisualSkipped": 4,
+  "a11yRuns": 109,
+  "violations": 0,
+  "duplicateIds": 0,
+  "incompleteRules": 226,
+  "incompleteNodes": 2056,
+  "reports": [
+    {
+      "file": "docs/검증/010-e2e-third-results/010-admin-account-ADMIN-cr-802b3--and-DB-permissions-at-1366/admin-1366-requester-denied-axe.json",
+      "state": "admin-1366-requester-denied",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 1,
+      "incompleteNodes": 1,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-admin-account-ADMIN-cr-802b3--and-DB-permissions-at-1366/admin-audit-1366-en-filtered-axe.json",
+      "state": "admin-audit-1366-en-filtered",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 7,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-admin-account-ADMIN-cr-802b3--and-DB-permissions-at-1366/admin-audit-1366-ko-filtered-axe.json",
+      "state": "admin-audit-1366-ko-filtered",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 7,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-admin-account-ADMIN-cr-802b3--and-DB-permissions-at-1366/admin-menus-1366-en-updated-axe.json",
+      "state": "admin-menus-1366-en-updated",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 1,
+      "incompleteNodes": 5,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-admin-account-ADMIN-cr-802b3--and-DB-permissions-at-1366/admin-menus-1366-ko-updated-axe.json",
+      "state": "admin-menus-1366-ko-updated",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 1,
+      "incompleteNodes": 5,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-admin-account-ADMIN-cr-802b3--and-DB-permissions-at-1366/admin-users-1366-en-created-axe.json",
+      "state": "admin-users-1366-en-created",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 8,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-admin-account-ADMIN-cr-802b3--and-DB-permissions-at-1366/admin-users-1366-ko-validation-axe.json",
+      "state": "admin-users-1366-ko-validation",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 8,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-admin-account-ADMIN-cr-bbc46-t-and-DB-permissions-at-390/admin-390-requester-denied-axe.json",
+      "state": "admin-390-requester-denied",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 2,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-admin-account-ADMIN-cr-bbc46-t-and-DB-permissions-at-390/admin-audit-390-en-filtered-axe.json",
+      "state": "admin-audit-390-en-filtered",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 8,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-admin-account-ADMIN-cr-bbc46-t-and-DB-permissions-at-390/admin-audit-390-ko-filtered-axe.json",
+      "state": "admin-audit-390-ko-filtered",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 8,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-admin-account-ADMIN-cr-bbc46-t-and-DB-permissions-at-390/admin-menus-390-en-updated-axe.json",
+      "state": "admin-menus-390-en-updated",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 6,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-admin-account-ADMIN-cr-bbc46-t-and-DB-permissions-at-390/admin-menus-390-ko-updated-axe.json",
+      "state": "admin-menus-390-ko-updated",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 6,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-admin-account-ADMIN-cr-bbc46-t-and-DB-permissions-at-390/admin-users-390-en-created-axe.json",
+      "state": "admin-users-390-en-created",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 9,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-admin-account-ADMIN-cr-bbc46-t-and-DB-permissions-at-390/admin-users-390-ko-validation-axe.json",
+      "state": "admin-users-390-ko-validation",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 9,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-admin-account-report-c-9444c-han-the-loaded-page-at-1366/report-chart-1366-en-axe.json",
+      "state": "report-chart-1366-en",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 26,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-admin-account-report-c-9444c-han-the-loaded-page-at-1366/report-chart-1366-ko-axe.json",
+      "state": "report-chart-1366-ko",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 28,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-admin-account-report-c-9ff39-than-the-loaded-page-at-390/report-chart-390-en-axe.json",
+      "state": "report-chart-390-en",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 26,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-admin-account-report-c-9ff39-than-the-loaded-page-at-390/report-chart-390-ko-axe.json",
+      "state": "report-chart-390-ko",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 25,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-admin-account-syntheti-7e89f-lacement-credentials-at-390/account-390-en-current-password-error-axe.json",
+      "state": "account-390-en-current-password-error",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 6,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-admin-account-syntheti-7e89f-lacement-credentials-at-390/account-390-ko-axe.json",
+      "state": "account-390-ko",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 6,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-admin-account-syntheti-7e89f-lacement-credentials-at-390/account-390-replacement-session-axe.json",
+      "state": "account-390-replacement-session",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 6,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-admin-account-syntheti-ee68d-acement-credentials-at-1366/account-1366-en-current-password-error-axe.json",
+      "state": "account-1366-en-current-password-error",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 1,
+      "incompleteNodes": 5,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-admin-account-syntheti-ee68d-acement-credentials-at-1366/account-1366-ko-axe.json",
+      "state": "account-1366-ko",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 1,
+      "incompleteNodes": 5,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-admin-account-syntheti-ee68d-acement-credentials-at-1366/account-1366-replacement-session-axe.json",
+      "state": "account-1366-replacement-session",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 1,
+      "incompleteNodes": 5,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-kanban-칸반-1366px-en은-전체DOM-접근성과-보드가로스크롤을-검사한다/010-kanban-1366-en-axe.json",
+      "state": "010-kanban-1366-en",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 4,
+      "incompleteNodes": 39,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-kanban-칸반-1366px-ko은-전체DOM-접근성과-보드가로스크롤을-검사한다/010-kanban-1366-ko-axe.json",
+      "state": "010-kanban-1366-ko",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 4,
+      "incompleteNodes": 39,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-kanban-칸반-390px-en은-전체DOM-접근성과-보드가로스크롤을-검사한다/010-kanban-390-en-axe.json",
+      "state": "010-kanban-390-en",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 4,
+      "incompleteNodes": 40,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-kanban-칸반-390px-ko은-전체DOM-접근성과-보드가로스크롤을-검사한다/010-kanban-390-ko-axe.json",
+      "state": "010-kanban-390-ko",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 4,
+      "incompleteNodes": 40,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-media-English-image-wo-62961-tes-and-no-overflow-at-1366/image-workspace-1366-en-axe.json",
+      "state": "image-workspace-1366-en",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 18,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-media-English-image-wo-64c48-ates-and-no-overflow-at-390/image-workspace-390-en-axe.json",
+      "state": "image-workspace-390-en",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 19,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-media-JPEG-EXIF-6-uses-a103f-nd-preserves-uploaded-bytes/image-exif6-browser-axe.json",
+      "state": "image-exif6-browser",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 18,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-media-agreed-author-li-c87e4-xt-without-an-external-call/manual-ado-export-axe.json",
+      "state": "manual-ado-export",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 22,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-media-image-UI-upload--c1a75-nd-real-box-conflict-at-390/image-conflict-390-axe.json",
+      "state": "image-conflict-390",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 24,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-media-image-UI-upload--c1a75-nd-real-box-conflict-at-390/image-detail-390-ko-axe.json",
+      "state": "image-detail-390-ko",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 23,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-media-image-UI-upload--c1a75-nd-real-box-conflict-at-390/image-workspace-390-ko-axe.json",
+      "state": "image-workspace-390-ko",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 16,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-media-image-UI-upload--d381d-d-real-box-conflict-at-1366/image-conflict-1366-axe.json",
+      "state": "image-conflict-1366",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 23,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-media-image-UI-upload--d381d-d-real-box-conflict-at-1366/image-detail-1366-ko-axe.json",
+      "state": "image-detail-1366-ko",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 22,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-media-image-UI-upload--d381d-d-real-box-conflict-at-1366/image-workspace-1366-ko-axe.json",
+      "state": "image-workspace-1366-ko",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 15,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-notices-documents-docu-36a0e-9-locale-and-privacy-at-390/document-390-en-conflict-axe.json",
+      "state": "document-390-en-conflict",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 11,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-notices-documents-docu-36a0e-9-locale-and-privacy-at-390/document-390-ko-axe.json",
+      "state": "document-390-ko",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 10,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-notices-documents-docu-41510--locale-and-privacy-at-1366/document-1366-en-conflict-axe.json",
+      "state": "document-1366-en-conflict",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 1,
+      "incompleteNodes": 10,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-notices-documents-docu-41510--locale-and-privacy-at-1366/document-1366-ko-axe.json",
+      "state": "document-1366-ko",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 1,
+      "incompleteNodes": 9,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-notices-documents-noti-323e9-emain-private-even-to-ADMIN/document-private-admin-denied-axe.json",
+      "state": "document-private-admin-denied",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 4,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-notices-documents-noti-323e9-emain-private-even-to-ADMIN/notice-author-readonly-admin-axe.json",
+      "state": "notice-author-readonly-admin",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 1,
+      "incompleteNodes": 7,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-notices-documents-noti-c86e4--and-explicit-delete-at-390/notice-390-en-conflict-axe.json",
+      "state": "notice-390-en-conflict",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 10,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-notices-documents-noti-c86e4--and-explicit-delete-at-390/notice-390-ko-axe.json",
+      "state": "notice-390-ko",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 10,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-notices-documents-noti-d64be-and-explicit-delete-at-1366/notice-1366-en-conflict-axe.json",
+      "state": "notice-1366-en-conflict",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 1,
+      "incompleteNodes": 9,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/010-notices-documents-noti-d64be-and-explicit-delete-at-1366/notice-1366-ko-axe.json",
+      "state": "notice-1366-ko",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 1,
+      "incompleteNodes": 9,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/accessibility-reference-실제-91be3-366px-한국어·영어·오류·dirty·열린-모달/patterns-en-confirm-closed-axe.json",
+      "state": "patterns-en-confirm-closed",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 27,
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/accessibility-reference-실제-91be3-366px-한국어·영어·오류·dirty·열린-모달/patterns-en-confirm-open-axe.json",
+      "state": "patterns-en-confirm-open",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 1,
+      "incompleteNodes": 2,
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/accessibility-reference-실제-91be3-366px-한국어·영어·오류·dirty·열린-모달/patterns-en-dirty-errors-axe.json",
+      "state": "patterns-en-dirty-errors",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 27,
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/accessibility-reference-실제-91be3-366px-한국어·영어·오류·dirty·열린-모달/patterns-ko-default-axe.json",
+      "state": "patterns-ko-default",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 23,
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/accessibility-reference-실제-91be3-366px-한국어·영어·오류·dirty·열린-모달/patterns-ko-dirty-errors-editor-table-axe.json",
+      "state": "patterns-ko-dirty-errors-editor-table",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 27,
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/accessibility-reference-실제-91be3-366px-한국어·영어·오류·dirty·열린-모달/patterns-ko-select-menu-open-axe.json",
+      "state": "patterns-ko-select-menu-open",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 3,
+      "incompleteNodes": 48,
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/accessibility-reference-실제-d8fb3-390px-한국어·영어·오류·dirty·열린-모달/patterns-en-confirm-closed-axe.json",
+      "state": "patterns-en-confirm-closed",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 28,
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/accessibility-reference-실제-d8fb3-390px-한국어·영어·오류·dirty·열린-모달/patterns-en-confirm-open-axe.json",
+      "state": "patterns-en-confirm-open",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 1,
+      "incompleteNodes": 2,
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/accessibility-reference-실제-d8fb3-390px-한국어·영어·오류·dirty·열린-모달/patterns-en-dirty-errors-axe.json",
+      "state": "patterns-en-dirty-errors",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 28,
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/accessibility-reference-실제-d8fb3-390px-한국어·영어·오류·dirty·열린-모달/patterns-en-mobile-navigation-closed-axe.json",
+      "state": "patterns-en-mobile-navigation-closed",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 28,
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/accessibility-reference-실제-d8fb3-390px-한국어·영어·오류·dirty·열린-모달/patterns-en-mobile-navigation-open-axe.json",
+      "state": "patterns-en-mobile-navigation-open",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 3,
+      "incompleteNodes": 29,
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/accessibility-reference-실제-d8fb3-390px-한국어·영어·오류·dirty·열린-모달/patterns-ko-default-axe.json",
+      "state": "patterns-ko-default",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 24,
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/accessibility-reference-실제-d8fb3-390px-한국어·영어·오류·dirty·열린-모달/patterns-ko-dirty-errors-editor-table-axe.json",
+      "state": "patterns-ko-dirty-errors-editor-table",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 28,
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/accessibility-reference-실제-d8fb3-390px-한국어·영어·오류·dirty·열린-모달/patterns-ko-select-menu-open-axe.json",
+      "state": "patterns-ko-select-menu-open",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 3,
+      "incompleteNodes": 40,
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/accessibility-starter-실제-J-424a3-390px-한국어·영어·오류·dirty·열린-모달/patterns-en-confirm-closed-axe.json",
+      "state": "patterns-en-confirm-closed",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 3,
+      "incompleteNodes": 35,
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/accessibility-starter-실제-J-424a3-390px-한국어·영어·오류·dirty·열린-모달/patterns-en-confirm-open-axe.json",
+      "state": "patterns-en-confirm-open",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 1,
+      "incompleteNodes": 2,
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/accessibility-starter-실제-J-424a3-390px-한국어·영어·오류·dirty·열린-모달/patterns-en-dirty-errors-axe.json",
+      "state": "patterns-en-dirty-errors",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 3,
+      "incompleteNodes": 35,
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/accessibility-starter-실제-J-424a3-390px-한국어·영어·오류·dirty·열린-모달/patterns-en-mobile-navigation-closed-axe.json",
+      "state": "patterns-en-mobile-navigation-closed",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 3,
+      "incompleteNodes": 35,
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/accessibility-starter-실제-J-424a3-390px-한국어·영어·오류·dirty·열린-모달/patterns-en-mobile-navigation-open-axe.json",
+      "state": "patterns-en-mobile-navigation-open",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 4,
+      "incompleteNodes": 36,
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/accessibility-starter-실제-J-424a3-390px-한국어·영어·오류·dirty·열린-모달/patterns-ko-default-axe.json",
+      "state": "patterns-ko-default",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 3,
+      "incompleteNodes": 31,
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/accessibility-starter-실제-J-424a3-390px-한국어·영어·오류·dirty·열린-모달/patterns-ko-dirty-errors-editor-table-axe.json",
+      "state": "patterns-ko-dirty-errors-editor-table",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 3,
+      "incompleteNodes": 35,
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/accessibility-starter-실제-J-424a3-390px-한국어·영어·오류·dirty·열린-모달/patterns-ko-select-menu-open-axe.json",
+      "state": "patterns-ko-select-menu-open",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 4,
+      "incompleteNodes": 47,
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/accessibility-starter-실제-J-61ee3-366px-한국어·영어·오류·dirty·열린-모달/patterns-en-confirm-closed-axe.json",
+      "state": "patterns-en-confirm-closed",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 3,
+      "incompleteNodes": 34,
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/accessibility-starter-실제-J-61ee3-366px-한국어·영어·오류·dirty·열린-모달/patterns-en-confirm-open-axe.json",
+      "state": "patterns-en-confirm-open",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 1,
+      "incompleteNodes": 2,
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/accessibility-starter-실제-J-61ee3-366px-한국어·영어·오류·dirty·열린-모달/patterns-en-dirty-errors-axe.json",
+      "state": "patterns-en-dirty-errors",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 3,
+      "incompleteNodes": 34,
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/accessibility-starter-실제-J-61ee3-366px-한국어·영어·오류·dirty·열린-모달/patterns-ko-default-axe.json",
+      "state": "patterns-ko-default",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 3,
+      "incompleteNodes": 30,
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/accessibility-starter-실제-J-61ee3-366px-한국어·영어·오류·dirty·열린-모달/patterns-ko-dirty-errors-editor-table-axe.json",
+      "state": "patterns-ko-dirty-errors-editor-table",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 3,
+      "incompleteNodes": 34,
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/accessibility-starter-실제-J-61ee3-366px-한국어·영어·오류·dirty·열린-모달/patterns-ko-select-menu-open-axe.json",
+      "state": "patterns-ko-select-menu-open",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 4,
+      "incompleteNodes": 49,
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/accessibility-접근성-Referenc-4ae3c-6px-기본·400-필드·409·native-확인/examples-confirm-closed-axe.json",
+      "state": "examples-confirm-closed",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 1,
+      "incompleteNodes": 10,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/accessibility-접근성-Referenc-4ae3c-6px-기본·400-필드·409·native-확인/examples-confirm-open-axe.json",
+      "state": "examples-confirm-open",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 1,
+      "incompleteNodes": 2,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/accessibility-접근성-Referenc-4ae3c-6px-기본·400-필드·409·native-확인/examples-conflict-409-axe.json",
+      "state": "examples-conflict-409",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 1,
+      "incompleteNodes": 10,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/accessibility-접근성-Referenc-4ae3c-6px-기본·400-필드·409·native-확인/examples-default-axe.json",
+      "state": "examples-default",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 1,
+      "incompleteNodes": 6,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/accessibility-접근성-Referenc-4ae3c-6px-기본·400-필드·409·native-확인/examples-field-error-400-axe.json",
+      "state": "examples-field-error-400",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 1,
+      "incompleteNodes": 6,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/accessibility-접근성-Reference-예제-390px-기본·400-필드·409·native-확인/examples-confirm-closed-axe.json",
+      "state": "examples-confirm-closed",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 10,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/accessibility-접근성-Reference-예제-390px-기본·400-필드·409·native-확인/examples-confirm-open-axe.json",
+      "state": "examples-confirm-open",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 1,
+      "incompleteNodes": 2,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/accessibility-접근성-Reference-예제-390px-기본·400-필드·409·native-확인/examples-conflict-409-axe.json",
+      "state": "examples-conflict-409",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 10,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/accessibility-접근성-Reference-예제-390px-기본·400-필드·409·native-확인/examples-default-axe.json",
+      "state": "examples-default",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 4,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/accessibility-접근성-Reference-예제-390px-기본·400-필드·409·native-확인/examples-field-error-400-axe.json",
+      "state": "examples-field-error-400",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 6,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/accessibility-접근성-로그인-1366px-닫힌-셸과-실제-로그인-필드/login-ko-axe.json",
+      "state": "login-ko",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 1,
+      "incompleteNodes": 3,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/accessibility-접근성-로그인-390px-닫힌-셸과-실제-로그인-필드/login-ko-axe.json",
+      "state": "login-ko",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 4,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/date-Starter-날짜-1366px-calendar·UTC-정밀도·DST·언어를-독립적으로-처리한다/starter-date-dst-1366-axe.json",
+      "state": "starter-date-dst-1366",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 3,
+      "incompleteNodes": 30,
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/date-Starter-날짜-1366px-calendar·UTC-정밀도·DST·언어를-독립적으로-처리한다/starter-date-en-1366-axe.json",
+      "state": "starter-date-en-1366",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 3,
+      "incompleteNodes": 30,
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/date-Starter-날짜-390px-calendar·UTC-정밀도·DST·언어를-독립적으로-처리한다/starter-date-dst-390-axe.json",
+      "state": "starter-date-dst-390",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 3,
+      "incompleteNodes": 31,
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/date-Starter-날짜-390px-calendar·UTC-정밀도·DST·언어를-독립적으로-처리한다/starter-date-en-390-axe.json",
+      "state": "starter-date-en-390",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 3,
+      "incompleteNodes": 31,
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 12
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/requirements-실제-작성자·담당자-세션에서-등록→지정→제출→검토→합의·댓글·이력을-저장한다/requirement-agreed-history-axe.json",
+      "state": "requirement-agreed-history",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 20,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/requirements-실제-작성자·담당자-세션에서-등록→지정→제출→검토→합의·댓글·이력을-저장한다/requirement-reviewer-axe.json",
+      "state": "requirement-reviewer",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 23,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/requirements-요구사항-1366px-목록·본문·필드-오류·댓글·이력은-전체-DOM-접근성을-검사한다/requirement-detail-1366-axe.json",
+      "state": "requirement-detail-1366",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 18,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/requirements-요구사항-1366px-목록·본문·필드-오류·댓글·이력은-전체-DOM-접근성을-검사한다/requirement-invalid-1366-axe.json",
+      "state": "requirement-invalid-1366",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 18,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/requirements-요구사항-1366px-목록·본문·필드-오류·댓글·이력은-전체-DOM-접근성을-검사한다/requirements-list-1366-axe.json",
+      "state": "requirements-list-1366",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 12,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/requirements-요구사항-390px-목록·본문·필드-오류·댓글·이력은-전체-DOM-접근성을-검사한다/requirement-detail-390-axe.json",
+      "state": "requirement-detail-390",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 19,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/requirements-요구사항-390px-목록·본문·필드-오류·댓글·이력은-전체-DOM-접근성을-검사한다/requirement-invalid-390-axe.json",
+      "state": "requirement-invalid-390",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 19,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-e2e-third-results/requirements-요구사항-390px-목록·본문·필드-오류·댓글·이력은-전체-DOM-접근성을-검사한다/requirements-list-390-axe.json",
+      "state": "requirements-list-390",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 13,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-reports-fourth-results/requirements-report-10k-보고-4fcdc-focus·일반표·URL·한영·전체-DOM-접근성/report-1366-en-standard-alternative-axe.json",
+      "state": "report-1366-en-standard-alternative",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 28,
+      "virtualDOM": {
+        "tableRows": 100,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-reports-fourth-results/requirements-report-10k-보고-4fcdc-focus·일반표·URL·한영·전체-DOM-접근성/report-1366-en-virtual-axe.json",
+      "state": "report-1366-en-virtual",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 28,
+      "virtualDOM": {
+        "tableRows": 14,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-reports-fourth-results/requirements-report-10k-보고-4fcdc-focus·일반표·URL·한영·전체-DOM-접근성/report-1366-ko-standard-axe.json",
+      "state": "report-1366-ko-standard",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 30,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-reports-fourth-results/requirements-report-10k-보고-4fcdc-focus·일반표·URL·한영·전체-DOM-접근성/report-1366-ko-virtual-axe.json",
+      "state": "report-1366-ko-virtual",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 31,
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-reports-fourth-results/requirements-report-10k-보고-c6239-focus·일반표·URL·한영·전체-DOM-접근성/report-390-en-standard-alternative-axe.json",
+      "state": "report-390-en-standard-alternative",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 28,
+      "virtualDOM": {
+        "tableRows": 100,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-reports-fourth-results/requirements-report-10k-보고-c6239-focus·일반표·URL·한영·전체-DOM-접근성/report-390-en-virtual-axe.json",
+      "state": "report-390-en-virtual",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 28,
+      "virtualDOM": {
+        "tableRows": 14,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-reports-fourth-results/requirements-report-10k-보고-c6239-focus·일반표·URL·한영·전체-DOM-접근성/report-390-ko-standard-axe.json",
+      "state": "report-390-ko-standard",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 27,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-reports-fourth-results/requirements-report-10k-보고-c6239-focus·일반표·URL·한영·전체-DOM-접근성/report-390-ko-virtual-axe.json",
+      "state": "report-390-ko-virtual",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 28,
+      "virtualDOM": {
+        "tableRows": 15,
+        "listRows": 0
+      }
+    },
+    {
+      "file": "docs/검증/010-reports-fourth-results/requirements-report-보고서-50-b8d19-RL을-보존하고-이전-조건의-늦은-응답을-폐기한다/report-refresh-failed-axe.json",
+      "state": "report-refresh-failed",
+      "violations": 0,
+      "duplicateIds": [],
+      "incompleteRules": 2,
+      "incompleteNodes": 17,
+      "virtualDOM": {
+        "tableRows": 0,
+        "listRows": 0
+      }
+    }
+  ],
+  "scope": "fifth fresh JAR; latest kanban label/layout and native image gestures remain pending after sixth build",
+  "manualScreenReaderVerified": false,
+  "remoteCIVerified": false
+}

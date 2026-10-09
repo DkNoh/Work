@@ -1,0 +1,444 @@
+{
+  "stage": "009",
+  "documentOnly": true,
+  "freshBuildOrBrowserRepeated": false,
+  "documents": 15,
+  "localLinks": 385,
+  "codeFences": 11,
+  "jsonExamples": 0,
+  "tables": 30,
+  "evidenceJSONFiles": [
+    "009-server-and-artifacts-final.json",
+    "009-e2e-compact-final-summary.json",
+    "009-visual-review.json",
+    "009-visual-negative-gate.json",
+    "009-reference-source-preservation-final.json",
+    "009-existing-api-type-preservation-final.json",
+    "009-report-fixture-repair.json",
+    "009-performance-final/bounded-queries.json"
+  ],
+  "currentVersions": [
+    {
+      "package": "vue",
+      "consumerPrefix": "",
+      "installed": "3.5.43",
+      "lock": "3.5.43",
+      "documented": true
+    },
+    {
+      "package": "typescript",
+      "consumerPrefix": "",
+      "installed": "5.9.3",
+      "lock": "5.9.3",
+      "documented": true
+    },
+    {
+      "package": "vite",
+      "consumerPrefix": "",
+      "installed": "8.3.1",
+      "lock": "8.3.1",
+      "documented": true
+    },
+    {
+      "package": "vuetify",
+      "consumerPrefix": "",
+      "installed": "4.2.4",
+      "lock": "4.2.4",
+      "documented": true
+    },
+    {
+      "package": "vue-router",
+      "consumerPrefix": "",
+      "installed": "5.3.1",
+      "lock": "5.3.1",
+      "documented": true
+    },
+    {
+      "package": "@tanstack/vue-query",
+      "consumerPrefix": "",
+      "installed": "5.104.1",
+      "lock": "5.104.1",
+      "documented": true
+    },
+    {
+      "package": "pinia",
+      "consumerPrefix": "",
+      "installed": "4.0.3",
+      "lock": "4.0.3",
+      "documented": true
+    },
+    {
+      "package": "axios",
+      "consumerPrefix": "",
+      "installed": "1.20.0",
+      "lock": "1.20.0",
+      "documented": true
+    },
+    {
+      "package": "@vueuse/core",
+      "consumerPrefix": "",
+      "installed": "15.0.0",
+      "lock": "15.0.0",
+      "documented": true
+    },
+    {
+      "package": "vee-validate",
+      "consumerPrefix": "",
+      "installed": "4.15.1",
+      "lock": "4.15.1",
+      "documented": true
+    },
+    {
+      "package": "zod",
+      "consumerPrefix": "",
+      "installed": "4.6.5",
+      "lock": "4.6.5",
+      "documented": true
+    },
+    {
+      "package": "prettier",
+      "consumerPrefix": "",
+      "installed": "3.9.9",
+      "lock": "3.9.9",
+      "documented": true
+    },
+    {
+      "package": "eslint",
+      "consumerPrefix": "",
+      "installed": "10.12.0",
+      "lock": "10.12.0",
+      "documented": true
+    },
+    {
+      "package": "storybook",
+      "consumerPrefix": "",
+      "installed": "10.4.1",
+      "lock": "10.4.1",
+      "documented": true
+    },
+    {
+      "package": "vitest",
+      "consumerPrefix": "",
+      "installed": "4.1.11",
+      "lock": "4.1.11",
+      "documented": true
+    },
+    {
+      "package": "@vitest/browser-playwright",
+      "consumerPrefix": "",
+      "installed": "4.1.11",
+      "lock": "4.1.11",
+      "documented": true
+    },
+    {
+      "package": "@vue/test-utils",
+      "consumerPrefix": "",
+      "installed": "2.5.1",
+      "lock": "2.5.1",
+      "documented": true
+    },
+    {
+      "package": "vue-component-meta",
+      "consumerPrefix": "",
+      "installed": "2.2.12",
+      "lock": "2.2.12",
+      "documented": true
+    },
+    {
+      "package": "esbuild",
+      "consumerPrefix": "",
+      "installed": "0.28.1",
+      "lock": "0.28.1",
+      "documented": true
+    },
+    {
+      "package": "msw",
+      "consumerPrefix": "",
+      "installed": "2.13.0",
+      "lock": "2.13.0",
+      "documented": true
+    },
+    {
+      "package": "msw-storybook-addon",
+      "consumerPrefix": "",
+      "installed": "2.0.7",
+      "lock": "2.0.7",
+      "documented": true
+    },
+    {
+      "package": "@playwright/test",
+      "consumerPrefix": "",
+      "installed": "1.63.0",
+      "lock": "1.63.0",
+      "documented": true
+    },
+    {
+      "package": "@tanstack/vue-table",
+      "consumerPrefix": "",
+      "installed": "9.2.6",
+      "lock": "9.2.6",
+      "documented": true
+    },
+    {
+      "package": "@tanstack/vue-virtual",
+      "consumerPrefix": "",
+      "installed": "3.13.39",
+      "lock": "3.13.39",
+      "documented": true
+    },
+    {
+      "package": "vue-i18n",
+      "consumerPrefix": "",
+      "installed": "11.4.13",
+      "lock": "11.4.13",
+      "documented": true
+    },
+    {
+      "package": "echarts",
+      "consumerPrefix": "",
+      "installed": "6.1.0",
+      "lock": "6.1.0",
+      "documented": true
+    },
+    {
+      "package": "vue-echarts",
+      "consumerPrefix": "",
+      "installed": "8.3.1",
+      "lock": "8.3.1",
+      "documented": true
+    },
+    {
+      "package": "exceljs",
+      "consumerPrefix": "",
+      "installed": "4.4.0",
+      "lock": "4.4.0",
+      "documented": true
+    },
+    {
+      "package": "@tiptap/core",
+      "consumerPrefix": "",
+      "installed": "3.31.4",
+      "lock": "3.31.4",
+      "documented": true
+    },
+    {
+      "package": "@tiptap/vue-3",
+      "consumerPrefix": "",
+      "installed": "3.31.4",
+      "lock": "3.31.4",
+      "documented": true
+    },
+    {
+      "package": "@tiptap/starter-kit",
+      "consumerPrefix": "",
+      "installed": "3.31.4",
+      "lock": "3.31.4",
+      "documented": true
+    },
+    {
+      "package": "@floating-ui/dom",
+      "consumerPrefix": "frontend/packages/ui/",
+      "installed": "1.7.6",
+      "lock": "1.7.6",
+      "documented": true
+    },
+    {
+      "package": "dayjs",
+      "consumerPrefix": "",
+      "installed": "1.11.23",
+      "lock": "1.11.23",
+      "documented": true
+    },
+    {
+      "package": "axe-core",
+      "consumerPrefix": "",
+      "installed": "4.14.0",
+      "lock": "4.14.0",
+      "documented": true
+    },
+    {
+      "package": "sass-embedded",
+      "consumerPrefix": "",
+      "installed": "1.105.1",
+      "lock": "1.105.1",
+      "documented": true
+    },
+    {
+      "package": "openapi-typescript",
+      "consumerPrefix": "",
+      "installed": "7.13.0",
+      "lock": "7.13.0",
+      "documented": true
+    }
+  ],
+  "assertions": [
+    {
+      "check": "backend87 modules3/20/59/5",
+      "passed": true
+    },
+    {
+      "check": "backend no failure/error/skip",
+      "passed": true
+    },
+    {
+      "check": "unit112/24files",
+      "passed": true
+    },
+    {
+      "check": "freshJARdist20/6 equal/compiler excluded/Starter app0",
+      "passed": true
+    },
+    {
+      "check": "Q7/Mapper1 generated",
+      "passed": true
+    },
+    {
+      "check": "E2E41+5=46 /4visualskip",
+      "passed": true
+    },
+    {
+      "check": "61 fullDOM scans0violations/0IDs/117incomplete",
+      "passed": true
+    },
+    {
+      "check": "12 uniquePNG",
+      "passed": true
+    },
+    {
+      "check": "root actually reviewed12 finalPNG/hash match",
+      "passed": true
+    },
+    {
+      "check": "initial3pass/1diff18928 reviewed explicit update then4pass",
+      "passed": true
+    },
+    {
+      "check": "negative1436 expectedexit1/17baselineunchanged",
+      "passed": true
+    },
+    {
+      "check": "current007baseline170changed0",
+      "passed": true
+    },
+    {
+      "check": "TS76ASTunchanged/full prior JSON not retained",
+      "passed": true
+    },
+    {
+      "check": "isolatedseed/restart/API/tempcleanup",
+      "passed": true
+    },
+    {
+      "check": "report2SQL/JPAname5/5/empty3",
+      "passed": true
+    },
+    {
+      "check": "actual log 009-integration-build-compact-final.log",
+      "passed": true
+    },
+    {
+      "check": "actual log 009-e2e-compact-final.log",
+      "passed": true
+    },
+    {
+      "check": "actual log 009-live-openapi-check-compact-final.log",
+      "passed": true
+    },
+    {
+      "check": "actual log 009-storybook-tests-final.log",
+      "passed": true
+    },
+    {
+      "check": "actual log 009-storybook-docs-final.log",
+      "passed": true
+    },
+    {
+      "check": "actual log 009-visual-compact-final-compare.log",
+      "passed": true
+    },
+    {
+      "check": "actual log 009-http-smoke-final.log",
+      "passed": true
+    },
+    {
+      "check": "npm11.13 single lock/8workspaces",
+      "passed": true
+    },
+    {
+      "check": "009complete/010012waiting",
+      "passed": true
+    },
+    {
+      "check": "50100 actual errorcode/failure history preserved",
+      "passed": true
+    },
+    {
+      "check": "manual/remote/006loss limits preserved",
+      "passed": true
+    }
+  ],
+  "files": [
+    {
+      "file": "/Users/dk/Work/ScFramework/README.md",
+      "sha256": "58aea9218bbf464d248860137b01088fb128e35f505e9afdb8b39029360fe6e8"
+    },
+    {
+      "file": "/Users/dk/Work/ScFramework/docs/질의/009-복잡조회와서버표.md",
+      "sha256": "926d911daf2ddcd43cda781a4b0dc8a1111f24d845a2c187c378fed3935c062c"
+    },
+    {
+      "file": "/Users/dk/Work/ScFramework/docs/질의/README.md",
+      "sha256": "b9f012c934b35d5b38fa5acdc8386a7d8b38b6c3df4eeb6a966fce8f6aa00f20"
+    },
+    {
+      "file": "/Users/dk/Work/ScFramework/docs/질의/개발단계.md",
+      "sha256": "7149b7e21659488b9fb2d9e0f33ea333e6ac79bc55e0e4687120e2b5548b2d64"
+    },
+    {
+      "file": "/Users/dk/Work/ScFramework/docs/질의/조건부기술-전체구현.md",
+      "sha256": "2f0535165c93cd120d92b2a08c1f788666852e94100018ba9de3cd74c6009171"
+    },
+    {
+      "file": "/Users/dk/Work/ScFramework/docs/질의/기술스택-적용현황.md",
+      "sha256": "acc2ce9842a0082c52043971317b644c7fd90272fa98f1a0e294df1cc6e10471"
+    },
+    {
+      "file": "/Users/dk/Work/ScFramework/docs/질의/디자인.md",
+      "sha256": "f998f7a4643c4e4665c95921db74f2551625a7fd3d3fc8f1411e5bf08f14faa4"
+    },
+    {
+      "file": "/Users/dk/Work/ScFramework/docs/api.md",
+      "sha256": "4114aee40ac6e86c7c28e05804082df89bfe9bbb7f9505a7b3efe2cf0827d2da"
+    },
+    {
+      "file": "/Users/dk/Work/ScFramework/docs/operations.md",
+      "sha256": "5b54ac503a692195655a35528981967ca48afe1d02f94b33f9726a095439a34e"
+    },
+    {
+      "file": "/Users/dk/Work/ScFramework/docs/folder-structure.md",
+      "sha256": "2db2ec684db6346e231ba8d9afa37ab182836d21bb5ef1bca9c7d518638e5f5e"
+    },
+    {
+      "file": "/Users/dk/Work/ScFramework/docs/maintenance-guide.md",
+      "sha256": "e7d67a947ecefd3ed84c2ffa43842c368fac9577499d497ff9859be21d6e9acc"
+    },
+    {
+      "file": "/Users/dk/Work/WorkboardVue/docs/질의/README.md",
+      "sha256": "645d20c2b8c8ef1cbc2e9e08028c89f4f861fbe81f6133ba6a06fc9089459b42"
+    },
+    {
+      "file": "/Users/dk/Work/WorkboardVue/docs/질의/개발가이드.md",
+      "sha256": "ebbb0f1bdffd62bcdf3dc1b350a0d1a59b1b1140afcc813cd2e76e19476e81dd"
+    },
+    {
+      "file": "/Users/dk/Work/WorkboardVue/docs/질의/008-조회매핑과외부연동.md",
+      "sha256": "e8e11c8f59f2d37a2e74a133449b810c797cae37d5b1ea0da116987df50560d1"
+    },
+    {
+      "file": "/Users/dk/Work/WorkboardVue/docs/질의/009-복잡조회와서버표.md",
+      "sha256": "d892da15f787fce4abff151216ebda8a31f9dee819c90ba301b95c540cf3542d"
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

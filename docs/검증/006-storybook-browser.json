@@ -1,0 +1,1142 @@
+{
+  "stage": "006",
+  "staticBuild": true,
+  "docs": [
+    {
+      "component": "ScActionButton",
+      "props": 6,
+      "events": 1,
+      "slots": 1,
+      "duplicateIds": [],
+      "generatedIdCount": 6,
+      "defaults": [
+        {
+          "prop": "busy",
+          "expected": false,
+          "displayed": "false"
+        },
+        {
+          "prop": "busyLabel",
+          "expected": "처리 중…",
+          "displayed": "\"처리 중…\""
+        },
+        {
+          "prop": "disabled",
+          "expected": false,
+          "displayed": "false"
+        },
+        {
+          "prop": "type",
+          "expected": "button",
+          "displayed": "\"button\""
+        },
+        {
+          "prop": "color",
+          "expected": "primary",
+          "displayed": "\"primary\""
+        },
+        {
+          "prop": "variant",
+          "expected": "flat",
+          "displayed": "\"flat\""
+        }
+      ],
+      "genericTypes": []
+    },
+    {
+      "component": "ScTextField",
+      "props": 18,
+      "events": 7,
+      "slots": 0,
+      "duplicateIds": [],
+      "generatedIdCount": 11,
+      "defaults": [
+        {
+          "prop": "errorMessages",
+          "expected": "",
+          "displayed": "\"\""
+        },
+        {
+          "prop": "hint",
+          "expected": "",
+          "displayed": "\"\""
+        },
+        {
+          "prop": "required",
+          "expected": false,
+          "displayed": "false"
+        },
+        {
+          "prop": "disabled",
+          "expected": false,
+          "displayed": "false"
+        },
+        {
+          "prop": "readonly",
+          "expected": false,
+          "displayed": "false"
+        },
+        {
+          "prop": "type",
+          "expected": "text",
+          "displayed": "\"text\""
+        },
+        {
+          "prop": "autofocus",
+          "expected": false,
+          "displayed": "false"
+        }
+      ],
+      "genericTypes": []
+    },
+    {
+      "component": "ScSelect",
+      "props": 16,
+      "events": 6,
+      "slots": 0,
+      "duplicateIds": [],
+      "generatedIdCount": 18,
+      "defaults": [
+        {
+          "prop": "clearable",
+          "expected": false,
+          "displayed": "false"
+        },
+        {
+          "prop": "loading",
+          "expected": false,
+          "displayed": "false"
+        },
+        {
+          "prop": "emptyLabel",
+          "expected": "선택할 항목이 없습니다.",
+          "displayed": "\"선택할 항목이 없습니다.\""
+        },
+        {
+          "prop": "errorMessages",
+          "expected": "",
+          "displayed": "\"\""
+        },
+        {
+          "prop": "hint",
+          "expected": "",
+          "displayed": "\"\""
+        },
+        {
+          "prop": "required",
+          "expected": false,
+          "displayed": "false"
+        },
+        {
+          "prop": "disabled",
+          "expected": false,
+          "displayed": "false"
+        },
+        {
+          "prop": "readonly",
+          "expected": false,
+          "displayed": "false"
+        },
+        {
+          "prop": "autofocus",
+          "expected": false,
+          "displayed": "false"
+        }
+      ],
+      "genericTypes": []
+    },
+    {
+      "component": "ScCheckbox",
+      "props": 11,
+      "events": 7,
+      "slots": 0,
+      "duplicateIds": [],
+      "generatedIdCount": 15,
+      "defaults": [
+        {
+          "prop": "errorMessages",
+          "expected": "",
+          "displayed": "\"\""
+        },
+        {
+          "prop": "hint",
+          "expected": "",
+          "displayed": "\"\""
+        },
+        {
+          "prop": "required",
+          "expected": false,
+          "displayed": "false"
+        },
+        {
+          "prop": "disabled",
+          "expected": false,
+          "displayed": "false"
+        },
+        {
+          "prop": "readonly",
+          "expected": false,
+          "displayed": "false"
+        },
+        {
+          "prop": "autofocus",
+          "expected": false,
+          "displayed": "false"
+        }
+      ],
+      "genericTypes": []
+    },
+    {
+      "component": "ScTextArea",
+      "props": 19,
+      "events": 7,
+      "slots": 0,
+      "duplicateIds": [],
+      "generatedIdCount": 19,
+      "defaults": [
+        {
+          "prop": "rows",
+          "expected": 4,
+          "displayed": "4"
+        },
+        {
+          "prop": "autoGrow",
+          "expected": false,
+          "displayed": "false"
+        },
+        {
+          "prop": "errorMessages",
+          "expected": "",
+          "displayed": "\"\""
+        },
+        {
+          "prop": "hint",
+          "expected": "",
+          "displayed": "\"\""
+        },
+        {
+          "prop": "required",
+          "expected": false,
+          "displayed": "false"
+        },
+        {
+          "prop": "disabled",
+          "expected": false,
+          "displayed": "false"
+        },
+        {
+          "prop": "readonly",
+          "expected": false,
+          "displayed": "false"
+        },
+        {
+          "prop": "autofocus",
+          "expected": false,
+          "displayed": "false"
+        }
+      ],
+      "genericTypes": []
+    },
+    {
+      "component": "ScFormActions",
+      "props": 7,
+      "events": 1,
+      "slots": 2,
+      "duplicateIds": [],
+      "generatedIdCount": 40,
+      "defaults": [
+        {
+          "prop": "busy",
+          "expected": false,
+          "displayed": "false"
+        },
+        {
+          "prop": "disabled",
+          "expected": false,
+          "displayed": "false"
+        },
+        {
+          "prop": "submitLabel",
+          "expected": "저장",
+          "displayed": "\"저장\""
+        },
+        {
+          "prop": "cancelLabel",
+          "expected": "취소",
+          "displayed": "\"취소\""
+        },
+        {
+          "prop": "busyLabel",
+          "expected": "저장 중…",
+          "displayed": "\"저장 중…\""
+        },
+        {
+          "prop": "showCancel",
+          "expected": true,
+          "displayed": "true"
+        }
+      ],
+      "genericTypes": []
+    },
+    {
+      "component": "ScConfirmDialog",
+      "props": 9,
+      "events": 3,
+      "slots": 1,
+      "duplicateIds": [],
+      "generatedIdCount": 15,
+      "defaults": [
+        {
+          "prop": "message",
+          "expected": "",
+          "displayed": "\"\""
+        },
+        {
+          "prop": "confirmLabel",
+          "expected": "확인",
+          "displayed": "\"확인\""
+        },
+        {
+          "prop": "cancelLabel",
+          "expected": "취소",
+          "displayed": "\"취소\""
+        },
+        {
+          "prop": "busyLabel",
+          "expected": "처리 중…",
+          "displayed": "\"처리 중…\""
+        },
+        {
+          "prop": "busy",
+          "expected": false,
+          "displayed": "false"
+        },
+        {
+          "prop": "intent",
+          "expected": "default",
+          "displayed": "\"default\""
+        }
+      ],
+      "genericTypes": []
+    },
+    {
+      "component": "ScPageHeader",
+      "props": 3,
+      "events": 0,
+      "slots": 1,
+      "duplicateIds": [],
+      "generatedIdCount": 0,
+      "defaults": [
+        {
+          "prop": "subtitle",
+          "expected": "",
+          "displayed": "\"\""
+        },
+        {
+          "prop": "eyebrow",
+          "expected": "",
+          "displayed": "\"\""
+        }
+      ],
+      "genericTypes": []
+    },
+    {
+      "component": "ScSearchPanel",
+      "props": 4,
+      "events": 2,
+      "slots": 2,
+      "duplicateIds": [],
+      "generatedIdCount": 6,
+      "defaults": [
+        {
+          "prop": "label",
+          "expected": "검색",
+          "displayed": "\"검색\""
+        },
+        {
+          "prop": "submitLabel",
+          "expected": "검색",
+          "displayed": "\"검색\""
+        },
+        {
+          "prop": "resetLabel",
+          "expected": "초기화",
+          "displayed": "\"초기화\""
+        },
+        {
+          "prop": "disabled",
+          "expected": false,
+          "displayed": "false"
+        }
+      ],
+      "genericTypes": []
+    },
+    {
+      "component": "ScSectionCard",
+      "props": 2,
+      "events": 0,
+      "slots": 2,
+      "duplicateIds": [],
+      "generatedIdCount": 1,
+      "defaults": [
+        {
+          "prop": "description",
+          "expected": "",
+          "displayed": "\"\""
+        }
+      ],
+      "genericTypes": []
+    },
+    {
+      "component": "ScErrorPanel",
+      "props": 4,
+      "events": 1,
+      "slots": 0,
+      "duplicateIds": [],
+      "generatedIdCount": 0,
+      "defaults": [
+        {
+          "prop": "title",
+          "expected": "조회하지 못했습니다",
+          "displayed": "\"조회하지 못했습니다\""
+        },
+        {
+          "prop": "retryLabel",
+          "expected": "다시 조회",
+          "displayed": "\"다시 조회\""
+        },
+        {
+          "prop": "showRetry",
+          "expected": true,
+          "displayed": "true"
+        }
+      ],
+      "genericTypes": []
+    },
+    {
+      "component": "ScEmptyState",
+      "props": 2,
+      "events": 0,
+      "slots": 1,
+      "duplicateIds": [],
+      "generatedIdCount": 0,
+      "defaults": [
+        {
+          "prop": "title",
+          "expected": "표시할 자료가 없습니다",
+          "displayed": "\"표시할 자료가 없습니다\""
+        },
+        {
+          "prop": "message",
+          "expected": "",
+          "displayed": "\"\""
+        }
+      ],
+      "genericTypes": []
+    },
+    {
+      "component": "ScLoadingState",
+      "props": 1,
+      "events": 0,
+      "slots": 0,
+      "duplicateIds": [],
+      "generatedIdCount": 0,
+      "defaults": [
+        {
+          "prop": "label",
+          "expected": "자료 불러오는 중…",
+          "displayed": "\"자료 불러오는 중…\""
+        }
+      ],
+      "genericTypes": []
+    },
+    {
+      "component": "ScListDetailLayout",
+      "props": 4,
+      "events": 1,
+      "slots": 5,
+      "duplicateIds": [],
+      "generatedIdCount": 12,
+      "defaults": [
+        {
+          "prop": "detailVisible",
+          "expected": false,
+          "displayed": "false"
+        },
+        {
+          "prop": "listLabel",
+          "expected": "목록 영역",
+          "displayed": "\"목록 영역\""
+        },
+        {
+          "prop": "detailLabel",
+          "expected": "상세 영역",
+          "displayed": "\"상세 영역\""
+        },
+        {
+          "prop": "backLabel",
+          "expected": "목록으로",
+          "displayed": "\"목록으로\""
+        }
+      ],
+      "genericTypes": []
+    },
+    {
+      "component": "ScAppShell",
+      "props": 6,
+      "events": 1,
+      "slots": 4,
+      "duplicateIds": [],
+      "generatedIdCount": 24,
+      "defaults": [
+        {
+          "prop": "applicationLabel",
+          "expected": "",
+          "displayed": "\"\""
+        },
+        {
+          "prop": "navigationLabel",
+          "expected": "화면 탐색",
+          "displayed": "\"화면 탐색\""
+        },
+        {
+          "prop": "labels",
+          "expected": {},
+          "displayed": "{}"
+        }
+      ],
+      "genericTypes": []
+    },
+    {
+      "component": "ScDataTable",
+      "props": 14,
+      "events": 4,
+      "slots": 5,
+      "duplicateIds": [],
+      "generatedIdCount": 0,
+      "defaults": [
+        {
+          "prop": "dataMode",
+          "expected": "client",
+          "displayed": "\"client\""
+        },
+        {
+          "prop": "sorting",
+          "expected": null,
+          "displayed": "null"
+        },
+        {
+          "prop": "selectionMode",
+          "expected": "none",
+          "displayed": "\"none\""
+        },
+        {
+          "prop": "selectedKeys",
+          "expected": [],
+          "displayed": "[]"
+        },
+        {
+          "prop": "loading",
+          "expected": false,
+          "displayed": "false"
+        }
+      ],
+      "genericTypes": [
+        {
+          "prop": "rows",
+          "extracted": "readonly object[]",
+          "displayed": "readonly object[]"
+        },
+        {
+          "prop": "columns",
+          "extracted": "readonly ScTableColumn<object>[]",
+          "displayed": "readonly ScTableColumn<object>[]"
+        }
+      ]
+    },
+    {
+      "component": "ScVirtualList",
+      "props": 10,
+      "events": 1,
+      "slots": 4,
+      "duplicateIds": [],
+      "generatedIdCount": 0,
+      "defaults": [
+        {
+          "prop": "loading",
+          "expected": false,
+          "displayed": "false"
+        },
+        {
+          "prop": "height",
+          "expected": 480,
+          "displayed": "480"
+        },
+        {
+          "prop": "estimateRowHeight",
+          "expected": 48,
+          "displayed": "48"
+        },
+        {
+          "prop": "overscan",
+          "expected": 8,
+          "displayed": "8"
+        }
+      ],
+      "genericTypes": [
+        {
+          "prop": "items",
+          "extracted": "readonly unknown[]",
+          "displayed": "readonly unknown[]"
+        }
+      ]
+    },
+    {
+      "component": "ScVirtualTable",
+      "props": 17,
+      "events": 4,
+      "slots": 5,
+      "duplicateIds": [],
+      "generatedIdCount": 3,
+      "defaults": [
+        {
+          "prop": "dataMode",
+          "expected": "client",
+          "displayed": "\"client\""
+        },
+        {
+          "prop": "sorting",
+          "expected": null,
+          "displayed": "null"
+        },
+        {
+          "prop": "selectionMode",
+          "expected": "none",
+          "displayed": "\"none\""
+        },
+        {
+          "prop": "selectedKeys",
+          "expected": [],
+          "displayed": "[]"
+        },
+        {
+          "prop": "loading",
+          "expected": false,
+          "displayed": "false"
+        },
+        {
+          "prop": "height",
+          "expected": 480,
+          "displayed": "480"
+        },
+        {
+          "prop": "estimateRowHeight",
+          "expected": 48,
+          "displayed": "48"
+        },
+        {
+          "prop": "overscan",
+          "expected": 8,
+          "displayed": "8"
+        }
+      ],
+      "genericTypes": [
+        {
+          "prop": "rows",
+          "extracted": "readonly object[]",
+          "displayed": "readonly object[]"
+        },
+        {
+          "prop": "columns",
+          "extracted": "readonly ScTableColumn<object>[]",
+          "displayed": "readonly ScTableColumn<object>[]"
+        }
+      ]
+    },
+    {
+      "component": "ScChart",
+      "props": 16,
+      "events": 2,
+      "slots": 0,
+      "duplicateIds": [],
+      "generatedIdCount": 16,
+      "defaults": [
+        {
+          "prop": "type",
+          "expected": "bar",
+          "displayed": "\"bar\""
+        },
+        {
+          "prop": "summary",
+          "expected": "",
+          "displayed": "\"\""
+        },
+        {
+          "prop": "height",
+          "expected": 320,
+          "displayed": "320"
+        },
+        {
+          "prop": "loading",
+          "expected": false,
+          "displayed": "false"
+        },
+        {
+          "prop": "error",
+          "expected": "",
+          "displayed": "\"\""
+        },
+        {
+          "prop": "emptyLabel",
+          "expected": "표시할 데이터가 없습니다.",
+          "displayed": "\"표시할 데이터가 없습니다.\""
+        },
+        {
+          "prop": "dataTitle",
+          "expected": "차트 데이터",
+          "displayed": "\"차트 데이터\""
+        },
+        {
+          "prop": "categoryLabel",
+          "expected": "항목",
+          "displayed": "\"항목\""
+        },
+        {
+          "prop": "valueLabel",
+          "expected": "값",
+          "displayed": "\"값\""
+        },
+        {
+          "prop": "loadingLabel",
+          "expected": "불러오는 중",
+          "displayed": "\"불러오는 중\""
+        },
+        {
+          "prop": "retryLabel",
+          "expected": "다시 시도",
+          "displayed": "\"다시 시도\""
+        },
+        {
+          "prop": "invalidDataLabel",
+          "expected": "차트 자료의 형식이 올바르지 않습니다.",
+          "displayed": "\"차트 자료의 형식이 올바르지 않습니다.\""
+        },
+        {
+          "prop": "selectable",
+          "expected": false,
+          "displayed": "false"
+        },
+        {
+          "prop": "selectLabel",
+          "expected": "선택",
+          "displayed": "\"선택\""
+        }
+      ],
+      "genericTypes": []
+    },
+    {
+      "component": "ScRichTextEditor",
+      "props": 10,
+      "events": 4,
+      "slots": 0,
+      "duplicateIds": [],
+      "generatedIdCount": 19,
+      "defaults": [
+        {
+          "prop": "disabled",
+          "expected": false,
+          "displayed": "false"
+        },
+        {
+          "prop": "readonly",
+          "expected": false,
+          "displayed": "false"
+        },
+        {
+          "prop": "errorMessages",
+          "expected": "",
+          "displayed": "\"\""
+        },
+        {
+          "prop": "hint",
+          "expected": "",
+          "displayed": "\"\""
+        },
+        {
+          "prop": "placeholder",
+          "expected": "",
+          "displayed": "\"\""
+        },
+        {
+          "prop": "toolbarLabels",
+          "expected": {},
+          "displayed": "{}"
+        },
+        {
+          "prop": "minHeight",
+          "expected": 180,
+          "displayed": "180"
+        }
+      ],
+      "genericTypes": []
+    }
+  ],
+  "controls": [
+    {
+      "component": "ScTextField",
+      "controlsToCanvas": true,
+      "canvasToArgs": true,
+      "labelReactive": true,
+      "reset": true
+    },
+    {
+      "component": "ScAppShell",
+      "controlsToCanvas": true,
+      "navigateToArgs": true
+    },
+    {
+      "component": "ScSelect",
+      "controlsToCanvas": true,
+      "canvasToArgs": true,
+      "value": "review"
+    },
+    {
+      "component": "ScCheckbox",
+      "controlsToCanvas": true,
+      "canvasToArgs": true,
+      "nativeKeyboard": true
+    },
+    {
+      "component": "ScTextArea",
+      "controlsToCanvas": true,
+      "canvasToArgs": true,
+      "nativeChangeCommit": true
+    },
+    {
+      "component": "ScConfirmDialog",
+      "controlsToCanvas": true,
+      "canvasToArgs": true,
+      "parentOwnsClose": true
+    },
+    {
+      "component": "ScRichTextEditor",
+      "controlsToCanvas": true,
+      "canvasToArgs": true,
+      "jsonModel": true,
+      "blurCommit": true
+    },
+    {
+      "component": "ScDataTable",
+      "controlsToCanvas": true,
+      "canvasToArgs": true,
+      "arrayModel": true,
+      "preservesOutsidePage": true
+    }
+  ],
+  "browserErrors": [],
+  "leakedApiRequests": [],
+  "captures": [
+    "006-ScActionButton-docs.png",
+    "006-ScActionButton-contracts.png",
+    "006-ScTextField-docs.png",
+    "006-ScTextField-contracts.png",
+    "006-ScSelect-docs.png",
+    "006-ScSelect-contracts.png",
+    "006-ScCheckbox-docs.png",
+    "006-ScCheckbox-contracts.png",
+    "006-ScTextArea-docs.png",
+    "006-ScTextArea-contracts.png",
+    "006-ScFormActions-docs.png",
+    "006-ScFormActions-contracts.png",
+    "006-ScConfirmDialog-docs.png",
+    "006-ScConfirmDialog-contracts.png",
+    "006-ScPageHeader-docs.png",
+    "006-ScPageHeader-contracts.png",
+    "006-ScSearchPanel-docs.png",
+    "006-ScSearchPanel-contracts.png",
+    "006-ScSectionCard-docs.png",
+    "006-ScSectionCard-contracts.png",
+    "006-ScErrorPanel-docs.png",
+    "006-ScErrorPanel-contracts.png",
+    "006-ScEmptyState-docs.png",
+    "006-ScEmptyState-contracts.png",
+    "006-ScLoadingState-docs.png",
+    "006-ScLoadingState-contracts.png",
+    "006-ScListDetailLayout-docs.png",
+    "006-ScListDetailLayout-contracts.png",
+    "006-ScAppShell-docs.png",
+    "006-ScAppShell-contracts.png",
+    "006-ScDataTable-docs.png",
+    "006-ScDataTable-contracts.png",
+    "006-ScVirtualList-docs.png",
+    "006-ScVirtualList-contracts.png",
+    "006-ScVirtualTable-docs.png",
+    "006-ScVirtualTable-contracts.png",
+    "006-ScChart-docs.png",
+    "006-ScChart-contracts.png",
+    "006-ScRichTextEditor-docs.png",
+    "006-ScRichTextEditor-contracts.png",
+    "006-ScTextField-controls.png",
+    "006-ScSelect-controls.png",
+    "006-ScCheckbox-controls.png",
+    "006-ScTextArea-controls.png",
+    "006-ScConfirmDialog-controls.png",
+    "006-ScRichTextEditor-controls.png",
+    "006-ScDataTable-controls.png",
+    "006-ScVirtualTable-TenThousandScrollSelectionAndFallback.png",
+    "006-ScVirtualTable-VariableHeightResizeAndReplacement.png",
+    "006-ScVirtualList-TenThousandKeyboardAndCleanup.png"
+  ],
+  "virtualMetrics": [
+    {
+      "component": "ScVirtualTable",
+      "story": "TenThousandScrollSelectionAndFallback",
+      "metric": {
+        "component": "ScVirtualTable",
+        "rows": 10000,
+        "viewport": 480,
+        "minimumRow": 48,
+        "overscan": 8,
+        "firstMiddleLastSorted": [
+          14,
+          28,
+          24,
+          16
+        ],
+        "maximum": 28
+      },
+      "duplicateIds": []
+    },
+    {
+      "component": "ScVirtualTable",
+      "story": "VariableHeightResizeAndReplacement",
+      "metric": {
+        "before": 69,
+        "after": 214,
+        "width": 388,
+        "dataDOM": 14
+      },
+      "duplicateIds": []
+    },
+    {
+      "component": "ScVirtualList",
+      "story": "TenThousandKeyboardAndCleanup",
+      "metric": {
+        "component": "ScVirtualList",
+        "rows": 10000,
+        "viewport": 480,
+        "minimumRow": 48,
+        "overscan": 8,
+        "firstMiddleLast": [
+          16,
+          26,
+          26
+        ],
+        "maximum": 26
+      },
+      "duplicateIds": []
+    }
+  ],
+  "storyCompletions": [
+    {
+      "id": "공통-ui-sctextfield--default",
+      "status": "success",
+      "reports": []
+    },
+    {
+      "id": "공통-ui-sctextfield--default",
+      "status": "success",
+      "reports": []
+    },
+    {
+      "id": "공통-ui-sctextfield--default",
+      "status": "success",
+      "reports": []
+    },
+    {
+      "id": "공통-배치-scappshell--default",
+      "status": "success",
+      "reports": []
+    },
+    {
+      "id": "공통-ui-scselect--keyboard-selection",
+      "status": "success",
+      "reports": []
+    },
+    {
+      "id": "공통-ui-scselect--keyboard-selection",
+      "status": "success",
+      "reports": []
+    },
+    {
+      "id": "공통-ui-scselect--keyboard-selection",
+      "status": "success",
+      "reports": []
+    },
+    {
+      "id": "공통-ui-sccheckbox--keyboard-toggle",
+      "status": "success",
+      "reports": []
+    },
+    {
+      "id": "공통-ui-sccheckbox--keyboard-toggle",
+      "status": "success",
+      "reports": []
+    },
+    {
+      "id": "공통-ui-sccheckbox--keyboard-toggle",
+      "status": "success",
+      "reports": []
+    },
+    {
+      "id": "공통-ui-sctextarea--multiline",
+      "status": "success",
+      "reports": []
+    },
+    {
+      "id": "공통-ui-sctextarea--multiline",
+      "status": "success",
+      "reports": []
+    },
+    {
+      "id": "공통-ui-sctextarea--multiline",
+      "status": "success",
+      "reports": []
+    },
+    {
+      "id": "공통-ui-scconfirmdialog--keyboard-cancel",
+      "status": "success",
+      "reports": []
+    },
+    {
+      "id": "공통-ui-scconfirmdialog--keyboard-cancel",
+      "status": "success",
+      "reports": []
+    },
+    {
+      "id": "공통-ui-scconfirmdialog--keyboard-cancel",
+      "status": "success",
+      "reports": []
+    },
+    {
+      "id": "공통-ui-scconfirmdialog--keyboard-cancel",
+      "status": "success",
+      "reports": []
+    },
+    {
+      "id": "공통-ui-scconfirmdialog--keyboard-cancel",
+      "status": "success",
+      "reports": []
+    },
+    {
+      "id": "확장-ui-scrichtexteditor--edit-and-validate",
+      "status": "success",
+      "reports": []
+    },
+    {
+      "id": "확장-ui-scrichtexteditor--edit-and-validate",
+      "status": "success",
+      "reports": []
+    },
+    {
+      "id": "확장-ui-scrichtexteditor--edit-and-validate",
+      "status": "success",
+      "reports": []
+    },
+    {
+      "id": "공통-ui-scdatatable--client-sorting-and-selection",
+      "status": "success",
+      "reports": []
+    },
+    {
+      "id": "공통-ui-scdatatable--client-sorting-and-selection",
+      "status": "success",
+      "reports": []
+    },
+    {
+      "id": "공통-ui-scdatatable--client-sorting-and-selection",
+      "status": "success",
+      "reports": []
+    },
+    {
+      "id": "공통-ui-scdatatable--client-sorting-and-selection",
+      "status": "success",
+      "reports": []
+    },
+    {
+      "id": "공통-ui-scvirtualtable--ten-thousand-scroll-selection-and-fallback",
+      "status": "success",
+      "reports": []
+    },
+    {
+      "id": "공통-ui-scvirtualtable--variable-height-resize-and-replacement",
+      "status": "success",
+      "reports": []
+    },
+    {
+      "id": "공통-ui-scvirtuallist--ten-thousand-keyboard-and-cleanup",
+      "status": "success",
+      "reports": []
+    }
+  ],
+  "extractionNotes": [
+    "초기 format 1의 default:null은 미기재와 명시 null을 구분하지 못했다. 현재 format 2의 defaultSpecified로 구분하고 명시 null의 실제 Docs 기본값도 검사한다.",
+    "vue-component-meta generic 표시는 object/unknown 제약 타입으로 특수화될 수 있다. 실제 배열 표시와 자체 타입·vendor 비노출을 검사한다."
+  ],
+  "pendingControls": [],
+  "selectChannelDiagnostics": {
+    "nativeValue": "검토 업무",
+    "preview": "review",
+    "events": [
+      {
+        "type": "updateStoryArgs",
+        "storyId": "공통-ui-scselect--keyboard-selection",
+        "modelValue": "general"
+      },
+      {
+        "type": "storyArgsUpdated",
+        "storyId": "공통-ui-scselect--keyboard-selection",
+        "modelValue": "general"
+      },
+      {
+        "type": "updateStoryArgs",
+        "storyId": "공통-ui-scselect--keyboard-selection",
+        "modelValue": "review"
+      },
+      {
+        "type": "storyArgsUpdated",
+        "storyId": "공통-ui-scselect--keyboard-selection",
+        "modelValue": "review"
+      }
+    ],
+    "managerValue": "\"review\""
+  },
+  "isolationProbes": [
+    {
+      "path": "/api",
+      "blocked": true,
+      "error": "TypeError: Failed to fetch",
+      "controller": "http://127.0.0.1:62192/mockServiceWorker.js"
+    },
+    {
+      "path": "/api/sc-unhandled-probe",
+      "blocked": true,
+      "error": "TypeError: Failed to fetch",
+      "controller": "http://127.0.0.1:62192/mockServiceWorker.js"
+    },
+    {
+      "path": "/api/node_modules/sc-contract.js",
+      "blocked": true,
+      "error": "TypeError: Failed to fetch",
+      "controller": "http://127.0.0.1:62192/mockServiceWorker.js"
+    }
+  ],
+  "unhandledApiBlocked": true,
+  "mockStories": [
+    "Loaded",
+    "RequestError"
+  ],
+  "storyCount": 81,
+  "docsCount": 25,
+  "passed": true
+}

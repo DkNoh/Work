@@ -1,0 +1,113 @@
+{
+  "verifiedAt": "2026-10-06T19:17:26.907895+09:00",
+  "tests": {
+    "unit": 14,
+    "server": 15,
+    "story": 18,
+    "e2e": 7
+  },
+  "ui": {
+    "visualInspection": "six-capture review; field labels, buttons, Korean wrapping and layout checked",
+    "screenshots": [
+      {
+        "application": "reference",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "capture": "docs/검증/002-reference-390.png",
+        "imageSize": {
+          "width": 390,
+          "height": 844
+        },
+        "horizontalOverflow": false,
+        "browserErrors": 0,
+        "draftPreserved": true
+      },
+      {
+        "application": "reference",
+        "viewport": {
+          "width": 1366,
+          "height": 844
+        },
+        "capture": "docs/검증/002-reference-1366.png",
+        "imageSize": {
+          "width": 1366,
+          "height": 844
+        },
+        "horizontalOverflow": false,
+        "browserErrors": 0,
+        "draftPreserved": true
+      },
+      {
+        "application": "reference",
+        "viewport": {
+          "width": 1920,
+          "height": 844
+        },
+        "capture": "docs/검증/002-reference-1920.png",
+        "imageSize": {
+          "width": 1920,
+          "height": 844
+        },
+        "horizontalOverflow": false,
+        "browserErrors": 0,
+        "draftPreserved": true
+      },
+      {
+        "application": "starter",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "capture": "docs/검증/002-starter-390.png",
+        "imageSize": {
+          "width": 390,
+          "height": 844
+        },
+        "horizontalOverflow": false,
+        "browserErrors": 0,
+        "draftPreserved": true
+      },
+      {
+        "application": "starter",
+        "viewport": {
+          "width": 1366,
+          "height": 844
+        },
+        "capture": "docs/검증/002-starter-1366.png",
+        "imageSize": {
+          "width": 1366,
+          "height": 844
+        },
+        "horizontalOverflow": false,
+        "browserErrors": 0,
+        "draftPreserved": true
+      },
+      {
+        "application": "starter",
+        "viewport": {
+          "width": 1920,
+          "height": 844
+        },
+        "capture": "docs/검증/002-starter-1920.png",
+        "imageSize": {
+          "width": 1920,
+          "height": 844
+        },
+        "horizontalOverflow": false,
+        "browserErrors": 0,
+        "draftPreserved": true
+      }
+    ]
+  },
+  "e2eCleanup": {
+    "metadataRemoved": true,
+    "portsReleased": true
+  },
+  "limits": [
+    "Selected color pairs and Storybook checks; not a full WCAG certification.",
+    "Screenshots are inspection artifacts, not approved 006 visual regression baselines.",
+    "Remote CI and Docker/operational stacks were not executed in 002."
+  ]
+}

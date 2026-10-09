@@ -1,0 +1,55 @@
+spring:
+  config:
+    # 잘못된 vendor는 시작 때 실패한다. DB별 비밀값은 저장소가 아닌 환경/configtree에서 공급한다.
+    import: classpath:database/${SC_DB_VENDOR:h2}.yml
+  application:
+    name: sc-starter-app
+  datasource:
+    url: ${SC_DB_URL:jdbc:h2:file:./.runtime/dev/data/sc-starter;DB_CLOSE_ON_EXIT=FALSE}
+    username: ${SC_DB_USERNAME:sa}
+    password: ${SC_DB_PASSWORD:}
+  jpa:
+    open-in-view: false
+    properties:
+      hibernate.jdbc.time_zone: UTC
+    hibernate:
+      ddl-auto: none
+  flyway:
+    # 최소 소비 앱에는 업무 스키마가 없다. 새 업무 migration을 만들 때 활성화한다.
+    enabled: false
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: true
+server:
+  port: ${SC_PORT:18082}
+  address: ${SC_ADDRESS:127.0.0.1}
+  servlet:
+    session:
+      cookie:
+        http-only: true
+        same-site: lax
+sc:
+  framework:
+    application-name: sc-starter-app
+springdoc:
+  api-docs:
+    enabled: false
+  swagger-ui:
+    enabled: false
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: never
+spring.cloud.openfeign.client.config.default:
+  connectTimeout: 2000
+  readTimeout: 5000
+  loggerLevel: none
+logging:
+  file:
+    name: ${SC_LOG_FILE:./.runtime/dev/logs/sc-starter.log}
+  pattern:
+    level: "%5p [requestId:%X{requestId:-}]"

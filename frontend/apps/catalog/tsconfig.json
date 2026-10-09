@@ -1,0 +1,12 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.vue",
+    ".storybook/**/*.ts",
+    ".storybook-negative/**/*.ts",
+    "negative/**/*.stories.ts",
+    "vitest.config.ts",
+    "vitest.negative.config.ts"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "project": "scframework-012-20261007",
+  "remainingTaskContainers": 0,
+  "retainedTaskNamedVolumes": [
+    "scframework-012-20261007_operations-application",
+    "scframework-012-20261007_operations-grafana",
+    "scframework-012-20261007_operations-grafana-secret",
+    "scframework-012-20261007_operations-loki",
+    "scframework-012-20261007_operations-prometheus",
+    "scframework-012-20261007_operations-rabbitmq",
+    "scframework-012-20261007_operations-tempo"
+  ],
+  "volumesDeleted": false,
+  "privateOperationsHomeRetained": true,
+  "userProjectsChanged": false,
+  "cleanupLog": "012-task-compose-cleanup.log"
+}

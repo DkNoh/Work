@@ -1,0 +1,19 @@
+
+> sc-framework@0.3.0 format:check
+> prettier --check .
+
+Checking formatting...
+[warn] docs/openapi-reference-default.json
+[warn] docs/openapi-starter-default.json
+[warn] frontend/test-results-operations/012-operations-예약-409와-최신--a3351-n·입력을-유지하고-명시-reload만-초기화한다/attachments/operations-schedule-conflict-latest500-axe-json-f8793cf453ab316d5c88af7a8e1d190c4be4f8b4.json
+[warn] frontend/test-results-operations/012-operations-예약-409와-최신--a3351-n·입력을-유지하고-명시-reload만-초기화한다/operations-schedule-conflict-latest500-axe.json
+[warn] frontend/test-results-operations/012-operations-운영-390px-KO-30098-·메시지-전체-DOM-접근성과-키보드-가로-스크롤/attachments/operations-errors-en-390-axe-json-1d166841bb7734ff60a331976d514ed51462d713.json
+[warn] frontend/test-results-operations/012-operations-운영-390px-KO-30098-·메시지-전체-DOM-접근성과-키보드-가로-스크롤/attachments/operations-messages-en-390-axe-json-483a759b047f3507eaa741f1d5dd4b446f3e4386.json
+[warn] frontend/test-results-operations/012-operations-운영-390px-KO-30098-·메시지-전체-DOM-접근성과-키보드-가로-스크롤/attachments/operations-schedules-en-390-axe-json-f229b37f536af411c5db7faf6b7819b1aec0f550.json
+[warn] frontend/test-results-operations/012-operations-운영-390px-KO-30098-·메시지-전체-DOM-접근성과-키보드-가로-스크롤/attachments/operations-schedules-ko-390-axe-json-ae73c9db1df9afda112957cd804cfd5e92edd9d9.json
+[warn] frontend/test-results-operations/012-operations-운영-390px-KO-30098-·메시지-전체-DOM-접근성과-키보드-가로-스크롤/operations-errors-en-390-axe.json
+[warn] frontend/test-results-operations/012-operations-운영-390px-KO-30098-·메시지-전체-DOM-접근성과-키보드-가로-스크롤/operations-messages-en-390-axe.json
+[warn] frontend/test-results-operations/012-operations-운영-390px-KO-30098-·메시지-전체-DOM-접근성과-키보드-가로-스크롤/operations-schedules-en-390-axe.json
+[warn] frontend/test-results-operations/012-operations-운영-390px-KO-30098-·메시지-전체-DOM-접근성과-키보드-가로-스크롤/operations-schedules-ko-390-axe.json
+[warn] infra/operations/grafana/dashboards/sc-framework.json
+[warn] Code style issues found in 13 files. Run Prettier with --write to fix.

@@ -1,0 +1,54 @@
+spring:
+  application:
+    name: __APP_NAME__
+  datasource:
+    url: ${SC_DB_URL:jdbc:h2:file:./.runtime/local/data/app;DB_CLOSE_ON_EXIT=FALSE}
+    username: ${SC_DB_USERNAME:sa}
+    password: ${SC_DB_PASSWORD:}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: true
+server:
+  port: ${SC_PORT:__SERVER_PORT__}
+  address: ${SC_ADDRESS:127.0.0.1}
+  servlet:
+    session:
+      cookie:
+        http-only: true
+        same-site: lax
+sc:
+  framework:
+    application-name: __APP_NAME__
+mybatis:
+  mapper-locations: classpath:mappers/*.xml
+springdoc:
+  api-docs:
+    enabled: false
+  swagger-ui:
+    enabled: false
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: never
+spring.cloud.openfeign.client.config.default:
+  connectTimeout: 2000
+  readTimeout: 5000
+  loggerLevel: none
+starter:
+  sample-http-url: ${SC_SAMPLE_HTTP_URL:http://127.0.0.1:18190}
+logging:
+  file:
+    name: ${SC_LOG_FILE:./.runtime/local/logs/app.log}
+  pattern:
+    level: "%5p [requestId:%X{requestId:-}]"

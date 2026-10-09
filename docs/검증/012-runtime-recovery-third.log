@@ -1,0 +1,7 @@
+PASS active Java NIO lock rejects Python backup
+PASS create actual durable metadata original image PDF and message
+PASS SIGKILL actual storage adapter after forced journal and partial bytes
+PASS stop and backup single H2 uploads journal set
+PASS tampered hash path symlink build and nonempty target reject without source mutation
+PASS fresh empty root restore validates same schema build metadata bytes and inbox
+PASS restored authored deletion commits FILE_DELETE outbox and preserves referenced original
